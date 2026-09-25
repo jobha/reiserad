@@ -179,7 +179,7 @@ def build():
     info, zones = {}, []
     for slug, c in adv["countries"].items():
         iso = iso_of[slug]
-        rec = {"slug": slug, "name": c["name"], "url": c["url"], "level": None}
+        rec = {"slug": slug, "name": c["name"], "url": c["url"], "level": None, "ingress": c.get("ingress", "")}
         w = c.get("warning")
         if w:
             rec.update(status=w["status"], paragraphs=w["paragraphs"])

@@ -71,7 +71,9 @@ html, body { margin: 0; height: 100%; background: var(--bg); color: var(--text);
 .pop .zone.all { background: var(--all); } .pop .zone.necessary { background: var(--nec); }
 .pop .zone.clear { background: transparent; color: var(--text); border: 1px solid var(--line); font-weight: 500; }
 .pop p { margin: 6px 0; }
-.pop .paras { max-height: 210px; overflow: auto; font-size: 13px; }
+.pop .paras { max-height: 260px; overflow: auto; font-size: 13px; }
+.pop .ingress { color: var(--text); }
+.pop .paras h3 { margin: 10px 0 2px; font-size: 11.5px; text-transform: uppercase; letter-spacing: .04em; color: var(--muted); }
 .pop .note { font-size: 12px; background: var(--warn-bg); color: var(--warn); padding: 6px 9px; border-radius: 7px; margin: 8px 0 0; }
 .pop a.ud { display: inline-block; margin-top: 10px; color: var(--link); font-weight: 600; text-decoration: none; }
 .pop a.ud:hover { text-decoration: underline; }
@@ -200,7 +202,12 @@ function popupHtml(iso, zone) {
   } else if (zone && zone.clear) {
     h += `<div class="zone clear">Denne delen av landet er ikke omfattet av reiseadvarselen</div>`;
   }
-  if (c.paragraphs) h += `<div class="paras">${c.paragraphs.map(p => `<p>${esc(p)}</p>`).join("")}</div>`;
+  if (c.ingress || c.paragraphs) {
+    h += `<div class="paras">`;
+    if (c.ingress) h += `<p class="ingress">${esc(c.ingress)}</p>`;
+    if (c.paragraphs) h += `<h3>Reiseadvarsel</h3>` + c.paragraphs.map(p => `<p>${esc(p)}</p>`).join("");
+    h += `</div>`;
+  }
   if (c.exceptions?.length) h += `<p><b>Unntatt:</b> ${c.exceptions.map(esc).join(", ")}.</p>`;
   if (zone?.partial && !c.unmapped) h += `<div class="note">Advarselen gjelder bare deler av dette området. Se UDs tekst.</div>`;
   if (zone?.approx) h += `<div class="note">Grensen for denne sonen er tegnet omtrentlig ut fra UDs beskrivelse.</div>`;
