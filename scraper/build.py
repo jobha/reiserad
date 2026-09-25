@@ -256,8 +256,10 @@ def build():
     dump("world.json", {"type": "FeatureCollection", "features": [f for f in world if f]})
     dump("zones.json", {"type": "FeatureCollection", "features": [f for f in zones if f]})
     dump("labels.json", labels(ne_feats, info))
-    dump("info.json", {"fetched": adv["fetched"], "source": adv["source"], "countries": info})
-    n_pages = pages.write_all(OUT.parent, info, ne, zones_by_iso, adv["fetched"])
+    site = json.loads((DATA / "site.json").read_text())
+    dump("info.json", {"fetched": adv["fetched"], "source": adv["source"],
+                       "donate": site.get("donate_url") or None, "countries": info})
+    n_pages = pages.write_all(OUT.parent, info, ne, zones_by_iso, adv["fetched"], site.get("donate_url"))
 
     n = sum(1 for r in info.values() if r["level"])
     stale = [r["slug"] for r in info.values() if r.get("stale")]

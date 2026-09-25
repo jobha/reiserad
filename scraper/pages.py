@@ -98,7 +98,19 @@ footer a { color:var(--muted); }
 .az li { break-inside:avoid; margin:3px 0; display:flex; gap:8px; align-items:baseline; }
 .az .dot { width:9px; height:9px; border-radius:50%; flex:none; transform:translateY(-1px); }
 .az .tag { color:var(--muted); font-size:13px; }
+.coffee { margin-top:32px; padding:14px 16px; border-radius:12px; background:var(--card); border:1px solid var(--line); font-size:15px; }
+.coffee a { font-weight:600; white-space:nowrap; }
 """
+
+
+DONATE = None  # settes av write_all fra data/site.json
+
+
+def donate_html():
+    if not DONATE:
+        return ""
+    return (f'<p class="coffee">Er kartet nyttig? Det er gratis og uten reklame. '
+            f'<a href="{e(DONATE)}" rel="noopener">☕ Spander en kaffe</a> for å holde det i gang.</p>')
 
 
 def page(title, desc, canonical, body, jsonld=None):
@@ -128,6 +140,7 @@ def page(title, desc, canonical, body, jsonld=None):
 <body>
 <main>
 {body}
+{donate_html()}
 <footer>
   Reiserådkart viser Utenriksdepartementets reiseadvarsler på kart. Teksten er hentet automatisk fra
   <a href="https://www.regjeringen.no/no/tema/utenrikssaker/reiseinformasjon/velg-land/id2414273/">regjeringen.no</a>
@@ -240,7 +253,9 @@ def index_page(info):
     return page("Reiseråd for alle land A–Å – UDs reiseadvarsler", desc, SITE + "/land/", body)
 
 
-def write_all(out_dir, info, geoms, zones_by_iso, fetched):
+def write_all(out_dir, info, geoms, zones_by_iso, fetched, donate=None):
+    global DONATE
+    DONATE = donate or None
     """out_dir = site/. geoms[iso] = landflate, zones_by_iso[iso] = [(geom, level, partial, label)]."""
     land = out_dir / "land"
     land.mkdir(exist_ok=True)

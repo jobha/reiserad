@@ -69,6 +69,10 @@ html, body { margin: 0; height: 100%; background: var(--bg); color: var(--text);
 .list .tag { margin-left: auto; color: var(--muted); font-size: 11.5px; }
 .panel footer { padding: 8px 16px 12px; font-size: 11.5px; color: var(--muted); border-top: 1px solid var(--line); }
 .panel footer a { color: var(--muted); }
+.panel footer a.coffee { display: block; width: fit-content; margin-top: 8px; padding: 5px 10px; border-radius: 8px;
+  border: 1px solid var(--line); color: var(--text); font-weight: 600; text-decoration: none; }
+.panel footer a.coffee[hidden] { display: none; }
+.panel footer a.coffee:hover { background: rgba(127,127,127,.12); }
 .panel.collapsed .legend, .panel.collapsed .tools, .panel.collapsed .list, .panel.collapsed footer { display: none; }
 .head-row { display: flex; align-items: flex-start; justify-content: space-between; gap: 8px; }
 
@@ -134,6 +138,7 @@ html, body { margin: 0; height: 100%; background: var(--bg); color: var(--text);
     Regionale grenser er tegnet etter UDs tekst og kan være omtrentlige. UDs side gjelder alltid. Ikke en offisiell tjeneste fra UD.<br>
     <a href="/land/">Alle land A–Å</a> · <a href="https://github.com/jobha/reiserad" target="_blank" rel="noopener">GitHub</a> ·
     <a href="https://github.com/jobha/reiserad/issues/new/choose" target="_blank" rel="noopener">Meld feil / foreslå endring</a>
+    <a class="coffee" id="coffee" hidden target="_blank" rel="noopener">☕ Spander en kaffe</a>
   </footer>
   <noscript><p style="padding:0 16px 12px">Kartet krever JavaScript. Se <a href="/land/">reiserådene for alle land A–Å</a>.</p></noscript>
 </aside>
@@ -265,6 +270,7 @@ Promise.all(["data/info.json", "data/world.json", "data/zones.json", "data/label
 .then(([info, world, zones, labels]) => {
   LABELS = labels;
   INFO = info.countries;
+  if (info.donate) { const a = document.getElementById("coffee"); a.href = info.donate; a.hidden = false; }
   const d = new Date(info.fetched);
   const n = Object.values(INFO).filter(c => c.level).length;
   document.getElementById("sub").textContent =
