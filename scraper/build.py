@@ -18,6 +18,7 @@ import sys
 import urllib.request
 from pathlib import Path
 
+import shapely
 from shapely.geometry import LineString, Point, mapping, shape
 from shapely.ops import transform, unary_union
 
@@ -31,6 +32,8 @@ CACHE = Path(os.environ.get("REISERAD_CACHE", ROOT / ".cache"))
 NE_PATH = CACHE / "ne_50m_admin_0_countries.geojson"
 PLACES_URL = "https://raw.githubusercontent.com/nvkelso/natural-earth-vector/master/geojson/ne_10m_populated_places_simple.geojson"
 PLACES_PATH = CACHE / "ne_10m_populated_places_simple.geojson"
+
+WORLD_TOL = 0.03
 
 # Natural Earth deler noen land i flere flater; UD har én side.
 MERGE = {"SOM": ["SOM", "SOL"], "CYP": ["CYP", "CYN"]}
@@ -49,6 +52,9 @@ def fetch(url, path):
     return json.loads(path.read_text())
 
 
+NAMES = {k: v for k, v in json.loads((DATA / "names.json").read_text()).items() if not k.startswith("_")}
+
+
 def labels(ne_feats, info):
     """Egne kartetiketter (landnavn på norsk, byer), så kartet ikke trenger flisleverandør."""
     countries = []
@@ -57,7 +63,7 @@ def labels(ne_feats, info):
         if p["ADM0_A3"] in ("SOL", "CYN"):
             continue
         rec = info.get(p["ADM0_A3"])
-        name = rec["name"] if rec else (p.get("NAME_SV") or p["NAME"])
+        name = rec["name"] if rec else NAMES.get(p["ADM0_A3"], p["NAME"])
         countries.append([name, round(p["LABEL_X"], 2), round(p["LABEL_Y"], 2), p["MIN_LABEL"]])
     places = []
     for f in fetch(PLACES_URL, PLACES_PATH)["features"]:
@@ -72,9 +78,15 @@ def labels(ne_feats, info):
 def load_ne():
     fetch(NE_URL, NE_PATH)
     feats = json.loads(NE_PATH.read_text())["features"]
+    # Forenkle alle land samlet, så naboer deler nøyaktig samme grenselinje
+    # (ingen glipper eller overlapp). Alt annet bygges på disse flatene og
+    # forenkles ikke på nytt.
+    simple = shapely.coverage_simplify([shape(f["geometry"]).buffer(0) for f in feats], WORLD_TOL)
+    for f, g in zip(feats, simple):
+        f["geom"] = g
     geoms = {}
     for f in feats:
-        geoms.setdefault(f["properties"]["ADM0_A3"], []).append(shape(f["geometry"]).buffer(0))
+        geoms.setdefault(f["properties"]["ADM0_A3"], []).append(f["geom"])
     out = {k: unary_union(v) for k, v in geoms.items()}
     for iso, parts in MERGE.items():
         out[iso] = unary_union([out[p] for p in parts if p in out])
@@ -149,8 +161,7 @@ def round_coords(obj, nd=3):
     return obj
 
 
-def feature(geom, props, tol=0.005):
-    geom = geom.simplify(tol, preserve_topology=True)
+def feature(geom, props):
     if geom.is_empty:
         return None
     m = mapping(geom)
@@ -186,9 +197,9 @@ def build():
                 # Ny eller endret regional advarsel uten kartlegging: vis hele
                 # landet skravert og be leseren sjekke UD.
                 rec["unmapped"] = True
-                zones.append(feature(country, {"iso": iso, "level": level, "partial": True, "unmapped": True}, 0.02))
+                zones.append(feature(country, {"iso": iso, "level": level, "partial": True, "unmapped": True}))
             else:
-                zones.append(feature(country, {"iso": iso, "level": level, "label": "Hele landet"}, 0.02))
+                zones.append(feature(country, {"iso": iso, "level": level, "label": "Hele landet"}))
             continue
 
         if reviewed.get(slug) != c.get("hash"):
@@ -220,8 +231,8 @@ def build():
     for f in ne_feats:
         a3 = f["properties"]["ADM0_A3"]
         iso = next((k for k, v in MERGE.items() if a3 in v), a3)
-        world.append(feature(shape(f["geometry"]).buffer(0), {"iso": iso if iso in known else None,
-                                                                "ne": f["properties"]["NAME"]}, 0.02))
+        name = info[iso]["name"] if iso in info else NAMES.get(a3, f["properties"]["NAME"])
+        world.append(feature(f["geom"], {"iso": iso if iso in known else None, "ne": name}))
 
     OUT.mkdir(parents=True, exist_ok=True)
     dump = lambda p, o: (OUT / p).write_text(json.dumps(o, ensure_ascii=False, separators=(",", ":")))

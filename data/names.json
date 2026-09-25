@@ -1,0 +1,14 @@
+{
+ "_doc": "Norske navn for land og territorier som ikke har egen side hos UD (landene med UD-side får navnet derfra).",
+ "VAT": "Vatikanstaten", "MNP": "Nord-Marianene", "VIR": "De amerikanske Jomfruøyer", "GUM": "Guam",
+ "ASM": "Amerikansk Samoa", "PRI": "Puerto Rico", "SGS": "Sør-Georgia og Sør-Sandwichøyene",
+ "IOT": "Britisk territorium i Indiahavet", "SHN": "St. Helena", "PCN": "Pitcairnøyene", "AIA": "Anguilla",
+ "FLK": "Falklandsøyene", "CYM": "Caymanøyene", "BMU": "Bermuda", "VGB": "De britiske Jomfruøyer",
+ "TCA": "Turks- og Caicosøyene", "MSR": "Montserrat", "JEY": "Jersey", "GGY": "Guernsey", "IMN": "Man",
+ "TWN": "Taiwan", "NOR": "Norge", "NIU": "Niue", "ABW": "Aruba", "CUW": "Curaçao", "SAH": "Vest-Sahara",
+ "SPM": "Saint-Pierre og Miquelon", "WLF": "Wallis og Futuna", "MAF": "Saint-Martin", "BLM": "Saint-Barthélemy",
+ "PYF": "Fransk Polynesia", "NCL": "Ny-Caledonia", "ATF": "De franske sørterritoriene", "ALD": "Åland",
+ "GRL": "Grønland", "FRO": "Færøyene", "MAC": "Macao", "HKG": "Hongkong", "IOA": "Australske territorier i Indiahavet",
+ "HMD": "Heard- og McDonaldøyene", "NFK": "Norfolkøya", "ATC": "Ashmore- og Cartierøyene", "KAS": "Siachen-breen",
+ "ATA": "Antarktis", "SXM": "Sint Maarten"
+}
