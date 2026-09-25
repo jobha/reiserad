@@ -1,0 +1,253 @@
+<!doctype html>
+<html lang="nb">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Reiserådkart</title>
+<meta name="description" content="Verdenskart over Utenriksdepartementets reiseadvarsler, med regionale unntak.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='14' fill='%23b3122e'/%3E%3Cpath d='M16 7v11M16 22.5v2' stroke='white' stroke-width='3.4' stroke-linecap='round'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.4/dist/leaflet.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
+<style>
+:root {
+  --bg: #f4f1ec; --panel: rgba(255,255,255,.94); --text: #1d1d1f; --muted: #66646b;
+  --line: #e2ddd5; --all: #b3122e; --nec: #ef6a3a; --land: #fbfaf7; --land-line: #cfc8bc;
+  --sea: #dde7ee; --link: #0b5cad; --warn-bg: #fff3d6; --warn: #7a5200; --shadow: 0 6px 24px rgba(0,0,0,.12);
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #121316; --panel: rgba(28,29,33,.94); --text: #ecebef; --muted: #a4a2ab;
+    --line: #34353b; --all: #e0314f; --nec: #f08a4b; --land: #24262b; --land-line: #3b3d44;
+    --sea: #15181d; --link: #7cb6ff; --warn-bg: #3a2f14; --warn: #f3cf7a; --shadow: 0 6px 24px rgba(0,0,0,.5);
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #121316; --panel: rgba(28,29,33,.94); --text: #ecebef; --muted: #a4a2ab;
+  --line: #34353b; --all: #e0314f; --nec: #f08a4b; --land: #24262b; --land-line: #3b3d44;
+  --sea: #15181d; --link: #7cb6ff; --warn-bg: #3a2f14; --warn: #f3cf7a; --shadow: 0 6px 24px rgba(0,0,0,.5);
+}
+* { box-sizing: border-box; }
+html, body { margin: 0; height: 100%; background: var(--bg); color: var(--text);
+  font: 14px/1.45 Inter, system-ui, -apple-system, sans-serif; }
+#map { position: absolute; inset: 0; background: var(--sea); }
+.leaflet-container { font: inherit; background: var(--sea); }
+
+.panel { position: absolute; z-index: 1000; top: 12px; left: 12px; width: 330px; max-width: calc(100vw - 24px);
+  max-height: calc(100vh - 24px); display: flex; flex-direction: column;
+  background: var(--panel); backdrop-filter: blur(8px); border: 1px solid var(--line);
+  border-radius: 14px; box-shadow: var(--shadow); overflow: hidden; }
+.panel header { padding: 14px 16px 10px; }
+.panel h1 { margin: 0; font-size: 19px; letter-spacing: -.01em; }
+.panel .sub { color: var(--muted); font-size: 12.5px; margin-top: 2px; }
+.legend { display: grid; gap: 6px; padding: 4px 16px 12px; font-size: 13px; }
+.legend div { display: flex; align-items: center; gap: 9px; }
+.sw { width: 18px; height: 13px; border-radius: 3px; flex: none; border: 1px solid rgba(0,0,0,.15); }
+.sw.all { background: var(--all); } .sw.nec { background: var(--nec); }
+.sw.part { background: repeating-linear-gradient(45deg, var(--nec) 0 3px, transparent 3px 6px); }
+.sw.none { background: var(--land); }
+.tools { display: flex; gap: 8px; padding: 0 16px 10px; }
+.tools input { flex: 1; min-width: 0; font: inherit; padding: 7px 10px; border-radius: 8px;
+  border: 1px solid var(--line); background: transparent; color: var(--text); }
+.tools button, .toggle { font: inherit; border: 1px solid var(--line); background: transparent; color: var(--text);
+  border-radius: 8px; padding: 6px 10px; cursor: pointer; }
+.list { overflow: auto; border-top: 1px solid var(--line); flex: 1 1 auto; min-height: 0; }
+.list button { display: flex; width: 100%; align-items: center; gap: 9px; padding: 7px 16px; border: 0;
+  background: transparent; color: inherit; font: inherit; text-align: left; cursor: pointer; }
+.list button:hover, .list button:focus-visible { background: rgba(127,127,127,.12); outline: none; }
+.list .dot { width: 10px; height: 10px; border-radius: 50%; flex: none; }
+.list .tag { margin-left: auto; color: var(--muted); font-size: 11.5px; }
+.panel footer { padding: 8px 16px 12px; font-size: 11.5px; color: var(--muted); border-top: 1px solid var(--line); }
+.panel footer a { color: var(--muted); }
+.panel.collapsed .legend, .panel.collapsed .tools, .panel.collapsed .list, .panel.collapsed footer { display: none; }
+.head-row { display: flex; align-items: flex-start; justify-content: space-between; gap: 8px; }
+
+.leaflet-popup-content-wrapper { background: var(--panel); color: var(--text); border-radius: 12px; box-shadow: var(--shadow); }
+.leaflet-popup-tip { background: var(--panel); }
+.leaflet-popup-content { margin: 14px 16px; width: 320px !important; max-width: calc(100vw - 80px); }
+.pop h2 { margin: 0 0 2px; font-size: 16px; }
+.pop .status { font-size: 11.5px; color: var(--muted); text-transform: uppercase; letter-spacing: .03em; }
+.pop .zone { margin: 8px 0 4px; padding: 6px 9px; border-radius: 7px; font-weight: 600; font-size: 13px; color: #fff; }
+.pop .zone.all { background: var(--all); } .pop .zone.necessary { background: var(--nec); }
+.pop .zone.clear { background: transparent; color: var(--text); border: 1px solid var(--line); font-weight: 500; }
+.pop p { margin: 6px 0; }
+.pop .paras { max-height: 210px; overflow: auto; font-size: 13px; }
+.pop .note { font-size: 12px; background: var(--warn-bg); color: var(--warn); padding: 6px 9px; border-radius: 7px; margin: 8px 0 0; }
+.pop a.ud { display: inline-block; margin-top: 10px; color: var(--link); font-weight: 600; text-decoration: none; }
+.pop a.ud:hover { text-decoration: underline; }
+.leaflet-container a.leaflet-popup-close-button { color: var(--muted); }
+.leaflet-control-attribution { background: var(--panel) !important; color: var(--muted); }
+.leaflet-control-attribution a { color: var(--muted); }
+.leaflet-bar a { background: var(--panel); color: var(--text); border-color: var(--line); }
+
+@media (max-width: 640px) {
+  .panel { top: auto; bottom: 16px; left: 16px; right: 16px; width: auto; max-height: 55vh; }
+  .leaflet-popup-content { width: 260px !important; }
+}
+</style>
+</head>
+<body>
+<div id="map" role="application" aria-label="Kart over UDs reiseadvarsler"></div>
+
+<aside class="panel" id="panel">
+  <header>
+    <div class="head-row">
+      <div>
+        <h1>Reiserådkart</h1>
+        <div class="sub" id="sub">Utenriksdepartementets reiseadvarsler</div>
+      </div>
+      <button class="toggle" id="collapse" aria-expanded="true" title="Skjul/vis">–</button>
+    </div>
+  </header>
+  <div class="legend">
+    <div><span class="sw all"></span>Fraråder alle reiser</div>
+    <div><span class="sw nec"></span>Fraråder reiser som ikke er strengt nødvendige</div>
+    <div><span class="sw part"></span>Gjelder bare deler av området – les UD</div>
+    <div><span class="sw none"></span>Ingen reiseadvarsel</div>
+  </div>
+  <div class="tools">
+    <input id="q" type="search" placeholder="Søk land …" aria-label="Søk land">
+  </div>
+  <div class="list" id="list"></div>
+  <footer>
+    Kilde: <a href="https://www.regjeringen.no/no/tema/utenrikssaker/reiseinformasjon/velg-land/id2414273/" target="_blank" rel="noopener">regjeringen.no</a>.
+    Regionale grenser er tegnet etter UDs tekst og kan være omtrentlige. UDs side gjelder alltid.
+  </footer>
+</aside>
+
+<script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.4/dist/leaflet.js"></script>
+<script>
+const css = n => getComputedStyle(document.documentElement).getPropertyValue(n).trim();
+const esc = s => String(s ?? "").replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const LEVEL_TXT = { all: "Fraråder alle reiser", necessary: "Fraråder reiser som ikke er strengt nødvendige" };
+
+const map = L.map("map", { worldCopyJump: true, minZoom: 2, maxZoom: 12, zoomSnap: 0.5 }).setView([20, 15], 2.5);
+map.attributionControl.setPrefix(false);
+map.createPane("zones").style.zIndex = 410;
+map.createPane("labels").style.zIndex = 420;
+map.getPane("labels").style.pointerEvents = "none";
+
+const dark = matchMedia("(prefers-color-scheme: dark)").matches;
+const carto = dark ? "dark" : "light";
+L.tileLayer(`https://{s}.basemaps.cartocdn.com/${carto}_only_labels/{z}/{x}/{y}{r}.png`, {
+  pane: "labels", subdomains: "abcd", maxZoom: 19,
+  attribution: '© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> © <a href="https://carto.com/">CARTO</a> · Grenser: Natural Earth, geoBoundaries',
+}).addTo(map);
+
+// Skravur for "gjelder deler av området" lages som SVG-mønster i Leaflets renderer.
+function addHatch(svg) {
+  if (svg.querySelector("#hatch")) return;
+  const ns = "http://www.w3.org/2000/svg";
+  const defs = document.createElementNS(ns, "defs");
+  defs.innerHTML = `<pattern id="hatch" patternUnits="userSpaceOnUse" width="7" height="7" patternTransform="rotate(45)">
+    <rect width="7" height="7" fill="${css("--nec")}" fill-opacity=".18"/>
+    <line x1="0" y1="0" x2="0" y2="7" stroke="${css("--nec")}" stroke-width="3.2"/></pattern>`;
+  svg.prepend(defs);
+}
+
+let INFO = {}, zoneLayer, worldLayer, byIso = {};
+
+function popupHtml(iso, zone) {
+  const c = INFO[iso];
+  if (!c) return `<div class="pop"><h2>${esc(zone?.ne || "Ukjent område")}</h2><p>UD har ingen egen reiseinformasjonsside for dette området.</p></div>`;
+  let h = `<div class="pop"><h2>${esc(c.name)}</h2>`;
+  if (c.status) h += `<div class="status">${esc(c.status)}</div>`;
+  if (!c.level) {
+    h += `<div class="zone clear">Ingen reiseadvarsel</div>`;
+  } else if (zone && zone.level) {
+    h += `<div class="zone ${zone.level}">${esc(LEVEL_TXT[zone.level])}${zone.label && zone.label !== "Hele landet" ? ": " + esc(zone.label) : ""}</div>`;
+  } else if (zone && zone.clear) {
+    h += `<div class="zone clear">Denne delen av landet er ikke omfattet av reiseadvarselen</div>`;
+  }
+  if (c.paragraphs) h += `<div class="paras">${c.paragraphs.map(p => `<p>${esc(p)}</p>`).join("")}</div>`;
+  if (c.exceptions?.length) h += `<p><b>Unntatt:</b> ${c.exceptions.map(esc).join(", ")}.</p>`;
+  if (zone?.partial && !c.unmapped) h += `<div class="note">Advarselen gjelder bare deler av dette området. Se UDs tekst.</div>`;
+  if (zone?.approx) h += `<div class="note">Grensen for denne sonen er tegnet omtrentlig ut fra UDs beskrivelse.</div>`;
+  if (c.unmapped) h += `<div class="note">UD beskriver regionale advarsler her som ikke er tegnet inn ennå. Hele landet er skravert – les UDs tekst for hvilke områder det gjelder.</div>`;
+  if (c.stale) h += `<div class="note">UD har endret teksten siden sonene ble tegnet. Les UDs tekst.</div>`;
+  h += `<a class="ud" href="${esc(c.url)}" target="_blank" rel="noopener">Les reiserådet hos UD →</a></div>`;
+  return h;
+}
+
+function fillFor(level, partial) {
+  if (partial) return { fillColor: "url(#hatch)", fillOpacity: 1, color: css("--nec"), weight: 1 };
+  const col = level === "all" ? css("--all") : css("--nec");
+  return { fillColor: col, fillOpacity: .78, color: col, weight: .6 };
+}
+
+function buildList(filter = "") {
+  const list = document.getElementById("list");
+  const f = filter.trim().toLowerCase();
+  const rows = Object.entries(INFO)
+    .filter(([, c]) => f ? c.name.toLowerCase().includes(f) : c.level)
+    .sort((a, b) => (a[1].level ? 0 : 1) - (b[1].level ? 0 : 1) || a[1].name.localeCompare(b[1].name, "nb"));
+  list.innerHTML = rows.map(([iso, c]) => {
+    const col = c.level === "all" ? css("--all") : c.level ? css("--nec") : "transparent";
+    const tag = !c.level ? "ingen advarsel" : c.regional || c.unmapped ? "deler av landet" : "hele landet";
+    return `<button data-iso="${iso}"><span class="dot" style="background:${col};${c.level ? "" : "border:1px solid " + css("--line")}"></span>${esc(c.name)}<span class="tag">${tag}</span></button>`;
+  }).join("") || `<p style="padding:8px 16px;color:var(--muted)">Ingen treff.</p>`;
+}
+
+function focusCountry(iso) {
+  const layers = byIso[iso];
+  if (!layers?.length) return;
+  const b = L.featureGroup(layers).getBounds();
+  map.fitBounds(b, { padding: [40, 40], maxZoom: 6 });
+  L.popup().setLatLng(b.getCenter()).setContent(popupHtml(iso, null)).openOn(map);
+  if (innerWidth <= 640) document.getElementById("panel").classList.add("collapsed");
+}
+
+Promise.all(["data/info.json", "data/world.json", "data/zones.json"].map(u => fetch(u, { cache: "no-cache" }).then(r => r.json())))
+.then(([info, world, zones]) => {
+  INFO = info.countries;
+  const d = new Date(info.fetched);
+  const n = Object.values(INFO).filter(c => c.level).length;
+  document.getElementById("sub").textContent =
+    `${n} land med reiseadvarsel · hentet ${d.toLocaleDateString("nb-NO", { day: "numeric", month: "long", year: "numeric" })} kl. ${d.toLocaleTimeString("nb-NO", { hour: "2-digit", minute: "2-digit" })}`;
+
+  worldLayer = L.geoJSON(world, {
+    style: { fillColor: css("--land"), fillOpacity: 1, color: css("--land-line"), weight: .7 },
+    onEachFeature: (f, l) => {
+      const iso = f.properties.iso;
+      if (iso) (byIso[iso] ||= []).push(l);
+      l.on("click", e => {
+        const c = INFO[iso];
+        L.popup().setLatLng(e.latlng).setContent(popupHtml(iso, { ne: f.properties.ne, clear: !!c?.level })).openOn(map);
+      });
+    },
+  }).addTo(map);
+
+  zoneLayer = L.geoJSON(zones, {
+    pane: "zones",
+    style: f => fillFor(f.properties.level, f.properties.partial),
+    onEachFeature: (f, l) => {
+      l.on("click", e => {
+        L.DomEvent.stopPropagation(e);
+        L.popup().setLatLng(e.latlng).setContent(popupHtml(f.properties.iso, f.properties)).openOn(map);
+      });
+      l.on("mouseover", () => l.setStyle({ weight: 2 }));
+      l.on("mouseout", () => l.setStyle({ weight: f.properties.partial ? 1 : .6 }));
+    },
+  }).addTo(map);
+  const svg = map.getPane("zones").querySelector("svg");
+  if (svg) addHatch(svg);
+
+  buildList();
+  const h = decodeURIComponent(location.hash.slice(1)).toLowerCase();
+  if (h) { const hit = Object.entries(INFO).find(([, c]) => c.slug === h || c.name.toLowerCase() === h); if (hit) focusCountry(hit[0]); }
+})
+.catch(err => { document.getElementById("sub").textContent = "Klarte ikke å laste data: " + err.message; });
+
+document.getElementById("q").addEventListener("input", e => buildList(e.target.value));
+document.getElementById("list").addEventListener("click", e => {
+  const b = e.target.closest("button[data-iso]"); if (b) focusCountry(b.dataset.iso);
+});
+document.getElementById("collapse").addEventListener("click", e => {
+  const p = document.getElementById("panel"); p.classList.toggle("collapsed");
+  const open = !p.classList.contains("collapsed");
+  e.currentTarget.textContent = open ? "–" : "+"; e.currentTarget.setAttribute("aria-expanded", open);
+});
+if (innerWidth <= 640) { document.getElementById("panel").classList.add("collapsed"); document.getElementById("collapse").textContent = "+"; }
+</script>
+</body>
+</html>

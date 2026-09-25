@@ -1,0 +1,22 @@
+{
+ "afghanistan":"AFG","albania":"ALB","algerie":"DZA","andorra":"AND","angola":"AGO","antiguabarbuda":"ATG","argentina":"ARG","armenia":"ARM","aserbajdsjan":"AZE","australia":"AUS",
+ "bahamas":"BHS","bahrain":"BHR","bangladesh":"BGD","barbados":"BRB","belarus":"BLR","belgia":"BEL","belize":"BLZ","benin":"BEN","bhutan":"BTN","bolivia":"BOL",
+ "bosnia":"BIH","botswana":"BWA","brasil":"BRA","brunei":"BRN","bulgaria":"BGR","burkinafaso":"BFA","burundi":"BDI","canada":"CAN","chile":"CHL","colombia":"COL",
+ "cookoyene":"COK","costarica":"CRI","cuba":"CUB","danmark":"DNK","djibouti":"DJI","dominica":"DMA","dominikanske":"DOM","drkongo":"COD","ecuador":"ECU","egypt":"EGY",
+ "ekvatorialguinea":"GNQ","elfernbenskysten":"CIV","elsalvador":"SLV","emiratene":"ARE","eritrea":"ERI","estland":"EST","etiopia":"ETH","ewatini":"SWZ","fiji":"FJI","filippinene":"PHL",
+ "finland":"FIN","frankrike":"FRA","gabon":"GAB","gambia":"GMB","georgia":"GEO","ghana":"GHA","grenada":"GRD","guatemala":"GTM","guinea":"GIN","guineabissau":"GNB",
+ "guyana":"GUY","haiti":"HTI","hellas":"GRC","honduras":"HND","india":"IND","indonesia":"IDN","irak":"IRQ","iran":"IRN","irland":"IRL","island":"ISL",
+ "israel":"ISR","italia":"ITA","jamaica":"JAM","japan":"JPN","jemen":"YEM","jordan":"JOR","kambodsja":"KHM","kamerun":"CMR","kappverde":"CPV","kasakhstan":"KAZ",
+ "kenya":"KEN","kina":"CHN","kirgisistan":"KGZ","kiribati":"KIR","komorene":"COM","kosovo":"KOS","kroatia":"HRV","kuwait":"KWT","kypros":"CYP","laos":"LAO",
+ "latvia":"LVA","lesotho":"LSO","libanon":"LBN","liberia":"LBR","libya":"LBY","liechtenstein":"LIE","litauen":"LTU","luxembourg":"LUX","madagaskar":"MDG","malawi":"MWI",
+ "malaysia":"MYS","maldivene":"MDV","mali":"MLI","malta":"MLT","marokko":"MAR","marshallislands":"MHL","mauritania":"MRT","mauritius":"MUS","mexico":"MEX","mikronesia":"FSM",
+ "moldova":"MDA","monaco":"MCO","mongolia":"MNG","montenegro":"MNE","mosambik":"MOZ","myanmar":"MMR","namibia":"NAM","naoero":"NRU","nederland":"NLD","nepal":"NPL",
+ "newzealand":"NZL","nicaragua":"NIC","niger":"NER","nigeria":"NGA","nordkorea":"PRK","nordmakedonia":"MKD","oman":"OMN","osterrike":"AUT","osttimor":"TLS","pakistan":"PAK",
+ "palau":"PLW","palestina":"PSX","panama":"PAN","papuanyguinea":"PNG","paraguay":"PRY","peru":"PER","polen":"POL","portugal":"PRT","qatar":"QAT","repkongo":"COG",
+ "romania":"ROU","russland":"RUS","rwanda":"RWA","saintkitts":"KNA","saintlucia":"LCA","saintvincent":"VCT","salomonoyene":"SLB","samoa":"WSM","sanmarino":"SMR","saotome":"STP",
+ "sar":"CAF","saudiarabia":"SAU","senegal":"SEN","serbia":"SRB","seychellene":"SYC","sierraleone":"SLE","singapore":"SGP","slovakia":"SVK","slovenia":"SVN","somalia":"SOM",
+ "sorafrika":"ZAF","sorkorea":"KOR","sorsudan":"SDS","spania":"ESP","srilanka":"LKA","sudan":"SDN","surinam":"SUR","sveits":"CHE","sverige":"SWE","syria":"SYR",
+ "tadsjikistan":"TJK","tanzania":"TZA","thailand":"THA","togo":"TGO","tonga":"TON","triogto":"TTO","tsjad":"TCD","tsjekkia":"CZE","tunisia":"TUN","turkmenistan":"TKM",
+ "tuvalu":"TUV","tyrkia":"TUR","tyskland":"DEU","uganda":"UGA","uk":"GBR","ukraina":"UKR","ungarn":"HUN","uruguay":"URY","usa":"USA","usbekistan":"UZB",
+ "vanuatu":"VUT","venezuela":"VEN","vietnam":"VNM","zambia":"ZMB","zimbabwe":"ZWE"
+}

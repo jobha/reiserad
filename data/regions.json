@@ -1,0 +1,190 @@
+{
+ "_doc": [
+  "Manuell kartlegging av reiseadvarsler som bare gjelder deler av et land.",
+  "Land som ikke står her tegnes automatisk som hele landet (se build.py).",
+  "Soner tegnes i rekkefølge; en senere sone overstyrer tidligere soner der de overlapper.",
+  "level: all = fraråder alle reiser, necessary = fraråder reiser som ikke er strengt nødvendige, none = unntak (ingen advarsel).",
+  "Geometri: country | adm+names (geoBoundaries) | border+km (Natural Earth-naboland) | near+km (buffer rundt en adm-sone) | poly | point+km | line+km.",
+  "and: snitt med en annen sone. approx: grensen er skjønnsmessig tegnet. partial: gjelder bare deler av området (skravert).",
+  "reviewed.json holder hashen av UD-teksten da sonene ble tegnet. Endrer UD teksten, merkes landet 'endret siden kartlegging' til den er gjennomgått og stemplet: python scraper/build.py --stamp <slug>."
+ ],
+ "algerie": {"zones": [
+  {"level": "all", "border": ["MRT", "MLI", "NER", "LBY"], "km": 50, "approx": true, "label": "Grenseområdene mot Mauritania, Mali, Niger og Libya"},
+  {"level": "all", "adm": "DZA/ADM1", "names": ["Tizi Ouzou", "Bejaia", "Bouira"], "approx": true, "label": "Fjellområdene i Kabylia"},
+  {"level": "all", "border": ["TUN"], "km": 30, "clip": [-10, 34.5, 20, 40], "approx": true, "label": "Fjellområdene mot Tunisia"},
+  {"level": "necessary", "point": [-8.05, 27.55], "km": 45, "approx": true, "label": "Flyktningeleirene ved Tindouf"}
+ ]},
+ "armenia": {"zones": [
+  {"level": "all", "near": {"adm": "AZE/ADM1", "names": ["Contiguous Azerbaijan"]}, "km": 5, "label": "Innenfor 5 km fra den østlige grensen mot Aserbajdsjan"}
+ ]},
+ "aserbajdsjan": {"zones": [
+  {"level": "all", "adm": "AZE/ADM2", "names": ["Khankendi City", "Khojaly District", "Khojavend District", "Shusha City", "Shusha District", "Zangilan District", "Jabrayil District", "Qubadli District", "Lachin District", "Kalbajar District", "Fuzuli District", "Agdam District", "Tartar District"], "label": "Nagorno-Karabakh og omkringliggende distrikter"},
+  {"level": "all", "border": ["ARM"], "km": 5, "label": "Innenfor 5 km fra grensen mot Armenia"}
+ ]},
+ "benin": {"zones": [
+  {"level": "necessary", "border": ["NGA"], "km": 30, "and": {"adm": "BEN/ADM1", "names": ["Alibori", "Borgou"]}, "approx": true, "label": "Grenseområdene mot Nigeria i Alibori og Borgou"},
+  {"level": "all", "border": ["BFA", "NER"], "km": 30, "approx": true, "label": "Grenseområdene mot Burkina Faso og Niger"},
+  {"level": "all", "poly": [[0.9, 11.45], [1.95, 11.45], [2.0, 10.9], [1.3, 10.75], [0.95, 10.95]], "approx": true, "label": "Pendjari nasjonalpark"},
+  {"level": "all", "poly": [[2.2, 12.3], [3.0, 12.4], [3.1, 11.6], [2.45, 11.25], [2.15, 11.6]], "approx": true, "label": "Parc du W"}
+ ]},
+ "bolivia": {"zones": [
+  {"level": "necessary", "adm": "BOL/ADM2", "names": ["Chapare"], "label": "Chapare-regionen"}
+ ]},
+ "burundi": {"zones": [
+  {"level": "necessary", "country": true, "label": "Resten av Burundi"},
+  {"level": "all", "adm": "BDI/ADM1", "names": ["Bubanza", "Cibitoke"], "label": "Provinsene Bubanza og Cibitoke"},
+  {"level": "all", "poly": [[29.33, -2.62], [29.52, -2.62], [29.57, -3.0], [29.5, -3.25], [29.4, -3.2], [29.35, -2.9]], "approx": true, "label": "Kibira nasjonalpark"}
+ ]},
+ "colombia": {"zones": [
+  {"level": "necessary", "partial": true, "adm": "COL/ADM1", "names": ["Norte de Santander", "Arauca", "Nariño", "Cauca", "Valle del Cauca", "Chocó", "Meta", "Caquetá", "Huila", "Putumayo", "Guaviare", "Vichada"], "label": "Utenfor turistområder og bykjerner i disse fylkene"},
+  {"level": "necessary", "border": ["VEN"], "km": 20, "label": "Innenfor 20 km fra grensen mot Venezuela"},
+  {"level": "necessary", "adm": "COL/ADM2", "names": ["Turbo", "Apartadó", "Carepa", "Chigorodó", "Necoclí", "Arboletes", "San Juan De Urabá", "Mutatá", "Murindó"], "approx": true, "label": "Urabá (Antioquia)"}
+ ]},
+ "cuba": {"zones": [
+  {"level": "necessary", "country": true, "label": "Alle provinser unntatt Havanna, Artemisa, Mayabeque og Matanzas"},
+  {"level": "none", "adm": "CUB/ADM1", "names": ["Havana", "Artemisa", "Mayabeque", "Matanzas"], "label": "Havanna, Artemisa, Mayabeque og Matanzas"}
+ ]},
+ "drkongo": {"zones": [
+  {"level": "necessary", "country": true, "label": "Øvrige deler av landet"},
+  {"level": "all", "adm": "COD/ADM1", "names": ["Sud-Ubangi", "Nord-Ubangi", "Lower Uele", "Upper Uele", "Ituri", "North Kivu", "South Kivu", "Maniema", "Tanganyika", "Kasai", "Central Kasai", "Kasai-Oriental"], "label": "Øst- og nordøstlige provinser og Kasaï-provinsene"}
+ ]},
+ "egypt": {"zones": [
+  {"level": "all", "adm": "EGY/ADM1", "names": ["North Sinai Governorate"], "label": "Nord-Sinai"},
+  {"level": "all", "border": ["LBY"], "km": 50, "label": "Innenfor 50 km fra grensen mot Libya"}
+ ]},
+ "elfernbenskysten": {"zones": [
+  {"level": "necessary", "border": ["MLI", "BFA"], "km": 40, "label": "Nærmere enn 40 km fra grensen mot Mali og Burkina Faso"},
+  {"level": "necessary", "poly": [[-4.35, 9.45], [-3.15, 9.45], [-3.1, 8.55], [-4.05, 8.5]], "approx": true, "label": "Comoé nasjonalpark"}
+ ]},
+ "eritrea": {"zones": [
+  {"level": "necessary", "border": ["ETH", "SDN", "DJI"], "km": 20, "label": "Innenfor 20 km fra grensene mot Etiopia, Sudan og Djibouti"}
+ ]},
+ "etiopia": {"zones": [
+  {"level": "necessary", "country": true, "label": "Øvrige deler av Etiopia"},
+  {"level": "all", "near": {"adm": "ETH/ADM1", "names": ["Tigray", "Amhara", "Gambela", "Beneshangul Gumu"]}, "km": 30, "approx": true, "label": "Grenseområdene mot Tigray, Amhara, Gambella og Benishangul Gumuz"},
+  {"level": "all", "adm": "ETH/ADM1", "names": ["Tigray", "Amhara", "Gambela", "Beneshangul Gumu"], "label": "Tigray, Amhara, Gambella og Benishangul Gumuz"},
+  {"level": "all", "adm": "ETH/ADM2", "names": ["Kelem Wellega", "West Wellega", "East Wellega", "Horo Guduru"], "label": "Vestlige Oromia (Welega-sonene og Horo Guduru)"},
+  {"level": "all", "point": [36.35, 8.45], "km": 55, "approx": true, "label": "Buno Bedele (Oromia)"},
+  {"level": "all", "adm": "ETH/ADM1", "names": ["Somali"], "and": {"poly": [[43.5, 3], [48.5, 3], [48.5, 9.5], [43.5, 9.5]]}, "approx": true, "label": "Østlige deler av Somali-regionen"},
+  {"level": "all", "border": ["SOM", "SOL", "SDN", "SDS", "ERI"], "km": 30, "approx": true, "label": "Grenseområdene mot Somalia, Sudan, Sør-Sudan og Eritrea"},
+  {"level": "none", "adm": "ETH/ADM1", "names": ["Addis Ababa"], "label": "Addis Abeba"}
+ ]},
+ "filippinene": {"zones": [
+  {"level": "necessary", "adm": "PHL/ADM2", "names": ["Agusan del Norte", "Agusan del Sur", "Bukidnon", "Camiguin", "Compostela Valley", "Davao Occidental", "Davao Oriental", "Davao del Norte", "Davao del Sur", "Dinagat Islands", "Misamis Oriental", "Surigao del Norte", "Surigao del Sur"], "label": "Øvrige deler av Mindanao"},
+  {"level": "all", "adm": "PHL/ADM2", "names": ["Cotabato", "Cotabato City", "South Cotabato", "Lanao del Norte", "Lanao del Sur", "Zamboanga del Norte", "Zamboanga del Sur", "Zamboanga Sibugay", "City of Isabela", "Maguindanao", "Misamis Occidental", "Sarangani", "Sultan Kudarat", "Sulu", "Basilan", "Tawi-Tawi"], "label": "Sentrale, sørlige og vestlige Mindanao og Sulu-øygruppen"},
+  {"level": "none", "point": [126.05, 9.85], "km": 22, "approx": true, "label": "Siargao"}
+ ]},
+ "georgia": {"zones": [
+  {"level": "necessary", "near": {"adm": "GEO/ADM1", "names": ["Abkhazia"]}, "km": 15, "approx": true, "label": "Nær den administrative grensen til Abkhasia"},
+  {"level": "necessary", "near": {"poly": [[43.45, 42.35], [43.75, 42.62], [44.05, 42.7], [44.35, 42.55], [44.55, 42.35], [44.75, 42.2], [44.55, 42.07], [44.05, 42.1], [43.75, 42.18]]}, "km": 15, "approx": true, "label": "Nær den administrative grensen til Sør-Ossetia"},
+  {"level": "none", "line": [[44.79, 41.72], [44.72, 41.85], [44.77, 42.12], [44.69, 42.35], [44.48, 42.48], [44.52, 42.56], [44.64, 42.66], [44.63, 42.74]], "km": 4, "approx": true, "label": "Gudauri, Stepantsminda/Kazbegi og E117 fra Tbilisi"},
+  {"level": "all", "adm": "GEO/ADM1", "names": ["Abkhazia"], "label": "Abkhasia"},
+  {"level": "all", "poly": [[43.45, 42.35], [43.75, 42.62], [44.05, 42.7], [44.35, 42.55], [44.55, 42.35], [44.75, 42.2], [44.55, 42.07], [44.05, 42.1], [43.75, 42.18]], "approx": true, "label": "Sør-Ossetia"}
+ ]},
+ "ghana": {"zones": [
+  {"level": "necessary", "border": ["BFA"], "km": 40, "label": "Nærmere enn 40 km fra grensen mot Burkina Faso"}
+ ]},
+ "india": {"zones": [
+  {"level": "all", "adm": "IND/ADM1", "names": ["Jammu and Kashmīr"], "label": "Jammu og Kashmir"},
+  {"level": "all", "border": ["PAK"], "km": 10, "label": "Innenfor 10 km fra grensen mot Pakistan"}
+ ]},
+ "israel": {"zones": [
+  {"level": "all", "border": ["LBN", "SYR"], "km": 5, "label": "Innenfor 5 km fra grensen mot Libanon og Syria"},
+  {"level": "all", "near": {"adm": "PSE/ADM1", "names": ["Gaza"]}, "km": 5, "label": "Innenfor 5 km fra Gazastripen"}
+ ]},
+ "kambodsja": {"zones": [
+  {"level": "all", "border": ["THA"], "km": 20, "label": "Nærmere enn 20 km fra grensen mot Thailand"}
+ ]},
+ "kamerun": {"zones": [
+  {"level": "necessary", "adm": "CMR/ADM1", "names": ["North"], "label": "Øvrige deler av North-regionen"},
+  {"level": "necessary", "near": {"adm": "CMR/ADM1", "names": ["North"]}, "km": 20, "and": {"adm": "CMR/ADM1", "names": ["Adamaoua"]}, "label": "Adamawa innenfor 20 km fra North-regionen"},
+  {"level": "necessary", "poly": [[8.45, 4.98], [8.78, 4.98], [8.78, 4.45], [8.45, 4.45]], "approx": true, "label": "Bakassi-halvøya"},
+  {"level": "all", "adm": "CMR/ADM1", "names": ["Far North", "North-West", "South-West"], "label": "Far North, North West og South West"},
+  {"level": "all", "border": ["NGA", "TCD", "CAF"], "km": 40, "label": "Nærmere enn 40 km fra grensen mot Nigeria, Tsjad og Den sentralafrikanske republikk"},
+  {"level": "none", "point": [13.58, 7.32], "km": 8, "label": "Ngaoundéré"}
+ ]},
+ "kenya": {"zones": [
+  {"level": "necessary", "border": ["SOM", "SOL"], "km": 60, "label": "Innenfor 60 km fra grensen mot Somalia"},
+  {"level": "necessary", "adm": "KEN/ADM1", "names": ["Garissa"], "label": "Garissa fylke"}
+ ]},
+ "malaysia": {"zones": [
+  {"level": "necessary", "poly": [[118.05, 5.9], [118.6, 5.95], [119.45, 5.3], [119.05, 4.95], [118.75, 4.45], [118.85, 4.0], [117.8, 4.05], [117.8, 4.35], [118.2, 4.6], [118.05, 4.95], [118.2, 5.4], [117.95, 5.75]], "approx": true, "label": "Øyer og kyst i østlige Sabah fra Sandakan til Tawau"},
+  {"level": "none", "adm": "MYS/ADM2", "names": ["Sandakan"], "label": "Landområdene i Sandakan-distriktet"}
+ ]},
+ "mauritania": {"zones": [
+  {"level": "necessary", "country": true, "label": "Mauritania utenom Nouakchott"},
+  {"level": "none", "adm": "MRT/ADM1", "names": ["Nouakchott"], "label": "Nouakchott"}
+ ]},
+ "moldova": {"zones": [
+  {"level": "necessary", "adm": "MDA/ADM1", "names": ["Transnistria", "Bender"], "label": "Transnistria"}
+ ]},
+ "mosambik": {"zones": [
+  {"level": "necessary", "adm": "MOZ/ADM1", "names": ["Cabo Delgado"], "label": "Cabo Delgado"},
+  {"level": "necessary", "adm": "MOZ/ADM2", "names": ["Erati", "Memba", "Mecula", "Marrupa"], "label": "Erati og Memba (Nampula), Mecula og Marrupa (Niassa)"}
+ ]},
+ "nigeria": {"zones": [
+  {"level": "necessary", "adm": "NGA/ADM1", "names": ["Abia", "Anambra", "Benue", "Edo", "Kogi", "Kwara", "Ondo", "Plateau", "Taraba"], "label": "Abia, Anambra, Benue, Edo, Kogi, Kwara, Ondo, Plateau og Taraba"},
+  {"level": "all", "adm": "NGA/ADM1", "names": ["Adamawa", "Akwa Ibom", "Bauchi", "Borno", "Bayelsa", "Cross River", "Delta", "Gombe", "Imo", "Jigawa", "Kaduna", "Katsina", "Kano", "Kebbi", "Niger", "Rivers", "Sokoto", "Yobe", "Zamfara"], "label": "Nordlige og sørlige delstater"},
+  {"level": "none", "point": [7.01, 4.82], "km": 15, "approx": true, "label": "Port Harcourt"}
+ ]},
+ "pakistan": {"zones": [
+  {"level": "all", "border": ["IND"], "km": 10, "label": "Innenfor 10 km fra Kashmir-kontrollinjen og grensen mot India"},
+  {"level": "all", "adm": "PAK/ADM1", "names": ["Azad Kashmir", "Balochistan", "Khyber Pakhtunkhwa"], "label": "Azad Kashmir, Balutsjistan og Khyber Pakhtunkhwa"}
+ ]},
+ "palestina": {"zones": [
+  {"level": "all", "country": true, "label": "Palestina"},
+  {"level": "none", "point": [35.235, 31.78], "km": 3, "approx": true, "label": "Øst-Jerusalem"},
+  {"level": "none", "point": [35.2, 31.705], "km": 2.5, "approx": true, "label": "Betlehem by"},
+  {"level": "none", "point": [35.45, 31.86], "km": 3, "approx": true, "label": "Jeriko by"},
+  {"level": "none", "line": [[35.235, 31.78], [35.2, 31.705]], "km": 1, "approx": true, "label": "Hovedvei Øst-Jerusalem – Betlehem"},
+  {"level": "none", "line": [[35.235, 31.78], [35.33, 31.8], [35.45, 31.86], [35.545, 31.87]], "km": 1, "approx": true, "label": "Hovedvei Øst-Jerusalem – Jeriko – Allenby"},
+  {"level": "none", "point": [35.545, 31.87], "km": 2, "approx": true, "label": "King Hussein Bridge (Allenby)"},
+  {"level": "none", "line": [[35.52, 31.76], [35.47, 31.68], [35.43, 31.55], [35.4, 31.49]], "km": 3, "approx": true, "label": "Den palestinske dødehavskysten"}
+ ]},
+ "repkongo": {"zones": [
+  {"level": "necessary", "adm": "COG/ADM1", "names": ["Pool"], "label": "Pool-regionen"},
+  {"level": "necessary", "adm": "COG/ADM1", "names": ["Bouenza"], "and": {"poly": [[13.6, -5], [15, -5], [15, -3], [13.6, -3]]}, "approx": true, "label": "Østlige deler av Bouenza"},
+  {"level": "necessary", "border": ["CAF"], "km": 50, "label": "Mindre enn 50 km fra grensen mot Den sentralafrikanske republikk"}
+ ]},
+ "rwanda": {"zones": [
+  {"level": "necessary", "adm": "RWA/ADM2", "names": ["Rubavu"], "label": "Rubavu-distriktet"}
+ ]},
+ "saudiarabia": {"zones": [
+  {"level": "all", "border": ["YEM"], "km": 50, "label": "Nærmere enn 50 km fra grensen mot Jemen"}
+ ]},
+ "somalia": {"zones": [
+  {"level": "all", "country": true, "label": "Sørlige, sentrale og nordøstlige Somalia"},
+  {"level": "necessary", "adm": "SOM/ADM1", "names": ["Awdal", "Woqooyi Galbeed", "Togdheer", "Sanaag", "Sool"], "approx": true, "label": "Somaliland"}
+ ]},
+ "tanzania": {"zones": [
+  {"level": "necessary", "adm": "TZA/ADM1", "names": ["Mtwara"], "and": {"border": ["MOZ"], "km": 40}, "approx": true, "label": "Delene av Mtwara som grenser mot Mosambik"}
+ ]},
+ "thailand": {"zones": [
+  {"level": "necessary", "adm": "THA/ADM1", "names": ["Pattani Province", "Yala Province", "Narathiwat Province", "Songkhla Province"], "label": "Pattani, Yala, Narathiwat og Songkhla"},
+  {"level": "all", "border": ["KHM"], "km": 20, "label": "Nærmere enn 20 km fra grensen mot Kambodsja"}
+ ]},
+ "togo": {"zones": [
+  {"level": "all", "border": ["BFA"], "km": 30, "approx": true, "label": "Grenseområdene mot Burkina Faso"}
+ ]},
+ "tsjad": {"zones": [
+  {"level": "all", "country": true, "label": "Tsjad utenfor N'Djamena"},
+  {"level": "necessary", "adm": "TCD/ADM1", "names": ["N'Djamena Region"], "label": "N'Djamena"}
+ ]},
+ "tunisia": {"zones": [
+  {"level": "all", "poly": [[7.4, 33.95], [8.13, 33.92], [9.02, 33.46], [9.6, 32.99], [10.45, 32.93], [11.11, 33.5], [11.8, 33.3], [11.8, 30.0], [7.4, 30.0]], "approx": true, "label": "Sør for linjen Tozeur – Douz – Ksar Ghilane – Tataouine – Zarzis"},
+  {"level": "all", "border": ["DZA"], "km": 20, "clip": [0, 30, 20, 36.5], "approx": true, "label": "Grenseområdene mot Algerie sør for Jendouba"},
+  {"level": "all", "adm": "TUN/ADM1", "names": ["Kasserine"], "label": "Kasserine"}
+ ]},
+ "tyrkia": {"zones": [
+  {"level": "all", "border": ["SYR"], "km": 10, "label": "Nærmere enn 10 km fra grensen mot Syria"}
+ ]},
+ "ukraina": {"zones": [
+  {"level": "all", "country": true, "label": "De resterende regionene"},
+  {"level": "necessary", "adm": "UKR/ADM1", "names": ["Volyn Oblast", "Rivne Oblast", "Lviv Oblast", "Ternopil Oblast", "Zakarpattia Oblast", "Ivano-Frankivsk Oblast", "Chernivtsi Oblast"], "label": "Vest-Ukraina"},
+  {"level": "all", "adm": "UKR/ADM1", "names": ["Khmelnytskyi Oblast", "Zhytomyr Oblast", "Kirovohrad Oblast", "Cherkasy Oblast", "Vinnytsia Oblast", "Kyiv Oblast", "Kyiv"], "label": "Sentrale regioner og Kyiv"}
+ ]},
+ "venezuela": {"zones": [
+  {"level": "necessary", "country": true, "label": "Øvrige deler av Venezuela"},
+  {"level": "all", "border": ["COL", "BRA"], "km": 20, "label": "Innenfor 20 km fra grensen mot Colombia og Brasil"}
+ ]}
+}

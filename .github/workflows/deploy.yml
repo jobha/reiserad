@@ -1,0 +1,87 @@
+name: deploy
+
+# Kjører på den selvhostede runneren på ig68-pi4:
+#  - ved push til main, og hver tredje time
+#  - henter UDs reiseråd, bygger kartdata og publiserer site/ til mappen
+#    nginx serverer for reiseråd.haugsoen.com
+#  - committer data/advisories.json når UD har endret noe, så repoet får
+#    historikk over endringene
+#  - åpner en issue når en regional advarsel er ny eller endret og må tegnes inn
+on:
+  push:
+    branches: [main]
+  schedule:
+    - cron: '17 */3 * * *'
+  workflow_dispatch:
+
+concurrency:
+  group: deploy
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+  issues: write
+
+jobs:
+  deploy:
+    runs-on: [self-hosted, reiserad]
+    env:
+      SITE_DIR: /home/jonasbull/selfhost/haugsoen/reiserad
+      REISERAD_CACHE: /home/jonasbull/.cache/reiserad
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Hent UDs reiseråd
+        run: python3 scraper/scrape.py
+
+      - name: Bygg kartdata
+        id: build
+        run: |
+          set -euo pipefail
+          python3 scraper/build.py | tee build.log
+          echo "summary=$(tail -1 build.log)" >> "$GITHUB_OUTPUT"
+          if grep -q "Endret siden kartlegging: -. Ikke kartlagt: -" build.log; then
+            echo "review=0" >> "$GITHUB_OUTPUT"
+          else
+            echo "review=1" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Publiser
+        run: |
+          set -euo pipefail
+          test -d "$SITE_DIR"
+          cp -a site/. "$SITE_DIR"/
+          echo "Publisert $(find "$SITE_DIR" -type f | wc -l) filer til $SITE_DIR"
+
+      - name: Commit endringer fra UD
+        run: |
+          set -euo pipefail
+          if git diff --quiet -- data/advisories.json; then
+            echo "Ingen endringer."
+            exit 0
+          fi
+          # Bare hentetidspunktet endret? Ikke commit det.
+          if [ "$(git diff -U0 -- data/advisories.json | grep -c '^[-+] ')" -le 2 ] && \
+             git diff -U0 -- data/advisories.json | grep -q '"fetched"'; then
+            echo "Bare tidsstempel endret."
+            exit 0
+          fi
+          git config user.name "reiserad-bot"
+          git config user.email "reiserad-bot@users.noreply.github.com"
+          git add data/advisories.json
+          git commit -m "UD: reiseråd oppdatert $(date +%F)"
+          git push
+
+      - name: Varsle om kartlegging
+        if: steps.build.outputs.review == '1'
+        uses: actions/github-script@v7
+        env:
+          SUMMARY: ${{ steps.build.outputs.summary }}
+        with:
+          script: |
+            const title = "Reiseråd endret – regioner må kartlegges";
+            const body = `${process.env.SUMMARY}\n\nOppdater \`data/regions.json\`, kjør \`python scraper/build.py --stamp <slug>\` og push.`;
+            const { data } = await github.rest.issues.listForRepo({ ...context.repo, state: "open" });
+            const open = data.find(i => i.title === title);
+            if (!open) await github.rest.issues.create({ ...context.repo, title, body });
+            else if (open.body !== body) await github.rest.issues.update({ ...context.repo, issue_number: open.number, body });

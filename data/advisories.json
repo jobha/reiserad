@@ -1,0 +1,1812 @@
+{
+ "fetched": "2026-09-25T10:34:05+0200",
+ "source": "https://www.regjeringen.no/no/tema/utenrikssaker/reiseinformasjon/velg-land/id2414273/",
+ "failed": [],
+ "countries": {
+  "afghanistan": {
+   "name": "Afghanistan",
+   "page_updated": "20.06.2024",
+   "ingress": "Sikkerhetssituasjonen i Afghanistan er svært utfordrende. Den norske ambassaden i Kabul er p.t. i Islamabad, og norske myndigheters muligheter til å tilby konsulær bistand i Afghanistan er derfor ytterst begrenset.",
+   "warning": {
+    "title": "Reiseadvarsel for Afghanistan",
+    "status": "SIST OPPDATERT: 04.08.2021 - FORTSATT GYLDIG",
+    "paragraphs": [
+     "Utenriksdepartementet fraråder alle reiser til Afghanistan. Nordmenn som befinner seg i Afghanistan oppfordres til å forlate landet."
+    ]
+   },
+   "hash": "27c39ad9641f",
+   "url": "https://www.regjeringen.no/no/tema/utenrikssaker/reiseinformasjon/velg-land/reiseinfo_afghanistan/id2415875/"
+  },
+  "albania": {
+   "name": "Albania",
+   "page_updated": "26.08.2026",
+   "ingress": "Albania er generelt et trygt reisemål med lav kriminalitet. Norsk turisme i landet er økende, særlig sør i landet. Skogbranner kan oppstå i sommermånedene, særlig i fjellområdene. Se punktet Naturforhold og naturkatastrofer for mer informasjon.",
+   "warning": null,
+   "url": "https://www.regjeringen.no/no/tema/utenrikssaker/reiseinformasjon/velg-land/reiseinfo_albania/id2428601/"
+  },
+  "algerie": {
+   "name": "Algerie",
+   "page_updated": "03.03.2026",
+   "ingress": "Ved innreise til Algerie kreves visum og gyldig pass. For mer informasjon se kapitlene Innreise og Helse. På grunn av tørt landskap og høye temperaturer er Algerie utsatt for skogbranner, spesielt i sommerhalvåret. Faren øker betraktelig dersom det er sterk vind. Skogbranner kan være svært farlige, og du må følge lokale myndigheters råd og vær forberedt på at evakuering kan bli nødvendig.",
+   "warning": {
+    "title": "Reiseadvarsel for Algerie",
+    "status": "SIST OPPDATERT: 14.06.2019 - FORTSATT GYLDIG",
+    "paragraphs": [
+     "Utenriksdepartementet fraråder alle reiser til grenseområdene mot Mauritania, Mali, Niger, Libya, og fjellområdene Kabylia øst for hovedstaden, samt fjellområdene grensende mot Tunisia.",
+     "Utenriksdepartementet fraråder aller reiser som ikke er strengt nødvendige til de vest-sahariske flyktningeleirene ved Tindouf."
+    ]
+   },
+   "hash": "61b4178f0a95",
+   "url": "https://www.regjeringen.no/no/tema/utenrikssaker/reiseinformasjon/velg-land/reiseinfo_algerie/id2414745/"
+  },
+  "andorra": {
+   "name": "Andorra",
+   "page_updated": "04.03.2025",
+   "ingress": "Andorra er et sikkert og velfungerende land å besøke. Europeisk helsetrygdkort er ikke gyldig. Det anbefales derfor å tegne privat reise- og sykeforsikring før utreise.",
+   "warning": null,
+   "url": "https://www.regjeringen.no/no/tema/utenrikssaker/reiseinformasjon/velg-land/reiseinformasjon-for-andorra/id2416242/"
+  },
+  "angola": {
+   "name": "Angola",
+   "page_updated": "17.06.2026",
+   "ingress": "Angola er vanligvis trygt å reise til, men det er viktig å være forsiktig i byområdene på grunn av kriminalitet. I hovedstaden Luanda og andre byer har det vært eksempler på at demonstrasjoner og streiker går over i voldelige opptøyer. Les mer under «Sikkerhet».",
+   "warning": null,
+   "url": "https://www.regjeringen.no/no/tema/utenrikssaker/reiseinformasjon/velg-land/reiseinfo_angola/id2415995/"
+  },
+  "antiguabarbuda": {
+   "name": "Antigua og Barbuda",
+   "page_updated": "03.06.2026",
+   "ingress": "Antigua og Barbuda regnes som et relativt trygt land å reise til. Reisende bør utvise normal forsiktighet.",
+   "warning": null,
+   "url": "https://www.regjeringen.no/no/tema/utenrikssaker/reiseinformasjon/velg-land/reiseinfo_antigua_barbuda/id2428958/"
+  },
+  "argentina": {
+   "name": "Argentina",
+   "page_updated": "01.06.2026",
+   "ingress": "Argentina er generelt et relativt trygt land å reise i. Gitt landets størrelse anbefaler vi at du setter deg godt inn i lokale forhold der du skal reise.",
+   "warning": null,
+   "url": "https://www.regjeringen.no/no/tema/utenrikssaker/reiseinformasjon/velg-land/reiseinfo_argentina/id2415477/"
+  },
+  "armenia": {
+   "name": "Armenia",
+   "page_updated": "12.03.2026",
+   "ingress": "Armenia er generelt et trygt reisemål. Situasjonen mellom Armenia og Aserbajdsjan er spent, og det er reiseadvarsel for deler av landet. Armenia grenser til Iran.",
+   "warning": {
+    "title": "Reiseadvarsel for Armenia",
+    "status": "SIST OPPDATERT: 12. MARS 2026 FORTSATT GYLDIG",
+    "paragraphs": [
+     "Utenriksdepartementet fraråder alle reiser til områder som ligger nærmere enn fem kilometer fra den østlige grensen mellom Armenia og Aserbajdsjan."
+    ]
+   },
+   "hash": "8d252428b35b",
+   "url": "https://www.regjeringen.no/no/tema/utenrikssaker/reiseinformasjon/velg-land/reiseinfo_armenia/id2416297/"
+  },
+  "aserbajdsjan": {
+   "name": "Aserbajdsjan",
+   "page_updated": "02.06.2026",
+   "ingress": "Situasjonen mellom Aserbajdsjan og Armenia er spent, og sikkerhetstruende hendelser i grenseområdene kan ikke utelukkes. Sikkerhetssituasjonen i Midtøsten er fortsatt ustabil som følge av konflikten mellom Israel, USA og Iran og situasjonen kan endre seg raskt. Som følge av situasjonen er det en vedvarende risiko for anslag mot amerikanske og israelske institusjoner og interesser i regionen og i tilgrensende områder.",
+   "warning": {
+    "title": "Reiseadvarsel for Aserbajdsjan",
+    "status": "SIST OPPDATERT: 12.03.2026 - FORTSATT GYLDIG",
+    "paragraphs": [
+     "Utenriksdepartementet fraråder alle reiser til Nagorno-Karabakh, samt distriktene Zengilian, Jabrayil, Qubadli, Lachin, Kelbajar, Khojavend, Fuzuli, Aghdam, Tartar, Shusha og Khojaly, og områder som ligger nærmere enn fem kilometer fra den internasjonale grensen mellom Aserbajdsjan og Armenia."
+    ]
+   },
+   "hash": "4c2b05a7227d",
+   "url": "https://www.regjeringen.no/no/tema/utenrikssaker/reiseinformasjon/velg-land/reiseinfo_aserbajdsjan/id2428524/"
+  },
+  "australia": {
+   "name": "Australia",
+   "page_updated": "30.07.2026",
+   "ingress": "Australia anses som et trygt reisemål. Norske statsborgere trenger visum for innreise til Australia.",
+   "warning": null,
+   "url": "https://www.regjeringen.no/no/tema/utenrikssaker/reiseinformasjon/velg-land/reiseinfo_australia/id2415524/"
+  },
+  "bahamas": {
+   "name": "Bahamas",
+   "page_updated": "28.05.2026",
+   "ingress": "Bahamas regnes som et relativt trygt land å reise til. Reisende bør utvise normal forsiktighet.",
+   "warning": null,
+   "url": "https://www.regjeringen.no/no/tema/utenrikssaker/reiseinformasjon/velg-land/reiseinfo_bahamas/id2428963/"
+  },
+  "bahrain": {
+   "name": "Bahrain",
+   "page_updated": "22.07.2026",
+   "ingress": "Sikkerhetssituasjonen i Midtøsten er uoversiktlig og alvorlig etter eskaleringen i konflikten mellom Israel, USA og Iran. Vurder egen sikkerhet, lytt til råd fra pålitelige lokale kilder, og søk tilflukt der dette anbefales. Luftrommet er stengt i deler av regionen, og endringer kan skje raskt.",
+   "warning": {
+    "title": "Reiseadvarsel for Bahrain",
+    "status": "SIST OPPDATERT: 22.07.2026 - FORTSATT GYLDIG",
+    "paragraphs": [
+     "Utenriksdepartementet fraråder reiser som ikke er strengt nødvendige til Bahrain."
+    ]
+   },
+   "hash": "00b238fb2bb4",
+   "url": "https://www.regjeringen.no/no/tema/utenrikssaker/reiseinformasjon/velg-land/bahrain_reiseinfo/id2428526/"
+  },
+  "bangladesh": {
+   "name": "Bangladesh",
+   "page_updated": "05.04.2026",
+   "ingress": "Bangladesh har siden sommeren 2024 vært preget av politisk spenning og uro, men store demonstrasjoner er ikke lenger like vanlige. Norske borgere bør likevel unngå store folkemengder, holde seg orientert i mediebildet og forholde seg til informasjon som gis av lokale myndigheter.",
+   "warning": null,
+   "url": "https://www.regjeringen.no/no/tema/utenrikssaker/reiseinformasjon/velg-land/reiseinfo_bangladesh/id2415564/"
+  },
+  "barbados": {
+   "name": "Barbados",
+   "page_updated": "28.05.2026",
+   "ingress": "Barbados regnes som et trygt land å reise til. Reisende bør utvise normal forsiktighet.",
+   "warning": null,
+   "url": "https://www.regjeringen.no/no/tema/utenrikssaker/reiseinformasjon/velg-land/barbados---reiseinformasjon/id2428970/"
+  },
+  "belarus": {
+   "name": "Belarus",
+   "page_updated": "20.05.2026",
+   "ingress": "Utenriksdepartementet fraråder alle reiser til Belarus.",
+   "warning": {
+    "title": "Reiseadvarsel for Belarus",
+    "status": "SIST OPPDATERT 2. MARS 2022 - FORTSATT GYLDIG",
+    "paragraphs": [
+     "Utenriksdepartementet fraråder alle reiser til Belarus."
+    ]
+   },
+   "hash": "301829a0afb1",
+   "url": "https://www.regjeringen.no/no/tema/utenrikssaker/reiseinformasjon/velg-land/belarus_reiseinformasjon/id2429135/"
+  },
+  "belgia": {
+   "name": "Belgia",
+   "page_updated": "04.06.2024",
+   "ingress": "Belgia er under normale omstendigheter et trygt land å ferdes og oppholde seg i. Husk pass eller nasjonalt ID-kort med reiserett da det er ID-plikt i Belgia.",
+   "warning": null,
+   "url": "https://www.regjeringen.no/no/tema/utenrikssaker/reiseinformasjon/velg-land/reiseinfo_belgia/id2414842/"
+  },
+  "belize": {
+   "name": "Belize",
+   "page_updated": "03.06.2026",
+   "ingress": "Reisende anbefales å sette seg godt inn i visumreglene før innreise. Sørg for å ha gyldig reiseforsikring for hele oppholdet. Kriminalitet forekommer spesielt i byene, men også på turiststeder. Det anbefales å ta vanlige forholdsregler.",
+   "warning": null,
+   "url": "https://www.regjeringen.no/no/tema/utenrikssaker/reiseinformasjon/velg-land/belize---reiseinformasjon/id2428562/"
+  },
+  "benin": {
+   "name": "Benin",
+   "page_updated": "30.12.2025",
+   "ingress": "Benin er i all hovedsak et stabilt land, med unntak av grenseområdene til Burkina Faso, Niger og Nigeria nord i landet hvor det har vært en økende grad av uroligheter og voldshendelser, inkludert kidnappinger. Kriminalitet er utbredt, og det er ikke usannsynlig at terrorister kan gjennomføre angrep i landet, også der turister ferdes. Situasjonen i Benin har roet seg etter det mislykkede kuppforsøket søndag 7. desember 2025. Se punktet «sikkerhet» for mer informasjon.",
+   "warning": {
+    "title": "Reiseadvarsel for Benin",
+    "status": "SIST OPPDATERT: 18. OKTOBER 2022 - FORTSATT GYLDIG",
+    "paragraphs": [
+     "Utenriksdepartementet fraråder alle reiser til eller opphold i nasjonalparkene (Pendjari og Parc du W) i de nordlige delene av landet, samt grenseområdene mot Burkina Faso og Niger.",
+     "Utenriksdepartementet fraråder reiser som ikke er strengt nødvendige til eller opphold i grenseområdene til Nigeria i distriktene (department) Alibori og Borgou i nordøst."
+    ]
+   },
+   "hash": "8a262f35daaf",
+   "url": "https://www.regjeringen.no/no/tema/utenrikssaker/reiseinformasjon/velg-land/benin---reiseinformasjon/id2424173/"
+  },
+  "bhutan": {
+   "name": "Bhutan",
+   "page_updated": "29.05.2026",
+   "ingress": "De fleste besøk til Bhutan foregår uten problemer. Det er krav til visum for å reise til Bhutan. Det er den reisendes ansvar å gjøre seg kjent med innreisebestemmelsene og påse at reisedokumentene er gyldige.",
+   "warning": null,
+   "url": "https://www.regjeringen.no/no/tema/utenrikssaker/reiseinformasjon/velg-land/reiseinfo_bhutan/id2414742/"
+  },
+  "bolivia": {
+   "name": "Bolivia",
+   "page_updated": "22.07.2026",
+   "ingress": "Det ble 20. juni innført unntakstilstand i Bolivia, etter flere uker med omfattende protester. Unntakstilstanden er fortsatt i kraft, men situasjonen er nå roligere enn tidligere. Sikkerhetssituasjonen i Chapare-provinsen i Cochabamba-regionen er fortsatt uforutsigbar, og utenriksdepartementet fraråder alle ikke nødvendige reiser til denne regionen. Demonstrasjoner og veisperringer kan oppstå på kort varsel og utvikle seg til voldelige sammenstøt. Sikkerhetssituasjonen for reisende kan endre seg raskt. Reisende oppfordres til å unngå demonstrasjoner og store folkemengder, holde seg løpende oppdatert om situasjonen lokalt og følge lokale myndigheters råd og anvisninger.",
+   "warning": {
+    "title": "Reiseadvarsel for Bolivia",
+    "status": "REISEADVARSEL ER SIST OPPDATERT: 22. JULI 2026 - FORTSATT GYLDIG",
+    "paragraphs": [
+     "Utenriksdepartementet fraråder reiser som ikke er strengt nødvendige til Chapare-regionen."
+    ]
+   },
+   "hash": "1dbff2e66c92",
+   "url": "https://www.regjeringen.no/no/tema/utenrikssaker/reiseinformasjon/velg-land/reiseinfo_bolivia/id2415332/"
+  },
+  "bosnia": {
+   "name": "Bosnia-Hercegovina",
+   "page_updated": "14.08.2026",
+   "ingress": "Bosnia-Hercegovina er generelt et trygt reisemål. Norske borgere trenger ikke visum for innreise.",
+   "warning": null,
+   "url": "https://www.regjeringen.no/no/tema/utenrikssaker/reiseinformasjon/velg-land/reiseinfo_bosnia/id2416500/"
+  },
+  "botswana": {
+   "name": "Botswana",
+   "page_updated": "11.06.2026",
+   "ingress": "Botswana er generelt et trygt reisemål selv om noe kriminalit forekommer. På grunn av risikoen for malaria anbefales bruk av malaria-profylakse i hele eller deler av året i enkelte områder.",
+   "warning": null,
+   "url": "https://www.regjeringen.no/no/tema/utenrikssaker/reiseinformasjon/velg-land/reiseinfo_botswana/id2416413/"
+  },
+  "brasil": {
+   "name": "Brasil",
+   "page_updated": "03.06.2026",
+   "ingress": "Norske statsborgere trenger gyldig pass for å reise til Brasil og kan oppholde seg i landet inntil 90 dager uten visum.",
+   "warning": null,
+   "url": "https://www.regjeringen.no/no/tema/utenrikssaker/reiseinformasjon/velg-land/reiseinfo_brasil/id2415169/"
+  },
+  "brunei": {
+   "name": "Brunei Darussalam",
+   "page_updated": "02.06.2026",
+   "ingress": "Brunei anses som et relativt trygt land, men kriminalitet kan forekomme.",
+   "warning": null,
+   "url": "https://www.regjeringen.no/no/tema/utenrikssaker/reiseinformasjon/velg-land/reiseinfo_brunei/id2415974/"
+  },
+  "bulgaria": {
+   "name": "Bulgaria",
+   "page_updated": "28.05.2026",
+   "ingress": "Bulgaria er vanligvis et trygt land å reise og feriere i. Reisende bør likevel være på vakt og ta sine forholdsregler.",
+   "warning": null,
+   "url": "https://www.regjeringen.no/no/tema/utenrikssaker/reiseinformasjon/velg-land/reiseinfo_bulgaria/id2416997/"
+  },
+  "burkinafaso": {
+   "name": "Burkina Faso",
+   "page_updated": "09.01.2026",
+   "ingress": "Sikkerhetssituasjonen i Burkina Faso er betydelig forverret de siste årene, og landet er politisk ustabilt. Det har vært en rekke terrorangrep senere år, også i hovedstaden Ouagadougou. Kidnappinger av utenlandske borgere har forekommet. Det er erklært unntakstilstand i rundt halvparten av landets provinser grunnet terrorhandlinger. Nordmenn som oppholder seg i landet oppfordres til å holde seg løpende informert om utviklingen, unngå større folkemengder og demonstrasjoner og utvise generell varsomhet.",
+   "warning": {
+    "title": "Reiseadvarsel for Burkina Faso",
+    "status": "SIST OPPDATERT: 9. JANUAR 2026 - FORTSATT GYLDIG",
+    "paragraphs": [
+     "Utenriksdepartementet fraråder alle reiser til Burkina Faso."
+    ]
+   },
+   "hash": "8c5af6a72d76",
+   "url": "https://www.regjeringen.no/no/tema/utenrikssaker/reiseinformasjon/velg-land/reiseinfo_burkinafaso/id2414675/"
+  },
+  "burundi": {
+   "name": "Burundi",
+   "page_updated": "29.05.2026",
+   "ingress": "Sikkerhetssituasjonen i Burundi er ustabil og uforutsigbar. Den politiske og humanitære situasjonen kan endre seg raskt. Øst i Kongo kjemper opprørsgruppen M23 mot allierte av kongolesiske myndigheter, inkludert Burundi, og kampene forekommer nær Burundis grenser. 31. mars 2026 forekom flere store eksplosjoner i Bujumbura da et våpenlager ble antent ved en militærbase. Faktiske tapstall er uklare, men hendelsen belyser uforutsigbarheten i sikkerhetsmiljøet i området. Vi oppfordrer alle reisende til å unngå folkemengder og følge med på oppdateringene fra lokale myndigheter. Norske myndigheters mulighet til å tilby konsulær bistand til norske statsborgere er begrenset.",
+   "warning": {
+    "title": "Reiseadvarsel for Burundi",
+    "status": "SIST OPPDATERT: 7. FEBRUAR 2025 - FORTSATT GYLDIG",
+    "paragraphs": [
+     "Utenriksdepartementet fraråder alle reiser til provinsene Bubanza og Cibitoke og nasjonalparken Kibira.",
+     "Utenriksdepartementet fraråder reiser til Burundi som ikke er strengt nødvendige."
+    ]
+   },
+   "hash": "c502dece8907",
+   "url": "https://www.regjeringen.no/no/tema/utenrikssaker/reiseinformasjon/velg-land/reiseinfo_burundi/id2415929/"
+  },
+  "canada": {
+   "name": "Canada",
+   "page_updated": "31.07.2026",
+   "ingress": "De aller fleste reiser til Canada går uten spesielle problemer. Det er en viss risiko for ekstremvær, skogbranner og jordskjelv. For innreise i Canada kreves gyldig pass samt enten ETA-registrering eller visum.",
+   "warning": null,
+   "url": "https://www.regjeringen.no/no/tema/utenrikssaker/reiseinformasjon/velg-land/reiseinfo_canada/id2414944/"
+  },
+  "chile": {
+   "name": "Chile",
+   "page_updated": "27.02.2026",
+   "ingress": "Norske borgere kan oppholde seg inntil 90 dager visumfritt i Chile. Se egne innreisebestemmelser for Påskeøya under punktet Innreise.",
+   "warning": null,
+   "url": "https://www.regjeringen.no/no/tema/utenrikssaker/reiseinformasjon/velg-land/reiseinfo_chile/id2414751/"
+  },
+  "colombia": {
+   "name": "Colombia",
+   "page_updated": "23.09.2026",
+   "ingress": "Reisende til Colombia oppfordres til å være oppmerksomme, spesielt i områder hvor væpnede grupper opererer. Det er for tiden risiko for voldelige sammenstøt i og rundt byen Santa Marta. Se punktet om sikkerhet. Det anbefales å holde seg løpende oppdatert om situasjonen gjennom lokale nyhetskilder og følge råd fra lokale myndigheter.",
+   "warning": {
+    "title": "Reiseadvarsel for Colombia",
+    "status": "SIST OPPDATERT 18.05.2026 - FORTSATT GYLDIG",
+    "paragraphs": [
+     "Utenriksdepartementet fraråder reiser som ikke er strengt nødvendige innenfor 20 km fra grensen mot Venezuela, i regionen Urabá i fylket Antioquia, samt utenfor etablerte turistområder og bykjernen i større byer i fylkene Norte de Santander, Arauca, Nariño, Cauca, Valle del Cauca, Chocó, Meta, Caqueta, Huila, Putumayo, Guaviare og Vichada."
+    ]
+   },
+   "hash": "43f0309edaa0",
+   "url": "https://www.regjeringen.no/no/tema/utenrikssaker/reiseinformasjon/velg-land/reiseinfo_colombia/id2414850/"
+  },
+  "cookoyene": {
+   "name": "Cookøyene",
+   "page_updated": "30.07.2026",
+   "ingress": "Cookøyene anses som et trygt reisemål. Sykloner og andre naturhendelser forekommer. Se mer om naturforhold under «Naturforhold og naturkatastrofer». Norske statsborgere kan oppholde seg på Cookøyene 31 dager visumfritt.",
+   "warning": null,
+   "url": "https://www.regjeringen.no/no/tema/utenrikssaker/reiseinformasjon/velg-land/reiseinfo_cookoyene/id2415553/"
+  },
+  "costarica": {
+   "name": "Costa Rica",
+   "page_updated": "03.06.2026",
+   "ingress": "Reisende anbefales å lese reiseinformasjonen før reisen. Costa Rica er et land med mye turisme, og de fleste vanlige turistreisene er problemfrie. Sørg for å ha gyldig reiseforsikring for hele oppholdet.",
+   "warning": null,
+   "url": "https://www.regjeringen.no/no/tema/utenrikssaker/reiseinformasjon/velg-land/reiseinfo_costarica/id2428563/"
+  },
+  "cuba": {
+   "name": "Cuba",
+   "page_updated": "16.07.2026",
+   "ingress": "Cuba har for tiden problemer med det nasjonale strømnettet og det er mangel på drivstoff. Strømbrudd forekommer daglig over hele landet, og det påvirker vannforsyning, helsetilbud, og kommunikasjon. Nasjonale strømbrudd forekommer også hyppigere. Det er svært begrensede muligheter for å ta ut kontanter og reisende må ta med nok kontanter i euro eller amerikanske dollar for hele oppholdet. Det er også vanskelig å skaffe medisiner.",
+   "warning": {
+    "title": "Reiseadvarsel for Cuba",
+    "status": "SIST OPPDATERT: 16. JULI 2026 - FORTSATT GYLDIG",
+    "paragraphs": [
+     "Utenriksdepartementet fraråder reiser som ikke er strengt nødvendige til alle provinser på Cuba med unntak av Havanna, Artemisa, Mayabeque og Matanzas."
+    ]
+   },
+   "hash": "7ea656920f29",
+   "url": "https://www.regjeringen.no/no/tema/utenrikssaker/reiseinformasjon/velg-land/reiseinfo_cuba/id2415595/"
+  },
+  "danmark": {
+   "name": "Danmark",
+   "page_updated": "05.05.2026",
+   "ingress": "Danmark er generelt et trygt og ukomplisert land å reise til, og minner på mange måter om Norge.",
+   "warning": null,
+   "url": "https://www.regjeringen.no/no/tema/utenrikssaker/reiseinformasjon/velg-land/reiseinfo_danmark/id2415976/"
+  },
+  "djibouti": {
+   "name": "Djibouti",
+   "page_updated": "27.05.2026",
+   "ingress": "Djibouti oppfattes i hovedsak som et stabilt land, og myndighetene har generelt god kontroll. Samtidig kan landet påvirkes av spenninger i regionen.",
+   "warning": null,
+   "url": "https://www.regjeringen.no/no/tema/utenrikssaker/reiseinformasjon/velg-land/reiseinfo_djibouti/id2414710/"
+  },
+  "dominica": {
+   "name": "Dominica",
+   "page_updated": "03.06.2026",
+   "ingress": "Dominica regnes som et relativt trygt land å reise til. Reisende bør utvise normal forsiktighet.",
+   "warning": null,
+   "url": "https://www.regjeringen.no/no/tema/utenrikssaker/reiseinformasjon/velg-land/dominica_reiseinformasjon/id2428976/"
+  },
+  "dominikanske": {
+   "name": "Den dominikanske republikk",
+   "page_updated": "28.05.2026",
+   "ingress": "Den dominikanske republikk er generelt et trygt land å reise til, men reisende bør utvise aktsomhet grunnet kriminalitet.",
+   "warning": null,
+   "url": "https://www.regjeringen.no/no/tema/utenrikssaker/reiseinformasjon/velg-land/reiseinfo_dominikanske/id2415685/"
+  },
+  "drkongo": {
+   "name": "Den demokratiske republikken Kongo",
+   "page_updated": "15.09.2026",
+   "ingress": "Landet preges av fattigdom, politisk og sosial spenning, omfattende korrupsjon og en hardt presset økonomi. Sosial uro kan forekomme. Den 15. mai 2026 ble det erklært et nytt Ebola-utbrudd i Ituri-provinsen i Øst-Kongo. Per 15. september 2026 er Ituri fremdeles provinsen som er klart hardest rammet, men det er også det påvist smitte i følgende seks andre provinser: Nord-Kivu, Sør-Kivu, Haut-Uélé, Tshopo, Bas-Uélé, og Sør-Ubangi. Ambassaden følger utviklingen tett, men har begrensede muligheter til å yte konsulær assistanse ii andre deler av landet enn Kinshasa.",
+   "warning": {
+    "title": "Reiseadvarsel for DR Kongo",
+    "status": "SIST OPPDATERT: 17.11.2025 - FORTSATT GYLDIG",
+    "paragraphs": [
+     "Utenriksdepartementet fraråder alle reiser til provinsene Sør-Ubangi, Nord-Ubangi, Bas-Uele, Haut-Uele, Ituri, Nord-Kivu, Sør-Kivu, Maniema, Tanganyika, og Kasaï-provinsene i Den demokratiske republikken Kongo.",
+     "Utenriksdepartementet fraråder alle reiser som ikke er strengt nødvendige til øvrige deler av landet."
+    ]
+   },
+   "hash": "5508c8b5ba57",
+   "url": "https://www.regjeringen.no/no/tema/utenrikssaker/reiseinformasjon/velg-land/reiseinfo_drkongo/id2416057/"
+  },
+  "ecuador": {
+   "name": "Ecuador",
+   "page_updated": "07.05.2026",
+   "ingress": "Situasjonen i Ecuador er alvorlig og uforutsigbar. Myndighetene har erklært unntakstilstand i flere deler av landet som følge av en alvorlig sikkerhetssituasjon preget av høy kriminalitet, organisert vold, eksplosivangrep og sosial uro. Tiltakene innebærer blant annet portforbud i berørte områder, utvidede fullmakter for politi og militære styrker. Samtidig kan strømrasjoner, skogbranner og andre naturforhold påvirke transport og daglige aktiviteter enkelte steder. Reisende oppfordres til å utvise stor forsiktighet, holde seg løpende oppdatert om situasjonen og følge lokale myndigheters råd og pålegg.",
+   "warning": null,
+   "url": "https://www.regjeringen.no/no/tema/utenrikssaker/reiseinformasjon/velg-land/reiseinfo_ecuador/id2414757/"
+  },
+  "egypt": {
+   "name": "Egypt",
+   "page_updated": "17.09.2026",
+   "ingress": "Utviklingen i regionen den siste tiden gjør sikkerhetssituasjonen i økende grad spent og uforutsigbar. Situasjonen kan endre seg raskt, og dette kan påvirke Egypt. Reisende oppfordres derfor til å følge nøye med på utviklingen og utvise aktsomhet.",
+   "warning": {
+    "title": "Reiseadvarsel for Egypt",
+    "status": "SIST OPPDATERT: 05.08.2022 - FORTSATT GYLDIG",
+    "paragraphs": [
+     "Utenriksdepartementet fraråder alle reiser til Nord-Sinai og alle reiser innenfor en avstand på 50 km fra grensen til Libya."
+    ]
+   },
+   "hash": "df50d8021133",
+   "url": "https://www.regjeringen.no/no/tema/utenrikssaker/reiseinformasjon/velg-land/reiseinfo_egypt/id2415880/"
+  },
+  "ekvatorialguinea": {
+   "name": "Ekvatorial-Guinea",
+   "page_updated": "12.06.2024",
+   "ingress": "Gyldig pass, visum, og bevis for gulfeber-vaksine er påkrevet for innreise til landet. Du må søke om e-visum på nett før innreise, se mer under punktet om «innreise».",
+   "warning": null,
+   "url": "https://www.regjeringen.no/no/tema/utenrikssaker/reiseinformasjon/velg-land/reiseinfo_ekvatorialguinea/id2416217/"
+  },
+  "elfernbenskysten": {
+   "name": "Elfenbenskysten",
+   "page_updated": "12.02.2026",
+   "ingress": "Elfenbenskysten er preget av relativ politisk og økonomisk stabilitet og relativt lav kriminalitet. Landet anses for det meste som et trygt reisemål.",
+   "warning": {
+    "title": "Reiseadvarsel for Elfenbenskysten",
+    "status": "SIST OPPDATERT: 27. APRIL 2022 - FORTSATT GYLDIG",
+    "paragraphs": [
+     "Utenriksdepartementet fraråder alle reiser som ikke er strengt nødvendige til områder nærmere enn 40 km fra grensen til Mali og Burkina Faso, inkludert hele Comoé-nasjonalparken."
+    ]
+   },
+   "hash": "b390dc828a44",
+   "url": "https://www.regjeringen.no/no/tema/utenrikssaker/reiseinformasjon/velg-land/reiseinfo_elfernbenskysten/id2414708/"
+  },
+  "elsalvador": {
+   "name": "El Salvador",
+   "page_updated": "03.06.2026",
+   "ingress": "Sørg for å ha forsikring for hele oppholdet. Kriminalitet forekommer spesielt i byene, men også på turiststeder. Det anbefales å ta vanlige forholdsregler.",
+   "warning": null,
+   "url": "https://www.regjeringen.no/no/tema/utenrikssaker/reiseinformasjon/velg-land/reiseinfo_elsalvador/id2428564/"
+  },
+  "emiratene": {
+   "name": "De forente arabiske emirater",
+   "page_updated": "14.07.2026",
+   "ingress": "Sikkerhetssituasjonen i Gulflandene er tett knyttet til regionale forhold. Situasjonen er spent og uforutsigbar og kan endre seg på kort varsel. Vurder egen sikkerhet, hold deg oppdatert i nyhetsbildet og lytt til råd fra pålitelige lokale kilder. Unngå militære baser og anlegg. Vær klar over at det er forbud mot fotografering og filming blant annet av sikkerhetsanlegg og militær aktivitet. Deling av dette på sosiale medier eller på annen måte, kan medføre strenge straffer.",
+   "warning": null,
+   "url": "https://www.regjeringen.no/no/tema/utenrikssaker/reiseinformasjon/velg-land/reiseinfo_emiratene/id2428549/"
+  },
+  "eritrea": {
+   "name": "Eritrea",
+   "page_updated": "17.06.2026",
+   "ingress": "Det er stor lokal variasjon i sikkerhetssituasjonen i Eritrea. I grenseområdene er det særlig spent.",
+   "warning": {
+    "title": "Reiseadvarsel for Eritrea",
+    "status": "SIST OPPDATERT: 30. MAI 2025 - FORTSATT GYLDIG",
+    "paragraphs": [
+     "Utenriksdepartementet fraråder reiser til Eritrea, innenfor 20 km fra grensene mot Etiopia, Sudan og Djibouti, som ikke er strengt nødvendige."
+    ]
+   },
+   "hash": "fc85dcbc1542",
+   "url": "https://www.regjeringen.no/no/tema/utenrikssaker/reiseinformasjon/velg-land/reiseinfo_eritrea/id2429020/"
+  },
+  "estland": {
+   "name": "Estland",
+   "page_updated": "31.03.2026",
+   "ingress": "Estland er generelt et trygt land for nordmenn å reise til.",
+   "warning": null,
+   "url": "https://www.regjeringen.no/no/tema/utenrikssaker/reiseinformasjon/velg-land/reiseinfo_estland/id2417117/"
+  },
+  "etiopia": {
+   "name": "Etiopia",
+   "page_updated": "23.09.2026",
+   "ingress": "Sikkerhetssituasjonen i Etiopia er flytende og kompleks. Det anbefales å følge med på det som rapporteres i internasjonale medier. I Tigray er det en forverret sikkerhetssituasjon med risiko for nye kamphandlinger. Etiopia har tidvis drivstoffmangel, noe som kan påvirke transport og andre tjenester som er avhengige av drivstoff. For mer informasjon om situasjonen i landet se punktet om «sikkerhet».",
+   "warning": {
+    "title": "Reiseadvarsel for Etiopia",
+    "status": "SIST OPPDATERT: 20. MARS 2025 - FORTSATT GYLDIG",
+    "paragraphs": [
+     "Utenriksdepartementet fraråder alle reiser til Tigray, Amhara, Gambella, og Benishangul Gumuz-regionene, samt grenseområdene mot disse i tilstøtende regioner.",
+     "Utenriksdepartementet fraråder alle reiser til konfliktrammede deler av Oromia-regionen, inkludert områdene Kelam Welega, West Welega, Buno Bedele, East Welega og Horo Guduru Welega i vestlige Oromia.",
+     "Utenriksdepartementet fraråder alle reiser til østlige deler av Somali-regionen og grenseområdene til Somalia.",
+     "Utenriksdepartementet fraråder alle reiser til grenseområdene mot Sudan, Sør-Sudan og Eritrea.",
+     "Utenriksdepartementet fraråder reiser som ikke er strengt nødvendige til øvrige deler av Etiopia.",
+     "Det er ikke reiseadvarsel til hovedstaden Addis Abeba."
+    ]
+   },
+   "hash": "394ea6fef1c5",
+   "url": "https://www.regjeringen.no/no/tema/utenrikssaker/reiseinformasjon/velg-land/reiseinfo_etiopia/id2414712/"
+  },
+  "ewatini": {
+   "name": "Eswatini",
+   "page_updated": "01.06.2026",
+   "ingress": "De fleste reiser til Eswatini gjennomføres uten spesielle problemer. Kriminaliteten er lav sammenlignet med andre land i regionen. Uroligheter i forbindelse med demonstrasjoner mot myndigheter kan forekomme, og reisende bes om å være oppmerksomme. Les mer under avsnittet «sikkerhet».",
+   "warning": null,
+   "url": "https://www.regjeringen.no/no/tema/utenrikssaker/reiseinformasjon/velg-land/reiseinfo_ewatini/id2414925/"
+  },
+  "fiji": {
+   "name": "Fiji",
+   "page_updated": "30.07.2026",
+   "ingress": "Fiji anses som et trygt reisemål. Sykloner og andre naturhendelser forekommer. Se mer om naturforhold under «Naturforhold og naturkatastrofer». Norske statsborgere kan oppholde seg visumfritt i Fiji i fire måneder.",
+   "warning": null,
+   "url": "https://www.regjeringen.no/no/tema/utenrikssaker/reiseinformasjon/velg-land/reiseinfo_fiji/id2415529/"
+  },
+  "filippinene": {
+   "name": "Filippinene",
+   "page_updated": "06.05.2026",
+   "ingress": "De fleste reiser til Filippinene gjennomføres uten spesielle problemer, men reisende oppfordres til å sette seg godt inn i sikkerhetssituasjonen i landet. Kriminalitet er utbredt, og Filippinene er et av landene i verden som er mest utsatt for naturkatastrofer.",
+   "warning": {
+    "title": "Reiseadvarsel for Filippinene",
+    "status": "SIST OPPDATERT: 31.05.2024 - FORTSATT GYLDIG",
+    "paragraphs": [
+     "Utenriksdepartementet fraråder alle reiser til eller opphold i sentrale, sørlige og vestlige Mindanao (Cotabatoprovinsene, Lanaoprovinsene, Zamboangaprovinsene, Maguindanao, Misamis Occidental, Sarangani, Sultan Kudarat) og Sulu-øygruppen, som blant annet omfatter øyene Basilan, Jolo og Tawi-Tawi.",
+     "Utenriksdepartementet fraråder reiser eller opphold som ikke er strengt nødvendige til øvrige deler av Mindanao.",
+     "Øya Siargao er ikke omfattet av reiseadvarslet."
+    ]
+   },
+   "hash": "f65875578d47",
+   "url": "https://www.regjeringen.no/no/tema/utenrikssaker/reiseinformasjon/velg-land/reiseinfo_filippinene/id2416248/"
+  },
+  "finland": {
+   "name": "Finland",
+   "page_updated": "22.06.2026",
+   "ingress": "Finland er generelt et trygt land for nordmenn å besøke. Sikkerhetssituasjonen og standarden på helsetjenester er tilsvarende som i Norge. Det er passfrihet i Norden, men du skal kunne sannsynliggjøre at du er nordisk statsborger.",
+   "warning": null,
+   "url": "https://www.regjeringen.no/no/tema/utenrikssaker/reiseinformasjon/velg-land/reiseinfo_finland/id2424334/"
+  },
+  "frankrike": {
+   "name": "Frankrike",
+   "page_updated": "17.08.2026",
+   "ingress": "Frankrike er et sikkert og velfungerende land å besøke, og de fleste reiser går trygt og uten spesielle problemer. Man skal imidlertid være klar over at Frankrike har et forhøyet beredskapsnivå siden mars 2024. Store deler av Sør-Frankrike og Korsika er ofte rammet av tørke og skogbranner i sommermånedene, men stadig flere regioner blir berørt av dette fenomenet. Se under punkt Naturforhold og naturkatastrofer. Siden april 2026 er en rekke nikotinholdige produkter forbudt i Frankrike. Se under punkt Lokale lover og sedvaner.",
+   "warning": null,
+   "url": "https://www.regjeringen.no/no/tema/utenrikssaker/reiseinformasjon/velg-land/reiseinfo_frankrike/id2429004/"
+  },
+  "gabon": {
+   "name": "Gabon",
+   "page_updated": "12.06.2024",
+   "ingress": "Gyldig pass, visum og bevis for gulfeber-vaksine er påkrevet for innreise til landet. Situasjonen i landet kan endre seg raskt uten forvarsel. Les mer under «sikkerhet».",
+   "warning": null,
+   "url": "https://www.regjeringen.no/no/tema/utenrikssaker/reiseinformasjon/velg-land/reiseinfo_gabon/id2416221/"
+  },
+  "gambia": {
+   "name": "Gambia",
+   "page_updated": "08.05.2026",
+   "ingress": "Det er en del turisme fra Norge til Gambia, og de fleste reiser gjennomføres uten problemer.",
+   "warning": null,
+   "url": "https://www.regjeringen.no/no/tema/utenrikssaker/reiseinformasjon/velg-land/reiseinfo_gambia/id2414679/"
+  },
+  "georgia": {
+   "name": "Georgia",
+   "page_updated": "26.06.2026",
+   "ingress": "Georgia er generelt et trygt reisemål. Vær oppmerksom på demonstrasjoner i sentrum av Tbilisi og i andre byer. Les mer under «sikkerhet» og «innreise/mellomlanding/utreise».",
+   "warning": {
+    "title": "Reiseadvarsel for Georgia",
+    "status": "SIST OPPDATERT: 12.03.2026 - FORTSATT GYLDIG",
+    "paragraphs": [
+     "Utenriksdepartementet fraråder alle reiser til utbryterområdene Abkhasia og Sør-Ossetia.",
+     "Utenriksdepartementet fraråder reiser som ikke er strengt nødvendige til områder nær de administrative grensene til Abkhasia og Sør-Ossetia. Dette gjelder ikke turistdestinasjonene Gudauri og Stepantsminda/Kazbegi, samt veien dit fra Tbilisi (vei E117 – «Military Road» eller «Mtskheta-Stepantsminda-Larsi Road»)."
+    ]
+   },
+   "hash": "df4cbc5923b4",
+   "url": "https://www.regjeringen.no/no/tema/utenrikssaker/reiseinformasjon/velg-land/reiseinfo_georgia/id2428525/"
+  },
+  "ghana": {
+   "name": "Ghana",
+   "page_updated": "08.06.2026",
+   "ingress": "Ghana er preget av politisk og økonomisk stabilitet og relativt lav kriminalitet.",
+   "warning": {
+    "title": "Reiseadvarsel for Ghana",
+    "status": "SIST OPPDATERT: 21.03.2024 - FORTSATT GYLDIG",
+    "paragraphs": [
+     "Utenriksdepartementet fraråder reiser som ikke er strengt nødvendige til områder som ligger nærmere enn 40 kilometer fra grensa til Burkina Faso."
+    ]
+   },
+   "hash": "ba9853fd4ea0",
+   "url": "https://www.regjeringen.no/no/tema/utenrikssaker/reiseinformasjon/velg-land/reiseinformasjon-for-ghana/id2414681/"
+  },
+  "grenada": {
+   "name": "Grenada",
+   "page_updated": "03.06.2026",
+   "ingress": "Grenada regnes som et relativt trygt land å reise til sammenliknet med andre land i regionen.",
+   "warning": null,
+   "url": "https://www.regjeringen.no/no/tema/utenrikssaker/reiseinformasjon/velg-land/reiseinfo_grenada/id2428980/"
+  },
+  "guatemala": {
+   "name": "Guatemala",
+   "page_updated": "28.01.2026",
+   "ingress": "Det er innført unntakstilstand i Guatemala. Norske borgere bør være ekstra oppmerksomme og følge med på nyheter og råd fra lokale myndigheter. Reisende anbefales å sette seg godt inn i visumreglene før innreise. Sørg for å ha gyldig reiseforsikring for hele oppholdet. Kriminalitet forekommer spesielt i byene, men også på turiststeder. Det anbefales å ta vanlige forholdsregler.",
+   "warning": null,
+   "url": "https://www.regjeringen.no/no/tema/utenrikssaker/reiseinformasjon/velg-land/reiseinfo_guatemala/id2428566/"
+  },
+  "guinea": {
+   "name": "Guinea",
+   "page_updated": "08.05.2026",
+   "ingress": "Guinea er for det meste som et trygt reisemål. Norske borgere oppfordres til å følge med på tiltak og retningslinjer fra lokale myndigheter da disse kan endres raskt.",
+   "warning": null,
+   "url": "https://www.regjeringen.no/no/tema/utenrikssaker/reiseinformasjon/velg-land/reiseinfo_guinea/id2414683/"
+  },
+  "guineabissau": {
+   "name": "Guinea-Bissau",
+   "page_updated": "03.06.2026",
+   "ingress": "De fleste reiser til Guinea-Bissau kan gjennomføres uten spesielle problemer. Den største risikoen er knyttet til kriminalitet, politisk ustabilitet og dårlig infrastruktur. Det er viktig å ha gyldig reiseforsikring som dekker evakuering ved sykdom. Det er uroligheter i Guinea-Bissau, særlig i hovedstaden Bissau. Se mer under «sikkerhet».",
+   "warning": null,
+   "url": "https://www.regjeringen.no/no/tema/utenrikssaker/reiseinformasjon/velg-land/reiseinfo_guineabissau/id2414888/"
+  },
+  "guyana": {
+   "name": "Guyana",
+   "page_updated": "18.12.2025",
+   "ingress": "Innreisebestemmelser kan endre seg. Det er ditt eget ansvar å ha gyldige dokumenter og være kjent med gjeldende innreisebestemmelser.",
+   "warning": null,
+   "url": "https://www.regjeringen.no/no/tema/utenrikssaker/reiseinformasjon/velg-land/reiseinfo_guyana/id2415199/"
+  },
+  "haiti": {
+   "name": "Haiti",
+   "page_updated": "28.05.2026",
+   "ingress": "Situasjonen i Haiti er svært ustabil med omfattende vold begått av kriminelle gjenger. I tillegg er det risiko for voldelige protester. Kriminalitet er utbredt i landet og lokale politiressurser er begrenset",
+   "warning": {
+    "title": "Reiseadvarsel for Haiti",
+    "status": "SIST OPPDATERT: 27.03.2024 - FORTSATT GYLDIG",
+    "paragraphs": [
+     "Utenriksdepartementet fraråder alle reiser til eller opphold i Haiti"
+    ]
+   },
+   "hash": "2c976de6f7a0",
+   "url": "https://www.regjeringen.no/no/tema/utenrikssaker/reiseinformasjon/velg-land/reiseinfo_haiti/id2415686/"
+  },
+  "hellas": {
+   "name": "Hellas",
+   "page_updated": "30.07.2026",
+   "ingress": "De aller fleste reiser til Hellas går uten problemer, men ekstremvær og naturhendelser kan skape utfordringer. Det pågår skogbranner i flere områder i Hellas. Reisende bør holde seg oppdatert og følge råd fra lokale myndigheter. I sommersesongen er hetebølger vanlig. Sårbare personer som barn, eldre eller personer med helseutfordringer er ekstra utsatt. Mer informasjon i avsnittet under om Naturforhold og naturkatastrofer.",
+   "warning": null,
+   "url": "https://www.regjeringen.no/no/tema/utenrikssaker/reiseinformasjon/velg-land/reiseinfo_hellas/id2414955/"
+  },
+  "honduras": {
+   "name": "Honduras",
+   "page_updated": "03.06.2026",
+   "ingress": "Vær oppmerksom på at reglene kan endres. Det anbefales at den reisende setter seg godt inn i reglene for innreise. Sørg for å ha gyldig reiseforsikring for hele oppholdet.",
+   "warning": null,
+   "url": "https://www.regjeringen.no/no/tema/utenrikssaker/reiseinformasjon/velg-land/reiseinfo_honduras/id2428569/"
+  },
+  "india": {
+   "name": "India",
+   "page_updated": "29.06.2026",
+   "ingress": "De fleste besøk til India foregår uten problemer. Det er krav om visum for reisende til India. I vinterperioden november-februar er flere deler av India og spesielt de større byene kraftig luftforurenset. Norske borgere i India bør være årvåkne, og lytte til råd fra lokale myndigheter.",
+   "warning": {
+    "title": "Reiseadvarsel for India",
+    "status": "SIST OPPDATERT: 09.05.2025 - FORTSATT GYLDIG",
+    "paragraphs": [
+     "Utenriksdepartementet advarer mot alle reiser til Jammu og Kashmir samt alle områder innenfor ti kilometer fra grensen mot Pakistan."
+    ]
+   },
+   "hash": "d3fad33be8e0",
+   "url": "https://www.regjeringen.no/no/tema/utenrikssaker/reiseinformasjon/velg-land/reiseinfo_india/id2414743/"
+  },
+  "indonesia": {
+   "name": "Indonesia",
+   "page_updated": "20.05.2026",
+   "ingress": "Indonesia er i hovedsak et trygt reisemål. Reisende bør følge de anvisninger som gis av lokale myndigheter, og utvise generell forsiktighet.",
+   "warning": null,
+   "url": "https://www.regjeringen.no/no/tema/utenrikssaker/reiseinformasjon/velg-land/reiseinfo_indonesia/id2415692/"
+  },
+  "irak": {
+   "name": "Irak",
+   "page_updated": "02.07.2026",
+   "ingress": "Sikkerhetssituasjonen i Irak er ustabil og kan endres raskt. Det er en risiko for angrep mot militære og sivile installasjoner i Irak samt sivil uro. Norske borgere oppfordres til å holde seg unna militær- og sikkerhetsinstallasjoner samt demonstrasjoner. Luftrommet i Irak er åpent, men en ny stengning kan skje raskt og uten forvarsel. Sjekk vilkårene i din reiseforsikring.",
+   "warning": {
+    "title": "Reiseadvarsel for Irak",
+    "status": "SIST OPPDATERT: 28.02.2026 - FORTSATT GYLDIG",
+    "paragraphs": [
+     "Utenriksdepartementet fraråder alle reiser til Irak."
+    ]
+   },
+   "hash": "2ab29d26b219",
+   "url": "https://www.regjeringen.no/no/tema/utenrikssaker/reiseinformasjon/velg-land/reiseinfo_irak/id2428572/"
+  },
+  "iran": {
+   "name": "Iran",
+   "page_updated": "16.07.2026",
+   "ingress": "Sikkerhetssituasjonen i Iran og i regionen er anspent og uforutsigbar og kan endre seg på kort varsel. USA gjennomfører angrep mot flere mål i deler av Iran. Reise medfører stor risiko. Luftrommet over Iran kan stenges på kort varsel. Vurder egen sikkerhet og lytt til råd fra pålitelige lokale kilder.",
+   "warning": {
+    "title": "Reiseadvarsel for Iran",
+    "status": "SIST OPPDATERT: 14. JANUAR 2026 - FORTSATT GYLDIG",
+    "paragraphs": [
+     "Utenriksdepartementet fraråder alle reiser til Iran og oppfordrer norske borgere til å forlate landet."
+    ]
+   },
+   "hash": "ccb560cec3e0",
+   "url": "https://www.regjeringen.no/no/tema/utenrikssaker/reiseinformasjon/velg-land/reiseinfo_iran/id2414831/"
+  },
+  "irland": {
+   "name": "Irland",
+   "page_updated": "10.03.2026",
+   "ingress": "Irland er generelt et trygt land å besøke og er et populært reisemål for turister både fra Norge og resten av verden. Spesielt er Dublin ettertraktet og det kan være vanskelig å finne overnatting i høysesongen.",
+   "warning": null,
+   "url": "https://www.regjeringen.no/no/tema/utenrikssaker/reiseinformasjon/velg-land/reiseinfo_irland/id2428570/"
+  },
+  "island": {
+   "name": "Island",
+   "page_updated": "09.08.2026",
+   "ingress": "Det har vært flere vulkanutbrudd i Reykjanes-området de siste årene. Dette påvirker sikkerheten og tilgjengeligheten i det berørte området. Islandske myndigheter oppfordrer reisende om å ikke reise til stedet der et utbrudd finner sted. 12. august blir det full solformørkelse på Island, og det forventes mange besøkende. Se mer under «naturforhold og naturkatastrofer»",
+   "warning": null,
+   "url": "https://www.regjeringen.no/no/tema/utenrikssaker/reiseinformasjon/velg-land/reiseinfo_island/id2414936/"
+  },
+  "israel": {
+   "name": "Israel",
+   "page_updated": "14.08.2026",
+   "ingress": "Sikkerhetssituasjonen i Israel kan forandre seg raskt, særlig grunnet de spente forholdene i regionen. Følg nyhetsbildet og råd fra israelske myndigheter og vurder egen sikkerhet.",
+   "warning": {
+    "title": "Reiseadvarsel for Israel",
+    "status": "SIST OPPDATERT: 30.06.2026 - FORTSATT GYLDIG",
+    "paragraphs": [
+     "Utenriksdepartementet fraråder alle reiser til områder innenfor 5 km fra grenseområdene mot Libanon, Syria og Gazastripen."
+    ]
+   },
+   "hash": "790fab09a07b",
+   "url": "https://www.regjeringen.no/no/tema/utenrikssaker/reiseinformasjon/velg-land/reiseinfo_israel/id2417120/"
+  },
+  "italia": {
+   "name": "Italia",
+   "page_updated": "09.09.2026",
+   "ingress": "Italia er et trygt land å reise og oppholde seg i, og de fleste reiser går trygt og uten spesielle problemer. Reisende må kunne vise gyldig pass eller nasjonalt ID-kort med reiserett på forespørsel fra myndighetene. Det kan forekomme vær- og naturhendelser som påvirker reiser og opphold i Italia. Se mer under «naturforhold og naturkatastrofer».",
+   "warning": null,
+   "url": "https://www.regjeringen.no/no/tema/utenrikssaker/reiseinformasjon/velg-land/reiseinfo_italia/id2416484/"
+  },
+  "jamaica": {
+   "name": "Jamaica",
+   "page_updated": "28.05.2026",
+   "ingress": "Jamaica er plaget av høy kriminalitet utenfor turistområder, og det anbefales å være forsiktig og oppmerksom.",
+   "warning": null,
+   "url": "https://www.regjeringen.no/no/tema/utenrikssaker/reiseinformasjon/velg-land/reiseinfo_jamaica/id2428981/"
+  },
+  "japan": {
+   "name": "Japan",
+   "page_updated": "20.04.2026",
+   "ingress": "Reise til Japan er trygt og for det meste uproblematisk, men landet kan være utsatt for jordskjelv og andre naturfenomener. Det anbefales å registrere opphold og undersøke nødvendige forholdsregler før reise.",
+   "warning": null,
+   "url": "https://www.regjeringen.no/no/tema/utenrikssaker/reiseinformasjon/velg-land/reiseinfo_japan/id2415973/"
+  },
+  "jemen": {
+   "name": "Jemen",
+   "page_updated": "03.06.2026",
+   "ingress": "Utenriksdepartementet fraråder alle reiser til Jemen. Norske borgere som oppholder seg i landet oppfordres til å forlate umiddelbart. Sikkerhetssituasjonen er alvorlig og uforutsigelig, der væpnet konflikt, terrorisme og risiko for kidnapping preger store deler av landet. Etter de militære konfrontasjonene mellom USA, Israel og Iran fra februar 2026 er den regionale spenningen ytterligere forverret. Sikkerhetssituasjonen kan endre seg raskt. Norske borgere bes følge situasjonen gjennom media og lokale myndigheters anbefalinger. Flytrafikken i regionen er påvirket og kan endres på kort varsel.",
+   "warning": {
+    "title": "Reiseadvarsel for Jemen",
+    "status": "SIST OPPDATERT: 18.02.2013 - FORTSATT GYLDIG",
+    "paragraphs": [
+     "Utenriksdepartementet fraråder alle reiser til eller opphold i Jemen. Nordmenn som befinner seg i Jemen oppfordres til å forlate landet."
+    ]
+   },
+   "hash": "dc2787c1d35a",
+   "url": "https://www.regjeringen.no/no/tema/utenrikssaker/reiseinformasjon/velg-land/reiseinfo_jemen/id2416418/"
+  },
+  "jordan": {
+   "name": "Jordan",
+   "page_updated": "21.09.2026",
+   "ingress": "Selv om sikkerhetssituasjonen i Jordan vurderes som stabil, er den regionale situasjonen i Midtøsten uforutsigbar og kan endre seg på kort varsel. Dette kan påvirke luftrommet og føre til endringer i flytrafikken. Reisende anbefales derfor å forsikre seg om at reiseforsikringen gir tilstrekkelig dekning. Følg råd fra jordanske myndigheter og vurder egen sikkerhet.",
+   "warning": null,
+   "url": "https://www.regjeringen.no/no/tema/utenrikssaker/reiseinformasjon/velg-land/reiseinfo_jordan/id2428573/"
+  },
+  "kambodsja": {
+   "name": "Kambodsja",
+   "page_updated": "03.06.2026",
+   "ingress": "De fleste reiser til Kambodsja gjennomføres trygt og uten spesielle problemer. Det er en pågående grensekonflikt mellom Kambodsja og Thailand, og reiser og opphold i grenseområdet frarådes. Se mer under «Sikkerhet».",
+   "warning": {
+    "title": "Reiseadvarsel for Kambodsja",
+    "status": "SIST OPPDATERT: 03.06.2026 - FORTSATT GYLDIG",
+    "paragraphs": [
+     "Utenriksdepartementet fraråder alle reiser til grenseområdene nærmere enn 20 km fra grensen til Thailand."
+    ]
+   },
+   "hash": "ee1eb7bffcb5",
+   "url": "https://www.regjeringen.no/no/tema/utenrikssaker/reiseinformasjon/velg-land/reiseinfo_kambodsja/id2415096/"
+  },
+  "kamerun": {
+   "name": "Kamerun",
+   "page_updated": "30.04.2026",
+   "ingress": "Det er en alvorlig sikkerhetssituasjon i Kamerun. Terrorhandlinger, kidnapping og kriminalitet forekommer. Reisende oppfordres derfor til å utvise aktsomhet og søke oppdatert informasjon om sikkerheten kort tid før innreise.",
+   "warning": {
+    "title": "Reiseadvarsel for Kamerun",
+    "status": "SIST OPPDATERT: 11.09.2026 - FORTSATT GYLDIG",
+    "paragraphs": [
+     "Utenriksdepartementet fraråder alle reiser til regionen Far North, de engelskspråklige regionene South West og North West og områder nærmere enn 40 km fra grensen mot Nigeria, Tsjad og Den sentralafrikanske republikk.",
+     "Videre frarådes reiser som ikke er strengt nødvendige til øvrige deler av regionen North, områder i Adamawa-regionen som ligger nærmere enn 20 kilometer fra grensa til regionen North, samt Bakassi-halvøya. Det presiseres at det ikke er reiseadvarsel for byen Ngaoundere.",
+     "Det foreligger ikke reiseadvarsel for øvrige deler av landet."
+    ]
+   },
+   "hash": "b6ec36f95bdf",
+   "url": "https://www.regjeringen.no/no/tema/utenrikssaker/reiseinformasjon/velg-land/reiseinfo_kamerun/id2424175/"
+  },
+  "kappverde": {
+   "name": "Kapp Verde",
+   "page_updated": "03.06.2026",
+   "ingress": "Norske borgere kan reise visumfritt i 30 dager til Kapp Verde hvis man registrerer sin reise og betaler en flyplassavgift senest fem dager før avreise. Du må ha pass som er gyldig i minst seks måneder etter utreise.",
+   "warning": null,
+   "url": "https://www.regjeringen.no/no/tema/utenrikssaker/reiseinformasjon/velg-land/reiseinfo_kappverde/id2414891/"
+  },
+  "kasakhstan": {
+   "name": "Kasakhstan",
+   "page_updated": "21.05.2024",
+   "ingress": "Norge borgere kan reise visumfritt til Kasakhstan i opptil 30 dager. Norge har ingen ambassade i landet. Utenrikstjenesten har derfor begrenset mulighet til å bistå norske borgere som befinner seg i Kasakhstan.",
+   "warning": null,
+   "url": "https://www.regjeringen.no/no/tema/utenrikssaker/reiseinformasjon/velg-land/reiseinfo_kasakhstan/id2428578/"
+  },
+  "kenya": {
+   "name": "Kenya",
+   "page_updated": "23.09.2026",
+   "ingress": "Kenya opplever periodevis politisk uro og demonstrasjoner. Hold deg oppdatert på sikkerhetssituasjonen der du er. Vær årvåken og unngå steder der mange folk samles. Kenya har vært rammet av terrorangrep, og det er risiko for at det skjer igjen. Til sammen påvirker dette sikkerheten for norske borgere, inkludert i Nairobi. Trafikk og kriminalitet utgjør ellers de største risikofaktorene for norske borgere i Kenya.",
+   "warning": {
+    "title": "Reiseadvarsel for Kenya",
+    "status": "SIST OPPDATERT: 17.01.2020 - FORTSATT GYLDIG",
+    "paragraphs": [
+     "Utenriksdepartementet fraråder opphold og reiser som ikke er strengt nødvendige innen 60 km fra grensen til Somalia, inkludert Garissa fylke."
+    ]
+   },
+   "hash": "bf11838e5206",
+   "url": "https://www.regjeringen.no/no/tema/utenrikssaker/reiseinformasjon/velg-land/reiseinfo_kenya/id2414927/"
+  },
+  "kina": {
+   "name": "Kina",
+   "page_updated": "12.05.2026",
+   "ingress": "Norske borgere som reiser til Kina for forretningsreiser, turisme, familiebesøk og transitt, trenger ikke søke om visum før avreise for opphold i Kina i inntil 30 dager. Reglene er fra og med 8. november 2024 og videreføres for ytterligere ett år, ut 2026. Andre reisende må fortsatt søke om visum før avreise.",
+   "warning": null,
+   "url": "https://www.regjeringen.no/no/tema/utenrikssaker/reiseinformasjon/velg-land/reiseinfo_kina/id2414833/"
+  },
+  "kirgisistan": {
+   "name": "Kirgisistan",
+   "page_updated": "21.05.2024",
+   "ingress": "Norske borgere kan reise visumfritt til Kirgisistan i opptil 60 dager. Reisende bør vise aktsomhet, særlig i trafikken og i grenseområdene mot Tadsjikistan.",
+   "warning": null,
+   "url": "https://www.regjeringen.no/no/tema/utenrikssaker/reiseinformasjon/velg-land/reiseinfo_kirgisistan/id2428584/"
+  },
+  "kiribati": {
+   "name": "Kiribati",
+   "page_updated": "30.07.2026",
+   "ingress": "Kiribati anses som et trygt reisemål. Norske statsborgere kan oppholde seg i Kiribati visumfritt i opptil 90 dager.",
+   "warning": null,
+   "url": "https://www.regjeringen.no/no/tema/utenrikssaker/reiseinformasjon/velg-land/reiseinfo_kiribati/id2429127/"
+  },
+  "komorene": {
+   "name": "Komorene",
+   "page_updated": "25.09.2026",
+   "ingress": "Nordmenn må ha visum til Komorene. Kriminaliteten er lav, og det er trygt å bevege seg ute også etter mørkets frembrudd.",
+   "warning": null,
+   "url": "https://www.regjeringen.no/no/tema/utenrikssaker/reiseinformasjon/velg-land/komorene_reiseinfo/id2740675/"
+  },
+  "kosovo": {
+   "name": "Kosovo",
+   "page_updated": "09.09.2026",
+   "ingress": "Kosovo er generelt et trygt reisemål med lav kriminalitet. Det kan forekomme uroligheter i enkelte kommuner nord i Kosovo. Utenriksdepartementet oppfordrer nordmenn som befinner seg i Kosovo, til å utvise forsiktighet og unngå demonstrasjoner. Reisende bes om å holde seg oppdatert på situasjonen gjennom å følge med på nyhetsbildet. Mer informasjon under avsnittet om Sikkerhet. Det er ID-plikt i Kosovo, og alle borgere oppfordres til å bære gyldig ID til enhver tid.",
+   "warning": null,
+   "url": "https://www.regjeringen.no/no/tema/utenrikssaker/reiseinformasjon/velg-land/reiseinfo_kosovo/id2428615/"
+  },
+  "kroatia": {
+   "name": "Kroatia",
+   "page_updated": "14.08.2026",
+   "ingress": "Det er generelt trygt å feriere i Kroatia. Det vil være en viss risiko for jordskjelv, ettersom landet befinner seg i en jordskjelvutsatt sone. Reisende anbefales å følge lokale myndigheters råd, veiledning og anmodninger. Reisende bør være ekstra forsiktige i sommermånedene på grunn av høye temperaturer. Se punktet «Naturforhold og naturkatastrofer» for mer informasjon.",
+   "warning": null,
+   "url": "https://www.regjeringen.no/no/tema/utenrikssaker/reiseinformasjon/velg-land/reiseinfo_kroatia/id2417198/"
+  },
+  "kuwait": {
+   "name": "Kuwait",
+   "page_updated": "22.07.2026",
+   "ingress": "Sikkerhetssituasjonen i Kuwait og Gulflandene er tett knyttet til regionale forhold. Situasjonen er spent og uforutsigbar og kan ende seg på kort varsel. Flyplassen er åpen, men med redusert kapasitet. Endringer i flytrafikken kan skje raskt. Vurder egen sikkerhet, hold deg oppdatert i nyhetsbildet og lytt til råd fra pålitelige lokale kilder. Unngå militære baser anlegg. Vær klar over at det er forbud mot fotografering og filming blant annet av sikkerhetsanlegg og militær aktivitet. Deling av dette på sosiale medier eller på annen måte, kan medføre strenge straffer.",
+   "warning": {
+    "title": "Reiseadvarsel for Kuwait",
+    "status": "SIST OPPDATERT: 22.07.2026 - FORTSATT GYLDIG",
+    "paragraphs": [
+     "Utenriksdepartementet fraråder reiser som ikke er strengt nødvendige til Kuwait."
+    ]
+   },
+   "hash": "3387638f799e",
+   "url": "https://www.regjeringen.no/no/tema/utenrikssaker/reiseinformasjon/velg-land/reiseinfo_kuwait/id2428547/"
+  },
+  "kypros": {
+   "name": "Kypros",
+   "page_updated": "30.07.2026",
+   "ingress": "Reisende må ha med gyldig pass eller nasjonalt ID-kort med reiserett. Det er viktig å være klar over at Kypros har vært delt siden 1974 med en FN-kontrollert buffersone mellom Republikken Kypros og den nordlige delen av øya. Se mer under «innreise/mellomlanding/utreise». Den siste tidens utvikling i Midtøsten påvirker også Kypros. Vurderingen er at den generelle sikkerhetssituasjonen for norske borgere på Kypros er uendret, men utviklingen i regionen kan føre til forsinkelser og/eller kanselleringer i flytrafikken. Situasjonen kan endre seg på kort varsel.",
+   "warning": null,
+   "url": "https://www.regjeringen.no/no/tema/utenrikssaker/reiseinformasjon/velg-land/reiseinfo_kypros/id2414993/"
+  },
+  "laos": {
+   "name": "Laos",
+   "page_updated": "14.09.2026",
+   "ingress": "Laos anses som et trygt reisemål. Du bør imidlertid være oppmerksom på risikoen for trafikkulykker og småtyveri. Se mer om sikkerhetssituasjonen under «sikkerhet».",
+   "warning": null,
+   "url": "https://www.regjeringen.no/no/tema/utenrikssaker/reiseinformasjon/velg-land/reiseinfo_laos/id2424428/"
+  },
+  "latvia": {
+   "name": "Latvia",
+   "page_updated": "29.04.2026",
+   "ingress": "Latvia er i all hovedsak et trygt land å reise til, og de fleste problemene man kan støte på kan lett unngås ved å følge vanlige forholdsregler og bruke sunn fornuft.",
+   "warning": null,
+   "url": "https://www.regjeringen.no/no/tema/utenrikssaker/reiseinformasjon/velg-land/reiseinfo_latvia/id2414940/"
+  },
+  "lesotho": {
+   "name": "Lesotho",
+   "page_updated": "11.06.2026",
+   "ingress": "Lesotho er et lite og fjellrikt land, omringet på alle kanter av nabolandet Sør-Afrika. De fleste reiser til Lesotho gjennomføres uten spesielle problemer. Den største risikoen er knyttet til kriminalitet og transportsikkerhet. Infrastruktur, veinett og mobildekning kan være begrenset utenfor hovedstaden Maseru.",
+   "warning": null,
+   "url": "https://www.regjeringen.no/no/tema/utenrikssaker/reiseinformasjon/velg-land/reiseinfo_lesotho/id2424507/"
+  },
+  "libanon": {
+   "name": "Libanon",
+   "page_updated": "10.09.2026",
+   "ingress": "Sikkerhetssituasjonen i Libanon er spent og uforutsigbar. Det er regelmessige israelske angrep og krigshandlinger i Sør-Libanon. Det er risiko for ytterligere forverring av sikkerhetssituasjonen også i andre deler av landet. Den enkelte oppfordres til å følge utviklingen i media ol. og er ansvarlig for å gjøre egne sikkerhetsvurderinger.",
+   "warning": {
+    "title": "Reiseadvarsel for Libanon",
+    "status": "SIST OPPDATERT: 06.03.2026 - FORTSATT GYLDIG",
+    "paragraphs": [
+     "Utenriksdepartementet fraråder alle reiser til Libanon og oppfordrer norske borgere til å forlate landet."
+    ]
+   },
+   "hash": "1d5152320889",
+   "url": "https://www.regjeringen.no/no/tema/utenrikssaker/reiseinformasjon/velg-land/reiseinfo_libanon/id2415116/"
+  },
+  "liberia": {
+   "name": "Liberia",
+   "page_updated": "26.06.2026",
+   "ingress": "I en normal situasjon kan de fleste reiser til Liberias hovedstad Monrovia gjennomføres uten større problemer. Demonstrasjoner kan forekomme, særlig i Monrovia. Reisende bør unngå folkemengder og holde seg oppdatert på situasjonen gjennom lokale medier. 25. mai innførte Liberias helsemyndigheter skjerpede helsekontroller for innreisende på grunn av ebolautbruddet i Uganda og DR Kongo.",
+   "warning": null,
+   "url": "https://www.regjeringen.no/no/tema/utenrikssaker/reiseinformasjon/velg-land/reiseinfo_liberia/id2414685/"
+  },
+  "libya": {
+   "name": "Libya",
+   "page_updated": "11.06.2026",
+   "ingress": "Sikkerhetssituasjonen i Libya er farlig og uforutsigbar. UD fraråder alle reiser til og opphold i Libya. Norske myndigheter har svært begrensede muligheter til å yte konsulær bistand til norske statsborgere i Libya.",
+   "warning": {
+    "title": "Reiseadvarsel for Libya",
+    "status": "SIST OPPDATERT: 30.07.2014 - FORTSATT GYLDIG",
+    "paragraphs": [
+     "Utenriksdepartementet fraråder alle reiser til eller opphold i Libya, og norske borgere oppfordres til å forlate landet."
+    ]
+   },
+   "hash": "20df41acf370",
+   "url": "https://www.regjeringen.no/no/tema/utenrikssaker/reiseinformasjon/velg-land/reiseinfo_libya/id2415885/"
+  },
+  "liechtenstein": {
+   "name": "Liechtenstein",
+   "page_updated": "29.04.2026",
+   "ingress": "Liechtenstein er et generelt trygt feriemål. Norske borgere trenger ikke visum for innreise.",
+   "warning": null,
+   "url": "https://www.regjeringen.no/no/tema/utenrikssaker/reiseinformasjon/velg-land/reiseinfo_liechtenstein/id2415978/"
+  },
+  "litauen": {
+   "name": "Litauen",
+   "page_updated": "17.09.2026",
+   "ingress": "Litauen er generelt et trygt land for nordmenn å reise til. Fra mai 2026 har det litauiske forsvaret ved flere anledninger observert droneaktivitet i litauisk luftrom knyttet til Russlands krig mot Ukraina. Mer informasjon om dette finnes under kapittelet om sikkerhet.",
+   "warning": null,
+   "url": "https://www.regjeringen.no/no/tema/utenrikssaker/reiseinformasjon/velg-land/reiseinfo_litauen/id2417192/"
+  },
+  "luxembourg": {
+   "name": "Luxembourg",
+   "page_updated": "19.12.2024",
+   "ingress": "Luxembourg er under normale omstendigheter et sikkert land å ferdes og oppholde seg i. Ansvarlig ambassade for landet er den norske ambassaden i Haag, Nederland.",
+   "warning": null,
+   "url": "https://www.regjeringen.no/no/tema/utenrikssaker/reiseinformasjon/velg-land/reiseinfo_luxembourg/id2415570/"
+  },
+  "madagaskar": {
+   "name": "Madagaskar",
+   "page_updated": "25.09.2026",
+   "ingress": "Madagaskar er et relativt trygt land for vestlige turister og andre tilreisende, men opplever periodevis politisk uro og demonstrasjoner. Vær oppmerksom, hold deg oppdatert på sikkerhetssituasjonen der du er og unngå politiske forsamlinger. Trafikk, kriminalitet og svake helsesystemer utgjør de største risikofaktorene for norske borgere på Madagaskar. Det er også relativt hyppig forekomst av malaria.",
+   "warning": null,
+   "url": "https://www.regjeringen.no/no/tema/utenrikssaker/reiseinformasjon/velg-land/reiseinfo_madagaskar/id2414947/"
+  },
+  "malawi": {
+   "name": "Malawi",
+   "page_updated": "15.05.2026",
+   "ingress": "Malawi er generelt et trygt reisemål. Den største risikoen er knyttet til transportsikkerhet.",
+   "warning": null,
+   "url": "https://www.regjeringen.no/no/tema/utenrikssaker/reiseinformasjon/velg-land/reiseinfo_malawi/id2415982/"
+  },
+  "malaysia": {
+   "name": "Malaysia",
+   "page_updated": "30.04.2026",
+   "ingress": "Malaysia er i hovedsak et trygt reisemål. Reisende bør følge de anvisninger som gis av lokale myndigheter, og utvise generell forsiktighet.",
+   "warning": {
+    "title": "Reiseadvarsel for Malaysia",
+    "status": "SIST OPPDATERT: 06.12.2024 - FORTSATT GYLDIG",
+    "paragraphs": [
+     "Utenriksdepartementet fraråder reise eller opphold som ikke er strengt nødvendig til øyene og dykkerstedene utenfor kysten av østlige Sabah fra Sandakan til Tawau. Reiseadvarslet gjelder også fra kysten og ti kilometer inn i landet av dette området, unntatt landområdene i distriktet Sandakan."
+    ]
+   },
+   "hash": "589a36306330",
+   "url": "https://www.regjeringen.no/no/tema/utenrikssaker/reiseinformasjon/velg-land/reiseinfo_malaysia/id2415975/"
+  },
+  "maldivene": {
+   "name": "Maldivene",
+   "page_updated": "01.06.2026",
+   "ingress": "De fleste besøk til Maldivene foregår uten utfordringer. Alle reisende til Maldivene er pålagt å sende inn en egenerklæring om helse tidligst 96 timer før avreise til og fra Maldivene, se mer under innreise. Norske myndigheter har begrenset mulighet til å bistå konsulært på Maldivene. Husk derfor gyldig reiseforsikring.",
+   "warning": null,
+   "url": "https://www.regjeringen.no/no/tema/utenrikssaker/reiseinformasjon/velg-land/reiseinfo_maldivene/id2428949/"
+  },
+  "mali": {
+   "name": "Mali",
+   "page_updated": "16.09.2026",
+   "ingress": "Sikkerhetssituasjonen i Mali er alvorlig, spesielt i nordlige og sentrale deler av landet. Det er risiko for terror og kidnapping i hele landet.",
+   "warning": {
+    "title": "Reiseadvarsel for Mali",
+    "status": "SIST OPPDATERT: 19.11.2025 - FORTSATT GYLDIG",
+    "paragraphs": [
+     "Utenriksdepartementet fraråder alle reiser til Mali og oppfordrer norske borgere til å forlate landet."
+    ]
+   },
+   "hash": "fc5b59d989c4",
+   "url": "https://www.regjeringen.no/no/tema/utenrikssaker/reiseinformasjon/velg-land/reiseinfo_mali/id2424320/"
+  },
+  "malta": {
+   "name": "Malta",
+   "page_updated": "03.06.2026",
+   "ingress": "Malta er et trygt land å ferdes og oppholde seg i. Reisende til Malta er pliktet til å kunne presentere gyldig pass eller nasjonalt ID-kort med reiserett hvis de blir bedt om det. Besøkende til Malta bør alltid ha tegnet reiseforsikring.",
+   "warning": null,
+   "url": "https://www.regjeringen.no/no/tema/utenrikssaker/reiseinformasjon/velg-land/reiseinfo_malta/id2416492/"
+  },
+  "marokko": {
+   "name": "Marokko",
+   "page_updated": "21.07.2026",
+   "ingress": "Marokko anses som et trygt reisemål. Ved innreise kreves ikke visum for norske statsborgere, kun gyldig pass.",
+   "warning": null,
+   "url": "https://www.regjeringen.no/no/tema/utenrikssaker/reiseinformasjon/velg-land/reiseinfo_marokko/id2424344/"
+  },
+  "marshallislands": {
+   "name": "Marshalløyene",
+   "page_updated": "25.03.2026",
+   "ingress": "Marshalløyene er en liten øystat i Stillehavet. Landet er svært sårbart for klimaendringer og plastforurensing, det anbefales å registrere opphold og ta vanlige forholdsregler.",
+   "warning": null,
+   "url": "https://www.regjeringen.no/no/tema/utenrikssaker/reiseinformasjon/velg-land/reiseinfo_marshallislands/id2429128/"
+  },
+  "mauritania": {
+   "name": "Mauritania",
+   "page_updated": "16.09.2026",
+   "ingress": "Den islamske republikken Mauritania ligger i en konfliktfylt region, og det er generell fare for terrorisme. Risikoen er størst jo nærmere man er grensene til Mali og Algerie. Hovedstaden Nouakchott anses som trygg.",
+   "warning": {
+    "title": "Reiseadvarsel for Mauritania",
+    "status": "SIST OPPDATERT: 11.06.2024 - FORTSATT GYLDIG",
+    "paragraphs": [
+     "Utenriksdepartementet fraråder reise til, eller opphold som ikke er strengt nødvendig, i Mauretania, bortsett fra hovedstaden Nouakchott som ikke er omfattet av reiseadvarslet."
+    ]
+   },
+   "hash": "a8cffd76b41d",
+   "url": "https://www.regjeringen.no/no/tema/utenrikssaker/reiseinformasjon/velg-land/reiseinfo_mauritania/id2429137/"
+  },
+  "mauritius": {
+   "name": "Mauritius",
+   "page_updated": "01.06.2026",
+   "ingress": "De fleste reiser til Mauritius gjennomføres uten spesielle problemer.",
+   "warning": null,
+   "url": "https://www.regjeringen.no/no/tema/utenrikssaker/reiseinformasjon/velg-land/reiseinformasjon-for-mauritius/id2414916/"
+  },
+  "mexico": {
+   "name": "Mexico",
+   "page_updated": "27.02.2026",
+   "ingress": "I forbindelse med meksikanske myndigheters kamp mot organisert kriminalitet er det økt spenning i deler av landet. Se mer under «sikkerhet».De fleste reiser til turistområder i Mexico gjennomføres uten spesielle problemer. Sikkerhetssituasjonen i Mexico er særlig knyttet til organisert kriminalitet og rammer. Vinningskriminalitet, herunder overfall, væpnet ran og tyverier er også utbredt. Sørg for å ha gyldig reiseforsikring for hele oppholdet.",
+   "warning": null,
+   "url": "https://www.regjeringen.no/no/tema/utenrikssaker/reiseinformasjon/velg-land/reiseinfo_mexico/id2416296/"
+  },
+  "mikronesia": {
+   "name": "Mikronesiaføderasjonen",
+   "page_updated": "08.04.2026",
+   "ingress": "De fleste reiser til Mikronesiaføderasjonen gjennomføres uten større problemer. Store avstander og et begrenset tjenestetilbud gjør at det er viktig å være godt forberedt.",
+   "warning": null,
+   "url": "https://www.regjeringen.no/no/tema/utenrikssaker/reiseinformasjon/velg-land/reiseinfo_mikronesia/id2428986/"
+  },
+  "moldova": {
+   "name": "Moldova",
+   "page_updated": "24.08.2026",
+   "ingress": "Moldova er generelt sett et trygt reisemål. Krigen i nabolandet Ukraina har medført at sikkerhetssituasjonen i Moldova er noe mer uforutsigbar enn tidligere. Norske borgere som planlegger å reise til Moldova, oppfordres derfor til å følge med på utviklingen, og følge eventuelle anbefalinger fra myndighetene. Se mer under «Sikkerhet». Norges diplomatiske tilstedeværelse i Moldova er representert ved ambassaden i Chisinau. Norske borgere som trenger konsulær bistand, må henvende seg til ambassaden i Bucuresti, se mer under «Kontaktinformasjon».",
+   "warning": {
+    "title": "Reiseadvarsel for Moldova",
+    "status": "SIST OPPDATERT 26. JULI 2022 - FORTSATT GYLDIG",
+    "paragraphs": [
+     "Utenriksdepartementet fraråder alle reiser til regionen Transnistria som ikke er strengt nødvendige."
+    ]
+   },
+   "hash": "c50cfd66032d",
+   "url": "https://www.regjeringen.no/no/tema/utenrikssaker/reiseinformasjon/velg-land/reiseinfo_moldova/id2414862/"
+  },
+  "monaco": {
+   "name": "Monaco",
+   "page_updated": "20.08.2021",
+   "ingress": "Monaco er en fascinerende bystat ved Middelhavet som byr på særegen historie og flotte attraksjoner. Med noen unntak gjelder de samme reisemessige forhold i Monaco som for franske byer ved Middelhavskysten.",
+   "warning": null,
+   "url": "https://www.regjeringen.no/no/tema/utenrikssaker/reiseinformasjon/velg-land/monaco---reiseinformasjon/id2464469/"
+  },
+  "mongolia": {
+   "name": "Mongolia",
+   "page_updated": "01.07.2024",
+   "ingress": "Norske borgere på reise til/i Mongolia trenger ikke visum. Passet må være gyldig minst seks måneder etter hjemkomst.",
+   "warning": null,
+   "url": "https://www.regjeringen.no/no/tema/utenrikssaker/reiseinformasjon/velg-land/reiseinfo_mongolia/id2414841/"
+  },
+  "montenegro": {
+   "name": "Montenegro",
+   "page_updated": "15.05.2026",
+   "ingress": "Montenegro er generelt et trygt reisemål med lav kriminalitet, men opplever periodevis politisk uro og demonstrasjoner. Trafikk og helsevesen av varierende kvalitet er de største utfordringene for turister. På grunn av tørt landskap og høye temperaturer er Montenegro utsatt for skogbranner, spesielt i sommerhalvåret. Se mer under «Naturforhold og naturkatastrofer».",
+   "warning": null,
+   "url": "https://www.regjeringen.no/no/tema/utenrikssaker/reiseinformasjon/velg-land/reiseinfo_montenegro/id2416376/"
+  },
+  "mosambik": {
+   "name": "Mosambik",
+   "page_updated": "25.02.2026",
+   "ingress": "Mellom oktober og desember 2024 var det omfattende demonstrasjoner i Mosambik i etterkant av presidentvalget. Situasjonen er nå roligere, men ytterligere demonstrasjoner kan blusse opp på kort varsel. Alle reisende bes om å unngå folkeansamlinger. Følg lokale myndigheters anvisninger og følg med på lokale nyheter. For mer informasjon om situasjonen i landet, se kapittelet «Sikkerhet».",
+   "warning": {
+    "title": "Reiseadvarsel for Mosambik",
+    "status": "SIST OPPDATERT: 30. MAI 2025 - FORTSATT GYLDIG",
+    "paragraphs": [
+     "Utenriksdepartementet fraråder reiser som ikke er strengt nødvendige til provinsen Cabo Delgado, samt distriktene Erati og Memba i provinsen Nampula, og distriktene Mecula og Marrupa i provinsen Niassa i Mosambik."
+    ]
+   },
+   "hash": "b587542982ab",
+   "url": "https://www.regjeringen.no/no/tema/utenrikssaker/reiseinformasjon/velg-land/reiseinfo_mosambik/id2414919/"
+  },
+  "myanmar": {
+   "name": "Myanmar",
+   "page_updated": "25.11.2025",
+   "ingress": "Det er høyt konfliktnivå i store deler av Myanmar. Sikkerhetssituasjonen over hele landet kan forverres på kort varsel, og militærregimet kan når som helst innføre reiserestriksjoner. Det varslede valget i siste del av desember 2025 og begynnelsen av januar 2026 er omstridt, og det er muligheter for målrettede angrep og potensielt sosial uro knyttet til valget. Mer informasjon finnes under punktet om sikkerhet.",
+   "warning": {
+    "title": "Reiseadvarsel for Myanmar",
+    "status": "SIST OPPDATERT: 27. APRIL 2022 - FORTSATT GYLDIG",
+    "paragraphs": [
+     "Utenriksdepartementet fraråder alle reiser til Myanmar."
+    ]
+   },
+   "hash": "d22c61bedeba",
+   "url": "https://www.regjeringen.no/no/tema/utenrikssaker/reiseinformasjon/velg-land/reiseinfo_myanmar/id2417496/"
+  },
+  "namibia": {
+   "name": "Namibia",
+   "page_updated": "11.06.2026",
+   "ingress": "De fleste reiser til Namibia gjennomføres uten spesielle problemer. Kriminalitet rettet mot utlendinger forekommer.",
+   "warning": null,
+   "url": "https://www.regjeringen.no/no/tema/utenrikssaker/reiseinformasjon/velg-land/reiseinfo_namibia/id2424510/"
+  },
+  "naoero": {
+   "name": "Naoero",
+   "page_updated": "30.07.2026",
+   "ingress": "Naoero anses som et trygt reisemål. Vær oppmerksom på at turistfasilitetene er svært begrenset. Norske statsborgere trenger visum for innreise til Naoero.",
+   "warning": null,
+   "url": "https://www.regjeringen.no/no/tema/utenrikssaker/reiseinformasjon/velg-land/reiseinfo_naoero/id2428988/"
+  },
+  "nederland": {
+   "name": "Nederland",
+   "page_updated": "03.06.2026",
+   "ingress": "Nederland er under normale omstendigheter et sikkert land å ferdes og oppholde seg i. Trusselnivået i Nederland ligger på nivå 4 av 5, og det oppfordres til årvåkenhet i forbindelse med større arrangementer og folkesamlinger (se punktet om Sikkerhet for mer informasjon).",
+   "warning": null,
+   "url": "https://www.regjeringen.no/no/tema/utenrikssaker/reiseinformasjon/velg-land/reiseinfo_nederland/id2414872/"
+  },
+  "nepal": {
+   "name": "Nepal",
+   "page_updated": "28.08.2026",
+   "ingress": "Nepal er et land med stor geografisk variasjon og enkelte naturgitte risikoforhold. Jordskjelv, flom, jordskred og andre naturhendelser kan påvirke reiser og opphold i landet, særlig i monsunperioden fra juni til september. Deler av landet ble rammet av flom 26. august 2026 etter et jord- og isskred i Rasuwa-distriktet nord i Nepal. Reisende bør følge lokale myndigheters råd, være oppmerksomme på vær- og veiforhold og holde seg oppdatert på situasjonen. Se mer informasjon under «Naturforhold og naturkatastrofer».",
+   "warning": null,
+   "url": "https://www.regjeringen.no/no/tema/utenrikssaker/reiseinformasjon/velg-land/reiseinfo_nepal/id2416354/"
+  },
+  "newzealand": {
+   "name": "New Zealand",
+   "page_updated": "30.07.2026",
+   "ingress": "New Zealand anses som et trygt reisemål. Jordskjelv forekommer årlig. Se mer om naturforhold under «Naturforhold og naturkatastrofer». Norske statsborgere trenger innreisetillatelse for å kunne reise til New Zealand.",
+   "warning": null,
+   "url": "https://www.regjeringen.no/no/tema/utenrikssaker/reiseinformasjon/velg-land/reiseinfo_newzealand/id2415533/"
+  },
+  "nicaragua": {
+   "name": "Nicaragua",
+   "page_updated": "03.06.2026",
+   "ingress": "Norske reisende har i flere tilfeller blitt nektet adgang til Nicaragua uten at det har blitt oppgitt noen grunn. Norske myndigheter har svært begrenset eller ingen mulighet til å yte konsulær bistand til norske borgere i landet. Se mer under «innreise»",
+   "warning": null,
+   "url": "https://www.regjeringen.no/no/tema/utenrikssaker/reiseinformasjon/velg-land/reiseinfo_nicaragua/id2428567/"
+  },
+  "niger": {
+   "name": "Niger",
+   "page_updated": "16.09.2026",
+   "ingress": "Den 26. juli 2023 ble det gjennomført statskupp i Niger, og landet styres nå av et militærregime. Sikkerhetssituasjonen er alvorlig og ustabil, og det er stadig risiko for sosial uro. Reisende bør holde seg løpende informert om utviklingen i landet, unngå større folkemengder og demonstrasjoner og utvise generell varsomhet.",
+   "warning": {
+    "title": "Reiseadvarsel for Niger",
+    "status": "SIST OPPDATERT: 03.08.2023 - FORTSATT GYLDIG",
+    "paragraphs": [
+     "Utenriksdepartementet fraråder alle reiser til Niger."
+    ]
+   },
+   "hash": "8ef1b6318d45",
+   "url": "https://www.regjeringen.no/no/tema/utenrikssaker/reiseinformasjon/velg-land/reiseinfo_niger/id2424308/"
+  },
+  "nigeria": {
+   "name": "Nigeria",
+   "page_updated": "10.08.2026",
+   "ingress": "Nigeria preges av en uforutsigbar sikkerhetssituasjon. Det er betydelig risiko for kriminalitet, terrorisme, sosial uro, væpnede angrep, bortføringer/kidnappinger og trafikkulykker. Hovedstaden Abuja og deler av Lagos fremstår som mindre risikoutsatt enn landet for øvrig, men også her er det en uforutsigbar sikkerhetssituasjon.",
+   "warning": {
+    "title": "Reiseadvarsel for Nigeria",
+    "status": "SIST OPPDATERT: 10.03.2026 - FORTSATT GYLDIG",
+    "paragraphs": [
+     "Utenriksdepartementet fraråder alle reiser til delstatene Adamawa, Akwa Ibom, Bauchi, Borno, Bayelsa, Cross River, Delta, Gombe, Imo, Jigawa, Kaduna, Katsina, Kano, Kebbi, Niger, Rivers (med unntak av Port Harcourt), Sokoto, Yobe og Zamfara.",
+     "Utenriksdepartementet fraråder reiser som ikke er strengt nødvendige til delstatene Abia, Anambra, Benue, Edo, Kogi, Kwara, Ondo, Plateau og Taraba.",
+     "Det presiseres at det ikke er reiseadvarsel for delstater som ikke nevnes over, inkludert Lagos og Federal Capital Territory (Abuja), samt for byen Port Harcourt i Rivers State."
+    ]
+   },
+   "hash": "aefa00f269d2",
+   "url": "https://www.regjeringen.no/no/tema/utenrikssaker/reiseinformasjon/velg-land/reiseinfo_nigeria/id2414670/"
+  },
+  "nordkorea": {
+   "name": "Nord-Korea",
+   "page_updated": "15.05.2026",
+   "ingress": "UD fraråder reiser til og opphold i Nord-Korea som ikke er nødvendige.",
+   "warning": {
+    "title": "Reiseadvarsel for Nord-Korea",
+    "status": "SIST OPPDATERT: 08.09.2017 - FORTSATT GYLDIG",
+    "paragraphs": [
+     "UD fraråder reiser til og opphold i Nord-Korea som ikke er nødvendige."
+    ]
+   },
+   "hash": "765daae27ced",
+   "url": "https://www.regjeringen.no/no/tema/utenrikssaker/reiseinformasjon/velg-land/reiseinfo_nordkorea/id2429138/"
+  },
+  "nordmakedonia": {
+   "name": "Nord-Makedonia",
+   "page_updated": "15.05.2026",
+   "ingress": "Nord-Makedonia er generelt et trygt reisemål med lav kriminalitet, men opplever periodevis politisk uro og demonstrasjoner. Trafikk og helsevesen av varierende kvalitet er de største utfordringene for turister. På grunn av tørt landskap og høye temperaturer er Nord-Makedonia utsatt for skogbranner, spesielt i sommerhalvåret. Se mer under «Naturforhold og naturkatastrofer».",
+   "warning": null,
+   "url": "https://www.regjeringen.no/no/tema/utenrikssaker/reiseinformasjon/velg-land/reiseinfo_nordmakedonia/id2416995/"
+  },
+  "oman": {
+   "name": "Oman",
+   "page_updated": "21.07.2026",
+   "ingress": "Sikkerhetssituasjonen i Oman er alvorlig etter eskaleringen i konflikten mellom Israel, USA og Iran. Hovedflyplassen er åpen, men flyvninger påvirkes av situasjonen. Det kan føre til innstilte og forsinkede flyvninger. Ta kontakt med ditt flyselskap og reiseselskap for informasjon om utreisemuligheter og vilkår. Endringer kan skje raskt og uten forvarsel. Sjekk vilkårene i din reiseforsikring. Vurder egen sikkerhet, lytt til råd fra pålitelige lokale kilder, og søk tilflukt der dette anbefales.",
+   "warning": null,
+   "url": "https://www.regjeringen.no/no/tema/utenrikssaker/reiseinformasjon/velg-land/reiseinfo_oman/id2424415/"
+  },
+  "osterrike": {
+   "name": "Østerrike",
+   "page_updated": "22.02.2024",
+   "ingress": "Østerrike er under normale omstendigheter et trygt land å ferdes og oppholde seg i.",
+   "warning": null,
+   "url": "https://www.regjeringen.no/no/tema/utenrikssaker/reiseinformasjon/velg-land/reiseinfo_osterrike/id2414941/"
+  },
+  "osttimor": {
+   "name": "Øst-Timor",
+   "page_updated": "08.06.2026",
+   "ingress": "Øst-Timor er et ungt land med en konfliktfylt historie. Dette preger til en viss grad befolkningen. Per i dag oppfattes landet som trygt, men reisende bør være forberedt på utfordringer knyttet til trafikk, helse og sosiale spenninger.",
+   "warning": null,
+   "url": "https://www.regjeringen.no/no/tema/utenrikssaker/reiseinformasjon/velg-land/reiseinfo_osttimor/id2415704/"
+  },
+  "pakistan": {
+   "name": "Pakistan",
+   "page_updated": "06.03.2026",
+   "ingress": "Det er fare for politisk uro og demonstrasjoner flere steder i Pakistan. Grensepasseringen Wagah-border mellom Pakistan og India er stengt på ubestemt tid. Det er opprettet reiseadvarsel for Balutsjistan, Khyber Pakhtunkhwa, Azad og Jammu Kashmir, samt inntil 10 kilometer fra Kashmir-kontroll- og grenselinjer. Det er krav om visum for reisende til Pakistan.",
+   "warning": {
+    "title": "Reiseadvarsel for Pakistan",
+    "status": "SIST OPPDATERT: 02.06.2025 - FORTSATT GYLDIG",
+    "paragraphs": [
+     "Utenriksdepartementet fraråder alle reiser til områder innenfor ti kilometer fra Kashmir-kontroll- og grenselinjer, inkludert i Gilgit Baltistan og Punjab. Videre fraråder Utenriksdepartementet alle reiser til Azad Kashmir, Balutsjistan og Khyber Pakhtunkhwa."
+    ]
+   },
+   "hash": "0caf68473838",
+   "url": "https://www.regjeringen.no/no/tema/utenrikssaker/reiseinformasjon/velg-land/reiseinfo_pakistan/id2428616/"
+  },
+  "palau": {
+   "name": "Palau",
+   "page_updated": "02.06.2026",
+   "ingress": "De fleste reiser til Palau gjennomføres uten spesielle problemer. Den største usikkerheten er knyttet til udetonerte eksplosiver som ligger igjen fra 2. verdenskrig, særlig på Peleliu og Angaur.",
+   "warning": null,
+   "url": "https://www.regjeringen.no/no/tema/utenrikssaker/reiseinformasjon/velg-land/reiseinfo_palau/id2428989/"
+  },
+  "palestina": {
+   "name": "Palestina",
+   "page_updated": "17.09.2026",
+   "ingress": "Sikkerhetssituasjonen i Palestina er skjør og kan forandre seg raskt.",
+   "warning": {
+    "title": "Reiseadvarsel for Palestina",
+    "status": "SIST OPPDATERT: 30.06.2026 - FORTSATT GYLDIG",
+    "paragraphs": [
+     "Utenriksdepartementet fraråder alle reiser til Palestina, med unntak av Øst-Jerusalem og følgende steder: Betlehem by, Jeriko by, grenseovergangen King Hussein Bridge (Allenby), den palestinske dødehavskysten og hovedveiene fra Øst-Jerusalem til nevnte steder."
+    ]
+   },
+   "hash": "b10c05c9adc0",
+   "url": "https://www.regjeringen.no/no/tema/utenrikssaker/reiseinformasjon/velg-land/palestina_reiseinfo/id2429013/"
+  },
+  "panama": {
+   "name": "Panama",
+   "page_updated": "08.06.2026",
+   "ingress": "De fleste reiser i Panama skjer uten problemer, men det bør generelt utvises forsiktighet.",
+   "warning": null,
+   "url": "https://www.regjeringen.no/no/tema/utenrikssaker/reiseinformasjon/velg-land/reiseinfo_panama/id2428568/"
+  },
+  "papuanyguinea": {
+   "name": "Papua Ny-Guinea",
+   "page_updated": "30.07.2026",
+   "ingress": "De fleste reiser til Papua Ny-Guinea gjennomføres uten spesielle problemer, men reisende oppfordres til å sette seg godt inn i sikkerhetssituasjonen i landet. Kriminalitet er utbredt, og voldelige stammeoppgjør og demonstrasjoner kan forekomme. Se mer om sikkerhetssituasjonen under «Sikkerhet». Norske statsborgere må for tiden søke om visum før avreise til Papua Ny-Guinea.",
+   "warning": null,
+   "url": "https://www.regjeringen.no/no/tema/utenrikssaker/reiseinformasjon/velg-land/reiseinformasjon-for-papua-ny-guinea/id2415535/"
+  },
+  "paraguay": {
+   "name": "Paraguay",
+   "page_updated": "01.06.2026",
+   "ingress": "De fleste reiser til Paraguay gjennomføres uten spesielle problemer. Den største risikoen er knyttet til vinningskriminalitet. Du bør være oppmerksom, særlig etter mørkets frembrudd. Det anbefales å orientere seg lokalt om detaljer rundt sikkerhet, siden det er store variasjoner i Paraguay.",
+   "warning": null,
+   "url": "https://www.regjeringen.no/no/tema/utenrikssaker/reiseinformasjon/velg-land/reiseinfo_paraguay/id2415478/"
+  },
+  "peru": {
+   "name": "Peru",
+   "page_updated": "03.03.2026",
+   "ingress": "Norske borgere kan oppholde seg inntil 90 dager visumfritt i Peru. De fleste reiser til Peru skjer uten problemer, men det er viktig å ta forholdsregler på reisen og være oppmerksom.",
+   "warning": null,
+   "url": "https://www.regjeringen.no/no/tema/utenrikssaker/reiseinformasjon/velg-land/reiseinfo_peru/id2414760/"
+  },
+  "polen": {
+   "name": "Polen",
+   "page_updated": "25.09.2025",
+   "ingress": "Norske borgere kan fritt reise inn i Polen. Du finner mer informasjon om innreiseregler og mulige konsekvenser for reisende av krigføringen i Ukraina i kapittelet Innreise, mellomlanding, utreise under.",
+   "warning": null,
+   "url": "https://www.regjeringen.no/no/tema/utenrikssaker/reiseinformasjon/velg-land/reiseinfo_polen/id2429019/"
+  },
+  "portugal": {
+   "name": "Portugal",
+   "page_updated": "03.06.2026",
+   "ingress": "Portugal er et trygt land å ferdes og oppholde seg i. Husk pass eller nasjonalt ID-kort med reiserett da det er ID-plikt i Portugal. På grunn av tørt landskap og høye temperaturer er Portugal utsatt for skogbranner i sommerhalvåret.",
+   "warning": null,
+   "url": "https://www.regjeringen.no/no/tema/utenrikssaker/reiseinformasjon/velg-land/reiseinfo_portugal/id2414892/"
+  },
+  "qatar": {
+   "name": "Qatar",
+   "page_updated": "14.07.2026",
+   "ingress": "Sikkerhetssituasjonen i Gulflandene er tett knyttet til regionale forhold. Situasjonen er spent og uforutsigbar og kan endre seg på kort varsel. Vurder egen sikkerhet, hold deg oppdatert i nyhetsbildet og lytt til råd fra pålitelige lokale kilder. Unngå militære baser og anlegg. Vær klar over at det er forbud mot fotografering og filming blant annet av sikkerhetsanlegg og militær aktivitet. Deling av dette på sosiale medier, eller på annen måte, kan medføre strenge straffer.",
+   "warning": null,
+   "url": "https://www.regjeringen.no/no/tema/utenrikssaker/reiseinformasjon/velg-land/qatar_reiseinformasjon/id2464219/"
+  },
+  "repkongo": {
+   "name": "Republikken Kongo",
+   "page_updated": "12.06.2024",
+   "ingress": "Gyldig pass, visum og bevis for gulfeber-vaksine er påkrevet for innreise til landet.",
+   "warning": {
+    "title": "Reiseadvarsel for Republikken Kongo",
+    "status": "SIST OPPDATERT 29. SEPTEMBER 2021 - FORTSATT GYLDIG",
+    "paragraphs": [
+     "Utenriksdepartementet fraråder alle reiser eller opphold som ikke er strengt nødvendige til Pool-regionen, de østlige deler av Bouenza-regionen, samt områder som ligger mindre enn 50 km fra grensen til Den sentralafrikanske republikk."
+    ]
+   },
+   "hash": "9603fdd1da0e",
+   "url": "https://www.regjeringen.no/no/tema/utenrikssaker/reiseinformasjon/velg-land/reiseinfo_repkongo/id2416225/"
+  },
+  "romania": {
+   "name": "Romania",
+   "page_updated": "17.06.2026",
+   "ingress": "Romania er generelt sett et trygt land å reise og feriere i. Reisende bør likevel være på vakt og ta sine forholdsregler. For mer informasjon, se under kategorien «Sikkerhet».",
+   "warning": null,
+   "url": "https://www.regjeringen.no/no/tema/utenrikssaker/reiseinformasjon/velg-land/reiseinfo_romania/id2414864/"
+  },
+  "russland": {
+   "name": "Russland",
+   "page_updated": "05.03.2025",
+   "ingress": "Utenriksdepartementet fraråder alle reiser til Russland. Ambassaden har meget begrensede muligheter til å yte konsulær bistand til norske borgere som befinner seg i landet. Se nedenfor om norske borgere som reiser inn på russisk pass.",
+   "warning": {
+    "title": "Reiseadvarsel for Russland",
+    "status": "SIST OPPDATERT: 27. FEBRUAR 2022 - FORTSATT GYLDIG",
+    "paragraphs": [
+     "Utenriksdepartementet fraråder alle reiser til Russland."
+    ]
+   },
+   "hash": "e3c2699c730f",
+   "url": "https://www.regjeringen.no/no/tema/utenrikssaker/reiseinformasjon/velg-land/reiseinfo_russland/id2416298/"
+  },
+  "rwanda": {
+   "name": "Rwanda",
+   "page_updated": "29.05.2026",
+   "ingress": "Rwanda anses vanligvis som trygt å reise i, men konflikten i det østlige Kongo har siden januar 2025 medført en ustabil og uoversiktlig situasjon i grenseområdene mot Kongo, herunder Rubavu-provinsen. Reisende oppfordres til å utvise stor forsiktighet, sette seg godt inn i forholdene og følge råd fra lokale myndigheter.",
+   "warning": {
+    "title": "Reiseadvarsel for Rwanda",
+    "status": "SIST OPPDATERT 31, JANUAR 2025 - FORTSATT GYLDIG",
+    "paragraphs": [
+     "Utenriksdepartementet fraråder reiser til Rubavu-distriktet i Rwanda som ikke er strengt nødvendige."
+    ]
+   },
+   "hash": "3af70177a2af",
+   "url": "https://www.regjeringen.no/no/tema/utenrikssaker/reiseinformasjon/velg-land/reiseinfo_rwanda/id2415941/"
+  },
+  "saintkitts": {
+   "name": "Saint Kitts og Nevis",
+   "page_updated": "03.06.2026",
+   "ingress": "St. Kitts og Nevis regnes som et relativt trygt land å reise til. Reisende trenger elektronisk reisetillatelse og må fylle ut et digitalt innreiseskjema før innreise.",
+   "warning": null,
+   "url": "https://www.regjeringen.no/no/tema/utenrikssaker/reiseinformasjon/velg-land/reiseinfo_saintkitts/id2428982/"
+  },
+  "saintlucia": {
+   "name": "Saint Lucia",
+   "page_updated": "03.06.2026",
+   "ingress": "St. Lucia regnes som et relativt trygt land å oppholde seg i. Alle tilreisende må fylle ut et elektronisk innreiseskjema før ankomst.",
+   "warning": null,
+   "url": "https://www.regjeringen.no/no/tema/utenrikssaker/reiseinformasjon/velg-land/reiseinfo_saintlucia/id2428983/"
+  },
+  "saintvincent": {
+   "name": "Saint Vincent og Grenadinene",
+   "page_updated": "03.06.2026",
+   "ingress": "St. Vincent og Grenadinene regnes som et trygt land å reise til. Reisende bør utvise normal forsiktighet.",
+   "warning": null,
+   "url": "https://www.regjeringen.no/no/tema/utenrikssaker/reiseinformasjon/velg-land/reiseinfo_saintvincent/id2428984/"
+  },
+  "salomonoyene": {
+   "name": "Salomonøyene",
+   "page_updated": "30.07.2026",
+   "ingress": "De fleste reiser til Salomonøyene gjennomføres uten spesielle problemer, men reisende oppfordres til å sette seg godt inn i sikkerhetssituasjonen i landet. Kriminalitet er utbredt, og voldelige demonstrasjoner kan forekomme. Se mer om sikkerhetssituasjonen under «sikkerhet». Norske statsborgere trenger ikke visum, og kan oppholde seg på Salomonøyene i tre måneder visumfritt.",
+   "warning": null,
+   "url": "https://www.regjeringen.no/no/tema/utenrikssaker/reiseinformasjon/velg-land/reiseinfo_salomonoyene/id2428990/"
+  },
+  "samoa": {
+   "name": "Samoa",
+   "page_updated": "30.07.2026",
+   "ingress": "Samoa anses som et trygt reisemål. Sykloner og andre naturhendelser forekommer. Se mer om naturforhold under «naturforhold og naturkatastrofer». Norske statsborgere kan oppholde seg på Samoa 90 dager visumfritt.",
+   "warning": null,
+   "url": "https://www.regjeringen.no/no/tema/utenrikssaker/reiseinformasjon/velg-land/reiseinfo_samoa/id2428993/"
+  },
+  "sanmarino": {
+   "name": "San Marino",
+   "page_updated": "03.06.2026",
+   "ingress": "San Marino er et trygt land å ferdes og oppholde seg i. Reisende i San Marino er pliktig til å kunne presentere gyldig pass eller nasjonalt ID-kort med reiserett hvis de blir bedt om det. Besøkende til San Marino bør alltid ha gyldig reiseforsikring for hele reisen.",
+   "warning": null,
+   "url": "https://www.regjeringen.no/no/tema/utenrikssaker/reiseinformasjon/velg-land/reiseinfo_sanmarino/id2429005/"
+  },
+  "saotome": {
+   "name": "São Tomé og Príncipe",
+   "page_updated": "27.05.2026",
+   "ingress": "São Tomé og Príncipe er vanligvis trygt å reise til. Helsetilbudet er svært begrenset og en god reiseforsikring anbefales.",
+   "warning": null,
+   "url": "https://www.regjeringen.no/no/tema/utenrikssaker/reiseinformasjon/velg-land/reiseinfo_saotome/id2416237/"
+  },
+  "sar": {
+   "name": "Den sentralafrikanske republikk",
+   "page_updated": "18.03.2024",
+   "ingress": "Sikkerheten i Den sentralafrikanske republikk (SAR) er dårlig i store deler av landet, inkludert i hovedstaden Bangüi. Gyldig pass, visum, vaksine mot (covid-19) og bevis for gulfebervaksine er påkrevet for innreise til landet.",
+   "warning": {
+    "title": "Reiseadvarsel for Den sentralafrikanske republikk",
+    "status": "SIST OPPDATERT: 18.02.2013 - FORTSATT GYLDIG",
+    "paragraphs": [
+     "Utenriksdepartementet fraråder alle reiser til Den sentralafrikanske republikk."
+    ]
+   },
+   "hash": "57dad10efb20",
+   "url": "https://www.regjeringen.no/no/tema/utenrikssaker/reiseinformasjon/velg-land/sar_reiseinfo/id2429021/"
+  },
+  "saudiarabia": {
+   "name": "Saudi-Arabia",
+   "page_updated": "21.07.2026",
+   "ingress": "Sikkerhetssituasjonen i Saudi Arabia er uoversiktlig og alvorlig, som følge av krigshandlingene som påvirker hele regionen. Det går kommersielle flyvninger fra flere flyplasser i landet, men endringer kan skje raskt og uten forvarsel. Ta kontakt med ditt flyselskap og reiseselskap for informasjon om utreisemuligheter. Sjekk vilkårene i din reiseforsikring. Vurder egen sikkerhet, lytt til råd fra pålitelige lokale kilder, og søk tilflukt der dette anbefales. Vis aktsomhet ved opphold i eller nær flyplasser.",
+   "warning": {
+    "title": "Reiseadvarsel for Saudi-Arabia",
+    "status": "SIST OPPDATERT: 01.07.2026 - FORTSATT GYLDIG",
+    "paragraphs": [
+     "Utenriksdepartementet fraråder alle reiser til områder som er nærmere enn 50 km fra grensen mot Jemen."
+    ]
+   },
+   "hash": "e63ec9276b2f",
+   "url": "https://www.regjeringen.no/no/tema/utenrikssaker/reiseinformasjon/velg-land/reiseinfo_saudiarabia/id2416470/"
+  },
+  "senegal": {
+   "name": "Senegal",
+   "page_updated": "15.05.2026",
+   "ingress": "Senegal anses for det meste som et trygt reisemål.",
+   "warning": null,
+   "url": "https://www.regjeringen.no/no/tema/utenrikssaker/reiseinformasjon/velg-land/reiseinfo_senegal/id2414687/"
+  },
+  "serbia": {
+   "name": "Serbia",
+   "page_updated": "15.05.2026",
+   "ingress": "Serbia er generelt et trygt reisemål med lav kriminalitet, men opplever periodevis politisk uro og demonstrasjoner. Trafikk og helsevesen av varierende kvalitet er som oftest de største utfordringene for turister. På grunn av tørt landskap og høye temperaturer er Serbia utsatt for skogbranner, spesielt i sommerhalvåret. Se mer under «Naturforhold og naturkatastrofer».",
+   "warning": null,
+   "url": "https://www.regjeringen.no/no/tema/utenrikssaker/reiseinformasjon/velg-land/reiseinfo_serbia/id2415119/"
+  },
+  "seychellene": {
+   "name": "Seychellene",
+   "page_updated": "12.05.2026",
+   "ingress": "Det er ingen visumplikt for norske borgere til Seychellene, men alle reisende må registrere sin inn-/utreise på immigrasjonsmyndighetenes hjemmeside.",
+   "warning": null,
+   "url": "https://www.regjeringen.no/no/tema/utenrikssaker/reiseinformasjon/velg-land/reiseinfo_seychellene/id2414928/"
+  },
+  "sierraleone": {
+   "name": "Sierra Leone",
+   "page_updated": "12.02.2026",
+   "ingress": "Sierra Leone anses for det meste som et trygt reisemål. De fleste reiser til Freetown kan gjennomføres uten spesielle problemer, men i andre deler av landet kan det være større risiko.",
+   "warning": null,
+   "url": "https://www.regjeringen.no/no/tema/utenrikssaker/reiseinformasjon/velg-land/reiseinfo_sierraleone/id2414706/"
+  },
+  "singapore": {
+   "name": "Singapore",
+   "page_updated": "23.05.2025",
+   "ingress": "Det er lite kriminalitet i Singapore, men man bør likevel være oppmerksom. Taiwan dekkes også fra ambassaden i Singapore. Se under egene avsnitt om Taiwan under.",
+   "warning": null,
+   "url": "https://www.regjeringen.no/no/tema/utenrikssaker/reiseinformasjon/velg-land/reiseinfo_singapore/id2416992/"
+  },
+  "slovakia": {
+   "name": "Slovakia",
+   "page_updated": "12.06.2023",
+   "ingress": "Slovakia er under normale omstendigheter et trygt land å reise og oppholde seg i.",
+   "warning": null,
+   "url": "https://www.regjeringen.no/no/tema/utenrikssaker/reiseinformasjon/velg-land/reiseinfo_slovakia/id2424323/"
+  },
+  "slovenia": {
+   "name": "Slovenia",
+   "page_updated": "16.06.2026",
+   "ingress": "Slovenia anses som et trygt og velfungerende land å besøke. Norske borgere må ha med gyldig pass eller nasjonalt ID-kort med reiserett",
+   "warning": null,
+   "url": "https://www.regjeringen.no/no/tema/utenrikssaker/reiseinformasjon/velg-land/reiseinfo_slovenia/id2415327/"
+  },
+  "somalia": {
+   "name": "Somalia",
+   "page_updated": "12.05.2026",
+   "ingress": "Sikkerhetssituasjonen i Somalia er veldig vanskelig og høyst uforutsigbar. I Mogadishu, og andre større byer i Somalia, er offentlige bygninger og hoteller særlig attraktive mål for angrep. Norske myndigheter har svært begrensede muligheter til å yte konsulær bistand i Somalia.",
+   "warning": {
+    "title": "Reiseadvarsel for Somalia",
+    "status": "SIST OPPDATERT: 18.02.2013 - FORTSATT GYLDIG",
+    "paragraphs": [
+     "Utenriksdepartementet fraråder alle reiser til eller opphold i sørlige, sentrale og nordøstlige Somalia, og oppfordrer de som allerede er i disse områdene til å forlate området. Utenriksdepartementet fraråder reise eller opphold som ikke er strengt nødvendig til Somaliland."
+    ]
+   },
+   "hash": "309970586e52",
+   "url": "https://www.regjeringen.no/no/tema/utenrikssaker/reiseinformasjon/velg-land/reiseinfo_somalia/id2429007/"
+  },
+  "sorafrika": {
+   "name": "Sør-Afrika",
+   "page_updated": "03.07.2026",
+   "ingress": "I Sør-Afrika bør du, på grunn av risikoen for voldelig kriminalitet, til enhver tid være oppmerksom på din personlige sikkerhet. De fleste reiser går imidlertid problemfritt.",
+   "warning": null,
+   "url": "https://www.regjeringen.no/no/tema/utenrikssaker/reiseinformasjon/velg-land/reiseinfo_sorafrika/id2424513/"
+  },
+  "sorkorea": {
+   "name": "Sør-Korea",
+   "page_updated": "29.05.2026",
+   "ingress": "Sør-Korea anses som et trygt land å reise til, med lite kriminalitet. Kraftig regn og flom kan forekomme i monsunsesongen. Det er tidvis høy luftforurensning. Personer med norsk pass trenger ikke å søke om visum for opphold opptil 90 dager. Det anbefales å registrere opphold og ta vanlige forholdsregler.",
+   "warning": null,
+   "url": "https://www.regjeringen.no/no/tema/utenrikssaker/reiseinformasjon/velg-land/reiseinfo_sorkorea/id2416503/"
+  },
+  "sorsudan": {
+   "name": "Sør-Sudan",
+   "page_updated": "29.05.2026",
+   "ingress": "Sikkerhetssituasjonen i Sør-Sudan er svært utfordrende. Norske myndigheters muligheter til å gi konsulær bistand til norske borgere i Sør-Sudan er ytterst begrenset. Det pågår et utbrudd med bundibugyo ebolavirus i Ituri-distriktet i DRC, som grenser til Uganda og Sør-Sudan. Se mer under helse.",
+   "warning": {
+    "title": "Reiseadvarsel for Sør-Sudan",
+    "status": "SIST OPPDATERT: 26. MARS 2025 - FORTSATT GYLDIG",
+    "paragraphs": [
+     "Utenriksdepartementet fraråder alle reiser til Sør-Sudan og oppfordrer norske borgere til å forlate landet."
+    ]
+   },
+   "hash": "88a5a0382055",
+   "url": "https://www.regjeringen.no/no/tema/utenrikssaker/reiseinformasjon/velg-land/reiseinfo_sorsudan/id2429140/"
+  },
+  "spania": {
+   "name": "Spania",
+   "page_updated": "10.08.2026",
+   "ingress": "Spania er et sikkert og velfungerende land å besøke. Man bør likevel ha gyldig reiseforsikring for hele oppholdet. Pass eller nasjonalt ID-kort med reiserett må medbringes som legitimasjon ved reiser til og i Spania. Det er pågående branner i flere områder av Spania. For mer informasjon se under \"Naturforhold og naturkatastrofer\".",
+   "warning": null,
+   "url": "https://www.regjeringen.no/no/tema/utenrikssaker/reiseinformasjon/velg-land/reiseinfo_spania/id2416245/"
+  },
+  "srilanka": {
+   "name": "Sri Lanka",
+   "page_updated": "28.05.2026",
+   "ingress": "Situasjonen på Sri lanka er stabil, men demonstrasjoner kan oppstå med portforbud som følge på kort varsel. Landet er utsatt for naturkatastrofer, sist med syklon i november 2025. Følg med på råd fra lokale myndigheter. Ta med nødvendige medisiner for hele oppholdet og sørg for gyldig reiseforsikring.",
+   "warning": null,
+   "url": "https://www.regjeringen.no/no/tema/utenrikssaker/reiseinformasjon/velg-land/reiseinfo_srilanka/id2424492/"
+  },
+  "sudan": {
+   "name": "Sudan",
+   "page_updated": "17.06.2026",
+   "ingress": "Det pågår omfattende kamper mellom Sudans væpnede styrker (SAF) og den paramilitære styrken Rapid Support Forces (RSF) i flere deler av landet. Krigen bærer stadig mer preg av droneangrep også hovedstaden Khartoum. Situasjonen er svært farlig og uoversiktlig.",
+   "warning": {
+    "title": "Reiseadvarsel for Sudan",
+    "status": "SIST OPPDATERT: 23. APRIL 2023 – FORTSATT GYLDIG",
+    "paragraphs": [
+     "Utenriksdepartementet fraråder alle reiser til Sudan og oppfordrer norske borgere til å forlate landet."
+    ]
+   },
+   "hash": "2fb6510cb77f",
+   "url": "https://www.regjeringen.no/no/tema/utenrikssaker/reiseinformasjon/velg-land/reiseinfo_sudan/id2429022/"
+  },
+  "surinam": {
+   "name": "Surinam",
+   "page_updated": "28.08.2026",
+   "ingress": "Gyldig pass er nødvendig for innreise til Surinam, men det er ikke krav om visum for turisme eller familiebesøk. Reisende med turisme eller familiebesøk som reiseformål må betale en avgift. Det er ingen norsk utenriksstasjon i Surinam.",
+   "warning": null,
+   "url": "https://www.regjeringen.no/no/tema/utenrikssaker/reiseinformasjon/velg-land/reiseinfo_surinam/id2415324/"
+  },
+  "sveits": {
+   "name": "Sveits",
+   "page_updated": "29.04.2026",
+   "ingress": "Sveits er et generelt trygt reisemål med lite kriminalitet. Norske borgere trenger ikke visum for innreise. Skal du ferdes eller holde på med ekstremsportsaktiviteter i fjellområdene, må du være ekstra oppmerksom på skred og andre naturforhold.",
+   "warning": null,
+   "url": "https://www.regjeringen.no/no/tema/utenrikssaker/reiseinformasjon/velg-land/reiseinfo_sveits/id2416999/"
+  },
+  "sverige": {
+   "name": "Sverige",
+   "page_updated": "01.06.2026",
+   "ingress": "Sverige er generelt et trygt land for nordmenn å besøke. Norske reisende er vanligvis Sveriges største utenlandske turistgruppe.",
+   "warning": null,
+   "url": "https://www.regjeringen.no/no/tema/utenrikssaker/reiseinformasjon/velg-land/reiseinfo_sverige/id2416998/"
+  },
+  "syria": {
+   "name": "Syria",
+   "page_updated": "28.02.2026",
+   "ingress": "Sikkerhetssituasjonen i Midtøsten er uoversiktlig og alvorlig etter eskaleringen i konflikten mellom Israel, USA og Iran. Vurder egen sikkerhet, lytt til råd fra pålitelige lokale kilder, og søk tilflukt der dette anbefales. Luftrommet er stengt over store deler av regionen, og endringer kan skje raskt.",
+   "warning": {
+    "title": "Reiseadvarsel for Syria",
+    "status": "SIST OPPDATERT: 18.02.2013 - FORTSATT GYLDIG",
+    "paragraphs": [
+     "Utenriksdepartementet fraråder alle reiser til eller opphold i Syria. Nordmenn som befinner seg i Syria oppfordres til å forlate landet."
+    ]
+   },
+   "hash": "d3b73b84ac6b",
+   "url": "https://www.regjeringen.no/no/tema/utenrikssaker/reiseinformasjon/velg-land/syria_reiseinfo/id2429139/"
+  },
+  "tadsjikistan": {
+   "name": "Tadsjikistan",
+   "page_updated": "21.05.2024",
+   "ingress": "Norske borgere kan reise visumfritt til Tadsjikistan i opptil 30 dager. Reisende bør vise aktsomhet, særlig i trafikken og i grenseområdene mot Afghanistan og Kirgisistan.",
+   "warning": null,
+   "url": "https://www.regjeringen.no/no/tema/utenrikssaker/reiseinformasjon/velg-land/reiseinfo_tadsjikistan/id2428585/"
+  },
+  "tanzania": {
+   "name": "Tanzania",
+   "page_updated": "15.05.2026",
+   "ingress": "Tanzania opplevde høsten 2025 de verste politiske urolighetene i sin nyere historie. Risikoen for landsomfattende uro anses for å være redusert, men lokal uro kan fortsatt oppstå med liten eller ingen forhåndsvarsling.",
+   "warning": {
+    "title": "Reiseadvarsel for Tanzania",
+    "status": "SIST OPPDATERT 11. NOVEMBER 2025 - FORTSATT GYLDIG",
+    "paragraphs": [
+     "Utenriksdepartementet fraråder reiser som ikke er strengt nødvendige til de delene av Mtwara-regionen som grenser til Mosambik."
+    ]
+   },
+   "hash": "bee38125f8c5",
+   "url": "https://www.regjeringen.no/no/tema/utenrikssaker/reiseinformasjon/velg-land/reiseinfo_tanzania/id2415554/"
+  },
+  "thailand": {
+   "name": "Thailand",
+   "page_updated": "03.09.2026",
+   "ingress": "Thailand er generelt et trygt reisemål. Det er en pågående grensekonflikt mellom Thailand og Kambodsja, og det er risiko for militære sammenstøt. Se mer om sikkerhetssituasjonen under «Sikkerhet».",
+   "warning": {
+    "title": "Reiseadvarsel for Thailand",
+    "status": "SIST OPPDATERT: 03.06.2026 - FORTSATT GYLDIG",
+    "paragraphs": [
+     "Utenriksdepartementet fraråder alle reiser nærmere enn 20 km fra grensen til Kambodsja.",
+     "Utenriksdepartementet fraråder reiser som ikke er strengt nødvendige til provinsene Pattani, Yala, Narathiwat og Songkhla."
+    ]
+   },
+   "hash": "69be6da44c94",
+   "url": "https://www.regjeringen.no/no/tema/utenrikssaker/reiseinformasjon/velg-land/reiseinfo_thailand/id2415097/"
+  },
+  "togo": {
+   "name": "Togo",
+   "page_updated": "30.12.2025",
+   "ingress": "Togo er i all hovedsak et stabilt land, men med økende grad av uroligheter og voldshendelser nord i landet. Kriminalitet er utbredt, og det er ikke usannsynlig at terrorister kan gjennomføre angrep i landet, også der turister ferdes. Det har vært protester mot myndighetene rundt om i landet.",
+   "warning": {
+    "title": "Reiseadvarsel for Togo",
+    "status": "SIST OPPDATERT 18. OKTOBER 2022 - FORTSATT GYLDIG",
+    "paragraphs": [
+     "Utenriksdepartementet fraråder alle reiser til og opphold i grenseområdene mot Burkina Faso."
+    ]
+   },
+   "hash": "cd4074eba4c9",
+   "url": "https://www.regjeringen.no/no/tema/utenrikssaker/reiseinformasjon/velg-land/reiseinfo_togo/id2424313/"
+  },
+  "tonga": {
+   "name": "Tonga",
+   "page_updated": "03.08.2026",
+   "ingress": "Tonga anses som et trygt reisemål. Sykloner og andre naturhendelser forekommer. Se mer om naturforhold under «Naturforhold og naturkatastrofer». Norske statsborgere mottar visum for inntil 90 dager ved ankomst.",
+   "warning": null,
+   "url": "https://www.regjeringen.no/no/tema/utenrikssaker/reiseinformasjon/velg-land/reiseinfo_tonga/id2415548/"
+  },
+  "triogto": {
+   "name": "Trinidad og Tobago",
+   "page_updated": "28.05.2026",
+   "ingress": "Trinidad og Tobago har flere sikkerhetsutfordringer, inkludert voldskriminalitet i hovedstaden. Det anbefales å utvise forsiktighet, ta nødvendige forholdsregler og følge råd fra lokale myndigheter.",
+   "warning": null,
+   "url": "https://www.regjeringen.no/no/tema/utenrikssaker/reiseinformasjon/velg-land/reiseinfo_triogto/id2428985/"
+  },
+  "tsjad": {
+   "name": "Tsjad",
+   "page_updated": "10.08.2026",
+   "ingress": "I områdene nordvest for N’Djamena, langs grensen til Nigeria og Tsjadsjøen, har det de siste årene vært en rekke angrep fra Boko Haram. Sikkerhetssituasjonen kan endre seg raskt. Reisende bør holde seg løpende informert om utviklingen i landet, unngå større folkemengder og demonstrasjoner og utvise generell varsomhet.",
+   "warning": {
+    "title": "Reiseadvarsel for Tsjad",
+    "status": "SIST OPPDATERT: 15.05.2021 - FORTSATT GYLDIG",
+    "paragraphs": [
+     "Utenriksdepartementet fraråder alle reiser som ikke er strengt nødvendige til N’Djamena. Utenriksdepartementet fraråder alle reiser til Tsjad utenfor N’Djamena."
+    ]
+   },
+   "hash": "45f3178bfee1",
+   "url": "https://www.regjeringen.no/no/tema/utenrikssaker/reiseinformasjon/velg-land/reiseinfo_tsjad/id2429023/"
+  },
+  "tsjekkia": {
+   "name": "Tsjekkia",
+   "page_updated": "27.05.2026",
+   "ingress": "Tsjekkia er generelt et trygt land å reise og oppholde seg i. Som en generell regel bør man alltid gjøre seg kjent med lokale forhold.",
+   "warning": null,
+   "url": "https://www.regjeringen.no/no/tema/utenrikssaker/reiseinformasjon/velg-land/reiseinfo_tsjekkia/id2416409/"
+  },
+  "tunisia": {
+   "name": "Tunisia",
+   "page_updated": "16.03.2026",
+   "ingress": "Det er ikke krav til visum ved innreise til Tunisia, men passet må være gyldig i mer enn 3 måneder etter innreisedatoen. Nødpass er ikke tillatt. Tørt landskap og høye temperaturer gjør at Tunisia ofte er utsatt for farlige skogbranner, spesielt i sommerhalvåret. Husk gyldig reiseforsikring.",
+   "warning": {
+    "title": "Reiseadvarsel for Tunisia",
+    "status": "SIST OPPDATERT: 18. OKTOBER 2022- FORTSATT GYLDIG",
+    "paragraphs": [
+     "Utenriksdepartementet fraråder alle reiser til områdene i sør, som ligger langs en linje sør for Tozeur, Douz, Ksar Ghilane, Tatouine og Zarzis.",
+     "Utenriksdepartementet fraråder også alle reiser til grenseområdene mot Algerie sør for byen Jendouba, og spesielt fjellområdene ved byen Al Ayoun og provinsen Kasserine."
+    ]
+   },
+   "hash": "7652d29bad72",
+   "url": "https://www.regjeringen.no/no/tema/utenrikssaker/reiseinformasjon/velg-land/reiseinfo_tunisia/id2414832/"
+  },
+  "turkmenistan": {
+   "name": "Turkmenistan",
+   "page_updated": "25.06.2025",
+   "ingress": "Turkmenistan praktiserer en svært restriktiv visumpraksis. Reisende må belage seg på jevnlige kontroller fra politi og sikkerhetsmyndigheter.",
+   "warning": null,
+   "url": "https://www.regjeringen.no/no/tema/utenrikssaker/reiseinformasjon/velg-land/reiseinfo_turkmenistan/id2428588/"
+  },
+  "tuvalu": {
+   "name": "Tuvalu",
+   "page_updated": "30.07.2026",
+   "ingress": "Tuvalu anses som et trygt reisemål. Sykloner og andre naturhendelser forekommer. Se mer om naturforhold under «Naturforhold og naturkatastrofer». Norske statsborgere kan oppholde seg i Tuvalu visumfritt 30 dager.",
+   "warning": null,
+   "url": "https://www.regjeringen.no/no/tema/utenrikssaker/reiseinformasjon/velg-land/reiseinfo_tuvalu/id2415551/"
+  },
+  "tyrkia": {
+   "name": "Tyrkia",
+   "page_updated": "03.08.2026",
+   "ingress": "Høye temperaturer og tørre forhold i sommerhalvåret øker risikoen for skogbranner i flere deler av Tyrkia. Les mer under «Naturforhold og naturkatastrofer». Det forekommer store demonstrasjoner i større byer i Tyrkia. Disse møtes av stort politioppbud. Norske borgere oppfordres til å unngå demonstrasjoner og store folkeansamlinger. Det er identifikasjonsplikt i hele Tyrkia. Det anbefales at man alltid har med seg pass når man beveger seg ute. Se mer under overskriften «Sikkerhet».",
+   "warning": {
+    "title": "Reiseadvarsel for Tyrkia",
+    "status": "SIST OPPDATERT: 14.06.2019 - FORTSATT GYLDIG",
+    "paragraphs": [
+     "Utenriksdepartementet fraråder alle reiser til eller opphold i grenseområdene nærmere enn ti km fra grensen til Syria."
+    ]
+   },
+   "hash": "e6335ca995c6",
+   "url": "https://www.regjeringen.no/no/tema/utenrikssaker/reiseinformasjon/velg-land/reiseinfo_tyrkia/id2414945/"
+  },
+  "tyskland": {
+   "name": "Tyskland",
+   "page_updated": "27.05.2026",
+   "ingress": "Tyskland er under normale omstendigheter et trygt land å ferdes og å oppholde seg i. Alle tilreisende nordmenn bør ha gyldig reiseforsikring. Fra september 2024 ble det innført grensekontroll ved alle tyske landegrenser. Husk pass eller nasjonalt ID-kort med reiserett.",
+   "warning": null,
+   "url": "https://www.regjeringen.no/no/tema/utenrikssaker/reiseinformasjon/velg-land/reiseinfo_tyskland/id2415120/"
+  },
+  "uganda": {
+   "name": "Uganda",
+   "page_updated": "14.09.2026",
+   "ingress": "Det pågår et utbrudd av ebola-virus i østlige deler av Den demokratiske republikken Kongo (DRK) som også har medført smitte og dødsfall i Uganda. Der er ikke rapportert om nye tilfeller av ebola i Uganda siden juni 2026 og Verdens helseorganisasjon (WHO) erklærte 27. august at utbruddet i landet var over. Det er fremdeles risiko for spredning fra DRK til nabolandene, inkludert Uganda, og forebygging og årvåkenhet er viktig. Oppretthold god hygiene, unngå direkte kontakt med syke personer og rapporter symptomer tidlig. Les mer under «helse».",
+   "warning": null,
+   "url": "https://www.regjeringen.no/no/tema/utenrikssaker/reiseinformasjon/velg-land/reiseinfo_uganda/id2415945/"
+  },
+  "uk": {
+   "name": "Storbritannia",
+   "page_updated": "01.06.2026",
+   "ingress": "Storbritannia anses som et trygt land for nordmenn å besøke.",
+   "warning": null,
+   "url": "https://www.regjeringen.no/no/tema/utenrikssaker/reiseinformasjon/velg-land/reiseinfo_uk/id2417495/"
+  },
+  "ukraina": {
+   "name": "Ukraina",
+   "page_updated": "16.03.2026",
+   "ingress": "Sikkerhetssituasjonen i Ukraina er svært utfordrende og uforutsigbar. Derfor frarådes alle reiser til landet. Vi oppfordrer norske borgere som er i Ukraina om å følge utviklingen tett og gjøre grundige vurderinger av egen sikkerhet.",
+   "warning": {
+    "title": "Reiseadvarsel for Ukraina",
+    "status": "OPPDATERT: 21. JANUAR 2026 - FORTSATT GYLDIG",
+    "paragraphs": [
+     "Utenriksdepartementet fraråder reiser som ikke er strengt nødvendige til regionene Volyn, Rivne, Lviv, Ternopil, Zakarpattja, Ivano-Frankivsk og Tsjernivtsi.",
+     "Utenriksdepartementet fraråder alle reiser til regionene Khmelnytskyj, Zjytomyr, Kirovohrad, Tsjerkasy, Vinnytsia og Kyiv, samt Kyiv by.",
+     "Utenriksdepartementet fraråder alle reiser til de resterende regionene i Ukraina og oppfordrer norske borgere til å forlate disse områdene."
+    ]
+   },
+   "hash": "88da36dc0fcc",
+   "url": "https://www.regjeringen.no/no/tema/utenrikssaker/reiseinformasjon/velg-land/reiseinfo_ukraina/id2429141/"
+  },
+  "ungarn": {
+   "name": "Ungarn",
+   "page_updated": "20.05.2026",
+   "ingress": "Ungarn anses som et trygt og velfungerende land å besøke. Norske borgere må medbringe gyldig pass eller nasjonalt ID-kort med reiserett.",
+   "warning": null,
+   "url": "https://www.regjeringen.no/no/tema/utenrikssaker/reiseinformasjon/velg-land/reiseinfo_ungarn/id2424333/"
+  },
+  "uruguay": {
+   "name": "Uruguay",
+   "page_updated": "01.06.2026",
+   "ingress": "Uruguay er et relativt trygt land, og regnes blant de tryggeste reisemålene i Latin-Amerika. De fleste reiser gjennomføres uten særlige problemer.",
+   "warning": null,
+   "url": "https://www.regjeringen.no/no/tema/utenrikssaker/reiseinformasjon/velg-land/reiseinfo_uruguay/id2415333/"
+  },
+  "usa": {
+   "name": "USA",
+   "page_updated": "29.07.2026",
+   "ingress": "De aller fleste reiser til USA går uten spesielle problemer. For innreise kreves gyldig pass, samt enten ESTA-registrering eller visum. Innreise med nødpass er ikke tillatt. For mer informasjon om innreise og grensekontroll, se «Innreise» nedenfor.",
+   "warning": null,
+   "url": "https://www.regjeringen.no/no/tema/utenrikssaker/reiseinformasjon/velg-land/reiseinfo_usa/id2417194/"
+  },
+  "usbekistan": {
+   "name": "Usbekistan",
+   "page_updated": "21.05.2024",
+   "ingress": "Usbekistan er et relativt konservativt muslimsk samfunn. Det legges stor vekt på høflighet og respekt. Det kan være uroligheter i grenseområdene mot Afghanistan, Tadsjikistan og Kirgisistan.",
+   "warning": null,
+   "url": "https://www.regjeringen.no/no/tema/utenrikssaker/reiseinformasjon/velg-land/reiseinfo_usbekistan/id2416307/"
+  },
+  "vanuatu": {
+   "name": "Vanuatu",
+   "page_updated": "30.07.2026",
+   "ingress": "Vanuatu anses som et trygt reisemål. Sykloner og andre naturhendelser forekommer. Se mer om naturforhold under «Naturforhold og naturkatastrofer». Norske statsborgere kan oppholde seg 30 dager i Vanuatu visumfritt.",
+   "warning": null,
+   "url": "https://www.regjeringen.no/no/tema/utenrikssaker/reiseinformasjon/velg-land/reiseinfo_vanuatu/id2428998/"
+  },
+  "venezuela": {
+   "name": "Venezuela",
+   "page_updated": "25.06.2026",
+   "ingress": "Sikkerhetssituasjonen i Venezuela er alvorlig og uforutsigbar. Internasjonal flytrafikk til og fra Venezuela er i drift, men kan påvirkes av utviklingen i regionen og endres på kort varsel. Norske borgere som oppholder seg i landet bør være oppmerksomme og unngå folkemengder, demonstrasjoner og urolige områder. Man bør holde seg løpende oppdatert gjennom lokale og internasjonale medier samt informasjon fra flyselskap.",
+   "warning": {
+    "title": "Reiseadvarsel for Venezuela",
+    "status": "SIST OPPDATERT: 27.05.2026 - FORTSATT GYLDIG",
+    "paragraphs": [
+     "Utenriksdepartementet fraråder alle reiser innenfor 20 km fra grensen til Colombia og Brasil. Utenriksdepartementet fraråder videre reiser som ikke er strengt nødvendige til øvrige deler av Venezuela."
+    ]
+   },
+   "hash": "09aed7b47b09",
+   "url": "https://www.regjeringen.no/no/tema/utenrikssaker/reiseinformasjon/velg-land/reiseinfo_venezuela/id2414861/"
+  },
+  "vietnam": {
+   "name": "Vietnam",
+   "page_updated": "15.06.2026",
+   "ingress": "Det vietnamesiske helsedepartementet har styrket tiltakene for forebygging og kontroll av ebola, inkludert tett oppfølging av personer som ankommer fra land med pågående eller nylige ebolautbrudd i løpet av de siste 21 dagene. Vietnam anses som et trygt reisemål. Du bør imidlertid være oppmerksom på risikoen for trafikkulykker og småtyveri. Reisende bør følge anvisninger fra lokale myndigheter, og følge med på værmeldingen i tyfonsesongen fra juni/juli til desember. Se mer om sikkerhetssituasjonen under «Sikkerhet» og ekstremvær under «Naturforhold og naturkatastrofer».",
+   "warning": null,
+   "url": "https://www.regjeringen.no/no/tema/utenrikssaker/reiseinformasjon/velg-land/reiseinfo_vietnam/id2415578/"
+  },
+  "zambia": {
+   "name": "Zambia",
+   "page_updated": "15.05.2026",
+   "ingress": "Zambia er generelt et trygt reisemål. Den største risikoen er knyttet til transportsikkerhet.",
+   "warning": null,
+   "url": "https://www.regjeringen.no/no/tema/utenrikssaker/reiseinformasjon/velg-land/reiseinfo_zambia/id2429142/"
+  },
+  "zimbabwe": {
+   "name": "Zimbabwe",
+   "page_updated": "11.06.2026",
+   "ingress": "Den økonomiske situasjonen er utfordrende. Det primære, lovlige betalingsmiddelet er «Zimbabwe dollar». For turister er det for tiden likevel mulig å handle med US dollar. Dette kan endres uten varsel. Det er mangel på fysiske kontanter. Sjekk med reisebyrå eller hotell hvilke betalingsmåter som godtas.",
+   "warning": null,
+   "url": "https://www.regjeringen.no/no/tema/utenrikssaker/reiseinformasjon/velg-land/reiseinfo_zimbabwe/id2415585/"
+  }
+ }
+}
