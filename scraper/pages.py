@@ -98,19 +98,25 @@ footer a { color:var(--muted); }
 .az li { break-inside:avoid; margin:3px 0; display:flex; gap:8px; align-items:baseline; }
 .az .dot { width:9px; height:9px; border-radius:50%; flex:none; transform:translateY(-1px); }
 .az .tag { color:var(--muted); font-size:13px; }
-.coffee { margin-top:32px; padding:14px 16px; border-radius:12px; background:var(--card); border:1px solid var(--line); font-size:15px; }
-.coffee a { font-weight:600; white-space:nowrap; }
+.vax { margin-top:24px; padding:14px 16px; border-radius:12px; background:var(--card); border:1px solid var(--line); font-size:15px; }
+.vax a { font-weight:600; white-space:nowrap; }
 """
 
 
-DONATE = None  # settes av write_all fra data/site.json
+SITE_CFG = {}  # settes av write_all fra data/site.json
 
 
-def donate_html():
-    if not DONATE:
+def utm(url, campaign):
+    sep = "&" if "?" in url else "?"
+    return f"{url}{sep}utm_source=reiserad&utm_medium=referral&utm_campaign={campaign}"
+
+
+def vax_box(rec):
+    if not rec.get("vax") or not SITE_CFG.get("vax_url"):
         return ""
-    return (f'<p class="coffee">Er kartet nyttig? Det er gratis og uten reklame. '
-            f'<a href="{e(DONATE)}" rel="noopener">☕ Spander en kaffe</a> for å holde det i gang.</p>')
+    return (f'<aside class="vax"><b>Skal du til {e(rec["name"])}?</b> '
+            f'{e(SITE_CFG["publisher"]["name"])} gir råd om reisevaksiner og reisemedisin før reisen. '
+            f'<a href="{e(utm(SITE_CFG["vax_url"], "landside"))}">Les om reisevaksiner →</a></aside>')
 
 
 def page(title, desc, canonical, body, jsonld=None):
@@ -140,12 +146,12 @@ def page(title, desc, canonical, body, jsonld=None):
 <body>
 <main>
 {body}
-{donate_html()}
 <footer>
   Reiserådkart viser Utenriksdepartementets reiseadvarsler på kart. Teksten er hentet automatisk fra
   <a href="https://www.regjeringen.no/no/tema/utenrikssaker/reiseinformasjon/velg-land/id2414273/">regjeringen.no</a>
   og oppdateres hver tredje time. Regionale grenser er tegnet etter UDs beskrivelse og kan være omtrentlige –
   UDs egen side gjelder alltid. Dette er ikke en offisiell tjeneste fra UD.<br>
+  Reiserådkart er et gratis verktøy fra <a href="{utm(SITE_CFG["publisher"]["url"], "bunntekst")}">{e(SITE_CFG["publisher"]["name"])}</a>.<br>
   <a href="/">Verdenskart</a> · <a href="/land/">Alle land A–Å</a> ·
   <a href="{REPO}">Kildekode på GitHub</a> · <a href="{REPO}/issues/new/choose">Meld feil eller foreslå endring</a>
 </footer>
@@ -210,6 +216,7 @@ def country_page(iso, rec, country, zones, fetched):
     b.append(f'<div class="actions"><a class="btn primary" href="{e(rec["url"])}">Les hele reiserådet hos UD</a>'
              f'<a class="btn" href="/#{slug}">Se på verdenskartet</a>'
              f'<a class="btn" href="{e(issue_url(name, rec["url"]))}">Meld feil i kartet</a></div>')
+    b.append(vax_box(rec))
 
     title = f"Reiseråd for {name} – UDs reiseadvarsel på kart"
     ld = {
@@ -220,6 +227,7 @@ def country_page(iso, rec, country, zones, fetched):
         "inLanguage": "nb",
         "dateModified": fetched[:10],
         "isBasedOn": rec["url"],
+        "publisher": {"@type": "Organization", "name": SITE_CFG["publisher"]["name"], "url": SITE_CFG["publisher"]["url"]},
         "breadcrumb": {"@type": "BreadcrumbList", "itemListElement": [
             {"@type": "ListItem", "position": 1, "name": "Reiserådkart", "item": SITE + "/"},
             {"@type": "ListItem", "position": 2, "name": "Alle land", "item": SITE + "/land/"},
@@ -253,9 +261,9 @@ def index_page(info):
     return page("Reiseråd for alle land A–Å – UDs reiseadvarsler", desc, SITE + "/land/", body)
 
 
-def write_all(out_dir, info, geoms, zones_by_iso, fetched, donate=None):
-    global DONATE
-    DONATE = donate or None
+def write_all(out_dir, info, geoms, zones_by_iso, fetched, site):
+    SITE_CFG.clear()
+    SITE_CFG.update(site)
     """out_dir = site/. geoms[iso] = landflate, zones_by_iso[iso] = [(geom, level, partial, label)]."""
     land = out_dir / "land"
     land.mkdir(exist_ok=True)

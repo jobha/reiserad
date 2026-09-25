@@ -61,4 +61,6 @@ over reiserådene.
 Workflowen har bevisst ingen `pull_request`-trigger: repoet er offentlig, og
 runneren kjører på hjemmenettet.
 
+Reiserådkart er et gratis verktøy fra [LegeOnline](https://legeonline.no/). Avsender og reisevaksine-lenke styres i `data/site.json`.
+
 Kartdata: Natural Earth (grenser, steder) og geoBoundaries (CC BY 4.0). Ingen kartfliser: etikettene tegnes av siden selv, så den trenger ingen API-nøkler.

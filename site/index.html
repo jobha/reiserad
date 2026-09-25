@@ -15,7 +15,7 @@
 <meta property="og:image" content="https://reiserad.haugsoen.com/og.png">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"Reiserådkart","url":"https://reiserad.haugsoen.com/","inLanguage":"nb","description":"Utenriksdepartementets reiseadvarsler på et zoombart verdenskart, med regionale unntak."}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"Reiserådkart","url":"https://reiserad.haugsoen.com/","inLanguage":"nb","description":"Utenriksdepartementets reiseadvarsler på et zoombart verdenskart, med regionale unntak.","publisher":{"@type":"Organization","name":"LegeOnline","url":"https://legeonline.no/"}}</script>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.4/dist/leaflet.css">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
@@ -69,10 +69,10 @@ html, body { margin: 0; height: 100%; background: var(--bg); color: var(--text);
 .list .tag { margin-left: auto; color: var(--muted); font-size: 11.5px; }
 .panel footer { padding: 8px 16px 12px; font-size: 11.5px; color: var(--muted); border-top: 1px solid var(--line); }
 .panel footer a { color: var(--muted); }
-.panel footer a.coffee { display: block; width: fit-content; margin-top: 8px; padding: 5px 10px; border-radius: 8px;
-  border: 1px solid var(--line); color: var(--text); font-weight: 600; text-decoration: none; }
-.panel footer a.coffee[hidden] { display: none; }
-.panel footer a.coffee:hover { background: rgba(127,127,127,.12); }
+.panel .by { font-size: 12px; color: var(--muted); margin-top: 3px; }
+.panel .by a { color: var(--muted); font-weight: 600; }
+.pop .vax { margin-top: 10px; padding: 8px 10px; border-radius: 8px; border: 1px solid var(--line); font-size: 12.5px; }
+.pop .vax a { font-weight: 600; color: var(--link); text-decoration: none; }
 .panel.collapsed .legend, .panel.collapsed .tools, .panel.collapsed .list, .panel.collapsed footer { display: none; }
 .head-row { display: flex; align-items: flex-start; justify-content: space-between; gap: 8px; }
 
@@ -119,6 +119,7 @@ html, body { margin: 0; height: 100%; background: var(--bg); color: var(--text);
       <div>
         <h1>Reiserådkart</h1>
         <div class="sub" id="sub">Utenriksdepartementets reiseadvarsler</div>
+        <div class="by">Et gratis verktøy fra <a id="pub" href="https://legeonline.no/" target="_blank" rel="noopener">LegeOnline</a></div>
       </div>
       <button class="toggle" id="collapse" aria-expanded="true" title="Skjul/vis">–</button>
     </div>
@@ -138,7 +139,6 @@ html, body { margin: 0; height: 100%; background: var(--bg); color: var(--text);
     Regionale grenser er tegnet etter UDs tekst og kan være omtrentlige. UDs side gjelder alltid. Ikke en offisiell tjeneste fra UD.<br>
     <a href="/land/">Alle land A–Å</a> · <a href="https://github.com/jobha/reiserad" target="_blank" rel="noopener">GitHub</a> ·
     <a href="https://github.com/jobha/reiserad/issues/new/choose" target="_blank" rel="noopener">Meld feil / foreslå endring</a>
-    <a class="coffee" id="coffee" hidden target="_blank" rel="noopener">☕ Spander en kaffe</a>
   </footer>
   <noscript><p style="padding:0 16px 12px">Kartet krever JavaScript. Se <a href="/land/">reiserådene for alle land A–Å</a>.</p></noscript>
 </aside>
@@ -207,6 +207,8 @@ function addHatch(svg) {
   svg.prepend(defs);
 }
 
+const utm = (u, c) => u + (u.includes("?") ? "&" : "?") + "utm_source=reiserad&utm_medium=referral&utm_campaign=" + c;
+let VAX_URL = null;
 let INFO = {}, zoneLayer, worldLayer, byIso = {};
 
 function popupHtml(iso, zone) {
@@ -233,6 +235,7 @@ function popupHtml(iso, zone) {
   if (c.unmapped) h += `<div class="note">UD beskriver regionale advarsler her som ikke er tegnet inn ennå. Hele landet er skravert – les UDs tekst for hvilke områder det gjelder.</div>`;
   if (c.stale) h += `<div class="note">UD har endret teksten siden sonene ble tegnet. Les UDs tekst.</div>`;
   h += `<a class="ud" href="${esc(c.url)}" target="_blank" rel="noopener">Les reiserådet hos UD →</a>`;
+  if (c.vax && VAX_URL) h += `<div class="vax"><b>Skal du til ${esc(c.name)}?</b> LegeOnline gir råd om reisevaksiner før reisen. <a href="${esc(utm(VAX_URL, "kart"))}" target="_blank" rel="noopener">Les om reisevaksiner →</a></div>`;
   h += `<div class="more"><a href="/land/${esc(c.slug)}/">Egen side for ${esc(c.name)}</a> · <a href="https://github.com/jobha/reiserad/issues/new?template=feil-i-kartet.yml&title=${encodeURIComponent("Feil i kartet: " + c.name)}&land=${encodeURIComponent(c.name)}&ud=${encodeURIComponent(c.url)}" target="_blank" rel="noopener">Meld feil i kartet</a></div></div>`;
   return h;
 }
@@ -270,7 +273,9 @@ Promise.all(["data/info.json", "data/world.json", "data/zones.json", "data/label
 .then(([info, world, zones, labels]) => {
   LABELS = labels;
   INFO = info.countries;
-  if (info.donate) { const a = document.getElementById("coffee"); a.href = info.donate; a.hidden = false; }
+  VAX_URL = info.vax_url;
+  const pub = document.getElementById("pub");
+  pub.href = utm(info.publisher.url, "panel"); pub.textContent = info.publisher.name;
   const d = new Date(info.fetched);
   const n = Object.values(INFO).filter(c => c.level).length;
   document.getElementById("sub").textContent =

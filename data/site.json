@@ -1,4 +1,8 @@
 {
- "_doc": "Innstillinger for nettstedet. donate_url: lenke for «Spander en kaffe» (Ko-fi e.l.). Tom = knappen vises ikke.",
- "donate_url": ""
+ "_doc": "Innstillinger for nettstedet. publisher = hvem som står bak (vises i panel, bunntekst og JSON-LD). vax_url = lenke i reisevaksine-boksen (vises for land utenfor Europa, Nord-Amerika, Australia og New Zealand).",
+ "publisher": {
+  "name": "LegeOnline",
+  "url": "https://legeonline.no/"
+ },
+ "vax_url": "https://legeonline.no/reisevaksiner"
 }

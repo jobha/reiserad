@@ -257,9 +257,17 @@ def build():
     dump("zones.json", {"type": "FeatureCollection", "features": [f for f in zones if f]})
     dump("labels.json", labels(ne_feats, info))
     site = json.loads((DATA / "site.json").read_text())
+    # Reisevaksine-boksen gir mening utenfor Europa, Nord-Amerika, Australia og New Zealand.
+    for f in ne_feats:
+        p = f["properties"]
+        iso = next((k for k, v in MERGE.items() if p["ADM0_A3"] in v), p["ADM0_A3"])
+        if iso in info and p["CONTINENT"] not in ("Europe", "North America", "Antarctica") and iso not in ("AUS", "NZL"):
+            info[iso]["vax"] = True
+        if iso in info and p["SUBREGION"] in ("Central America", "Caribbean"):
+            info[iso]["vax"] = True
     dump("info.json", {"fetched": adv["fetched"], "source": adv["source"],
-                       "donate": site.get("donate_url") or None, "countries": info})
-    n_pages = pages.write_all(OUT.parent, info, ne, zones_by_iso, adv["fetched"], site.get("donate_url"))
+                       "publisher": site["publisher"], "vax_url": site["vax_url"], "countries": info})
+    n_pages = pages.write_all(OUT.parent, info, ne, zones_by_iso, adv["fetched"], site)
 
     n = sum(1 for r in info.values() if r["level"])
     stale = [r["slug"] for r in info.values() if r.get("stale")]
