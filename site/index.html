@@ -192,8 +192,9 @@ function focusCountry(iso) {
   const layers = byIso[iso];
   if (!layers?.length) return;
   const b = L.featureGroup(layers).getBounds();
-  map.fitBounds(b, { padding: [40, 40], maxZoom: 6 });
-  L.popup().setLatLng(b.getCenter()).setContent(popupHtml(iso, null)).openOn(map);
+  const panelOpen = innerWidth > 640 && !document.getElementById("panel").classList.contains("collapsed");
+  map.fitBounds(b, { paddingTopLeft: [panelOpen ? 370 : 40, 60], paddingBottomRight: [40, 40], maxZoom: 6 });
+  L.popup({ autoPanPaddingTopLeft: L.point(panelOpen ? 370 : 20, 20) }).setLatLng(b.getCenter()).setContent(popupHtml(iso, null)).openOn(map);
   if (innerWidth <= 640) document.getElementById("panel").classList.add("collapsed");
 }
 
