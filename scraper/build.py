@@ -112,21 +112,33 @@ class Proj:
         return self.inv(self.fwd(g).buffer(km, resolution=12))
 
 
-def adm_geom(ref, names):
+SNAP_KM = 12
+
+
+def adm_geom(ref, names, country=None, proj=None):
+    """Regioner fra geoBoundaries. Med country: strekk regionene ut til Natural
+    Earths landegrense, siden de to kildene tegner grensen litt ulikt og
+    ellers etterlater hvite striper langs grensen."""
     iso, adm = ref.split("/")
     feats = gb.load(iso, adm)["features"]
     picked = [f for f in feats if f["properties"]["shapeName"] in names]
     missing = set(names) - {f["properties"]["shapeName"] for f in picked}
     if missing:
         raise SystemExit(f"{ref}: fant ikke {sorted(missing)}")
-    return unary_union([shape(f["geometry"]).buffer(0) for f in picked])
+    g = unary_union([shape(f["geometry"]).buffer(0) for f in picked])
+    if country is None:
+        return g
+    everything = unary_union([shape(f["geometry"]).buffer(0) for f in feats])
+    uncovered = country.difference(everything)
+    return g.union(proj.buffer(g, SNAP_KM).intersection(uncovered))
 
 
-def zone_geom(z, country, ne, proj):
+def zone_geom(z, country, ne, proj, iso=None):
     if z.get("country"):
         g = country
     elif "adm" in z:
-        g = adm_geom(z["adm"], z["names"])
+        same = z["adm"].split("/")[0] == iso
+        g = adm_geom(z["adm"], z["names"], country if same else None, proj)
     elif "border" in z:
         nb = unary_union([ne[i] for i in z["border"] if i in ne])
         if "clip" in z:
@@ -134,7 +146,7 @@ def zone_geom(z, country, ne, proj):
             nb = nb.intersection(box(*z["clip"]))
         g = proj.buffer(nb, z["km"])
     elif "near" in z:
-        g = proj.buffer(zone_geom(z["near"], country, ne, proj), z["km"])
+        g = proj.buffer(zone_geom(z["near"], country, ne, proj, iso), z["km"])
     elif "poly" in z:
         g = shape({"type": "Polygon", "coordinates": [z["poly"] + [z["poly"][0]]]})
     elif "point" in z:
@@ -144,7 +156,7 @@ def zone_geom(z, country, ne, proj):
     else:
         raise SystemExit(f"ukjent sone: {z}")
     if "and" in z:
-        g = g.intersection(zone_geom(z["and"], country, ne, proj))
+        g = g.intersection(zone_geom(z["and"], country, ne, proj, iso))
     return g
 
 
@@ -153,7 +165,7 @@ def auto_level(paragraphs):
     return "necessary" if "nødvendig" in txt else "all"
 
 
-def round_coords(obj, nd=3):
+def round_coords(obj, nd=4):
     if isinstance(obj, (list, tuple)):
         if obj and isinstance(obj[0], (int, float)):
             return [round(v, nd) for v in obj]
@@ -207,7 +219,7 @@ def build():
         proj = Proj(country)
         painted = []  # [(geom, zone)]
         for z in spec["zones"]:
-            g = zone_geom(z, country, ne, proj).intersection(country)
+            g = zone_geom(z, country, ne, proj, iso).intersection(country)
             painted = [(pg.difference(g), pz) for pg, pz in painted]
             painted.append((g, z))
         levels = set()
