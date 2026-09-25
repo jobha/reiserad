@@ -27,7 +27,10 @@ ROOT = Path(__file__).resolve().parent.parent
 DATA = ROOT / "data"
 OUT = ROOT / "site" / "data"
 NE_URL = "https://raw.githubusercontent.com/nvkelso/natural-earth-vector/master/geojson/ne_50m_admin_0_countries.geojson"
-NE_PATH = Path(os.environ.get("REISERAD_CACHE", ROOT / ".cache")) / "ne_50m_admin_0_countries.geojson"
+CACHE = Path(os.environ.get("REISERAD_CACHE", ROOT / ".cache"))
+NE_PATH = CACHE / "ne_50m_admin_0_countries.geojson"
+PLACES_URL = "https://raw.githubusercontent.com/nvkelso/natural-earth-vector/master/geojson/ne_10m_populated_places_simple.geojson"
+PLACES_PATH = CACHE / "ne_10m_populated_places_simple.geojson"
 
 # Natural Earth deler noen land i flere flater; UD har én side.
 MERGE = {"SOM": ["SOM", "SOL"], "CYP": ["CYP", "CYN"]}
@@ -39,10 +42,35 @@ REGIONAL_HINTS = re.compile(
 )
 
 
+def fetch(url, path):
+    if not path.exists():
+        path.parent.mkdir(parents=True, exist_ok=True)
+        urllib.request.urlretrieve(url, path)
+    return json.loads(path.read_text())
+
+
+def labels(ne_feats, info):
+    """Egne kartetiketter (landnavn på norsk, byer), så kartet ikke trenger flisleverandør."""
+    countries = []
+    for f in ne_feats:
+        p = f["properties"]
+        if p["ADM0_A3"] in ("SOL", "CYN"):
+            continue
+        rec = info.get(p["ADM0_A3"])
+        name = rec["name"] if rec else (p.get("NAME_SV") or p["NAME"])
+        countries.append([name, round(p["LABEL_X"], 2), round(p["LABEL_Y"], 2), p["MIN_LABEL"]])
+    places = []
+    for f in fetch(PLACES_URL, PLACES_PATH)["features"]:
+        p = f["properties"]
+        if p["min_zoom"] <= 7:
+            places.append([p["name"], round(p["longitude"], 3), round(p["latitude"], 3),
+                           p["min_zoom"], 1 if p["adm0cap"] else 0])
+    places.sort(key=lambda r: (r[3], -r[4]))
+    return {"countries": countries, "places": places}
+
+
 def load_ne():
-    if not NE_PATH.exists():
-        NE_PATH.parent.mkdir(parents=True, exist_ok=True)
-        urllib.request.urlretrieve(NE_URL, NE_PATH)
+    fetch(NE_URL, NE_PATH)
     feats = json.loads(NE_PATH.read_text())["features"]
     geoms = {}
     for f in feats:
@@ -199,6 +227,7 @@ def build():
     dump = lambda p, o: (OUT / p).write_text(json.dumps(o, ensure_ascii=False, separators=(",", ":")))
     dump("world.json", {"type": "FeatureCollection", "features": [f for f in world if f]})
     dump("zones.json", {"type": "FeatureCollection", "features": [f for f in zones if f]})
+    dump("labels.json", labels(ne_feats, info))
     dump("info.json", {"fetched": adv["fetched"], "source": adv["source"], "countries": info})
 
     n = sum(1 for r in info.values() if r["level"])

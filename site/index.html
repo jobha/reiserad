@@ -13,19 +13,19 @@
 :root {
   --bg: #f4f1ec; --panel: rgba(255,255,255,.94); --text: #1d1d1f; --muted: #66646b;
   --line: #e2ddd5; --all: #b3122e; --nec: #ef6a3a; --land: #fbfaf7; --land-line: #cfc8bc;
-  --sea: #dde7ee; --link: #0b5cad; --warn-bg: #fff3d6; --warn: #7a5200; --shadow: 0 6px 24px rgba(0,0,0,.12);
+  --sea: #dde7ee; --label: #3b3a40; --label-c: #57555e; --halo: rgba(255,255,255,.9); --link: #0b5cad; --warn-bg: #fff3d6; --warn: #7a5200; --shadow: 0 6px 24px rgba(0,0,0,.12);
 }
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) {
     --bg: #121316; --panel: rgba(28,29,33,.94); --text: #ecebef; --muted: #a4a2ab;
     --line: #34353b; --all: #e0314f; --nec: #f08a4b; --land: #24262b; --land-line: #3b3d44;
-    --sea: #15181d; --link: #7cb6ff; --warn-bg: #3a2f14; --warn: #f3cf7a; --shadow: 0 6px 24px rgba(0,0,0,.5);
+    --sea: #15181d; --label: #d8d7dd; --label-c: #b9b7c0; --halo: rgba(0,0,0,.85); --link: #7cb6ff; --warn-bg: #3a2f14; --warn: #f3cf7a; --shadow: 0 6px 24px rgba(0,0,0,.5);
   }
 }
 :root[data-theme="dark"] {
   --bg: #121316; --panel: rgba(28,29,33,.94); --text: #ecebef; --muted: #a4a2ab;
   --line: #34353b; --all: #e0314f; --nec: #f08a4b; --land: #24262b; --land-line: #3b3d44;
-  --sea: #15181d; --link: #7cb6ff; --warn-bg: #3a2f14; --warn: #f3cf7a; --shadow: 0 6px 24px rgba(0,0,0,.5);
+  --sea: #15181d; --label: #d8d7dd; --label-c: #b9b7c0; --halo: rgba(0,0,0,.85); --link: #7cb6ff; --warn-bg: #3a2f14; --warn: #f3cf7a; --shadow: 0 6px 24px rgba(0,0,0,.5);
 }
 * { box-sizing: border-box; }
 html, body { margin: 0; height: 100%; background: var(--bg); color: var(--text);
@@ -78,6 +78,13 @@ html, body { margin: 0; height: 100%; background: var(--bg); color: var(--text);
 .leaflet-container a.leaflet-popup-close-button { color: var(--muted); }
 .leaflet-control-attribution { background: var(--panel) !important; color: var(--muted); }
 .leaflet-control-attribution a { color: var(--muted); }
+.lbl { pointer-events: none; white-space: nowrap; text-align: center; color: var(--label);
+  text-shadow: 0 0 2px var(--halo), 0 0 2px var(--halo), 0 0 3px var(--halo); line-height: 14px; }
+.lbl.c { font-size: 11px; font-weight: 600; letter-spacing: .06em; text-transform: uppercase; color: var(--label-c); }
+.lbl.p { font-size: 11px; }
+.lbl.p i { display: inline-block; width: 4px; height: 4px; border-radius: 50%; background: var(--label); margin: 0 4px 1px 0; vertical-align: middle; }
+.lbl.cap { font-weight: 600; }
+.lbl.cap i { width: 5px; height: 5px; box-shadow: 0 0 0 1.5px var(--halo); }
 .leaflet-bar a { background: var(--panel); color: var(--text); border-color: var(--line); }
 
 @media (max-width: 640px) {
@@ -127,12 +134,44 @@ map.createPane("zones").style.zIndex = 410;
 map.createPane("labels").style.zIndex = 420;
 map.getPane("labels").style.pointerEvents = "none";
 
-const dark = matchMedia("(prefers-color-scheme: dark)").matches;
-const carto = dark ? "dark" : "light";
-L.tileLayer(`https://{s}.basemaps.cartocdn.com/${carto}_only_labels/{z}/{x}/{y}{r}.png`, {
-  pane: "labels", subdomains: "abcd", maxZoom: 19,
-  attribution: '© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> © <a href="https://carto.com/">CARTO</a> · Grenser: Natural Earth, geoBoundaries',
-}).addTo(map);
+map.attributionControl.addAttribution('Grenser og steder: <a href="https://www.naturalearthdata.com/">Natural Earth</a>, <a href="https://www.geoboundaries.org/">geoBoundaries</a>');
+
+// Egne etiketter i stedet for flisleverandør: landnavn (norsk) og byer fra
+// Natural Earth. Tegnes på nytt ved hver flytting, grådig uten overlapp.
+const labelLayer = L.layerGroup([], { pane: "labels" }).addTo(map);
+let LABELS = null;
+function drawLabels() {
+  if (!LABELS) return;
+  labelLayer.clearLayers();
+  const z = map.getZoom(), bounds = map.getBounds().pad(0.1), boxes = [];
+  const fits = (pt, w, h) => {
+    const r = [pt.x - w / 2 - 3, pt.y - h / 2 - 2, pt.x + w / 2 + 3, pt.y + h / 2 + 2];
+    if (boxes.some(o => r[0] < o[2] && r[2] > o[0] && r[1] < o[3] && r[3] > o[1])) return false;
+    boxes.push(r); return true;
+  };
+  const place = (ll, html, cls, w, h) => {
+    labelLayer.addLayer(L.marker(ll, { pane: "labels", interactive: false, keyboard: false,
+      icon: L.divIcon({ className: "lbl " + cls, html, iconSize: [w, h], iconAnchor: [w / 2, h / 2] }) }));
+  };
+  const cands = [];
+  for (const [name, x, y, mz] of LABELS.countries) if (z >= mz - 0.5) cands.push({ name, x, y, cls: "c", pri: mz });
+  for (const [name, x, y, mz, cap] of LABELS.places) if (z >= mz) cands.push({ name, x, y, cls: cap ? "p cap" : "p", pri: mz + (cap ? 0 : 0.5) });
+  cands.sort((a, b) => a.pri - b.pri);
+  let n = 0;
+  for (const c of cands) {
+    if (n > 220) break;
+    for (const off of [0, 360, -360]) {
+      const ll = L.latLng(c.y, c.x + off);
+      if (!bounds.contains(ll)) continue;
+      const pt = map.latLngToContainerPoint(ll);
+      const big = c.cls === "c";
+      const w = Math.ceil(c.name.length * (big ? 7.4 : 6.4)) + (big ? 0 : 8), h = big ? 15 : 14;
+      if (!fits(pt, w, h)) continue;
+      place(ll, big ? esc(c.name) : `<i></i>${esc(c.name)}`, c.cls, w, h); n++;
+    }
+  }
+}
+map.on("moveend zoomend", drawLabels);
 
 // Skravur for "gjelder deler av området" lages som SVG-mønster i Leaflets renderer.
 function addHatch(svg) {
@@ -198,8 +237,9 @@ function focusCountry(iso) {
   if (innerWidth <= 640) document.getElementById("panel").classList.add("collapsed");
 }
 
-Promise.all(["data/info.json", "data/world.json", "data/zones.json"].map(u => fetch(u, { cache: "no-cache" }).then(r => r.json())))
-.then(([info, world, zones]) => {
+Promise.all(["data/info.json", "data/world.json", "data/zones.json", "data/labels.json"].map(u => fetch(u, { cache: "no-cache" }).then(r => r.json())))
+.then(([info, world, zones, labels]) => {
+  LABELS = labels;
   INFO = info.countries;
   const d = new Date(info.fetched);
   const n = Object.values(INFO).filter(c => c.level).length;
@@ -234,6 +274,7 @@ Promise.all(["data/info.json", "data/world.json", "data/zones.json"].map(u => fe
   if (svg) addHatch(svg);
 
   buildList();
+  drawLabels();
   const h = decodeURIComponent(location.hash.slice(1)).toLowerCase();
   if (h) { const hit = Object.entries(INFO).find(([, c]) => c.slug === h || c.name.toLowerCase() === h); if (hit) focusCountry(hit[0]); }
 })

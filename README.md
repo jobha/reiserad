@@ -55,4 +55,4 @@ over reiserådene.
 Workflowen har bevisst ingen `pull_request`-trigger: repoet er offentlig, og
 runneren kjører på hjemmenettet.
 
-Kartdata: © OpenStreetMap-bidragsytere, © CARTO, Natural Earth, geoBoundaries (CC BY 4.0).
+Kartdata: Natural Earth (grenser, steder) og geoBoundaries (CC BY 4.0). Ingen kartfliser: etikettene tegnes av siden selv, så den trenger ingen API-nøkler.
