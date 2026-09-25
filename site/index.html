@@ -81,10 +81,10 @@ html, body { margin: 0; height: 100%; background: var(--bg); color: var(--text);
 .lbl { pointer-events: none; white-space: nowrap; text-align: center; color: var(--label);
   text-shadow: 0 0 2px var(--halo), 0 0 2px var(--halo), 0 0 3px var(--halo); line-height: 14px; }
 .lbl.c { font-size: 11px; font-weight: 600; letter-spacing: .06em; text-transform: uppercase; color: var(--label-c); }
-.lbl.p { font-size: 11px; }
-.lbl.p i { display: inline-block; width: 4px; height: 4px; border-radius: 50%; background: var(--label); margin: 0 4px 1px 0; vertical-align: middle; }
+.lbl.p { font-size: 11px; text-align: left; }
+.lbl.p i { display: inline-block; width: 4px; height: 4px; border-radius: 50%; background: var(--label); margin: 0 4px 0 0; vertical-align: 1px; }
 .lbl.cap { font-weight: 600; }
-.lbl.cap i { width: 5px; height: 5px; box-shadow: 0 0 0 1.5px var(--halo); }
+.lbl.cap i { width: 5px; height: 5px; margin-left: 1px; box-shadow: 0 0 0 1.5px var(--halo); }
 .leaflet-bar a { background: var(--panel); color: var(--text); border-color: var(--line); }
 
 @media (max-width: 640px) {
@@ -144,14 +144,15 @@ function drawLabels() {
   if (!LABELS) return;
   labelLayer.clearLayers();
   const z = map.getZoom(), bounds = map.getBounds().pad(0.1), boxes = [];
-  const fits = (pt, w, h) => {
-    const r = [pt.x - w / 2 - 3, pt.y - h / 2 - 2, pt.x + w / 2 + 3, pt.y + h / 2 + 2];
+  // ax = hvor i etiketten koordinaten ligger: midten for land, prikken for byer.
+  const fits = (pt, w, h, ax) => {
+    const r = [pt.x - ax - 3, pt.y - h / 2 - 2, pt.x - ax + w + 3, pt.y + h / 2 + 2];
     if (boxes.some(o => r[0] < o[2] && r[2] > o[0] && r[1] < o[3] && r[3] > o[1])) return false;
     boxes.push(r); return true;
   };
-  const place = (ll, html, cls, w, h) => {
+  const place = (ll, html, cls, w, h, ax) => {
     labelLayer.addLayer(L.marker(ll, { pane: "labels", interactive: false, keyboard: false,
-      icon: L.divIcon({ className: "lbl " + cls, html, iconSize: [w, h], iconAnchor: [w / 2, h / 2] }) }));
+      icon: L.divIcon({ className: "lbl " + cls, html, iconSize: [w, h], iconAnchor: [ax, h / 2] }) }));
   };
   const cands = [];
   for (const [name, x, y, mz] of LABELS.countries) if (z >= mz - 0.5) cands.push({ name, x, y, cls: "c", pri: mz });
@@ -166,8 +167,9 @@ function drawLabels() {
       const pt = map.latLngToContainerPoint(ll);
       const big = c.cls === "c";
       const w = Math.ceil(c.name.length * (big ? 7.4 : 6.4)) + (big ? 0 : 8), h = big ? 15 : 14;
-      if (!fits(pt, w, h)) continue;
-      place(ll, big ? esc(c.name) : `<i></i>${esc(c.name)}`, c.cls, w, h); n++;
+      const ax = big ? w / 2 : (c.cls.includes("cap") ? 3.5 : 2);
+      if (!fits(pt, w, h, ax)) continue;
+      place(ll, big ? esc(c.name) : `<i></i>${esc(c.name)}`, c.cls, w, h, ax); n++;
     }
   }
 }
