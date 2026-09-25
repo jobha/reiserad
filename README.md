@@ -54,9 +54,11 @@ Hostes på **Vercel** i LegeOnline-teamet (prosjekt `reiserad`, domene `reiserad
 `www.reiserad.no` sender videre). DNS for reiserad.no ligger i Cloudflare
 (A `76.76.21.21`, www CNAME `cname.vercel-dns.com`, ikke proxied).
 
-GitHub Actions (`.github/workflows/deploy.yml`, GitHub-hostet runner) kjører ved
-push og hver tredje time: skraper, bygger og deployer `site/` til Vercel med
-secret `VERCEL_TOKEN`. Endringer i UDs tekster committes tilbake til
+GitHub Actions (`.github/workflows/deploy.yml`) kjører ved push og hver tredje
+time på en selvhostet runner på ig68-pi4 (`~/actions-runner-reiserad`, label
+`reiserad`): skraper, bygger og deployer `site/` til Vercel med secret
+`VERCEL_TOKEN`. Runneren må stå hjemme fordi regjeringen.no svarer 403 til
+GitHubs datasentre. Er Pi-en nede, står siden bare med siste data. Endringer i UDs tekster committes tilbake til
 `data/advisories.json`, så git-loggen er en historikk over reiserådene.
 
 `reiserad.haugsoen.com` og `reiseråd.haugsoen.com` går fortsatt gjennom

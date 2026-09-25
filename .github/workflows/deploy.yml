@@ -1,7 +1,10 @@
 name: deploy
 
 # Ved push til main og hver tredje time:
-#  - henter UDs reiseråd og bygger kartdata + landsider (GitHub-hostet runner)
+#  - henter UDs reiseråd og bygger kartdata + landsider på den selvhostede
+#    runneren på ig68-pi4 (regjeringen.no svarer 403 til GitHubs datasentre,
+#    så skrapingen må gå fra en vanlig linje). Siden serveres fra Vercel, så
+#    er Pi-en nede, står siden bare med siste data.
 #  - deployer site/ til Vercel (LegeOnline-teamet, prosjekt reiserad -> reiserad.no)
 #  - committer data/advisories.json når UD har endret noe (historikk i git)
 #  - åpner/oppdaterer en issue når en regional advarsel må tegnes inn på nytt
@@ -25,42 +28,34 @@ permissions:
 
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: [self-hosted, reiserad]
     env:
-      REISERAD_CACHE: ${{ github.workspace }}/.cache
+      REISERAD_CACHE: /home/jonasbull/.cache/reiserad
     outputs:
       review: ${{ steps.build.outputs.review }}
       summary: ${{ steps.build.outputs.summary }}
     steps:
       - uses: actions/checkout@v7
 
-      - uses: actions/setup-python@v7
-        with:
-          python-version: '3.12'
-
-      - run: pip install shapely
-
-      # Natural Earth og geoBoundaries endres sjelden; spar nedlastingen.
-      - uses: actions/cache@v6
-        with:
-          path: .cache
-          key: geo-${{ hashFiles('data/regions.json') }}
-          restore-keys: geo-
-
+      # Pi-en har python3-shapely fra apt; geodata caches i REISERAD_CACHE.
       - name: Hent UDs reiseråd
-        run: python scraper/scrape.py
+        run: python3 scraper/scrape.py
 
       - name: Bygg kartdata og sider
         id: build
         run: |
           set -euo pipefail
-          python scraper/build.py | tee build.log
+          python3 scraper/build.py | tee build.log
           echo "summary=$(tail -1 build.log)" >> "$GITHUB_OUTPUT"
           if grep -q "Endret siden kartlegging: -. Ikke kartlagt: -" build.log; then
             echo "review=0" >> "$GITHUB_OUTPUT"
           else
             echo "review=1" >> "$GITHUB_OUTPUT"
           fi
+
+      - uses: actions/setup-node@v6
+        with:
+          node-version: '22'
 
       - name: Deploy til Vercel
         env:
