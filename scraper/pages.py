@@ -1,11 +1,12 @@
 """Statiske sider for søkemotorer: én side per land, en A–Å-oversikt,
 sitemap.xml og robots.txt. Kalles fra build.py med ferdig beregnede data."""
 import html
+import shutil
 import json
 import math
 import urllib.parse
 
-SITE = "https://reiserad.haugsoen.com"
+SITE = "https://reiserad.no"
 REPO = "https://github.com/jobha/reiserad"
 LEVEL_TXT = {
     "all": "UD fraråder alle reiser",
@@ -112,11 +113,11 @@ def utm(url, campaign):
 
 
 def vax_box(rec):
-    if not rec.get("vax") or not SITE_CFG.get("vax_url"):
+    if not rec.get("vax_url"):
         return ""
     return (f'<aside class="vax"><b>Skal du til {e(rec["name"])}?</b> '
             f'{e(SITE_CFG["publisher"]["name"])} gir råd om reisevaksiner og reisemedisin før reisen. '
-            f'<a href="{e(utm(SITE_CFG["vax_url"], "landside"))}">Les om reisevaksiner →</a></aside>')
+            f'<a href="{e(utm(rec["vax_url"], "landside"))}">Reisevaksiner for {e(rec["name"])} →</a></aside>')
 
 
 def page(title, desc, canonical, body, jsonld=None):
@@ -250,7 +251,9 @@ def index_page(info):
                else "deler av landet" if r.get("regional") or r.get("unmapped") else "hele landet")
         border = "" if r["level"] else "border:1px solid var(--line);"
         li.append(f'<li><span class="dot" style="background:{col};{border}"></span>'
-                  f'<a href="/land/{r["slug"]}/">{e(r["name"])}</a><span class="tag">{tag}</span></li>')
+                  + (f'<a href="/land/{r["slug"]}/">{e(r["name"])}</a>' if r["level"]
+                     else f'<a href="{e(r["url"])}" rel="noopener">{e(r["name"])}</a>')
+                  + f'<span class="tag">{tag}</span></li>')
     body = (f'<nav class="crumbs"><a href="/">Reiserådkart</a> › Alle land</nav>'
             f"<h1>Reiseråd for alle land A–Å</h1>"
             f'<p class="lead">Utenriksdepartementet har reiseadvarsel for {n} av {len(rows)} land. '
@@ -265,14 +268,19 @@ def write_all(out_dir, info, geoms, zones_by_iso, fetched, site):
     SITE_CFG.clear()
     SITE_CFG.update(site)
     """out_dir = site/. geoms[iso] = landflate, zones_by_iso[iso] = [(geom, level, partial, label)]."""
+    # Bare land med reiseadvarsel får egen side. For de andre ville siden bare
+    # gjentatt UDs ingress – tynt innhold som konkurrerer med UD og LegeOnline.
     land = out_dir / "land"
-    land.mkdir(exist_ok=True)
+    shutil.rmtree(land, ignore_errors=True)
+    land.mkdir()
     urls = [(SITE + "/", fetched[:10], "1.0"), (SITE + "/land/", fetched[:10], "0.8")]
     for iso, rec in info.items():
+        if not rec["level"]:
+            continue
         d = land / rec["slug"]
         d.mkdir(exist_ok=True)
         (d / "index.html").write_text(country_page(iso, rec, geoms[iso], zones_by_iso.get(iso, []), fetched))
-        urls.append((f"{SITE}/land/{rec['slug']}/", fetched[:10], "0.7" if rec["level"] else "0.5"))
+        urls.append((f"{SITE}/land/{rec['slug']}/", fetched[:10], "0.7"))
     (land / "index.html").write_text(index_page(info))
     sm = ['<?xml version="1.0" encoding="UTF-8"?>', '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">']
     sm += [f"<url><loc>{u}</loc><lastmod>{m}</lastmod><priority>{p}</priority></url>" for u, m, p in urls]

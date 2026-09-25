@@ -18,7 +18,7 @@ from pathlib import Path
 
 BASE = "https://www.regjeringen.no"
 INDEX = BASE + "/no/tema/utenrikssaker/reiseinformasjon/velg-land/id2414273/"
-UA = "reiserad-kart/1.0 (+https://reiserad.haugsoen.com)"
+UA = "reiserad-kart/1.0 (+https://reiserad.no)"
 OUT = Path(__file__).resolve().parent.parent / "data" / "advisories.json"
 
 

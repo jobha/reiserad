@@ -1,12 +1,13 @@
 name: deploy
 
-# Kjører på den selvhostede runneren på ig68-pi4:
-#  - ved push til main, og hver tredje time
-#  - henter UDs reiseråd, bygger kartdata og publiserer site/ til mappen
-#    nginx serverer for reiseråd.haugsoen.com
-#  - committer data/advisories.json når UD har endret noe, så repoet får
-#    historikk over endringene
-#  - åpner en issue når en regional advarsel er ny eller endret og må tegnes inn
+# Ved push til main og hver tredje time:
+#  - henter UDs reiseråd og bygger kartdata + landsider (GitHub-hostet runner)
+#  - deployer site/ til Vercel (LegeOnline-teamet, prosjekt reiserad -> reiserad.no)
+#  - committer data/advisories.json når UD har endret noe (historikk i git)
+#  - åpner/oppdaterer en issue når en regional advarsel må tegnes inn på nytt
+#
+# Ingen pull_request-trigger med vilje: repoet er offentlig og jobben har
+# tilgang til Vercel-tokenet.
 on:
   push:
     branches: [main]
@@ -23,22 +24,37 @@ permissions:
   issues: write
 
 jobs:
-  deploy:
-    runs-on: [self-hosted, reiserad]
+  build:
+    runs-on: ubuntu-latest
     env:
-      SITE_DIR: /home/jonasbull/selfhost/haugsoen/reiserad
-      REISERAD_CACHE: /home/jonasbull/.cache/reiserad
+      REISERAD_CACHE: ${{ github.workspace }}/.cache
+    outputs:
+      review: ${{ steps.build.outputs.review }}
+      summary: ${{ steps.build.outputs.summary }}
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
+
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.12'
+
+      - run: pip install shapely
+
+      # Natural Earth og geoBoundaries endres sjelden; spar nedlastingen.
+      - uses: actions/cache@v6
+        with:
+          path: .cache
+          key: geo-${{ hashFiles('data/regions.json') }}
+          restore-keys: geo-
 
       - name: Hent UDs reiseråd
-        run: python3 scraper/scrape.py
+        run: python scraper/scrape.py
 
-      - name: Bygg kartdata
+      - name: Bygg kartdata og sider
         id: build
         run: |
           set -euo pipefail
-          python3 scraper/build.py | tee build.log
+          python scraper/build.py | tee build.log
           echo "summary=$(tail -1 build.log)" >> "$GITHUB_OUTPUT"
           if grep -q "Endret siden kartlegging: -. Ikke kartlagt: -" build.log; then
             echo "review=0" >> "$GITHUB_OUTPUT"
@@ -46,12 +62,18 @@ jobs:
             echo "review=1" >> "$GITHUB_OUTPUT"
           fi
 
-      - name: Publiser
+      - name: Deploy til Vercel
+        env:
+          VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
+          VERCEL_ORG_ID: team_zV9o9MNyfKaK7ALbJG0H3BR6
+          VERCEL_PROJECT_ID: prj_A4KPY2emMzbqty4qnce2hDO5hCx5
         run: |
           set -euo pipefail
-          test -d "$SITE_DIR"
-          cp -a site/. "$SITE_DIR"/
-          echo "Publisert $(find "$SITE_DIR" -type f | wc -l) filer til $SITE_DIR"
+          if [ -z "$VERCEL_TOKEN" ]; then
+            echo "::warning::VERCEL_TOKEN mangler – hopper over Vercel-deploy."
+            exit 0
+          fi
+          npx --yes vercel@latest deploy site --prod --yes --token "$VERCEL_TOKEN"
 
       - name: Commit endringer fra UD
         run: |
@@ -72,11 +94,14 @@ jobs:
           git commit -m "UD: reiseråd oppdatert $(date +%F)"
           git push
 
-      - name: Varsle om kartlegging
-        if: steps.build.outputs.review == '1'
-        uses: actions/github-script@v7
+  notify:
+    needs: build
+    if: needs.build.outputs.review == '1'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/github-script@v9
         env:
-          SUMMARY: ${{ steps.build.outputs.summary }}
+          SUMMARY: ${{ needs.build.outputs.summary }}
         with:
           script: |
             const title = "Reiseråd endret – regioner må kartlegges";

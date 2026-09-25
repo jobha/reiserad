@@ -57,6 +57,6 @@ for i, (lvl, txt) in enumerate([("all", "Fraråder alle reiser"), ("necessary", 
     y = 372 + i * 38
     d.rounded_rectangle((72, y + 3, 100, y + 23), 5, fill=COL[lvl])
     d.text((114, y), txt, font=small, fill=(60, 58, 64))
-d.text((72, 530), "reiserad.haugsoen.com", font=ImageFont.truetype(FONT, 26), fill=(29, 29, 31))
+d.text((72, 530), "reiserad.no", font=ImageFont.truetype(FONT, 26), fill=(29, 29, 31))
 img.save(ROOT / "site/og.png", optimize=True)
 print("site/og.png", (ROOT / "site/og.png").stat().st_size, "bytes")

@@ -6,3 +6,4 @@ __pycache__/
 site/land/
 site/sitemap.xml
 site/robots.txt
+site/.vercel/

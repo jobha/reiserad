@@ -265,8 +265,16 @@ def build():
             info[iso]["vax"] = True
         if iso in info and p["SUBREGION"] in ("Central America", "Caribbean"):
             info[iso]["vax"] = True
+    # Egen vaksineside hos LegeOnline for landet, der den finnes (tools/legeonline_slugs.py).
+    lo = json.loads((DATA / "legeonline.json").read_text())
+    for iso, rec in info.items():
+        if iso in lo:
+            rec["vax"] = True
+            rec["vax_url"] = f'{site["vax_url"].rstrip("/")}/{lo[iso]}'
+        elif rec.get("vax"):
+            rec["vax_url"] = site["vax_url"]
     dump("info.json", {"fetched": adv["fetched"], "source": adv["source"],
-                       "publisher": site["publisher"], "vax_url": site["vax_url"], "countries": info})
+                       "publisher": site["publisher"], "countries": info})
     n_pages = pages.write_all(OUT.parent, info, ne, zones_by_iso, adv["fetched"], site)
 
     n = sum(1 for r in info.values() if r["level"])

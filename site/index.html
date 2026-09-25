@@ -5,17 +5,17 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Reiserådkart – UDs reiseråd og reiseadvarsler på kart</title>
 <meta name="description" content="Se hvilke land og regioner Utenriksdepartementet fraråder reiser til, på et zoombart verdenskart. Oppdateres automatisk fra UDs reiseinformasjon hver tredje time.">
-<link rel="canonical" href="https://reiserad.haugsoen.com/">
+<link rel="canonical" href="https://reiserad.no/">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="nb_NO">
 <meta property="og:site_name" content="Reiserådkart">
 <meta property="og:title" content="Reiserådkart – UDs reiseadvarsler på kart">
 <meta property="og:description" content="Hvilke land og regioner fraråder UD reiser til? Se alle reiseadvarslene på et zoombart verdenskart, med regionale unntak.">
-<meta property="og:url" content="https://reiserad.haugsoen.com/">
-<meta property="og:image" content="https://reiserad.haugsoen.com/og.png">
+<meta property="og:url" content="https://reiserad.no/">
+<meta property="og:image" content="https://reiserad.no/og.png">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"Reiserådkart","url":"https://reiserad.haugsoen.com/","inLanguage":"nb","description":"Utenriksdepartementets reiseadvarsler på et zoombart verdenskart, med regionale unntak.","publisher":{"@type":"Organization","name":"LegeOnline","url":"https://legeonline.no/"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"Reiserådkart","url":"https://reiserad.no/","inLanguage":"nb","description":"Utenriksdepartementets reiseadvarsler på et zoombart verdenskart, med regionale unntak.","publisher":{"@type":"Organization","name":"LegeOnline","url":"https://legeonline.no/"}}</script>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.4/dist/leaflet.css">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
@@ -208,7 +208,6 @@ function addHatch(svg) {
 }
 
 const utm = (u, c) => u + (u.includes("?") ? "&" : "?") + "utm_source=reiserad&utm_medium=referral&utm_campaign=" + c;
-let VAX_URL = null;
 let INFO = {}, zoneLayer, worldLayer, byIso = {};
 
 function popupHtml(iso, zone) {
@@ -235,8 +234,8 @@ function popupHtml(iso, zone) {
   if (c.unmapped) h += `<div class="note">UD beskriver regionale advarsler her som ikke er tegnet inn ennå. Hele landet er skravert – les UDs tekst for hvilke områder det gjelder.</div>`;
   if (c.stale) h += `<div class="note">UD har endret teksten siden sonene ble tegnet. Les UDs tekst.</div>`;
   h += `<a class="ud" href="${esc(c.url)}" target="_blank" rel="noopener">Les reiserådet hos UD →</a>`;
-  if (c.vax && VAX_URL) h += `<div class="vax"><b>Skal du til ${esc(c.name)}?</b> LegeOnline gir råd om reisevaksiner før reisen. <a href="${esc(utm(VAX_URL, "kart"))}" target="_blank" rel="noopener">Les om reisevaksiner →</a></div>`;
-  h += `<div class="more"><a href="/land/${esc(c.slug)}/">Egen side for ${esc(c.name)}</a> · <a href="https://github.com/jobha/reiserad/issues/new?template=feil-i-kartet.yml&title=${encodeURIComponent("Feil i kartet: " + c.name)}&land=${encodeURIComponent(c.name)}&ud=${encodeURIComponent(c.url)}" target="_blank" rel="noopener">Meld feil i kartet</a></div></div>`;
+  if (c.vax_url) h += `<div class="vax"><b>Skal du til ${esc(c.name)}?</b> LegeOnline gir råd om reisevaksiner før reisen. <a href="${esc(utm(c.vax_url, "kart"))}" target="_blank" rel="noopener">Reisevaksiner for ${esc(c.name)} →</a></div>`;
+  h += `<div class="more">${c.level ? `<a href="/land/${esc(c.slug)}/">Egen side for ${esc(c.name)}</a> · ` : ""}<a href="https://github.com/jobha/reiserad/issues/new?template=feil-i-kartet.yml&title=${encodeURIComponent("Feil i kartet: " + c.name)}&land=${encodeURIComponent(c.name)}&ud=${encodeURIComponent(c.url)}" target="_blank" rel="noopener">Meld feil i kartet</a></div></div>`;
   return h;
 }
 
@@ -273,7 +272,6 @@ Promise.all(["data/info.json", "data/world.json", "data/zones.json", "data/label
 .then(([info, world, zones, labels]) => {
   LABELS = labels;
   INFO = info.countries;
-  VAX_URL = info.vax_url;
   const pub = document.getElementById("pub");
   pub.href = utm(info.publisher.url, "panel"); pub.textContent = info.publisher.name;
   const d = new Date(info.fetched);

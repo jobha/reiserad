@@ -20,7 +20,7 @@ omtrentlige der UD beskriver områder som ikke følger administrative grenser
 ```
 scraper/scrape.py   regjeringen.no  -> data/advisories.json   (alle ~195 landsider, faktaboksen «Reiseadvarsel»)
 scraper/build.py    advisories + regions.json -> site/data/{info,world,zones}.json
-scraper/pages.py    én statisk side per land (site/land/<slug>/), A–Å-oversikt, sitemap.xml, robots.txt
+scraper/pages.py    én side per land med advarsel (site/land/<slug>/), A–Å-oversikt, sitemap.xml, robots.txt
 site/index.html     Leaflet-kart som leser site/data/
 tools/og_image.py   site/og.png (delingsbilde) – kjøres for hånd
 deploy/nginx.conf   nginx-oppsettet på Pi-en (301 fra reiseråd til reiserad)
@@ -50,16 +50,25 @@ git commit -am "..." && git push                   # deployer
 
 ## Drift
 
-GitHub Actions på en selvhostet runner på ig68-pi4 (`~/actions-runner-reiserad`,
-label `reiserad`) kjører ved push og hver tredje time: skraper, bygger, kopierer
-`site/` til `~/selfhost/haugsoen/reiserad`, som nginx-containeren `haugsoen-reiserad`
-serverer bak Cloudflare-tunnelen `ig68-haugsoen` (begge vertsnavn, med
-Access-unntak «public, bypass» siden `*.haugsoen.com` ellers krever innlogging). Endringer i UDs tekster
-committes tilbake til `data/advisories.json`, så git-loggen er en historikk
-over reiserådene.
+Hostes på **Vercel** i LegeOnline-teamet (prosjekt `reiserad`, domene `reiserad.no`;
+`www.reiserad.no` sender videre). DNS for reiserad.no ligger i Cloudflare
+(A `76.76.21.21`, www CNAME `cname.vercel-dns.com`, ikke proxied).
+
+GitHub Actions (`.github/workflows/deploy.yml`, GitHub-hostet runner) kjører ved
+push og hver tredje time: skraper, bygger og deployer `site/` til Vercel med
+secret `VERCEL_TOKEN`. Endringer i UDs tekster committes tilbake til
+`data/advisories.json`, så git-loggen er en historikk over reiserådene.
+
+`reiserad.haugsoen.com` og `reiseråd.haugsoen.com` går fortsatt gjennom
+Cloudflare-tunnelen til ig68-pi4, der nginx (`deploy/nginx.conf`) bare sender
+videre til reiserad.no.
+
+Vaksinelenkene går til LegeOnlines side for hvert land
+(`legeonline.no/reisevaksiner/<slug>`); koblingen ligger i `data/legeonline.json`
+og oppdateres med `tools/legeonline_slugs.py`.
 
 Workflowen har bevisst ingen `pull_request`-trigger: repoet er offentlig, og
-runneren kjører på hjemmenettet.
+jobben har tilgang til Vercel-tokenet.
 
 Reiserådkart er et gratis verktøy fra [LegeOnline](https://legeonline.no/). Avsender og reisevaksine-lenke styres i `data/site.json`.
 
