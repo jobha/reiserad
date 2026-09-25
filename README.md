@@ -1,8 +1,10 @@
 # Reiserådkart
 
 Verdenskart over Utenriksdepartementets reiseadvarsler, med regionale
-advarsler og unntak tegnet inn. Live på **https://reiseråd.haugsoen.com**
-(`xn--reiserd-jxa.haugsoen.com`).
+advarsler og unntak tegnet inn. Live på **https://reiserad.haugsoen.com**
+(reiseråd.haugsoen.com sender videre dit).
+
+Feil i kartet? [Meld det her](https://github.com/jobha/reiserad/issues/new/choose).
 
 - Mørk rød: UD fraråder alle reiser
 - Oransjerød: UD fraråder reiser som ikke er strengt nødvendige
@@ -18,7 +20,10 @@ omtrentlige der UD beskriver områder som ikke følger administrative grenser
 ```
 scraper/scrape.py   regjeringen.no  -> data/advisories.json   (alle ~195 landsider, faktaboksen «Reiseadvarsel»)
 scraper/build.py    advisories + regions.json -> site/data/{info,world,zones}.json
+scraper/pages.py    én statisk side per land (site/land/<slug>/), A–Å-oversikt, sitemap.xml, robots.txt
 site/index.html     Leaflet-kart som leser site/data/
+tools/og_image.py   site/og.png (delingsbilde) – kjøres for hånd
+deploy/nginx.conf   nginx-oppsettet på Pi-en (301 fra reiseråd til reiserad)
 ```
 
 - **Hele land** tegnes automatisk ut fra teksten («fraråder alle reiser til X»).
@@ -48,7 +53,8 @@ git commit -am "..." && git push                   # deployer
 GitHub Actions på en selvhostet runner på ig68-pi4 (`~/actions-runner-reiserad`,
 label `reiserad`) kjører ved push og hver tredje time: skraper, bygger, kopierer
 `site/` til `~/selfhost/haugsoen/reiserad`, som nginx-containeren `haugsoen-reiserad`
-serverer bak Cloudflare-tunnelen `ig68-haugsoen`. Endringer i UDs tekster
+serverer bak Cloudflare-tunnelen `ig68-haugsoen` (begge vertsnavn, med
+Access-unntak «public, bypass» siden `*.haugsoen.com` ellers krever innlogging). Endringer i UDs tekster
 committes tilbake til `data/advisories.json`, så git-loggen er en historikk
 over reiserådene.
 

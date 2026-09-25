@@ -1,0 +1,22 @@
+name: Feil i kartet
+description: Et område er tegnet feil, mangler eller har feil nivå
+title: "Feil i kartet: "
+labels: ["kartfeil"]
+body:
+  - type: input
+    id: land
+    attributes:
+      label: Land
+    validations:
+      required: true
+  - type: textarea
+    id: hva
+    attributes:
+      label: Hva er feil?
+      description: F.eks. «Provinsen X er rød, men UD fraråder bare reiser som ikke er nødvendige». Skjermbilde hjelper.
+    validations:
+      required: true
+  - type: input
+    id: ud
+    attributes:
+      label: Lenke til UDs side

@@ -23,6 +23,7 @@ from shapely.geometry import LineString, Point, mapping, shape
 from shapely.ops import transform, unary_union
 
 import gb
+import pages
 
 ROOT = Path(__file__).resolve().parent.parent
 DATA = ROOT / "data"
@@ -189,6 +190,7 @@ def build():
     ne, ne_feats = load_ne()
 
     info, zones = {}, []
+    zones_by_iso = {}  # iso -> [(geom, level, partial, label)] til landsidene
     for slug, c in adv["countries"].items():
         iso = iso_of[slug]
         rec = {"slug": slug, "name": c["name"], "url": c["url"], "level": None, "ingress": c.get("ingress", "")}
@@ -210,8 +212,10 @@ def build():
                 # landet skravert og be leseren sjekke UD.
                 rec["unmapped"] = True
                 zones.append(feature(country, {"iso": iso, "level": level, "partial": True, "unmapped": True}))
+                zones_by_iso[iso] = [(country, level, True, "")]
             else:
                 zones.append(feature(country, {"iso": iso, "level": level, "label": "Hele landet"}))
+                zones_by_iso[iso] = [(country, level, False, "")]
             continue
 
         if reviewed.get(slug) != c.get("hash"):
@@ -234,6 +238,7 @@ def build():
             f = feature(g, props)
             if f:
                 zones.append(f)
+                zones_by_iso.setdefault(iso, []).append((g, z["level"], bool(z.get("partial")), z.get("label", "")))
         rec["level"] = "all" if "all" in levels else "necessary"
         rec["regional"] = True
         rec["exceptions"] = [z["label"] for z in spec["zones"] if z["level"] == "none"]
@@ -252,10 +257,12 @@ def build():
     dump("zones.json", {"type": "FeatureCollection", "features": [f for f in zones if f]})
     dump("labels.json", labels(ne_feats, info))
     dump("info.json", {"fetched": adv["fetched"], "source": adv["source"], "countries": info})
+    n_pages = pages.write_all(OUT.parent, info, ne, zones_by_iso, adv["fetched"])
 
     n = sum(1 for r in info.values() if r["level"])
     stale = [r["slug"] for r in info.values() if r.get("stale")]
     unmapped = [r["slug"] for r in info.values() if r.get("unmapped")]
+    print(f"{n_pages} sider i sitemap.")
     print(f"{n} land med advarsel, {len(zones)} soner. Endret siden kartlegging: {stale or '-'}. "
           f"Ikke kartlagt: {unmapped or '-'}")
     return stale, unmapped

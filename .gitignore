@@ -3,3 +3,6 @@
 site/data/
 __pycache__/
 .DS_Store
+site/land/
+site/sitemap.xml
+site/robots.txt

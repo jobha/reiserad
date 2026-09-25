@@ -1,0 +1,10 @@
+name: Forslag
+description: Ny funksjon eller forbedring
+labels: ["forslag"]
+body:
+  - type: textarea
+    id: forslag
+    attributes:
+      label: Forslag
+    validations:
+      required: true
