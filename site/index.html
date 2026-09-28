@@ -106,6 +106,12 @@ html, body { margin: 0; height: 100%; background: var(--bg); color: var(--text);
 .lbl.p i { display: inline-block; width: 4px; height: 4px; border-radius: 50%; background: var(--label); margin: 0 4px 0 0; vertical-align: 1px; }
 .lbl.cap { font-weight: 600; }
 .lbl.cap i { width: 5px; height: 5px; margin-left: 1px; box-shadow: 0 0 0 1.5px var(--halo); }
+.leaflet-tooltip.tip { background: var(--panel); color: var(--text); border: 1px solid var(--line);
+  border-radius: 8px; box-shadow: var(--shadow); padding: 6px 9px; font-size: 12.5px; line-height: 1.35; width: max-content; max-width: 260px; white-space: normal; }
+.leaflet-tooltip.tip::before { display: none; }
+.tip .tip-level { font-weight: 600; }
+.tip .tip-level.all { color: var(--all); } .tip .tip-level.necessary { color: var(--nec); }
+.tip .tip-note { color: var(--muted); font-size: 11.5px; }
 .leaflet-bar a { background: var(--panel); color: var(--text); border-color: var(--line); }
 
 @media (max-width: 640px) {
@@ -296,6 +302,22 @@ function buildList(filter = "") {
 const worldRenderer = L.svg({ padding: 1 });
 const zoneRenderer = L.svg({ pane: "zones", padding: 1 });
 
+// Hover-tekst: hvilket land og hvilken sone. Bare på enheter med mus; på
+// berøringsskjerm viser et trykk popupen direkte.
+const HOVER = matchMedia("(hover: hover) and (pointer: fine)").matches;
+const TIP = { sticky: true, direction: "top", offset: [0, -8], className: "tip", opacity: 1 };
+function tipZone(p) {
+  const c = INFO[p.iso];
+  const where = p.label && p.label !== "Hele landet" ? `<div>${esc(p.label)}</div>` : "";
+  const part = p.partial ? `<div class="tip-note">${p.unmapped ? "Regional advarsel – se UD" : "Gjelder deler av området"}</div>` : "";
+  return `<b>${esc(c?.name || "")}</b><div class="tip-level ${p.level}">${esc(LEVEL_TXT[p.level])}</div>${where}${part}`;
+}
+function tipWorld(iso, ne) {
+  const c = INFO[iso];
+  if (!c) return `<b>${esc(ne)}</b>`;
+  return `<b>${esc(c.name)}</b><div>${c.level ? "Ikke omfattet av reiseadvarselen" : "Ingen reiseadvarsel"}</div>`;
+}
+
 function makeCopy(k) {
   const off = k * 360;
   const shift = c => L.latLng(c[1], c[0] + off);
@@ -306,6 +328,7 @@ function makeCopy(k) {
     onEachFeature: (f, l) => {
       const iso = f.properties.iso;
       if (iso && k === 0) (byIso[iso] ||= []).push(l);
+      if (HOVER) l.bindTooltip(() => tipWorld(iso, f.properties.ne), TIP);
       l.on("click", e => {
         const c = INFO[iso];
         L.popup().setLatLng(e.latlng).setContent(popupHtml(iso, { ne: f.properties.ne, clear: !!c?.level })).openOn(map);
@@ -322,6 +345,7 @@ function makeCopy(k) {
         L.DomEvent.stopPropagation(e);
         L.popup().setLatLng(e.latlng).setContent(popupHtml(f.properties.iso, f.properties)).openOn(map);
       });
+      if (HOVER) l.bindTooltip(() => tipZone(f.properties), TIP);
       l.on("mouseover", () => l.setStyle({ weight: 2 }));
       l.on("mouseout", () => l.setStyle({ weight: f.properties.partial ? 1 : .6 }));
     },
