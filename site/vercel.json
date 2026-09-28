@@ -34,17 +34,6 @@
       ],
       "destination": "https://xn--reiserd-jxa.no/:path",
       "permanent": true
-    },
-    {
-      "source": "/:path((?!data/info\\.json$).*)",
-      "has": [
-        {
-          "type": "host",
-          "value": "www.reiseråd.no"
-        }
-      ],
-      "destination": "https://xn--reiserd-jxa.no/:path",
-      "permanent": true
     }
   ],
   "headers": [
