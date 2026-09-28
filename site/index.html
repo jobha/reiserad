@@ -149,7 +149,19 @@ const css = n => getComputedStyle(document.documentElement).getPropertyValue(n).
 const esc = s => String(s ?? "").replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
 const LEVEL_TXT = { all: "Fraråder alle reiser", necessary: "Fraråder reiser som ikke er strengt nødvendige" };
 
-const map = L.map("map", { worldCopyJump: true, minZoom: 2, maxZoom: 12, zoomSnap: 0.5 }).setView([20, 15], 2.5);
+const map = L.map("map", { minZoom: 2, maxZoom: 12, zoomSnap: 0.5, inertiaMaxSpeed: 2500 }).setView([20, 15], 2.5);
+
+// Hvilke verdenskopier (forskjøvet 360° * k) som er i bildet nå. Kartet kan
+// rulles fritt østover og vestover; flater og etiketter tegnes i hver synlige
+// kopi, og etter hver bevegelse flyttes utsnittet stille tilbake til kopien
+// rundt 0° (se recenter), så det aldri trengs mer enn nabokopiene.
+function visibleCopies() {
+  const b = map.getBounds();
+  const k0 = Math.floor((b.getWest() + 180) / 360), k1 = Math.floor((b.getEast() + 180) / 360);
+  const ks = [];
+  for (let k = k0; k <= k1; k++) ks.push(k);
+  return ks;
+}
 map.attributionControl.setPrefix(false);
 map.createPane("zones").style.zIndex = 410;
 map.createPane("labels").style.zIndex = 420;
@@ -182,7 +194,7 @@ function drawLabels() {
   let n = 0;
   for (const c of cands) {
     if (n > 220) break;
-    for (const off of [0, 360, -360]) {
+    for (const off of visibleCopies().map(k => k * 360)) {
       const ll = L.latLng(c.y, c.x + off);
       if (!bounds.contains(ll)) continue;
       const pt = map.latLngToContainerPoint(ll);
@@ -208,7 +220,8 @@ function addHatch(svg) {
 }
 
 const utm = (u, c) => u + (u.includes("?") ? "&" : "?") + "utm_source=reiserad&utm_medium=referral&utm_campaign=" + c;
-let INFO = {}, zoneLayer, worldLayer, byIso = {};
+let INFO = {}, byIso = {}, WORLD = null, ZONES = null;
+const copies = new Map();  // k -> [worldLayer, zoneLayer]
 
 function popupHtml(iso, zone) {
   const c = INFO[iso];
@@ -258,10 +271,81 @@ function buildList(filter = "") {
   }).join("") || `<p style="padding:8px 16px;color:var(--muted)">Ingen treff.</p>`;
 }
 
+// Egne SVG-renderere med stor margin: Leaflet tegner vektorflater først når
+// bevegelsen stopper, og da bare litt utenfor skjermen. Margin 1 = en hel
+// skjermbredde på hver side, så kantene ikke blir tomme mens man drar.
+const worldRenderer = L.svg({ padding: 1 });
+const zoneRenderer = L.svg({ pane: "zones", padding: 1 });
+
+function makeCopy(k) {
+  const off = k * 360;
+  const shift = c => L.latLng(c[1], c[0] + off);
+  const world = L.geoJSON(WORLD, {
+    coordsToLatLng: shift,
+    renderer: worldRenderer,
+    style: { fillColor: css("--land"), fillOpacity: 1, color: css("--land-line"), weight: .7 },
+    onEachFeature: (f, l) => {
+      const iso = f.properties.iso;
+      if (iso && k === 0) (byIso[iso] ||= []).push(l);
+      l.on("click", e => {
+        const c = INFO[iso];
+        L.popup().setLatLng(e.latlng).setContent(popupHtml(iso, { ne: f.properties.ne, clear: !!c?.level })).openOn(map);
+      });
+    },
+  });
+  const zones = L.geoJSON(ZONES, {
+    coordsToLatLng: shift,
+    pane: "zones",
+    renderer: zoneRenderer,
+    style: f => fillFor(f.properties.level, f.properties.partial),
+    onEachFeature: (f, l) => {
+      l.on("click", e => {
+        L.DomEvent.stopPropagation(e);
+        L.popup().setLatLng(e.latlng).setContent(popupHtml(f.properties.iso, f.properties)).openOn(map);
+      });
+      l.on("mouseover", () => l.setStyle({ weight: 2 }));
+      l.on("mouseout", () => l.setStyle({ weight: f.properties.partial ? 1 : .6 }));
+    },
+  });
+  return [world, zones];
+}
+
+// Legg til kopiene som er i bildet, fjern de som ikke er det (de gjenbrukes senere).
+function syncCopies() {
+  if (!WORLD) return;
+  const want = new Set(visibleCopies());
+  for (const k of want) {
+    if (!copies.has(k)) copies.set(k, makeCopy(k));
+    for (const l of copies.get(k)) if (!map.hasLayer(l)) l.addTo(map);
+  }
+  for (const [k, ls] of copies) {
+    if (want.has(k)) continue;
+    for (const l of ls) map.removeLayer(l);
+    if (Math.abs(k) > 1) copies.delete(k);  // behold bare nabokopiene i minnet
+  }
+  const svg = map.getPane("zones").querySelector("svg");
+  if (svg) addHatch(svg);
+}
+
+// Etter at kartet har stoppet: ligger midten utenfor -180..180, hopp 360° * k
+// tilbake. Bildet er identisk fordi kopiene ved siden av er tegnet.
+let openPopup = null;
+map.on("popupopen", e => { openPopup = e.popup; });
+map.on("popupclose", () => { openPopup = null; });
+function recenter() {
+  const c = map.getCenter(), k = Math.round(c.lng / 360);
+  if (!k) return;
+  if (openPopup) { const p = openPopup.getLatLng(); openPopup.setLatLng([p.lat, p.lng - k * 360]); }
+  map.setView([c.lat, c.lng - k * 360], map.getZoom(), { animate: false });
+}
+
 function focusCountry(iso) {
   const layers = byIso[iso];
   if (!layers?.length) return;
-  const b = L.featureGroup(layers).getBounds();
+  let b = L.featureGroup(layers).getBounds();
+  // Hopp til kopien av landet som ligger nærmest der brukeren står.
+  const k = Math.round((map.getCenter().lng - b.getCenter().lng) / 360);
+  if (k) b = L.latLngBounds([b.getSouth(), b.getWest() + k * 360], [b.getNorth(), b.getEast() + k * 360]);
   const panelOpen = innerWidth > 640 && !document.getElementById("panel").classList.contains("collapsed");
   map.fitBounds(b, { paddingTopLeft: [panelOpen ? 370 : 40, 60], paddingBottomRight: [40, 40], maxZoom: 6 });
   L.popup({ autoPanPaddingTopLeft: L.point(panelOpen ? 370 : 20, 20) }).setLatLng(b.getCenter()).setContent(popupHtml(iso, null)).openOn(map);
@@ -279,32 +363,12 @@ Promise.all(["data/info.json", "data/world.json", "data/zones.json", "data/label
   document.getElementById("sub").textContent =
     `${n} land med reiseadvarsel · hentet ${d.toLocaleDateString("nb-NO", { day: "numeric", month: "long", year: "numeric" })} kl. ${d.toLocaleTimeString("nb-NO", { hour: "2-digit", minute: "2-digit" })}`;
 
-  worldLayer = L.geoJSON(world, {
-    style: { fillColor: css("--land"), fillOpacity: 1, color: css("--land-line"), weight: .7 },
-    onEachFeature: (f, l) => {
-      const iso = f.properties.iso;
-      if (iso) (byIso[iso] ||= []).push(l);
-      l.on("click", e => {
-        const c = INFO[iso];
-        L.popup().setLatLng(e.latlng).setContent(popupHtml(iso, { ne: f.properties.ne, clear: !!c?.level })).openOn(map);
-      });
-    },
-  }).addTo(map);
-
-  zoneLayer = L.geoJSON(zones, {
-    pane: "zones",
-    style: f => fillFor(f.properties.level, f.properties.partial),
-    onEachFeature: (f, l) => {
-      l.on("click", e => {
-        L.DomEvent.stopPropagation(e);
-        L.popup().setLatLng(e.latlng).setContent(popupHtml(f.properties.iso, f.properties)).openOn(map);
-      });
-      l.on("mouseover", () => l.setStyle({ weight: 2 }));
-      l.on("mouseout", () => l.setStyle({ weight: f.properties.partial ? 1 : .6 }));
-    },
-  }).addTo(map);
-  const svg = map.getPane("zones").querySelector("svg");
-  if (svg) addHatch(svg);
+  WORLD = world; ZONES = zones;
+  syncCopies();
+  map.on("moveend zoomend", () => { recenter(); syncCopies(); });
+  // Også underveis i en draging/et kast, så kartet aldri står tomt.
+  let pending = false;
+  map.on("move", () => { if (!pending) { pending = true; requestAnimationFrame(() => { pending = false; syncCopies(); }); } });
 
   buildList();
   drawLabels();
