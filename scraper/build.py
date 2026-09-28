@@ -161,6 +161,14 @@ def zone_geom(z, country, ne, proj, iso=None):
     return g
 
 
+def slugify_no(v):
+    """Samme som LegeOnlines slugifyNo (app/src/utils/vaccineSlugs.js)."""
+    import unicodedata
+    v = v.lower().replace("æ", "ae").replace("ø", "o").replace("å", "a")
+    v = "".join(ch for ch in unicodedata.normalize("NFKD", v) if not unicodedata.combining(ch))
+    return re.sub(r"^-+|-+$", "", re.sub(r"[^a-z0-9]+", "-", v))
+
+
 def auto_level(paragraphs):
     txt = " ".join(paragraphs).lower()
     return "necessary" if "nødvendig" in txt else "all"
@@ -193,7 +201,10 @@ def build():
     zones_by_iso = {}  # iso -> [(geom, level, partial, label)] til landsidene
     for slug, c in adv["countries"].items():
         iso = iso_of[slug]
-        rec = {"slug": slug, "name": c["name"], "url": c["url"], "level": None, "ingress": c.get("ingress", "")}
+        # slug = adressen (/land/<slug>/, #<slug>), laget fra det norske navnet som
+        # hos LegeOnline; key = UDs egen nøkkel, som regions.json bruker.
+        rec = {"slug": slugify_no(c["name"]), "key": slug, "name": c["name"], "url": c["url"],
+               "level": None, "ingress": c.get("ingress", "")}
         w = c.get("warning")
         if w:
             rec.update(status=w["status"], paragraphs=w["paragraphs"])

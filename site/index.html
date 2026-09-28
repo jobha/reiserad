@@ -376,7 +376,7 @@ Promise.all(["data/info.json", "data/world.json", "data/zones.json", "data/label
   buildList();
   drawLabels();
   const h = decodeURIComponent(location.hash.slice(1)).toLowerCase();
-  if (h) { const hit = Object.entries(INFO).find(([, c]) => c.slug === h || c.name.toLowerCase() === h); if (hit) focusCountry(hit[0]); }
+  if (h) { const hit = Object.entries(INFO).find(([, c]) => c.slug === h || c.key === h || c.name.toLowerCase() === h); if (hit) focusCountry(hit[0]); }
 })
 .catch(err => { document.getElementById("sub").textContent = "Klarte ikke å laste data: " + err.message; });
 
