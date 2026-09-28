@@ -158,8 +158,7 @@ const map = L.map("map", { minZoom: 2, maxZoom: 12, zoomSnap: 0.5, inertiaMaxSpe
 // rulles fritt østover og vestover; flater og etiketter tegnes i hver synlige
 // kopi, og etter hver bevegelse flyttes utsnittet stille tilbake til kopien
 // rundt 0° (se recenter), så det aldri trengs mer enn nabokopiene.
-function visibleCopies() {
-  const b = map.getBounds();
+function visibleCopies(b = map.getBounds()) {
   const k0 = Math.floor((b.getWest() + 180) / 360), k1 = Math.floor((b.getEast() + 180) / 360);
   const ks = [];
   for (let k = k0; k <= k1; k++) ks.push(k);
@@ -176,38 +175,53 @@ map.attributionControl.addAttribution('Grenser og steder: <a href="https://www.n
 // Natural Earth. Tegnes på nytt ved hver flytting, grådig uten overlapp.
 const labelLayer = L.layerGroup([], { pane: "labels" }).addTo(map);
 let LABELS = null;
+// Etiketter tegnes for en hel skjermbredde rundt det synlige (som kartflatene),
+// så de er på plass mens man drar. Etiketter som allerede står gjenbrukes, og
+// de får forrang i kollisjonstesten, så de ikke blinker eller bytter plass.
+const shownLabels = new Map();  // nøkkel -> marker
 function drawLabels() {
   if (!LABELS) return;
-  labelLayer.clearLayers();
-  const z = map.getZoom(), bounds = map.getBounds().pad(0.1), boxes = [];
+  const z = map.getZoom(), bounds = map.getBounds().pad(1), boxes = [];
+  const ck = Math.round(map.getCenter().lng / 360);
+  const wasShown = new Set([...shownLabels.keys()].map(k => k.split("|").slice(0, 2).join("|")));
   // ax = hvor i etiketten koordinaten ligger: midten for land, prikken for byer.
   const fits = (pt, w, h, ax) => {
     const r = [pt.x - ax - 3, pt.y - h / 2 - 2, pt.x - ax + w + 3, pt.y + h / 2 + 2];
     if (boxes.some(o => r[0] < o[2] && r[2] > o[0] && r[1] < o[3] && r[3] > o[1])) return false;
     boxes.push(r); return true;
   };
-  const place = (ll, html, cls, w, h, ax) => {
-    labelLayer.addLayer(L.marker(ll, { pane: "labels", interactive: false, keyboard: false,
-      icon: L.divIcon({ className: "lbl " + cls, html, iconSize: [w, h], iconAnchor: [ax, h / 2] }) }));
-  };
   const cands = [];
   for (const [name, x, y, mz] of LABELS.countries) if (z >= mz - 0.5) cands.push({ name, x, y, cls: "c", pri: mz });
   for (const [name, x, y, mz, cap] of LABELS.places) if (z >= mz) cands.push({ name, x, y, cls: cap ? "p cap" : "p", pri: mz + (cap ? 0 : 0.5) });
-  cands.sort((a, b) => a.pri - b.pri);
+  for (const c of cands) c.was = wasShown.has(c.cls + "|" + c.name) ? 0 : 1;
+  cands.sort((a, b) => a.pri - b.pri || a.was - b.was);
+  const next = new Map();
   let n = 0;
   for (const c of cands) {
-    if (n > 220) break;
-    for (const off of visibleCopies().map(k => k * 360)) {
-      const ll = L.latLng(c.y, c.x + off);
+    if (n > 700) break;
+    for (const k of visibleCopies(bounds)) {
+      const ll = L.latLng(c.y, c.x + k * 360);
       if (!bounds.contains(ll)) continue;
       const pt = map.latLngToContainerPoint(ll);
       const big = c.cls === "c";
       const w = Math.ceil(c.name.length * (big ? 7.4 : 6.4)) + (big ? 0 : 8), h = big ? 15 : 14;
       const ax = big ? w / 2 : (c.cls.includes("cap") ? 3.5 : 2);
       if (!fits(pt, w, h, ax)) continue;
-      place(ll, big ? esc(c.name) : `<i></i>${esc(c.name)}`, c.cls, w, h, ax); n++;
+      // Nøkkel relativt til midtkopien, så etiketten overlever recenter() uten å tegnes på nytt.
+      const key = `${c.cls}|${c.name}|${k - ck}`;
+      let m = shownLabels.get(key);
+      if (m) { if (!m.getLatLng().equals(ll)) m.setLatLng(ll); }
+      else {
+        m = L.marker(ll, { pane: "labels", interactive: false, keyboard: false,
+          icon: L.divIcon({ className: "lbl " + c.cls, html: big ? esc(c.name) : `<i></i>${esc(c.name)}`, iconSize: [w, h], iconAnchor: [ax, h / 2] }) });
+        labelLayer.addLayer(m);
+      }
+      next.set(key, m); n++;
     }
   }
+  for (const [key, m] of shownLabels) if (!next.has(key)) labelLayer.removeLayer(m);
+  shownLabels.clear();
+  for (const [key, m] of next) shownLabels.set(key, m);
 }
 map.on("moveend zoomend", drawLabels);
 
