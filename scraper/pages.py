@@ -146,6 +146,7 @@ def page(title, desc, canonical, body, jsonld=None):
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
 <style>{STYLE}</style>
 {ld}
+<script defer src="/_vercel/insights/script.js"></script>
 </head>
 <body>
 <main>
