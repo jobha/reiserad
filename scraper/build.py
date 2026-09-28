@@ -276,6 +276,13 @@ def build():
             info[iso]["vax"] = True
         if iso in info and p["SUBREGION"] in ("Central America", "Caribbean"):
             info[iso]["vax"] = True
+    # ISO2 per land, så andre sider (legeonline.no) kan slå opp på landkode.
+    for f in ne_feats:
+        p = f["properties"]
+        iso = next((k for k, v in MERGE.items() if p["ADM0_A3"] in v), p["ADM0_A3"])
+        a2 = p["ISO_A2"] if p["ISO_A2"] != "-99" else p["ISO_A2_EH"]
+        if iso in info and a2 and a2 != "-99":
+            info[iso].setdefault("iso2", a2)
     # Egen vaksineside hos LegeOnline for landet, der den finnes (tools/legeonline_slugs.py).
     lo = json.loads((DATA / "legeonline.json").read_text())
     for iso, rec in info.items():
