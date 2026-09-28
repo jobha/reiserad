@@ -75,6 +75,7 @@ STYLE = """
 body { margin:0; background:var(--bg); color:var(--text); font:16px/1.6 Inter, system-ui, -apple-system, sans-serif; }
 main { max-width:760px; margin:0 auto; padding:24px 16px 48px; }
 a { color:var(--link); }
+nav.crumbs .home { display:inline-flex; align-items:center; gap:5px; }
 nav.crumbs { font-size:14px; color:var(--muted); margin-bottom:8px; }
 nav.crumbs a { color:var(--muted); }
 h1 { font-size:30px; line-height:1.2; letter-spacing:-.015em; margin:4px 0 12px; }
@@ -191,7 +192,7 @@ def country_page(iso, rec, country, zones, fetched):
     else:
         badge = f'<span class="badge {rec["level"]}">{LEVEL_TXT[rec["level"]]} til hele landet</span>'
 
-    b = [f'<nav class="crumbs"><a href="/">Reiserådkart</a> › <a href="/land/">Alle land</a> › {e(name)}</nav>',
+    b = [f'<nav class="crumbs"><a href="/" class="home"><img src="/logo.svg" alt="" width="16" height="16">Reiserådkart</a> › <a href="/land/">Alle land</a> › {e(name)}</nav>',
          f"<h1>Reiseråd for {e(name)}</h1>", badge]
     if rec.get("status"):
         b.append(f'<div class="status">{e(rec["status"])}</div>')
@@ -258,7 +259,7 @@ def index_page(info):
                   + (f'<a href="/land/{r["slug"]}/">{e(r["name"])}</a>' if r["level"]
                      else f'<a href="{e(r["url"])}" rel="noopener">{e(r["name"])}</a>')
                   + f'<span class="tag">{tag}</span></li>')
-    body = (f'<nav class="crumbs"><a href="/">Reiserådkart</a> › Alle land</nav>'
+    body = (f'<nav class="crumbs"><a href="/" class="home"><img src="/logo.svg" alt="" width="16" height="16">Reiserådkart</a> › Alle land</nav>'
             f"<h1>Reiseråd for alle land A–Å</h1>"
             f'<p class="lead">Utenriksdepartementet har reiseadvarsel for {n} av {len(rows)} land. '
             f'Rødt betyr at UD fraråder alle reiser, oransje at UD fraråder reiser som ikke er strengt nødvendige. '

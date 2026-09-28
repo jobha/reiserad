@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <defs>
+    <linearGradient id="pin" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#e0314f"/>
+      <stop offset="1" stop-color="#9e0f28"/>
+    </linearGradient>
+    <clipPath id="globe"><circle cx="32" cy="26" r="13"/></clipPath>
+  </defs>
+  <!-- Kartnål -->
+  <path d="M32 3C19.3 3 9 13 9 25.6 9 41.8 32 61 32 61s23-19.2 23-35.4C55 13 44.7 3 32 3Z" fill="url(#pin)"/>
+  <!-- Jordklode i nålehodet -->
+  <circle cx="32" cy="26" r="13" fill="#fff"/>
+  <g clip-path="url(#globe)" fill="none" stroke="#b3122e" stroke-width="2.2">
+    <ellipse cx="32" cy="26" rx="5.6" ry="13"/>
+    <path d="M19 26h26M20.5 19.5h23M20.5 32.5h23"/>
+  </g>
+  <circle cx="32" cy="26" r="13" fill="none" stroke="#b3122e" stroke-width="2.2"/>
+</svg>
