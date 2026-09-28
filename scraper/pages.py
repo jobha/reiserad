@@ -6,7 +6,7 @@ import json
 import math
 import urllib.parse
 
-SITE = "https://reiserad.no"
+SITE = "https://xn--reiserd-jxa.no"
 REPO = "https://github.com/jobha/reiserad"
 LEVEL_TXT = {
     "all": "UD fraråder alle reiser",

@@ -1,7 +1,7 @@
 # Reiserådkart
 
 Verdenskart over Utenriksdepartementets reiseadvarsler, med regionale
-advarsler og unntak tegnet inn. Live på **https://reiserad.no**
+advarsler og unntak tegnet inn. Live på **https://reiseråd.no** (reiserad.no sender videre)
 
 Feil i kartet? [Meld det her](https://github.com/jobha/reiserad/issues/new/choose).
 
@@ -50,8 +50,9 @@ git commit -am "..." && git push                   # deployer
 
 ## Drift
 
-Hostes på **Vercel** i LegeOnline-teamet (prosjekt `reiserad`, domene `reiserad.no`;
-`www.reiserad.no` sender videre). DNS for reiserad.no ligger i Cloudflare
+Hostes på **Vercel** i LegeOnline-teamet (prosjekt `reiserad`, domene `reiseråd.no` =
+`xn--reiserd-jxa.no`; `reiserad.no` og www-variantene sender videre, unntatt
+`/data/info.json`, som legeonline.no leser direkte). DNS for reiserad.no ligger i Cloudflare
 (A `76.76.21.21`, www CNAME `cname.vercel-dns.com`, ikke proxied).
 
 GitHub Actions (`.github/workflows/deploy.yml`) kjører ved push og hver tredje

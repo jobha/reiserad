@@ -3,14 +3,36 @@
   "trailingSlash": true,
   "redirects": [
     {
-      "source": "/:path(.*)",
+      "source": "/:path((?!data/info\\.json$).*)",
+      "has": [
+        {
+          "type": "host",
+          "value": "reiserad.no"
+        }
+      ],
+      "destination": "https://xn--reiserd-jxa.no/:path",
+      "permanent": true
+    },
+    {
+      "source": "/:path((?!data/info\\.json$).*)",
       "has": [
         {
           "type": "host",
           "value": "www.reiserad.no"
         }
       ],
-      "destination": "https://reiserad.no/:path",
+      "destination": "https://xn--reiserd-jxa.no/:path",
+      "permanent": true
+    },
+    {
+      "source": "/:path((?!data/info\\.json$).*)",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.xn--reiserd-jxa.no"
+        }
+      ],
+      "destination": "https://xn--reiserd-jxa.no/:path",
       "permanent": true
     }
   ],
