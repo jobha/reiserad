@@ -1,8 +1,7 @@
 # Reiserådkart
 
 Verdenskart over Utenriksdepartementets reiseadvarsler, med regionale
-advarsler og unntak tegnet inn. Live på **https://reiserad.haugsoen.com**
-(reiseråd.haugsoen.com sender videre dit).
+advarsler og unntak tegnet inn. Live på **https://reiserad.no**
 
 Feil i kartet? [Meld det her](https://github.com/jobha/reiserad/issues/new/choose).
 
