@@ -1,5 +1,5 @@
 {
- "fetched": "2026-09-29T11:51:09+0200",
+ "fetched": "2026-09-29T20:07:04+0200",
  "source": "https://www.regjeringen.no/no/tema/utenrikssaker/reiseinformasjon/velg-land/id2414273/",
  "failed": [],
  "countries": {
@@ -675,8 +675,8 @@
   },
   "israel": {
    "name": "Israel",
-   "page_updated": "14.08.2026",
-   "ingress": "Sikkerhetssituasjonen i Israel kan forandre seg raskt, særlig grunnet de spente forholdene i regionen. Følg nyhetsbildet og råd fra israelske myndigheter og vurder egen sikkerhet.",
+   "page_updated": "29.09.2026",
+   "ingress": "Sikkerhetssituasjonen i Israel kan forandre seg raskt, særlig grunnet forholdene i regionen. Følg nyhetsbildet og råd fra israelske myndigheter og vurder egen sikkerhet.",
    "warning": {
     "title": "Reiseadvarsel for Israel",
     "status": "SIST OPPDATERT: 30.06.2026 - FORTSATT GYLDIG",
@@ -689,7 +689,7 @@
   },
   "italia": {
    "name": "Italia",
-   "page_updated": "09.09.2026",
+   "page_updated": "29.09.2026",
    "ingress": "Italia er et trygt land å reise og oppholde seg i, og de fleste reiser går trygt og uten spesielle problemer. Reisende må kunne vise gyldig pass eller nasjonalt ID-kort med reiserett på forespørsel fra myndighetene. Det kan forekomme vær- og naturhendelser som påvirker reiser og opphold i Italia. Se mer under «naturforhold og naturkatastrofer».",
    "warning": null,
    "url": "https://www.regjeringen.no/no/tema/utenrikssaker/reiseinformasjon/velg-land/reiseinfo_italia/id2416484/"
