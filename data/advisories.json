@@ -1,5 +1,5 @@
 {
- "fetched": "2026-09-25T21:17:00+0200",
+ "fetched": "2026-09-29T11:51:09+0200",
  "source": "https://www.regjeringen.no/no/tema/utenrikssaker/reiseinformasjon/velg-land/id2414273/",
  "failed": [],
  "countries": {
@@ -873,16 +873,19 @@
   },
   "libanon": {
    "name": "Libanon",
-   "page_updated": "10.09.2026",
+   "page_updated": "29.09.2026",
    "ingress": "Sikkerhetssituasjonen i Libanon er spent og uforutsigbar. Det er regelmessige israelske angrep og krigshandlinger i Sør-Libanon. Det er risiko for ytterligere forverring av sikkerhetssituasjonen også i andre deler av landet. Den enkelte oppfordres til å følge utviklingen i media ol. og er ansvarlig for å gjøre egne sikkerhetsvurderinger.",
    "warning": {
     "title": "Reiseadvarsel for Libanon",
-    "status": "SIST OPPDATERT: 06.03.2026 - FORTSATT GYLDIG",
+    "status": "SIST OPPDATERT: 29.09.2026 - FORTSATT GYLDIG",
     "paragraphs": [
-     "Utenriksdepartementet fraråder alle reiser til Libanon og oppfordrer norske borgere til å forlate landet."
+     "Utenriksdepartementet fraråder alle reiser sør for Saida. Utenriksdepartementet fraråder videre alle reiser til Bekaadalen, med unntak av Zahle, samt alle reiser nærmere enn fem kilometer fra grensen mot Syria.",
+     "Utenriksdepartementet fraråder alle reiser til flyktningleirer, inkludert leirer i nærheten av Tripoli, Saida og Beirut.",
+     "Utenriksdepartementet fraråder alle reiser til Dahieh-området i Beiruts sørlige forstad, sør for Saeb Salam Avenue, med unntak av den internasjonale flyplassen og hovedvei nummer 51 til denne.",
+     "Utenriksdepartementet fraråder reiser som ikke er strengt nødvendige til øvrige deler av Libanon."
     ]
    },
-   "hash": "1d5152320889",
+   "hash": "b8869a62f87c",
    "url": "https://www.regjeringen.no/no/tema/utenrikssaker/reiseinformasjon/velg-land/reiseinfo_libanon/id2415116/"
   },
   "liberia": {
@@ -1582,7 +1585,7 @@
   },
   "tanzania": {
    "name": "Tanzania",
-   "page_updated": "15.05.2026",
+   "page_updated": "29.09.2026",
    "ingress": "Tanzania opplevde høsten 2025 de verste politiske urolighetene i sin nyere historie. Risikoen for landsomfattende uro anses for å være redusert, men lokal uro kan fortsatt oppstå med liten eller ingen forhåndsvarsling.",
    "warning": {
     "title": "Reiseadvarsel for Tanzania",
