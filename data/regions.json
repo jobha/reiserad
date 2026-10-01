@@ -107,6 +107,21 @@
   {"level": "necessary", "border": ["SOM", "SOL"], "km": 60, "label": "Innenfor 60 km fra grensen mot Somalia"},
   {"level": "necessary", "adm": "KEN/ADM1", "names": ["Garissa"], "label": "Garissa fylke"}
  ]},
+ "libanon": {"zones": [
+  {"level": "necessary", "country": true, "label": "Øvrige deler av Libanon"},
+  {"level": "all", "adm": "LBN/ADM1", "names": ["Liban-Sud", "Nabatîyé"], "and": {"poly": [[34.9, 32.9], [36.2, 32.9], [36.2, 33.545], [34.9, 33.545]]}, "approx": true, "label": "Sør for Saida"},
+  {"level": "all", "adm": "LBN/ADM1", "names": ["Béqaa", "Baalbek-Hermel"], "label": "Bekaadalen"},
+  {"level": "necessary", "point": [35.902, 33.847], "km": 4, "approx": true, "label": "Zahle"},
+  {"level": "all", "border": ["SYR"], "km": 5, "label": "Nærmere enn 5 km fra grensen mot Syria"},
+  {"level": "all", "poly": [[35.488, 33.872], [35.522, 33.872], [35.535, 33.85], [35.53, 33.828], [35.505, 33.832], [35.495, 33.845], [35.488, 33.855]], "approx": true, "label": "Dahieh, sør for Saeb Salam Avenue"},
+  {"level": "necessary", "line": [[35.497, 33.872], [35.496, 33.85], [35.493, 33.83]], "km": 0.3, "approx": true, "label": "Hovedvei 51 til flyplassen"},
+  {"level": "all", "point": [35.9606, 34.5128], "km": 1, "approx": true, "label": "Flyktningleiren Nahr al-Bared (ved Tripoli)"},
+  {"level": "all", "point": [35.8711, 34.4497], "km": 1, "approx": true, "label": "Flyktningleiren Beddawi (ved Tripoli)"},
+  {"level": "all", "point": [35.39, 33.5435], "km": 1.2, "approx": true, "label": "Flyktningleirene Ain al-Hilweh og Mieh Mieh (ved Saida)"},
+  {"level": "all", "point": [35.4994, 33.8622], "km": 0.5, "approx": true, "label": "Flyktningleiren Shatila (Beirut)"},
+  {"level": "all", "point": [35.5033, 33.8483], "km": 0.5, "approx": true, "label": "Flyktningleiren Burj al-Barajneh (Beirut)"},
+  {"level": "all", "point": [35.5958, 33.9358], "km": 0.7, "approx": true, "label": "Flyktningleiren Dbayeh (nord for Beirut)"}
+ ]},
  "malaysia": {"zones": [
   {"level": "necessary", "poly": [[118.05, 5.9], [118.6, 5.95], [119.45, 5.3], [119.05, 4.95], [118.75, 4.45], [118.85, 4.0], [117.8, 4.05], [117.8, 4.35], [118.2, 4.6], [118.05, 4.95], [118.2, 5.4], [117.95, 5.75]], "approx": true, "label": "Øyer og kyst i østlige Sabah fra Sandakan til Tawau"},
   {"level": "none", "adm": "MYS/ADM2", "names": ["Sandakan"], "label": "Landområdene i Sandakan-distriktet"}
