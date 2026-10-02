@@ -1,5 +1,5 @@
 {
- "fetched": "2026-10-02T11:47:26+0200",
+ "fetched": "2026-10-02T19:54:14+0200",
  "source": "https://www.regjeringen.no/no/tema/utenrikssaker/reiseinformasjon/velg-land/id2414273/",
  "failed": [],
  "countries": {
@@ -447,9 +447,9 @@
    "ingress": "Sikkerhetssituasjonen i Etiopia er flytende og kompleks. Siden september 2026 har situasjonen i Nord-Etiopia blitt betydelig forverret, med pågående militær aktivitet og sammenstøt i deler av Tigray, Amhara og Afar. For mer informasjon om situasjonen i landet, se punktet om «sikkerhet»",
    "warning": {
     "title": "Reiseadvarsel for Etiopia",
-    "status": "SIST OPPDATERT: 20. MARS 2025 - FORTSATT GYLDIG",
+    "status": "SIST OPPDATERT: 02. OKTOBER 2026 - FORTSATT GYLDIG",
     "paragraphs": [
-     "Utenriksdepartementet fraråder alle reiser til Tigray, Amhara, Gambella, og Benishangul Gumuz-regionene, samt grenseområdene mot disse i tilstøtende regioner.",
+     "Utenriksdepartementet fraråder alle reiser til Tigray, Amhara, Afar, Gambella, og Benishangul Gumuz-regionene, samt grenseområdene mot disse i tilstøtende regioner.",
      "Utenriksdepartementet fraråder alle reiser til konfliktrammede deler av Oromia-regionen, inkludert områdene Kelam Welega, West Welega, Buno Bedele, East Welega og Horo Guduru Welega i vestlige Oromia.",
      "Utenriksdepartementet fraråder alle reiser til østlige deler av Somali-regionen og grenseområdene til Somalia.",
      "Utenriksdepartementet fraråder alle reiser til grenseområdene mot Sudan, Sør-Sudan og Eritrea.",
@@ -457,7 +457,7 @@
      "Det er ikke reiseadvarsel til hovedstaden Addis Abeba."
     ]
    },
-   "hash": "394ea6fef1c5",
+   "hash": "6b92a388fcf9",
    "url": "https://www.regjeringen.no/no/tema/utenrikssaker/reiseinformasjon/velg-land/reiseinfo_etiopia/id2414712/"
   },
   "ewatini": {
@@ -1585,7 +1585,7 @@
   },
   "tanzania": {
    "name": "Tanzania",
-   "page_updated": "29.09.2026",
+   "page_updated": "02.10.2026",
    "ingress": "Tanzania opplevde høsten 2025 de verste politiske urolighetene i sin nyere historie. Risikoen for landsomfattende uro anses for å være redusert, men lokal uro kan fortsatt oppstå med liten eller ingen forhåndsvarsling.",
    "warning": {
     "title": "Reiseadvarsel for Tanzania",
