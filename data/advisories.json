@@ -1,5 +1,5 @@
 {
- "fetched": "2026-10-02T19:54:14+0200",
+ "fetched": "2026-10-05T16:39:00+0200",
  "source": "https://www.regjeringen.no/no/tema/utenrikssaker/reiseinformasjon/velg-land/id2414273/",
  "failed": [],
  "countries": {
@@ -252,7 +252,7 @@
   },
   "burundi": {
    "name": "Burundi",
-   "page_updated": "29.05.2026",
+   "page_updated": "05.10.2026",
    "ingress": "Sikkerhetssituasjonen i Burundi er ustabil og uforutsigbar. Den politiske og humanitære situasjonen kan endre seg raskt. Øst i Kongo kjemper opprørsgruppen M23 mot allierte av kongolesiske myndigheter, inkludert Burundi, og kampene forekommer nær Burundis grenser. 31. mars 2026 forekom flere store eksplosjoner i Bujumbura da et våpenlager ble antent ved en militærbase. Faktiske tapstall er uklare, men hendelsen belyser uforutsigbarheten i sikkerhetsmiljøet i området. Vi oppfordrer alle reisende til å unngå folkemengder og følge med på oppdateringene fra lokale myndigheter. Norske myndigheters mulighet til å tilby konsulær bistand til norske statsborgere er begrenset.",
    "warning": {
     "title": "Reiseadvarsel for Burundi",
@@ -366,8 +366,8 @@
   },
   "ecuador": {
    "name": "Ecuador",
-   "page_updated": "07.05.2026",
-   "ingress": "Situasjonen i Ecuador er alvorlig og uforutsigbar. Myndighetene har erklært unntakstilstand i flere deler av landet som følge av en alvorlig sikkerhetssituasjon preget av høy kriminalitet, organisert vold, eksplosivangrep og sosial uro. Tiltakene innebærer blant annet portforbud i berørte områder, utvidede fullmakter for politi og militære styrker. Samtidig kan strømrasjoner, skogbranner og andre naturforhold påvirke transport og daglige aktiviteter enkelte steder. Reisende oppfordres til å utvise stor forsiktighet, holde seg løpende oppdatert om situasjonen og følge lokale myndigheters råd og pålegg.",
+   "page_updated": "05.10.2026",
+   "ingress": "Situasjonen i Ecuador er alvorlig og uforutsigbar. Myndighetene har erklært unntakstilstand i flere deler av landet som følge av en alvorlig sikkerhetssituasjon preget av høy kriminalitet, organisert vold, eksplosivangrep og sosial uro. Tiltakene innebærer blant annet portforbud i berørte områder, samt utvidede fullmakter for politi og militære styrker. Strømrasjoner, skogbranner og andre naturforhold kan påvirke transport og daglige aktiviteter enkelte steder. Reisende oppfordres til å utvise stor forsiktighet, holde seg løpende oppdatert om situasjonen og følge lokale myndigheters råd og pålegg.",
    "warning": null,
    "url": "https://www.regjeringen.no/no/tema/utenrikssaker/reiseinformasjon/velg-land/reiseinfo_ecuador/id2414757/"
   },
@@ -724,8 +724,8 @@
   },
   "jordan": {
    "name": "Jordan",
-   "page_updated": "21.09.2026",
-   "ingress": "Selv om sikkerhetssituasjonen i Jordan vurderes som stabil, er den regionale situasjonen i Midtøsten uforutsigbar og kan endre seg på kort varsel. Dette kan påvirke luftrommet og føre til endringer i flytrafikken. Reisende anbefales derfor å forsikre seg om at reiseforsikringen gir tilstrekkelig dekning. Følg råd fra jordanske myndigheter og vurder egen sikkerhet.",
+   "page_updated": "05.10.2026",
+   "ingress": "Selv om sikkerhetssituasjonen i Jordan vurderes som stabil, er den regionale situasjonen i Midtøsten uforutsigbar og kan endre seg på kort varsel. Dette kan påvirke luftrommet og føre til endringer i flytrafikken. Reisende anbefales derfor å forsikre seg om at reiseforsikringen gir tilstrekkelig dekning. Følg råd fra jordanske myndigheter og vurder egen sikkerhet. Unngå områder rundt militære installasjoner og baser.",
    "warning": null,
    "url": "https://www.regjeringen.no/no/tema/utenrikssaker/reiseinformasjon/velg-land/reiseinfo_jordan/id2428573/"
   },
@@ -789,7 +789,7 @@
   },
   "kina": {
    "name": "Kina",
-   "page_updated": "12.05.2026",
+   "page_updated": "05.10.2026",
    "ingress": "Norske borgere som reiser til Kina for forretningsreiser, turisme, familiebesøk og transitt, trenger ikke søke om visum før avreise for opphold i Kina i inntil 30 dager. Reglene er fra og med 8. november 2024 og videreføres for ytterligere ett år, ut 2026. Andre reisende må fortsatt søke om visum før avreise.",
    "warning": null,
    "url": "https://www.regjeringen.no/no/tema/utenrikssaker/reiseinformasjon/velg-land/reiseinfo_kina/id2414833/"
@@ -1333,7 +1333,7 @@
   },
   "rwanda": {
    "name": "Rwanda",
-   "page_updated": "29.05.2026",
+   "page_updated": "05.10.2026",
    "ingress": "Rwanda anses vanligvis som trygt å reise i, men konflikten i det østlige Kongo har siden januar 2025 medført en ustabil og uoversiktlig situasjon i grenseområdene mot Kongo, herunder Rubavu-provinsen. Reisende oppfordres til å utvise stor forsiktighet, sette seg godt inn i forholdene og følge råd fra lokale myndigheter.",
    "warning": {
     "title": "Reiseadvarsel for Rwanda",
@@ -1713,7 +1713,7 @@
   },
   "uganda": {
    "name": "Uganda",
-   "page_updated": "14.09.2026",
+   "page_updated": "05.10.2026",
    "ingress": "Det pågår et utbrudd av ebola-virus i østlige deler av Den demokratiske republikken Kongo (DRK) som også har medført smitte og dødsfall i Uganda. Der er ikke rapportert om nye tilfeller av ebola i Uganda siden juni 2026 og Verdens helseorganisasjon (WHO) erklærte 27. august at utbruddet i landet var over. Det er fremdeles risiko for spredning fra DRK til nabolandene, inkludert Uganda, og forebygging og årvåkenhet er viktig. Oppretthold god hygiene, unngå direkte kontakt med syke personer og rapporter symptomer tidlig. Les mer under «helse».",
    "warning": null,
    "url": "https://www.regjeringen.no/no/tema/utenrikssaker/reiseinformasjon/velg-land/reiseinfo_uganda/id2415945/"
