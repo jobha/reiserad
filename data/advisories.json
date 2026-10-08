@@ -1,5 +1,5 @@
 {
- "fetched": "2026-10-07T22:39:32+0200",
+ "fetched": "2026-10-08T20:52:52+0200",
  "source": "https://www.regjeringen.no/no/tema/utenrikssaker/reiseinformasjon/velg-land/id2414273/",
  "failed": [],
  "countries": {
@@ -1410,16 +1410,17 @@
   },
   "saudiarabia": {
    "name": "Saudi-Arabia",
-   "page_updated": "21.07.2026",
+   "page_updated": "08.10.2026",
    "ingress": "Sikkerhetssituasjonen i Saudi Arabia er uoversiktlig og alvorlig, som følge av krigshandlingene som påvirker hele regionen. Det går kommersielle flyvninger fra flere flyplasser i landet, men endringer kan skje raskt og uten forvarsel. Ta kontakt med ditt flyselskap og reiseselskap for informasjon om utreisemuligheter. Sjekk vilkårene i din reiseforsikring. Vurder egen sikkerhet, lytt til råd fra pålitelige lokale kilder, og søk tilflukt der dette anbefales. Vis aktsomhet ved opphold i eller nær flyplasser.",
    "warning": {
     "title": "Reiseadvarsel for Saudi-Arabia",
-    "status": "SIST OPPDATERT: 01.07.2026 - FORTSATT GYLDIG",
+    "status": "SIST OPPDATERT: 08.10.2026 - FORTSATT GYLDIG",
     "paragraphs": [
-     "Utenriksdepartementet fraråder alle reiser til områder som er nærmere enn 50 km fra grensen mot Jemen."
+     "Utenriksdepartementet fraråder alle reiser til områder som er nærmere enn 110 km fra grensen mot Jemen og til byene Abha og Khamis Mushait.",
+     "Utenriksdepartementet fraråder reiser som ikke er strengt nødvendige til øvrige deler av Saudi-Arabia."
     ]
    },
-   "hash": "e63ec9276b2f",
+   "hash": "546337910d2d",
    "url": "https://www.regjeringen.no/no/tema/utenrikssaker/reiseinformasjon/velg-land/reiseinfo_saudiarabia/id2416470/"
   },
   "senegal": {
