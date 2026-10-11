@@ -1,5 +1,5 @@
 {
- "fetched": "2026-10-10T23:45:10+0200",
+ "fetched": "2026-10-11T21:35:40+0200",
  "source": "https://www.regjeringen.no/no/tema/utenrikssaker/reiseinformasjon/velg-land/id2414273/",
  "failed": [],
  "countries": {
@@ -111,8 +111,8 @@
   },
   "bahrain": {
    "name": "Bahrain",
-   "page_updated": "22.07.2026",
-   "ingress": "Sikkerhetssituasjonen i Midtøsten er uoversiktlig og alvorlig etter eskaleringen i konflikten mellom Israel, USA og Iran. Vurder egen sikkerhet, lytt til råd fra pålitelige lokale kilder, og søk tilflukt der dette anbefales. Luftrommet er stengt i deler av regionen, og endringer kan skje raskt.",
+   "page_updated": "11.10.2026",
+   "ingress": "Sikkerhetssituasjonen i Midtøsten er uoversiktlig og alvorlig etter eskaleringen i konflikten mellom Israel, USA og Iran. Vurder egen sikkerhet, lytt til råd fra pålitelige lokale kilder, og søk tilflukt der dette anbefales. Endringer i flyvninger og stenging av luftrommet i deler av regionen kan skje på kort varsel.",
    "warning": {
     "title": "Reiseadvarsel for Bahrain",
     "status": "SIST OPPDATERT: 22.07.2026 - FORTSATT GYLDIG",
@@ -1121,8 +1121,8 @@
   },
   "nepal": {
    "name": "Nepal",
-   "page_updated": "28.08.2026",
-   "ingress": "Nepal er et land med stor geografisk variasjon og enkelte naturgitte risikoforhold. Jordskjelv, flom, jordskred og andre naturhendelser kan påvirke reiser og opphold i landet, særlig i monsunperioden fra juni til september. Deler av landet ble rammet av flom 26. august 2026 etter et jord- og isskred i Rasuwa-distriktet nord i Nepal. Reisende bør følge lokale myndigheters råd, være oppmerksomme på vær- og veiforhold og holde seg oppdatert på situasjonen. Se mer informasjon under «Naturforhold og naturkatastrofer».",
+   "page_updated": "11.10.2026",
+   "ingress": "Nepal er et land med stor geografisk variasjon og enkelte naturgitte risikoforhold. Jordskjelv, flom, jordskred og andre naturhendelser kan påvirke reiser og opphold i landet, særlig i monsunperioden. Deler av landet har nylig vært rammet av flere naturhendelser, blant annet skred og flom. Reisende bør følge lokale myndigheters råd, være oppmerksomme på vær- og veiforhold og holde seg oppdatert på situasjonen. Se mer informasjon under «Naturforhold og naturkatastrofer».",
    "warning": null,
    "url": "https://www.regjeringen.no/no/tema/utenrikssaker/reiseinformasjon/velg-land/reiseinfo_nepal/id2416354/"
   },
@@ -1193,8 +1193,8 @@
   },
   "oman": {
    "name": "Oman",
-   "page_updated": "21.07.2026",
-   "ingress": "Sikkerhetssituasjonen i Oman er alvorlig etter eskaleringen i konflikten mellom Israel, USA og Iran. Hovedflyplassen er åpen, men flyvninger påvirkes av situasjonen. Det kan føre til innstilte og forsinkede flyvninger. Ta kontakt med ditt flyselskap og reiseselskap for informasjon om utreisemuligheter og vilkår. Endringer kan skje raskt og uten forvarsel. Sjekk vilkårene i din reiseforsikring. Vurder egen sikkerhet, lytt til råd fra pålitelige lokale kilder, og søk tilflukt der dette anbefales.",
+   "page_updated": "11.10.2026",
+   "ingress": "Sikkerhetssituasjonen i Oman er alvorlig som følge av den pågående regionale konflikten. Hovedflyplassen er åpen, men flyvninger vil kunne påvirkes ved eskalering av konflikten. Endringer kan skje raskt og uten forvarsel. Sjekk vilkårene i din reiseforsikring og ta kontakt med ditt flyselskap og reiseselskap for informasjon om utreisemuligheter og vilkår. Vurder egen sikkerhet, lytt til råd fra pålitelige lokale kilder, og søk tilflukt der dette anbefales.",
    "warning": null,
    "url": "https://www.regjeringen.no/no/tema/utenrikssaker/reiseinformasjon/velg-land/reiseinfo_oman/id2424415/"
   },
@@ -1410,8 +1410,8 @@
   },
   "saudiarabia": {
    "name": "Saudi-Arabia",
-   "page_updated": "10.10.2026",
-   "ingress": "Sikkerhetssituasjonen i Saudi Arabia er uoversiktlig og alvorlig, som følge av krigshandlingene som påvirker hele regionen. Riyadh flyplass, King Khalid International Airport (KKIA), har vært utsatt for bekreftede angrep. Reisende bør unngå flyplassen og områdene rundt, og vurdere alternative reiseruter.",
+   "page_updated": "11.10.2026",
+   "ingress": "Sikkerhetssituasjonen i Saudi Arabia er uoversiktlig og alvorlig, som følge av krigshandlingene som påvirker hele regionen. Riyadh flyplass, King Khalid International Airport (KKIA), har vært utsatt for bekreftede angrep. Situasjonen tilsier at norske borgere ikke bør reise til eller oppholde seg på eller i nærheten av flyplassen. Vær også ekstra oppmerksom ved opphold på eller nær andre flyplasser.",
    "warning": {
     "title": "Reiseadvarsel for Saudi-Arabia",
     "status": "SIST OPPDATERT: 08.10.2026 - FORTSATT GYLDIG",
