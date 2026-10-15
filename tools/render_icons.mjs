@@ -2,7 +2,7 @@
 //   16/32 px: brand/favicon-small.svg (forenklet klode, leselig i fanen)
 //   48 px og større: brand/logo.svg
 // Kjør fra en mappe der puppeteer-core finnes (f.eks. ~/legeonline/app):
-//   node /Users/jonasbull/reiseråd/tools/render_icons.mjs /Users/jonasbull/reiseråd
+//   node <repo>/tools/render_icons.mjs <repo>
 // og bygg deretter favicon.ico av icon-16/32/48 (se README).
 import puppeteer from 'puppeteer-core';
 import fs from 'fs';

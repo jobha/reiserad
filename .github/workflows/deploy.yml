@@ -2,7 +2,7 @@ name: deploy
 
 # Ved push til main og hver tredje time:
 #  - henter UDs reiseråd og bygger kartdata + landsider på den selvhostede
-#    runneren på ig68-pi4 (regjeringen.no svarer 403 til GitHubs datasentre,
+#    runneren på Pi-en (regjeringen.no svarer 403 til GitHubs datasentre,
 #    så skrapingen må gå fra en vanlig linje). Siden serveres fra Vercel, så
 #    er Pi-en nede, står siden bare med siste data.
 #  - deployer site/ til Vercel (LegeOnline-teamet, prosjekt reiserad -> reiserad.no)
@@ -29,13 +29,14 @@ permissions:
 jobs:
   build:
     runs-on: [self-hosted, reiserad]
-    env:
-      REISERAD_CACHE: /home/jonasbull/.cache/reiserad
     outputs:
       review: ${{ steps.build.outputs.review }}
       summary: ${{ steps.build.outputs.summary }}
     steps:
       - uses: actions/checkout@v7
+
+      - name: Geodata-cache utenfor arbeidsmappen
+        run: echo "REISERAD_CACHE=$HOME/.cache/reiserad" >> "$GITHUB_ENV"
 
       # Pi-en har python3-shapely fra apt; geodata caches i REISERAD_CACHE.
       - name: Hent UDs reiseråd
