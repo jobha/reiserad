@@ -34,6 +34,8 @@ jobs:
       summary: ${{ steps.build.outputs.summary }}
     steps:
       - uses: actions/checkout@v7
+        with:
+          fetch-depth: 0  # scraper/history.py leser historikken til data/advisories.json
 
       - name: Geodata-cache utenfor arbeidsmappen
         run: echo "REISERAD_CACHE=$HOME/.cache/reiserad" >> "$GITHUB_ENV"

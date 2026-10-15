@@ -23,6 +23,7 @@ from shapely.geometry import LineString, Point, mapping, shape
 from shapely.ops import transform, unary_union
 
 import gb
+import history
 import pages
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -293,7 +294,7 @@ def build():
             rec["vax_url"] = site["vax_url"]
     dump("info.json", {"fetched": adv["fetched"], "source": adv["source"],
                        "publisher": site["publisher"], "countries": info})
-    n_pages = pages.write_all(OUT.parent, info, ne, zones_by_iso, adv["fetched"], site)
+    n_pages = pages.write_all(OUT.parent, info, ne, zones_by_iso, adv["fetched"], site, history.build())
 
     n = sum(1 for r in info.values() if r["level"])
     stale = [r["slug"] for r in info.values() if r.get("stale")]

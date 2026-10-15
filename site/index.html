@@ -271,7 +271,7 @@ function popupHtml(iso, zone) {
   if (zone?.approx) h += `<div class="note">Grensen for denne sonen er tegnet omtrentlig ut fra UDs beskrivelse.</div>`;
   if (c.unmapped) h += `<div class="note">UD beskriver regionale advarsler her som ikke er tegnet inn ennå. Hele landet er skravert – les UDs tekst for hvilke områder det gjelder.</div>`;
   if (c.stale) h += `<div class="note">UD har endret teksten siden sonene ble tegnet. Les UDs tekst.</div>`;
-  h += `<a class="ud" href="${esc(c.url)}" target="_blank" rel="noopener">Les reiserådet hos UD →</a>`;
+  h += `<a class="ud" href="${esc(c.url)}" target="_blank" rel="noopener">Les reiseinformasjonen hos UD →</a>`;
   if (c.vax_url) h += `<div class="vax"><b>Skal du til ${esc(c.name)}?</b> LegeOnline gir råd om reisevaksiner før reisen. <a href="${esc(utm(c.vax_url, "kart"))}" target="_blank" rel="noopener">Reisevaksiner for ${esc(c.name)} →</a></div>`;
   h += `<div class="more">${c.level ? `<a href="/land/${esc(c.slug)}/">Egen side for ${esc(c.name)}</a> · ` : ""}<a href="https://github.com/jobha/reiserad/issues/new?template=feil-i-kartet.yml&title=${encodeURIComponent("Feil i kartet: " + c.name)}&land=${encodeURIComponent(c.name)}&ud=${encodeURIComponent(c.url)}" target="_blank" rel="noopener">Meld feil i kartet</a></div></div>`;
   return h;

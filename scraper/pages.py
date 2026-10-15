@@ -94,6 +94,10 @@ ul.zones li { display:flex; gap:10px; align-items:baseline; margin:6px 0; }
 .actions { display:flex; flex-wrap:wrap; gap:10px; margin-top:20px; }
 .btn { display:inline-block; padding:10px 14px; border-radius:10px; text-decoration:none; font-weight:600; border:1px solid var(--line); }
 .btn.primary { background:var(--link); color:#fff; border-color:var(--link); }
+.muted { color:var(--muted); font-size:14px; }
+details { border:1px solid var(--line); border-radius:10px; padding:8px 12px; margin:8px 0; background:var(--card); }
+details summary { cursor:pointer; font-weight:600; }
+details p { margin:8px 0 0; }
 footer { color:var(--muted); font-size:13px; margin-top:40px; border-top:1px solid var(--line); padding-top:14px; }
 footer a { color:var(--muted); }
 .az { columns:2 220px; padding:0; list-style:none; }
@@ -167,6 +171,29 @@ def page(title, desc, canonical, body, jsonld=None):
 """
 
 
+MONTHS = ["januar", "februar", "mars", "april", "mai", "juni", "juli",
+          "august", "september", "oktober", "november", "desember"]
+
+
+def nb_date(iso):
+    y, m, d = iso.split("-")
+    return f"{int(d)}. {MONTHS[int(m) - 1]} {y}"
+
+
+def history_html(entries):
+    """Tidligere versjoner av UDs advarsel (alle utenom gjeldende), nyeste først."""
+    old = entries[:-1]
+    if not old:
+        return ""
+    items = []
+    for h in reversed(old):
+        body = "".join(f"<p>{e(p)}</p>" for p in h["paragraphs"]) or "<p>Ingen reiseadvarsel.</p>"
+        items.append(f'<details><summary>{nb_date(h["from"])} – {nb_date(h["until"])}</summary>{body}</details>')
+    return ("<h2>Tidligere reiseadvarsler</h2>"
+            f'<p class="muted">Endringer i UDs reiseadvarsel siden {nb_date(entries[0]["from"])}, '
+            "datert etter når Reiserådkart så endringen.</p>" + "".join(items))
+
+
 def describe(rec):
     """Kort, søkevennlig beskrivelse (meta description)."""
     name = rec["name"]
@@ -181,7 +208,7 @@ def describe(rec):
     return text if len(text) <= 158 else text[:155].rsplit(" ", 1)[0] + " …"
 
 
-def country_page(iso, rec, country, zones, fetched):
+def country_page(iso, rec, country, zones, fetched, history=()):
     name = rec["name"]
     slug = rec["slug"]
     canonical = f"{SITE}/land/{slug}/"
@@ -219,7 +246,8 @@ def country_page(iso, rec, country, zones, fetched):
         b.append('<p class="note">UD har en regional advarsel her som ikke er tegnet inn på kartet ennå. Les UDs tekst for hvilke områder den gjelder.</p>')
     if rec.get("stale"):
         b.append('<p class="note">UD har endret teksten siden områdene ble tegnet inn. Les UDs tekst.</p>')
-    b.append(f'<div class="actions"><a class="btn primary" href="{e(rec["url"])}">Les hele reiserådet hos UD</a>'
+    b.append(history_html(list(history)))
+    b.append(f'<div class="actions"><a class="btn primary" href="{e(rec["url"])}">Les hele reiseinformasjonen hos UD</a>'
              f'<a class="btn" href="/#{slug}">Se på verdenskartet</a>'
              f'<a class="btn" href="{e(issue_url(name, rec["url"]))}">Meld feil i kartet</a></div>')
     b.append(vax_box(rec))
@@ -269,7 +297,7 @@ def index_page(info):
     return page("Reiseråd for alle land A–Å – UDs reiseadvarsler", desc, SITE + "/land/", body)
 
 
-def write_all(out_dir, info, geoms, zones_by_iso, fetched, site):
+def write_all(out_dir, info, geoms, zones_by_iso, fetched, site, history=None):
     SITE_CFG.clear()
     SITE_CFG.update(site)
     """out_dir = site/. geoms[iso] = landflate, zones_by_iso[iso] = [(geom, level, partial, label)]."""
@@ -284,7 +312,8 @@ def write_all(out_dir, info, geoms, zones_by_iso, fetched, site):
             continue
         d = land / rec["slug"]
         d.mkdir(exist_ok=True)
-        (d / "index.html").write_text(country_page(iso, rec, geoms[iso], zones_by_iso.get(iso, []), fetched))
+        (d / "index.html").write_text(country_page(iso, rec, geoms[iso], zones_by_iso.get(iso, []), fetched,
+                                                         (history or {}).get(rec["key"], ())))
         urls.append((f"{SITE}/land/{rec['slug']}/", fetched[:10], "0.7"))
     (land / "index.html").write_text(index_page(info))
     sm = ['<?xml version="1.0" encoding="UTF-8"?>', '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">']

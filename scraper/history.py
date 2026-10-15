@@ -1,0 +1,52 @@
+"""Historikk over UDs reiseadvarsler, hentet fra git-loggen til data/advisories.json
+(deploy-jobben committer filen hver gang UD endrer noe). Krever full git-historikk
+(fetch-depth: 0 i workflowen); uten den blir historikken bare kortere."""
+import json
+import subprocess
+from pathlib import Path
+
+ROOT = Path(__file__).resolve().parent.parent
+PATH = "data/advisories.json"
+
+
+def _git(*args):
+    return subprocess.run(["git", "-C", str(ROOT), *args], capture_output=True, text=True, check=True).stdout
+
+
+def snapshots():
+    """[(dato, advisories)] fra eldste til nyeste, pluss arbeidskopien til slutt."""
+    try:
+        log = _git("log", "--reverse", "--format=%H %cs", "--", PATH).split("\n")
+    except (OSError, subprocess.CalledProcessError):
+        log = []
+    out = []
+    for line in filter(None, log):
+        sha, date = line.split()
+        try:
+            out.append((date, json.loads(_git("show", f"{sha}:{PATH}"))))
+        except (subprocess.CalledProcessError, json.JSONDecodeError):
+            continue
+    current = json.loads((ROOT / PATH).read_text())
+    out.append((current["fetched"][:10], current))
+    return out
+
+
+def build():
+    """{UD-nøkkel: [{"from", "until", "status", "paragraphs"}]}, eldste først.
+    Siste element er gjeldende tekst (until=None). En periode uten advarsel har
+    paragraphs=[]. Land som mangler i et øyeblikksbilde (feilet skraping) hoppes over."""
+    hist = {}
+    for date, adv in snapshots():
+        for key, c in adv["countries"].items():
+            w = c.get("warning")
+            paragraphs = w["paragraphs"] if w else []
+            entries = hist.setdefault(key, [])
+            if entries and entries[-1]["paragraphs"] == paragraphs:
+                if w:
+                    entries[-1]["status"] = w["status"]
+                continue
+            if entries:
+                entries[-1]["until"] = date
+            entries.append({"from": date, "until": None, "status": w["status"] if w else "",
+                            "paragraphs": paragraphs})
+    return hist
