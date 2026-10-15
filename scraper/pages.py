@@ -188,10 +188,13 @@ def history_html(entries):
     items = []
     for h in reversed(old):
         body = "".join(f"<p>{e(p)}</p>" for p in h["paragraphs"]) or "<p>Ingen reiseadvarsel.</p>"
-        items.append(f'<details><summary>{nb_date(h["from"])} – {nb_date(h["until"])}</summary>{body}</details>')
-    return ("<h2>Tidligere reiseadvarsler</h2>"
-            f'<p class="muted">Endringer i UDs reiseadvarsel siden {nb_date(entries[0]["from"])}, '
-            "datert etter når Reiserådkart så endringen.</p>" + "".join(items))
+        ca = "ca. " if h.get("approx") else ""
+        items.append(f'<details><summary>{ca}{nb_date(h["from"])} – {nb_date(h["until"])}</summary>{body}</details>')
+    note = "Endringer i UDs reiseadvarsel, datert etter når de ble sett første gang."
+    if any(h.get("approx") for h in entries):
+        note += (' Datoer merket «ca.» er fra arkivkopier i <a href="https://web.archive.org/">Wayback Machine</a> '
+                 "og kan ligge uker eller måneder etter UDs faktiske endring.")
+    return f'<h2>Tidligere reiseadvarsler</h2><p class="muted">{note}</p>' + "".join(items)
 
 
 def describe(rec):

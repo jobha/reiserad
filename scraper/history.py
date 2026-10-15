@@ -31,8 +31,14 @@ def snapshots():
     return out
 
 
+def archive():
+    """Eldre tekster fra web.archive.org (tools/wayback_history.py), uten «until»."""
+    path = ROOT / "data" / "history_archive.json"
+    return json.loads(path.read_text())["countries"] if path.exists() else {}
+
+
 def build():
-    """{UD-nøkkel: [{"from", "until", "status", "paragraphs"}]}, eldste først.
+    """{UD-nøkkel: [{"from", "until", "status", "paragraphs", "approx"?}]}, eldste først.
     Siste element er gjeldende tekst (until=None). En periode uten advarsel har
     paragraphs=[]. Land som mangler i et øyeblikksbilde (feilet skraping) hoppes over."""
     hist = {}
@@ -49,4 +55,17 @@ def build():
                 entries[-1]["until"] = date
             entries.append({"from": date, "until": None, "status": w["status"] if w else "",
                             "paragraphs": paragraphs})
-    return hist
+    return {k: _prepend(arch.get(k, []), v) for k, v in hist.items()} if (arch := archive()) else hist
+
+
+def _prepend(old, entries):
+    """Legg arkivtekstene foran git-historikken. Arkivdatoer er omtrentlige (approx)."""
+    start = entries[0]["from"]
+    old = [dict(o, approx=True) for o in old if o["from"] < start]
+    if old and old[-1]["paragraphs"] == entries[0]["paragraphs"]:
+        entries[0] = dict(entries[0], **{"from": old[-1]["from"], "approx": True})
+        old.pop()
+    out = old + entries
+    for a, b in zip(out, out[1:]):
+        a["until"] = b["from"]
+    return out
