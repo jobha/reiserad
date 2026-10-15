@@ -61,8 +61,8 @@
  ]},
  "etiopia": {"zones": [
   {"level": "necessary", "country": true, "label": "Øvrige deler av Etiopia"},
-  {"level": "all", "near": {"adm": "ETH/ADM1", "names": ["Tigray", "Amhara", "Gambela", "Beneshangul Gumu"]}, "km": 30, "approx": true, "label": "Grenseområdene mot Tigray, Amhara, Gambella og Benishangul Gumuz"},
-  {"level": "all", "adm": "ETH/ADM1", "names": ["Tigray", "Amhara", "Gambela", "Beneshangul Gumu"], "label": "Tigray, Amhara, Gambella og Benishangul Gumuz"},
+  {"level": "all", "near": {"adm": "ETH/ADM1", "names": ["Tigray", "Amhara", "Afar", "Gambela", "Beneshangul Gumu"]}, "km": 30, "approx": true, "label": "Grenseområdene mot Tigray, Amhara, Afar, Gambella og Benishangul Gumuz"},
+  {"level": "all", "adm": "ETH/ADM1", "names": ["Tigray", "Amhara", "Afar", "Gambela", "Beneshangul Gumu"], "label": "Tigray, Amhara, Afar, Gambella og Benishangul Gumuz"},
   {"level": "all", "adm": "ETH/ADM2", "names": ["Kelem Wellega", "West Wellega", "East Wellega", "Horo Guduru"], "label": "Vestlige Oromia (Welega-sonene og Horo Guduru)"},
   {"level": "all", "point": [36.35, 8.45], "km": 55, "approx": true, "label": "Buno Bedele (Oromia)"},
   {"level": "all", "adm": "ETH/ADM1", "names": ["Somali"], "and": {"poly": [[43.5, 3], [48.5, 3], [48.5, 9.5], [43.5, 9.5]]}, "approx": true, "label": "Østlige deler av Somali-regionen"},
@@ -165,7 +165,10 @@
   {"level": "necessary", "adm": "RWA/ADM2", "names": ["Rubavu"], "label": "Rubavu-distriktet"}
  ]},
  "saudiarabia": {"zones": [
-  {"level": "all", "border": ["YEM"], "km": 50, "label": "Nærmere enn 50 km fra grensen mot Jemen"}
+  {"level": "necessary", "country": true, "label": "Øvrige deler av Saudi-Arabia"},
+  {"level": "all", "border": ["YEM"], "km": 110, "label": "Nærmere enn 110 km fra grensen mot Jemen"},
+  {"level": "all", "point": [42.50, 18.22], "km": 15, "approx": true, "label": "Abha"},
+  {"level": "all", "point": [42.73, 18.31], "km": 15, "approx": true, "label": "Khamis Mushait"}
  ]},
  "somalia": {"zones": [
   {"level": "all", "country": true, "label": "Sørlige, sentrale og nordøstlige Somalia"},
