@@ -88,11 +88,17 @@ jobs:
           fi
           git config user.name "reiserad-bot"
           git config user.email "reiserad-bot@users.noreply.github.com"
-          git add data/advisories.json
-          git commit -m "UD: reiseråd oppdatert $(date +%F)"
-          # Andre kan ha pushet til main mens jobben gikk: hent og prøv igjen.
+          # Andre kan ha pushet til main mens jobben gikk (også endringer i advisories.json).
+          # Den ferske skrapingen er alltid nyest: legg den oppå siste main og prøv igjen.
+          cp data/advisories.json "$RUNNER_TEMP/advisories.json"
           for i in 1 2 3; do
-            git pull --rebase -q origin main && git push && exit 0
+            git fetch -q origin main
+            git reset -q --hard origin/main
+            cp "$RUNNER_TEMP/advisories.json" data/advisories.json
+            if git diff --quiet -- data/advisories.json; then echo "Allerede på main."; exit 0; fi
+            git add data/advisories.json
+            git commit -q -m "UD: reiseråd oppdatert $(date +%F)"
+            git push -q origin HEAD:main && exit 0
             sleep $((i * 10))
           done
           exit 1
