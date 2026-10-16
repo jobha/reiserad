@@ -61,7 +61,8 @@ html, body { margin: 0; height: 100%; background: var(--bg); color: var(--text);
 .sw.part { background: repeating-linear-gradient(45deg, var(--nec) 0 3px, transparent 3px 6px); }
 .sw.none { background: var(--land); }
 .sw.unk { background: var(--muted); opacity: .35; }
-.legend .hist-only { display: none; }
+.legend .hist-only, .legend .part-only { display: none; }
+body.has-part .legend .part-only { display: flex; }
 body.hist .legend .hist-only { display: flex; }
 .timeline { position: absolute; z-index: 1000; left: 362px; right: 16px; bottom: 22px; max-width: 640px; margin: 0 auto;
   display: flex; align-items: center; gap: 10px; padding: 8px 14px; background: var(--panel); color: var(--text);
@@ -156,7 +157,7 @@ body:not(.hist) .timeline .tl-now { visibility: hidden; }
   <div class="legend">
     <div><span class="sw all"></span>Fraråder alle reiser</div>
     <div><span class="sw nec"></span>Fraråder reiser som ikke er strengt nødvendige</div>
-    <div><span class="sw part"></span>Gjelder bare deler av området – les UD</div>
+    <div class="part-only"><span class="sw part"></span>Gjelder bare deler av området – les UD</div>
     <div><span class="sw none"></span>Ingen reiseadvarsel</div>
     <div class="hist-only"><span class="sw unk"></span>Ukjent – mangler arkivdata</div>
   </div>
@@ -286,7 +287,7 @@ function popupHtml(iso, zone) {
   } else if (zone && zone.level) {
     h += `<div class="zone ${zone.level}">${esc(LEVEL_TXT[zone.level])}${zone.label && zone.label !== "Hele landet" ? ": " + esc(zone.label) : ""}</div>`;
   } else if (zone && zone.clear) {
-    h += `<div class="zone clear">Denne delen av landet er ikke omfattet av reiseadvarselen</div>`;
+    h += `<div class="zone clear">Denne delen av ${esc(c.name)} er ikke omfattet av reiseadvarselen</div>`;
   }
   if (c.ingress || c.paragraphs) {
     h += `<div class="paras">`;
@@ -348,12 +349,12 @@ function tipWorld(iso, ne) {
     return `<b>${esc(FORMER[iso]?.name || c?.name || ne)}</b><div class="tip-note">${esc(tlFmt(TL_DATE))}</div>` + (st.level === "?"
       ? `<div>Ukjent – mangler arkivdata</div>`
       : st.level === "listed" ? `<div>Offisielt reiseråd – teksten er ikke bevart</div>`
-      : tlDrawn(iso) ? `<div>Ikke omfattet av reiseadvarselen</div>`
+      : tlDrawn(iso) ? `<div>Denne delen av ${esc(c?.name || ne)} var ikke omfattet av reiseadvarselen</div>`
       : st.level ? `<div class="tip-level ${st.level}">${esc(LEVEL_TXT[st.level])}</div>${st.partial ? `<div class="tip-note">Gjelder deler av landet</div>` : ""}`
       : `<div>Ingen reiseadvarsel</div>`);
   }
   if (!c) return `<b>${esc(ne)}</b>`;
-  return `<b>${esc(c.name)}</b><div>${c.level ? "Ikke omfattet av reiseadvarselen" : "Ingen reiseadvarsel"}</div>`;
+  return `<b>${esc(c.name)}</b><div>${c.level ? `Denne delen av ${esc(c.name)} er ikke omfattet av reiseadvarselen` : "Ingen reiseadvarsel"}</div>`;
 }
 
 function makeCopy(k) {
@@ -486,6 +487,15 @@ function focusCountry(iso) {
   if (innerWidth <= 640) document.getElementById("panel").classList.add("collapsed");
 }
 
+// Forklaringen for skravur vises bare når noe på kartet faktisk er skravert.
+function updatePartLegend() {
+  const live = (ZONES?.features || []).some(f => f.properties.partial);
+  const hist = TL_DATE && Object.keys(TL?.countries || {}).some(i => {
+    const st = tlState(i);
+    return !tlCurrent(i) && !tlDrawn(i) && (st.level === "listed" || (st.level && st.level !== "?" && st.partial));
+  });
+  document.body.classList.toggle("has-part", !!(TL_DATE ? hist : live));
+}
 // Tidslinje: dra tilbake i tid og se UDs reiseadvarsler slik de var. Gjaldt dagens
 // tekst også på datoen, vises dagens tegnede soner. Er en eldre tekst tegnet inn
 // (data/history_regions/), vises dens soner. Ellers fargelegges hele landet, og
@@ -580,7 +590,7 @@ function tlPopup(iso, ne, zone) {
   const c = fs ? (INFO[fs.main]?.name === fs.name ? INFO[fs.main] : null) : INFO[iso];
   let h = `<div class="pop"><h2>${esc(fs?.name || c?.name || ne)}</h2><div class="status">${esc(tlFmt(TL_DATE))}</div>`;
   if (zone) h += `<div class="zone ${zone.level}">${esc(LEVEL_TXT[zone.level])}${zone.label ? ": " + esc(zone.label) : ""}</div>`;
-  else if (tlDrawn(iso)) h += `<div class="zone clear">Denne delen av landet var ikke omfattet av reiseadvarselen</div>`;
+  else if (tlDrawn(iso)) h += `<div class="zone clear">Denne delen av ${esc(c?.name || ne)} var ikke omfattet av reiseadvarselen</div>`;
   else if (st.level === "?") h += `<div class="zone clear">Ukjent – vi har ikke funnet arkivkopier av UDs reiseråd fra denne tiden</div>`;
   else if (st.level === "listed") h += `<div class="zone necessary">Offisielt reiseråd fra UD – teksten er ikke bevart i arkivet</div>`;
   else if (st.level) h += `<div class="zone ${st.level}">${esc(LEVEL_TXT[st.level])}${st.partial ? " (deler av landet)" : ""}</div>`;
@@ -616,6 +626,7 @@ function tlSet(n) {
   map.closePopup();
   if (!live && !TZ) tlLoadZones();
   for (const [, [w, z, h]] of copies) { styleWorld(w); styleZones(z); if (h) styleHist(h); }
+  updatePartLegend();
   for (const [, l] of formerCopies) styleFormer(l);
   syncCopies();
   if (lsig !== tlSet.lsig) { tlSet.lsig = lsig; drawLabels(); }
@@ -669,6 +680,7 @@ Promise.all(["data/info.json", "data/world.json", "data/zones.json", "data/label
     `${n} land med reiseadvarsel · hentet ${d.toLocaleDateString("nb-NO", { day: "numeric", month: "long", year: "numeric" })} kl. ${d.toLocaleTimeString("nb-NO", { hour: "2-digit", minute: "2-digit" })}`;
 
   WORLD = world; ZONES = zones;
+  updatePartLegend();
   syncCopies();
   map.on("moveend zoomend", () => { recenter(); syncCopies(); });
   // Også underveis i en draging/et kast, så kartet aldri står tomt.
