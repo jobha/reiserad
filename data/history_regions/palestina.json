@@ -1,0 +1,38 @@
+{
+ "_om": "Soner for eldre tekster på UDs side for Palestina. Nøkkel = tekst-hash (python scraper/build.py --missing-history-zones palestina). Format som data/regions.json; se README.",
+ "fdc7d31362dd": {
+  "text": "Utenriksdepartementet fraråder alle reiser til grenseområdet (40 km) mot Gaza i det sørlige Israel, og reise til eller opphold i Gaza.",
+  "zones": [
+   {"adm": "PSE/ADM1", "names": ["Gaza"], "level": "all", "label": "Gaza"}
+  ]
+ },
+ "d456ed7f435e": {
+  "text": "Utenriksdepartementet fraråder alle reiser til eller opphold i grenseområdet (40 km) mot Gaza i det sørlige Israel, og alle reiser til eller opphold i Gaza. Utenriksdepartementet fraråder alle reiser som ikke er strengt nødvendige til Vestbredden.",
+  "zones": [
+   {"level": "necessary", "country": true, "label": "Vestbredden"},
+   {"adm": "PSE/ADM1", "names": ["Gaza"], "level": "all", "label": "Gaza"}
+  ]
+ },
+ "fb232b77fa45": {
+  "text": "Utenriksdepartementet fraråder alle reiser til eller opphold i Gaza. Utenriksdepartementet fraråder alle reiser til regionene (governorates) Nablus og Jenin på Vestbredden.",
+  "zones": [
+   {"adm": "PSE/ADM1", "names": ["Gaza"], "level": "all", "label": "Gaza"},
+   {"level": "all", "adm": "PSE/ADM2", "names": ["Nablus", "Jenin"], "label": "Nablus og Jenin"}
+  ]
+ },
+ "66c2f7e28e6f": {
+  "text": "Utenriksdepartementet fraråder alle reiser til eller opphold i Gaza og til regionene (governorates) Nablus og Jenin på Vestbredden. Utenriksdepartementet fraråder reiser som ikke er strengt nødvendige til det øvrige Vestbredden, inkludert Øst-Jerusalem.",
+  "zones": [
+   {"level": "necessary", "country": true, "label": "Resten av Vestbredden, med Øst-Jerusalem"},
+   {"adm": "PSE/ADM1", "names": ["Gaza"], "level": "all", "label": "Gaza"},
+   {"level": "all", "adm": "PSE/ADM2", "names": ["Nablus", "Jenin"], "label": "Nablus og Jenin"}
+  ]
+ },
+ "5e539137e422": {
+  "text": "Utenriksdepartementet fraråder alle reiser til Palestina, med unntak av Øst-Jerusalem.",
+  "zones": [
+   {"level": "all", "country": true, "label": "Palestina"},
+   {"level": "none", "point": [35.235, 31.78], "km": 3, "approx": true, "label": "Øst-Jerusalem"}
+  ]
+ }
+}

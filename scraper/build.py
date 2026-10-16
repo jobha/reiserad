@@ -188,11 +188,13 @@ def text_hash(paragraphs):
 HISTORY_REGIONS = DATA / "history_regions"
 
 
-def load_history_regions():
+def load_history_regions(keys=None):
     """{UD-nøkkel: {hash: [soner]}} fra data/history_regions/<nøkkel>.json.
     {"same": "<hash>"} gjenbruker sonene til en annen tekst for samme land."""
     out = {}
     for path in sorted(HISTORY_REGIONS.glob("*.json")):
+        if keys is not None and path.stem not in keys:
+            continue
         raw = {k: v for k, v in json.loads(path.read_text()).items() if not k.startswith("_")}
         out[path.stem] = {h: raw[v["same"]]["zones"] if "same" in v else v["zones"] for h, v in raw.items()}
     return out
@@ -404,6 +406,13 @@ def build():
 HIST_TOL = 0.01
 
 
+def polygonal(g):
+    """Bare flatene: snitt og forenkling kan etterlate linjer og punkter langs kanter."""
+    if g.geom_type in ("Polygon", "MultiPolygon"):
+        return g
+    return unary_union([p for p in getattr(g, "geoms", []) if p.geom_type in ("Polygon", "MultiPolygon")])
+
+
 def history_zones(hist, info, ne, hregions):
     """{"ISO:hash": [features] | "ISO:annen-hash"} for historiske tekster med tegnede soner.
     Lastes først når noen drar i tidslinjen. Like soner lagres én gang (streng = samme som),
@@ -427,7 +436,10 @@ def history_zones(hist, info, ne, hregions):
                 for k in ("partial", "approx"):
                     if z.get(k):
                         props[k] = True
-                m = mapping(g.simplify(HIST_TOL, preserve_topology=True))
+                g = polygonal(g.simplify(HIST_TOL, preserve_topology=True))
+                if g.is_empty:
+                    continue
+                m = mapping(g)
                 feats.append({"type": "Feature", "properties": props,
                               "geometry": {"type": m["type"], "coordinates": round_coords(m["coordinates"], 3)}})
             k = f"{iso}:{hsh}"

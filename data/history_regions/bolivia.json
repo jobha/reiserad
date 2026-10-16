@@ -1,0 +1,9 @@
+{
+ "_om": "Soner for eldre tekster på UDs side for Bolivia. Nøkkel = tekst-hash (python scraper/build.py --missing-history-zones bolivia). Format som data/regions.json; se README.",
+ "d3260f89ff75": {
+  "text": "Utenriksdepartementet fraråder reiser som ikke er strengt nødvendige til La Paz-regionen i Bolivia.",
+  "zones": [
+   {"level": "necessary", "adm": "BOL/ADM1", "names": ["La Paz"], "label": "La Paz-regionen"}
+  ]
+ }
+}

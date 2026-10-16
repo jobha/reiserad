@@ -1,0 +1,859 @@
+{
+ "_om": "Soner for eldre tekster på UDs side for Egypt. Transitt gjennom flyplassen i Kairo er ikke tegnet som unntak. Format som data/regions.json; se README.",
+ "842dbdadab05": {
+  "text": "Utenriksdepartementet fraråder alle reiser til eller opphold i Nord-Sinai. Utenriksdepartementet fraråder reise til eller opphold som ikke er strengt nødvendig til det øvrige Egypt, med unntak av transitt gjennom den internasjonale flyplassen i Kairo.",
+  "zones": [
+   {
+    "level": "necessary",
+    "country": true,
+    "label": "Resten av landet"
+   },
+   {
+    "level": "all",
+    "adm": "EGY/ADM1",
+    "names": [
+     "North Sinai Governorate"
+    ],
+    "label": "Nord-Sinai"
+   }
+  ]
+ },
+ "cf496997f37c": {
+  "text": "Utenriksdepartementet fraråder alle reiser til eller opphold i Nord-Sinai. Utenriksdepartementet fraråder reise til eller opphold som ikke er strengt nødvendig til det øvrige Egypt med unntak av turistområdene ved Rødehavet (inkludert Hurghada) og Akababukten (inkludert Sharm al-Sheikh, Taba og Dahab), Luxor og Aswan i øvre Egypt samt transitt gjennom den inter-nasjonale flyplassen i Kairo.",
+  "zones": [
+   {
+    "level": "necessary",
+    "country": true,
+    "label": "Resten av landet"
+   },
+   {
+    "level": "all",
+    "adm": "EGY/ADM1",
+    "names": [
+     "North Sinai Governorate"
+    ],
+    "label": "Nord-Sinai"
+   },
+   {
+    "level": "none",
+    "line": [
+     [
+      33.6,
+      27.45
+     ],
+     [
+      33.81,
+      27.24
+     ],
+     [
+      33.94,
+      26.75
+     ],
+     [
+      34.28,
+      26.1
+     ],
+     [
+      34.68,
+      25.45
+     ],
+     [
+      34.89,
+      25.07
+     ],
+     [
+      35.0,
+      24.75
+     ]
+    ],
+    "km": 15,
+    "approx": true,
+    "label": "Turistområdene ved Rødehavet (Hurghada)"
+   },
+   {
+    "level": "none",
+    "line": [
+     [
+      34.25,
+      27.85
+     ],
+     [
+      34.33,
+      27.92
+     ],
+     [
+      34.52,
+      28.5
+     ],
+     [
+      34.66,
+      28.98
+     ],
+     [
+      34.89,
+      29.49
+     ]
+    ],
+    "km": 12,
+    "approx": true,
+    "label": "Akababukten (Sharm el-Sheikh, Dahab, Taba)"
+   },
+   {
+    "level": "none",
+    "point": [
+     32.64,
+     25.69
+    ],
+    "km": 20,
+    "approx": true,
+    "label": "Luxor"
+   },
+   {
+    "level": "none",
+    "point": [
+     32.9,
+     24.09
+    ],
+    "km": 20,
+    "approx": true,
+    "label": "Aswan"
+   }
+  ]
+ },
+ "e68772bf89c5": {
+  "text": "Utenriksdepartementet fraråder alle reiser til eller opphold i Nord-Sinai, inkludert veien mellom Suez og Taba frem til og med grenseovergangen mot Israel. Utenriksdepartementet fraråder reise til eller opphold som ikke er strengt nødvendig til det øvrige Egypt, med unntak av turist-områdene ved vestsiden av Rødehavet (inkludert Hurghada), Luxor og Aswan, samt transitt gjennom den internasjonale flyplassen i Kairo.",
+  "zones": [
+   {
+    "level": "necessary",
+    "country": true,
+    "label": "Resten av landet"
+   },
+   {
+    "level": "none",
+    "line": [
+     [
+      33.6,
+      27.45
+     ],
+     [
+      33.81,
+      27.24
+     ],
+     [
+      33.94,
+      26.75
+     ],
+     [
+      34.28,
+      26.1
+     ],
+     [
+      34.68,
+      25.45
+     ],
+     [
+      34.89,
+      25.07
+     ],
+     [
+      35.0,
+      24.75
+     ]
+    ],
+    "km": 15,
+    "approx": true,
+    "label": "Turistområdene ved Rødehavet (Hurghada)"
+   },
+   {
+    "level": "none",
+    "point": [
+     32.64,
+     25.69
+    ],
+    "km": 20,
+    "approx": true,
+    "label": "Luxor"
+   },
+   {
+    "level": "none",
+    "point": [
+     32.9,
+     24.09
+    ],
+    "km": 20,
+    "approx": true,
+    "label": "Aswan"
+   },
+   {
+    "level": "all",
+    "adm": "EGY/ADM1",
+    "names": [
+     "North Sinai Governorate"
+    ],
+    "label": "Nord-Sinai"
+   },
+   {
+    "level": "all",
+    "line": [
+     [
+      32.57,
+      30.05
+     ],
+     [
+      32.75,
+      30.05
+     ],
+     [
+      33.2,
+      29.95
+     ],
+     [
+      33.75,
+      29.91
+     ],
+     [
+      34.3,
+      29.7
+     ],
+     [
+      34.7,
+      29.55
+     ],
+     [
+      34.89,
+      29.49
+     ]
+    ],
+    "km": 10,
+    "approx": true,
+    "label": "Veien Suez – Taba"
+   }
+  ]
+ },
+ "36341d5623cd": {
+  "text": "Utenriksdepartementet fraråder alle reiser til eller opphold på Sinai, inkludert Sharm El Sheikh. Utenriksdepartementet fraråder reise til eller opphold som ikke er strengt nødvendig til det øvrige Egypt, med unntak av turist-områdene ved vestsiden av Rødehavet (inkludert Hurghada), Luxor og Aswan, samt transitt gjennom den internasjonale flyplassen i Kairo.",
+  "zones": [
+   {
+    "level": "necessary",
+    "country": true,
+    "label": "Resten av landet"
+   },
+   {
+    "level": "none",
+    "line": [
+     [
+      33.6,
+      27.45
+     ],
+     [
+      33.81,
+      27.24
+     ],
+     [
+      33.94,
+      26.75
+     ],
+     [
+      34.28,
+      26.1
+     ],
+     [
+      34.68,
+      25.45
+     ],
+     [
+      34.89,
+      25.07
+     ],
+     [
+      35.0,
+      24.75
+     ]
+    ],
+    "km": 15,
+    "approx": true,
+    "label": "Turistområdene ved Rødehavet (Hurghada)"
+   },
+   {
+    "level": "none",
+    "point": [
+     32.64,
+     25.69
+    ],
+    "km": 20,
+    "approx": true,
+    "label": "Luxor"
+   },
+   {
+    "level": "none",
+    "point": [
+     32.9,
+     24.09
+    ],
+    "km": 20,
+    "approx": true,
+    "label": "Aswan"
+   },
+   {
+    "level": "all",
+    "adm": "EGY/ADM1",
+    "names": [
+     "North Sinai Governorate",
+     "South Sinai Governorate"
+    ],
+    "label": "Sinai"
+   }
+  ]
+ },
+ "b9c5f77604e6": {
+  "text": "Utenriksdepartementet fraråder alle reiser til eller opphold på Sinai, med unntak av Sharm El Sheikh. Utenriksdepartementet fraråder reise til eller opphold som ikke er strengt nødvendig til det øvrige Egypt, med unntak av turist-områdene ved vestsiden av Rødehavet (inkludert Hurghada), Luxor og Aswan, samt transitt gjennom den internasjonale flyplassen i Kairo.",
+  "zones": [
+   {
+    "level": "necessary",
+    "country": true,
+    "label": "Resten av landet"
+   },
+   {
+    "level": "none",
+    "line": [
+     [
+      33.6,
+      27.45
+     ],
+     [
+      33.81,
+      27.24
+     ],
+     [
+      33.94,
+      26.75
+     ],
+     [
+      34.28,
+      26.1
+     ],
+     [
+      34.68,
+      25.45
+     ],
+     [
+      34.89,
+      25.07
+     ],
+     [
+      35.0,
+      24.75
+     ]
+    ],
+    "km": 15,
+    "approx": true,
+    "label": "Turistområdene ved Rødehavet (Hurghada)"
+   },
+   {
+    "level": "none",
+    "point": [
+     32.64,
+     25.69
+    ],
+    "km": 20,
+    "approx": true,
+    "label": "Luxor"
+   },
+   {
+    "level": "none",
+    "point": [
+     32.9,
+     24.09
+    ],
+    "km": 20,
+    "approx": true,
+    "label": "Aswan"
+   },
+   {
+    "level": "all",
+    "adm": "EGY/ADM1",
+    "names": [
+     "North Sinai Governorate",
+     "South Sinai Governorate"
+    ],
+    "label": "Sinai"
+   },
+   {
+    "level": "necessary",
+    "point": [
+     34.33,
+     27.93
+    ],
+    "km": 20,
+    "approx": true,
+    "label": "Sharm el-Sheikh"
+   }
+  ]
+ },
+ "6e94cc24b230": {
+  "text": "Utenriksdepartementet fraråder alle reiser til eller opphold på Sinai, med unntak av Sharm El Sheikh. Utenriksdepartementet fraråder reiser til eller opphold som ikke er strengt nødvendig til det øvrige Egypt, med unntak av Kairo og Alexandria og strekningen mellom disse byene, turist-områdene ved vestsiden av Rødehavet (inkludert Hurghada) og Nildalen mellom Luxor og Abu Simbel samt reiser mellom disse delene av Nildalen og turiststeder ved Rødehavskysten",
+  "zones": [
+   {
+    "level": "necessary",
+    "country": true,
+    "label": "Resten av landet"
+   },
+   {
+    "level": "none",
+    "point": [
+     31.24,
+     30.04
+    ],
+    "km": 30,
+    "approx": true,
+    "label": "Kairo"
+   },
+   {
+    "level": "none",
+    "point": [
+     29.95,
+     31.2
+    ],
+    "km": 25,
+    "approx": true,
+    "label": "Alexandria"
+   },
+   {
+    "level": "none",
+    "line": [
+     [
+      31.1,
+      30.1
+     ],
+     [
+      30.6,
+      30.45
+     ],
+     [
+      30.15,
+      30.95
+     ],
+     [
+      29.95,
+      31.2
+     ]
+    ],
+    "km": 15,
+    "approx": true,
+    "label": "Strekningen Kairo – Alexandria"
+   },
+   {
+    "level": "none",
+    "line": [
+     [
+      33.6,
+      27.45
+     ],
+     [
+      33.81,
+      27.24
+     ],
+     [
+      33.94,
+      26.75
+     ],
+     [
+      34.28,
+      26.1
+     ],
+     [
+      34.68,
+      25.45
+     ],
+     [
+      34.89,
+      25.07
+     ],
+     [
+      35.0,
+      24.75
+     ]
+    ],
+    "km": 15,
+    "approx": true,
+    "label": "Turistområdene ved Rødehavet (Hurghada)"
+   },
+   {
+    "level": "none",
+    "line": [
+     [
+      32.64,
+      25.69
+     ],
+     [
+      32.55,
+      25.29
+     ],
+     [
+      32.87,
+      24.98
+     ],
+     [
+      32.93,
+      24.47
+     ],
+     [
+      32.9,
+      24.09
+     ],
+     [
+      32.88,
+      23.95
+     ],
+     [
+      32.6,
+      23.3
+     ],
+     [
+      32.15,
+      22.85
+     ],
+     [
+      31.63,
+      22.34
+     ]
+    ],
+    "km": 15,
+    "approx": true,
+    "label": "Nildalen Luxor – Abu Simbel"
+   },
+   {
+    "level": "none",
+    "line": [
+     [
+      32.72,
+      26.16
+     ],
+     [
+      33.3,
+      26.45
+     ],
+     [
+      33.94,
+      26.75
+     ]
+    ],
+    "km": 8,
+    "approx": true,
+    "label": "Veien Qena – Safaga"
+   },
+   {
+    "level": "none",
+    "line": [
+     [
+      32.87,
+      24.98
+     ],
+     [
+      33.8,
+      25.0
+     ],
+     [
+      34.89,
+      25.07
+     ]
+    ],
+    "km": 8,
+    "approx": true,
+    "label": "Veien Edfu – Marsa Alam"
+   },
+   {
+    "level": "all",
+    "adm": "EGY/ADM1",
+    "names": [
+     "North Sinai Governorate",
+     "South Sinai Governorate"
+    ],
+    "label": "Sinai"
+   },
+   {
+    "level": "necessary",
+    "point": [
+     34.33,
+     27.93
+    ],
+    "km": 20,
+    "approx": true,
+    "label": "Sharm el-Sheikh"
+   }
+  ]
+ },
+ "1b3a8bc12de6": {
+  "text": "Utenriksdepartementet fraråder alle reiser til eller opphold på Sinai, med unntak av Sharm El Sheikh, Dahab, St. Catherine og strekningene mellom disse Utenriksdepartementet fraråder reiser til eller opphold som ikke er strengt nødvendig til det øvrige Egypt, med unntak av Kairo og Alexandria og strekningen mellom disse byene, turist-områdene ved vestsiden av Rødehavet (inkludert Hurghada) og Nildalen mellom Luxor og Abu Simbel samt reiser mellom disse delene av Nildalen og turiststeder ved Rødehavskysten.",
+  "zones": [
+   {
+    "level": "necessary",
+    "country": true,
+    "label": "Resten av landet"
+   },
+   {
+    "level": "none",
+    "point": [
+     31.24,
+     30.04
+    ],
+    "km": 30,
+    "approx": true,
+    "label": "Kairo"
+   },
+   {
+    "level": "none",
+    "point": [
+     29.95,
+     31.2
+    ],
+    "km": 25,
+    "approx": true,
+    "label": "Alexandria"
+   },
+   {
+    "level": "none",
+    "line": [
+     [
+      31.1,
+      30.1
+     ],
+     [
+      30.6,
+      30.45
+     ],
+     [
+      30.15,
+      30.95
+     ],
+     [
+      29.95,
+      31.2
+     ]
+    ],
+    "km": 15,
+    "approx": true,
+    "label": "Strekningen Kairo – Alexandria"
+   },
+   {
+    "level": "none",
+    "line": [
+     [
+      33.6,
+      27.45
+     ],
+     [
+      33.81,
+      27.24
+     ],
+     [
+      33.94,
+      26.75
+     ],
+     [
+      34.28,
+      26.1
+     ],
+     [
+      34.68,
+      25.45
+     ],
+     [
+      34.89,
+      25.07
+     ],
+     [
+      35.0,
+      24.75
+     ]
+    ],
+    "km": 15,
+    "approx": true,
+    "label": "Turistområdene ved Rødehavet (Hurghada)"
+   },
+   {
+    "level": "none",
+    "line": [
+     [
+      32.64,
+      25.69
+     ],
+     [
+      32.55,
+      25.29
+     ],
+     [
+      32.87,
+      24.98
+     ],
+     [
+      32.93,
+      24.47
+     ],
+     [
+      32.9,
+      24.09
+     ],
+     [
+      32.88,
+      23.95
+     ],
+     [
+      32.6,
+      23.3
+     ],
+     [
+      32.15,
+      22.85
+     ],
+     [
+      31.63,
+      22.34
+     ]
+    ],
+    "km": 15,
+    "approx": true,
+    "label": "Nildalen Luxor – Abu Simbel"
+   },
+   {
+    "level": "none",
+    "line": [
+     [
+      32.72,
+      26.16
+     ],
+     [
+      33.3,
+      26.45
+     ],
+     [
+      33.94,
+      26.75
+     ]
+    ],
+    "km": 8,
+    "approx": true,
+    "label": "Veien Qena – Safaga"
+   },
+   {
+    "level": "none",
+    "line": [
+     [
+      32.87,
+      24.98
+     ],
+     [
+      33.8,
+      25.0
+     ],
+     [
+      34.89,
+      25.07
+     ]
+    ],
+    "km": 8,
+    "approx": true,
+    "label": "Veien Edfu – Marsa Alam"
+   },
+   {
+    "level": "all",
+    "adm": "EGY/ADM1",
+    "names": [
+     "North Sinai Governorate",
+     "South Sinai Governorate"
+    ],
+    "label": "Sinai"
+   },
+   {
+    "level": "necessary",
+    "line": [
+     [
+      34.33,
+      27.93
+     ],
+     [
+      34.43,
+      28.2
+     ],
+     [
+      34.52,
+      28.5
+     ],
+     [
+      34.3,
+      28.6
+     ],
+     [
+      33.95,
+      28.56
+     ]
+    ],
+    "km": 15,
+    "approx": true,
+    "label": "Sharm el-Sheikh, Dahab, St. Catherine og veiene mellom"
+   }
+  ]
+ },
+ "c1fd0420a961": {
+  "text": "Utenriksdepartementet fraråder alle reiser til eller opphold i provinsen Nord-Sinai og den vestlige ørkenen mot grensen til Libya. Utenriksdepartementet fraråder reiser til eller opphold som ikke er strengt nødvendig til Sør-Sinai, med unntak av Sharm el Sheikh, Dahab, St. Catherine og strekningen mellom disse. Reisende oppfordres til å utvise aktsomhet ved reiser til og opphold i resten av Egypt.",
+  "zones": [
+   {
+    "level": "necessary",
+    "adm": "EGY/ADM1",
+    "names": [
+     "South Sinai Governorate"
+    ],
+    "label": "Sør-Sinai"
+   },
+   {
+    "level": "none",
+    "line": [
+     [
+      34.33,
+      27.93
+     ],
+     [
+      34.43,
+      28.2
+     ],
+     [
+      34.52,
+      28.5
+     ],
+     [
+      34.3,
+      28.6
+     ],
+     [
+      33.95,
+      28.56
+     ]
+    ],
+    "km": 15,
+    "approx": true,
+    "label": "Sharm el-Sheikh, Dahab, St. Catherine og veiene mellom"
+   },
+   {
+    "level": "all",
+    "adm": "EGY/ADM1",
+    "names": [
+     "North Sinai Governorate"
+    ],
+    "label": "Nord-Sinai"
+   },
+   {
+    "level": "all",
+    "border": [
+     "LBY"
+    ],
+    "km": 50,
+    "approx": true,
+    "label": "Den vestlige ørkenen mot Libya"
+   }
+  ]
+ },
+ "9ec93c4a4147": {
+  "text": "Utenriksdepartementet fraråder alle reiser til eller opphold i provinsen Nord-Sinai og den vestlige ørkenen mot grensen til Libya. Utenriksdepartementet fraråder reiser til eller opphold som ikke er strengt nødvendig til Sør-Sinai, med unntak av Sharm el Sheikh, Dahab, St. Catherine og strekningen mellom disse.",
+  "same": "c1fd0420a961"
+ }
+}

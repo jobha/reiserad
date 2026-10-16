@@ -1,0 +1,136 @@
+{
+ "_om": "Soner for eldre tekster på UDs side for Etiopia. Nøkkel = tekst-hash (python scraper/build.py --missing-history-zones etiopia). Format som data/regions.json; se README.",
+ "c57174a1ad7e": {
+  "text": "Utenriksdepartementet fraråder alle reiser til eller opphold i østlige deler av Somali-regionen i Etiopia og grenseområdene til Somalia.",
+  "zones": [
+   {"level": "all", "adm": "ETH/ADM1", "names": ["Somali"], "and": {"poly": [[43.5, 3], [48.5, 3], [48.5, 9.5], [43.5, 9.5]]}, "approx": true, "label": "Østlige deler av Somali-regionen"},
+   {"level": "all", "border": ["SOM", "SOL"], "km": 30, "label": "Grenseområdene mot Somalia", "approx": true}
+  ]
+ },
+ "f84a419d9f01": {
+  "text": "Utenriksdepartementet fraråder alle reiser til eller opphold i østlige deler av Somali-regionen i Etiopia og grenseområdene til Somalia. Reiser som ikke er strengt nødvendig til Somali-regionen for øvrig, frarådes. Reisende bør utvise aktsomhet ved reiser til grenseområdene mot Eritrea og Sør-Sudan.",
+  "zones": [
+   {"level": "necessary", "adm": "ETH/ADM1", "names": ["Somali"], "label": "Somali-regionen for øvrig"},
+   {"level": "all", "adm": "ETH/ADM1", "names": ["Somali"], "and": {"poly": [[43.5, 3], [48.5, 3], [48.5, 9.5], [43.5, 9.5]]}, "approx": true, "label": "Østlige deler av Somali-regionen"},
+   {"level": "all", "border": ["SOM", "SOL"], "km": 30, "label": "Grenseområdene mot Somalia", "approx": true}
+  ]
+ },
+ "2939f0cea34f": {
+  "text": "Utenriksdepartementet fraråder alle reiser til eller opphold i østlige deler av Somali-regionen i Etiopia og grenseområdene til Somalia. Reiser som ikke er strengt nødvendig til Somali-regionen for øvrig, frarådes.",
+  "same": "f84a419d9f01"
+ },
+ "b4b18405f101": {
+  "text": "Utenriksdepartementet fraråder alle reiser til Tigray-regionen samt grenseområdene mellom Tigray og naboregionene Amhara og Afar. Utenriksdepartementet fraråder alle reiser til eller opphold i østlige deler av Somali-regionen og grenseområdene til Somalia. Utenriksdepartementet fraråder reiser som ikke er strengt nødvendige til øvrige deler av Somali-regionen.",
+  "zones": [
+   {"level": "necessary", "adm": "ETH/ADM1", "names": ["Somali"], "label": "Somali-regionen for øvrig"},
+   {"level": "all", "near": {"adm": "ETH/ADM1", "names": ["Tigray"]}, "km": 30, "approx": true, "label": "Grenseområdene mellom Tigray og Amhara/Afar", "and": {"adm": "ETH/ADM1", "names": ["Amhara", "Afar"]}},
+   {"level": "all", "adm": "ETH/ADM1", "names": ["Tigray"], "label": "Tigray"},
+   {"level": "all", "adm": "ETH/ADM1", "names": ["Somali"], "and": {"poly": [[43.5, 3], [48.5, 3], [48.5, 9.5], [43.5, 9.5]]}, "approx": true, "label": "Østlige deler av Somali-regionen"},
+   {"level": "all", "border": ["SOM", "SOL"], "km": 30, "label": "Grenseområdene mot Somalia", "approx": true}
+  ]
+ },
+ "d682c5a7a7e0": {
+  "text": "Utenriksdepartementet fraråder alle reiser til Tigray-regionen samt grenseområdene mellom Tigray og naboregionene Amhara og Afar.",
+  "zones": [
+   {"level": "all", "near": {"adm": "ETH/ADM1", "names": ["Tigray"]}, "km": 30, "approx": true, "label": "Grenseområdene mellom Tigray og Amhara/Afar", "and": {"adm": "ETH/ADM1", "names": ["Amhara", "Afar"]}},
+   {"level": "all", "adm": "ETH/ADM1", "names": ["Tigray"], "label": "Tigray"}
+  ]
+ },
+ "e3bb76e85e03": {
+  "text": "Utenriksdepartementet fraråder alle reiser til regionene Tigray, Amhara og Afar. Videre fraråder Utenriksdepartementet alle reiser til i østlige deler av Somali-regionen og grenseområdene til Somalia. Utenriksdepartementet fraråder også reiser som ikke er strengt nødvendige til øvrige deler av Etiopia unntatt Addis Abeba.",
+  "zones": [
+   {"level": "necessary", "country": true, "label": "Resten av landet"},
+   {"level": "all", "adm": "ETH/ADM1", "names": ["Tigray", "Amhara", "Afar"], "label": "Tigray, Amhara og Afar"},
+   {"level": "all", "adm": "ETH/ADM1", "names": ["Somali"], "and": {"poly": [[43.5, 3], [48.5, 3], [48.5, 9.5], [43.5, 9.5]]}, "approx": true, "label": "Østlige deler av Somali-regionen"},
+   {"level": "all", "border": ["SOM", "SOL"], "km": 30, "label": "Grenseområdene mot Somalia", "approx": true},
+   {"level": "none", "adm": "ETH/ADM1", "names": ["Addis Ababa"], "label": "Addis Abeba"}
+  ]
+ },
+ "9dea1a0a333e": {
+  "text": "Utenriksdepartementet fraråder alle reiser til Etiopia, med unntak av Addis Abeba hvor det frarådes reiser som ikke er strengt nødvendige.",
+  "zones": [
+   {"level": "all", "country": true, "label": "Hele landet unntatt Addis Abeba"},
+   {"level": "necessary", "adm": "ETH/ADM1", "names": ["Addis Ababa"], "label": "Addis Abeba"}
+  ]
+ },
+ "460813b397e5": {
+  "text": "Utenriksdepartementet fraråder alle reiser til regionene Tigray, Amhara og Afar. Utenriksdepartementet fraråder alle reiser til østlige deler av Somali-regionen og grenseområdene til Somalia. Utenriksdepartementet fraråder reiser som ikke er strengt nødvendige til øvrige deler av Etiopia, med unntak av Addis Abeba.",
+  "same": "e3bb76e85e03"
+ },
+ "55162e4a2cd9": {
+  "text": "Utenriksdepartementet fraråder alle reiser til Tigray-regionen, samt grenseområdene mellom regionen Amhara og Tigray, og regionen Afar og Tigray. Utenriksdepartementet fraråder alle reiser til grenseområdene mot Sudan og Eritrea. Utenriksdepartementet fraråder alle reiser til de konfliktrammede områder i vestlige Etiopia. Dette inkluderer områdene Kelam Welega, West Welega, Buno Bedele, East Welega, Horo Guduru Welega i Oromia-regionen, Gambela-regionen og Benishangul-Gumuz-regionen. Utenriksdepartementet fraråder alle reiser til østlige deler av Somali-regionen og grenseområdene til Somalia. Utenriksdepartementet fraråder reiser som ikke er strengt nødvendig til øvrige deler av Etiopia. Det er ikke reiseråd til hovedstaden Addis Abeba.",
+  "zones": [
+   {"level": "necessary", "country": true, "label": "Resten av landet"},
+   {"level": "all", "near": {"adm": "ETH/ADM1", "names": ["Tigray"]}, "km": 30, "approx": true, "label": "Grenseområdene mellom Tigray og Amhara/Afar", "and": {"adm": "ETH/ADM1", "names": ["Amhara", "Afar"]}},
+   {"level": "all", "adm": "ETH/ADM1", "names": ["Tigray"], "label": "Tigray"},
+   {"level": "all", "border": ["SDN", "ERI"], "km": 30, "label": "Grenseområdene mot Sudan og Eritrea", "approx": true},
+   {"level": "all", "adm": "ETH/ADM2", "names": ["Kelem Wellega", "West Wellega", "East Wellega", "Horo Guduru"], "label": "Vestlige Oromia (Welega-sonene og Horo Guduru)"},
+   {"level": "all", "point": [36.35, 8.45], "km": 55, "approx": true, "label": "Buno Bedele (Oromia)"},
+   {"level": "all", "adm": "ETH/ADM1", "names": ["Gambela", "Beneshangul Gumu"], "label": "Gambella og Benishangul-Gumuz"},
+   {"level": "all", "adm": "ETH/ADM1", "names": ["Somali"], "and": {"poly": [[43.5, 3], [48.5, 3], [48.5, 9.5], [43.5, 9.5]]}, "approx": true, "label": "Østlige deler av Somali-regionen"},
+   {"level": "all", "border": ["SOM", "SOL"], "km": 30, "label": "Grenseområdene mot Somalia", "approx": true},
+   {"level": "none", "adm": "ETH/ADM1", "names": ["Addis Ababa"], "label": "Addis Abeba"}
+  ]
+ },
+ "5eea7a621d63": {
+  "text": "Utenriksdepartementet fraråder alle reiser til regionene Tigray og Amhara, samt grenseområdene mellom regionene Afar og Tigray. Utenriksdepartementet fraråder alle reiser til grenseområdene mot Sudan og Eritrea. Utenriksdepartementet fraråder alle reiser til de konfliktrammede områdene i vestlige Etiopia. Dette inkluderer områdene Kelam Welega, West Welega, Buno Bedele, East Welega, Horo Guduru Welega i Oromia-regionen, Gambela-regionen og Benishangul-Gumuz-regionen. Utenriksdepartementet fraråder alle reiser til østlige deler av Somali-regionen og grenseområdene til Somalia. Utenriksdepartementet fraråder reiser som ikke er strengt nødvendig til øvrige deler av Etiopia. Det er ikke reiseråd for hovedstaden Addis Abeba.",
+  "zones": [
+   {"level": "necessary", "country": true, "label": "Resten av landet"},
+   {"level": "all", "near": {"adm": "ETH/ADM1", "names": ["Tigray"]}, "km": 30, "approx": true, "label": "Grenseområdene mellom Tigray og Afar", "and": {"adm": "ETH/ADM1", "names": ["Afar"]}},
+   {"level": "all", "adm": "ETH/ADM1", "names": ["Tigray", "Amhara"], "label": "Tigray og Amhara"},
+   {"level": "all", "border": ["SDN", "ERI"], "km": 30, "label": "Grenseområdene mot Sudan og Eritrea", "approx": true},
+   {"level": "all", "adm": "ETH/ADM2", "names": ["Kelem Wellega", "West Wellega", "East Wellega", "Horo Guduru"], "label": "Vestlige Oromia (Welega-sonene og Horo Guduru)"},
+   {"level": "all", "point": [36.35, 8.45], "km": 55, "approx": true, "label": "Buno Bedele (Oromia)"},
+   {"level": "all", "adm": "ETH/ADM1", "names": ["Gambela", "Beneshangul Gumu"], "label": "Gambella og Benishangul-Gumuz"},
+   {"level": "all", "adm": "ETH/ADM1", "names": ["Somali"], "and": {"poly": [[43.5, 3], [48.5, 3], [48.5, 9.5], [43.5, 9.5]]}, "approx": true, "label": "Østlige deler av Somali-regionen"},
+   {"level": "all", "border": ["SOM", "SOL"], "km": 30, "label": "Grenseområdene mot Somalia", "approx": true},
+   {"level": "none", "adm": "ETH/ADM1", "names": ["Addis Ababa"], "label": "Addis Abeba"}
+  ]
+ },
+ "bfd35a3e3c84": {
+  "text": "Utenriksdepartementet fraråder reiser til Mekelle, regionhovedstaden i Tigray, som ikke er strengt nødvendige. Utenriksdepartement fraråder alle reiser til resterende deler av Tigray-regionen og Amhara-regionen, samt grenseområdene mot disse i tilstøtende regioner. Utenriksdepartementet fraråder alle reiser til grenseområdene mot Sudan, Sør-Sudan og Eritrea. Utenriksdepartementet fraråder alle reiser til de konfliktrammede områder i vestlige Etiopia. Dette inkluderer sonene Kelam Welega, West Welega, Buno Bedele, East Welega, Horo Guduru Welega i Oromia-regionen, Gambela-regionen og Benishangul-Gumuz-regionen. Utenriksdepartementet fraråder alle reiser til østlige deler av Somali-regionen og grenseområdene til Somalia. Utenriksdepartementet fraråder reiser som ikke er strengt nødvendig til øvrige deler av Etiopia. Det er ikke reiseråd til hovedstaden Addis Abeba.",
+  "zones": [
+   {"level": "necessary", "country": true, "label": "Resten av landet"},
+   {"level": "all", "near": {"adm": "ETH/ADM1", "names": ["Tigray", "Amhara"]}, "km": 30, "approx": true, "label": "Grenseområdene mot Tigray og Amhara"},
+   {"level": "all", "adm": "ETH/ADM1", "names": ["Tigray", "Amhara"], "label": "Tigray og Amhara"},
+   {"level": "all", "border": ["SDN", "SDS", "ERI"], "km": 30, "label": "Grenseområdene mot Sudan, Sør-Sudan og Eritrea", "approx": true},
+   {"level": "all", "adm": "ETH/ADM2", "names": ["Kelem Wellega", "West Wellega", "East Wellega", "Horo Guduru"], "label": "Vestlige Oromia (Welega-sonene og Horo Guduru)"},
+   {"level": "all", "point": [36.35, 8.45], "km": 55, "approx": true, "label": "Buno Bedele (Oromia)"},
+   {"level": "all", "adm": "ETH/ADM1", "names": ["Gambela", "Beneshangul Gumu"], "label": "Gambella og Benishangul-Gumuz"},
+   {"level": "all", "adm": "ETH/ADM1", "names": ["Somali"], "and": {"poly": [[43.5, 3], [48.5, 3], [48.5, 9.5], [43.5, 9.5]]}, "approx": true, "label": "Østlige deler av Somali-regionen"},
+   {"level": "all", "border": ["SOM", "SOL"], "km": 30, "label": "Grenseområdene mot Somalia", "approx": true},
+   {"level": "necessary", "point": [39.47, 13.5], "km": 12, "approx": true, "label": "Mekelle"},
+   {"level": "none", "adm": "ETH/ADM1", "names": ["Addis Ababa"], "label": "Addis Abeba"}
+  ]
+ },
+ "3cb6800f41c2": {
+  "text": "Utenriksdepartementet fraråder alle reiser til Amhara, Gambella, og Benishangul Gumuz-regionene, samt grenseområdene mot disse i tilstøtende regioner. Utenriksdepartementet fraråder alle reiser til konfliktrammede deler av Oromia-regionen, inkludert områdene Kelam Welega, West Welega, Buno Bedele, East Welega ogHoro Guduru Welega i vestlige Oromia. Utenriksdepartementet fraråder alle reiser til østlige deler av Somali-regionen og grenseområdene til Somalia. Utenriksdepartementet fraråder alle reiser til bestridte områder i vestlige og sørlige Tigray. Utenriksdepartementet fraråder alle reiser til grenseområdene mot Sudan, Sør-Sudan og Eritrea. Utenriksdepartementet fraråder reiser som ikke er strengt nødvendige til øvrige deler av Etiopia. Det er ikke reiseråd til hovedstaden Addis Abeba.",
+  "zones": [
+   {"level": "necessary", "country": true, "label": "Resten av landet"},
+   {"level": "all", "near": {"adm": "ETH/ADM1", "names": ["Amhara", "Gambela", "Beneshangul Gumu"]}, "km": 30, "approx": true, "label": "Grenseområdene mot Amhara, Gambella og Benishangul-Gumuz"},
+   {"level": "all", "adm": "ETH/ADM1", "names": ["Amhara", "Gambela", "Beneshangul Gumu"], "label": "Amhara, Gambella og Benishangul-Gumuz"},
+   {"level": "all", "adm": "ETH/ADM2", "names": ["Kelem Wellega", "West Wellega", "East Wellega", "Horo Guduru"], "label": "Vestlige Oromia (Welega-sonene og Horo Guduru)"},
+   {"level": "all", "point": [36.35, 8.45], "km": 55, "approx": true, "label": "Buno Bedele (Oromia)"},
+   {"level": "all", "adm": "ETH/ADM1", "names": ["Somali"], "and": {"poly": [[43.5, 3], [48.5, 3], [48.5, 9.5], [43.5, 9.5]]}, "approx": true, "label": "Østlige deler av Somali-regionen"},
+   {"level": "all", "border": ["SOM", "SOL"], "km": 30, "label": "Grenseområdene mot Somalia", "approx": true},
+   {"level": "all", "adm": "ETH/ADM2", "names": ["Western"], "label": "Bestridte områder i vestlige Tigray", "approx": true},
+   {"level": "all", "adm": "ETH/ADM2", "names": ["Southern"], "label": "Bestridte områder i sørlige Tigray (Raya)", "approx": true, "and": {"poly": [[38.5, 11.5], [40.5, 11.5], [40.5, 12.85], [38.5, 12.85]]}},
+   {"level": "all", "border": ["SDN", "SDS", "ERI"], "km": 30, "label": "Grenseområdene mot Sudan, Sør-Sudan og Eritrea", "approx": true},
+   {"level": "none", "adm": "ETH/ADM1", "names": ["Addis Ababa"], "label": "Addis Abeba"}
+  ]
+ },
+ "394ea6fef1c5": {
+  "text": "Utenriksdepartementet fraråder alle reiser til Tigray, Amhara, Gambella, og Benishangul Gumuz-regionene, samt grenseområdene mot disse i tilstøtende regioner. Utenriksdepartementet fraråder alle reiser til konfliktrammede deler av Oromia-regionen, inkludert områdene Kelam Welega, West Welega, Buno Bedele, East Welega og Horo Guduru Welega i vestlige Oromia. Utenriksdepartementet fraråder alle reiser til østlige deler av Somali-regionen og grenseområdene til Somalia. Utenriksdepartementet fraråder alle reiser til grenseområdene mot Sudan, Sør-Sudan og Eritrea. Utenriksdepartementet fraråder reiser som ikke er strengt nødvendige til øvrige deler av Etiopia. Det er ikke reiseadvarsel til hovedstaden Addis Abeba.",
+  "zones": [
+   {"level": "necessary", "country": true, "label": "Resten av landet"},
+   {"level": "all", "near": {"adm": "ETH/ADM1", "names": ["Tigray", "Amhara", "Gambela", "Beneshangul Gumu"]}, "km": 30, "approx": true, "label": "Grenseområdene mot Tigray, Amhara, Gambella og Benishangul-Gumuz"},
+   {"level": "all", "adm": "ETH/ADM1", "names": ["Tigray", "Amhara", "Gambela", "Beneshangul Gumu"], "label": "Tigray, Amhara, Gambella og Benishangul-Gumuz"},
+   {"level": "all", "adm": "ETH/ADM2", "names": ["Kelem Wellega", "West Wellega", "East Wellega", "Horo Guduru"], "label": "Vestlige Oromia (Welega-sonene og Horo Guduru)"},
+   {"level": "all", "point": [36.35, 8.45], "km": 55, "approx": true, "label": "Buno Bedele (Oromia)"},
+   {"level": "all", "adm": "ETH/ADM1", "names": ["Somali"], "and": {"poly": [[43.5, 3], [48.5, 3], [48.5, 9.5], [43.5, 9.5]]}, "approx": true, "label": "Østlige deler av Somali-regionen"},
+   {"level": "all", "border": ["SOM", "SOL"], "km": 30, "label": "Grenseområdene mot Somalia", "approx": true},
+   {"level": "all", "border": ["SDN", "SDS", "ERI"], "km": 30, "label": "Grenseområdene mot Sudan, Sør-Sudan og Eritrea", "approx": true},
+   {"level": "none", "adm": "ETH/ADM1", "names": ["Addis Ababa"], "label": "Addis Abeba"}
+  ]
+ }
+}

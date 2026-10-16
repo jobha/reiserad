@@ -1,0 +1,4 @@
+{
+ "_om": "Soner for eldre tekster på UDs side for armenia. Nøkkel = tekst-hash (python scraper/build.py --missing-history-zones armenia). Format som data/regions.json; se README.",
+ "2c04b4e29754": {"text": "Utenriksdepartementet fraråder alle reiser til regionene Syunik og til områder som ligger nærmere enn fem kilometer fra den internasjonale grensen mellom Armenia og Aserbajdsjan.", "zones": [{"level": "all", "adm": "ARM/ADM1", "names": ["Syunik"], "label": "Syunik"}, {"level": "all", "border": ["AZE"], "km": 5, "label": "Innenfor 5 km fra grensen mot Aserbajdsjan"}]}
+}

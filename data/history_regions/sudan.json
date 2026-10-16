@@ -1,0 +1,38 @@
+{
+ "_om": "Soner for eldre tekster på UDs side for Sudan. Nøkkel = tekst-hash (python scraper/build.py --missing-history-zones sudan). Format som data/regions.json; se README.",
+ "9cd3bb25f1f1": {
+  "text": "Utenriksdepartementet fraråder alle reiser til eller opphold i Darfur og delstaten Sør-Kordofan. Norske borgere bør utvise aktsomhet ved reiser til eller opphold i Sør-Sudan og delstaten Blånilen.",
+  "zones": [
+   {"level": "all", "adm": "SDN/ADM1", "names": ["North Darfur", "West Darfur", "Central Darfur", "South Darfur", "East Darfur"], "label": "Darfur"},
+   {"level": "all", "adm": "SDN/ADM1", "names": ["South Kordofan"], "label": "Sør-Kordofan"},
+   {"level": "all", "adm": "SDN/ADM1", "names": ["West Kordofan"], "label": "Sørlige Vest-Kordofan (del av Sør-Kordofan i 2011)", "approx": true, "partial": true, "and": {"poly": [[26, 8], [30, 8], [30, 11.8], [26, 11.8]]}}
+  ]
+ },
+ "ede56d1be447": {
+  "text": "Utenriksdepartementet fraråder alle reiser til eller opphold i Darfur. I tillegg frarådes reiser eller opphold som ikke er strengt nødvendig til grenseområdene mot Sør-Sudan.",
+  "zones": [
+   {"level": "necessary", "border": ["SDS"], "km": 50, "label": "Grenseområdene mot Sør-Sudan", "approx": true},
+   {"level": "all", "adm": "SDN/ADM1", "names": ["North Darfur", "West Darfur", "Central Darfur", "South Darfur", "East Darfur"], "label": "Darfur"}
+  ]
+ },
+ "697830440401": {
+  "text": "Utenriksdepartementet fraråder alle reiser til grenseområdene mot Libya, mot Sør-Sudan (inkl. Abyei) og mot Eritrea samt til delstatene Sør-Kordofan, Blånilen og Darfur. Utenriksdepartementet fraråder alle reiser som ikke er strengt nødvendige til øvrige områder i Sudan.",
+  "zones": [
+   {"level": "necessary", "country": true, "label": "Resten av landet"},
+   {"level": "all", "border": ["LBY", "SDS", "ERI"], "km": 50, "label": "Grenseområdene mot Libya, Sør-Sudan og Eritrea", "approx": true},
+   {"level": "all", "adm": "SDN/ADM1", "names": ["Abyei PCA"], "label": "Abyei"},
+   {"level": "all", "adm": "SDN/ADM1", "names": ["South Kordofan", "Blue Nile"], "label": "Sør-Kordofan og Blånilen"},
+   {"level": "all", "adm": "SDN/ADM1", "names": ["North Darfur", "West Darfur", "Central Darfur", "South Darfur", "East Darfur"], "label": "Darfur"}
+  ]
+ },
+ "e0b4d8a47cc4": {
+  "text": "Utenriksdepartementet fraråder alle reiser til Darfur, samt grenseområdene mot Libya, Sør-Sudan (inkl. Abyei, Sør-Kordofan og Blånilen), Etiopia og Eritrea. Utenriksdepartementet fraråder alle reiser som ikke er strengt nødvendige til øvrige områder i Sudan.",
+  "zones": [
+   {"level": "necessary", "country": true, "label": "Resten av landet"},
+   {"level": "all", "adm": "SDN/ADM1", "names": ["South Kordofan", "Blue Nile"], "label": "Sør-Kordofan og Blånilen", "partial": true, "approx": true},
+   {"level": "all", "border": ["LBY", "SDS", "ETH", "ERI"], "km": 50, "label": "Grenseområdene mot Libya, Sør-Sudan, Etiopia og Eritrea", "approx": true},
+   {"level": "all", "adm": "SDN/ADM1", "names": ["Abyei PCA"], "label": "Abyei"},
+   {"level": "all", "adm": "SDN/ADM1", "names": ["North Darfur", "West Darfur", "Central Darfur", "South Darfur", "East Darfur"], "label": "Darfur"}
+  ]
+ }
+}

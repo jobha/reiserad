@@ -1,0 +1,25 @@
+{
+ "_om": "Soner for eldre tekster på UDs side for Somalia. Nøkkel = tekst-hash (python scraper/build.py --missing-history-zones somalia). Format som data/regions.json; se README.",
+ "64c674b5a803": {
+  "text": "Utenriksdepartementet fraråder norske borgere å reise til sør-, sentral- og nordøst-Somalia, og oppfordrer dem som allerede er i disse områder om å forlate området.",
+  "zones": [
+   {"level": "all", "country": true, "label": "Sørlige, sentrale og nordøstlige Somalia"},
+   {"level": "none", "adm": "SOM/ADM1", "names": ["Awdal", "Woqooyi Galbeed", "Togdheer", "Sanaag", "Sool"], "label": "Somaliland", "approx": true}
+  ]
+ },
+ "6688b019afa7": {
+  "text": "Utenriksdepartementet fraråder alle reiser til eller opphold i sør-, sentral- og nordøst-Somalia, og oppfordrer de som allerede er i disse områder til å forlate området. Utenriksdepartementet fraråder reise eller opphold som ikke er strengt nødvendig til Somaliland.",
+  "zones": [
+   {"level": "all", "country": true, "label": "Sørlige, sentrale og nordøstlige Somalia"},
+   {"level": "necessary", "adm": "SOM/ADM1", "names": ["Awdal", "Woqooyi Galbeed", "Togdheer", "Sanaag", "Sool"], "label": "Somaliland", "approx": true}
+  ]
+ },
+ "90316fe25663": {
+  "text": "Utenriksdepartementet fraråder alle reiser til eller opphold i Sør-, Sentral- og Nordøst-Somalia, og oppfordrer de som allerede er i disse områdene til å forlate området. Utenriksdepartementet fraråder reise eller opphold som ikke er strengt nødvendig til Somaliland. Norske myndigheters muligheter til å tilby konsulær bistand er ytterst begrenset ettersom Norge ikke har diplomatisk eller annen konsulær tilstedeværelse i Somalia.",
+  "same": "6688b019afa7"
+ },
+ "86dcc5eedaae": {
+  "text": "Utenriksdepartementet fraråder alle reiser til eller opphold i Sør-, Sentral- og Nordøst-Somalia, og oppfordrer de som allerede er i disse områdene til å forlate området. Utenriksdepartementet fraråder reise eller opphold som ikke er strengt nødvendig til Somaliland.",
+  "same": "6688b019afa7"
+ }
+}

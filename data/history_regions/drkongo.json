@@ -1,0 +1,41 @@
+{
+ "_om": "Soner for eldre tekster på UDs side for Den demokratiske republikken Kongo. Nøkkel = tekst-hash (python scraper/build.py --missing-history-zones drkongo). Format som data/regions.json; se README.",
+ "fff19c5ecf84": {
+  "text": "Utenriksdepartementet fraråder reise eller opphold som ikke er strengt nødvendig i de nordlige og østlige deler av Den demokratiske republikken Kongo. For byene Goma, Bukavu og Kisangani og i resten av Den demokratiske republikken Kongo er det grunn til å utvise aktsomhet.",
+  "zones": [
+   {"level": "necessary", "adm": "COD/ADM1", "names": ["Nord-Ubangi", "Lower Uele", "Upper Uele", "Tshopo", "Ituri", "North Kivu", "South Kivu", "Maniema", "Tanganyika"], "approx": true, "label": "Nordlige og østlige deler"},
+   {"level": "none", "point": [29.23, -1.68], "km": 15, "label": "Goma"},
+   {"level": "none", "point": [28.86, -2.51], "km": 15, "label": "Bukavu"},
+   {"level": "none", "point": [25.19, 0.52], "km": 15, "label": "Kisangani"}
+  ]
+ },
+ "f247319ec5cf": {
+  "text": "Utenriksdepartementet fraråder alle reiser eller opphold i de nordlige og østlige deler av Den demokratiske republikken Kongo, særlig provinsene Nord-Kivu og Sør-Kivu. For resten av Den demokratiske republikken Kongo er det grunn til å utvise aktsomhet, særlig i hovedstaden Kinshasa.",
+  "zones": [
+   {"level": "all", "adm": "COD/ADM1", "names": ["Nord-Ubangi", "Lower Uele", "Upper Uele", "Tshopo", "Ituri", "North Kivu", "South Kivu", "Maniema", "Tanganyika"], "approx": true, "label": "Nordlige og østlige deler"}
+  ]
+ },
+ "0d79c30e8c60": {
+  "text": "Utenriksdepartementet fraråder reise til eller opphold i provinsene Nord- og Sør-Kivu, samt til Ituri-distriktet i Oriental-provinsen utenfor Bunia by, som ikke er strengt nødvendige. Utenriksdepartementet oppfordrer reisende til å utvise aktsomhet i resten av Den demokratiske republikken Kongo.",
+  "zones": [
+   {"level": "necessary", "adm": "COD/ADM1", "names": ["North Kivu", "South Kivu"], "label": "Nord- og Sør-Kivu"},
+   {"level": "necessary", "adm": "COD/ADM1", "names": ["Ituri"], "label": "Ituri"},
+   {"level": "none", "point": [30.25, 1.56], "km": 10, "approx": true, "label": "Bunia"}
+  ]
+ },
+ "18c9e0791c1d": {
+  "text": "Utenriksdepartementet fraråder reise til eller opphold i provinsene Nord- og Sør-Kivu, samt til Ituri-distriktet i Oriental-provinsen og Katanga-provinsen (Tanganyika-distriktet) som ikke er strengt nødvendige. Utenriksdepartementet oppfordrer reisende til å utvise aktsomhet i resten av Den demokratiske republikken Kongo.",
+  "zones": [
+   {"level": "necessary", "adm": "COD/ADM1", "names": ["North Kivu", "South Kivu"], "label": "Nord- og Sør-Kivu"},
+   {"level": "necessary", "adm": "COD/ADM1", "names": ["Ituri"], "label": "Ituri"},
+   {"level": "necessary", "adm": "COD/ADM1", "names": ["Tanganyika"], "label": "Tanganyika"}
+  ]
+ },
+ "cd95efe814b6": {
+  "text": "Utenriksdepartementet fraråder all reise til eller opphold i provinsene Bas-Uele, Haut-Uele, Ituri, Nord- og Sør-Kivu, Maniema, Haut Lomami og Tanganykia, Kasai, Kasai-Central og Kasai-Oriental. Utenriksdepartementet fraråder reise til eller opphold i resten av Den demokratiske republikken Kongo som ikke er strengt nødvendig.",
+  "zones": [
+   {"level": "necessary", "country": true, "label": "Resten av landet"},
+   {"level": "all", "adm": "COD/ADM1", "names": ["Lower Uele", "Upper Uele", "Ituri", "North Kivu", "South Kivu", "Maniema", "Haut-Lomami", "Tanganyika", "Kasai", "Central Kasai", "Kasai-Oriental"], "label": "Øst- og nordøstlige provinser og Kasaï-provinsene"}
+  ]
+ }
+}

@@ -1,0 +1,48 @@
+{
+ "_om": "Soner for eldre tekster på UDs side for Kenya. Nøkkel = tekst-hash (python scraper/build.py --missing-history-zones kenya). Format som data/regions.json; se README.",
+ "341466a8f7e6": {
+  "text": "Reiser eller opphold som ikke er nødvendige frarådes til nordlige kystområder i Kenya, fra og med øya Lamu og kysten innenfor, og nordover til grensen med Somalia",
+  "zones": [
+   {"level": "necessary", "line": [[40.88, -2.3], [41.2, -1.95], [41.56, -1.66]], "km": 25, "approx": true, "label": "Nordlige kystområder fra Lamu til grensen mot Somalia"}
+  ]
+ },
+ "882978bfef69": {
+  "text": "Reiser eller opphold som ikke er nødvendige frarådes til nordlige kystområder i Kenya. Dette gjelder kystområdene nord for øya Lamu og nordover opp mot grensen til Somalia, inkludert øyene Kiwayu og Pate Island.",
+  "zones": [
+   {"level": "necessary", "line": [[41.02, -2.12], [41.2, -1.95], [41.56, -1.66]], "km": 20, "approx": true, "label": "Kysten nord for Lamu, med Pate og Kiwayu"}
+  ]
+ },
+ "0d7f4e38b0a4": {
+  "text": "Utenriksdepartementet fraråder opphold og reiser som ikke er strengt nødvendige innen 60 km fra grensen til Somalia, inklusive distriktet Garissa.",
+  "zones": [
+   {"level": "necessary", "border": ["SOM", "SOL"], "km": 60, "label": "Innenfor 60 km fra grensen mot Somalia"},
+   {"level": "necessary", "adm": "KEN/ADM1", "names": ["Garissa"], "label": "Garissa fylke"}
+  ]
+ },
+ "b90b664cd23c": {
+  "text": "Utenriksdepartementet fraråder opphold og reiser som ikke er strengt nødvendige innen 60 km fra grensen til Somalia, inklusive distriktet Garissa. I tillegg frarådes opphold og reiser som ikke er strengt nødvendige til Kenyas nordlige kystområde, det vil si Lamu fylke og de delene av Tana River fylke som befinner seg nordøst for elven Tana River.",
+  "zones": [
+   {"level": "necessary", "border": ["SOM", "SOL"], "km": 60, "label": "Innenfor 60 km fra grensen mot Somalia"},
+   {"level": "necessary", "adm": "KEN/ADM1", "names": ["Garissa"], "label": "Garissa fylke"},
+   {"level": "necessary", "adm": "KEN/ADM1", "names": ["Lamu"], "label": "Lamu fylke"},
+   {"level": "necessary", "adm": "KEN/ADM1", "names": ["Tana River"], "label": "Tana River fylke nordøst for elven", "partial": true, "approx": true, "and": {"poly": [[39.65, -0.45], [39.95, -1.1], [40.03, -1.5], [40.12, -2.27], [40.52, -2.55], [41.6, -2.55], [41.6, 0.6], [39.65, 0.6]]}}
+  ]
+ },
+ "19e8b9fcd11e": {
+  "text": "Utenriksdepartementet fraråder opphold og reiser som ikke er strengt nødvendige innen 60 km fra grensen til Somalia, inkludert Garissa fylke. I tillegg frarådes opphold og reiser som ikke er strengt nødvendige til Kenyas kystområde som befinner seg innen 150 km fra grensen til Somalia, inkludert øyer, men med unntak av Lamu og Manda øy, herunder flyplassen.",
+  "zones": [
+   {"level": "necessary", "border": ["SOM", "SOL"], "km": 60, "label": "Innenfor 60 km fra grensen mot Somalia"},
+   {"level": "necessary", "adm": "KEN/ADM1", "names": ["Garissa"], "label": "Garissa fylke"},
+   {"level": "necessary", "line": [[41.56, -1.66], [41.2, -1.95], [40.9, -2.27], [40.5, -2.55], [40.2, -2.85]], "km": 30, "approx": true, "and": {"border": ["SOM"], "km": 150}, "label": "Kystområdet innen 150 km fra grensen mot Somalia"},
+   {"level": "none", "point": [40.92, -2.26], "km": 9, "approx": true, "label": "Lamu og Manda"}
+  ]
+ },
+ "9ee3528316da": {
+  "text": "Utenriksdepartementet fraråder opphold og reiser som ikke er strengt nødvendige innen 60 km fra grensen til Somalia, inkludert Garissa fylke. I tillegg frarådes opphold og reiser som ikke er strengt nødvendige til Kenyas kystområde som befinner seg innen 150 km fra grensen til Somalia, inkludert øyer.",
+  "zones": [
+   {"level": "necessary", "border": ["SOM", "SOL"], "km": 60, "label": "Innenfor 60 km fra grensen mot Somalia"},
+   {"level": "necessary", "adm": "KEN/ADM1", "names": ["Garissa"], "label": "Garissa fylke"},
+   {"level": "necessary", "line": [[41.56, -1.66], [41.2, -1.95], [40.9, -2.27], [40.5, -2.55], [40.2, -2.85]], "km": 30, "approx": true, "and": {"border": ["SOM"], "km": 150}, "label": "Kystområdet innen 150 km fra grensen mot Somalia"}
+  ]
+ }
+}

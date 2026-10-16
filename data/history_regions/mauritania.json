@@ -1,0 +1,21 @@
+{
+ "_om": "Soner for eldre tekster på UDs side for Mauritania. Format som data/regions.json; se README.",
+ "c5f6c7b65f00": {
+  "text": "Utenriksdepartementet fraråder reise til, eller opphold som ikke er strengt nødvendig, i Mauretania, bortsett fra hovedstaden Nouakchott som ikke er omfattet av reiseråd.",
+  "zones": [
+   {
+    "level": "necessary",
+    "country": true,
+    "label": "Mauritania utenom Nouakchott"
+   },
+   {
+    "level": "none",
+    "adm": "MRT/ADM1",
+    "names": [
+     "Nouakchott"
+    ],
+    "label": "Nouakchott"
+   }
+  ]
+ }
+}

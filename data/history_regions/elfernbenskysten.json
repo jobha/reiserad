@@ -1,0 +1,5 @@
+{
+ "_om": "Soner for eldre tekster på UDs side for elfernbenskysten. Nøkkel = tekst-hash (python scraper/build.py --missing-history-zones elfernbenskysten). Format som data/regions.json; se README.",
+ "49e9c2853797": {"text": "Utenriksdepartementet fraråder reiser som ikke er strengt nødvendige i grenseområdene i vest og i provinsene nord og vest i Elfenbenskysten.", "zones": [{"level": "necessary", "adm": "CIV/ADM1", "names": ["Savanes", "Denguele", "Woroba", "Montagnes"], "approx": true, "label": "Nordlige og vestlige provinser"}, {"level": "necessary", "border": ["LBR", "GIN"], "km": 50, "approx": true, "label": "Grenseområdene i vest"}]},
+ "6645e013edf5": {"text": "Utenriksdepartementet fraråder reiser til Elfenbenskysten utenfor Abidjan som ikke er strengt nødvendige.", "zones": [{"level": "necessary", "country": true, "label": "Utenfor Abidjan"}, {"level": "none", "adm": "CIV/ADM1", "names": ["District Autonome D'Abidjan"], "label": "Abidjan"}]}
+}

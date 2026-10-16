@@ -1,0 +1,17 @@
+{
+ "_om": "Soner for eldre tekster på UDs side for india. Nøkkel = tekst-hash (python scraper/build.py --missing-history-zones india). Format som data/regions.json; se README.",
+ "305c9039b7c9": {
+  "text": "Utenriksdepartementet fraråder reise til eller opphold i delstaten Jammu og Kashmir, med unntak av Ladakh som ikke er strengt nødvendig.",
+  "zones": [
+   {"level": "necessary", "adm": "IND/ADM1", "names": ["Jammu and Kashmīr"], "label": "Jammu og Kashmir (uten Ladakh)"}
+  ]
+ },
+ "1808ac166304": {
+  "text": "Utenriksdepartementet fraråder reise eller opphold som ikke er strengt nødvendig i delstatene Jammu og Kashmir, med unntak av Ladakh.",
+  "same": "305c9039b7c9"
+ },
+ "46cef3f429e8": {
+  "text": "Utenriksdepartementet fraråder reise eller opphold som ikke er strengt nødvendig i delstaten Jammu og Kashmir, med unntak av Ladakh.",
+  "same": "305c9039b7c9"
+ }
+}

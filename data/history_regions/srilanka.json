@@ -1,0 +1,17 @@
+{
+ "_om": "Soner for eldre tekster på UDs side for srilanka. Nøkkel = tekst-hash (python scraper/build.py --missing-history-zones srilanka). Format som data/regions.json; se README.",
+ "918e80cde305": {
+  "text": "Utenriksdepartementet fraråder reise til eller opphold som ikke er strengt nødvendig til Nord-provinsen og Øst-provinsen på Sri Lanka, med unntak av Trincomalee by og Arugam Bay. I tillegg bør reisende kun følge organiserte turer i Yala nasjonalpark. Også i resten av Sri Lanka er det grunn til å vise aktsomhet. Norske borgere som oppholder seg i eller planlegger å reise til Sri Lanka oppfordres til å ta kontakt med ambassaden i Colombo for registrering.",
+  "zones": [
+   {"level": "necessary", "adm": "LKA/ADM1", "names": ["Northern Province", "Eastern Province"], "label": "Nord- og Øst-provinsen"},
+   {"level": "none", "point": [81.233, 8.578], "km": 7, "approx": true, "label": "Trincomalee by"},
+   {"level": "none", "point": [81.825, 6.84], "km": 6, "approx": true, "label": "Arugam Bay"}
+  ]
+ },
+ "c0378ceefc16": {
+  "text": "Utenriksdepartementet fraråder reise eller opphold som ikke er strengt nødvendig i Nord-provinsen i Sri Lanka.",
+  "zones": [
+   {"level": "necessary", "adm": "LKA/ADM1", "names": ["Northern Province"], "label": "Nord-provinsen"}
+  ]
+ }
+}

@@ -1,0 +1,22 @@
+{
+ "_om": "Soner for eldre tekster på UDs side for Malaysia. Nøkkel = tekst-hash (python scraper/build.py --missing-history-zones malaysia). Format som data/regions.json; se README.",
+ "27f9047e564f": {
+  "text": "Utenriksdepartementet fraråder reiser eller opphold som ikke er strengt nødvendig til den østlige kystsonen i delstaten Sabah på Borneo.",
+  "zones": [
+   {"level": "necessary", "poly": [[118.05, 5.9], [118.6, 5.95], [119.45, 5.3], [119.05, 4.95], [118.75, 4.45], [118.85, 4.0], [117.8, 4.05], [117.8, 4.35], [118.2, 4.6], [118.05, 4.95], [118.2, 5.4], [117.95, 5.75]], "approx": true, "label": "Østlige kystsonen i Sabah"}
+  ]
+ },
+ "c6dc83180fec": {
+  "text": "Utenriksdepartementet fraråder reise eller opphold som ikke er strengt nødvendig til kysten av østlige Sabah fra Sandakan til Tawau, inkludert Ladah Datu, Kunak og Semporna, i tillegg til øyene og dykkerstedene utenfor kysten av nevnte område.",
+  "zones": [
+   {"level": "necessary", "poly": [[118.05, 5.9], [118.6, 5.95], [119.45, 5.3], [119.05, 4.95], [118.75, 4.45], [118.85, 4.0], [117.8, 4.05], [117.8, 4.35], [118.2, 4.6], [118.05, 4.95], [118.2, 5.4], [117.95, 5.75]], "approx": true, "label": "Kyst og øyer i østlige Sabah fra Sandakan til Tawau"}
+  ]
+ },
+ "0e2ed9832285": {
+  "text": "Utenriksdepartementet fraråder reise eller opphold som ikke er strengt nødvendig til øyene og dykkerstedene utenfor kysten av østlige Sabah fra Sandakan til Tawau. Reiserådet gjelder også fra kysten og ti kilometer inn i landet av dette området, unntatt landområdene i distriktet Sandakan.",
+  "zones": [
+   {"level": "necessary", "poly": [[118.05, 5.9], [118.6, 5.95], [119.45, 5.3], [119.05, 4.95], [118.75, 4.45], [118.85, 4.0], [117.8, 4.05], [117.8, 4.35], [118.2, 4.6], [118.05, 4.95], [118.2, 5.4], [117.95, 5.75]], "approx": true, "label": "Øyer og kyst i østlige Sabah fra Sandakan til Tawau"},
+   {"level": "none", "adm": "MYS/ADM2", "names": ["Sandakan"], "label": "Landområdene i Sandakan-distriktet"}
+  ]
+ }
+}

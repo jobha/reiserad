@@ -1,0 +1,118 @@
+{
+ "_om": "Soner for eldre tekster på UDs side for Libya. Kystbyene er tegnet som sirkler rundt de største byene. Format som data/regions.json; se README.",
+ "b6f9dacea87e": {
+  "text": "Utenriksdepartementet fraråder reise eller opphold som ikke er strengt nødvendig til kystbyene i det nordlige Libya, inkludert Tripoli.",
+  "zones": [
+   {
+    "level": "necessary",
+    "point": [
+     12.08,
+     32.93
+    ],
+    "km": 20,
+    "approx": true,
+    "label": "Zuwara"
+   },
+   {
+    "level": "necessary",
+    "point": [
+     12.73,
+     32.76
+    ],
+    "km": 20,
+    "approx": true,
+    "label": "Az-Zawiya"
+   },
+   {
+    "level": "necessary",
+    "point": [
+     13.19,
+     32.89
+    ],
+    "km": 30,
+    "approx": true,
+    "label": "Tripoli"
+   },
+   {
+    "level": "necessary",
+    "point": [
+     14.26,
+     32.65
+    ],
+    "km": 20,
+    "approx": true,
+    "label": "Al-Khums"
+   },
+   {
+    "level": "necessary",
+    "point": [
+     15.09,
+     32.38
+    ],
+    "km": 20,
+    "approx": true,
+    "label": "Misrata"
+   },
+   {
+    "level": "necessary",
+    "point": [
+     16.59,
+     31.21
+    ],
+    "km": 20,
+    "approx": true,
+    "label": "Sirte"
+   },
+   {
+    "level": "necessary",
+    "point": [
+     20.23,
+     30.76
+    ],
+    "km": 20,
+    "approx": true,
+    "label": "Ajdabiya"
+   },
+   {
+    "level": "necessary",
+    "point": [
+     20.07,
+     32.12
+    ],
+    "km": 30,
+    "approx": true,
+    "label": "Benghazi"
+   },
+   {
+    "level": "necessary",
+    "point": [
+     21.75,
+     32.76
+    ],
+    "km": 20,
+    "approx": true,
+    "label": "Al-Bayda"
+   },
+   {
+    "level": "necessary",
+    "point": [
+     22.64,
+     32.76
+    ],
+    "km": 20,
+    "approx": true,
+    "label": "Derna"
+   },
+   {
+    "level": "necessary",
+    "point": [
+     23.96,
+     32.08
+    ],
+    "km": 20,
+    "approx": true,
+    "label": "Tobruk"
+   }
+  ]
+ }
+}

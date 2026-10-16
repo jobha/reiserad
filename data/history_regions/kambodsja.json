@@ -1,0 +1,17 @@
+{
+ "_om": "Soner for eldre tekster på UDs side for Kambodsja. Nøkkel = tekst-hash (python scraper/build.py --missing-history-zones kambodsja). Format som data/regions.json; se README.",
+ "9d364a2b7767": {
+  "text": "Utenriksdepartementet fraråder alle reiser innenfor en radius på 20 kilometer fra grensen til Thailand. Utenriksdepartementet fraråder også reiser til Banteay, Meanchey, Oddar Meanchey og Preah Vihear som ikke er strengt nødvendige.",
+  "zones": [
+   {"level": "necessary", "adm": "KHM/ADM1", "names": ["Bantey Meanchey", "Oddar Meanchey", "Preah Vihear"], "label": "Banteay Meanchey, Oddar Meanchey og Preah Vihear"},
+   {"level": "all", "border": ["THA"], "km": 20, "label": "Nærmere enn 20 km fra grensen mot Thailand"}
+  ]
+ },
+ "2ac6fdbdc39e": {
+  "text": "Utenriksdepartementet fraråder alle reiser til grenseområdene nærmere enn 50 km fra grensen til Thailand. Utenriksdepartementet fraråder reiser som ikke er strengt nødvendige til resterende områder i alle provinser som grenser til Thailand.",
+  "zones": [
+   {"level": "necessary", "adm": "KHM/ADM1", "names": ["Koh Kong", "Pursat", "Battambang", "Pailin", "Bantey Meanchey", "Oddar Meanchey", "Preah Vihear"], "label": "Provinsene som grenser til Thailand"},
+   {"level": "all", "border": ["THA"], "km": 50, "label": "Nærmere enn 50 km fra grensen mot Thailand"}
+  ]
+ }
+}

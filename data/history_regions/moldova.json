@@ -1,0 +1,4 @@
+{
+ "_om": "Soner for eldre tekster på UDs side for moldova. Nøkkel = tekst-hash (python scraper/build.py --missing-history-zones moldova). Format som data/regions.json; se README.",
+ "1907a586f37f": {"text": "Utenriksdepartementet fraråder alle reiser til eller opphold i den moldovske regionen Transnistria. Utenriksdepartementet fraråder reise eller opphold som ikke er strengt nødvendig til øvrige deler av Moldova.", "zones": [{"level": "necessary", "country": true, "label": "Resten av landet"}, {"level": "all", "adm": "MDA/ADM1", "names": ["Transnistria", "Bender"], "label": "Transnistria"}]}
+}

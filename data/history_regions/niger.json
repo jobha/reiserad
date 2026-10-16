@@ -1,0 +1,4 @@
+{
+ "_om": "Soner for eldre tekster på UDs side for niger. Nøkkel = tekst-hash (python scraper/build.py --missing-history-zones niger). Format som data/regions.json; se README.",
+ "749187c9f923": {"text": "Utenriksdepartementet fraråder alle reiser til Niger utenfor Niamey. Utenriksdepartementet fraråder alle reiser til Niamey som ikke er strengt nødvendige.", "zones": [{"level": "all", "country": true, "label": "Utenfor Niamey"}, {"level": "necessary", "adm": "NER/ADM1", "names": ["Niamey"], "label": "Niamey"}]}
+}

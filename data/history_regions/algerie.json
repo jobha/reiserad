@@ -1,0 +1,98 @@
+{
+ "_om": "Soner for eldre tekster på UDs side for Algerie. Format som data/regions.json; se README.",
+ "5ebf612cda64": {
+  "text": "Utenriksdepartementet fraråder reiser eller opphold i Algerie som ikke er strengt nødvendige. Utenriksdepartementet fraråder alle reiser eller opphold til Kabylia-området i Nord-Algerie. Likeledes frarådes alle reiser eller opphold til Sahel-området i det sentrale og sørlige Algerie, herunder regioner som grenser til Mauritania, Mali, Niger, Libya og det sørlige Tunisia. Utenriksdepartementet fraråder alle reiser til eller opphold i Tindouf fylke i det sør-vestlige Algerie.",
+  "zones": [
+   {
+    "level": "necessary",
+    "country": true,
+    "label": "Resten av landet"
+   },
+   {
+    "level": "all",
+    "adm": "DZA/ADM1",
+    "names": [
+     "Tizi Ouzou",
+     "Bejaia",
+     "Bouira"
+    ],
+    "approx": true,
+    "label": "Kabylia"
+   },
+   {
+    "level": "all",
+    "adm": "DZA/ADM1",
+    "names": [
+     "Adrar",
+     "Tamanrasset",
+     "Illizi",
+     "Ouargla",
+     "El Oued"
+    ],
+    "approx": true,
+    "label": "Sahel-området (grensene mot Mauritania, Mali, Niger, Libya og Sør-Tunisia)"
+   },
+   {
+    "level": "all",
+    "adm": "DZA/ADM1",
+    "names": [
+     "Tindouf"
+    ],
+    "label": "Tindouf"
+   }
+  ]
+ },
+ "01da1490d49a": {
+  "text": "Utenriksdepartementet fraråder alle reiser til grenseområdene mot Mauritania, Mali, Niger, Libya, og fjellområdene Kabylia øst for hovedstaden, samt fjellområdene grensende mot Tunisia. Utenriksdepartementet fraråder aller reiser som ikke er strengt nødvendige til de vest-sahariske flyktningeleirene ved Tindouf. Utenriksdepartementet ber reisende om å utvise aktsomhet i resten av Algerie.",
+  "zones": [
+   {
+    "level": "all",
+    "border": [
+     "MRT",
+     "MLI",
+     "NER",
+     "LBY"
+    ],
+    "km": 50,
+    "approx": true,
+    "label": "Grenseområdene mot Mauritania, Mali, Niger og Libya"
+   },
+   {
+    "level": "all",
+    "adm": "DZA/ADM1",
+    "names": [
+     "Tizi Ouzou",
+     "Bejaia",
+     "Bouira"
+    ],
+    "approx": true,
+    "label": "Fjellområdene i Kabylia"
+   },
+   {
+    "level": "all",
+    "border": [
+     "TUN"
+    ],
+    "km": 30,
+    "clip": [
+     -10,
+     34.5,
+     20,
+     40
+    ],
+    "approx": true,
+    "label": "Fjellområdene mot Tunisia"
+   },
+   {
+    "level": "necessary",
+    "point": [
+     -8.05,
+     27.55
+    ],
+    "km": 45,
+    "approx": true,
+    "label": "Flyktningeleirene ved Tindouf"
+   }
+  ]
+ }
+}

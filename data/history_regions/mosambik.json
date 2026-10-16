@@ -1,0 +1,31 @@
+{
+ "_om": "Soner for eldre tekster på UDs side for Mosambik. Nøkkel = tekst-hash (python scraper/build.py --missing-history-zones mosambik). Format som data/regions.json; se README.",
+ "96f1de08f507": {
+  "text": "Utenriksdepartementet fraråder reiser til Sofala-provinsen, med unntak av Beira by, som ikke er strengt nødvendige. Utenriksdepartementet oppfordrer reisende til å utvise aktsomhet ved reiser eller opphold i Nampula-provinsen og områder som grenser til Sofala.",
+  "zones": [
+   {"level": "necessary", "adm": "MOZ/ADM1", "names": ["Sofala"], "label": "Sofala"},
+   {"level": "none", "point": [34.84, -19.84], "km": 15, "approx": true, "label": "Beira"}
+  ]
+ },
+ "f605b4d64977": {
+  "text": "Utenriksdepartementet fraråder alle ikke-nødvendige reiser til Cabo Delgado-provinsen. Departementet råder norske reisende til å utvise aktsomhet ved reiser til sørlige deler av Zambézia-provinsen, Manica-provinsen, samt Sofala-provinsen.",
+  "zones": [
+   {"level": "necessary", "adm": "MOZ/ADM1", "names": ["Cabo Delgado"], "label": "Cabo Delgado"}
+  ]
+ },
+ "519d5682373b": {
+  "text": "Utenriksdepartementet fraråder reiser som ikke er strengt nødvendige til provinsene Cabo Delgado, Manica og Sofala, samt sørlige deler av provinsen Zambezia.",
+  "zones": [
+   {"level": "necessary", "adm": "MOZ/ADM1", "names": ["Cabo Delgado", "Manica", "Sofala"], "label": "Cabo Delgado, Manica og Sofala"},
+   {"level": "necessary", "adm": "MOZ/ADM1", "names": ["Zambézia"], "and": {"poly": [[35, -17.3], [38.5, -17.3], [38.5, -19.5], [35, -19.5]]}, "approx": true, "partial": true, "label": "Sørlige Zambézia"}
+  ]
+ },
+ "efc6c3b24fa5": {
+  "text": "Utenriksdepartementet fraråder reiser som ikke er strengt nødvendige til provinsen Cabo Delgado.",
+  "same": "f605b4d64977"
+ },
+ "d9c60cf6369b": {
+  "text": "Utenriksdepartementet fraråder reiser til Cabo Delgado-provinsen som ikke er strengt nødvendige.",
+  "same": "f605b4d64977"
+ }
+}

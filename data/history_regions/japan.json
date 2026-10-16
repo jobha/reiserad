@@ -1,0 +1,27 @@
+{
+ "_om": "Soner for eldre tekster på UDs side for japan. Nøkkel = tekst-hash (python scraper/build.py --missing-history-zones japan). Format som data/regions.json; se README.",
+ "a08dfcdb8c80": {
+  "text": "Utenriksdepartementet fraråder reise eller opphold som ikke er strengt nødvendig i området mellom 80 og 150 km fra kjernekraftverkene i Fukushima-området. Norske borgere som oppholder seg mindre enn 80 km fra kjernekraftverkene i Fukushima-området oppfordres til å forlate området.",
+  "zones": [
+   {"level": "necessary", "point": [141.0328, 37.4211], "km": 150, "label": "80–150 km fra Fukushima Daiichi"},
+   {"level": "all", "point": [141.0328, 37.4211], "km": 80, "label": "Innenfor 80 km (oppfordres til å forlate)"}
+  ]
+ },
+ "af03891e035a": {
+  "text": "Utenriksdepartementet fraråder alle reiser til eller opphold i området innenfor 80 km fra kjernekraftanlegget Fukushima Daiich, og oppfordrer alle norske borgere til å forlate området.",
+  "zones": [
+   {"level": "all", "point": [141.0328, 37.4211], "km": 80, "label": "Innenfor 80 km fra Fukushima Daiichi"}
+  ]
+ },
+ "42191ae13aea": {
+  "text": "Utenriksdepartementet fraråder reiser til eller opphold i områder innenfor 20 kilometer fra kjernekraftanlegget Fukushima Daiich, samt til de øvrige områder utenfor sonen, der japanske myndigheter har anbefalt evakuering fra eller opphold i.",
+  "zones": [
+   {"level": "all", "point": [141.0328, 37.4211], "km": 20, "label": "Innenfor 20 km fra Fukushima Daiichi"},
+   {"level": "all", "poly": [[141.0, 37.52], [140.9, 37.7], [140.8, 37.76], [140.64, 37.73], [140.58, 37.63], [140.66, 37.52], [140.76, 37.43], [140.88, 37.38]], "approx": true, "label": "Evakueringsområder (Iitate m.fl.)"}
+  ]
+ },
+ "30ee6a24a4ce": {
+  "text": "Utenriksdepartementet fraråder alle reiser til eller opphold i områder rundt kjernekraftanlegget Fukushima Daiich.",
+  "same": "42191ae13aea"
+ }
+}

@@ -1,0 +1,14 @@
+{
+ "_om": "Soner for eldre tekster på UDs side for Republikken Kongo. Nøkkel = tekst-hash (python scraper/build.py --missing-history-zones repkongo). Format som data/regions.json; se README.",
+ "23cb8011e329": {
+  "text": "Reiser til eller opphold i Pool-regionen samt de østlige deler av Bouenza-regionen som ikke er strengt nødvendige frarådes. Reisende oppfordres til å utvise aktsomhet ved reiser til eller opphold i øvrige deler av Republikken Kongo (Kongo - Brazzaville).",
+  "zones": [
+   {"level": "necessary", "adm": "COG/ADM1", "names": ["Pool"], "label": "Pool-regionen"},
+   {"level": "necessary", "adm": "COG/ADM1", "names": ["Bouenza"], "and": {"poly": [[13.6, -5], [15, -5], [15, -3], [13.6, -3]]}, "approx": true, "partial": true, "label": "Østlige deler av Bouenza"}
+  ]
+ },
+ "33622a62d045": {
+  "text": "Reiser til eller opphold i Pool-regionen samt de østlige deler av Bouenza-regionen som ikke er strengt nødvendige frarådes.",
+  "same": "23cb8011e329"
+ }
+}

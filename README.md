@@ -58,13 +58,15 @@ tegnes i én fil per land, `data/history_regions/<UD-nøkkel>.json` (nøkkelen s
 - `same` gjenbruker sonene til en annen tekst for samme land (bare ordlyden endret).
 - `outside: true` på en sone dropper klippingen mot Natural Earths landegrense
   (Krym ligger i Russland der). En tekst som gjelder hele landet, tegnes som
-  `[{"level": ..., "country": true}]`, så den ikke lenger står på listen under.
+  `[{"level": ..., "country": true}]`, og en tekst uten egentlig advarsel (bare aktsomhet)
+  som `"zones": []`, så de ikke lenger står på listen under.
 - `build.py` skriver flatene til `site/data/timeline_zones.json` (forenklet til ~1 km),
   som kartet laster først når noen drar i tidslinjen.
 
 ```
 .venv/bin/python scraper/build.py --missing-history-zones          # hva mangler, per land
 .venv/bin/python scraper/build.py --missing-history-zones egypt    # hele tekstene for ett land
+.venv/bin/python tools/history_zones.py egypt                      # areal per sone + PNG per tekst
 ```
 
 ## Oppdatere en kartlegging

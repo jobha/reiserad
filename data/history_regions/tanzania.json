@@ -1,0 +1,9 @@
+{
+ "_om": "Soner for eldre tekster på UDs side for Tanzania. Nøkkel = tekst-hash (python scraper/build.py --missing-history-zones tanzania). Format som data/regions.json; se README.",
+ "f19bfa25baff": {
+  "text": "Utenriksdepartementet fraråder reiser som ikke er strengt nødvendige til de delene av Mtwara-regionen som grenser mot Mosambik.",
+  "zones": [
+   {"level": "necessary", "adm": "TZA/ADM1", "names": ["Mtwara"], "and": {"border": ["MOZ"], "km": 40}, "approx": true, "label": "Delene av Mtwara som grenser mot Mosambik"}
+  ]
+ }
+}

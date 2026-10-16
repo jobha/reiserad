@@ -1,0 +1,11 @@
+{
+ "_om": "Soner for eldre tekster på UDs side for Burundi. Nøkkel = tekst-hash (python scraper/build.py --missing-history-zones burundi). Format som data/regions.json; se README.",
+ "cf835414a4c1": {
+  "text": "Utenriksdepartementet fraråder alle reiser til provinsene Bubuka og Cibitoke og nasjonalparken Kibira. Utenriksdepartementet fraråder reiser til Burundi som ikke er strengt nødvendige.",
+  "zones": [
+   {"level": "necessary", "country": true, "label": "Resten av landet"},
+   {"level": "all", "adm": "BDI/ADM1", "names": ["Bubanza", "Cibitoke"], "label": "Bubanza og Cibitoke"},
+   {"level": "all", "poly": [[29.33, -2.62], [29.52, -2.62], [29.57, -3.0], [29.5, -3.25], [29.4, -3.2], [29.35, -2.9]], "approx": true, "label": "Kibira nasjonalpark"}
+  ]
+ }
+}

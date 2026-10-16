@@ -1,0 +1,48 @@
+{
+ "_om": "Soner for eldre tekster på UDs side for pakistan. Nøkkel = tekst-hash (python scraper/build.py --missing-history-zones pakistan). Format som data/regions.json; se README.",
+ "962bc20183f5": {
+  "text": "Utenriksdepartementet fraråder alle reiser til eller opphold i Baluchistan, North West Frontier Province og i stammeområdene Federally Administered Tribal Areas (FATA) i Pakistan. For det øvrige Pakistan er det grunn til å utvise aktsomhet.",
+  "zones": [
+   {"level": "all", "adm": "PAK/ADM1", "names": ["Balochistan", "Khyber Pakhtunkhwa"], "label": "Balutsjistan, Khyber Pakhtunkhwa og FATA"}
+  ]
+ },
+ "88cbafb0186b": {
+  "text": "Utenriksdepartementet fraråder reise til eller opphold i Baluchistan, North West Frontier Province og i stammeområdene Federally Administered Tribal Areas (FATA).",
+  "same": "962bc20183f5"
+ },
+ "fc4ef749be78": {
+  "text": "Utenriksdepartementet fraråder alle reiser til eller opphold i Baluchistan, Khyber Pakhtunkhwa (KPK) og i stammeområdene Federally Administered Tribal Areas (FATA) i Pakistan. For det øvrige Pakistan er det grunn til å utvise aktsomhet.",
+  "same": "962bc20183f5"
+ },
+ "8d4299598d94": {
+  "text": "Utenriksdepartementet fraråder alle reiser til eller opphold i Balutsjistan og Khyber Pakhtunkhwa, inkludert stammeområdene som tidligere var føderalt administrert (FATA).",
+  "same": "962bc20183f5"
+ },
+ "081871fe9600": {
+  "text": "Utenriksdepartementet fraråder alle reiser til eller opphold i Balutsjistan og Khyber Pakhtunkhwa, inkludert stammeområdene som tidligere var føderalt administrert (Fata).",
+  "same": "962bc20183f5"
+ },
+ "46f079a7fd6b": {
+  "text": "Utenriksdepartementet fraråder alle reiser til eller opphold i Baluchistan, Khyber Pakhtunkhwa (KPK) og i stammeområdene Federally Administered Tribal Areas (FATA) i Pakistan. Utenriksdepartementet fraråder reiser eller opphold som ikke er strengt nødvendige til Karachi med forsteder. For det øvrige Pakistan oppfordrer Utenriksdepartementet reisende til å utvise aktsomhet.",
+  "zones": [
+   {"level": "all", "adm": "PAK/ADM1", "names": ["Balochistan", "Khyber Pakhtunkhwa"], "label": "Balutsjistan, Khyber Pakhtunkhwa og FATA"},
+   {"level": "necessary", "adm": "PAK/ADM2", "names": ["Karachi"], "label": "Karachi med forsteder"}
+  ]
+ },
+ "70d108149797": {
+  "text": "Utenriksdepartementet fraråder alle reiser til eller opphold i Baluchistan, Khyber Pakhtunkhwa (KPK) og i stammeområdene Federally Administered Tribal Areas (Fata) i Pakistan. Utenriksdepartementet fraråder reiser eller opphold som ikke er strengt nødvendige til Karachi med forsteder. For det øvrige Pakistan oppfordrer Utenriksdepartementet reisende til å utvise aktsomhet.",
+  "same": "46f079a7fd6b"
+ },
+ "79d570d12596": {
+  "text": "Utenriksdepartementet fraråder alle reiser til eller opphold i Baluchistan, Khyber Pakhtunkhwa (KPK) og i stammeområdene Federally Administered Tribal Areas (Fata) i Pakistan. Utenriksdepartementet fraråder reiser eller opphold som ikke er strengt nødvendige til Karachi med forsteder.",
+  "same": "46f079a7fd6b"
+ },
+ "00f890586ac5": {
+  "text": "Utenriksdepartementet advarer mot reiser til Pakistan som ikke er strengt nødvendige. Utenriksdepartementet advarer mot alle reiser til eller opphold i Balutsjistan, Khyber Pakhtunkhwa, pakistanskkontrollert Kashmir og områder innenfor ti kilometer fra grensen mot India.",
+  "zones": [
+   {"level": "necessary", "country": true, "label": "Resten av landet"},
+   {"level": "all", "adm": "PAK/ADM1", "names": ["Balochistan", "Khyber Pakhtunkhwa", "Azad Kashmir"], "label": "Balutsjistan, Khyber Pakhtunkhwa og Azad Kashmir"},
+   {"level": "all", "border": ["IND"], "km": 10, "label": "Innenfor 10 km fra grensen mot India"}
+  ]
+ }
+}

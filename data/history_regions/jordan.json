@@ -1,0 +1,13 @@
+{
+ "_om": "Soner for eldre tekster på UDs side for Jordan. Nøkkel = tekst-hash (python scraper/build.py --missing-history-zones jordan). Format som data/regions.json; se README.",
+ "dfc682ed24e1": {
+  "text": "Utenriksdepartementet fraråder reise eller opphold som ikke er strengt nødvendig til grenseområdene nærmere enn tre km mot Syria og Irak.",
+  "zones": [
+   {"level": "necessary", "border": ["SYR", "IRQ"], "km": 3, "label": "Innenfor 3 km fra grensen mot Syria og Irak"}
+  ]
+ },
+ "1704b837792f": {
+  "text": "Utenriksdepartementet fraråder reise eller opphold som ikke er strengt nødvendig til grenseområdene nærmere enn tre kilometer mot Syria og Irak.",
+  "same": "dfc682ed24e1"
+ }
+}

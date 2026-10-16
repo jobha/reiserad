@@ -1,0 +1,48 @@
+{
+ "_om": "Soner for eldre tekster på UDs side for Thailand. Nøkkel = tekst-hash (python scraper/build.py --missing-history-zones thailand). Format som data/regions.json; se README.",
+ "52596037696a": {
+  "text": "Utenriksdepartementet fraråder reise til eller opphold i provinsene Pattani, Yala, Narathiwat og Songkhla som ikke er strengt nødvendig. Norske borgere som oppholder seg i eller planlegger å reise til disse provinsene oppfordres til å ta kontakt med ambassaden i Bangkok for oppdatert informasjon og registrering.",
+  "zones": [
+   {"level": "necessary", "adm": "THA/ADM1", "names": ["Pattani Province", "Yala Province", "Narathiwat Province", "Songkhla Province"], "label": "Pattani, Yala, Narathiwat og Songkhla"}
+  ]
+ },
+ "5c7b7c48b610": {
+  "text": "Utenriksdepartementet fraråder reiser til Bangkok som ikke er strengt nødvendige. Dette gjelder ikke flyreiser via Bangkok internasjonale flyplass. Utenriksdepartementet fraråder reise til eller opphold i provinsene Pattani, Yala, Narathiwat og Songkhla som ikke er strengt nødvendig. Norske borgere som oppholder seg i eller planlegger å reise til disse provinsene oppfordres til å ta kontakt med ambassaden i Bangkok for oppdatert informasjon og registrering.",
+  "zones": [
+   {"level": "necessary", "adm": "THA/ADM1", "names": ["Bangkok"], "label": "Bangkok"},
+   {"level": "necessary", "adm": "THA/ADM1", "names": ["Pattani Province", "Yala Province", "Narathiwat Province", "Songkhla Province"], "label": "Pattani, Yala, Narathiwat og Songkhla"}
+  ]
+ },
+ "98dc827e9c87": {
+  "text": "Utenriksdepartementet fraråder reise eller opphold som ikke er strengt nødvendig i provinsene Pattani, Yala, Narathiwat og Songkhla i Thailand.",
+  "same": "52596037696a"
+ },
+ "5826fb1c77ce": {
+  "text": "Utenriksdepartementet oppfordrer reisende til å utvise aktsomhet ved reiser til eller opphold i Bangkok. Utenriksdepartementet fraråder reise eller opphold som ikke er strengt nødvendig i provinsene Pattani, Yala, Narathiwat og Songkhla i Thailand.",
+  "same": "52596037696a"
+ },
+ "877678f0950c": {
+  "text": "Utenriksdepartementet fraråder alle reiser til områder som ligger nærmere enn 20 kilometer fra grensen til Kambodsja. Utenriksdepartementet fraråder reiser til provinsene Buriram, Surin, Sisaket, Ubon Ratchathani, Pattani, Yala, Narathiwat og Songkhla som ikke er strengt nødvendige.",
+  "zones": [
+   {"level": "necessary", "adm": "THA/ADM1", "names": ["Buri Ram Province", "Surin Province", "Si Sa Ket Province", "Ubon Ratchathani Province"], "label": "Buriram, Surin, Sisaket og Ubon Ratchathani"},
+   {"level": "necessary", "adm": "THA/ADM1", "names": ["Pattani Province", "Yala Province", "Narathiwat Province", "Songkhla Province"], "label": "Pattani, Yala, Narathiwat og Songkhla"},
+   {"level": "all", "border": ["KHM"], "km": 20, "label": "Nærmere enn 20 km fra grensen mot Kambodsja"}
+  ]
+ },
+ "b3eeba800206": {
+  "text": "Utenriksdepartementet fraråder alle reiser til grenseområdene mot Kambodsja. Utenriksdepartementet fraråder reiser som ikke er strengt nødvendige til provinsene Pattani, Yala, Narathiwat og Songkhla sør i Thailand.",
+  "zones": [
+   {"level": "necessary", "adm": "THA/ADM1", "names": ["Pattani Province", "Yala Province", "Narathiwat Province", "Songkhla Province"], "label": "Pattani, Yala, Narathiwat og Songkhla"},
+   {"level": "all", "border": ["KHM"], "km": 50, "approx": true, "label": "Grenseområdene mot Kambodsja"}
+  ]
+ },
+ "d4c5718224e5": {
+  "text": "Utenriksdepartementet fraråder alle reiser nærmere enn 50 km fra grensen til Kambodsja. Det omfatter øyene tilhørende Trat-provinsen, inkludert Koh Chang, Koh Kood og Koh Mak. Utenriksdepartementet fraråder reiser som ikke er strengt nødvendige til resterende områder i alle provinser som grenser til Kambodsja. Utenriksdepartementet fraråder reiser som ikke er strengt nødvendige til provinsene Pattani, Yala, Narathiwat og Songkhla.",
+  "zones": [
+   {"level": "necessary", "adm": "THA/ADM1", "names": ["Ubon Ratchathani Province", "Si Sa Ket Province", "Surin Province", "Buri Ram Province", "Sa Kaeo Province", "Chanthaburi Province", "Trat Province"], "label": "Provinsene som grenser til Kambodsja"},
+   {"level": "necessary", "adm": "THA/ADM1", "names": ["Pattani Province", "Yala Province", "Narathiwat Province", "Songkhla Province"], "label": "Pattani, Yala, Narathiwat og Songkhla"},
+   {"level": "all", "border": ["KHM"], "km": 50, "label": "Nærmere enn 50 km fra grensen mot Kambodsja"},
+   {"level": "all", "adm": "THA/ADM1", "names": ["Trat Province"], "and": {"poly": [[102.15, 12.3], [102.62, 12.08], [102.75, 11.5], [102.35, 11.5], [102.1, 11.9]]}, "approx": true, "label": "Øyene i Trat (Koh Chang, Koh Kood, Koh Mak)"}
+  ]
+ }
+}

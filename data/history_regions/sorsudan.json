@@ -1,0 +1,9 @@
+{
+ "_om": "Soner for eldre tekster på UDs side for Sør-Sudan. Nøkkel = tekst-hash (python scraper/build.py --missing-history-zones sorsudan). Format som data/regions.json; se README.",
+ "40da177f8a0b": {
+  "text": "Utenriksdepartementet fraråder reiser eller opphold som ikke er strengt nødvendige til grenseområdene mot Sudan.",
+  "zones": [
+   {"level": "necessary", "border": ["SDN"], "km": 50, "label": "Grenseområdene mot Sudan", "approx": true}
+  ]
+ }
+}

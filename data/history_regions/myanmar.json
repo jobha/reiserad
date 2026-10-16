@@ -1,0 +1,31 @@
+{
+ "_om": "Soner for eldre tekster på UDs side for myanmar. Nøkkel = tekst-hash (python scraper/build.py --missing-history-zones myanmar). Format som data/regions.json; se README.",
+ "14a8f4ef9819": {
+  "text": "Utenriksdepartementet fraråder reiser som ikke er strengt nødvendige til: delstaten Rakhine - med unntak av turistområdet Thandwe/Nagapali og Sittwe, delstaten Kachin - med unntak av Myitkyina, Bhamo og Putao, den nordlige delen av delstaten Shan, Pyin Oo Lwin i Mandalay-regionen og veien opp mot Lashio i den nordlige delen av delstaten Shan og Paletwa Township i den sørlige delen av delstaten Chin.",
+  "zones": [
+   {"level": "necessary", "adm": "MMR/ADM1", "names": ["Rakhine"], "label": "Rakhine"},
+   {"level": "none", "adm": "MMR/ADM3", "names": ["Thandwe", "Sittwe"], "approx": true, "label": "Thandwe/Ngapali og Sittwe"},
+   {"level": "necessary", "adm": "MMR/ADM1", "names": ["Kachin"], "label": "Kachin"},
+   {"level": "none", "point": [97.395, 25.383], "km": 10, "approx": true, "label": "Myitkyina"},
+   {"level": "none", "point": [97.237, 24.263], "km": 8, "approx": true, "label": "Bhamo"},
+   {"level": "none", "point": [97.4, 27.33], "km": 8, "approx": true, "label": "Putao"},
+   {"level": "necessary", "adm": "MMR/ADM2", "names": ["Lashio", "Muse", "Kyaukme", "Laukkaing", "Hopang", "Matman", "Mongmit"], "approx": true, "label": "Nordlige Shan"},
+   {"level": "necessary", "point": [96.459, 22.033], "km": 12, "approx": true, "label": "Pyin Oo Lwin"},
+   {"level": "necessary", "line": [[96.459, 22.033], [96.62, 22.15], [96.83, 22.38], [97.06, 22.47]], "km": 3, "approx": true, "label": "Veien mot Lashio"},
+   {"level": "necessary", "adm": "MMR/ADM3", "names": ["Paletwa"], "label": "Paletwa"}
+  ]
+ },
+ "a43ab380ea33": {
+  "text": "Utenriksdepartementet fraråder reiser som ikke er strengt nødvendige til delstaten Rakhine, med unntak av turistområdet Ngapali samt kommunene Thandwe og Gwa; delstaten Kachin, med unntak av byene Myitkyina, Bhamo og Putao; hele den nordlige delen av delstaten Shan samt kommunen Paletwa i den sørlige delen av delstaten Chin.",
+  "zones": [
+   {"level": "necessary", "adm": "MMR/ADM1", "names": ["Rakhine"], "label": "Rakhine"},
+   {"level": "none", "adm": "MMR/ADM3", "names": ["Thandwe", "Gwa"], "label": "Thandwe (Ngapali) og Gwa"},
+   {"level": "necessary", "adm": "MMR/ADM1", "names": ["Kachin"], "label": "Kachin"},
+   {"level": "none", "point": [97.395, 25.383], "km": 10, "approx": true, "label": "Myitkyina"},
+   {"level": "none", "point": [97.237, 24.263], "km": 8, "approx": true, "label": "Bhamo"},
+   {"level": "none", "point": [97.4, 27.33], "km": 8, "approx": true, "label": "Putao"},
+   {"level": "necessary", "adm": "MMR/ADM2", "names": ["Lashio", "Muse", "Kyaukme", "Laukkaing", "Hopang", "Matman", "Mongmit"], "approx": true, "label": "Nordlige Shan"},
+   {"level": "necessary", "adm": "MMR/ADM3", "names": ["Paletwa"], "label": "Paletwa"}
+  ]
+ }
+}

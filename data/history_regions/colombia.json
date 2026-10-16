@@ -1,0 +1,17 @@
+{
+ "_om": "Soner for eldre tekster på UDs side for Colombia. Nøkkel = tekst-hash (python scraper/build.py --missing-history-zones colombia). Format som data/regions.json; se README.",
+ "294ef8523719": {
+  "text": "Utenriksdepartementet fraråder alle reiser og opphold i regionen Catatumbo i fylket Norte de Santander ved grensen mot Venezuela. Videre fraråder utenriksdepartementet reiser eller opphold som ikke er strengt nødvendige i provinsen Tumaco i fylket Nariño ved grensen mot Ecuador.",
+  "zones": [
+   {"level": "all", "adm": "COL/ADM2", "names": ["Abrego", "Convención", "El Carmen", "El Tarra", "Hacarí", "La Playa", "Ocaña", "San Calixto", "Sardinata", "Teorama", "Tibú"], "and": {"adm": "COL/ADM1", "names": ["Norte de Santander"]}, "approx": true, "label": "Catatumbo (Norte de Santander)"},
+   {"level": "necessary", "adm": "COL/ADM2", "names": ["Tumaco"], "label": "Tumaco (Nariño)"}
+  ]
+ },
+ "8a2fd9aca2d0": {
+  "text": "Utenriksdepartementet fraråder reiser som ikke er strengt nødvendige innenfor 20 km fra grensen mot Venezuela og Ecuador, samt utenfor etablerte turistområder og bykjernen i større byer i fylkene Norte de Santander, Arauca, Nariño, Cauca, Putumayo, Guaviare og Vichada.",
+  "zones": [
+   {"level": "necessary", "partial": true, "adm": "COL/ADM1", "names": ["Norte de Santander", "Arauca", "Nariño", "Cauca", "Putumayo", "Guaviare", "Vichada"], "label": "Utenfor turistområder og bykjerner i disse fylkene"},
+   {"level": "necessary", "border": ["VEN", "ECU"], "km": 20, "label": "Innenfor 20 km fra grensen mot Venezuela og Ecuador"}
+  ]
+ }
+}

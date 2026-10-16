@@ -1,0 +1,4 @@
+{
+ "_om": "Soner for eldre tekster på UDs side for tsjad. Nøkkel = tekst-hash (python scraper/build.py --missing-history-zones tsjad). Format som data/regions.json; se README.",
+ "2a125e7de01f": {"text": "Utenriksdepartementet fraråder alle reiser til eller opphold i området rundt Tsjad-sjøen/delstaten Lac-regionen. Videre fraråder Utenriksdepartementet reise eller opphold i de øvrige delene av Tsjad som ikke er strengt nødvendige.", "zones": [{"level": "necessary", "country": true, "label": "Resten av landet"}, {"level": "all", "adm": "TCD/ADM1", "names": ["Lac"], "label": "Lac-regionen"}]}
+}

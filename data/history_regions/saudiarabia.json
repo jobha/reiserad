@@ -1,0 +1,7 @@
+{
+ "_om": "Soner for eldre tekster på UDs side for saudiarabia. Nøkkel = tekst-hash (python scraper/build.py --missing-history-zones saudiarabia). Format som data/regions.json; se README.",
+ "8672695f4d0b": {"text": "Utenriksdepartementet oppfordrer reisende til å utvise aktsomhet ved reiser til eller opphold i Saudi-Arabia. Det frarådes mot alle reiser til eller opphold innenfor 50 kilometer fra grensen mot Jemen.", "zones": [{"level": "all", "border": ["YEM"], "km": 50, "label": "Nærmere enn 50 km fra grensen mot Jemen"}]},
+ "7c009fce1f56": {"text": "Det frarådes mot alle reiser til eller opphold innenfor 50 kilometer fra grensen mot Jemen.", "same": "8672695f4d0b"},
+ "82d5d954a166": {"text": "Utenriksdepartementet fraråder alle reiser til områder som er nærmere enn 50 km fra grensen mot Jemen. Utenriksdepartementet fraråder reiser som ikke er strengt nødvendige til øvrige deler av Saudi-Arabia.", "zones": [{"level": "necessary", "country": true, "label": "Resten av landet"}, {"level": "all", "border": ["YEM"], "km": 50, "label": "Nærmere enn 50 km fra grensen mot Jemen"}]},
+ "e63ec9276b2f": {"text": "Utenriksdepartementet fraråder alle reiser til områder som er nærmere enn 50 km fra grensen mot Jemen.", "same": "8672695f4d0b"}
+}

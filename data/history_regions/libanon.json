@@ -1,0 +1,101 @@
+{
+ "_om": "Soner for eldre tekster på UDs side for Libanon. Nøkkel = tekst-hash (python scraper/build.py --missing-history-zones libanon). Format som data/regions.json; se README.",
+ "9fd4702d2738": {
+  "text": "Utenriksdepartementet oppfordrer reisende til å utvise aktsomhet ved reiser til eller opphold i Libanon. Reise eller opphold som ikke er strengt nødvendig til grenseområdene mot Syria, Bab et-Tabbaneh og Jabal Mohsen i Tripoli og flyktningleiren Ain el-Hilweh i Saida frarådes.",
+  "zones": [
+   {"level": "necessary", "border": ["SYR"], "km": 10, "label": "Grenseområdene mot Syria", "approx": true},
+   {"level": "necessary", "point": [35.845, 34.445], "km": 1, "approx": true, "label": "Bab et-Tabbaneh og Jabal Mohsen (Tripoli)"},
+   {"level": "necessary", "point": [35.383, 33.543], "km": 0.8, "approx": true, "label": "Flyktningleiren Ain el-Hilweh (Saida)"}
+  ]
+ },
+ "9ba62fbeb1d9": {
+  "text": "Utenriksdepartementet fraråder reise eller opphold som ikke er strengt nødvendig til Libanon grunnet den skjerpede sikkerhetssituasjonen og risikoen for økt regional spenning. Alle reiser og opphold i Beiruts sørlige forsteder (Dahiyeh) og Sør-Libanon, sør for Litani-elven frarådes. Alle reiser eller opphold i grenseområdene til Syria og den nordlige delen av Bekaa-dalen frarådes. Alle reiser eller opphold til Bab et-Tabbaneh og Jabal Mohsen i Tripoli frarådes. Alle reiser eller opphold i den palestinske flyktningleiren Ain el-Hilweh i Saida frarådes",
+  "zones": [
+   {"level": "necessary", "country": true, "label": "Resten av landet"},
+   {"poly": [[35.0, 33.345], [35.245, 33.338], [35.33, 33.335], [35.42, 33.33], [35.5, 33.315], [35.555, 33.335], [35.6, 33.4], [35.64, 33.47], [36.0, 33.47], [36.0, 32.9], [35.0, 32.9]], "approx": true, "level": "all", "label": "Sør for Litani-elven"},
+   {"level": "all", "poly": [[35.488, 33.872], [35.522, 33.872], [35.535, 33.85], [35.53, 33.828], [35.505, 33.832], [35.495, 33.845], [35.488, 33.855]], "approx": true, "label": "Beiruts sørlige forsteder (Dahiyeh)"},
+   {"level": "all", "border": ["SYR"], "km": 10, "label": "Grenseområdene mot Syria", "approx": true},
+   {"level": "all", "adm": "LBN/ADM1", "names": ["Baalbek-Hermel"], "approx": true, "label": "Nordlige Bekaa-dalen"},
+   {"level": "all", "point": [35.845, 34.445], "km": 1, "approx": true, "label": "Bab et-Tabbaneh og Jabal Mohsen (Tripoli)"},
+   {"level": "all", "point": [35.383, 33.543], "km": 0.8, "approx": true, "label": "Flyktningleiren Ain el-Hilweh (Saida)"}
+  ]
+ },
+ "774b946f4483": {
+  "text": "Utenriksdepartementet oppfordrer reisende til å utvise aktsomhet ved reise til eller opphold i Libanon. Alle reiser eller opphold i grenseområdene til Syria og den nordlige delen av Bekaa-dalen frarådes. Alle reiser eller opphold i Bab et-Tabbaneh og Jabal Mohsen i Tripoli frarådes. Alle reiser eller opphold i Beiruts sørlige forsteder (Dahiyeh), med unntak av den internasjonale flyplassen og motorveien til denne, frarådes. Alle reiser eller opphold i den palestinske flyktningleiren Ain el-Hilweh i Saida, frarådes. Reise eller opphold som ikke er strengt nødvendig til de øvrige delene av Bekaa-dalen og Tripoli-området frarådes. Reise eller opphold som ikke er strengt nødvendig til Sør-Libanon, sør for Litani-elven frarådes.",
+  "zones": [
+   {"level": "necessary", "adm": "LBN/ADM1", "names": ["Béqaa"], "label": "Øvrige deler av Bekaa-dalen"},
+   {"level": "necessary", "adm": "LBN/ADM2", "names": ["Tripoli"], "approx": true, "label": "Tripoli-området"},
+   {"poly": [[35.0, 33.345], [35.245, 33.338], [35.33, 33.335], [35.42, 33.33], [35.5, 33.315], [35.555, 33.335], [35.6, 33.4], [35.64, 33.47], [36.0, 33.47], [36.0, 32.9], [35.0, 32.9]], "approx": true, "level": "necessary", "label": "Sør for Litani-elven"},
+   {"level": "all", "border": ["SYR"], "km": 10, "label": "Grenseområdene mot Syria", "approx": true},
+   {"level": "all", "adm": "LBN/ADM1", "names": ["Baalbek-Hermel"], "approx": true, "label": "Nordlige Bekaa-dalen"},
+   {"level": "all", "point": [35.845, 34.445], "km": 1, "approx": true, "label": "Bab et-Tabbaneh og Jabal Mohsen (Tripoli)"},
+   {"level": "all", "poly": [[35.488, 33.872], [35.522, 33.872], [35.535, 33.85], [35.53, 33.828], [35.505, 33.832], [35.495, 33.845], [35.488, 33.855]], "approx": true, "label": "Beiruts sørlige forsteder (Dahiyeh)"},
+   {"level": "all", "point": [35.383, 33.543], "km": 0.8, "approx": true, "label": "Flyktningleiren Ain el-Hilweh (Saida)"},
+   {"level": "none", "point": [35.488, 33.821], "km": 1.5, "approx": true, "label": "Den internasjonale flyplassen"},
+   {"level": "none", "line": [[35.497, 33.872], [35.496, 33.85], [35.493, 33.83]], "km": 0.3, "approx": true, "label": "Motorveien til flyplassen"}
+  ]
+ },
+ "ea9cac72e8f4": {
+  "text": "Utenriksdepartementet oppfordrer reisende til å utvise aktsomhet ved reise til eller opphold i Libanon. Alle reiser eller opphold i grenseområdene til Syria og den nordlige delen av Bekaa-dalen frarådes. Alle reiser til eller opphold i Tripoli og Nord-Libanon frarådes. Alle reiser eller opphold i Beiruts sørlige forsteder (Dahiyeh), med unntak av den internasjonale flyplassen og motorveien til denne, frarådes. Alle reiser eller opphold i den palestinske flyktningleiren Ain el-Hilweh i Saida, frarådes. Reise eller opphold som ikke er strengt nødvendig til de øvrige delene av Bekaa-dalen og Tripoli-området frarådes. Reise eller opphold som ikke er strengt nødvendig til Sør-Libanon, sør for Litani-elven frarådes.",
+  "zones": [
+   {"level": "necessary", "adm": "LBN/ADM1", "names": ["Béqaa"], "label": "Øvrige deler av Bekaa-dalen"},
+   {"poly": [[35.0, 33.345], [35.245, 33.338], [35.33, 33.335], [35.42, 33.33], [35.5, 33.315], [35.555, 33.335], [35.6, 33.4], [35.64, 33.47], [36.0, 33.47], [36.0, 32.9], [35.0, 32.9]], "approx": true, "level": "necessary", "label": "Sør for Litani-elven"},
+   {"level": "all", "adm": "LBN/ADM1", "names": ["Liban-Nord", "Aakkâr"], "label": "Tripoli og Nord-Libanon"},
+   {"level": "all", "border": ["SYR"], "km": 10, "label": "Grenseområdene mot Syria", "approx": true},
+   {"level": "all", "adm": "LBN/ADM1", "names": ["Baalbek-Hermel"], "approx": true, "label": "Nordlige Bekaa-dalen"},
+   {"level": "all", "poly": [[35.488, 33.872], [35.522, 33.872], [35.535, 33.85], [35.53, 33.828], [35.505, 33.832], [35.495, 33.845], [35.488, 33.855]], "approx": true, "label": "Beiruts sørlige forsteder (Dahiyeh)"},
+   {"level": "all", "point": [35.383, 33.543], "km": 0.8, "approx": true, "label": "Flyktningleiren Ain el-Hilweh (Saida)"},
+   {"level": "none", "point": [35.488, 33.821], "km": 1.5, "approx": true, "label": "Den internasjonale flyplassen"},
+   {"level": "none", "line": [[35.497, 33.872], [35.496, 33.85], [35.493, 33.83]], "km": 0.3, "approx": true, "label": "Motorveien til flyplassen"}
+  ]
+ },
+ "c9bf38e93fe7": {
+  "text": "Utenriksdepartementet oppfordrer reisende til å utvise aktsomhet ved reise til eller opphold i Libanon. Alle reiser til og opphold i grenseområdene mot Syria nærmere enn ti km fra grensen, frarådes, inkludert byene Arsal og Hermel. Alle reiser og opphold nærmere enn fem kilometer fra den såkalte blå linjen mot Golan, frarådes. Alle reiser til den palestinske flyktningleiren Ain el Hilweh frarådes. Alle reiser til Beiruts sørlige forsteder (Dahiyeh) frarådes, med unntak av den internasjonale flyplassen og hovedveien til denne. Reiser og opphold som ikke er strengt nødvendige til Sør-Libanon sør for elven Litani, frarådes, med unntak av byen Tyre og områder vest for hovedveien Saida-Tyre-Naquora. Reiser og opphold som ikke er strengt nødvendige til Bekaa-dalen nord for Zahleh, med unntak av Baalbek by og hovedveien til Baalbek, frarådes. Reiser og opphold som ikke er strengt nødvendige til Tripoli, frarådes. Reiser og opphold som ikke er strengt nødvendige til provinsen Nord-Libanon (distriktene Akkar og Miniyeh-Danniyeh), frarådes.",
+  "zones": [
+   {"poly": [[35.0, 33.345], [35.245, 33.338], [35.33, 33.335], [35.42, 33.33], [35.5, 33.315], [35.555, 33.335], [35.6, 33.4], [35.64, 33.47], [36.0, 33.47], [36.0, 32.9], [35.0, 32.9]], "approx": true, "level": "necessary", "label": "Sør for Litani-elven"},
+   {"level": "necessary", "adm": "LBN/ADM1", "names": ["Baalbek-Hermel"], "approx": true, "label": "Bekaa-dalen nord for Zahleh"},
+   {"level": "necessary", "adm": "LBN/ADM2", "names": ["Tripoli"], "label": "Tripoli"},
+   {"level": "necessary", "adm": "LBN/ADM2", "names": ["Akkar", "Minieh-Dinnieh"], "label": "Nord-Libanon (Akkar og Miniyeh-Danniyeh)"},
+   {"level": "none", "point": [35.203, 33.271], "km": 3, "approx": true, "label": "Tyre by"},
+   {"level": "none", "line": [[35.245, 33.338], [35.215, 33.29], [35.2, 33.25], [35.19, 33.2], [35.165, 33.15], [35.135, 33.11]], "km": 1.5, "approx": true, "label": "Vest for hovedveien Saida–Tyre–Naqoura"},
+   {"level": "none", "point": [36.205, 34.006], "km": 3, "approx": true, "label": "Baalbek by"},
+   {"level": "none", "line": [[35.902, 33.847], [35.98, 33.88], [36.08, 33.94], [36.205, 34.006]], "km": 1, "approx": true, "label": "Hovedveien til Baalbek"},
+   {"level": "all", "border": ["SYR"], "km": 10, "label": "Grenseområdene mot Syria (10 km)"},
+   {"level": "all", "point": [36.42, 34.18], "km": 3, "approx": true, "label": "Arsal"},
+   {"level": "all", "point": [36.385, 34.395], "km": 3, "approx": true, "label": "Hermel"},
+   {"level": "all", "border": ["ISR"], "km": 5, "label": "Innenfor 5 km fra Den blå linje (mot Israel og Golan)"},
+   {"level": "all", "point": [35.383, 33.543], "km": 0.8, "approx": true, "label": "Flyktningleiren Ain el-Hilweh (Saida)"},
+   {"level": "all", "poly": [[35.488, 33.872], [35.522, 33.872], [35.535, 33.85], [35.53, 33.828], [35.505, 33.832], [35.495, 33.845], [35.488, 33.855]], "approx": true, "label": "Beiruts sørlige forsteder (Dahiyeh)"},
+   {"level": "none", "point": [35.488, 33.821], "km": 1.5, "approx": true, "label": "Den internasjonale flyplassen"},
+   {"level": "none", "line": [[35.497, 33.872], [35.496, 33.85], [35.493, 33.83]], "km": 0.3, "approx": true, "label": "Motorveien til flyplassen"}
+  ]
+ },
+ "c9445b5d7eea": {
+  "text": "Alle reiser til og opphold i grenseområdene mot Syria nærmere enn ti km fra grensen, frarådes, inkludert byene Arsal og Hermel. Alle reiser og opphold nærmere enn fem kilometer fra den såkalte blå linjen mot Golan, frarådes. Alle reiser til den palestinske flyktningleiren Ain el Hilweh frarådes. Alle reiser til Beiruts sørlige forsteder (Dahiyeh) frarådes, med unntak av den internasjonale flyplassen og hovedveien til denne. Reiser og opphold som ikke er strengt nødvendige til Sør-Libanon sør for elven Litani, frarådes, med unntak av byen Tyre og områder vest for hovedveien Saida-Tyre-Naquora. Reiser og opphold som ikke er strengt nødvendige til Bekaa-dalen nord for Zahleh, med unntak av Baalbek by og hovedveien til Baalbek, frarådes. Reiser og opphold som ikke er strengt nødvendige til Tripoli, frarådes. Reiser og opphold som ikke er strengt nødvendige til provinsen Nord-Libanon (distriktene Akkar og Miniyeh-Danniyeh), frarådes.",
+  "same": "c9bf38e93fe7"
+ },
+ "ff0b9119e051": {
+  "text": "Alle reiser til og opphold i grenseområdene mot Syria nærmere enn ti km fra grensen, frarådes, inkludert byene Arsal og Hermel. Alle reiser og opphold nærmere enn fem kilometer fra den såkalte blå linjen mot Golan, frarådes.",
+  "zones": [
+   {"level": "all", "border": ["SYR"], "km": 10, "label": "Grenseområdene mot Syria (10 km)"},
+   {"level": "all", "point": [36.42, 34.18], "km": 3, "approx": true, "label": "Arsal"},
+   {"level": "all", "point": [36.385, 34.395], "km": 3, "approx": true, "label": "Hermel"},
+   {"level": "all", "border": ["ISR"], "km": 5, "label": "Innenfor 5 km fra Den blå linje (mot Israel og Golan)"}
+  ]
+ },
+ "08ac02b81770": {
+  "text": "Utenriksdepartementet fraråder alle reiser til Dahieh-området i Beiruts sørlige forstad, sør for Saeb Salam Avenue, med unntak av den internasjonale flyplassen og hovedvei nummer 51 til denne. Videre frarådes alle reiser til sør for elven Litani, til Beka’a-dalen nord for Zahleh, grenseområdene mot Syria nærmere enn fem kilometer fra grensen, inkludert byene Arsal og Hermel, og den palestinske flyktningeleiren Ein el-Hilweh. Utenriksdepartementet fraråder reiser til øvrige deler av Libanon som ikke er strengt nødvendige.",
+  "zones": [
+   {"level": "necessary", "country": true, "label": "Øvrige deler av Libanon"},
+   {"poly": [[35.0, 33.345], [35.245, 33.338], [35.33, 33.335], [35.42, 33.33], [35.5, 33.315], [35.555, 33.335], [35.6, 33.4], [35.64, 33.47], [36.0, 33.47], [36.0, 32.9], [35.0, 32.9]], "approx": true, "level": "all", "label": "Sør for Litani-elven"},
+   {"level": "all", "adm": "LBN/ADM1", "names": ["Baalbek-Hermel"], "approx": true, "label": "Bekaa-dalen nord for Zahleh"},
+   {"level": "all", "border": ["SYR"], "km": 5, "label": "Grenseområdene mot Syria (5 km)"},
+   {"level": "all", "point": [36.42, 34.18], "km": 3, "approx": true, "label": "Arsal"},
+   {"level": "all", "point": [36.385, 34.395], "km": 3, "approx": true, "label": "Hermel"},
+   {"level": "all", "point": [35.383, 33.543], "km": 0.8, "approx": true, "label": "Flyktningleiren Ain el-Hilweh (Saida)"},
+   {"level": "all", "poly": [[35.488, 33.872], [35.522, 33.872], [35.535, 33.85], [35.53, 33.828], [35.505, 33.832], [35.495, 33.845], [35.488, 33.855]], "approx": true, "label": "Dahieh, sør for Saeb Salam Avenue"},
+   {"level": "necessary", "line": [[35.497, 33.872], [35.496, 33.85], [35.493, 33.83]], "km": 0.3, "approx": true, "label": "Hovedvei 51 til flyplassen"},
+   {"level": "necessary", "point": [35.488, 33.821], "km": 1.5, "approx": true, "label": "Den internasjonale flyplassen"}
+  ]
+ }
+}

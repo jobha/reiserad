@@ -1,0 +1,55 @@
+{
+ "_om": "Soner for eldre tekster på UDs side for Filippinene. Nøkkel = tekst-hash (python scraper/build.py --missing-history-zones filippinene). Format som data/regions.json; se README.",
+ "bf34338e5eb6": {
+  "text": "Utenriksdepartementet fraråder reiser eller opphold som ikke er strengt nødvendig til Cotabato-provinsene, Lanao-provinsene, Zamboanga-provinsene, Maguindanao, Misamis Occidental, Sarangani, Sultan Kudarat og Sulu-øygruppen, som omfatter øyene Basilan, Jolo og Tawi-Tawi på Mindanao, Filippinene.",
+  "zones": [
+   {"level": "necessary", "adm": "PHL/ADM2", "names": ["Cotabato", "Cotabato City", "South Cotabato", "Lanao del Norte", "Lanao del Sur", "Zamboanga del Norte", "Zamboanga del Sur", "Zamboanga Sibugay", "City of Isabela", "Maguindanao", "Misamis Occidental", "Sarangani", "Sultan Kudarat", "Sulu", "Basilan", "Tawi-Tawi"], "label": "Cotabato-, Lanao- og Zamboanga-provinsene, Maguindanao, Misamis Occidental, Sarangani, Sultan Kudarat og Sulu-øygruppen"}
+  ]
+ },
+ "b30e17837525": {
+  "text": "Utenriksdepartementet fraråder reise til eller opphold i sentrale, sydlige og vestlige Mindanao og Sulu-arkipelet (øyprovinsene Basilan, Sulu og Tawi-Tawi) som ikke er strengt nødvendig. Norske borgere som oppholder seg i eller som planlegger å reise til disse områdene oppfordres til å ta kontakt med ambassaden i Manila for oppdatert informasjon og registrering.",
+  "zones": [
+   {"level": "necessary", "adm": "PHL/ADM2", "names": ["Cotabato", "Cotabato City", "South Cotabato", "Lanao del Norte", "Lanao del Sur", "Zamboanga del Norte", "Zamboanga del Sur", "Zamboanga Sibugay", "City of Isabela", "Maguindanao", "Misamis Occidental", "Sarangani", "Sultan Kudarat", "Sulu", "Basilan", "Tawi-Tawi"], "label": "Sentrale, sydlige og vestlige Mindanao og Sulu-arkipelet"}
+  ]
+ },
+ "e09845a5f20a": {
+  "text": "Utenriksdepartementet fraråder reise eller opphold som ikke er strengt nødvendig i sentrale, sydlige og vestlige Mindanao og Sulu-arkipelet (øyprovinsene Basilan, Sulu og Tawi-Tawi).",
+  "same": "b30e17837525"
+ },
+ "2b3c374038e6": {
+  "text": "Utenriksdepartementet fraråder reiser eller opphold som ikke er strengt nødvendig til Cotabato provinsene, Lanao provinsene, Zamboanga provinsene, Maguindanao, Misamis Occidental, Sarangani, Sultan Kudarat og Sulu øygruppen som omfatter øyene Basilan, Jolo og Tawi-Tawi på Mindanao, Filippinene.",
+  "same": "bf34338e5eb6"
+ },
+ "b32db4684fe1": {
+  "text": "Utenriksdepartementet fraråder reiser eller opphold som ikke er strengt nødvendige til Cotabato-provinsene, Lanao-provinsene, Zamboanga-provinsene, Maguindanao, Misamis Occidental, Sarangani, Sultan Kudarat og Sulu-øygruppen, som omfatter øyene Basilan, Jolo og Tawi-Tawi på Mindanao, Samar, Leyte Cebu med unntak av Cebu city, Aklan, Capiz, Iloilo, Antique, Busuanga Island, Negros Occidental.",
+  "zones": [
+   {"level": "necessary", "adm": "PHL/ADM2", "names": ["Cotabato", "Cotabato City", "South Cotabato", "Lanao del Norte", "Lanao del Sur", "Zamboanga del Norte", "Zamboanga del Sur", "Zamboanga Sibugay", "City of Isabela", "Maguindanao", "Misamis Occidental", "Sarangani", "Sultan Kudarat", "Sulu", "Basilan", "Tawi-Tawi"], "label": "Cotabato-, Lanao- og Zamboanga-provinsene, Maguindanao, Misamis Occidental, Sarangani, Sultan Kudarat og Sulu-øygruppen"},
+   {"level": "necessary", "adm": "PHL/ADM2", "names": ["Samar", "Eastern Samar", "Northern Samar"], "approx": true, "label": "Samar"},
+   {"level": "necessary", "adm": "PHL/ADM2", "names": ["Leyte"], "label": "Leyte"},
+   {"level": "necessary", "adm": "PHL/ADM2", "names": ["Cebu"], "label": "Cebu"},
+   {"level": "none", "point": [123.89, 10.31], "km": 8, "approx": true, "label": "Cebu City"},
+   {"level": "necessary", "adm": "PHL/ADM2", "names": ["Aklan", "Capiz", "Iloilo", "Antique"], "label": "Aklan, Capiz, Iloilo og Antique"},
+   {"level": "necessary", "point": [120.05, 12.12], "km": 25, "approx": true, "label": "Busuanga"},
+   {"level": "necessary", "adm": "PHL/ADM2", "names": ["Negros Occidental"], "label": "Negros Occidental"}
+  ]
+ },
+ "4f027994a892": {
+  "text": "Utenriksdepartementet fraråder reiser eller opphold som ikke er strengt nødvendige til Cotabato-provinsene, Lanao-provinsene, Zamboanga-provinsene, Maguindanao, Misamis Occidental, Sarangani, Sultan Kudarat og Sulu-øygruppen, som omfatter øyene Basilan, Jolo og Tawi-Tawi.",
+  "same": "bf34338e5eb6"
+ },
+ "51d47aa2d5d2": {
+  "text": "Utenriksdepartementet fraråder alle reiser eller opphold i sentrale, sydlige og vestlige Mindanao (Cotabato-provinsene, Lanao-provinsene, Zamboanga-provinsene, Maguindanao, Misamis Occidental, Sarangani, Sultan Kudarat) og Sulu-øygruppen, som bl.a. omfatter øyene Basilan, Jolo og Tawi-Tawi. Utenriksdepartementet fraråder reiser eller opphold som ikke er strengt nødvendige til øvrige deler av Mindanao.",
+  "zones": [
+   {"level": "necessary", "adm": "PHL/ADM2", "names": ["Agusan del Norte", "Agusan del Sur", "Bukidnon", "Camiguin", "Compostela Valley", "Davao Occidental", "Davao Oriental", "Davao del Norte", "Davao del Sur", "Dinagat Islands", "Misamis Oriental", "Surigao del Norte", "Surigao del Sur"], "label": "Øvrige deler av Mindanao"},
+   {"level": "all", "adm": "PHL/ADM2", "names": ["Cotabato", "Cotabato City", "South Cotabato", "Lanao del Norte", "Lanao del Sur", "Zamboanga del Norte", "Zamboanga del Sur", "Zamboanga Sibugay", "City of Isabela", "Maguindanao", "Misamis Occidental", "Sarangani", "Sultan Kudarat", "Sulu", "Basilan", "Tawi-Tawi"], "label": "Sentrale, sørlige og vestlige Mindanao og Sulu-øygruppen"}
+  ]
+ },
+ "efbb739d659a": {
+  "text": "Utenriksdepartementet fraråder alle reiser til eller opphold i sentrale, sørlige og vestlige Mindanao (Cotabatoprovinsene, Lanaoprovinsene, Zamboangaprovinsene, Maguindanao, Misamis Occidental, Sarangani, Sultan Kudarat) og Sulu-øygruppen, som blant annet omfatter øyene Basilan, Jolo og Tawi-Tawi. Utenriksdepartementet fraråder reiser eller opphold som ikke er strengt nødvendige til øvrige deler av Mindanao. Øya Siargao er ikke omfattet av reiseråd.",
+  "zones": [
+   {"level": "necessary", "adm": "PHL/ADM2", "names": ["Agusan del Norte", "Agusan del Sur", "Bukidnon", "Camiguin", "Compostela Valley", "Davao Occidental", "Davao Oriental", "Davao del Norte", "Davao del Sur", "Dinagat Islands", "Misamis Oriental", "Surigao del Norte", "Surigao del Sur"], "label": "Øvrige deler av Mindanao"},
+   {"level": "all", "adm": "PHL/ADM2", "names": ["Cotabato", "Cotabato City", "South Cotabato", "Lanao del Norte", "Lanao del Sur", "Zamboanga del Norte", "Zamboanga del Sur", "Zamboanga Sibugay", "City of Isabela", "Maguindanao", "Misamis Occidental", "Sarangani", "Sultan Kudarat", "Sulu", "Basilan", "Tawi-Tawi"], "label": "Sentrale, sørlige og vestlige Mindanao og Sulu-øygruppen"},
+   {"level": "none", "point": [126.05, 9.85], "km": 22, "approx": true, "label": "Siargao"}
+  ]
+ }
+}

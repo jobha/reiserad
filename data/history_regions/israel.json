@@ -1,0 +1,40 @@
+{
+ "_om": "Soner for eldre tekster på UDs side for Israel. Nøkkel = tekst-hash (python scraper/build.py --missing-history-zones israel). Format som data/regions.json; se README.",
+ "82bfd2bbd374": {
+  "text": "Utenriksdepartementet fraråder reise eller opphold som ikke er strengt nødvendig til grenseområdet (40 km) mot Gaza i det sørlige Israel.",
+  "zones": [
+   {"level": "necessary", "near": {"adm": "PSE/ADM1", "names": ["Gaza"]}, "km": 40, "label": "Grenseområdet (40 km) mot Gaza"}
+  ]
+ },
+ "05f82975217b": {
+  "text": "Utenriksdepartementet fraråder reise eller opphold som ikke er strengt nødvendig i grenseområdet (40 km) mot Gaza i det sørlige Israel.",
+  "same": "82bfd2bbd374"
+ },
+ "881df96eb0a4": {
+  "text": "Utenriksdepartementet fraråder alle reiser til eller opphold i grenseområdet (40 km) mot Gaza i det sørlige Israel.",
+  "zones": [
+   {"level": "all", "near": {"adm": "PSE/ADM1", "names": ["Gaza"]}, "km": 40, "label": "Grenseområdet (40 km) mot Gaza"}
+  ]
+ },
+ "8aee5af78b58": {
+  "text": "Utenriksdepartementet fraråder alle ikke nødvendige reiser til grenseområdet (40 km) mot Gaza i det sørlige Israel.",
+  "same": "82bfd2bbd374"
+ },
+ "362b4b39b4d5": {
+  "text": "Utenriksdepartementet fraråder alle ikke-nødvendige reiser til og opphold i grenseområdet (fem km) mot Gaza i det sørlige Israel. Reisende oppfordres til å vise aktsomhet i grenseområdene mot Egypt, Libanon og Syria.",
+  "zones": [
+   {"level": "necessary", "near": {"adm": "PSE/ADM1", "names": ["Gaza"]}, "km": 5, "label": "Grenseområdet (5 km) mot Gaza"}
+  ]
+ },
+ "df6e37ae443c": {
+  "text": "Utenriksdepartementet fraråder alle ikke-nødvendige reiser til og opphold i grenseområdet (fem km) mot Gaza i det sørlige Israel.",
+  "same": "362b4b39b4d5"
+ },
+ "1dc065499e3b": {
+  "text": "Utenriksdepartementet fraråder reiser som ikke er strengt nødvendige innenfor 5 km fra Israels grenser mot Libanon, mot Gaza i Palestina samt mot grenselinjen mellom israelsk-okkuperte Golanhøydene og Syria.",
+  "zones": [
+   {"level": "necessary", "border": ["LBN", "SYR"], "km": 5, "label": "Innenfor 5 km fra grensen mot Libanon og Syria (Golan)"},
+   {"level": "necessary", "near": {"adm": "PSE/ADM1", "names": ["Gaza"]}, "km": 5, "label": "Innenfor 5 km fra Gaza"}
+  ]
+ }
+}
