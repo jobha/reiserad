@@ -101,8 +101,6 @@ def build():
     return out
 
 
-# Koronapandemien: landsidene viste UDs globale reiseråd (tools/wayback_history.py CORONA).
-CORONA = ("2020-03-12", "2021-10-01")
 LIST_DAYS = 400  # så lenge en observasjon gjelder hvis ingen nyere kilde sier noe
 
 
@@ -186,14 +184,18 @@ def _overlay(entries, obs):
             if kind != "seen":
                 extend(i, horizon)
             continue  # stemmer med det vi vet (en tekst er mer enn «står på listen»)
-        if kind == "absent" and state and state != "listed" and cur.get("seen", "") > d:
+        # Er tilstanden sett på landsiden etter listedatoen (egen daglige henting i git, eller en arkivkopi
+        # med «seen» senere), tok listen feil.
+        page = cur is not None and not cur.get("obs") and not cur.get("gap") and (
+            not cur.get("approx") or cur.get("seen", "") > d)
+        if kind == "absent" and state and state != "listed" and page:
             # Arkivkopier viser teksten på landsiden både før og etter listen (Afghanistan manglet på
             # listen 2.7.2019): listen tok feil, teksten gjelder.
             extend(i, horizon)
             continue
-        if kind == "listed" and state == "" and cur is not None and not cur.get("obs") and CORONA[0] <= d < CORONA[1]:
-            # Landsiden viste bare UDs globale koronaråd (ingen egen advarsel), men «Land med reiseråd»
-            # ble ikke ryddet under pandemien (Kina sto der til aug. 2021): siden vinner.
+        if kind == "listed" and state == "" and page:
+            # Arkivkopier av landsiden etter listedatoen viser ingen advarsel, men «Land med reiseråd» ble
+            # ikke alltid ryddet (Kina til aug. 2021, Kasakhstan til aug. 2022): siden vinner.
             continue
         if kind == "fill" and state and state != "listed":
             continue  # pressemeldingen erstatter ikke UDs egen tekst
@@ -240,7 +242,9 @@ def _prepend(old, entries):
     start = entries[0]["from"]
     old = [dict(o) for o in old if o["from"] < start]
     if old and not old[-1].get("gap") and old[-1]["paragraphs"] == entries[0]["paragraphs"]:
-        entries[0] = dict(entries[0], **{"from": old[-1]["from"], "approx": old[-1].get("approx", False)})
+        # Samme tilstand er sett på landsiden helt fram til den egne hentingen begynte («seen»).
+        entries[0] = dict(entries[0], **{"from": old[-1]["from"], "approx": old[-1].get("approx", False),
+                                         "seen": max(old[-1].get("seen", ""), entries[0]["from"])})
         if not entries[0]["approx"]:
             del entries[0]["approx"]
         old.pop()

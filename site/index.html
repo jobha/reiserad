@@ -69,11 +69,15 @@ body.hist .legend .hist-only { display: flex; }
   border: 1px solid var(--line); border-radius: 14px; box-shadow: var(--shadow); font-size: 13px; }
 .timeline button { flex: none; width: 30px; height: 30px; border-radius: 50%; border: 1px solid var(--line); background: transparent;
   color: var(--text); cursor: pointer; font-size: 12px; line-height: 1; }
+.timeline .tl-step { width: 26px; height: 26px; font-size: 18px; line-height: 1; padding: 0 0 2px; }
+.timeline .tl-step:disabled { opacity: .35; cursor: default; }
+.timeline .tl-track { flex: 1; min-width: 0; position: relative; display: flex; }
 .timeline input { flex: 1; min-width: 0; accent-color: var(--all); }
-.timeline .tl-date { flex: none; min-width: 112px; text-align: right; font-weight: 600; font-variant-numeric: tabular-nums; }
+/* Fast bredde: ellers endrer glidebryteren bredde med datoteksten og hopper under fingeren. */
+.timeline .tl-date { flex: none; width: 132px; text-align: right; font-weight: 600; font-variant-numeric: tabular-nums; white-space: nowrap; }
 .timeline .tl-now { flex: none; font-size: 12px; color: var(--link); background: none; border: 0; width: auto; height: auto; padding: 0; }
 body:not(.hist) .timeline .tl-now { visibility: hidden; }
-.tl-ticks { position: absolute; left: 54px; right: 140px; bottom: 1px; height: 10px; pointer-events: none; font-size: 9px; color: var(--muted); }
+.tl-ticks { position: absolute; left: 8px; right: 8px; top: 100%; height: 10px; pointer-events: none; font-size: 9px; color: var(--muted); }
 .tl-ticks span { position: absolute; transform: translateX(-50%); }
 .tools { display: flex; gap: 8px; padding: 0 16px 10px; }
 .tools input { flex: 1; min-width: 0; font: inherit; padding: 7px 10px; border-radius: 8px;
@@ -132,7 +136,7 @@ body:not(.hist) .timeline .tl-now { visibility: hidden; }
 @media (max-width: 640px) {
   .panel { top: auto; bottom: 16px; left: 16px; right: 16px; width: auto; max-height: 55vh; }
   .timeline { top: 12px; bottom: auto; left: 12px; right: 12px; max-width: none; padding: 6px 10px; gap: 8px; }
-  .timeline .tl-date { min-width: 0; }
+  .timeline .tl-date { width: 74px; }
   .tl-ticks { display: none; }
   .leaflet-top { top: 54px; }
   .leaflet-popup-content { width: 260px !important; }
@@ -176,10 +180,14 @@ body:not(.hist) .timeline .tl-now { visibility: hidden; }
 
 <div class="timeline" id="tl" hidden>
   <button id="tl-play" type="button" aria-label="Spill av tidslinjen" title="Spill av">▶</button>
-  <input id="tl-range" type="range" min="0" max="0" step="1" aria-label="Velg dato på tidslinjen">
+  <button class="tl-step" id="tl-prev" type="button" aria-label="Forrige endring" title="Forrige endring">‹</button>
+  <div class="tl-track">
+    <input id="tl-range" type="range" min="0" max="0" step="1" aria-label="Velg dato på tidslinjen">
+    <div class="tl-ticks" id="tl-ticks" aria-hidden="true"></div>
+  </div>
+  <button class="tl-step" id="tl-next" type="button" aria-label="Neste endring" title="Neste endring">›</button>
   <span class="tl-date" id="tl-date" aria-live="polite">I dag</span>
   <button class="tl-now" id="tl-now" type="button">I dag</button>
-  <div class="tl-ticks" id="tl-ticks" aria-hidden="true"></div>
 </div>
 
 <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.4/dist/leaflet.js"></script>
@@ -188,7 +196,9 @@ const css = n => getComputedStyle(document.documentElement).getPropertyValue(n).
 const esc = s => String(s ?? "").replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
 const LEVEL_TXT = { all: "Fraråder alle reiser", necessary: "Fraråder reiser som ikke er strengt nødvendige" };
 
-const map = L.map("map", { minZoom: 2, maxZoom: 12, zoomSnap: 0.5, inertiaMaxSpeed: 2500 }).setView([20, 15], 2.5);
+// Ikke forbi polene; øst–vest er fritt (kopiene av verden).
+const map = L.map("map", { minZoom: 2, maxZoom: 12, zoomSnap: 0.5, inertiaMaxSpeed: 2500,
+  maxBounds: [[-85, -1e5], [85, 1e5]], maxBoundsViscosity: 1 }).setView([20, 15], 2.5);
 
 // Hvilke verdenskopier (forskjøvet 360° * k) som er i bildet nå. Kartet kan
 // rulles fritt østover og vestover; flater og etiketter tegnes i hver synlige
@@ -507,6 +517,8 @@ const formerCopies = new Map();  // k -> lag med tidligere stater
 const fsActive = p => TL_DATE && (!p.from || TL_DATE >= p.from) && TL_DATE < p.to;
 const DAY = 864e5;
 const tlFmt = d => new Date(d + "T12:00:00").toLocaleDateString("nb-NO", { day: "numeric", month: "long", year: "numeric" });
+const NARROW = matchMedia("(max-width: 640px)");
+const tlFmtShort = d => NARROW.matches ? new Date(d + "T12:00:00").toLocaleDateString("nb-NO", { day: "2-digit", month: "2-digit", year: "numeric" }) : tlFmt(d);
 const tlDay = n => new Date(Date.parse(TL.start + "T12:00:00Z") + n * DAY).toISOString().slice(0, 10);
 function tlState(iso) {
   const rows = TL?.countries[iso];
@@ -615,7 +627,8 @@ function tlSet(n) {
   for (const p of Object.values(FORMER)) if (fsActive(p)) for (const iso of p.parts) HIDDEN.set(iso, p);
   const lsig = [...new Set(HIDDEN.values())].map(p => p.id).join() + (LABELS?.countries.filter(r => r[4] && TL_DATE && TL_DATE < r[4]).length || 0);
   document.body.classList.toggle("hist", !live);
-  document.getElementById("tl-date").textContent = live ? "I dag" : tlFmt(TL_DATE);
+  document.getElementById("tl-date").textContent = live ? "I dag" : tlFmtShort(TL_DATE);
+  tlSteps();
   const sub = document.getElementById("sub");
   sub.dataset.live ||= sub.textContent;
   if (live) sub.textContent = sub.dataset.live;
@@ -631,6 +644,24 @@ function tlSet(n) {
   for (const [, l] of formerCopies) styleFormer(l);
   syncCopies();
   if (lsig !== tlSet.lsig) { tlSet.lsig = lsig; drawLabels(); }
+}
+// Datoene der noe endret seg (et land eller en tidligere stat fikk ny tilstand), som dagnummer på glidebryteren.
+let TL_CHANGES = [];
+function tlChanges() {
+  const start = Date.parse(TL.start + "T12:00:00Z"), set = new Set();
+  for (const rows of Object.values(TL.countries)) for (const r of rows) set.add(Math.round((Date.parse(r[0] + "T12:00:00Z") - start) / DAY));
+  TL_CHANGES = [...set].filter(n => n > 0).sort((a, b) => a - b);
+}
+function tlStep(dir) {
+  if (tlTimer) tlPlay();
+  const range = document.getElementById("tl-range"), cur = +range.value;
+  const n = dir < 0 ? TL_CHANGES.filter(x => x < cur).pop() : TL_CHANGES.find(x => x > cur);
+  tlSet(n ?? (dir < 0 ? 0 : +range.max));
+}
+function tlSteps() {
+  const range = document.getElementById("tl-range");
+  document.getElementById("tl-prev").disabled = +range.value <= 0;
+  document.getElementById("tl-next").disabled = +range.value >= +range.max;
 }
 function tlPlay() {
   const btn = document.getElementById("tl-play"), range = document.getElementById("tl-range");
@@ -659,6 +690,9 @@ function tlInit(tl, fs) {
     ticks.insertAdjacentHTML("beforeend", `<span style="left:${pos}%">${y}</span>`);
   }
   range.addEventListener("input", () => { if (tlTimer) tlPlay(); tlSet(+range.value); });
+  tlChanges(); tlSteps();
+  document.getElementById("tl-prev").addEventListener("click", () => tlStep(-1));
+  document.getElementById("tl-next").addEventListener("click", () => tlStep(1));
   document.getElementById("tl-play").addEventListener("click", tlPlay);
   document.getElementById("tl-now").addEventListener("click", () => { if (tlTimer) tlPlay(); tlSet(+range.max); });
   document.getElementById("tl").hidden = false;
