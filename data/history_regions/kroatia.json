@@ -1,0 +1,9 @@
+{
+ "_om": "Soner for eldre tekster på UDs side for kroatia. Nøkkel = tekst-hash (python scraper/build.py --missing-history-zones kroatia). Format som data/regions.json; se README.",
+ "068be4cad096": {
+  "text": "Utanriksdepartementet frarår alle som ikkje har nødvendige oppdrag, å reisa til Kroatia på grunn av den spente situasjonen i området. Rådet til turistar og andre som er i Kroatia og som ikkje har viktige oppdrag, er at dei bør vurdera å forlata landet.",
+  "zones": [
+   {"level": "necessary", "country": true, "label": "Hele Kroatia"}
+  ]
+ }
+}

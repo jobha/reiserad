@@ -13,5 +13,11 @@
   "zones": [
    {"level": "necessary", "adm": "LKA/ADM1", "names": ["Northern Province"], "label": "Nord-provinsen"}
   ]
+ },
+ "8a2f39229ee8": {
+  "text": "Utenriksdepartementet fraråder reise til eller opphold i de nordlige og østlige deler av Sri Lanka som ikke er strengt nødvendig. (27.04.06) Utenriksdepartementet fraråder reise til eller opphold i de nordlige og østlige deler av Sri Lanka (distriktene Jaffna, Trincomalee, Batticaloa og Ampara) som ikke er strengt nødvendig. Norske borgere som oppholder seg i eller som planlegger å reise til Sri Lanka oppfordres til å ta kontakt med ambassaden i Colombo for oppdatert informasjon og registrering.",
+  "zones": [
+   {"level": "necessary", "adm": "LKA/ADM2", "names": ["Jaffna District", "Trincomalee District", "Batticaloa District", "Ampara District"], "label": "Nord og øst: Jaffna, Trincomalee, Batticaloa og Ampara"}
+  ]
  }
 }

@@ -1,0 +1,9 @@
+{
+ "_om": "Soner for eldre tekster på UDs side for qatar. Nøkkel = tekst-hash (python scraper/build.py --missing-history-zones qatar). Format som data/regions.json; se README.",
+ "1978e32422fd": {
+  "text": "På grunn av de rådende forhold fraråder Utenriksdepartementet inntil videre reiser i Israel og Det palestinske området, og ber folk nøye vurdere nødvendigheten av opphold i Bahrain og Qatar. (18.03.03) På grunn av de rådende forhold ber Utenriksdepartementet norske borgere nøye vurdere nødvendigheten av å reise til eller oppholde seg i Qatar.",
+  "zones": [
+   {"level": "necessary", "country": true, "label": "Qatar"}
+  ]
+ }
+}

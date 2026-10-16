@@ -5,5 +5,11 @@
   "zones": [
    {"level": "necessary", "adm": "BOL/ADM1", "names": ["La Paz"], "label": "La Paz-regionen"}
   ]
+ },
+ "cbd45cd11e3f": {
+  "text": "På grunn av den uoversiktelige situasjon i Bolivia ber Utenriksdepartementet norske borgere nøye vurdere nødvendigheten av å reise til eller å oppholde seg i Bolivia. (16.10.03) På grunn av den uoversiktelige situasjon i Bolivia ber Utenriksdepartementet norske borgere nøye vurdere nødvendigheten av å reise til eller å oppholde seg i Bolivia, særlig La Paz, området rundt Titicaca-sjøen, og Cochabamba-regionen. Reisende anmodes om å ta kontakt med den norske ambassaden i Buenos Aires før reisen påbegynnes for oppdatert informasjon og registrering.",
+  "zones": [
+   {"level": "necessary", "country": true, "label": "Bolivia, særlig La Paz, Titicaca-sjøen og Cochabamba"}
+  ]
  }
 }

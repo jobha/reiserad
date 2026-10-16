@@ -8,5 +8,11 @@
  "652884138581": {
   "text": "Utenriksdepartementet fraråder reiser til de nordlige provinsene (Erbil, Suleimania og Duhok) som ikke er strengt nødvendige. Reiser til øvrige deler av Irak frarådes, og norske borgere som befinner seg i disse områdene oppfordres til å forlate landet. Norske borgere som oppholder seg i eller planlegger reise til Irak oppfordres til å ta kontakt med ambassaden i Amman for oppdatert informasjon og registrering.Sist endret",
   "same": "474907937527"
+ },
+ "2df481b2f35e": {
+  "text": "I den nåværende situasjonen frarådes norske borgere all reisevirksomhet til Irak. Nordmenn som oppholder seg i andre land i området, og reisende til området, oppfordres til å følge utviklingen nøye gjennom media o.a. Konkrete spørsmål kan rettes til UD eller norske ambassader i området. Reisende oppfordres videre til å registrere seg ved og holde kontakt med nærmeste norske utenriksstasjon.",
+  "zones": [
+   {"level": "all", "country": true, "label": "Hele Irak"}
+  ]
  }
 }

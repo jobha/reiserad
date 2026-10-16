@@ -1,0 +1,9 @@
+{
+ "_om": "Soner for eldre tekster på UDs side for uganda. Nøkkel = tekst-hash (python scraper/build.py --missing-history-zones uganda). Format som data/regions.json; se README.",
+ "3e403d7e2a8f": {
+  "text": "Verdens helseorganisasjon har bekreftet at det for tiden pågår et utbrudd av Ebolavirus-sykdom vest i Uganda. Norske helsemyndigheter fraråder personer å oppholde seg, eller reise inn i de berørte områdene. Som ved alle slike utbrudd av hemoragiske febre fraråder norske helsemyndigheter personer å oppholde seg, eller reise inn i de områdene som ifølge helsemyndighetene er berørt av utbruddet. I dette utbruddet gjelder det Bundibugyo-distriktet i vestre Uganda. Det er ikke grunnlag for å fraråde reiser eller opphold i andre deler av Uganda. Normalt vil de lokale myndighetene forsøke å isolere utbruddsområdet slik at ingen får reise inn i området.",
+  "zones": [
+   {"level": "all", "point": [30.06, 0.71], "km": 30, "approx": true, "label": "Bundibugyo-distriktet (ebolautbrudd)"}
+  ]
+ }
+}

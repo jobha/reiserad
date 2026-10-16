@@ -61,5 +61,11 @@
  "b66854ba6301": {
   "text": "Utenriksdepartementet fraråder reise til eller opphold i North West Frontier Province og i stammeområdene Federally Administered Tribal Areas (FATA). På grunn av fare for terrorangrep bør det utvises stor aktsomhet under reise og opphold i de store byene og på steder med store menneskeansamlinger. Også i andre deler av Pakistan vil det være grunn til aktsomhet og til å rette seg etter lokale myndigheters anvisninger. Sist endret",
   "same": "3e2f10cecd09"
+ },
+ "38c463cfeb47": {
+  "text": "Reiser til Pakistan frarådes på grunn av den spente situasjonen Som følge av den uforutsigbare situasjonen i regionen, bør reiser til Pakistan som ikke er strengt nødvendige, utsettes inntil videre. Norske borgere som allerede befinner seg i landet bør utvise aktsomhet og holde kontakt med den norske ambassaden i Islamabad.",
+  "zones": [
+   {"level": "necessary", "country": true, "label": "Hele Pakistan"}
+  ]
  }
 }

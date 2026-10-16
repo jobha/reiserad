@@ -25,5 +25,23 @@
  "2e00bc40124b": {
   "text": "Utenriksdepartementet fraråder reise til eller opphold i delstaten Jammu og Kashmir, med unntak av Ladakh som ikke er strengt nødvendig. Sist endret",
   "same": "305c9039b7c9"
+ },
+ "b9110f9548f0": {
+  "text": "Utenriksdepartementet fraråder å reise til India og Pakistan. Til pressemeldingen ligger et vedlegg hvor meldingen er oversatt til urdu Som følge av den uforutsigbare situasjonen i regionen fraråder Utenriksdepartementet reiser både til India og Pakistan. Norske borgere som befinner seg i dette området bør overveie å forlate landene. De som forlater området bes underrette den norske ambassade på stedet.",
+  "zones": [
+   {"level": "all", "country": true, "label": "Hele India"}
+  ]
+ },
+ "68d438da9fd4": {
+  "text": "Utenriksdepartementet fraråder reiser til delstaten Jammu og Kashmir med unntakelse av Ladakh.",
+  "zones": [
+   {"level": "all", "adm": "IND/ADM1", "names": ["Jammu and Kashmīr"], "label": "Jammu og Kashmir (uten Ladakh)"}
+  ]
+ },
+ "fdc46bca0d6d": {
+  "text": "På grunn av de rådende forhold ber Utenriksdepartementet norske borgere nøye vurdere nødvendigheten av å reise til delstaten Jammu og Kashmir, med unntak av Ladakh. Nærmere informasjon kan fås fra ambassaden i New Dehli.",
+  "zones": [
+   {"level": "necessary", "adm": "IND/ADM1", "names": ["Jammu and Kashmīr"], "label": "Jammu og Kashmir (uten Ladakh)"}
+  ]
  }
 }

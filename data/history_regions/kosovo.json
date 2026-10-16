@@ -1,0 +1,9 @@
+{
+ "_om": "Soner for eldre tekster på UDs side for kosovo. Nøkkel = tekst-hash (python scraper/build.py --missing-history-zones kosovo). Format som data/regions.json; se README.",
+ "eb50f29c40df": {
+  "text": "Norske borgere frarådes inntil videre å reise til Jugoslavia, herunder Kosovo. Norske borgere som befinner seg i Jugoslavia, herunder Kosovo, oppfordres til å forlate området så snart som mulig. De som velger ikke å reise, gjør dette for egen risiko.",
+  "zones": [
+   {"level": "all", "country": true, "label": "Kosovo (daværende Jugoslavia)"}
+  ]
+ }
+}

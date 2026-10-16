@@ -46,5 +46,29 @@
  "4c710f289f28": {
   "text": "Utenriksdepartementet fraråder alle ikke-nødvendige reiser til og opphold i grenseområdet (5 km) mot Gaza i det sørlige Israel. Reisende oppfordres til å vise aktsomhet i grenseområdene mot Egypt, Libanon og Syria",
   "same": "362b4b39b4d5"
+ },
+ "100d385d738d": {
+  "text": "Utenriksdepartementet fraråder derfor inntil videre å reise til Gaza, Vestbredden og Jerusalem. Grunnet faren for terrorangrep i Israel bør man også vurdere viktigheten av planlagte besøk til Israel. Besøkende, som ikke kan utsette sin reise til Israel og Det palestinske området, bør holde kontakt med de norske representasjonene i regionen.",
+  "zones": [
+   {"level": "all", "point": [35.21, 31.77], "km": 6, "approx": true, "label": "Jerusalem"}
+  ]
+ },
+ "6a33d063993d": {
+  "text": "Situasjonen i Israel og Det palestinske området er spent og uforutsigbar. Grunnet den usikre situasjon og faren for terrorangrep bør man vurdere nødvendigheten av å oppholde seg i området. Besøkende som ikke kan utsette sin reise til Israel og Det palestinske område bør holde kontakt med de norske representasjonene i regionen. Nordmenn i området bes utvise ekstra årvåkenhet og gjennomføre nødvendige sikkerhetstiltak.",
+  "zones": [
+   {"level": "necessary", "country": true, "label": "Israel"}
+  ]
+ },
+ "1432a8948c61": {
+  "text": "Situasjonen i Israel og Det palestinske området er spent og uforutsigbar. Grunnet den usikre situasjon og faren for terrorangrep bør man vurdere nødvendigheten av å oppholde seg i området. Nordmenn i området bes utvise ekstra årvåkenhet og gjennomføre nødvendige sikkerhetstiltak. Det kan oppstå problemer knyttet til passering av kontrollposter ved inn- og utreise til/fra de palestinske områdene, særlig Gaza. Besøkende som ikke kan utsette sin reise til Israel og Det palestinske område bør holde kontakt med de norske representasjonene i regionen.",
+  "zones": [
+   {"level": "necessary", "country": true, "label": "Israel"}
+  ]
+ },
+ "811fa2fde46a": {
+  "text": "Situasjonen i Israel og Det palestinske området er spent og uforutsigbar. Derfor bør man vurdere nødvendigheten av å oppholde seg i området. Reise til og opphold i Gaza og Vestbredden bør unngås. Besøkende som ikke kan utsette sin reise til Israel og Det palestinske området bør holde kontakt med ambassaden i Tel Aviv eller representasjonskontoret i Al Ram.",
+  "zones": [
+   {"level": "necessary", "country": true, "label": "Israel"}
+  ]
  }
 }
