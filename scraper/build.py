@@ -315,6 +315,12 @@ def round_coords(obj, nd=4):
 def feature(geom, props):
     if geom.is_empty:
         return None
+    if geom.geom_type == "GeometryCollection":
+        # Utskjæringer kan etterlate linjer/punkter ved siden av flatene; behold bare flatene.
+        polys = [g for g in geom.geoms if g.geom_type in ("Polygon", "MultiPolygon") and not g.is_empty]
+        if not polys:
+            return None
+        geom = unary_union(polys)
     m = mapping(geom)
     return {"type": "Feature", "properties": props,
             "geometry": {"type": m["type"], "coordinates": round_coords(m["coordinates"])}}
