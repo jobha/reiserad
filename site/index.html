@@ -341,7 +341,7 @@ function tipZone(p) {
 }
 function tipWorld(iso, ne) {
   const c = INFO[iso];
-  if (TL_DATE) {
+  if (TL_DATE && !tlCurrent(iso)) {
     const st = tlState(iso);
     return `<b>${esc(c?.name || ne)}</b><div class="tip-note">${esc(tlFmt(TL_DATE))}</div>` + (st.level === "?"
       ? `<div>Ukjent – mangler arkivdata</div>`
@@ -365,7 +365,7 @@ function makeCopy(k) {
       if (HOVER) l.bindTooltip(() => tipWorld(iso, f.properties.ne), TIP);
       l.on("click", e => {
         const c = INFO[iso];
-        L.popup().setLatLng(e.latlng).setContent(TL_DATE ? tlPopup(iso, f.properties.ne)
+        L.popup().setLatLng(e.latlng).setContent(TL_DATE && !tlCurrent(iso) ? tlPopup(iso, f.properties.ne)
           : popupHtml(iso, { ne: f.properties.ne, clear: !!c?.level })).openOn(map);
       });
     },
@@ -396,8 +396,7 @@ function syncCopies() {
     if (!copies.has(k)) copies.set(k, makeCopy(k));
     const [w, z] = copies.get(k);
     if (!map.hasLayer(w)) { w.addTo(map); if (TL_DATE) styleWorld(w); }
-    if (!TL_DATE && !map.hasLayer(z)) z.addTo(map);
-    if (TL_DATE && map.hasLayer(z)) map.removeLayer(z);
+    if (!map.hasLayer(z)) { z.addTo(map); if (TL_DATE) styleZones(z); }
   }
   for (const [k, ls] of copies) {
     if (want.has(k)) continue;
@@ -435,8 +434,9 @@ function focusCountry(iso) {
   if (innerWidth <= 640) document.getElementById("panel").classList.add("collapsed");
 }
 
-// Tidslinje: dra tilbake i tid og se UDs reiseadvarsler slik de var. Historiske
-// advarsler har bare tekst, ikke tegnede soner: regionale vises som skravert hele land.
+// Tidslinje: dra tilbake i tid og se UDs reiseadvarsler slik de var. Gjaldt dagens
+// tekst også på datoen, vises dagens tegnede soner. Eldre tekster har ikke tegnede
+// soner: de fargelegger hele landet, og regionale advarsler vises skravert.
 let TL = null, TL_DATE = null, tlTimer = null;
 const DAY = 864e5;
 const tlFmt = d => new Date(d + "T12:00:00").toLocaleDateString("nb-NO", { day: "numeric", month: "long", year: "numeric" });
@@ -448,10 +448,25 @@ function tlState(iso) {
   for (const x of rows) { if (x[0] > TL_DATE) break; r = x; }
   return { level: r[1], partial: r[2], text: r[3], from: r[0] };
 }
+// Gjelder landets nåværende tekst på datoen? Da brukes de tegnede sonene.
+function tlCurrent(iso) {
+  const rows = TL?.countries[iso];
+  if (!rows?.length) return !TL_DATE;
+  const st = tlState(iso), last = rows[rows.length - 1];
+  return st.level !== "?" && st.text === last[3] && st.level === last[1];
+}
+function styleZones(layer) {
+  layer.eachLayer(l => {
+    const show = !TL_DATE || tlCurrent(l.feature.properties.iso);
+    if (show) layer.resetStyle(l); else l.setStyle({ opacity: 0, fillOpacity: 0 });
+    const el = l.getElement?.();
+    if (el) el.style.pointerEvents = show ? "" : "none";
+  });
+}
 function styleWorld(layer) {
   layer.eachLayer(l => {
     const iso = l.feature.properties.iso;
-    if (!TL_DATE) { layer.resetStyle(l); return; }
+    if (!TL_DATE || tlCurrent(iso)) { layer.resetStyle(l); return; }
     const st = tlState(iso);
     if (st.level === "?") l.setStyle({ fillColor: css("--muted"), fillOpacity: .28, color: css("--land-line"), weight: .7 });
     else if (st.level) l.setStyle(fillFor(st.level, st.partial));
@@ -488,11 +503,7 @@ function tlSet(n) {
     sub.textContent = `${tlFmt(TL_DATE)}: ${n} land med reiseadvarsel` + (u > 20 ? ` · ${u} ukjente` : "");
   }
   map.closePopup();
-  for (const [, [w, z]] of copies) {
-    styleWorld(w);
-    if (live && map.hasLayer(w) && !map.hasLayer(z)) z.addTo(map);
-    if (!live && map.hasLayer(z)) map.removeLayer(z);
-  }
+  for (const [, [w, z]] of copies) { styleWorld(w); styleZones(z); }
   syncCopies();
 }
 function tlPlay() {

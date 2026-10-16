@@ -179,9 +179,9 @@ def history_level(paragraphs):
     """(nivå, delvis) for en historisk tekst uten tegnede soner. Bare aktsomhet = ingen advarsel.
     Regionale advarsler vises som skravert hele land, som ukartlagte advarsler i dag."""
     txt = " ".join(paragraphs).lower()
-    has_all = bool(re.search(r"fraråder alle reise|frarådes mot alle|alle reiser .{0,80}frarådes", txt))
+    has_all = bool(re.search(r"(fraråder|advarer mot) alle reise|frarådes mot alle|alle reiser .{0,80}frarådes", txt))
     has_nec = "nødvendig" in txt
-    if not (has_all or has_nec or "fraråd" in txt):
+    if not (has_all or has_nec or "fraråd" in txt or "advarer mot" in txt):
         return None, False
     rest = re.search(r"øvrige deler|resten av landet|for øvrig|landet for øvrig", txt)
     if has_nec and rest:
