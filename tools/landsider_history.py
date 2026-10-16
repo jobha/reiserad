@@ -73,6 +73,7 @@ def iso(d):
 
 def clean(t):
     t = re.split(r"\s*<", t)[0]  # rester av ufullstendig HTML i sideboksen
+    t = re.split(r"\s*\d{1,2}[./]\d{1,2}[./]\d{4}\s*::", t)[0]  # datolinjen på de eldste sidene
     return t.strip().strip("«»\"").strip()
 
 
