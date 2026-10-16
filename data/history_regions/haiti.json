@@ -1,0 +1,13 @@
+{
+ "_om": "Soner for eldre tekster på UDs side for Haiti. Nøkkel = tekst-hash (python scraper/build.py --missing-history-zones haiti). Format som data/regions.json; se README.",
+ "4f07172d6922": {
+  "text": "Utenriksdepartementet fraråder reise til eller opphold på Haiti som ikke er strengt nødvendig. Norske borgere som oppholder seg i eller som planlegger å reise til Haiti oppfordres til å ta kontakt med Utenriksdepartementet ved ambassadør for det karibiske området for oppdatert informasjon og registrering.",
+  "zones": [
+   {
+    "level": "necessary",
+    "country": true,
+    "label": "Hele landet"
+   }
+  ]
+ }
+}

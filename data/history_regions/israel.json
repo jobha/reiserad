@@ -36,5 +36,15 @@
    {"level": "necessary", "border": ["LBN", "SYR"], "km": 5, "label": "Innenfor 5 km fra grensen mot Libanon og Syria (Golan)"},
    {"level": "necessary", "near": {"adm": "PSE/ADM1", "names": ["Gaza"]}, "km": 5, "label": "Innenfor 5 km fra Gaza"}
   ]
+ },
+ "69b03c7b24ef": {
+  "text": "Utenriksdepartementet fraråder reise til eller opphold i det nordlige Israel, definert som Haifa og områdene nordover mot grensen mot Libanon. Norske borgere som oppholder seg i området bes holde kontakt med ambassaden i Tel Aviv for oppdatert informasjon og registrering.",
+  "zones": [
+   {"level": "all", "adm": "ISR/ADM1", "names": ["Haifa", "Northern District"], "label": "Haifa og nordover mot Libanon"}
+  ]
+ },
+ "4c710f289f28": {
+  "text": "Utenriksdepartementet fraråder alle ikke-nødvendige reiser til og opphold i grenseområdet (5 km) mot Gaza i det sørlige Israel. Reisende oppfordres til å vise aktsomhet i grenseområdene mot Egypt, Libanon og Syria",
+  "same": "362b4b39b4d5"
  }
 }

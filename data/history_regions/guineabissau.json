@@ -1,0 +1,13 @@
+{
+ "_om": "Soner for eldre tekster på UDs side for Guinea-Bissau. Nøkkel = tekst-hash (python scraper/build.py --missing-history-zones guineabissau). Format som data/regions.json; se README.",
+ "f769f9c409e9": {
+  "text": "Utenriksdepartementet fraråder reiser til eller opphold i Guinea-Bissau som ikke er strengt nødvendig. Norske borgere som oppholder seg i eller planlegger å reise til disse områdene oppfordres til å ta kontakt med ambassaden i Lisboa for oppdatert informasjon og registrering.",
+  "zones": [
+   {
+    "level": "necessary",
+    "country": true,
+    "label": "Hele landet"
+   }
+  ]
+ }
+}

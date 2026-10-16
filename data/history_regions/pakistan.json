@@ -44,5 +44,22 @@
    {"level": "all", "adm": "PAK/ADM1", "names": ["Balochistan", "Khyber Pakhtunkhwa", "Azad Kashmir"], "label": "Balutsjistan, Khyber Pakhtunkhwa og Azad Kashmir"},
    {"level": "all", "border": ["IND"], "km": 10, "label": "Innenfor 10 km fra grensen mot India"}
   ]
+ },
+ "be89f6790c5e": {
+  "text": "Utenriksdepartementet fraråder reise til eller opphold i North West Frontier Province, stammeområdene Federally Administered Tribal Areas (FATA) samt Gilgit i Nordområdene og ferdsel på Karakorum Highway gjennom Kohistan.",
+  "zones": [
+   {"level": "all", "adm": "PAK/ADM1", "names": ["Khyber Pakhtunkhwa"], "label": "North West Frontier Province og FATA (inkl. Kohistan)"},
+   {"level": "all", "adm": "PAK/ADM2", "names": ["Gilgit"], "label": "Gilgit"}
+  ]
+ },
+ "3e2f10cecd09": {
+  "text": "Utenriksdepartementet fraråder reise til eller opphold i North West Frontier Province og i stammeområdene Federally Administered Tribal Areas (FATA). Også i andre deler av Pakistan vil det være grunn til aktsomhet og til å rette seg etter lokale myndigheters anvisninger. Sist endret",
+  "zones": [
+   {"level": "all", "adm": "PAK/ADM1", "names": ["Khyber Pakhtunkhwa"], "label": "North West Frontier Province og FATA"}
+  ]
+ },
+ "b66854ba6301": {
+  "text": "Utenriksdepartementet fraråder reise til eller opphold i North West Frontier Province og i stammeområdene Federally Administered Tribal Areas (FATA). På grunn av fare for terrorangrep bør det utvises stor aktsomhet under reise og opphold i de store byene og på steder med store menneskeansamlinger. Også i andre deler av Pakistan vil det være grunn til aktsomhet og til å rette seg etter lokale myndigheters anvisninger. Sist endret",
+  "same": "3e2f10cecd09"
  }
 }

@@ -4,5 +4,9 @@
  "474907937527": {"text": "Utenriksdepartementet fraråder reise eller opphold som ikke er strengt nødvendig i de nordlige provinsene (Erbil, Suleimania og Duhok). Alle reiser til eller opphold i øvrige deler av Irak frarådes.", "zones": [{"level": "all", "country": true, "label": "Resten av landet"}, {"level": "necessary", "adm": "IRQ/ADM1", "names": ["Dohuk", "Erbil", "Al-Sulaimaniyah"], "label": "Duhok, Erbil og Suleimania"}]},
  "9357d361d803": {"text": "Utenriksdepartementet oppfordrer til at det utvises aktsomhet ved reiser til og opphold i de i de nordlige provinsene (Erbil, Suleimania og Duhok). Alle reiser til eller opphold i øvrige deler av Irak frarådes.", "zones": [{"level": "all", "country": true, "label": "Resten av landet"}, {"level": "none", "adm": "IRQ/ADM1", "names": ["Dohuk", "Erbil", "Al-Sulaimaniyah"], "label": "Duhok, Erbil og Suleimania"}]},
  "fab066820b7d": {"text": "Utenriksdepartementet fraråder alle ikke-nødvendige reiser til og opphold i provinsene Duhok, Erbil og Suleimania. Alle reiser til eller opphold i øvrige deler av Irak frarådes.", "same": "474907937527"},
- "3ba0bd0e76c4": {"text": "Utenriksdepartementet fraråder alle reiser til landet, med unntak av provinsene Dahuk, Erbil og Suleimania i de kurdiske områdene. Til disse områdene fraråder Utenriksdepartementet alle reiser som ikke er strengt nødvendige.", "same": "474907937527"}
+ "3ba0bd0e76c4": {"text": "Utenriksdepartementet fraråder alle reiser til landet, med unntak av provinsene Dahuk, Erbil og Suleimania i de kurdiske områdene. Til disse områdene fraråder Utenriksdepartementet alle reiser som ikke er strengt nødvendige.", "same": "474907937527"},
+ "652884138581": {
+  "text": "Utenriksdepartementet fraråder reiser til de nordlige provinsene (Erbil, Suleimania og Duhok) som ikke er strengt nødvendige. Reiser til øvrige deler av Irak frarådes, og norske borgere som befinner seg i disse områdene oppfordres til å forlate landet. Norske borgere som oppholder seg i eller planlegger reise til Irak oppfordres til å ta kontakt med ambassaden i Amman for oppdatert informasjon og registrering.Sist endret",
+  "same": "474907937527"
+ }
 }
