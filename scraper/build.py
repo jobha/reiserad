@@ -261,7 +261,11 @@ def timeline(hist, info, lands, hregions=None):
                 index[t] = len(texts)
                 texts.append(t)
             rows.append([h["from"], level, int(partial), index.get(t, -1), hsh])
-        # Fyll hull mellom kildene: fra slutten av landsider til første senere kilde er ukjent.
+        # Et hull («?») mellom to like tilstander (samme nivå og tekst før og etter, typisk «ingen
+        # advarsel» både i jan. 2018 og 2019) brukes ikke: landet hadde trolig samme status hele tiden.
+        rows = [r for i, r in enumerate(rows)
+                if not (r[1] == "?" and 0 < i < len(rows) - 1
+                        and (rows[i - 1][1], rows[i - 1][4]) == (rows[i + 1][1], rows[i + 1][4]))]
         if rows:
             out[iso] = rows
     start = min(r[0][0] for r in out.values())

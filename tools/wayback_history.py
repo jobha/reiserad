@@ -151,12 +151,18 @@ def country(url):
     return [seen[i] for i in sorted(seen) if seen[i]]
 
 
+# Under koronapandemien viste landsidene bare UDs globale reiseråd (lagret som layout None):
+# da vet vi ikke om landet hadde en egen advarsel.
+CORONA = ("2020-03-12", "2021-10-01")
+
+
 def collapse(snaps, first_box):
-    """Like tekster etter hverandre slås sammen; kopier uten advarsel før first_box hoppes over."""
+    """Like tekster etter hverandre slås sammen. En kopi uten advarselsboks betyr «ingen
+    advarsel» fra first_box (da faktaboksene var tatt i bruk), unntatt i koronaperioden."""
     entries = []
     for s in snaps:
         w = s["warning"]
-        if not w and (s["layout"] is None or s["date"] < first_box):
+        if not w and (s["date"] < first_box or (s["layout"] is None and CORONA[0] <= s["date"] < CORONA[1])):
             continue
         paragraphs = w["paragraphs"] if w else []
         if entries and entries[-1]["paragraphs"] == paragraphs:
@@ -165,6 +171,36 @@ def collapse(snaps, first_box):
             continue
         entries.append({"from": s["date"], "status": w["status"] if w else "", "paragraphs": paragraphs})
     return entries
+
+
+def fill_listed(adv, raw):
+    """Står et land på en av UDs lister over reiseadvarsler (history «listed») uten at vi har
+    teksten, er den sannsynligvis i en kopi halveringen hoppet over: hent alle kopier i perioden."""
+    sys.path.insert(0, str(ROOT / "scraper"))
+    import history
+    from datetime import date, timedelta
+    for key, entries in history.build().items():
+        periods = [(e["from"], e.get("until") or "9999") for e in entries if e.get("listed") and e["from"] >= "2018"]
+        if not periods or key not in adv:
+            continue
+        have = {s["date"] for s in raw.get(key, [])}
+        new = []
+        for ts, orig in captures(adv[key]["url"]):
+            d = f"{ts[:4]}-{ts[4:6]}-{ts[6:8]}"
+            lo_ok = any((date.fromisoformat(a) - timedelta(days=45)).isoformat() <= d <= b for a, b in periods)
+            if not lo_ok or d in have:
+                continue
+            try:
+                page = fetch(ts, orig)
+            except Exception as e:  # noqa: BLE001
+                print(f"  hopper over {ts}: {e}", file=sys.stderr)
+                continue
+            if "reiseinformasjon" in page.lower():
+                layout, w = parse(page)
+                new.append({"date": d, "layout": layout, "warning": w})
+        if new:
+            raw[key] = sorted(raw.get(key, []) + new, key=lambda x: x["date"])
+            print(f"{key}: {len(new)} nye kopier, {sum(1 for x in new if x['warning'])} med advarsel", file=sys.stderr)
 
 
 def main():
@@ -193,6 +229,10 @@ def main():
     # Noen få parallelle land; Wayback avviser tilkoblinger hvis det går for fort.
     with ThreadPoolExecutor(WORKERS) as pool:
         list(pool.map(one, todo))
+
+    if "--fill-listed" in sys.argv:
+        fill_listed(adv, raw)
+        raw_path.write_text(json.dumps(raw, ensure_ascii=False))
 
     # Første dato der noe land har en advarselsboks: fra da betyr «ingen boks» «ingen advarsel».
     boxed = [s["date"] for snaps in raw.values() for s in snaps if s["warning"]]
