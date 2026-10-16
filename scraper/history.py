@@ -2,8 +2,9 @@
 (deploy-jobben committer filen hver gang UD endrer noe; krever fetch-depth: 0 i workflowen),
 eldre deler fra arkivfilene i data/ (se build())."""
 import json
+import re
 import subprocess
-from datetime import date
+from datetime import date, timedelta
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -38,11 +39,15 @@ def _load(name):
 
 
 def news():
-    """{UD-nøkkel: [{"date", "title", "url"}]} fra data/ud_news.json (tools/ud_news.py), eldste først."""
-    out = {}
-    for n in _load("ud_news.json") or []:
-        for k in n["countries"]:
-            out.setdefault(k, []).append({"date": n["date"], "title": n["title"], "url": n["url"]})
+    """{UD-nøkkel: [{"date", "title", "url"}]}, eldste først: data/ud_news.json (tools/ud_news.py, 2021→)
+    og UDs pressemeldinger og nyheter i dokumentarkivet (data/ud_archive.json, tools/ud_archive.py)."""
+    out, seen = {}, set()
+    items = (_load("ud_news.json") or []) + _load("ud_archive.json").get("items", [])
+    for n in sorted(items, key=lambda n: n["date"]):
+        for k in n.get("countries", []):
+            if (k, n["url"]) not in seen:
+                seen.add((k, n["url"]))
+                out.setdefault(k, []).append({"date": n["date"], "title": n["title"], "url": n["url"]})
     return out
 
 
@@ -79,6 +84,7 @@ def build():
     arch = _load("history_archive.json").get("countries", {})
     lands = _load("history_landsider.json")
     by_country = news()
+    obs = _observations(hist, lands)
     out = {}
     for k, entries in hist.items():
         entries = _prepend([dict(o, approx=True) for o in arch.get(k, [])], entries)
@@ -90,8 +96,130 @@ def build():
             if old and lands.get("last") and lands["last"] < entries[0]["from"]:
                 old.append({"from": lands["last"], "status": "", "paragraphs": [], "gap": True, "approx": True})
             entries = _prepend(old, entries)
+        entries = _overlay(entries, obs.get(k, []))
         out[k] = _sharpen(entries, by_country.get(k, []))
     return out
+
+
+LIST_DAYS = 400  # så lenge en observasjon gjelder hvis ingen nyere kilde sier noe
+
+
+def _plus(d, days):
+    return (date.fromisoformat(d) + timedelta(days=days)).isoformat()
+
+
+def _observations(keys, lands):
+    """{UD-nøkkel: [(dato, art, avsnitt, horisont)]} fra data/ud_archive.json (tools/ud_archive.py).
+    art: "text" (UDs tekst med UDs dato), "listed" (på UDs fullstendige liste over land med
+    reiseråd, uten tekst), "absent" (mangler på listen: ingen advarsel), "fill"/"lift" (reiseråd
+    gitt/opphevet i en pressemelding: fyller bare perioder uten kjent tekst). Observasjonen gjelder
+    til horisonten: neste liste, høyst LIST_DAYS dager. Land som mangler på alle oversiktene på
+    landsider.no/regjeringen.no 2006–2018, er uten advarsel i hele den perioden."""
+    a = _load("ud_archive.json")
+    lists = sorted(a.get("lists", []), key=lambda x: x["date"])
+    dates = sorted({x["date"] for x in lists})
+    out = {}
+
+    def add(k, *o):
+        out.setdefault(k, []).append(o)
+
+    for x in lists:
+        later = [d for d in dates if d > x["date"]]
+        horizon = min([_plus(x["date"], LIST_DAYS)] + later[:1])
+        for k in keys:
+            p = x["countries"].get(k)
+            if p is None:
+                if x.get("complete", True):
+                    add(k, x["date"], "absent", [], horizon)
+            elif x.get("complete", True):
+                add(k, x["date"], "text" if p else "listed", p, horizon)
+            else:  # ufullstendig oversikt: fyller bare ukjente perioder
+                add(k, x["date"], "fill" if p else "seen", p, horizon)
+    for t in a.get("advice", []):
+        kind = "text" if t.get("mode") != "fill" else "fill" if t["paragraphs"] else "lift"
+        add(t["key"], t["date"], kind, t["paragraphs"], _plus(t["date"], LIST_DAYS))
+    if lands.get("list_first"):
+        for k in keys:
+            if k not in lands.get("countries", {}):
+                add(k, lands["list_first"], "absent", [], lands["list_last"])
+    return out
+
+
+def _norm(paragraphs):
+    return re.sub(r"[^a-zæøå0-9]", "", " ".join(paragraphs).lower())
+
+
+def _overlay(entries, obs):
+    """Legg observasjoner med sikker dato inn i historikken. En liste der landet mangler, gir
+    «ingen advarsel» fra listedatoen; står landet på listen uten tekst og en omtrentlig datert
+    tekst begynner før neste liste, flyttes tekstens dato tilbake til listedatoen. Er det ingen
+    kilde etter horisonten, er perioden etter den ukjent."""
+    entries = [dict(e) for e in entries]
+
+    def extend(i, horizon):
+        """Tilstanden i entries[i] er bekreftet til horisonten: et senere «ukjent» flyttes dit."""
+        j = i + 1
+        if j >= len(entries):
+            return
+        if entries[j].get("gap") and entries[j]["from"] < horizon:
+            if j + 1 < len(entries) and entries[j + 1]["from"] <= horizon:
+                del entries[j]
+            else:
+                entries[j]["from"] = horizon
+        elif entries[i].get("obs") and not entries[j].get("gap") and entries[j]["from"] > horizon:
+            # Bare observasjonen sier noe om perioden; etter horisonten er tilstanden ukjent.
+            entries.insert(j, {"from": horizon, "status": "", "paragraphs": [], "gap": True, "approx": True})
+
+    for d, kind, paras, horizon in sorted(obs, key=lambda o: o[0]):
+        i = max((j for j, e in enumerate(entries) if e["from"] <= d), default=-1)
+        if i > 0 and entries[i].get("gap") and entries[i]["from"] >= _plus(d, -31):
+            del entries[i]  # et kort hull rett før en ny observasjon er ikke verdt å vise
+            i -= 1
+        cur = entries[i] if i >= 0 else None
+        nxt = entries[i + 1] if i + 1 < len(entries) else None
+        state = None if cur is None or cur.get("gap") else (
+            "listed" if cur.get("listed") else _norm(cur["paragraphs"]))
+        want = "listed" if kind in ("listed", "seen") else _norm(paras)
+        if state == want or (kind in ("listed", "seen") and state):
+            if kind != "seen":
+                extend(i, horizon)
+            continue  # stemmer med det vi vet (en tekst er mer enn «står på listen»)
+        if kind == "fill" and state and state != "listed":
+            continue  # pressemeldingen erstatter ikke UDs egen tekst
+        if kind == "lift" and not state:
+            continue
+        if kind == "seen":
+            if cur is not None and not cur.get("gap"):
+                continue
+            kind = "listed"
+        if nxt and nxt.get("approx") and not nxt.get("gap") and nxt["from"] <= horizon and (
+                _norm(nxt["paragraphs"]) == want or (kind == "listed" and nxt["paragraphs"])):
+            nxt["from"] = d  # samme tilstand, men tidligere og sikrere datert
+            del nxt["approx"]
+            continue
+        new = {"from": d, "status": "", "paragraphs": list(paras), "obs": True}
+        if kind == "listed":
+            new["listed"] = True
+        if cur is not None and cur["from"] == d:
+            if not (cur.get("approx") or cur.get("gap")):
+                continue
+            entries[i] = new
+        else:
+            entries.insert(i + 1, new)
+            i += 1
+        extend(i, horizon)
+    # Like perioder etter hverandre slås sammen.
+    merged = []
+    for e in entries:
+        e.pop("obs", None)
+        p = merged[-1] if merged else None
+        if p and bool(p.get("gap")) == bool(e.get("gap")) and bool(p.get("listed")) == bool(e.get("listed")) \
+                and _norm(p["paragraphs"]) == _norm(e["paragraphs"]):
+            if e.get("news"):
+                p["news"] = p.get("news", []) + e["news"]
+            continue
+        merged.append(e)
+    return _until(merged)
 
 
 def _prepend(old, entries):

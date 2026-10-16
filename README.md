@@ -26,6 +26,8 @@ tools/wayback_history.py  eldre advarsler fra web.archive.org -> data/history_ar
 tools/landsider_history.py  UDs offisielle reiseråd på landsider.no 2010–2015 (web.archive.org) -> data/history_landsider.json – for hånd
 tools/ud_news.py    UDs nyheter/pressemeldinger om reiseråd (2021–) -> data/ud_news.json; gir eksakte datoer – for hånd
 tools/nb_press.py    avisomtaler av UDs reiseråd i Nasjonalbiblioteket (1980-tallet–) -> data/press_nb.json; «Omtalt i pressen» på landsidene, farger ikke kartet – for hånd
+tools/ud_archive.py UDs dokumentarkiv 1995–, samlelister 2003–05, odin.dep.no 2001–05, «Land med reiseråd» 2019– og
+                    Datawrapper-kartet -> data/ud_archive.json – for hånd (--wayback henter arkivkopier, --write skriver)
 tools/og_image.py   site/og.png (delingsbilde) – kjøres for hånd
 brand/              logo.svg (kartnål med klode) og favicon-small.svg (16/32 px); PNG-ene lages med tools/render_icons.mjs
 deploy/nginx.conf   nginx-oppsettet på Pi-en (301 fra reiseråd til reiserad)
