@@ -257,6 +257,70 @@ def history_level(paragraphs):
     return level, bool(REGIONAL_HINTS.search(txt))
 
 
+def load_global():
+    """UDs globale koronareiseråd (tools/corona_global.py): versjoner med unntak."""
+    path = DATA / "global_advice.json"
+    return json.loads(path.read_text())["versions"] if path.exists() else []
+
+
+def global_zones(v, key):
+    """Soner for landet i én versjon av det globale rådet, eller None (helt unntatt) / [] (hele landet)."""
+    if key in v["exempt"]:
+        return None
+    r = v["regions"].get(key)
+    if not r:
+        return []
+    if r.get("warned"):
+        return [{"level": "necessary", "adm": r["adm"], "names": r["warned"], "label": "Globalt reiseråd (korona)"}]
+    return [{"level": "necessary", "country": True, "label": "Globalt reiseråd (korona)"},
+            {"level": "none", "adm": r["adm"], "names": r["exempt"], "label": "Unntatt fra det globale reiserådet"}]
+
+
+def merge_global(rows, key, versions, text_index, combos=None):
+    """Legg det globale koronarådet inn i landets rader der landet ikke har en egen advarsel
+    (ingen, ukjent eller bare «på listen»). En egen advarsel for hele landet går foran det globale
+    rådet. En egen regional advarsel tegnes oppå det globale rådet for resten av landet
+    (sammensatte soner, se combos og history_zones)."""
+    if not versions:
+        return rows
+    start, end = versions[0]["from"], versions[-1]["until"]
+
+    def own_at(d):
+        r = None
+        for x in rows:
+            if x[0] > d:
+                break
+            r = x
+        return r
+
+    def global_at(d):
+        for i, v in enumerate(versions):
+            if v["from"] <= d < v["until"]:
+                z = global_zones(v, key)
+                if z is None:
+                    return None
+                return [d, "necessary", int(bool(z)), text_index(v["text"]), f"g{v['from'].replace('-', '')}"]
+        return None
+
+    bounds = sorted({r[0] for r in rows} | {v["from"] for v in versions} | {end})
+    out = []
+    for d in bounds:
+        o, g = own_at(d), (global_at(d) if start <= d < end else None)
+        if g and o and o[1] in ("all", "necessary") and o[2] and o[4]:
+            # Egen regional advarsel + globalt råd for resten: sammensatte soner.
+            # Uten regionunntak er det globale rådet likt i alle versjoner: én sammensatt sone holder.
+            gfrom = g[4][1:] if g[2] else ""
+            hsh = f"c{o[4]}g{gfrom}"
+            if combos is not None:
+                combos.append((key, o[4], gfrom, hsh))
+            eff = [d, "all" if o[1] == "all" else "necessary", 1, o[3], hsh]
+        else:
+            eff = g if g and (o is None or o[1] in (None, "?", "listed")) else (o and [d] + o[1:])
+        if eff and (not out or out[-1][1:] != eff[1:]):
+            out.append(eff)
+    return out
+
+
 def timeline(hist, info, lands, hregions=None):
     """Per land (ISO): [[fra, nivå|None|"?", delvis, tekstindeks, hash]] eldst først, og tekstene.
     "?" = ukjent (ingen arkivdata), "listed" = på UDs liste over reiseråd, men teksten er ikke arkivert. hash = tekst-hash, "" uten tekst; har teksten
@@ -267,6 +331,14 @@ def timeline(hist, info, lands, hregions=None):
     (listes i timeline.untagged og skrives ut av build())."""
     texts, index, out = [], {}, {}
     timeline.untagged = []
+    timeline.combos = []
+    versions = load_global()
+
+    def text_index(t):
+        if t not in index:
+            index[t] = len(texts)
+            texts.append(t)
+        return index[t]
     for iso, rec in info.items():
         entries = hist.get(rec["key"], [])
         rows = []
@@ -298,6 +370,7 @@ def timeline(hist, info, lands, hregions=None):
         rows = [r for i, r in enumerate(rows)
                 if not (r[1] == "?" and 0 < i < len(rows) - 1
                         and (rows[i - 1][1], rows[i - 1][4]) == (rows[i + 1][1], rows[i + 1][4]))]
+        rows = merge_global(rows, rec["key"], versions, text_index, timeline.combos)
         if rows:
             out[iso] = rows
     start = min(r[0][0] for r in out.values())
@@ -541,6 +614,54 @@ def history_zones(hist, info, ne, hregions):
                 feats.append({"type": "Feature", "properties": props,
                               "geometry": {"type": m["type"], "coordinates": round_coords(m["coordinates"], 3)}})
             k = f"{iso}:{hsh}"
+            first = seen.setdefault(json.dumps(feats, sort_keys=True), k)
+            out[k] = feats if first == k else first
+    # Egen regional advarsel under det globale koronarådet: globalt råd for hele landet, egne soner oppå.
+    current = {k: v["zones"] for k, v in json.loads((DATA / "regions.json").read_text()).items() if not k.startswith("_")}
+    by_from = {v["from"].replace("-", ""): v for v in load_global()}
+    for key, own_hash, gfrom, hsh in sorted(set(getattr(timeline, "combos", []))):
+        iso = iso_of_key.get(key)
+        own = hregions.get(key, {}).get(own_hash)
+        if own is None:
+            entries = hist.get(key, [])
+            if entries and entries[-1]["paragraphs"] and text_hash(entries[-1]["paragraphs"]) == own_hash:
+                own = current.get(key)
+        g = global_zones(by_from[gfrom], key) if gfrom else []
+        if not iso or own is None or g is None:
+            continue
+        base = g or [{"level": "necessary", "country": True, "label": "Globalt reiseråd (korona)"}]
+        country = ne[iso]
+        feats = []
+        for geom, z in paint(base + own, country, ne, Proj(country), iso):
+            geom = polygonal(geom.simplify(HIST_TOL, preserve_topology=True))
+            if geom.is_empty:
+                continue
+            props = {"iso": iso, "level": z["level"], "label": z.get("label", "")}
+            if z.get("approx"):
+                props["approx"] = True
+            m = mapping(geom)
+            feats.append({"type": "Feature", "properties": props,
+                          "geometry": {"type": m["type"], "coordinates": round_coords(m["coordinates"], 3)}})
+        k = f"{iso}:{hsh}"
+        first = seen.setdefault(json.dumps(feats, sort_keys=True), k)
+        out[k] = feats if first == k else first
+    # Det globale koronarådet: land med unntak for enkelte regioner (Sverige, Danmark, Finland).
+    for v in load_global():
+        for key in v["regions"]:
+            iso = iso_of_key.get(key)
+            zones = global_zones(v, key)
+            if not iso or not zones:
+                continue
+            country = ne[iso]
+            feats = []
+            for g, z in paint(zones, country, ne, Proj(country), iso):
+                g = polygonal(g.simplify(HIST_TOL, preserve_topology=True))
+                if g.is_empty or z["level"] == "none":
+                    continue
+                m = mapping(g)
+                feats.append({"type": "Feature", "properties": {"iso": iso, "level": z["level"], "label": z.get("label", "")},
+                              "geometry": {"type": m["type"], "coordinates": round_coords(m["coordinates"], 3)}})
+            k = f"{iso}:g{v['from'].replace('-', '')}"
             first = seen.setdefault(json.dumps(feats, sort_keys=True), k)
             out[k] = feats if first == k else first
     return out
