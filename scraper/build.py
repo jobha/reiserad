@@ -71,7 +71,10 @@ def labels(ne_feats, info):
             continue
         rec = info.get(p["ADM0_A3"])
         name = rec["name"] if rec else NAMES.get(p["ADM0_A3"], p["NAME"])
-        countries.append([name, round(p["LABEL_X"], 2), round(p["LABEL_Y"], 2), p["MIN_LABEL"]])
+        row = [name, round(p["LABEL_X"], 2), round(p["LABEL_Y"], 2), p["MIN_LABEL"]]
+        if p["ADM0_A3"] in LABEL_FROM:
+            row.append(LABEL_FROM[p["ADM0_A3"]])  # landet fantes ikke før denne datoen
+        countries.append(row)
     places = []
     for f in fetch(PLACES_URL, PLACES_PATH)["features"]:
         p = f["properties"]
@@ -79,7 +82,11 @@ def labels(ne_feats, info):
             places.append([p["name"], round(p["longitude"], 3), round(p["latitude"], 3),
                            p["min_zoom"], 1 if p["adm0cap"] else 0])
     places.sort(key=lambda r: (r[3], -r[4]))
-    return {"countries": countries, "places": places}
+    # Tidligere stater: ["navn", x, y, minzoom, fra, til], ved hovedlandets etikett.
+    pos = {f["properties"]["ADM0_A3"]: f["properties"] for f in ne_feats}
+    former = [[st["name"], round(pos[st["main"]]["LABEL_X"], 2), round(pos[st["main"]]["LABEL_Y"], 2), 3.5,
+               st.get("from"), st["to"]] for st in FORMER if st["main"] in LABEL_FROM]
+    return {"countries": countries, "places": places, "former": former}
 
 
 def load_ne():
@@ -392,7 +399,9 @@ def build():
                        "publisher": site["publisher"], "countries": info})
     lands = json.loads((DATA / "history_landsider.json").read_text()) if (DATA / "history_landsider.json").exists() else {}
     hregions = load_history_regions()
-    dump("timeline.json", timeline(hist, info, lands, hregions))
+    tl = timeline(hist, info, lands, hregions)
+    dump("timeline.json", tl)
+    dump("world_history.json", former_states(tl, ne))
     dump("timeline_zones.json", history_zones(hist, info, ne, hregions))
     n_pages = pages.write_all(OUT.parent, info, ne, zones_by_iso, adv["fetched"], site, hist, news, press)
 
@@ -403,6 +412,59 @@ def build():
     print(f"{n} land med advarsel, {len(zones)} soner. Endret siden kartlegging: {stale or '-'}. "
           f"Ikke kartlagt: {unmapped or '-'}")
     return stale, unmapped
+
+
+# Stater som har endret seg siden tidslinjen begynner (1995). Flatene er dagens Natural
+# Earth-land slått sammen, så grensene mot naboene er de samme som ellers på kartet.
+# CShapes 2.0 (ETH Zürich) har historiske grenser, men tegnet med andre linjer enn
+# Natural Earth; her er alle endringene sammenslåinger av dagens land, så union er nok.
+# main = landet som arver UDs side og tegnede soner; til = første dag med dagens grenser.
+# Øst-Timor tegnes for seg hele perioden (FN-administrert 1999–2002, Indonesias okkupasjon
+# før det ble aldri anerkjent av FN), og Krim følger Natural Earth som ellers på kartet.
+FORMER = [
+    {"id": "SDN-1956", "name": "Sudan", "main": "SDN", "parts": ["SDN", "SDS"], "to": "2011-07-09"},
+    {"id": "YUG", "name": "Jugoslavia", "main": "SRB", "parts": ["SRB", "MNE", "KOS"], "to": "2003-02-04"},
+    {"id": "SCG", "name": "Serbia og Montenegro", "main": "SRB", "parts": ["SRB", "MNE", "KOS"],
+     "from": "2003-02-04", "to": "2006-06-03"},
+    {"id": "SRB-2006", "name": "Serbia", "main": "SRB", "parts": ["SRB", "KOS"],
+     "from": "2006-06-03", "to": "2008-02-17"},
+]
+# Dagens landetiketter som ikke skal vises før landet fantes (i dagens form).
+LABEL_FROM = {"SDS": "2011-07-09", "MNE": "2006-06-03", "SRB": "2006-06-03", "KOS": "2008-02-17"}
+LEVEL_RANK = {"all": 4, "necessary": 3, "listed": 2, None: 1, "?": 0}
+
+
+def former_states(tl, ne):
+    """site/data/world_history.json: én flate per tidligere stat, med perioden den gjaldt og
+    tidslinjerader slått sammen fra delene: [fra, nivå, delvis, tekst, hash, kilde-ISO].
+    Strengeste del vinner (en advarsel for Kosovo 1999 gjaldt «Jugoslavia, herunder Kosovo»);
+    ved likt nivå hovedlandet. Tegnede soner brukes bare fra hovedlandet."""
+    feats = []
+    for st in FORMER:
+        lo, hi = st.get("from", ""), st["to"]
+        parts = {p: tl["countries"].get(p, []) for p in st["parts"]}
+        dates = sorted({lo or tl["start"]} | {r[0] for rs in parts.values() for r in rs if lo < r[0] < hi})
+        rows = []
+        for d in dates:
+            best = None
+            for p, rs in parts.items():
+                r = next((x for x in reversed(rs) if x[0] <= d), None)
+                level, partial, text, hsh = (r[1], r[2], r[3], r[4]) if r else ("?", 0, -1, "")
+                key = (LEVEL_RANK[level], p == st["main"])
+                if best is None or key > best[0]:
+                    best = (key, [d, level, partial, text, hsh, p])
+            row = best[1]
+            if row[5] != st["main"]:
+                row[4] = ""  # sonene er tegnet på delen alene
+                if row[1] in ("all", "necessary") and st["name"] not in (tl["texts"][row[3]] if row[3] >= 0 else ""):
+                    row[2] = 1  # advarselen gjaldt bare en del av staten
+            if not rows or rows[-1][1:] != row[1:]:
+                rows.append(row)
+        geom = unary_union([ne[p] for p in st["parts"]])
+        f = feature(geom, {"id": st["id"], "name": st["name"], "main": st["main"], "parts": st["parts"],
+                           "from": lo or None, "to": hi, "rows": rows})
+        feats.append(f)
+    return {"type": "FeatureCollection", "features": feats}
 
 
 HIST_TOL = 0.01

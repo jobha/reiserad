@@ -226,7 +226,8 @@ function drawLabels() {
     boxes.push(r); return true;
   };
   const cands = [];
-  for (const [name, x, y, mz] of LABELS.countries) if (z >= mz - 0.5) cands.push({ name, x, y, cls: "c", pri: mz });
+  for (const [name, x, y, mz, from] of LABELS.countries) if (z >= mz - 0.5 && !(TL_DATE && from && TL_DATE < from)) cands.push({ name, x, y, cls: "c", pri: mz });
+  if (TL_DATE) for (const [name, x, y, mz, from, to] of LABELS.former || []) if (z >= mz - 0.5 && (!from || TL_DATE >= from) && TL_DATE < to) cands.push({ name, x, y, cls: "c", pri: mz });
   for (const [name, x, y, mz, cap] of LABELS.places) if (z >= mz) cands.push({ name, x, y, cls: cap ? "p cap" : "p", pri: mz + (cap ? 0 : 0.5) });
   for (const c of cands) c.was = wasShown.has(c.cls + "|" + c.name) ? 0 : 1;
   cands.sort((a, b) => a.pri - b.pri || a.was - b.was);
@@ -344,7 +345,7 @@ function tipWorld(iso, ne) {
   const c = INFO[iso];
   if (TL_DATE && !tlCurrent(iso)) {
     const st = tlState(iso);
-    return `<b>${esc(c?.name || ne)}</b><div class="tip-note">${esc(tlFmt(TL_DATE))}</div>` + (st.level === "?"
+    return `<b>${esc(FORMER[iso]?.name || c?.name || ne)}</b><div class="tip-note">${esc(tlFmt(TL_DATE))}</div>` + (st.level === "?"
       ? `<div>Ukjent – mangler arkivdata</div>`
       : st.level === "listed" ? `<div>Offisielt reiseråd – teksten er ikke bevart</div>`
       : tlDrawn(iso) ? `<div>Ikke omfattet av reiseadvarselen</div>`
@@ -412,6 +413,22 @@ function makeHist(k) {
   });
 }
 
+// Tidligere stater (world_history.json): Sudan før 2011, Jugoslavia, Serbia og Montenegro …
+// Flaten erstatter dagens deler når tidslinjen står i perioden; ellers er den usynlig.
+function makeFormer(k) {
+  const off = k * 360;
+  return L.geoJSON(FS, {
+    coordsToLatLng: c => L.latLng(c[1], c[0] + off),
+    renderer: worldRenderer,
+    style: { fillColor: css("--land"), fillOpacity: 1, color: css("--land-line"), weight: .7 },
+    onEachFeature: (f, l) => {
+      const id = f.properties.id;
+      if (HOVER) l.bindTooltip(() => tipWorld(id, f.properties.name), TIP);
+      l.on("click", e => L.popup().setLatLng(e.latlng).setContent(tlPopup(id, f.properties.name)).openOn(map));
+    },
+  });
+}
+
 // Legg til kopiene som er i bildet, fjern de som ikke er det (de gjenbrukes senere).
 function syncCopies() {
   if (!WORLD) return;
@@ -424,11 +441,19 @@ function syncCopies() {
     const ls = copies.get(k);
     if (HZ && ls.length < 3) ls.push(makeHist(k));
     if (ls[2] && !map.hasLayer(ls[2])) { ls[2].addTo(map); styleHist(ls[2]); }
+    if (FS && !formerCopies.has(k)) formerCopies.set(k, makeFormer(k));
+    const fl = formerCopies.get(k);
+    if (fl && !map.hasLayer(fl)) { fl.addTo(map); styleFormer(fl); }
   }
   for (const [k, ls] of copies) {
     if (want.has(k)) continue;
     for (const l of ls) map.removeLayer(l);
     if (Math.abs(k) > 1) copies.delete(k);  // behold bare nabokopiene i minnet
+  }
+  for (const [k, l] of formerCopies) {
+    if (want.has(k)) continue;
+    map.removeLayer(l);
+    if (Math.abs(k) > 1) formerCopies.delete(k);
   }
   for (const pane of ["zones", "overlayPane"]) {
     const svg = map.getPane(pane).querySelector("svg");
@@ -467,6 +492,9 @@ function focusCountry(iso) {
 // regionale advarsler vises skravert.
 let TL = null, TL_DATE = null, tlTimer = null;
 let TZ = null, HZ = null;  // timeline_zones.json (lastes ved første drag), og flatene som FeatureCollection
+let FS = null, FORMER = {}, HIDDEN = new Map();  // world_history.json; tidligere stater per id; dagens del -> stat på datoen
+const formerCopies = new Map();  // k -> lag med tidligere stater
+const fsActive = p => TL_DATE && (!p.from || TL_DATE >= p.from) && TL_DATE < p.to;
 const DAY = 864e5;
 const tlFmt = d => new Date(d + "T12:00:00").toLocaleDateString("nb-NO", { day: "numeric", month: "long", year: "numeric" });
 const tlDay = n => new Date(Date.parse(TL.start + "T12:00:00Z") + n * DAY).toISOString().slice(0, 10);
@@ -477,10 +505,11 @@ function tlState(iso) {
   if (TL_DATE < rows[0][0]) return { level: "?", partial: 0, text: -1 };
   let r = rows[0];
   for (const x of rows) { if (x[0] > TL_DATE) break; r = x; }
-  return { level: r[1], partial: r[2], text: r[3], from: r[0], hash: r[4] };
+  return { level: r[1], partial: r[2], text: r[3], from: r[0], hash: r[4], src: r[5] };
 }
 // Gjelder landets nåværende tekst på datoen? Da brukes de tegnede sonene.
 function tlCurrent(iso) {
+  if (FORMER[iso]) return false;
   const rows = TL?.countries[iso];
   if (!rows?.length) return !TL_DATE;
   const st = tlState(iso), last = rows[rows.length - 1];
@@ -489,12 +518,13 @@ function tlCurrent(iso) {
 // Nøkkelen ("ISO:hash") til de tegnede sonene for landets tekst på datoen, eller null.
 function tlDrawn(iso) {
   if (!TZ || !TL_DATE || tlCurrent(iso)) return null;
-  const st = tlState(iso), key = iso + ":" + st.hash, v = st.hash && TZ[key];
+  const st = tlState(iso), key = (st.src || iso) + ":" + st.hash, v = st.hash && TZ[key];
   return typeof v === "string" ? v : v ? key : null;
 }
 function styleHist(layer) {
   layer.eachLayer(l => {
-    const show = l.feature.properties.k === tlDrawn(l.feature.properties.iso);
+    const iso = l.feature.properties.iso, fs = HIDDEN.get(iso);
+    const show = (!fs || fs.main === iso) && l.feature.properties.k === tlDrawn(iso);
     if (show) layer.resetStyle(l); else l.setStyle({ opacity: 0, fillOpacity: 0 });
     const el = l.getElement?.();
     if (el) el.style.pointerEvents = show ? "" : "none";
@@ -507,12 +537,13 @@ function tlLoadZones() {
     for (const [k, v] of Object.entries(tz)) if (typeof v !== "string") for (const f of v) feats.push({ ...f, properties: { ...f.properties, k } });
     TZ = tz; HZ = { type: "FeatureCollection", features: feats };
     for (const [, [w]] of copies) styleWorld(w);
+    for (const [, l] of formerCopies) styleFormer(l);
     syncCopies();
   }).catch(() => {});
 }
 function styleZones(layer) {
   layer.eachLayer(l => {
-    const show = !TL_DATE || tlCurrent(l.feature.properties.iso);
+    const show = !TL_DATE || (tlCurrent(l.feature.properties.iso) && !HIDDEN.has(l.feature.properties.iso));
     if (show) layer.resetStyle(l); else l.setStyle({ opacity: 0, fillOpacity: 0 });
     const el = l.getElement?.();
     if (el) el.style.pointerEvents = show ? "" : "none";
@@ -520,18 +551,34 @@ function styleZones(layer) {
 }
 function styleWorld(layer) {
   layer.eachLayer(l => {
-    const iso = l.feature.properties.iso;
-    if (!TL_DATE || tlCurrent(iso) || tlDrawn(iso)) { layer.resetStyle(l); return; }
-    const st = tlState(iso);
-    if (st.level === "?") l.setStyle({ fillColor: css("--muted"), fillOpacity: .28, color: css("--land-line"), weight: .7 });
-    else if (st.level === "listed") l.setStyle(fillFor("necessary", true));
-    else if (st.level) l.setStyle(fillFor(st.level, st.partial));
-    else layer.resetStyle(l);
+    const iso = l.feature.properties.iso, gone = HIDDEN.has(iso);
+    const el = l.getElement?.();
+    if (el) el.style.pointerEvents = gone ? "none" : "";
+    if (gone) { l.setStyle({ opacity: 0, fillOpacity: 0 }); return; }
+    tlFill(layer, l, iso);
   });
 }
+function styleFormer(layer) {
+  layer.eachLayer(l => {
+    const on = fsActive(l.feature.properties);
+    const el = l.getElement?.();
+    if (el) el.style.pointerEvents = on ? "" : "none";
+    if (on) tlFill(layer, l, l.feature.properties.id); else l.setStyle({ opacity: 0, fillOpacity: 0 });
+  });
+}
+// Farge etter tidslinjen for et land eller en tidligere stat.
+function tlFill(layer, l, iso) {
+  if (!TL_DATE || tlCurrent(iso) || tlDrawn(iso)) { layer.resetStyle(l); return; }
+  const st = tlState(iso);
+  if (st.level === "?") l.setStyle({ fillColor: css("--muted"), fillOpacity: .28, color: css("--land-line"), weight: .7 });
+  else if (st.level === "listed") l.setStyle(fillFor("necessary", true));
+  else if (st.level) l.setStyle(fillFor(st.level, st.partial));
+  else layer.resetStyle(l);
+}
 function tlPopup(iso, ne, zone) {
-  const c = INFO[iso], st = tlState(iso);
-  let h = `<div class="pop"><h2>${esc(c?.name || ne)}</h2><div class="status">${esc(tlFmt(TL_DATE))}</div>`;
+  const fs = FORMER[iso], st = tlState(iso);
+  const c = fs ? (INFO[fs.main]?.name === fs.name ? INFO[fs.main] : null) : INFO[iso];
+  let h = `<div class="pop"><h2>${esc(fs?.name || c?.name || ne)}</h2><div class="status">${esc(tlFmt(TL_DATE))}</div>`;
   if (zone) h += `<div class="zone ${zone.level}">${esc(LEVEL_TXT[zone.level])}${zone.label ? ": " + esc(zone.label) : ""}</div>`;
   else if (tlDrawn(iso)) h += `<div class="zone clear">Denne delen av landet var ikke omfattet av reiseadvarselen</div>`;
   else if (st.level === "?") h += `<div class="zone clear">Ukjent – vi har ikke funnet arkivkopier av UDs reiseråd fra denne tiden</div>`;
@@ -553,20 +600,25 @@ function tlSet(n) {
   const next = live ? null : tlDay(n);
   if (next === TL_DATE) return;
   TL_DATE = next;
+  HIDDEN = new Map();
+  for (const p of Object.values(FORMER)) if (fsActive(p)) for (const iso of p.parts) HIDDEN.set(iso, p);
+  const lsig = [...new Set(HIDDEN.values())].map(p => p.id).join() + (LABELS?.countries.filter(r => r[4] && TL_DATE && TL_DATE < r[4]).length || 0);
   document.body.classList.toggle("hist", !live);
   document.getElementById("tl-date").textContent = live ? "I dag" : tlFmt(TL_DATE);
   const sub = document.getElementById("sub");
   sub.dataset.live ||= sub.textContent;
   if (live) sub.textContent = sub.dataset.live;
   else {
-    const st = Object.keys(TL.countries).map(tlState);
+    const st = Object.keys(TL.countries).filter(iso => FORMER[iso] ? fsActive(FORMER[iso]) : !HIDDEN.has(iso)).map(tlState);
     const n = st.filter(x => x.level && x.level !== "?").length, u = st.filter(x => x.level === "?").length;
     sub.textContent = `${tlFmt(TL_DATE)}: ${n} land med reiseadvarsel` + (u > 20 ? ` · ${u} ukjente` : "");
   }
   map.closePopup();
   if (!live && !TZ) tlLoadZones();
   for (const [, [w, z, h]] of copies) { styleWorld(w); styleZones(z); if (h) styleHist(h); }
+  for (const [, l] of formerCopies) styleFormer(l);
   syncCopies();
+  if (lsig !== tlSet.lsig) { tlSet.lsig = lsig; drawLabels(); }
 }
 function tlPlay() {
   const btn = document.getElementById("tl-play"), range = document.getElementById("tl-range");
@@ -579,8 +631,12 @@ function tlPlay() {
     if (n >= +range.max) tlPlay();
   }, 90);
 }
-function tlInit(tl) {
+function tlInit(tl, fs) {
   TL = tl;
+  if (fs) {
+    FS = fs;
+    for (const f of fs.features) { FORMER[f.properties.id] = f.properties; TL.countries[f.properties.id] = f.properties.rows; }
+  }
   const range = document.getElementById("tl-range");
   const days = Math.round((Date.now() - Date.parse(TL.start + "T12:00:00Z")) / DAY);
   range.max = days; range.value = days;
@@ -595,8 +651,9 @@ function tlInit(tl) {
   document.getElementById("tl-now").addEventListener("click", () => { if (tlTimer) tlPlay(); tlSet(+range.max); });
   document.getElementById("tl").hidden = false;
 }
-fetch("data/timeline.json", { cache: "no-cache" }).then(r => r.json()).then(tl => {
-  const go = () => WORLD ? tlInit(tl) : setTimeout(go, 100);
+Promise.all([fetch("data/timeline.json", { cache: "no-cache" }).then(r => r.json()),
+  fetch("data/world_history.json", { cache: "no-cache" }).then(r => r.json()).catch(() => null)]).then(([tl, fs]) => {
+  const go = () => WORLD ? tlInit(tl, fs) : setTimeout(go, 100);
   go();
 }).catch(() => {});
 
