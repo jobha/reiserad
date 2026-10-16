@@ -203,9 +203,12 @@ def main():
     n = sum(1 for r in rows if r["found"])
     print(f"{len(rows)} kopier lest, {n} med funn -> {OUT}", file=sys.stderr)
     hist = build(rows)
+    list_dates = sorted(r["date"] for r in rows for f in r["found"] if f["kind"] == "list")
     first = min((r["date"] for r in rows), default=None)
     last = max((r["date"] for r in rows), default=None)
     HIST.write_text(json.dumps({"source": "landsider.no via web.archive.org", "first": first, "last": last,
+                                "list_first": list_dates[0] if list_dates else None,
+                                "list_last": list_dates[-1] if list_dates else None,
                                 "countries": dict(sorted(hist.items()))}, ensure_ascii=False, indent=1) + "\n")
     print(f"{len(hist)} land med reiseråd på landsider.no -> {HIST}", file=sys.stderr)
 

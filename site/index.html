@@ -60,6 +60,20 @@ html, body { margin: 0; height: 100%; background: var(--bg); color: var(--text);
 .sw.all { background: var(--all); } .sw.nec { background: var(--nec); }
 .sw.part { background: repeating-linear-gradient(45deg, var(--nec) 0 3px, transparent 3px 6px); }
 .sw.none { background: var(--land); }
+.sw.unk { background: var(--muted); opacity: .35; }
+.legend .hist-only { display: none; }
+body.hist .legend .hist-only { display: flex; }
+.timeline { position: absolute; z-index: 1000; left: 362px; right: 16px; bottom: 22px; max-width: 640px; margin: 0 auto;
+  display: flex; align-items: center; gap: 10px; padding: 8px 14px; background: var(--panel); color: var(--text);
+  border: 1px solid var(--line); border-radius: 14px; box-shadow: var(--shadow); font-size: 13px; }
+.timeline button { flex: none; width: 30px; height: 30px; border-radius: 50%; border: 1px solid var(--line); background: transparent;
+  color: var(--text); cursor: pointer; font-size: 12px; line-height: 1; }
+.timeline input { flex: 1; min-width: 0; accent-color: var(--all); }
+.timeline .tl-date { flex: none; min-width: 112px; text-align: right; font-weight: 600; font-variant-numeric: tabular-nums; }
+.timeline .tl-now { flex: none; font-size: 12px; color: var(--link); background: none; border: 0; width: auto; height: auto; padding: 0; }
+body:not(.hist) .timeline .tl-now { visibility: hidden; }
+.tl-ticks { position: absolute; left: 54px; right: 140px; bottom: 1px; height: 10px; pointer-events: none; font-size: 9px; color: var(--muted); }
+.tl-ticks span { position: absolute; transform: translateX(-50%); }
 .tools { display: flex; gap: 8px; padding: 0 16px 10px; }
 .tools input { flex: 1; min-width: 0; font: inherit; padding: 7px 10px; border-radius: 8px;
   border: 1px solid var(--line); background: transparent; color: var(--text); }
@@ -116,6 +130,10 @@ html, body { margin: 0; height: 100%; background: var(--bg); color: var(--text);
 
 @media (max-width: 640px) {
   .panel { top: auto; bottom: 16px; left: 16px; right: 16px; width: auto; max-height: 55vh; }
+  .timeline { top: 12px; bottom: auto; left: 12px; right: 12px; max-width: none; padding: 6px 10px; gap: 8px; }
+  .timeline .tl-date { min-width: 0; }
+  .tl-ticks { display: none; }
+  .leaflet-top { top: 54px; }
   .leaflet-popup-content { width: 260px !important; }
 }
 </style>
@@ -140,6 +158,7 @@ html, body { margin: 0; height: 100%; background: var(--bg); color: var(--text);
     <div><span class="sw nec"></span>Fraråder reiser som ikke er strengt nødvendige</div>
     <div><span class="sw part"></span>Gjelder bare deler av området – les UD</div>
     <div><span class="sw none"></span>Ingen reiseadvarsel</div>
+    <div class="hist-only"><span class="sw unk"></span>Ukjent – mangler arkivdata</div>
   </div>
   <div class="tools">
     <input id="q" type="search" placeholder="Søk land …" aria-label="Søk land">
@@ -153,6 +172,14 @@ html, body { margin: 0; height: 100%; background: var(--bg); color: var(--text);
   </footer>
   <noscript><p style="padding:0 16px 12px">Kartet krever JavaScript. Se <a href="/land/">reiserådene for alle land A–Å</a>.</p></noscript>
 </aside>
+
+<div class="timeline" id="tl" hidden>
+  <button id="tl-play" type="button" aria-label="Spill av tidslinjen" title="Spill av">▶</button>
+  <input id="tl-range" type="range" min="0" max="0" step="1" aria-label="Velg dato på tidslinjen">
+  <span class="tl-date" id="tl-date" aria-live="polite">I dag</span>
+  <button class="tl-now" id="tl-now" type="button">I dag</button>
+  <div class="tl-ticks" id="tl-ticks" aria-hidden="true"></div>
+</div>
 
 <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.4/dist/leaflet.js"></script>
 <script>
@@ -314,6 +341,13 @@ function tipZone(p) {
 }
 function tipWorld(iso, ne) {
   const c = INFO[iso];
+  if (TL_DATE) {
+    const st = tlState(iso);
+    return `<b>${esc(c?.name || ne)}</b><div class="tip-note">${esc(tlFmt(TL_DATE))}</div>` + (st.level === "?"
+      ? `<div>Ukjent – mangler arkivdata</div>`
+      : st.level ? `<div class="tip-level ${st.level}">${esc(LEVEL_TXT[st.level])}</div>${st.partial ? `<div class="tip-note">Gjelder deler av landet</div>` : ""}`
+      : `<div>Ingen reiseadvarsel</div>`);
+  }
   if (!c) return `<b>${esc(ne)}</b>`;
   return `<b>${esc(c.name)}</b><div>${c.level ? "Ikke omfattet av reiseadvarselen" : "Ingen reiseadvarsel"}</div>`;
 }
@@ -331,7 +365,8 @@ function makeCopy(k) {
       if (HOVER) l.bindTooltip(() => tipWorld(iso, f.properties.ne), TIP);
       l.on("click", e => {
         const c = INFO[iso];
-        L.popup().setLatLng(e.latlng).setContent(popupHtml(iso, { ne: f.properties.ne, clear: !!c?.level })).openOn(map);
+        L.popup().setLatLng(e.latlng).setContent(TL_DATE ? tlPopup(iso, f.properties.ne)
+          : popupHtml(iso, { ne: f.properties.ne, clear: !!c?.level })).openOn(map);
       });
     },
   });
@@ -359,15 +394,20 @@ function syncCopies() {
   const want = new Set(visibleCopies());
   for (const k of want) {
     if (!copies.has(k)) copies.set(k, makeCopy(k));
-    for (const l of copies.get(k)) if (!map.hasLayer(l)) l.addTo(map);
+    const [w, z] = copies.get(k);
+    if (!map.hasLayer(w)) { w.addTo(map); if (TL_DATE) styleWorld(w); }
+    if (!TL_DATE && !map.hasLayer(z)) z.addTo(map);
+    if (TL_DATE && map.hasLayer(z)) map.removeLayer(z);
   }
   for (const [k, ls] of copies) {
     if (want.has(k)) continue;
     for (const l of ls) map.removeLayer(l);
     if (Math.abs(k) > 1) copies.delete(k);  // behold bare nabokopiene i minnet
   }
-  const svg = map.getPane("zones").querySelector("svg");
-  if (svg) addHatch(svg);
+  for (const pane of ["zones", "overlayPane"]) {
+    const svg = map.getPane(pane).querySelector("svg");
+    if (svg) addHatch(svg);
+  }
 }
 
 // Etter at kartet har stoppet: ligger midten utenfor -180..180, hopp 360° * k
@@ -394,6 +434,98 @@ function focusCountry(iso) {
   L.popup({ autoPanPaddingTopLeft: L.point(panelOpen ? 370 : 20, 20) }).setLatLng(b.getCenter()).setContent(popupHtml(iso, null)).openOn(map);
   if (innerWidth <= 640) document.getElementById("panel").classList.add("collapsed");
 }
+
+// Tidslinje: dra tilbake i tid og se UDs reiseadvarsler slik de var. Historiske
+// advarsler har bare tekst, ikke tegnede soner: regionale vises som skravert hele land.
+let TL = null, TL_DATE = null, tlTimer = null;
+const DAY = 864e5;
+const tlFmt = d => new Date(d + "T12:00:00").toLocaleDateString("nb-NO", { day: "numeric", month: "long", year: "numeric" });
+const tlDay = n => new Date(Date.parse(TL.start + "T12:00:00Z") + n * DAY).toISOString().slice(0, 10);
+function tlState(iso) {
+  const rows = TL?.countries[iso];
+  if (!rows?.length || TL_DATE < rows[0][0]) return { level: "?", partial: 0, text: -1 };
+  let r = rows[0];
+  for (const x of rows) { if (x[0] > TL_DATE) break; r = x; }
+  return { level: r[1], partial: r[2], text: r[3], from: r[0] };
+}
+function styleWorld(layer) {
+  layer.eachLayer(l => {
+    const iso = l.feature.properties.iso;
+    if (!TL_DATE) { layer.resetStyle(l); return; }
+    const st = tlState(iso);
+    if (st.level === "?") l.setStyle({ fillColor: css("--muted"), fillOpacity: .28, color: css("--land-line"), weight: .7 });
+    else if (st.level) l.setStyle(fillFor(st.level, st.partial));
+    else layer.resetStyle(l);
+  });
+}
+function tlPopup(iso, ne) {
+  const c = INFO[iso], st = tlState(iso);
+  let h = `<div class="pop"><h2>${esc(c?.name || ne)}</h2><div class="status">${esc(tlFmt(TL_DATE))}</div>`;
+  if (st.level === "?") h += `<div class="zone clear">Ukjent – vi har ikke funnet arkivkopier av UDs reiseråd fra denne tiden</div>`;
+  else if (st.level) h += `<div class="zone ${st.level}">${esc(LEVEL_TXT[st.level])}${st.partial ? " (deler av landet)" : ""}</div>`;
+  else h += `<div class="zone clear">Ingen reiseadvarsel</div>`;
+  if (st.text >= 0) h += `<div class="paras"><p>${esc(TL.texts[st.text])}</p></div>`;
+  if (st.from) h += `<p class="tip-note">Gjeldende fra ${st.level === "?" ? "ca. " : ""}${esc(tlFmt(st.from))}.</p>`;
+  if (c?.page) h += `<div class="more"><a href="/land/${esc(c.slug)}/">Egen side for ${esc(c.name)}${c.history ? " inkl. historikk" : ""}</a></div>`;
+  return h + `</div>`;
+}
+function tlSet(n) {
+  const range = document.getElementById("tl-range");
+  n = Math.max(0, Math.min(+range.max, n));
+  range.value = n;
+  const live = n >= +range.max;
+  const next = live ? null : tlDay(n);
+  if (next === TL_DATE) return;
+  TL_DATE = next;
+  document.body.classList.toggle("hist", !live);
+  document.getElementById("tl-date").textContent = live ? "I dag" : tlFmt(TL_DATE);
+  const sub = document.getElementById("sub");
+  sub.dataset.live ||= sub.textContent;
+  if (live) sub.textContent = sub.dataset.live;
+  else {
+    const st = Object.keys(TL.countries).map(tlState);
+    const n = st.filter(x => x.level && x.level !== "?").length, u = st.filter(x => x.level === "?").length;
+    sub.textContent = `${tlFmt(TL_DATE)}: ${n} land med reiseadvarsel` + (u > 20 ? ` · ${u} ukjente` : "");
+  }
+  map.closePopup();
+  for (const [, [w, z]] of copies) {
+    styleWorld(w);
+    if (live && map.hasLayer(w) && !map.hasLayer(z)) z.addTo(map);
+    if (!live && map.hasLayer(z)) map.removeLayer(z);
+  }
+  syncCopies();
+}
+function tlPlay() {
+  const btn = document.getElementById("tl-play"), range = document.getElementById("tl-range");
+  if (tlTimer) { clearInterval(tlTimer); tlTimer = null; btn.textContent = "▶"; btn.title = "Spill av"; return; }
+  if (+range.value >= +range.max) tlSet(0);
+  btn.textContent = "❚❚"; btn.title = "Pause";
+  tlTimer = setInterval(() => {
+    const n = +range.value + 30;
+    tlSet(n);
+    if (n >= +range.max) tlPlay();
+  }, 90);
+}
+function tlInit(tl) {
+  TL = tl;
+  const range = document.getElementById("tl-range");
+  const days = Math.round((Date.now() - Date.parse(TL.start + "T12:00:00Z")) / DAY);
+  range.max = days; range.value = days;
+  const ticks = document.getElementById("tl-ticks"), y0 = +TL.start.slice(0, 4), y1 = new Date().getFullYear();
+  for (let y = y0 + 1; y <= y1; y++) {
+    if ((y - y0) % (y1 - y0 > 12 ? 4 : 2)) continue;
+    const pos = (Date.parse(y + "-01-01T12:00:00Z") - Date.parse(TL.start + "T12:00:00Z")) / DAY / days * 100;
+    ticks.insertAdjacentHTML("beforeend", `<span style="left:${pos}%">${y}</span>`);
+  }
+  range.addEventListener("input", () => { if (tlTimer) tlPlay(); tlSet(+range.value); });
+  document.getElementById("tl-play").addEventListener("click", tlPlay);
+  document.getElementById("tl-now").addEventListener("click", () => { if (tlTimer) tlPlay(); tlSet(+range.max); });
+  document.getElementById("tl").hidden = false;
+}
+fetch("data/timeline.json", { cache: "no-cache" }).then(r => r.json()).then(tl => {
+  const go = () => WORLD ? tlInit(tl) : setTimeout(go, 100);
+  go();
+}).catch(() => {});
 
 Promise.all(["data/info.json", "data/world.json", "data/zones.json", "data/labels.json"].map(u => fetch(u, { cache: "no-cache" }).then(r => r.json())))
 .then(([info, world, zones, labels]) => {

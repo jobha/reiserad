@@ -175,6 +175,51 @@ def auto_level(paragraphs):
     return "necessary" if "nødvendig" in txt else "all"
 
 
+def history_level(paragraphs):
+    """(nivå, delvis) for en historisk tekst uten tegnede soner. Bare aktsomhet = ingen advarsel.
+    Regionale advarsler vises som skravert hele land, som ukartlagte advarsler i dag."""
+    txt = " ".join(paragraphs).lower()
+    has_all = bool(re.search(r"fraråder alle reise|frarådes mot alle|alle reiser .{0,80}frarådes", txt))
+    has_nec = "nødvendig" in txt
+    if not (has_all or has_nec or "fraråd" in txt):
+        return None, False
+    rest = re.search(r"øvrige deler|resten av landet|for øvrig|landet for øvrig", txt)
+    if has_nec and rest:
+        return "necessary", False
+    level = "all" if has_all else "necessary"
+    return level, bool(REGIONAL_HINTS.search(txt))
+
+
+def timeline(hist, info, lands):
+    """Per land (ISO): [[fra, nivå|None|"?", delvis, tekstindeks]] eldst først, og tekstene.
+    "?" = ukjent (ingen arkivdata). Land uten advarsel på landsider.no i perioden
+    oversiktene dekker, regnes som uten advarsel der."""
+    texts, index, out = [], {}, {}
+    list_first, list_last = lands.get("list_first"), lands.get("list_last")
+    for iso, rec in info.items():
+        entries = hist.get(rec["key"], [])
+        rows = []
+        if list_first and rec["key"] not in lands.get("countries", {}):
+            rows += [[list_first, None, 0, -1], [list_last, "?", 0, -1]]
+        for h in entries:
+            if rows and h["from"] < rows[-1][0]:
+                continue
+            if h.get("gap"):
+                rows.append([h["from"], "?", 0, -1])
+                continue
+            level, partial = history_level(h["paragraphs"])
+            t = " ".join(h["paragraphs"])
+            if t and t not in index:
+                index[t] = len(texts)
+                texts.append(t)
+            rows.append([h["from"], level, int(partial), index.get(t, -1)])
+        # Fyll hull mellom kildene: fra slutten av landsider til første senere kilde er ukjent.
+        if rows:
+            out[iso] = rows
+    start = min(r[0][0] for r in out.values())
+    return {"start": start, "countries": out, "texts": texts}
+
+
 def round_coords(obj, nd=4):
     if isinstance(obj, (list, tuple)):
         if obj and isinstance(obj[0], (int, float)):
@@ -300,6 +345,8 @@ def build():
         rec["page"] = bool(rec["level"]) or rec["history"]
     dump("info.json", {"fetched": adv["fetched"], "source": adv["source"],
                        "publisher": site["publisher"], "countries": info})
+    lands = json.loads((DATA / "history_landsider.json").read_text()) if (DATA / "history_landsider.json").exists() else {}
+    dump("timeline.json", timeline(hist, info, lands))
     n_pages = pages.write_all(OUT.parent, info, ne, zones_by_iso, adv["fetched"], site, hist, news)
 
     n = sum(1 for r in info.values() if r["level"])
