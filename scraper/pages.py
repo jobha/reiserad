@@ -215,6 +215,30 @@ def history_html(entries, news=()):
     return "".join(out)
 
 
+PRESS_KIND = {"all": "fraråder alle reiser", "necessary": "fraråder reiser som ikke er strengt nødvendige",
+              "lifted": "opphever eller lemper rådet", "leave": "ber nordmenn forlate landet", "none": "ingen advarsel fra UD",
+              "against": "fraråder reiser"}
+
+
+def press_html(events):
+    """Avisomtaler av UDs reiseråd fra Nasjonalbiblioteket, gruppert per hendelse, nyeste først."""
+    if not events:
+        return ""
+    items = []
+    for ev in reversed(events):
+        n = len(ev["mentions"])
+        what = f' · {PRESS_KIND[ev["kind"]]}' if ev.get("kind") else ""
+        papers = f'{ev["papers"]} aviser' if ev["papers"] > 1 else ev["mentions"][0]["paper"]
+        body = "".join(f'<p class="news"><a href="{e(m["url"])}">{e(m["paper"])}</a> '
+                       f'<span class="muted">({nb_date(m["date"])})</span><br>'
+                       f'<span class="muted">«{e(m["text"])}»</span></p>' for m in ev["mentions"])
+        items.append(f'<details><summary>{nb_date(ev["from"])} · {e(papers)}{what}</summary>{body}</details>')
+    note = ("Avisomtaler av UDs reiseråd i Nasjonalbibliotekets digitaliserte aviser, samlet per hendelse "
+            "(omtaler innen to uker). Utvalget er tilfeldig – det avisene skrev om – og utdragene er søketreff "
+            'fra <a href="https://www.nb.no/search?mediatype=aviser">nb.no</a>, så landet kan være nevnt i en annen sammenheng.')
+    return f'<h2>Omtalt i pressen</h2><p class="muted">{note}</p>' + "".join(items)
+
+
 def describe(rec):
     """Kort, søkevennlig beskrivelse (meta description)."""
     name = rec["name"]
@@ -229,7 +253,7 @@ def describe(rec):
     return text if len(text) <= 158 else text[:155].rsplit(" ", 1)[0] + " …"
 
 
-def country_page(iso, rec, country, zones, fetched, history=(), news=()):
+def country_page(iso, rec, country, zones, fetched, history=(), news=(), press=()):
     name = rec["name"]
     slug = rec["slug"]
     canonical = f"{SITE}/land/{slug}/"
@@ -268,6 +292,7 @@ def country_page(iso, rec, country, zones, fetched, history=(), news=()):
     if rec.get("stale"):
         b.append('<p class="note">UD har endret teksten siden områdene ble tegnet inn. Les UDs tekst.</p>')
     b.append(history_html(list(history), list(news)))
+    b.append(press_html(list(press)))
     b.append(f'<div class="actions"><a class="btn primary" href="{e(rec["url"])}">Les hele reiseinformasjonen hos UD</a>'
              f'<a class="btn" href="/#{slug}">Se på verdenskartet</a>'
              f'<a class="btn" href="{e(issue_url(name, rec["url"]))}">Meld feil i kartet</a></div>')
@@ -318,7 +343,7 @@ def index_page(info):
     return page("Reiseråd for alle land A–Å – UDs reiseadvarsler", desc, SITE + "/land/", body)
 
 
-def write_all(out_dir, info, geoms, zones_by_iso, fetched, site, history=None, news=None):
+def write_all(out_dir, info, geoms, zones_by_iso, fetched, site, history=None, news=None, press=None):
     SITE_CFG.clear()
     SITE_CFG.update(site)
     """out_dir = site/. geoms[iso] = landflate, zones_by_iso[iso] = [(geom, level, partial, label)]."""
@@ -335,7 +360,8 @@ def write_all(out_dir, info, geoms, zones_by_iso, fetched, site, history=None, n
         d.mkdir(exist_ok=True)
         (d / "index.html").write_text(country_page(iso, rec, geoms[iso], zones_by_iso.get(iso, []), fetched,
                                                          (history or {}).get(rec["key"], ()),
-                                                         (news or {}).get(rec["key"], ())))
+                                                         (news or {}).get(rec["key"], ()),
+                                                         (press or {}).get(rec["key"], ())))
         urls.append((f"{SITE}/land/{rec['slug']}/", fetched[:10], "0.7"))
     (land / "index.html").write_text(index_page(info))
     sm = ['<?xml version="1.0" encoding="UTF-8"?>', '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">']

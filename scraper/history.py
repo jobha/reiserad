@@ -46,6 +46,15 @@ def news():
     return out
 
 
+def press():
+    """{UD-nøkkel: [{"from", "until", "papers", "kind", "mentions": [omtale]}]} fra
+    data/press_nb.json (tools/nb_press.py): avisomtaler i Nasjonalbiblioteket, eldste først."""
+    out = {}
+    for k, c in _load("press_nb.json").get("countries", {}).items():
+        out[k] = [dict(ev, mentions=[c["mentions"][i] for i in ev["mentions"]]) for ev in c["events"]]
+    return out
+
+
 def build():
     """{UD-nøkkel: [{"from", "until", "status", "paragraphs", "approx"?, "gap"?, "news"?}]}, eldste først.
     Siste element er gjeldende tekst (until=None). En periode uten advarsel har
