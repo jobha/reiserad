@@ -58,6 +58,13 @@
     "paragraphs": []
    }
   ],
+  "argentina": [
+   {
+    "from": "2021-11-29",
+    "status": "",
+    "paragraphs": []
+   }
+  ],
   "armenia": [
    {
     "from": "2021-10-01",
@@ -109,6 +116,20 @@
     ]
    }
   ],
+  "australia": [
+   {
+    "from": "2021-10-16",
+    "status": "",
+    "paragraphs": []
+   }
+  ],
+  "bahamas": [
+   {
+    "from": "2021-11-29",
+    "status": "",
+    "paragraphs": []
+   }
+  ],
   "bahrain": [
    {
     "from": "2019-04-26",
@@ -137,6 +158,34 @@
     ]
    }
   ],
+  "bangladesh": [
+   {
+    "from": "2018-08-15",
+    "status": "REISERÅDET ER SIST OPPDATERT 26.07.2016",
+    "paragraphs": [
+     "Utenriksdepartementet oppfordrer reisende til å utvise aktsomhet ved reiser til eller opphold i Bangladesh."
+    ]
+   },
+   {
+    "from": "2021-05-06",
+    "status": "REISERÅDET ER SIST OPPDATERT 28. APRIL 2021 - FORTSATT GYLDIG",
+    "paragraphs": [
+     "Utenriksdepartementet fraråder alle reiser til Bangladesh."
+    ]
+   },
+   {
+    "from": "2021-10-23",
+    "status": "",
+    "paragraphs": []
+   }
+  ],
+  "barbados": [
+   {
+    "from": "2021-12-03",
+    "status": "",
+    "paragraphs": []
+   }
+  ],
   "belarus": [
    {
     "from": "2022-06-15",
@@ -144,6 +193,20 @@
     "paragraphs": [
      "Utenriksdepartementet fraråder alle reiser til Belarus."
     ]
+   }
+  ],
+  "belgia": [
+   {
+    "from": "2021-12-03",
+    "status": "",
+    "paragraphs": []
+   }
+  ],
+  "belize": [
+   {
+    "from": "2021-10-20",
+    "status": "",
+    "paragraphs": []
    }
   ],
   "benin": [
@@ -161,6 +224,13 @@
     ]
    }
   ],
+  "bhutan": [
+   {
+    "from": "2021-10-01",
+    "status": "",
+    "paragraphs": []
+   }
+  ],
   "bolivia": [
    {
     "from": "2021-10-01",
@@ -173,6 +243,41 @@
     "paragraphs": [
      "Utenriksdepartementet fraråder reiser som ikke er strengt nødvendige til La Paz-regionen i Bolivia."
     ]
+   }
+  ],
+  "bosnia": [
+   {
+    "from": "2021-11-28",
+    "status": "",
+    "paragraphs": []
+   }
+  ],
+  "botswana": [
+   {
+    "from": "2021-11-05",
+    "status": "",
+    "paragraphs": []
+   }
+  ],
+  "brasil": [
+   {
+    "from": "2021-10-01",
+    "status": "",
+    "paragraphs": []
+   }
+  ],
+  "brunei": [
+   {
+    "from": "2021-11-13",
+    "status": "",
+    "paragraphs": []
+   }
+  ],
+  "bulgaria": [
+   {
+    "from": "2022-06-27",
+    "status": "",
+    "paragraphs": []
    }
   ],
   "burkinafaso": [
@@ -237,6 +342,20 @@
     ]
    }
   ],
+  "canada": [
+   {
+    "from": "2022-01-16",
+    "status": "",
+    "paragraphs": []
+   }
+  ],
+  "chile": [
+   {
+    "from": "2021-10-16",
+    "status": "",
+    "paragraphs": []
+   }
+  ],
   "colombia": [
    {
     "from": "2025-06-24",
@@ -260,6 +379,20 @@
     ]
    }
   ],
+  "cookoyene": [
+   {
+    "from": "2021-11-29",
+    "status": "",
+    "paragraphs": []
+   }
+  ],
+  "costarica": [
+   {
+    "from": "2021-11-16",
+    "status": "",
+    "paragraphs": []
+   }
+  ],
   "cuba": [
    {
     "from": "2022-01-21",
@@ -272,6 +405,34 @@
     "paragraphs": [
      "Utenriksdepartementet fraråder reiser som ikke er strengt nødvendige til Cuba."
     ]
+   }
+  ],
+  "danmark": [
+   {
+    "from": "2021-11-21",
+    "status": "",
+    "paragraphs": []
+   }
+  ],
+  "djibouti": [
+   {
+    "from": "2021-11-09",
+    "status": "",
+    "paragraphs": []
+   }
+  ],
+  "dominica": [
+   {
+    "from": "2022-06-29",
+    "status": "",
+    "paragraphs": []
+   }
+  ],
+  "dominikanske": [
+   {
+    "from": "2021-10-01",
+    "status": "",
+    "paragraphs": []
    }
   ],
   "drkongo": [
@@ -297,6 +458,13 @@
      "Utenriksdepartementet fraråder alle reiser til provinsene Sør-Ubangi, Nord-Ubangi, Bas-Uele, Haut-Uele, Ituri, Nord-Kivu, Sør-Kivu, Maniema, Tanganyika, og Kasaï-provinsene i Den demokratiske republikken Kongo.",
      "Utenriksdepartementet fraråder alle reiser som ikke er strengt nødvendige til øvrige deler av landet."
     ]
+   }
+  ],
+  "ecuador": [
+   {
+    "from": "2021-10-01",
+    "status": "",
+    "paragraphs": []
    }
   ],
   "egypt": [
@@ -333,6 +501,13 @@
     ]
    }
   ],
+  "ekvatorialguinea": [
+   {
+    "from": "2021-11-08",
+    "status": "",
+    "paragraphs": []
+   }
+  ],
   "elfernbenskysten": [
    {
     "from": "2019-04-26",
@@ -357,6 +532,27 @@
     ]
    }
   ],
+  "elsalvador": [
+   {
+    "from": "2021-10-01",
+    "status": "",
+    "paragraphs": []
+   }
+  ],
+  "emiratene": [
+   {
+    "from": "2022-01-28",
+    "status": "",
+    "paragraphs": []
+   },
+   {
+    "from": "2026-03-02",
+    "status": "SIST OPPDATERT: 28.02.2026 - FORTSATT GYLDIG",
+    "paragraphs": [
+     "Utenriksdepartementet fraråder alle reiser til De forente arabiske emirater."
+    ]
+   }
+  ],
   "eritrea": [
    {
     "from": "2021-10-01",
@@ -369,6 +565,13 @@
     "paragraphs": [
      "Utenriksdepartementet fraråder reiser til Eritrea, innenfor 20 km fra grensene mot Etiopia, Sudan og Djibouti, som ikke er strengt nødvendige."
     ]
+   }
+  ],
+  "estland": [
+   {
+    "from": "2021-10-01",
+    "status": "",
+    "paragraphs": []
    }
   ],
   "etiopia": [
@@ -498,6 +701,20 @@
     ]
    }
   ],
+  "ewatini": [
+   {
+    "from": "2022-06-29",
+    "status": "",
+    "paragraphs": []
+   }
+  ],
+  "fiji": [
+   {
+    "from": "2021-12-01",
+    "status": "",
+    "paragraphs": []
+   }
+  ],
   "filippinene": [
    {
     "from": "2018-08-25",
@@ -523,6 +740,34 @@
      "Utenriksdepartementet fraråder reiser eller opphold som ikke er strengt nødvendige til øvrige deler av Mindanao.",
      "Øya Siargao er ikke omfattet av reiseadvarslet."
     ]
+   }
+  ],
+  "finland": [
+   {
+    "from": "2021-11-14",
+    "status": "",
+    "paragraphs": []
+   }
+  ],
+  "frankrike": [
+   {
+    "from": "2021-11-29",
+    "status": "",
+    "paragraphs": []
+   }
+  ],
+  "gabon": [
+   {
+    "from": "2021-11-07",
+    "status": "",
+    "paragraphs": []
+   }
+  ],
+  "gambia": [
+   {
+    "from": "2021-11-07",
+    "status": "",
+    "paragraphs": []
    }
   ],
   "georgia": [
@@ -556,6 +801,48 @@
     ]
    }
   ],
+  "grenada": [
+   {
+    "from": "2021-12-01",
+    "status": "",
+    "paragraphs": []
+   }
+  ],
+  "guatemala": [
+   {
+    "from": "2021-10-01",
+    "status": "",
+    "paragraphs": []
+   }
+  ],
+  "guinea": [
+   {
+    "from": "2021-10-01",
+    "status": "",
+    "paragraphs": []
+   }
+  ],
+  "guineabissau": [
+   {
+    "from": "2019-04-26",
+    "status": "REISERÅDET ER SIST OPPDATERT: 14.04.2015 - FORTSATT GYLDIG",
+    "paragraphs": [
+     "Utenriksdepartementet oppfordrer reisende til å utvise aktsomhet ved reiser til eller opphold i Guinea-Bissau."
+    ]
+   },
+   {
+    "from": "2021-11-14",
+    "status": "",
+    "paragraphs": []
+   }
+  ],
+  "guyana": [
+   {
+    "from": "2021-12-01",
+    "status": "",
+    "paragraphs": []
+   }
+  ],
   "haiti": [
    {
     "from": "2019-04-26",
@@ -570,6 +857,20 @@
     "paragraphs": [
      "Utenriksdepartementet fraråder alle reiser til eller opphold i Haiti"
     ]
+   }
+  ],
+  "hellas": [
+   {
+    "from": "2021-10-11",
+    "status": "",
+    "paragraphs": []
+   }
+  ],
+  "honduras": [
+   {
+    "from": "2021-11-26",
+    "status": "",
+    "paragraphs": []
    }
   ],
   "india": [
@@ -600,6 +901,13 @@
     "paragraphs": [
      "Utenriksdepartementet advarer mot alle reiser til Jammu og Kashmir samt alle områder innenfor ti kilometer fra grensen mot Pakistan."
     ]
+   }
+  ],
+  "indonesia": [
+   {
+    "from": "2021-10-01",
+    "status": "",
+    "paragraphs": []
    }
   ],
   "irak": [
@@ -705,6 +1013,20 @@
     ]
    }
   ],
+  "irland": [
+   {
+    "from": "2021-11-28",
+    "status": "",
+    "paragraphs": []
+   }
+  ],
+  "island": [
+   {
+    "from": "2021-10-01",
+    "status": "",
+    "paragraphs": []
+   }
+  ],
   "israel": [
    {
     "from": "2019-04-26",
@@ -763,6 +1085,27 @@
     ]
    }
   ],
+  "italia": [
+   {
+    "from": "2021-10-01",
+    "status": "",
+    "paragraphs": []
+   }
+  ],
+  "jamaica": [
+   {
+    "from": "2021-12-06",
+    "status": "",
+    "paragraphs": []
+   }
+  ],
+  "japan": [
+   {
+    "from": "2021-11-12",
+    "status": "",
+    "paragraphs": []
+   }
+  ],
   "jemen": [
    {
     "from": "2019-04-26",
@@ -770,6 +1113,34 @@
     "paragraphs": [
      "Utenriksdepartementet fraråder alle reiser til eller opphold i Jemen. Nordmenn som befinner seg i Jemen oppfordres til å forlate landet."
     ]
+   }
+  ],
+  "jordan": [
+   {
+    "from": "2019-03-26",
+    "status": "REISERÅDET ER SIST OPPDATERT: 06.04.2016 - FORTSATT GYLDIG",
+    "paragraphs": [
+     "Utenriksdepartementet fraråder reise eller opphold som ikke er strengt nødvendig til grenseområdene nærmere enn tre km mot Syria og Irak."
+    ]
+   },
+   {
+    "from": "2023-04-18",
+    "status": "SIST OPPDATERT: 06.04.2016 - FORTSATT GYLDIG",
+    "paragraphs": [
+     "Utenriksdepartementet fraråder reise eller opphold som ikke er strengt nødvendig til grenseområdene nærmere enn tre kilometer mot Syria og Irak."
+    ]
+   },
+   {
+    "from": "2026-04-11",
+    "status": "SIST OPPDATERT: 28.02.2026 - FORTSATT GYLDIG",
+    "paragraphs": [
+     "Utenriksdepartementet fraråder alle reiser til Jordan."
+    ]
+   },
+   {
+    "from": "2026-06-10",
+    "status": "",
+    "paragraphs": []
    }
   ],
   "kambodsja": [
@@ -810,6 +1181,20 @@
     ]
    }
   ],
+  "kappverde": [
+   {
+    "from": "2021-10-01",
+    "status": "",
+    "paragraphs": []
+   }
+  ],
+  "kasakhstan": [
+   {
+    "from": "2022-02-16",
+    "status": "",
+    "paragraphs": []
+   }
+  ],
   "kenya": [
    {
     "from": "2019-04-26",
@@ -835,6 +1220,48 @@
     ]
    }
   ],
+  "kina": [
+   {
+    "from": "2021-10-21",
+    "status": "",
+    "paragraphs": []
+   }
+  ],
+  "kirgisistan": [
+   {
+    "from": "2022-01-23",
+    "status": "",
+    "paragraphs": []
+   }
+  ],
+  "kiribati": [
+   {
+    "from": "2021-10-01",
+    "status": "",
+    "paragraphs": []
+   }
+  ],
+  "komorene": [
+   {
+    "from": "2021-12-01",
+    "status": "",
+    "paragraphs": []
+   }
+  ],
+  "kosovo": [
+   {
+    "from": "2021-10-27",
+    "status": "",
+    "paragraphs": []
+   }
+  ],
+  "kroatia": [
+   {
+    "from": "2021-10-09",
+    "status": "",
+    "paragraphs": []
+   }
+  ],
   "kuwait": [
    {
     "from": "2021-11-29",
@@ -854,6 +1281,34 @@
     "paragraphs": [
      "Utenriksdepartementet fraråder reiser som ikke er strengt nødvendige til Kuwait."
     ]
+   }
+  ],
+  "kypros": [
+   {
+    "from": "2021-10-01",
+    "status": "",
+    "paragraphs": []
+   }
+  ],
+  "laos": [
+   {
+    "from": "2021-10-01",
+    "status": "",
+    "paragraphs": []
+   }
+  ],
+  "latvia": [
+   {
+    "from": "2021-10-24",
+    "status": "",
+    "paragraphs": []
+   }
+  ],
+  "lesotho": [
+   {
+    "from": "2022-02-17",
+    "status": "",
+    "paragraphs": []
    }
   ],
   "libanon": [
@@ -905,6 +1360,13 @@
     ]
    }
   ],
+  "liberia": [
+   {
+    "from": "2021-11-14",
+    "status": "",
+    "paragraphs": []
+   }
+  ],
   "libya": [
    {
     "from": "2019-04-26",
@@ -912,6 +1374,41 @@
     "paragraphs": [
      "Utenriksdepartementet fraråder alle reiser til eller opphold i Libya, og norske borgere oppfordres til å forlate landet."
     ]
+   }
+  ],
+  "liechtenstein": [
+   {
+    "from": "2021-10-01",
+    "status": "",
+    "paragraphs": []
+   }
+  ],
+  "litauen": [
+   {
+    "from": "2021-10-12",
+    "status": "",
+    "paragraphs": []
+   }
+  ],
+  "luxembourg": [
+   {
+    "from": "2021-10-01",
+    "status": "",
+    "paragraphs": []
+   }
+  ],
+  "madagaskar": [
+   {
+    "from": "2021-10-01",
+    "status": "",
+    "paragraphs": []
+   }
+  ],
+  "malawi": [
+   {
+    "from": "2021-10-24",
+    "status": "",
+    "paragraphs": []
    }
   ],
   "malaysia": [
@@ -937,6 +1434,13 @@
     ]
    }
   ],
+  "maldivene": [
+   {
+    "from": "2021-11-21",
+    "status": "",
+    "paragraphs": []
+   }
+  ],
   "mali": [
    {
     "from": "2019-04-26",
@@ -958,6 +1462,27 @@
     "paragraphs": [
      "Utenriksdepartementet fraråder alle reiser til Mali og oppfordrer norske borgere til å forlate landet."
     ]
+   }
+  ],
+  "malta": [
+   {
+    "from": "2022-01-29",
+    "status": "",
+    "paragraphs": []
+   }
+  ],
+  "marokko": [
+   {
+    "from": "2021-11-18",
+    "status": "",
+    "paragraphs": []
+   }
+  ],
+  "marshallislands": [
+   {
+    "from": "2021-10-01",
+    "status": "",
+    "paragraphs": []
    }
   ],
   "mauritania": [
@@ -983,6 +1508,27 @@
     ]
    }
   ],
+  "mauritius": [
+   {
+    "from": "2021-10-01",
+    "status": "",
+    "paragraphs": []
+   }
+  ],
+  "mexico": [
+   {
+    "from": "2021-10-19",
+    "status": "",
+    "paragraphs": []
+   }
+  ],
+  "mikronesia": [
+   {
+    "from": "2021-10-01",
+    "status": "",
+    "paragraphs": []
+   }
+  ],
   "moldova": [
    {
     "from": "2021-11-29",
@@ -1002,6 +1548,27 @@
     "paragraphs": [
      "Utenriksdepartementet fraråder alle reiser til regionen Transnistria som ikke er strengt nødvendige."
     ]
+   }
+  ],
+  "monaco": [
+   {
+    "from": "2021-10-01",
+    "status": "",
+    "paragraphs": []
+   }
+  ],
+  "mongolia": [
+   {
+    "from": "2022-01-19",
+    "status": "",
+    "paragraphs": []
+   }
+  ],
+  "montenegro": [
+   {
+    "from": "2021-10-24",
+    "status": "",
+    "paragraphs": []
    }
   ],
   "mosambik": [
@@ -1091,6 +1658,55 @@
     "paragraphs": [
      "Utenriksdepartementet fraråder alle reiser til Myanmar."
     ]
+   }
+  ],
+  "namibia": [
+   {
+    "from": "2022-02-03",
+    "status": "",
+    "paragraphs": []
+   }
+  ],
+  "naoero": [
+   {
+    "from": "2026-08-09",
+    "status": "",
+    "paragraphs": []
+   }
+  ],
+  "nederland": [
+   {
+    "from": "2022-01-27",
+    "status": "",
+    "paragraphs": []
+   }
+  ],
+  "nepal": [
+   {
+    "from": "2021-05-19",
+    "status": "REISERÅDET ER SIST OPPDATERT: 28. APRIL 2021 - FORTSATT GYLDIG",
+    "paragraphs": [
+     "Utenriksdepartementet fraråder alle reiser til Nepal."
+    ]
+   },
+   {
+    "from": "2021-10-01",
+    "status": "",
+    "paragraphs": []
+   }
+  ],
+  "newzealand": [
+   {
+    "from": "2021-10-01",
+    "status": "",
+    "paragraphs": []
+   }
+  ],
+  "nicaragua": [
+   {
+    "from": "2022-01-02",
+    "status": "",
+    "paragraphs": []
    }
   ],
   "niger": [
@@ -1206,6 +1822,34 @@
     ]
    }
   ],
+  "nordmakedonia": [
+   {
+    "from": "2021-12-02",
+    "status": "",
+    "paragraphs": []
+   }
+  ],
+  "oman": [
+   {
+    "from": "2021-11-29",
+    "status": "",
+    "paragraphs": []
+   }
+  ],
+  "osterrike": [
+   {
+    "from": "2021-11-28",
+    "status": "",
+    "paragraphs": []
+   }
+  ],
+  "osttimor": [
+   {
+    "from": "2021-11-23",
+    "status": "",
+    "paragraphs": []
+   }
+  ],
   "pakistan": [
    {
     "from": "2019-04-26",
@@ -1265,6 +1909,13 @@
     "paragraphs": [
      "Utenriksdepartementet fraråder alle reiser til områder innenfor ti kilometer fra Kashmir-kontroll- og grenselinjer, inkludert i Gilgit Baltistan og Punjab. Videre fraråder Utenriksdepartementet alle reiser til Azad Kashmir, Balutsjistan og Khyber Pakhtunkhwa."
     ]
+   }
+  ],
+  "palau": [
+   {
+    "from": "2021-12-07",
+    "status": "",
+    "paragraphs": []
    }
   ],
   "palestina": [
@@ -1334,6 +1985,62 @@
     ]
    }
   ],
+  "panama": [
+   {
+    "from": "2021-10-28",
+    "status": "",
+    "paragraphs": []
+   }
+  ],
+  "papuanyguinea": [
+   {
+    "from": "2021-11-29",
+    "status": "",
+    "paragraphs": []
+   }
+  ],
+  "paraguay": [
+   {
+    "from": "2021-10-25",
+    "status": "",
+    "paragraphs": []
+   }
+  ],
+  "peru": [
+   {
+    "from": "2022-01-27",
+    "status": "",
+    "paragraphs": []
+   }
+  ],
+  "polen": [
+   {
+    "from": "2021-10-21",
+    "status": "",
+    "paragraphs": []
+   }
+  ],
+  "portugal": [
+   {
+    "from": "2021-10-01",
+    "status": "",
+    "paragraphs": []
+   }
+  ],
+  "qatar": [
+   {
+    "from": "2021-10-09",
+    "status": "",
+    "paragraphs": []
+   },
+   {
+    "from": "2026-05-11",
+    "status": "SIST OPPDATERT: 24.04.2026 - FORTSATT GYLDIG",
+    "paragraphs": [
+     "Utenriksdepartementet fraråder reiser som ikke er strengt nødvendige til Qatar."
+    ]
+   }
+  ],
   "repkongo": [
    {
     "from": "2019-04-26",
@@ -1355,6 +2062,13 @@
     "paragraphs": [
      "Utenriksdepartementet fraråder alle reiser eller opphold som ikke er strengt nødvendige til Pool-regionen, de østlige deler av Bouenza-regionen, samt områder som ligger mindre enn 50 km fra grensen til Den sentralafrikanske republikk."
     ]
+   }
+  ],
+  "romania": [
+   {
+    "from": "2022-01-11",
+    "status": "",
+    "paragraphs": []
    }
   ],
   "russland": [
@@ -1400,6 +2114,55 @@
     "paragraphs": [
      "Utenriksdepartementet fraråder reiser til Rubavu-distriktet i Rwanda som ikke er strengt nødvendige."
     ]
+   }
+  ],
+  "saintkitts": [
+   {
+    "from": "2021-12-08",
+    "status": "",
+    "paragraphs": []
+   }
+  ],
+  "saintlucia": [
+   {
+    "from": "2021-10-01",
+    "status": "",
+    "paragraphs": []
+   }
+  ],
+  "saintvincent": [
+   {
+    "from": "2021-10-01",
+    "status": "",
+    "paragraphs": []
+   }
+  ],
+  "salomonoyene": [
+   {
+    "from": "2022-01-27",
+    "status": "",
+    "paragraphs": []
+   }
+  ],
+  "samoa": [
+   {
+    "from": "2021-11-29",
+    "status": "",
+    "paragraphs": []
+   }
+  ],
+  "sanmarino": [
+   {
+    "from": "2021-11-29",
+    "status": "",
+    "paragraphs": []
+   }
+  ],
+  "saotome": [
+   {
+    "from": "2021-10-01",
+    "status": "",
+    "paragraphs": []
    }
   ],
   "sar": [
@@ -1450,6 +2213,55 @@
     ]
    }
   ],
+  "senegal": [
+   {
+    "from": "2021-11-13",
+    "status": "",
+    "paragraphs": []
+   }
+  ],
+  "serbia": [
+   {
+    "from": "2021-10-22",
+    "status": "",
+    "paragraphs": []
+   }
+  ],
+  "seychellene": [
+   {
+    "from": "2021-10-01",
+    "status": "",
+    "paragraphs": []
+   }
+  ],
+  "sierraleone": [
+   {
+    "from": "2021-11-13",
+    "status": "",
+    "paragraphs": []
+   }
+  ],
+  "singapore": [
+   {
+    "from": "2021-11-21",
+    "status": "",
+    "paragraphs": []
+   }
+  ],
+  "slovakia": [
+   {
+    "from": "2021-10-21",
+    "status": "",
+    "paragraphs": []
+   }
+  ],
+  "slovenia": [
+   {
+    "from": "2022-01-17",
+    "status": "",
+    "paragraphs": []
+   }
+  ],
   "somalia": [
    {
     "from": "2019-04-26",
@@ -1474,6 +2286,20 @@
     ]
    }
   ],
+  "sorafrika": [
+   {
+    "from": "2022-02-17",
+    "status": "",
+    "paragraphs": []
+   }
+  ],
+  "sorkorea": [
+   {
+    "from": "2021-10-01",
+    "status": "",
+    "paragraphs": []
+   }
+  ],
   "sorsudan": [
    {
     "from": "2019-01-04",
@@ -1495,6 +2321,32 @@
     "paragraphs": [
      "Utenriksdepartementet fraråder alle reiser til Sør-Sudan og oppfordrer norske borgere til å forlate landet."
     ]
+   }
+  ],
+  "spania": [
+   {
+    "from": "2021-10-01",
+    "status": "",
+    "paragraphs": []
+   }
+  ],
+  "srilanka": [
+   {
+    "from": "2021-10-01",
+    "status": "",
+    "paragraphs": []
+   },
+   {
+    "from": "2022-05-11",
+    "status": "REISERÅDET ER SIST OPPDATERT: 11.05.2022 - FORTSATT GYLDIG",
+    "paragraphs": [
+     "Utenriksdepartementet fraråder alle reiser til Sri Lanka som ikke er strengt nødvendige"
+    ]
+   },
+   {
+    "from": "2022-08-25",
+    "status": "",
+    "paragraphs": []
    }
   ],
   "sudan": [
@@ -1536,6 +2388,27 @@
     ]
    }
   ],
+  "surinam": [
+   {
+    "from": "2021-12-07",
+    "status": "",
+    "paragraphs": []
+   }
+  ],
+  "sveits": [
+   {
+    "from": "2022-01-20",
+    "status": "",
+    "paragraphs": []
+   }
+  ],
+  "sverige": [
+   {
+    "from": "2021-10-01",
+    "status": "",
+    "paragraphs": []
+   }
+  ],
   "syria": [
    {
     "from": "2018-04-22",
@@ -1543,6 +2416,13 @@
     "paragraphs": [
      "Utenriksdepartementet fraråder alle reiser til eller opphold i Syria. Nordmenn som befinner seg i Syria oppfordres til å forlate landet."
     ]
+   }
+  ],
+  "tadsjikistan": [
+   {
+    "from": "2021-10-01",
+    "status": "",
+    "paragraphs": []
    }
   ],
   "tanzania": [
@@ -1632,6 +2512,20 @@
     ]
    }
   ],
+  "tonga": [
+   {
+    "from": "2021-10-01",
+    "status": "",
+    "paragraphs": []
+   }
+  ],
+  "triogto": [
+   {
+    "from": "2021-11-27",
+    "status": "",
+    "paragraphs": []
+   }
+  ],
   "tsjad": [
    {
     "from": "2019-04-26",
@@ -1653,6 +2547,13 @@
     "paragraphs": [
      "Utenriksdepartementet fraråder alle reiser som ikke er strengt nødvendige til N’Djamena. Utenriksdepartementet fraråder alle reiser til Tsjad utenfor N’Djamena."
     ]
+   }
+  ],
+  "tsjekkia": [
+   {
+    "from": "2021-10-01",
+    "status": "",
+    "paragraphs": []
    }
   ],
   "tunisia": [
@@ -1696,6 +2597,20 @@
     ]
    }
   ],
+  "turkmenistan": [
+   {
+    "from": "2022-01-17",
+    "status": "",
+    "paragraphs": []
+   }
+  ],
+  "tuvalu": [
+   {
+    "from": "2021-10-01",
+    "status": "",
+    "paragraphs": []
+   }
+  ],
   "tyrkia": [
    {
     "from": "2018-09-25",
@@ -1710,6 +2625,113 @@
     "paragraphs": [
      "Utenriksdepartementet fraråder alle reiser til eller opphold i grenseområdene nærmere enn ti km fra grensen til Syria."
     ]
+   }
+  ],
+  "tyskland": [
+   {
+    "from": "2021-10-19",
+    "status": "",
+    "paragraphs": []
+   }
+  ],
+  "uganda": [
+   {
+    "from": "2019-04-26",
+    "status": "REISERÅDET ER SIST OPPDATERT: 31.03.2015 - FORTSATT GYLDIG",
+    "paragraphs": [
+     "Utenriksdepartementet oppfordrer reisende til å utvise aktsomhet ved reiser til eller opphold i grenseområdene mot DR Kongo."
+    ]
+   },
+   {
+    "from": "2021-12-28",
+    "status": "",
+    "paragraphs": []
+   }
+  ],
+  "uk": [
+   {
+    "from": "2018-09-04",
+    "status": "REISERÅDET ER SIST OPPDATERT: 14.11.2014 - FORTSATT GYLDIG",
+    "paragraphs": [
+     "Utenriksdepartementet fraråder alle reiser til eller opphold i fylkene Donetsk og Luhansk samt på Krim-halvøya."
+    ]
+   },
+   {
+    "from": "2020-11-13",
+    "status": "REISERÅDET ER SIST OPPDATERT: 14.11.2014 - FORTSATT GYLDIG",
+    "paragraphs": [
+     "Utenriksdepartementet fraråder alle reiser til og opphold i fylkene Donetsk og Luhansk samt på Krym-halvøya."
+    ]
+   },
+   {
+    "from": "2021-11-28",
+    "status": "",
+    "paragraphs": []
+   },
+   {
+    "from": "2022-01-24",
+    "status": "REISERÅDET ER SIST OPPDATERT: 14.11.2014 - FORTSATT GYLDIG",
+    "paragraphs": [
+     "Utenriksdepartementet fraråder alle reiser til og opphold i fylkene Donetsk og Luhansk samt på Krym-halvøya."
+    ]
+   },
+   {
+    "from": "2022-01-27",
+    "status": "REISERÅDET ER SIST OPPDATERT: 24.01.2022 - FORTSATT GYLDIG",
+    "paragraphs": [
+     "Utenriksdepartementet fraråder alle reiser som ikke er strengt nødvendige til Ukraina.",
+     "Utenriksdepartementet fraråder alle reiser til og opphold i fylkene Donetsk og Luhansk samt på Krym-halvøya."
+    ]
+   },
+   {
+    "from": "2022-02-11",
+    "status": "REISERÅDET ER SIST OPPDATERT: 11. FEBRUAR 2022 - FORTSATT GYLDIG",
+    "paragraphs": [
+     "Utenriksdepartementet fraråder alle reiser til Ukraina og oppfordrer norske borgere til å forlate landet."
+    ]
+   },
+   {
+    "from": "2022-02-16",
+    "status": "",
+    "paragraphs": []
+   },
+   {
+    "from": "2022-04-02",
+    "status": "REISERÅDET ER SIST OPPDATERT: 11. FEBRUAR 2022 - FORTSATT GYLDIG",
+    "paragraphs": [
+     "Utenriksdepartementet fraråder alle reiser til Ukraina og oppfordrer norske borgere til å forlate landet."
+    ]
+   },
+   {
+    "from": "2022-06-29",
+    "status": "",
+    "paragraphs": []
+   },
+   {
+    "from": "2022-09-22",
+    "status": "REISERÅDET ER SIST OPPDATERT: 11. FEBRUAR 2022 - FORTSATT GYLDIG",
+    "paragraphs": [
+     "Utenriksdepartementet fraråder alle reiser til Ukraina og oppfordrer norske borgere til å forlate landet."
+    ]
+   },
+   {
+    "from": "2024-01-16",
+    "status": "",
+    "paragraphs": []
+   },
+   {
+    "from": "2026-01-21",
+    "status": "OPPDATERT: 21. JANUAR 2026 - FORTSATT GYLDIG",
+    "paragraphs": [
+     "Utenriksdepartementet fraråder reiser som ikke er strengt nødvendige til regionene Volyn, Rivne, Lviv, Ternopil, Zakarpattja, Ivano-Frankivsk og Tsjernivtsi.",
+     "Utenriksdepartementet fraråder alle reiser til regionene Khmelnytskyj, Zjytomyr, Kirovohrad, Tsjerkasy, Vinnytsia og Kyiv, samt Kyiv by.",
+     "Utenriksdepartementet fraråder alle reiser til de resterende regionene i Ukraina og oppfordrer norske borgere til å forlate disse områdene."
+    ]
+   },
+   {
+    "from": "2026-06-14",
+    "status": "",
+    "paragraphs": []
    }
   ],
   "ukraina": [
@@ -1750,6 +2772,92 @@
      "Utenriksdepartementet fraråder alle reiser til regionene Khmelnytskyj, Zjytomyr, Kirovohrad, Tsjerkasy, Vinnytsia og Kyiv, samt Kyiv by.",
      "Utenriksdepartementet fraråder alle reiser til de resterende regionene i Ukraina og oppfordrer norske borgere til å forlate disse områdene."
     ]
+   }
+  ],
+  "ungarn": [
+   {
+    "from": "2022-01-21",
+    "status": "",
+    "paragraphs": []
+   }
+  ],
+  "uruguay": [
+   {
+    "from": "2021-12-08",
+    "status": "",
+    "paragraphs": []
+   }
+  ],
+  "usa": [
+   {
+    "from": "2021-10-01",
+    "status": "",
+    "paragraphs": []
+   }
+  ],
+  "usbekistan": [
+   {
+    "from": "2021-10-01",
+    "status": "",
+    "paragraphs": []
+   }
+  ],
+  "vanuatu": [
+   {
+    "from": "2021-10-16",
+    "status": "",
+    "paragraphs": []
+   }
+  ],
+  "venezuela": [
+   {
+    "from": "2018-09-21",
+    "status": "REISERÅDET ER SIST OPPDATERT: 01.06.2017 - FORTSATT GYLDIG",
+    "paragraphs": [
+     "Utenriksdepartementet fraråder alle ikke-nødvendige reiser til og opphold i Venezuela."
+    ]
+   },
+   {
+    "from": "2023-12-09",
+    "status": "REISERÅDET ER SIST OPPDATERT: 26.06.23 - FORTSATT GYLDIG",
+    "paragraphs": [
+     "Utenriksdepartementet fraråder alle reiser som ikke er strengt nødvendige til grenseområdene til Colombia og Brasil, Arco Minero-regionen, nordlige og østlige deler av delstaten Sucre (inkl. Paria-halvøya) og Paraguaná-halvøya i delstaten Falcón."
+    ]
+   },
+   {
+    "from": "2024-10-14",
+    "status": "SIST OPPDATERT: 31.07.24 - FORTSATT GYLDIG",
+    "paragraphs": [
+     "Utenriksdepartementet fraråder alle reiser til Venezuela som ikke er strengt nødvendige."
+    ]
+   },
+   {
+    "from": "2025-12-02",
+    "status": "SIST OPPDATERT: 02.12.2025 - FORTSATT GYLDIG",
+    "paragraphs": [
+     "Utenriksdepartementet fraråder alle reiser til Venezuela."
+    ]
+   }
+  ],
+  "vietnam": [
+   {
+    "from": "2021-10-01",
+    "status": "",
+    "paragraphs": []
+   }
+  ],
+  "zambia": [
+   {
+    "from": "2021-11-24",
+    "status": "",
+    "paragraphs": []
+   }
+  ],
+  "zimbabwe": [
+   {
+    "from": "2021-10-01",
+    "status": "",
+    "paragraphs": []
    }
   ]
  }
