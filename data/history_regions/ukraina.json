@@ -1,0 +1,33 @@
+{
+ "_om": "Soner for eldre tekster på UDs side for Ukraina. Nøkkel = tekst-hash (python scraper/build.py --missing-history-zones ukraina). Format som data/regions.json; se README.",
+ "cecc25fdb4cc": {
+  "text": "Utenriksdepartementet fraråder reise til eller opphold i Ukraina som ikke er strengt nødvendig, samt alle reiser til eller opphold på Krim-halvøya.",
+  "zones": [
+   {"level": "necessary", "country": true, "label": "Resten av landet"},
+   {"level": "all", "adm": "UKR/ADM1", "names": ["Autonomous Republic of Crimea", "Sevastopol"], "outside": true, "label": "Krim-halvøya"}
+  ]
+ },
+ "5044d4a3580f": {
+  "text": "Utenriksdepartementet anmoder reisende om å utvise aktsomhet ved reiser til eller opphold i Ukraina. Videre frarådes alle reiser til eller opphold i fylkene Donetsk og Luhansk samt på Krim-halvøya.",
+  "zones": [
+   {"level": "all", "adm": "UKR/ADM1", "names": ["Donetsk Oblast", "Luhansk Oblast"], "label": "Donetsk og Luhansk"},
+   {"level": "all", "adm": "UKR/ADM1", "names": ["Autonomous Republic of Crimea", "Sevastopol"], "outside": true, "label": "Krim-halvøya"}
+  ]
+ },
+ "c3f906814cf4": {
+  "text": "Utenriksdepartementet fraråder alle reiser til eller opphold i fylkene Donetsk og Luhansk samt på Krim-halvøya.",
+  "same": "5044d4a3580f"
+ },
+ "e53c2007259d": {
+  "text": "Utenriksdepartementet fraråder alle reiser til og opphold i fylkene Donetsk og Luhansk samt på Krym-halvøya.",
+  "same": "5044d4a3580f"
+ },
+ "252438741768": {
+  "text": "Utenriksdepartementet fraråder alle reiser som ikke er strengt nødvendige til Ukraina. Utenriksdepartementet fraråder alle reiser til og opphold i fylkene Donetsk og Luhansk samt på Krym-halvøya.",
+  "zones": [
+   {"level": "necessary", "country": true, "label": "Resten av landet"},
+   {"level": "all", "adm": "UKR/ADM1", "names": ["Donetsk Oblast", "Luhansk Oblast"], "label": "Donetsk og Luhansk"},
+   {"level": "all", "adm": "UKR/ADM1", "names": ["Autonomous Republic of Crimea", "Sevastopol"], "outside": true, "label": "Krym-halvøya"}
+  ]
+ }
+}

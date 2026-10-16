@@ -5,11 +5,16 @@ Skriver:
   site/data/world.json   alle land (Natural Earth 1:50m), forenklet, med iso3
   site/data/zones.json   GeoJSON med én flate per (land, nivå, sone)
   site/data/info.json    tekst, lenker og status per land
+  site/data/timeline.json        tidslinjen: nivå og tekst per land over tid
+  site/data/timeline_zones.json  tegnede soner for historiske tekster (data/history_regions/)
 
   python scraper/build.py               bygg
   python scraper/build.py --stamp SLUG  marker kartleggingen av SLUG som oppdatert
   python scraper/build.py --stamp-all
+  python scraper/build.py --missing-history-zones [UD-NØKKEL ...]
+                                        historiske regionale tekster uten tegnede soner
 """
+import hashlib
 import json
 import math
 import os
@@ -162,6 +167,44 @@ def zone_geom(z, country, ne, proj, iso=None):
     return g
 
 
+def paint(spec_zones, country, ne, proj, iso):
+    """[(geom, sone)] i rekkefølge; senere soner skjærer bort det de dekker fra tidligere.
+    outside=True: ikke klipp til Natural Earths landegrense (Krym ligger i RUS der)."""
+    painted = []
+    for z in spec_zones:
+        g = zone_geom(z, country, ne, proj, iso)
+        if not z.get("outside"):
+            g = g.intersection(country)
+        painted = [(pg.difference(g), pz) for pg, pz in painted]
+        painted.append((g, z))
+    return [(g, z) for g, z in painted if not g.is_empty and z["level"] != "none"]
+
+
+def text_hash(paragraphs):
+    """Samme hash som scrape.py lagrer for gjeldende tekst."""
+    return hashlib.sha1(" ".join(paragraphs).encode()).hexdigest()[:12]
+
+
+HISTORY_REGIONS = DATA / "history_regions"
+
+
+def load_history_regions():
+    """{UD-nøkkel: {hash: [soner]}} fra data/history_regions/<nøkkel>.json.
+    {"same": "<hash>"} gjenbruker sonene til en annen tekst for samme land."""
+    out = {}
+    for path in sorted(HISTORY_REGIONS.glob("*.json")):
+        raw = {k: v for k, v in json.loads(path.read_text()).items() if not k.startswith("_")}
+        out[path.stem] = {h: raw[v["same"]]["zones"] if "same" in v else v["zones"] for h, v in raw.items()}
+    return out
+
+
+def zones_level(zones):
+    """(nivå, delvis) for en tegnet tekst: strengeste nivå, og om den bare gjelder deler av landet."""
+    levels = {z["level"] for z in zones if z["level"] != "none"}
+    whole = len(zones) == 1 and zones[0].get("country")
+    return ("all" if "all" in levels else "necessary" if levels else None), not whole
+
+
 def slugify_no(v):
     """Samme som LegeOnlines slugifyNo (app/src/utils/vaccineSlugs.js)."""
     import unicodedata
@@ -190,29 +233,32 @@ def history_level(paragraphs):
     return level, bool(REGIONAL_HINTS.search(txt))
 
 
-def timeline(hist, info, lands):
-    """Per land (ISO): [[fra, nivå|None|"?", delvis, tekstindeks]] eldst først, og tekstene.
-    "?" = ukjent (ingen arkivdata). Land uten advarsel på landsider.no i perioden
+def timeline(hist, info, lands, hregions=None):
+    """Per land (ISO): [[fra, nivå|None|"?", delvis, tekstindeks, hash]] eldst først, og tekstene.
+    "?" = ukjent (ingen arkivdata). hash = tekst-hash, "" uten tekst; har teksten
+    tegnede soner i data/history_regions/, ligger de i timeline_zones.json under "ISO:hash". Land uten advarsel på landsider.no i perioden
     oversiktene dekker, regnes som uten advarsel der."""
     texts, index, out = [], {}, {}
     list_first, list_last = lands.get("list_first"), lands.get("list_last")
     for iso, rec in info.items():
         entries = hist.get(rec["key"], [])
         rows = []
+        drawn = (hregions or {}).get(rec["key"], {})
         if list_first and rec["key"] not in lands.get("countries", {}):
-            rows += [[list_first, None, 0, -1], [list_last, "?", 0, -1]]
+            rows += [[list_first, None, 0, -1, ""], [list_last, "?", 0, -1, ""]]
         for h in entries:
             if rows and h["from"] < rows[-1][0]:
                 continue
             if h.get("gap"):
-                rows.append([h["from"], "?", 0, -1])
+                rows.append([h["from"], "?", 0, -1, ""])
                 continue
-            level, partial = history_level(h["paragraphs"])
+            hsh = text_hash(h["paragraphs"]) if h["paragraphs"] else ""
+            level, partial = zones_level(drawn[hsh]) if hsh in drawn else history_level(h["paragraphs"])
             t = " ".join(h["paragraphs"])
             if t and t not in index:
                 index[t] = len(texts)
                 texts.append(t)
-            rows.append([h["from"], level, int(partial), index.get(t, -1)])
+            rows.append([h["from"], level, int(partial), index.get(t, -1), hsh])
         # Fyll hull mellom kildene: fra slutten av landsider til første senere kilde er ukjent.
         if rows:
             out[iso] = rows
@@ -277,16 +323,8 @@ def build():
 
         if reviewed.get(slug) != c.get("hash"):
             rec["stale"] = True
-        proj = Proj(country)
-        painted = []  # [(geom, zone)]
-        for z in spec["zones"]:
-            g = zone_geom(z, country, ne, proj, iso).intersection(country)
-            painted = [(pg.difference(g), pz) for pg, pz in painted]
-            painted.append((g, z))
         levels = set()
-        for g, z in painted:
-            if g.is_empty or z["level"] == "none":
-                continue
+        for g, z in paint(spec["zones"], country, ne, Proj(country), iso):
             levels.add(z["level"])
             props = {"iso": iso, "level": z["level"], "label": z.get("label", "")}
             for k in ("partial", "approx"):
@@ -346,7 +384,9 @@ def build():
     dump("info.json", {"fetched": adv["fetched"], "source": adv["source"],
                        "publisher": site["publisher"], "countries": info})
     lands = json.loads((DATA / "history_landsider.json").read_text()) if (DATA / "history_landsider.json").exists() else {}
-    dump("timeline.json", timeline(hist, info, lands))
+    hregions = load_history_regions()
+    dump("timeline.json", timeline(hist, info, lands, hregions))
+    dump("timeline_zones.json", history_zones(hist, info, ne, hregions))
     n_pages = pages.write_all(OUT.parent, info, ne, zones_by_iso, adv["fetched"], site, hist, news)
 
     n = sum(1 for r in info.values() if r["level"])
@@ -356,6 +396,74 @@ def build():
     print(f"{n} land med advarsel, {len(zones)} soner. Endret siden kartlegging: {stale or '-'}. "
           f"Ikke kartlagt: {unmapped or '-'}")
     return stale, unmapped
+
+
+HIST_TOL = 0.01
+
+
+def history_zones(hist, info, ne, hregions):
+    """{"ISO:hash": [features] | "ISO:annen-hash"} for historiske tekster med tegnede soner.
+    Lastes først når noen drar i tidslinjen. Like soner lagres én gang (streng = samme som),
+    og flatene forenkles til ~1 km og tre desimaler for å holde filen liten."""
+    iso_of_key = {rec["key"]: iso for iso, rec in info.items()}
+    out, seen = {}, {}
+    for key, texts in hregions.items():
+        iso = iso_of_key.get(key)
+        if iso is None or iso not in ne:
+            raise SystemExit(f"history_regions/{key}.json: ukjent UD-nøkkel")
+        known = {text_hash(h["paragraphs"]) for h in hist.get(key, []) if h["paragraphs"]}
+        unknown = set(texts) - known
+        if unknown:
+            raise SystemExit(f"history_regions/{key}.json: fant ikke tekstene {sorted(unknown)} i historikken")
+        country = ne[iso]
+        proj = Proj(country)
+        for hsh, zones in texts.items():
+            feats = []
+            for g, z in paint(zones, country, ne, proj, iso):
+                props = {"iso": iso, "level": z["level"], "label": z.get("label", "")}
+                for k in ("partial", "approx"):
+                    if z.get(k):
+                        props[k] = True
+                m = mapping(g.simplify(HIST_TOL, preserve_topology=True))
+                feats.append({"type": "Feature", "properties": props,
+                              "geometry": {"type": m["type"], "coordinates": round_coords(m["coordinates"], 3)}})
+            k = f"{iso}:{hsh}"
+            first = seen.setdefault(json.dumps(feats, sort_keys=True), k)
+            out[k] = feats if first == k else first
+    return out
+
+
+def missing_history_zones(keys=()):
+    """Historiske tekster som ser regionale ut og mangler soner, gruppert per land.
+    Gjeldende tekst hører til regions.json og telles ikke, heller ikke eldre perioder med samme tekst.
+    Med UD-nøkler: skriv ut hele teksten, klar til å tegne."""
+    hist, hregions = history.build(), load_history_regions()
+    total, out = 0, []
+    for key in sorted(hist):
+        if keys and key not in keys:
+            continue
+        entries = hist[key]
+        current = text_hash(entries[-1]["paragraphs"]) if entries[-1]["paragraphs"] else ""
+        drawn, seen, todo = hregions.get(key, {}), set(), []
+        for h in entries[:-1]:
+            if not h["paragraphs"] or h.get("gap"):
+                continue
+            hsh = text_hash(h["paragraphs"])
+            if hsh in drawn or hsh == current or hsh in seen:
+                continue
+            seen.add(hsh)
+            level, _ = history_level(h["paragraphs"])
+            if level and REGIONAL_HINTS.search(" ".join(h["paragraphs"])):
+                todo.append((hsh, h, level))
+        if todo:
+            total += len(todo)
+            out.append((key, todo))
+    for key, todo in sorted(out, key=lambda x: (-len(x[1]), x[0])):
+        print(f"{key}: {len(todo)}")
+        for hsh, h, level in todo:
+            t = " ".join(h["paragraphs"])
+            print(f"  {hsh}  {h['from']}–{h['until'] or ''}  {level}  {t if keys else t[:110] + ('…' if len(t) > 110 else '')}")
+    print(f"{total} tekster i {len(out)} land mangler soner (data/history_regions/<nøkkel>.json).")
 
 
 def stamp(slugs):
@@ -370,6 +478,8 @@ def stamp(slugs):
 if __name__ == "__main__":
     if sys.argv[1:2] == ["--stamp"]:
         stamp(sys.argv[2:])
+    elif sys.argv[1:2] == ["--missing-history-zones"]:
+        missing_history_zones(sys.argv[2:])
     elif sys.argv[1:2] == ["--stamp-all"]:
         stamp([k for k in json.loads((DATA / "regions.json").read_text()) if not k.startswith("_")])
     else:

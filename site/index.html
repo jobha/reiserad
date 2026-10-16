@@ -337,7 +337,8 @@ function tipZone(p) {
   const c = INFO[p.iso];
   const where = p.label && p.label !== "Hele landet" ? `<div>${esc(p.label)}</div>` : "";
   const part = p.partial ? `<div class="tip-note">${p.unmapped ? "Regional advarsel – se UD" : "Gjelder deler av området"}</div>` : "";
-  return `<b>${esc(c?.name || "")}</b><div class="tip-level ${p.level}">${esc(LEVEL_TXT[p.level])}</div>${where}${part}`;
+  const when = p.k && TL_DATE ? `<div class="tip-note">${esc(tlFmt(TL_DATE))}</div>` : "";
+  return `<b>${esc(c?.name || "")}</b>${when}<div class="tip-level ${p.level}">${esc(LEVEL_TXT[p.level])}</div>${where}${part}`;
 }
 function tipWorld(iso, ne) {
   const c = INFO[iso];
@@ -345,6 +346,7 @@ function tipWorld(iso, ne) {
     const st = tlState(iso);
     return `<b>${esc(c?.name || ne)}</b><div class="tip-note">${esc(tlFmt(TL_DATE))}</div>` + (st.level === "?"
       ? `<div>Ukjent – mangler arkivdata</div>`
+      : tlDrawn(iso) ? `<div>Ikke omfattet av reiseadvarselen</div>`
       : st.level ? `<div class="tip-level ${st.level}">${esc(LEVEL_TXT[st.level])}</div>${st.partial ? `<div class="tip-note">Gjelder deler av landet</div>` : ""}`
       : `<div>Ingen reiseadvarsel</div>`);
   }
@@ -388,6 +390,27 @@ function makeCopy(k) {
   return [world, zones];
 }
 
+// Tegnede soner for eldre tekster (timeline_zones.json), én flate per sone; vises bare
+// når datoen faller i perioden for teksten (properties.k = "ISO:hash").
+function makeHist(k) {
+  const off = k * 360;
+  return L.geoJSON(HZ, {
+    coordsToLatLng: c => L.latLng(c[1], c[0] + off),
+    pane: "zones",
+    renderer: zoneRenderer,
+    style: f => fillFor(f.properties.level, f.properties.partial),
+    onEachFeature: (f, l) => {
+      l.on("click", e => {
+        L.DomEvent.stopPropagation(e);
+        L.popup().setLatLng(e.latlng).setContent(tlPopup(f.properties.iso, null, f.properties)).openOn(map);
+      });
+      if (HOVER) l.bindTooltip(() => tipZone(f.properties), TIP);
+      l.on("mouseover", () => l.setStyle({ weight: 2 }));
+      l.on("mouseout", () => l.setStyle({ weight: f.properties.partial ? 1 : .6 }));
+    },
+  });
+}
+
 // Legg til kopiene som er i bildet, fjern de som ikke er det (de gjenbrukes senere).
 function syncCopies() {
   if (!WORLD) return;
@@ -397,6 +420,9 @@ function syncCopies() {
     const [w, z] = copies.get(k);
     if (!map.hasLayer(w)) { w.addTo(map); if (TL_DATE) styleWorld(w); }
     if (!map.hasLayer(z)) { z.addTo(map); if (TL_DATE) styleZones(z); }
+    const ls = copies.get(k);
+    if (HZ && ls.length < 3) ls.push(makeHist(k));
+    if (ls[2] && !map.hasLayer(ls[2])) { ls[2].addTo(map); styleHist(ls[2]); }
   }
   for (const [k, ls] of copies) {
     if (want.has(k)) continue;
@@ -435,9 +461,11 @@ function focusCountry(iso) {
 }
 
 // Tidslinje: dra tilbake i tid og se UDs reiseadvarsler slik de var. Gjaldt dagens
-// tekst også på datoen, vises dagens tegnede soner. Eldre tekster har ikke tegnede
-// soner: de fargelegger hele landet, og regionale advarsler vises skravert.
+// tekst også på datoen, vises dagens tegnede soner. Er en eldre tekst tegnet inn
+// (data/history_regions/), vises dens soner. Ellers fargelegges hele landet, og
+// regionale advarsler vises skravert.
 let TL = null, TL_DATE = null, tlTimer = null;
+let TZ = null, HZ = null;  // timeline_zones.json (lastes ved første drag), og flatene som FeatureCollection
 const DAY = 864e5;
 const tlFmt = d => new Date(d + "T12:00:00").toLocaleDateString("nb-NO", { day: "numeric", month: "long", year: "numeric" });
 const tlDay = n => new Date(Date.parse(TL.start + "T12:00:00Z") + n * DAY).toISOString().slice(0, 10);
@@ -448,7 +476,7 @@ function tlState(iso) {
   if (TL_DATE < rows[0][0]) return { level: "?", partial: 0, text: -1 };
   let r = rows[0];
   for (const x of rows) { if (x[0] > TL_DATE) break; r = x; }
-  return { level: r[1], partial: r[2], text: r[3], from: r[0] };
+  return { level: r[1], partial: r[2], text: r[3], from: r[0], hash: r[4] };
 }
 // Gjelder landets nåværende tekst på datoen? Da brukes de tegnede sonene.
 function tlCurrent(iso) {
@@ -456,6 +484,30 @@ function tlCurrent(iso) {
   if (!rows?.length) return !TL_DATE;
   const st = tlState(iso), last = rows[rows.length - 1];
   return st.level !== "?" && st.text === last[3] && st.level === last[1];
+}
+// Nøkkelen ("ISO:hash") til de tegnede sonene for landets tekst på datoen, eller null.
+function tlDrawn(iso) {
+  if (!TZ || !TL_DATE || tlCurrent(iso)) return null;
+  const st = tlState(iso), key = iso + ":" + st.hash, v = st.hash && TZ[key];
+  return typeof v === "string" ? v : v ? key : null;
+}
+function styleHist(layer) {
+  layer.eachLayer(l => {
+    const show = l.feature.properties.k === tlDrawn(l.feature.properties.iso);
+    if (show) layer.resetStyle(l); else l.setStyle({ opacity: 0, fillOpacity: 0 });
+    const el = l.getElement?.();
+    if (el) el.style.pointerEvents = show ? "" : "none";
+  });
+}
+function tlLoadZones() {
+  TZ = {};
+  fetch("data/timeline_zones.json").then(r => r.json()).then(tz => {
+    const feats = [];
+    for (const [k, v] of Object.entries(tz)) if (typeof v !== "string") for (const f of v) feats.push({ ...f, properties: { ...f.properties, k } });
+    TZ = tz; HZ = { type: "FeatureCollection", features: feats };
+    for (const [, [w]] of copies) styleWorld(w);
+    syncCopies();
+  }).catch(() => {});
 }
 function styleZones(layer) {
   layer.eachLayer(l => {
@@ -468,20 +520,24 @@ function styleZones(layer) {
 function styleWorld(layer) {
   layer.eachLayer(l => {
     const iso = l.feature.properties.iso;
-    if (!TL_DATE || tlCurrent(iso)) { layer.resetStyle(l); return; }
+    if (!TL_DATE || tlCurrent(iso) || tlDrawn(iso)) { layer.resetStyle(l); return; }
     const st = tlState(iso);
     if (st.level === "?") l.setStyle({ fillColor: css("--muted"), fillOpacity: .28, color: css("--land-line"), weight: .7 });
     else if (st.level) l.setStyle(fillFor(st.level, st.partial));
     else layer.resetStyle(l);
   });
 }
-function tlPopup(iso, ne) {
+function tlPopup(iso, ne, zone) {
   const c = INFO[iso], st = tlState(iso);
   let h = `<div class="pop"><h2>${esc(c?.name || ne)}</h2><div class="status">${esc(tlFmt(TL_DATE))}</div>`;
-  if (st.level === "?") h += `<div class="zone clear">Ukjent – vi har ikke funnet arkivkopier av UDs reiseråd fra denne tiden</div>`;
+  if (zone) h += `<div class="zone ${zone.level}">${esc(LEVEL_TXT[zone.level])}${zone.label ? ": " + esc(zone.label) : ""}</div>`;
+  else if (tlDrawn(iso)) h += `<div class="zone clear">Denne delen av landet var ikke omfattet av reiseadvarselen</div>`;
+  else if (st.level === "?") h += `<div class="zone clear">Ukjent – vi har ikke funnet arkivkopier av UDs reiseråd fra denne tiden</div>`;
   else if (st.level) h += `<div class="zone ${st.level}">${esc(LEVEL_TXT[st.level])}${st.partial ? " (deler av landet)" : ""}</div>`;
   else h += `<div class="zone clear">Ingen reiseadvarsel</div>`;
   if (st.text >= 0) h += `<div class="paras"><p>${esc(TL.texts[st.text])}</p></div>`;
+  if (zone?.partial) h += `<div class="note">Advarselen gjaldt bare deler av dette området. Se teksten.</div>`;
+  if (zone?.approx) h += `<div class="note">Grensen for denne sonen er tegnet omtrentlig ut fra UDs beskrivelse.</div>`;
   if (st.from) h += `<p class="tip-note">Gjeldende fra ${st.level === "?" ? "ca. " : ""}${esc(tlFmt(st.from))}.</p>`;
   if (c?.page) h += `<div class="more"><a href="/land/${esc(c.slug)}/">Egen side for ${esc(c.name)}${c.history ? " inkl. historikk" : ""}</a></div>`;
   return h + `</div>`;
@@ -505,7 +561,8 @@ function tlSet(n) {
     sub.textContent = `${tlFmt(TL_DATE)}: ${n} land med reiseadvarsel` + (u > 20 ? ` · ${u} ukjente` : "");
   }
   map.closePopup();
-  for (const [, [w, z]] of copies) { styleWorld(w); styleZones(z); }
+  if (!live && !TZ) tlLoadZones();
+  for (const [, [w, z, h]] of copies) { styleWorld(w); styleZones(z); if (h) styleHist(h); }
   syncCopies();
 }
 function tlPlay() {
