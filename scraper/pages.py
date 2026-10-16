@@ -234,8 +234,9 @@ def press_html(events):
                        f'<span class="muted">«{e(m["text"])}»</span></p>' for m in ev["mentions"])
         items.append(f'<details><summary>{nb_date(ev["from"])} · {e(papers)}{what}</summary>{body}</details>')
     note = ("Avisomtaler av UDs reiseråd i Nasjonalbibliotekets digitaliserte aviser, samlet per hendelse "
-            "(omtaler innen to uker). Utvalget er tilfeldig – det avisene skrev om – og utdragene er søketreff "
-            'fra <a href="https://www.nb.no/search?mediatype=aviser">nb.no</a>, så landet kan være nevnt i en annen sammenheng.')
+            "(omtaler innen to uker). Hvert utdrag er lest gjennom og knyttet til landet UDs råd gjaldt; andre lands "
+            "reiseråd er utelatt. Utvalget er likevel tilfeldig – det avisene skrev om – og utdragene er søketreff fra "
+            '<a href="https://www.nb.no/search?mediatype=aviser">nb.no</a>.')
     return f'<h2>Omtalt i pressen</h2><p class="muted">{note}</p>' + "".join(items)
 
 

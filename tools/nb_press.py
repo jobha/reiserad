@@ -18,6 +18,7 @@ kind: "all" (fraråder alle reiser), "necessary" (ikke strengt nødvendige), "li
 eller "" (uklart).
 Dekningen er tilfeldig (det avisene skrev om), så dette farger ikke kartet.
 """
+import hashlib
 import json
 import os
 import re
@@ -31,6 +32,10 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent.parent
 CACHE = Path(os.environ.get("REISERAD_CACHE", ROOT / ".cache")) / "nb"
 OUT = ROOT / "data" / "press_nb.json"
+# Gjennomlest fasit per utdrag: {id: {"countries": [UD-nøkkel], "kind", "kinds"?: {UD-nøkkel: kind}}}. Tom liste = ikke et
+# norsk reiseråd om noe land (f.eks. USAs UD). Overstyrer reglene under; nye utdrag uten fasit
+# får reglene og kan eksporteres for gjennomlesing med --export-review FIL.
+REVIEW = ROOT / "data" / "press_nb_review.json"
 DHLAB = "https://api.nb.no/dhlab"
 CATALOG = "https://api.nb.no/catalog/v1/items"
 UA = "reiserad.no (https://github.com/jobha/reiserad)"
@@ -174,6 +179,9 @@ FOREIGN_UD = {"svensk": "sverige", "dansk": "danmark", "britisk": "uk", "amerika
               "tysk": "tyskland", "fransk": "frankrike", "islandsk": "island", "kanadisk": "canada",
               "australsk": "australia", "nederlandsk": "nederland", "japansk": "japan", "kinesisk": "kina"}
 FOREIGN_RX = re.compile(r"\b(" + "|".join(FOREIGN_UD) + r")e? (UD|utenriksdepartement|utanriksdepartement|myndighet)", re.I)
+# «USAs utenriksdepartement», «alle amerikanere»: avsenderen er et annet land.
+FOREIGN_ANY = re.compile(r"\b[A-ZÆØÅ]\w*s (UD|utenriksdepartement|utanriksdepartement|myndigheter|regjering)|\b[Uu]tenriksminister\w* \w+ \w+ i [A-ZÆØÅ]"
+                         r"|\b(amerikanere|briter|svensker|dansker|tyskere|franskmenn|finner|nederlendere|australiere|kanadiere)\b")
 
 
 NEIGHBOURS = {"sverige", "danmark", "finland", "island"}
@@ -268,6 +276,8 @@ def main():
         samples.setdefault(d["slug"], d["urn"])
     papers = paper_names(samples, offline)
     rx, names = patterns()
+    review = json.loads(REVIEW.read_text()) if REVIEW.exists() else {}
+    pending = {}
 
     # Én omtale per utgave og land; beste utdrag er det med tydeligst innhold.
     best, unmatched = {}, {}
@@ -278,22 +288,31 @@ def main():
         txt = clean(txt)
         if not KEYWORD.search(txt):
             continue
+        sid = hashlib.sha1(f"{d['urn']}|{txt}".encode()).hexdigest()[:12]
+        paper = re.sub(r"\s*\([^)]*\d{4}[^)]*\)$", "", papers.get(d["slug"], d["slug"]))  # «Dagbladet (Oslo: 1869-)»
+        m = {"id": sid, "date": d["date"], "paper": paper,
+             "url": f"https://www.nb.no/items/{d['urn']}?searchText={urllib.parse.quote(q)}",
+             "text": txt, "kind": kind_of(txt)}
+        if sid in review:
+            r = review[sid]
+            for k in r["countries"]:
+                best.setdefault((k, did), dict(m, kind=r.get("kinds", {}).get(k, r["kind"])))
+            continue
         # «reiseråd» alene er ofte reisetips; krev UD eller fraråding i utdraget.
         if q in ("reiseråd", "reiserådet") and not re.search(r"\bUD\b|Utenriksdep|fraråd", txt):
             continue
         if recap(txt, d["date"]) or d["date"] < "1945":
             continue
         # Bare et annet lands UD i utdraget, uten Norge: ikke et norsk reiseråd.
-        if FOREIGN_RX.search(txt) and not re.search(r"\bnorsk|\bNorge|nordm[ae]nn|\bUD\b", txt):
+        if (FOREIGN_RX.search(txt) or FOREIGN_ANY.search(txt)) and not re.search(r"\bnorsk|\bNorge|nordm[ae]nn|\bUD\b", txt):
             continue
         hits, former = countries_near(txt, rx, names, d["date"])
-        paper = re.sub(r"\s*\([^)]*\d{4}[^)]*\)$", "", papers.get(d["slug"], d["slug"]))  # «Dagbladet (Oslo: 1869-)»
-        m = {"date": d["date"], "paper": paper,
-             "url": f"https://www.nb.no/items/{d['urn']}?searchText={urllib.parse.quote(q)}",
-             "text": txt, "kind": kind_of(txt)}
+        if hits:
+            pending[sid] = dict(m, candidates=hits)
         for k in hits:
             old = best.get((k, did))
-            if not old or (bool(m["kind"]), len(m["text"])) > (bool(old["kind"]), len(old["text"])):
+            if not old or (old["id"] not in review
+                           and (bool(m["kind"]), len(m["text"])) > (bool(old["kind"]), len(old["text"]))):
                 best[(k, did)] = m
         if former and not hits:
             unmatched.setdefault(did, dict(m, names=sorted(set(former))))
@@ -309,6 +328,10 @@ def main():
            "countries": dict(sorted(countries.items())),
            "unmatched": sorted(unmatched.values(), key=lambda m: (m["date"], m["paper"]))}
     OUT.write_text(json.dumps(out, ensure_ascii=False, indent=1) + "\n")
+    if "--export-review" in sys.argv:
+        path = Path(sys.argv[sys.argv.index("--export-review") + 1])
+        path.write_text(json.dumps(list(pending.values()), ensure_ascii=False, indent=1))
+        print(f"{len(pending)} utdrag uten fasit -> {path}", file=sys.stderr)
     n_m = sum(len(c["mentions"]) for c in countries.values())
     n_e = sum(len(c["events"]) for c in countries.values())
     print(f"{len(docs)} utgaver, {len(concs)} utdrag -> {n_m} omtaler, {n_e} hendelser i {len(countries)} land, "
