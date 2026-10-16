@@ -1,0 +1,4 @@
+{
+ "_om": "Soner for eldre tekster på UDs side for indonesia. Nøkkel = tekst-hash (python scraper/build.py --missing-history-zones indonesia). Format som data/regions.json; se README.",
+ "f1333544744d": {"text": "På bakgrunn av bombeeksplosjoner 12.10.2002, oppfordrer Utenriksdepartementet at man vurderer nøye å utsette reiser til Bali, som ikke er strengt nødvendige. På bakgrunn av bombeeksplosjoner 12. oktober 2002, oppfordrer Utenriksdepartementet at man vurderer nøye å utsette reiser til Bali, som ikke er strengt nødvendige. Reisende til Indonesia, inkl. Bali, bør utvise forsiktighet og man bør unngå steder som vesentlig frekventeres av utlendinger.", "zones": [{"level": "necessary", "adm": "IDN/ADM1", "names": ["Bali"], "label": "Bali"}]}
+}

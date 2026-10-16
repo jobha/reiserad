@@ -19,5 +19,8 @@
   "zones": [
    {"level": "necessary", "adm": "LKA/ADM2", "names": ["Jaffna District", "Trincomalee District", "Batticaloa District", "Ampara District"], "label": "Nord og øst: Jaffna, Trincomalee, Batticaloa og Ampara"}
   ]
- }
+ },
+ "3f09e0edeb1d": {"text": "Utenriksdepartementet ber norske borgere nøye vurdere nødvendigheten av å reise til eller oppholde seg i Sri Lanka og sørvestlige deler av Thailand i de nærmeste dagene. (26.12) På grunn av de omfattende ødeleggelsene etter flodbølgen i Det indiske hav ber Utenriksdepartementet norske borgere nøye vurdere nødvendigheten av å reise til eller oppholde seg i Sri Lanka og sørvestlige deler av Thailand i de nærmeste dagene.", "zones": [{"level": "necessary", "country": true, "label": "Hele landet"}]},
+ "e8f459e85b96": {"text": "UD fraråder reiser til eller opphold på Sri Lanka som ikke er strengt nødvendige.", "same": "3f09e0edeb1d"},
+ "bab19b8e4a5f": {"text": "Utenriksdepartementet fraråder alle reiser til Sri Lanka som ikke er strengt nødvendige", "same": "3f09e0edeb1d"}
 }

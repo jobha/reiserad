@@ -63,6 +63,10 @@ tegnes i én fil per land, `data/history_regions/<UD-nøkkel>.json` (nøkkelen s
   (Krym ligger i Russland der). En tekst som gjelder hele landet, tegnes som
   `[{"level": ..., "country": true}]`, og en tekst uten egentlig advarsel (bare aktsomhet)
   som `"zones": []`, så de ikke lenger står på listen under.
+- Alle eldre tekster med advarsel skal være tegnet, også de som gjelder hele landet.
+  Mangler en (typisk fordi UD nettopp byttet tekst, og den gamle ble historikk), fargelegges
+  landet etter teksten som siste utvei, `build.py` skriver en advarsel, og
+  `--missing-history-zones` avslutter med exit 1, så deploy-jobben blir rød.
 - `build.py` skriver flatene til `site/data/timeline_zones.json` (forenklet til ~1 km),
   som kartet laster først når noen drar i tidslinjen.
 

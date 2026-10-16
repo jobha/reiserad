@@ -1,0 +1,7 @@
+{
+ "_om": "Soner for eldre tekster på UDs side for jemen. Nøkkel = tekst-hash (python scraper/build.py --missing-history-zones jemen). Format som data/regions.json; se README.",
+ "bd6bfc55444b": {"text": "Utenriksdepartementet frarår inntil videre norske borgere å reise til Yemen, dersom reisen ikke er strengt tatt nødvendig.", "zones": [{"level": "necessary", "country": true, "label": "Hele landet"}]},
+ "1fcac4130f36": {"text": "På grunn av de rådende forhold ber Utenriksdepartementet norske borgere nøye vurdere nødvendigheten av å reise til eller oppholde seg i Jemen.", "same": "bd6bfc55444b"},
+ "171da2c55965": {"text": "Utenriksdepartementet fraråder reise til eller opphold i Jemen som ikke er strengt nødvendig. Norske borgere som oppholder seg i eller planlegger å reise til Jemen oppfordres til å ta kontakt med ambassaden i Riyadh for oppdatert informasjon og registrering.", "same": "bd6bfc55444b"},
+ "c969260bd133": {"text": "Utenriksdepartementet fraråder reise til eller opphold i Jemen som ikke er strengt nødvendig.", "same": "bd6bfc55444b"}
+}

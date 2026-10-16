@@ -1,0 +1,4 @@
+{
+ "_om": "Soner for eldre tekster på UDs side for kuwait. Nøkkel = tekst-hash (python scraper/build.py --missing-history-zones kuwait). Format som data/regions.json; se README.",
+ "d124c8e44a1e": {"text": "Utenriksdepartementet fraråder alle reiser til Kuwait.", "zones": [{"level": "all", "country": true, "label": "Hele landet"}]}
+}

@@ -5,5 +5,6 @@
   "zones": [
    {"level": "necessary", "adm": "TZA/ADM1", "names": ["Mtwara"], "and": {"border": ["MOZ"], "km": 40}, "approx": true, "label": "Delene av Mtwara som grenser mot Mosambik"}
   ]
- }
+ },
+ "4e4240b007bb": {"text": "Utenriksdepartementet fraråder alle reiser som ikke er strengt nødvendige til Tanzania.", "zones": [{"level": "necessary", "country": true, "label": "Hele landet"}]}
 }

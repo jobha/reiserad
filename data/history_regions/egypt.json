@@ -863,5 +863,6 @@
  "2f59cbfb0b7d": {
   "text": "Utenriksdepartementet fraråder alle reiser til eller opphold på Sinai, med unntak av Sharm El Sheikh, Dahab, St. Catherine og strekningene mellom disse. Utenriksdepartementet fraråder reiser til eller opphold som ikke er strengt nødvendig til det øvrige Egypt, med unntak av Kairo og Alexandria og strekningen mellom disse byene, turist-områdene ved vestsiden av Rødehavet (inkludert Hurghada) og Nildalen mellom Luxor og Abu Simbel samt reiser mellom disse delene av Nildalen og turiststeder ved Rødehavskysten.",
   "same": "1b3a8bc12de6"
- }
+ },
+ "ef7447a7a528": {"text": "Utenriksdepartementet fraråder reise eller opphold som ikke er strengt nødvendig til Egypt.", "zones": [{"level": "necessary", "country": true, "label": "Hele landet"}]}
 }

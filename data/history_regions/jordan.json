@@ -9,5 +9,6 @@
  "1704b837792f": {
   "text": "Utenriksdepartementet fraråder reise eller opphold som ikke er strengt nødvendig til grenseområdene nærmere enn tre kilometer mot Syria og Irak.",
   "same": "dfc682ed24e1"
- }
+ },
+ "772421976864": {"text": "Utenriksdepartementet fraråder alle reiser til Jordan.", "zones": [{"level": "all", "country": true, "label": "Hele landet"}]}
 }

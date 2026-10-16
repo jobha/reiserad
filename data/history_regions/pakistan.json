@@ -67,5 +67,8 @@
   "zones": [
    {"level": "necessary", "country": true, "label": "Hele Pakistan"}
   ]
- }
+ },
+ "abee21c4923b": {"text": "Utenriksdepartementet ber om at nødvendigheten av reiser til Pakistan vurderes nøye. Norske borgere som oppholder seg der bør utvise aktsomhet og oppfordres til å registrere seg på ambassaden i Islamabad.", "zones": [{"level": "necessary", "country": true, "label": "Hele landet"}]},
+ "d70ff635125c": {"text": "Utenriksdepartementet fraråder reiser til Pakistan som ikke er strengt nødvendige. Norske borgere i landet oppfordres til å være særlig aktsomme, spesielt i Islamabad og andre større byer.Sist endret", "same": "abee21c4923b"},
+ "a4d556c02422": {"text": "Utenriksdepartementet fraråder alle reiser til Pakistan.", "zones": [{"level": "all", "country": true, "label": "Hele landet"}]}
 }

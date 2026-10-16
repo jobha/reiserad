@@ -1,0 +1,4 @@
+{
+ "_om": "Soner for eldre tekster på UDs side for madagaskar. Nøkkel = tekst-hash (python scraper/build.py --missing-history-zones madagaskar). Format som data/regions.json; se README.",
+ "3482a7bf1cf1": {"text": "Utenriksdepartementet fraråder reiser som ikke er strengt nødvendige til Madagaskar.", "zones": [{"level": "necessary", "country": true, "label": "Hele landet"}]}
+}

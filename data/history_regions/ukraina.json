@@ -29,5 +29,6 @@
    {"level": "all", "adm": "UKR/ADM1", "names": ["Donetsk Oblast", "Luhansk Oblast"], "label": "Donetsk og Luhansk"},
    {"level": "all", "adm": "UKR/ADM1", "names": ["Autonomous Republic of Crimea", "Sevastopol"], "outside": true, "label": "Krym-halvøya"}
   ]
- }
+ },
+ "77ef3f0d15dc": {"text": "Utenriksdepartementet fraråder alle reiser til Ukraina og oppfordrer norske borgere til å forlate landet.", "zones": [{"level": "all", "country": true, "label": "Hele landet"}]}
 }

@@ -1,0 +1,4 @@
+{
+ "_om": "Soner for eldre tekster på UDs side for bangladesh. Nøkkel = tekst-hash (python scraper/build.py --missing-history-zones bangladesh). Format som data/regions.json; se README.",
+ "fe64adfa1734": {"text": "Utenriksdepartementet fraråder alle reiser til Bangladesh.", "zones": [{"level": "all", "country": true, "label": "Hele landet"}]}
+}

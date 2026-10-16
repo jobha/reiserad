@@ -92,9 +92,13 @@ jobs:
           git commit -m "UD: reiseråd oppdatert $(date +%F)"
           git push
 
+      # Sist, så kartet er deployet og UD-endringene commitet først: rød jobb når en eldre tekst mangler soner.
+      - name: Eldre tekster uten tegnede soner
+        run: python3 scraper/build.py --missing-history-zones
+
   notify:
     needs: build
-    if: needs.build.outputs.review == '1'
+    if: always() && needs.build.outputs.review == '1'
     runs-on: ubuntu-latest
     steps:
       - uses: actions/github-script@v9

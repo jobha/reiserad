@@ -132,5 +132,6 @@
    {"level": "all", "border": ["SDN", "SDS", "ERI"], "km": 30, "label": "Grenseområdene mot Sudan, Sør-Sudan og Eritrea", "approx": true},
    {"level": "none", "adm": "ETH/ADM1", "names": ["Addis Ababa"], "label": "Addis Abeba"}
   ]
- }
+ },
+ "1828c53fd692": {"text": "Utenriksdepartementet fraråder alle reiser til Etiopia og oppfordrer norske borgere til å forlate landet.", "zones": [{"level": "all", "country": true, "label": "Hele landet"}]}
 }

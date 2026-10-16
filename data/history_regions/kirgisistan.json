@@ -1,0 +1,4 @@
+{
+ "_om": "Soner for eldre tekster på UDs side for kirgisistan. Nøkkel = tekst-hash (python scraper/build.py --missing-history-zones kirgisistan). Format som data/regions.json; se README.",
+ "9a24ed203f75": {"text": "På bakgrunn av sikkerhetssituasjonen fraråder Utenriksdepartementet inntil videre reiser til Kirgisistan som ikke er strengt nødvendige.", "zones": [{"level": "necessary", "country": true, "label": "Hele landet"}]}
+}

@@ -23,5 +23,6 @@
  "30ee6a24a4ce": {
   "text": "Utenriksdepartementet fraråder alle reiser til eller opphold i områder rundt kjernekraftanlegget Fukushima Daiich.",
   "same": "42191ae13aea"
- }
+ },
+ "76c4b1a38044": {"text": "UD fraråder reise til eller opphold i Japan.", "zones": [{"level": "all", "country": true, "label": "Hele landet"}]}
 }

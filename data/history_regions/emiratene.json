@@ -1,0 +1,4 @@
+{
+ "_om": "Soner for eldre tekster på UDs side for emiratene. Nøkkel = tekst-hash (python scraper/build.py --missing-history-zones emiratene). Format som data/regions.json; se README.",
+ "2f1c9b08086d": {"text": "Utenriksdepartementet fraråder alle reiser til De forente arabiske emirater.", "zones": [{"level": "all", "country": true, "label": "Hele landet"}]}
+}

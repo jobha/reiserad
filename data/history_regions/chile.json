@@ -1,0 +1,4 @@
+{
+ "_om": "Soner for eldre tekster på UDs side for chile. Nøkkel = tekst-hash (python scraper/build.py --missing-history-zones chile). Format som data/regions.json; se README.",
+ "c277087fba66": {"text": "Chilenske myndigheter frarådet at HKH Kronprinsen og medfølgende delegasjon gjennomførte deler av det oppsatte programmet i Puerto Varas/Puerto Montt fredag 25. januar. Chilenske myndigheter frarådet imidlertid at HKH Kronprinsen og medfølgende delegasjon gjennomførte deler av det oppsatte programmet i Puerto Varas/Puerto Montt fredag 25. d.s. Fra norsk side valgte man å følge rådene fra chilenske myndigheter.", "zones": []}
+}

@@ -1,0 +1,8 @@
+{
+ "_om": "Soner for eldre tekster på UDs side for guinea. Nøkkel = tekst-hash (python scraper/build.py --missing-history-zones guinea). Format som data/regions.json; se README.",
+ "df8e6afe57e3": {"text": "Utenriksdepartementet fraråder reiser til eller opphold i Guinea som ikke er strengt nødvendig. Norske borgere som oppholder seg i eller planlegger å reise til landet oppfordres til å ta kontakt med ambassaden i Abidjan for oppdatert informasjon og registrering.", "zones": [{"level": "necessary", "country": true, "label": "Hele landet"}]},
+ "92ae156564a8": {"text": "Utenriksdepartementet fraråder reiser til eller opphold i Guinea som ikke er strengt nødvendig.", "same": "df8e6afe57e3"},
+ "22cb94f685ba": {"text": "Utenriksdepartementet fraråder alle reiser til eller opphold i Liberia, Sierra Leone og Guinea.", "zones": [{"level": "all", "country": true, "label": "Hele landet"}]},
+ "337ed6e927c6": {"text": "Utenriksdepartementet fraråder alle reiser til eller opphold i Sierra Leone og Guinea.", "same": "22cb94f685ba"},
+ "470568ee70a7": {"text": "Utenriksdepartementet fraråder alle reiser til eller opphold i Guinea.", "same": "22cb94f685ba"}
+}

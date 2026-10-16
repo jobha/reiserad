@@ -27,5 +27,7 @@
  "d9c60cf6369b": {
   "text": "Utenriksdepartementet fraråder reiser til Cabo Delgado-provinsen som ikke er strengt nødvendige.",
   "same": "f605b4d64977"
- }
+ },
+ "46cc95c44c34": {"text": "Utenriksdepartementet fraråder alle reiser som ikke er nødvendige til Cabo Delgado.", "same": "f605b4d64977"},
+ "0588d7574534": {"text": "Utenriksdepartementet fraråder alle reiser til Mosambik.", "zones": [{"level": "all", "country": true, "label": "Hele landet"}]}
 }

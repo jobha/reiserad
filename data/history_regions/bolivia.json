@@ -11,5 +11,6 @@
   "zones": [
    {"level": "necessary", "country": true, "label": "Bolivia, særlig La Paz, Titicaca-sjøen og Cochabamba"}
   ]
- }
+ },
+ "e991ae81173f": {"text": "Utenriksdepartementet fraråder alle reiser til Bolivia som ikke er strengt nødvendige.", "zones": [{"level": "necessary", "country": true, "label": "Hele landet"}]}
 }

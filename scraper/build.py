@@ -12,7 +12,7 @@ Skriver:
   python scraper/build.py --stamp SLUG  marker kartleggingen av SLUG som oppdatert
   python scraper/build.py --stamp-all
   python scraper/build.py --missing-history-zones [UD-NØKKEL ...]
-                                        historiske regionale tekster uten tegnede soner
+                                        historiske tekster med advarsel uten tegnede soner (exit 1)
 """
 import hashlib
 import json
@@ -50,6 +50,8 @@ REGIONAL_HINTS = re.compile(
     r"utenfor|innenfor|nærmere enn|\bkm\b|kilometer|hovedstad|byen|øya|øyer",
     re.I,
 )
+# Ord som tyder på en advarsel selv om history_level() ikke finner nivå: må leses av en person.
+WARNING_WORDS = re.compile(r"fraråd|advar|forlate", re.I)
 
 
 def fetch(url, path):
@@ -211,7 +213,7 @@ def zones_level(zones):
     """(nivå, delvis) for en tegnet tekst: strengeste nivå, og om den bare gjelder deler av landet."""
     levels = {z["level"] for z in zones if z["level"] != "none"}
     whole = len(zones) == 1 and zones[0].get("country")
-    return ("all" if "all" in levels else "necessary" if levels else None), not whole
+    return ("all" if "all" in levels else "necessary" if levels else None), bool(levels) and not whole
 
 
 def slugify_no(v):
@@ -246,12 +248,17 @@ def timeline(hist, info, lands, hregions=None):
     """Per land (ISO): [[fra, nivå|None|"?", delvis, tekstindeks, hash]] eldst først, og tekstene.
     "?" = ukjent (ingen arkivdata), "listed" = på UDs liste over reiseråd, men teksten er ikke arkivert. hash = tekst-hash, "" uten tekst; har teksten
     tegnede soner i data/history_regions/, ligger de i timeline_zones.json under "ISO:hash". Land som mangler
-    på UDs oversikter over reiseråd, er uten advarsel på oversiktens dato (history._observations)."""
+    på UDs oversikter over reiseråd, er uten advarsel på oversiktens dato (history._observations).
+    Eldre tekster skal alle være tegnet; nivået leses bare av teksten for dagens tekst (kartet bruker da
+    dagens soner), tekster uten advarsel, og som siste utvei for nye tekster ingen har tegnet ennå
+    (listes i timeline.untagged og skrives ut av build())."""
     texts, index, out = [], {}, {}
+    timeline.untagged = []
     for iso, rec in info.items():
         entries = hist.get(rec["key"], [])
         rows = []
         drawn = (hregions or {}).get(rec["key"], {})
+        current = text_hash(entries[-1]["paragraphs"]) if entries and entries[-1]["paragraphs"] else ""
         for h in entries:
             if rows and h["from"] < rows[-1][0]:
                 continue
@@ -262,7 +269,12 @@ def timeline(hist, info, lands, hregions=None):
                 rows.append([h["from"], "listed", 1, -1, ""])
                 continue
             hsh = text_hash(h["paragraphs"]) if h["paragraphs"] else ""
-            level, partial = zones_level(drawn[hsh]) if hsh in drawn else history_level(h["paragraphs"])
+            if hsh in drawn:
+                level, partial = zones_level(drawn[hsh])
+            else:
+                level, partial = history_level(h["paragraphs"])
+                if hsh and hsh != current and (level or WARNING_WORDS.search(" ".join(h["paragraphs"]))):
+                    timeline.untagged.append(f"{rec['key']}:{hsh}")
             t = " ".join(h["paragraphs"])
             if t and t not in index:
                 index[t] = len(texts)
@@ -401,6 +413,9 @@ def build():
     hregions = load_history_regions()
     tl = timeline(hist, info, lands, hregions)
     dump("timeline.json", tl)
+    if timeline.untagged:
+        print(f"::warning::{len(timeline.untagged)} eldre tekster uten tegnede soner (fargelagt etter teksten): "
+              f"{', '.join(timeline.untagged)}. Kjør scraper/build.py --missing-history-zones.")
     dump("world_history.json", former_states(tl, ne))
     dump("timeline_zones.json", history_zones(hist, info, ne, hregions))
     n_pages = pages.write_all(OUT.parent, info, ne, zones_by_iso, adv["fetched"], site, hist, news, press)
@@ -513,7 +528,8 @@ def history_zones(hist, info, ne, hregions):
 
 
 def missing_history_zones(keys=()):
-    """Historiske tekster som ser regionale ut og mangler soner, gruppert per land.
+    """Historiske tekster med advarsel (eller ord som ligner) som mangler soner, gruppert per land.
+    Alle skal tegnes, også advarsler for hele landet ({"country": true}).
     Gjeldende tekst hører til regions.json og telles ikke, heller ikke eldre perioder med samme tekst.
     Med UD-nøkler: skriv ut hele teksten, klar til å tegne."""
     hist, hregions = history.build(), load_history_regions()
@@ -532,8 +548,11 @@ def missing_history_zones(keys=()):
                 continue
             seen.add(hsh)
             level, _ = history_level(h["paragraphs"])
-            if level and REGIONAL_HINTS.search(" ".join(h["paragraphs"])):
+            if level:
                 todo.append((hsh, h, level))
+            elif WARNING_WORDS.search(" ".join(h["paragraphs"])):
+                # Ser ut som «ingen advarsel», men nevner fraråding/advarsel: en person må lese den.
+                todo.append((hsh, h, "sjekk"))
         if todo:
             total += len(todo)
             out.append((key, todo))
@@ -543,6 +562,7 @@ def missing_history_zones(keys=()):
             t = " ".join(h["paragraphs"])
             print(f"  {hsh}  {h['from']}–{h['until'] or ''}  {level}  {t if keys else t[:110] + ('…' if len(t) > 110 else '')}")
     print(f"{total} tekster i {len(out)} land mangler soner (data/history_regions/<nøkkel>.json).")
+    return total
 
 
 def stamp(slugs):
@@ -558,7 +578,8 @@ if __name__ == "__main__":
     if sys.argv[1:2] == ["--stamp"]:
         stamp(sys.argv[2:])
     elif sys.argv[1:2] == ["--missing-history-zones"]:
-        missing_history_zones(sys.argv[2:])
+        # Feiler (exit 1) når noe mangler, så deploy-loggen viser nye UD-tekster som må tegnes.
+        sys.exit(1 if missing_history_zones(sys.argv[2:]) else 0)
     elif sys.argv[1:2] == ["--stamp-all"]:
         stamp([k for k in json.loads((DATA / "regions.json").read_text()) if not k.startswith("_")])
     else:

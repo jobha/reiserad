@@ -1,0 +1,6 @@
+{
+ "_om": "Soner for eldre tekster på UDs side for osttimor. Nøkkel = tekst-hash (python scraper/build.py --missing-history-zones osttimor). Format som data/regions.json; se README.",
+ "7e3bae692096": {"text": "På grunn av den urolige situasjonen på Øst-Timor fraråder Utenriksdepartementet reise til, eller opphold på, Øst-Timor som ikke er strengt nødvendig. Norske borgere som oppholder seg på eller planlegger å reise til Øst-Timor oppfordres til å ta kontakt med ambassaden i Jakarta for oppdatert informasjon og registrering.", "zones": [{"level": "necessary", "country": true, "label": "Hele landet"}]},
+ "39d3951339e2": {"text": "Utenriksdepartementet fraråder reise til eller opphold i Øst-Timor som ikke er strengt nødvendig. Norske borgere som oppholder seg i eller som planlegger å reise til Øst-Timor oppfordres til å ta kontakt med ambassadeseksjonen i Dili for oppdatert informasjon og registrering.", "same": "7e3bae692096"},
+ "4a14f0e14b91": {"text": "Utenriksdepartementet fraråder reise til eller opphold i Øst-Timor som ikke er strengt nødvendig. Norske borgere som oppholder seg i eller som planlegger å reise til Øst-Timor oppfordres til å ta kontakt med ambassadeseksjonen i Dili for oppdatert informasjon og registrering.Sist endret", "same": "7e3bae692096"}
+}

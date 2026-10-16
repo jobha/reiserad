@@ -5,5 +5,7 @@
   "zones": [
    {"level": "necessary", "border": ["SDN"], "km": 50, "label": "Grenseområdene mot Sudan", "approx": true}
   ]
- }
+ },
+ "171f45e82fc6": {"text": "Utenriksdepartementet fraråder alle reiser til eller opphold i Sør-Sudan. Norske borgere som befinner seg i Sør-Sudan oppfordres til å forlate landet.", "zones": [{"level": "all", "country": true, "label": "Hele landet"}]},
+ "de04f897eee2": {"text": "Utenriksdepartementet fraråder alle reiser til Sør-Sudan.", "same": "171f45e82fc6"}
 }

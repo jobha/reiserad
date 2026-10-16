@@ -1,0 +1,4 @@
+{
+ "_om": "Soner for eldre tekster på UDs side for oman. Nøkkel = tekst-hash (python scraper/build.py --missing-history-zones oman). Format som data/regions.json; se README.",
+ "f99603c704b3": {"text": "Utenriksdepartementet fraråder reiser som ikke er strengt nødvendige til Oman.", "zones": [{"level": "necessary", "country": true, "label": "Hele landet"}]}
+}

@@ -5,5 +5,7 @@
   "zones": [
    {"level": "necessary", "country": true, "label": "Bahrain"}
   ]
- }
+ },
+ "0ae18a32e00d": {"text": "Utenriksdepartementet fraråder reise til eller opphold i Bahrain som ikke er strengt nødvendig.", "zones": [{"level": "necessary", "country": true, "label": "Hele landet"}]},
+ "0c9e776f715d": {"text": "Utenriksdepartementet fraråder alle reiser til Bahrain.", "zones": [{"level": "all", "country": true, "label": "Hele landet"}]}
 }

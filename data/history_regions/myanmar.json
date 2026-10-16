@@ -27,5 +27,8 @@
    {"level": "necessary", "adm": "MMR/ADM2", "names": ["Lashio", "Muse", "Kyaukme", "Laukkaing", "Hopang", "Matman", "Mongmit"], "approx": true, "label": "Nordlige Shan"},
    {"level": "necessary", "adm": "MMR/ADM3", "names": ["Paletwa"], "label": "Paletwa"}
   ]
- }
+ },
+ "51fe33687e85": {"text": "På grunn av den urolige situasjonen i Myanmar/Burma fraråder Utenriksdepartementet reise til eller opphold som ikke er strengt nødvendig. Norske borgere som oppholder seg i eller planlegger å reise til Myanmar/Burma oppfordres til å ta kontakt med ambassaden i Bangkok for oppdatert informasjon og registrering.", "zones": [{"level": "necessary", "country": true, "label": "Hele landet"}]},
+ "434c232992f1": {"text": "Utenriksdepartementet fraråder reise til eller opphold i Myanmar (Burma) som ikke er strengt nødvendig.Sist endret", "same": "51fe33687e85"},
+ "be467a490485": {"text": "Utenriksdepartementet fraråder alle reiser til Myanmar. Norske borgere som befinner seg i Myanmar oppfordres til å forlate landet.", "zones": [{"level": "all", "country": true, "label": "Hele landet"}]}
 }

@@ -114,5 +114,7 @@
     "label": "Tobruk"
    }
   ]
- }
+ },
+ "b6a21de7ab2f": {"text": "Utenriksdepartementet fraråder alle reiser til eller opphold i Libya.", "zones": [{"level": "all", "country": true, "label": "Hele landet"}]},
+ "70c6ffffce57": {"text": "Utenriksdepartementet fraråder reise eller opphold som ikke er strengt nødvendig til Libya.", "zones": [{"level": "necessary", "country": true, "label": "Hele landet"}]}
 }

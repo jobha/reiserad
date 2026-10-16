@@ -94,5 +94,6 @@
     "label": "Flyktningeleirene ved Tindouf"
    }
   ]
- }
+ },
+ "b025ddbdd896": {"text": "Utenriksdepartementet fraråder reiser til eller opphold i Algerie.", "zones": [{"level": "all", "country": true, "label": "Hele landet"}]}
 }

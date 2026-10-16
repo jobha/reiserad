@@ -1,0 +1,5 @@
+{
+ "_om": "Soner for eldre tekster på UDs side for zimbabwe. Nøkkel = tekst-hash (python scraper/build.py --missing-history-zones zimbabwe). Format som data/regions.json; se README.",
+ "1dc96744230d": {"text": "Turistbesøk og andre ikke strengt nødvendige reiser til Zimbabwe frarådes inntil videre.", "zones": [{"level": "necessary", "country": true, "label": "Hele landet"}]},
+ "ed221c977343": {"text": "Utenriksdepartementet fraråder reise til eller opphold i Zimbabwe inntil videre.", "zones": [{"level": "all", "country": true, "label": "Hele landet"}]}
+}

@@ -58,5 +58,15 @@
   "zones": [
    {"level": "all", "country": true, "label": "Gaza og Vestbredden"}
   ]
- }
+ },
+ "8071cc741bc9": {"text": "Utenriksdepartementet fraråder derfor inntil videre å reise til Gaza, Vestbredden og Jerusalem.", "same": "100d385d738d"},
+ "5e44018c5e36": {"text": "Utenriksdepartementet fraråder reise til eller opphold i Gaza og Vestbredden som ikke er strengt nødvendig. Norske borgere som oppholder seg i eller planlegger å reise til Gaza og Vestbredden oppfordres til å ta kontakt med Representasjonskontoret i Al-Ram og/eller ambassaden i Tel Aviv for oppdatert informasjon og registrering.", "zones": [{"level": "necessary", "country": true, "label": "Hele landet"}]},
+ "18a2c3b6355a": {"text": "Utenriksdepartementet fraråder reise til eller opphold i Gaza og Vestbredden. Norske borgere som oppholder seg i eller planlegger å reise til Gaza og Vestbredden oppfordres til å ta kontakt med Representasjonskontoret i Al-Ram og/eller ambassaden i Tel Aviv for oppdatert informasjon og registrering.", "zones": [{"level": "all", "country": true, "label": "Hele landet"}]},
+ "03ed908f20b6": {"text": "Utenriksdepartementet fraråder reise til eller opphold i Gaza. Reisende bør vurdere nødvendigheten av reiser til Vestbredden. Norske borgere som oppholder seg i eller planlegger å reise til Gaza og Vestbredden oppfordres til å ta kontakt med Representasjonskontoret i Al-Ram og/eller ambassaden i Tel Aviv for oppdatert informasjon og registrering.", "zones": [{"adm": "PSE/ADM1", "names": ["West Bank"], "level": "necessary", "label": "Vestbredden"}, {"adm": "PSE/ADM1", "names": ["Gaza"], "level": "all", "label": "Gaza"}]},
+ "dbc7f1a7c72a": {"text": "Utenriksdepartementet fraråder reise til eller opphold i Gaza. Reisende bør vurdere nødvendigheten av reiser til Vestbredden. Norske borgere som oppholder seg i eller planlegger å reise til Gaza og Vestbredden oppfordres til å ta kontakt med Representasjonskontoret i Al-Ram og/eller ambassaden i Tel Aviv for oppdatert informasjon og registrering.Sist endret", "same": "03ed908f20b6"},
+ "9dc92598ea9a": {"text": "Utenriksdepartementet fraråder alle reiser til eller opphold i Gaza.", "same": "fdc7d31362dd"},
+ "df9ae955b50a": {"text": "Utenriksdepartementet fraråder alle reiser til eller opphold i Gaza. Reisende oppfordres til å vise aktsomhet ved reiser til og opphold på Vestbredden.", "same": "fdc7d31362dd"},
+ "04c74467cdd8": {"text": "Utenriksdepartementet fraråder alle reiser til Palestina.", "same": "18a2c3b6355a"},
+ "83e32bdfed5f": {"text": "Utenriksdepartementet fraråder alle reiser til Gaza og Vestbredden. For Øst-Jerusalem frarådes reiser som ikke er strengt nødvendige.", "zones": [{"level": "all", "country": true, "label": "Gaza og Vestbredden"}, {"level": "necessary", "point": [35.235, 31.78], "km": 3, "approx": true, "label": "Øst-Jerusalem"}]},
+ "bf3ba336bd13": {"text": "Utenriksdepartementet fraråder alle reiser til Gaza og Vestbredden. Videre frarådes alle reiser til Øst-Jerusalem som ikke er strengt nødvendige.", "same": "83e32bdfed5f"}
 }

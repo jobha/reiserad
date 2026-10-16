@@ -1,0 +1,4 @@
+{
+ "_om": "Soner for eldre tekster på UDs side for gambia. Nøkkel = tekst-hash (python scraper/build.py --missing-history-zones gambia). Format som data/regions.json; se README.",
+ "b956d7819320": {"text": "Utenriksdepartementet fraråder alle reiser til eller opphold i Gambia som ikke er strengt nødvendige.", "zones": [{"level": "necessary", "country": true, "label": "Hele landet"}]}
+}

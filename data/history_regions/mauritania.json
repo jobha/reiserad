@@ -17,5 +17,7 @@
     "label": "Nouakchott"
    }
   ]
- }
+ },
+ "fbb12c81150f": {"text": "Utenriksdepartementet fraråder reise til eller opphold i Mauritania som ikke er strengt nødvendig. Norske borgere som oppholder seg i eller som planlegger å reise til Mauritania oppfordres til å ta kontakt med ambassaden i Rabat, Marokko for oppdatert informasjon og registrering.", "zones": [{"level": "necessary", "country": true, "label": "Hele landet"}]},
+ "7ca86bd4bf87": {"text": "Utenriksdepartementet fraråder reise eller opphold som ikke er strengt nødvendig i Mauritania.", "same": "fbb12c81150f"}
 }

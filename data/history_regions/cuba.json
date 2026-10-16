@@ -1,0 +1,4 @@
+{
+ "_om": "Soner for eldre tekster på UDs side for cuba. Nøkkel = tekst-hash (python scraper/build.py --missing-history-zones cuba). Format som data/regions.json; se README.",
+ "1b0a12f004a2": {"text": "Utenriksdepartementet fraråder reiser som ikke er strengt nødvendige til Cuba.", "zones": [{"level": "necessary", "country": true, "label": "Hele landet"}]}
+}

@@ -1,0 +1,5 @@
+{
+ "_om": "Soner for eldre tekster på UDs side for syria. Nøkkel = tekst-hash (python scraper/build.py --missing-history-zones syria). Format som data/regions.json; se README.",
+ "e1a8c7259d15": {"text": "Utenriksdepartementet fraråder reise til eller opphold i Syria som ikke er strengt nødvendig. Norske borgere som oppholder seg i eller som planlegger å reise til Syria oppfordres til å ta kontakt med ambassaden i Damaskus for oppdatert informasjon og registrering.", "zones": [{"level": "necessary", "country": true, "label": "Hele landet"}]},
+ "79623e3347a7": {"text": "Utenriksdepartementet fraråder alle reiser til eller opphold i Syria", "zones": [{"level": "all", "country": true, "label": "Hele landet"}]}
+}

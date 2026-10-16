@@ -1,0 +1,6 @@
+{
+ "_om": "Soner for eldre tekster på UDs side for sierraleone. Nøkkel = tekst-hash (python scraper/build.py --missing-history-zones sierraleone). Format som data/regions.json; se README.",
+ "22cb94f685ba": {"text": "Utenriksdepartementet fraråder alle reiser til eller opphold i Liberia, Sierra Leone og Guinea.", "zones": [{"level": "all", "country": true, "label": "Hele landet"}]},
+ "337ed6e927c6": {"text": "Utenriksdepartementet fraråder alle reiser til eller opphold i Sierra Leone og Guinea.", "same": "22cb94f685ba"},
+ "8e124fdf766f": {"text": "Utenriksdepartementet fraråder alle reiser til eller opphold som ikke er strengt nødvendig til Sierra Leone.", "zones": [{"level": "necessary", "country": true, "label": "Hele landet"}]}
+}

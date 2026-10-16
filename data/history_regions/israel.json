@@ -70,5 +70,8 @@
   "zones": [
    {"level": "necessary", "country": true, "label": "Israel"}
   ]
- }
+ },
+ "c6f2d223cf50": {"text": "Utenriksdepartementet fraråder alle reiser som ikke er strengt nødvendige til hele Israel.", "zones": [{"level": "necessary", "country": true, "label": "Hele landet"}]},
+ "51befda7594f": {"text": "Utenriksdepartementet fraråder alle reiser til Israel.", "zones": [{"level": "all", "country": true, "label": "Hele landet"}]},
+ "4e10afbab354": {"text": "Utenriksdepartementet fraråder reiser til Israel som ikke er strengt nødvendige.", "same": "c6f2d223cf50"}
 }

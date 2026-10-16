@@ -8,5 +8,8 @@
    {"level": "necessary", "adm": "VEN/ADM1", "names": ["Sucre"], "and": {"poly": [[-64.8, 10.52], [-63.6, 10.52], [-63.6, 10.2], [-61.5, 10.2], [-61.5, 11], [-64.8, 11]]}, "approx": true, "partial": true, "label": "Nordlige og østlige Sucre (Paria)"},
    {"level": "necessary", "adm": "VEN/ADM1", "names": ["Falcón"], "and": {"poly": [[-70.4, 11.55], [-69.6, 11.55], [-69.6, 12.3], [-70.4, 12.3]]}, "label": "Paraguaná-halvøya"}
   ]
- }
+ },
+ "154192a9283e": {"text": "Utenriksdepartementet fraråder alle ikke-nødvendige reiser til og opphold i Venezuela.", "zones": [{"level": "necessary", "country": true, "label": "Hele landet"}]},
+ "adb8685b6eb2": {"text": "Utenriksdepartementet fraråder alle reiser til Venezuela som ikke er strengt nødvendige.", "same": "154192a9283e"},
+ "723329940665": {"text": "Utenriksdepartementet fraråder alle reiser til Venezuela.", "zones": [{"level": "all", "country": true, "label": "Hele landet"}]}
 }

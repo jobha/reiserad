@@ -7,5 +7,8 @@
    {"level": "all", "adm": "BDI/ADM1", "names": ["Bubanza", "Cibitoke"], "label": "Bubanza og Cibitoke"},
    {"level": "all", "poly": [[29.33, -2.62], [29.52, -2.62], [29.57, -3.0], [29.5, -3.25], [29.4, -3.2], [29.35, -2.9]], "approx": true, "label": "Kibira nasjonalpark"}
   ]
- }
+ },
+ "0d897ac5d60b": {"text": "Utenriksdepartementet fraråder alle reiser til eller opphold i Burundi.", "zones": [{"level": "all", "country": true, "label": "Hele landet"}]},
+ "3592df92c957": {"text": "Utenriksdepartementet fraråder alle reiser til eller opphold i Burundi. Norske borgere rådes til å forlate landet.", "same": "0d897ac5d60b"},
+ "8bb09622207b": {"text": "Utenriksdepartementet fraråder alle reiser til Burundi som ikke er strengt nødvendige.", "zones": [{"level": "necessary", "country": true, "label": "Hele landet"}]}
 }

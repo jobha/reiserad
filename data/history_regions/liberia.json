@@ -1,4 +1,6 @@
 {
  "_om": "Soner for eldre tekster på UDs side for liberia. Nøkkel = tekst-hash (python scraper/build.py --missing-history-zones liberia). Format som data/regions.json; se README.",
- "d9aecf6840d2": {"text": "Utenriksdepartementet fraråder alle reiser til eller opphold i Liberia, med unntak av Monrovia, som ikke er strengt nødvendige.", "zones": [{"level": "necessary", "country": true, "label": "Utenfor Monrovia"}, {"level": "none", "point": [-10.8, 6.31], "km": 15, "approx": true, "label": "Monrovia"}]}
+ "d9aecf6840d2": {"text": "Utenriksdepartementet fraråder alle reiser til eller opphold i Liberia, med unntak av Monrovia, som ikke er strengt nødvendige.", "zones": [{"level": "necessary", "country": true, "label": "Utenfor Monrovia"}, {"level": "none", "point": [-10.8, 6.31], "km": 15, "approx": true, "label": "Monrovia"}]},
+ "22cb94f685ba": {"text": "Utenriksdepartementet fraråder alle reiser til eller opphold i Liberia, Sierra Leone og Guinea.", "zones": [{"level": "all", "country": true, "label": "Hele landet"}]},
+ "5ecfaa0375f7": {"text": "Utenriksdepartementet fraråder alle reiser til eller opphold i Liberia som ikke er strengt nødvendige.", "zones": [{"level": "necessary", "country": true, "label": "Hele landet"}]}
 }

@@ -1,0 +1,4 @@
+{
+ "_om": "Soner for eldre tekster på UDs side for mexico. Nøkkel = tekst-hash (python scraper/build.py --missing-history-zones mexico). Format som data/regions.json; se README.",
+ "1fd2e8c57d92": {"text": "I tråd med norske helsemyndigheters anbefaling, fraråder Utenriksdepartementet reiser til Mexico som ikke er strengt nødvendig.", "zones": [{"level": "necessary", "country": true, "label": "Hele landet"}]}
+}
