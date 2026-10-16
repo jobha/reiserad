@@ -91,9 +91,22 @@ def labels(ne_feats, info):
     return {"countries": countries, "places": places, "former": former}
 
 
+def crimea_to_ukraine(feats):
+    """Natural Earth tegner Krim som russisk (faktisk kontroll). Norge, UD og FN (res. 68/262)
+    regner Krim som en del av Ukraina, så flaten flyttes fra RUS til UKR."""
+    by = {f["properties"]["ADM0_A3"]: f for f in feats}
+    rus, ukr = shape(by["RUS"]["geometry"]), shape(by["UKR"]["geometry"])
+    krim = [g for g in rus.geoms if 32.4 < g.centroid.x < 36.7 and 44.3 < g.centroid.y < 46.3]
+    if not krim:
+        return
+    by["RUS"]["geometry"] = mapping(unary_union([g for g in rus.geoms if g not in krim]))
+    by["UKR"]["geometry"] = mapping(unary_union([ukr, *krim]).buffer(0))
+
+
 def load_ne():
     fetch(NE_URL, NE_PATH)
     feats = json.loads(NE_PATH.read_text())["features"]
+    crimea_to_ukraine(feats)
     # Forenkle alle land samlet, så naboer deler nøyaktig samme grenselinje
     # (ingen glipper eller overlapp). Alt annet bygges på disse flatene og
     # forenkles ikke på nytt.
@@ -178,7 +191,7 @@ def zone_geom(z, country, ne, proj, iso=None):
 
 def paint(spec_zones, country, ne, proj, iso):
     """[(geom, sone)] i rekkefølge; senere soner skjærer bort det de dekker fra tidligere.
-    outside=True: ikke klipp til Natural Earths landegrense (Krym ligger i RUS der)."""
+    outside=True: ikke klipp til landegrensen."""
     painted = []
     for z in spec_zones:
         g = zone_geom(z, country, ne, proj, iso)
@@ -435,7 +448,7 @@ def build():
 # Natural Earth; her er alle endringene sammenslåinger av dagens land, så union er nok.
 # main = landet som arver UDs side og tegnede soner; til = første dag med dagens grenser.
 # Øst-Timor tegnes for seg hele perioden (FN-administrert 1999–2002, Indonesias okkupasjon
-# før det ble aldri anerkjent av FN), og Krim følger Natural Earth som ellers på kartet.
+# før det ble aldri anerkjent av FN), og Krim er Ukraina hele tiden (crimea_to_ukraine).
 FORMER = [
     {"id": "SDN-1956", "name": "Sudan", "main": "SDN", "parts": ["SDN", "SDS"], "to": "2011-07-09"},
     {"id": "YUG", "name": "Jugoslavia", "main": "SRB", "parts": ["SRB", "MNE", "KOS"], "to": "2003-02-04"},
