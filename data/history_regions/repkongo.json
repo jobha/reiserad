@@ -4,7 +4,7 @@
   "text": "Reiser til eller opphold i Pool-regionen samt de østlige deler av Bouenza-regionen som ikke er strengt nødvendige frarådes. Reisende oppfordres til å utvise aktsomhet ved reiser til eller opphold i øvrige deler av Republikken Kongo (Kongo - Brazzaville).",
   "zones": [
    {"level": "necessary", "adm": "COG/ADM1", "names": ["Pool"], "label": "Pool-regionen"},
-   {"level": "necessary", "adm": "COG/ADM1", "names": ["Bouenza"], "and": {"poly": [[13.6, -5], [15, -5], [15, -3], [13.6, -3]]}, "approx": true, "partial": true, "label": "Østlige deler av Bouenza"}
+   {"level": "necessary", "adm": "COG/ADM1", "names": ["Bouenza"], "and": {"poly": [[13.6, -5], [15, -5], [15, -3], [13.6, -3]]}, "approx": true, "label": "Østlige deler av Bouenza"}
   ]
  },
  "33622a62d045": {

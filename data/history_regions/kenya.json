@@ -25,7 +25,7 @@
    {"level": "necessary", "border": ["SOM", "SOL"], "km": 60, "label": "Innenfor 60 km fra grensen mot Somalia"},
    {"level": "necessary", "adm": "KEN/ADM1", "names": ["Garissa"], "label": "Garissa fylke"},
    {"level": "necessary", "adm": "KEN/ADM1", "names": ["Lamu"], "label": "Lamu fylke"},
-   {"level": "necessary", "adm": "KEN/ADM1", "names": ["Tana River"], "label": "Tana River fylke nordøst for elven", "partial": true, "approx": true, "and": {"poly": [[39.65, -0.45], [39.95, -1.1], [40.03, -1.5], [40.12, -2.27], [40.52, -2.55], [41.6, -2.55], [41.6, 0.6], [39.65, 0.6]]}}
+   {"level": "necessary", "adm": "KEN/ADM1", "names": ["Tana River"], "label": "Tana River fylke nordøst for elven", "approx": true, "and": {"poly": [[39.65, -0.45], [39.95, -1.1], [40.03, -1.5], [40.12, -2.27], [40.52, -2.55], [41.6, -2.55], [41.6, 0.6], [39.65, 0.6]]}}
   ]
  },
  "19e8b9fcd11e": {

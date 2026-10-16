@@ -5,7 +5,7 @@
   "zones": [
    {"level": "necessary", "border": ["COL", "BRA"], "km": 50, "approx": true, "label": "Grenseområdene mot Colombia og Brasil"},
    {"level": "necessary", "poly": [[-67.2, 7.5], [-65.5, 7.7], [-64, 8.0], [-62.5, 8.3], [-61.0, 8.4], [-60.6, 7.6], [-60.8, 6.3], [-63, 5.9], [-65.5, 5.8], [-67.2, 6.2]], "and": {"adm": "VEN/ADM1", "names": ["Bolívar"]}, "approx": true, "label": "Arco Minero"},
-   {"level": "necessary", "adm": "VEN/ADM1", "names": ["Sucre"], "and": {"poly": [[-64.8, 10.52], [-63.6, 10.52], [-63.6, 10.2], [-61.5, 10.2], [-61.5, 11], [-64.8, 11]]}, "approx": true, "partial": true, "label": "Nordlige og østlige Sucre (Paria)"},
+   {"level": "necessary", "adm": "VEN/ADM1", "names": ["Sucre"], "and": {"poly": [[-64.8, 10.52], [-63.6, 10.52], [-63.6, 10.2], [-61.5, 10.2], [-61.5, 11], [-64.8, 11]]}, "approx": true, "label": "Nordlige og østlige Sucre (Paria)"},
    {"level": "necessary", "adm": "VEN/ADM1", "names": ["Falcón"], "and": {"poly": [[-70.4, 11.55], [-69.6, 11.55], [-69.6, 12.3], [-70.4, 12.3]]}, "label": "Paraguaná-halvøya"}
   ]
  },

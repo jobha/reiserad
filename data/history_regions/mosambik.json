@@ -17,7 +17,7 @@
   "text": "Utenriksdepartementet fraråder reiser som ikke er strengt nødvendige til provinsene Cabo Delgado, Manica og Sofala, samt sørlige deler av provinsen Zambezia.",
   "zones": [
    {"level": "necessary", "adm": "MOZ/ADM1", "names": ["Cabo Delgado", "Manica", "Sofala"], "label": "Cabo Delgado, Manica og Sofala"},
-   {"level": "necessary", "adm": "MOZ/ADM1", "names": ["Zambézia"], "and": {"poly": [[35, -17.3], [38.5, -17.3], [38.5, -19.5], [35, -19.5]]}, "approx": true, "partial": true, "label": "Sørlige Zambézia"}
+   {"level": "necessary", "adm": "MOZ/ADM1", "names": ["Zambézia"], "and": {"poly": [[35, -17.3], [38.5, -17.3], [38.5, -19.5], [35, -19.5]]}, "approx": true, "label": "Sørlige Zambézia"}
   ]
  },
  "efc6c3b24fa5": {

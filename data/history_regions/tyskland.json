@@ -1,0 +1,4 @@
+{
+ "_om": "Soner for eldre tekster på UDs side for tyskland. Nøkkel = tekst-hash (python scraper/build.py --missing-history-zones tyskland). Format som data/regions.json; se README.",
+ "8c48cbe8115a": {"text": "Utenriksdepartementet fraråder reiser som ikke er strengt nødvendige til delstatene Nordrhein-Westfalen og Bayern.", "zones": [{"level": "necessary", "adm": "DEU/ADM1", "names": ["Nordrhein-Westfalen", "Bayern"], "label": "Nordrhein-Westfalen og Bayern"}]}
+}

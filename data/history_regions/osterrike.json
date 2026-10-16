@@ -1,0 +1,4 @@
+{
+ "_om": "Soner for eldre tekster på UDs side for osterrike. Nøkkel = tekst-hash (python scraper/build.py --missing-history-zones osterrike). Format som data/regions.json; se README.",
+ "f67410a41eca": {"text": "Utenriksdepartementet fraråder reiser som ikke er strengt nødvendige til Tirol i Østerrike.", "zones": [{"level": "necessary", "adm": "AUT/ADM1", "names": ["Tirol"], "label": "Tirol"}]}
+}

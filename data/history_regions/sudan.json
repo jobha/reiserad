@@ -5,7 +5,7 @@
   "zones": [
    {"level": "all", "adm": "SDN/ADM1", "names": ["North Darfur", "West Darfur", "Central Darfur", "South Darfur", "East Darfur"], "label": "Darfur"},
    {"level": "all", "adm": "SDN/ADM1", "names": ["South Kordofan"], "label": "Sør-Kordofan"},
-   {"level": "all", "adm": "SDN/ADM1", "names": ["West Kordofan"], "label": "Sørlige Vest-Kordofan (del av Sør-Kordofan i 2011)", "approx": true, "partial": true, "and": {"poly": [[26, 8], [30, 8], [30, 11.8], [26, 11.8]]}}
+   {"level": "all", "adm": "SDN/ADM1", "names": ["West Kordofan"], "label": "Sørlige Vest-Kordofan (del av Sør-Kordofan i 2011)", "approx": true, "and": {"poly": [[26, 8], [30, 8], [30, 11.8], [26, 11.8]]}}
   ]
  },
  "ede56d1be447": {
@@ -29,14 +29,14 @@
   "text": "Utenriksdepartementet fraråder alle reiser til Darfur, samt grenseområdene mot Libya, Sør-Sudan (inkl. Abyei, Sør-Kordofan og Blånilen), Etiopia og Eritrea. Utenriksdepartementet fraråder alle reiser som ikke er strengt nødvendige til øvrige områder i Sudan.",
   "zones": [
    {"level": "necessary", "country": true, "label": "Resten av landet"},
-   {"level": "all", "adm": "SDN/ADM1", "names": ["South Kordofan", "Blue Nile"], "label": "Sør-Kordofan og Blånilen", "partial": true, "approx": true},
+   {"level": "all", "adm": "SDN/ADM1", "names": ["South Kordofan", "Blue Nile"], "label": "Sør-Kordofan og Blånilen", "approx": true},
    {"level": "all", "border": ["LBY", "SDS", "ETH", "ERI"], "km": 50, "label": "Grenseområdene mot Libya, Sør-Sudan, Etiopia og Eritrea", "approx": true},
    {"level": "all", "adm": "SDN/ADM1", "names": ["Abyei PCA"], "label": "Abyei"},
    {"level": "all", "adm": "SDN/ADM1", "names": ["North Darfur", "West Darfur", "Central Darfur", "South Darfur", "East Darfur"], "label": "Darfur"}
   ]
  },
  "d63e8b91343e": {"text": "Utenriksdepartementet fraråder reiser til eller opphold i Darfur. Norske borgere som oppholder seg i eller planlegger reise til Sudan oppfordres til å ta kontakt med ambassaden i Khartoum eller med generalkonsulatet i Juba for oppdatert informasjon og registrering.", "zones": [{"level": "all", "adm": "SDN/ADM1", "names": ["North Darfur", "West Darfur", "Central Darfur", "South Darfur", "East Darfur"], "label": "Darfur"}]},
- "6d6174ca8d35": {"text": "Utenriksdepartementet fraråder alle reiser til eller opphold i Darfur, Sør-Kordofan, Blånilen samt Abyei.", "zones": [{"level": "all", "adm": "SDN/ADM1", "names": ["North Darfur", "West Darfur", "Central Darfur", "South Darfur", "East Darfur"], "label": "Darfur"}, {"level": "all", "adm": "SDN/ADM1", "names": ["South Kordofan"], "label": "Sør-Kordofan"}, {"level": "all", "adm": "SDN/ADM1", "names": ["West Kordofan"], "label": "Sørlige Vest-Kordofan (del av Sør-Kordofan i 2011)", "approx": true, "partial": true, "and": {"poly": [[26, 8], [30, 8], [30, 11.8], [26, 11.8]]}}, {"level": "all", "adm": "SDN/ADM1", "names": ["Blue Nile"], "label": "Blånilen"}, {"level": "all", "adm": "SDN/ADM1", "names": ["Abyei PCA"], "label": "Abyei"}]},
+ "6d6174ca8d35": {"text": "Utenriksdepartementet fraråder alle reiser til eller opphold i Darfur, Sør-Kordofan, Blånilen samt Abyei.", "zones": [{"level": "all", "adm": "SDN/ADM1", "names": ["North Darfur", "West Darfur", "Central Darfur", "South Darfur", "East Darfur"], "label": "Darfur"}, {"level": "all", "adm": "SDN/ADM1", "names": ["South Kordofan"], "label": "Sør-Kordofan"}, {"level": "all", "adm": "SDN/ADM1", "names": ["West Kordofan"], "label": "Sørlige Vest-Kordofan (del av Sør-Kordofan i 2011)", "approx": true, "and": {"poly": [[26, 8], [30, 8], [30, 11.8], [26, 11.8]]}}, {"level": "all", "adm": "SDN/ADM1", "names": ["Blue Nile"], "label": "Blånilen"}, {"level": "all", "adm": "SDN/ADM1", "names": ["Abyei PCA"], "label": "Abyei"}]},
  "90ee559ef7ae": {"text": "Utenriksdepartementet fraråder alle reiser til Sudan.", "zones": [{"level": "all", "country": true, "label": "Hele landet"}]},
  "c8419129d1ec": {"text": "Utenriksdepartement fraråder alle reiser til hele landet.", "same": "90ee559ef7ae"}
 }

@@ -1,0 +1,7 @@
+{
+ "_om": "Soner for eldre tekster på UDs side for kina. Nøkkel = tekst-hash (python scraper/build.py --missing-history-zones kina). Format som data/regions.json; se README.",
+ "1e41fc8215d1": {"text": "Utenriksdepartementet fraråder reiser til Hubei-provinsen som ikke er strengt nødvendige.", "zones": [{"level": "necessary", "adm": "CHN/ADM1", "names": ["Hubei Province"], "label": "Hubei"}]},
+ "bae07239be35": {"text": "Utenriksdepartementet fraråder alle reiser til Hubei-provinsen.", "zones": [{"level": "all", "adm": "CHN/ADM1", "names": ["Hubei Province"], "label": "Hubei"}]},
+ "10752604d62e": {"text": "Utenriksdepartementet fraråder alle reiser til Hubei-provinsen. Utenriksdepartementet fraråder reiser som ikke er strengt nødvendige til det øvrige Kina, med unntak av Hongkong og Macau samt Taiwan.", "zones": [{"level": "necessary", "country": true, "label": "Det øvrige Kina (uten Hongkong, Macau og Taiwan)"}, {"level": "all", "adm": "CHN/ADM1", "names": ["Hubei Province"], "label": "Hubei"}]},
+ "2266addfe77f": {"text": "Utenriksdepartementet fraråder alle reiser til Shanghai som ikke er strengt nødvendige.", "zones": [{"level": "necessary", "adm": "CHN/ADM1", "names": ["Shanghai Municipality"], "label": "Shanghai"}]}
+}

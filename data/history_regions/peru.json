@@ -1,0 +1,5 @@
+{
+ "_om": "Soner for eldre tekster på UDs side for peru. Nøkkel = tekst-hash (python scraper/build.py --missing-history-zones peru). Format som data/regions.json; se README.",
+ "1a800587a6c8": {"text": "Utenriksdepartementet fraråder reiser som ikke er strengt nødvendige til regionene Cuzco, Puno, Arequipa og Apurimac.", "zones": [{"level": "necessary", "adm": "PER/ADM1", "names": ["Cusco", "Puno", "Arequipa", "Apurímac"], "label": "Cuzco, Puno, Arequipa og Apurímac"}]},
+ "f713e2b473b8": {"text": "Utenriksdepartementet fraråder reiser til regionen Puno som ikke er strengt nødvendige.", "zones": [{"level": "necessary", "adm": "PER/ADM1", "names": ["Puno"], "label": "Puno"}]}
+}

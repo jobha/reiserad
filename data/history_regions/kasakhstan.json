@@ -1,0 +1,4 @@
+{
+ "_om": "Soner for eldre tekster på UDs side for kasakhstan. Nøkkel = tekst-hash (python scraper/build.py --missing-history-zones kasakhstan). Format som data/regions.json; se README.",
+ "148097373e0e": {"text": "Utenriksdepartementet fraråder alle reiser til Kasakhstan som ikke er strengt nødvendige.", "zones": [{"level": "necessary", "country": true, "label": "Hele landet"}]}
+}

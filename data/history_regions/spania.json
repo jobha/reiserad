@@ -1,0 +1,4 @@
+{
+ "_om": "Soner for eldre tekster på UDs side for spania. Nøkkel = tekst-hash (python scraper/build.py --missing-history-zones spania). Format som data/regions.json; se README.",
+ "5c30ee08002d": {"text": "Utenriksdepartementet fraråder reiser som ikke er strengt nødvendige til regionene Madrid, Baskerland og La Rioja.", "zones": [{"level": "necessary", "adm": "ESP/ADM1", "names": ["Comunidad de Madrid", "País Vasco/Euskadi", "La Rioja"], "label": "Madrid, Baskerland og La Rioja"}]}
+}

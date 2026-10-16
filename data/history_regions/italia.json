@@ -1,0 +1,5 @@
+{
+ "_om": "Soner for eldre tekster på UDs side for italia. Nøkkel = tekst-hash (python scraper/build.py --missing-history-zones italia). Format som data/regions.json; se README.",
+ "584cb25c6207": {"text": "Utenriksdepartementet fraråder reiser til regionene Piemonte, Lombardia, Emilia-Romagna og Veneto som ikke er strengt nødvendige.", "zones": [{"level": "necessary", "adm": "ITA/ADM2", "names": ["Piemonte", "Lombardia", "Emilia-Romagna", "Veneto"], "label": "Piemonte, Lombardia, Emilia-Romagna og Veneto"}]},
+ "501018e28da9": {"text": "Utenriksdepartementet fraråder reiser som ikke er strengt nødvendige til Italia.", "zones": [{"level": "necessary", "country": true, "label": "Hele landet"}]}
+}

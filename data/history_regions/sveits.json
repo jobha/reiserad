@@ -1,0 +1,4 @@
+{
+ "_om": "Soner for eldre tekster på UDs side for sveits. Nøkkel = tekst-hash (python scraper/build.py --missing-history-zones sveits). Format som data/regions.json; se README.",
+ "e752dfc2c086": {"text": "Utenriksdepartementet fraråder reiser som ikke er strengt nødvendige til byen Samnaun (kanton Graubünden) og byen Zermatt, samt områdene som grenser til Ischgl og italienske Cervinia.", "zones": [{"level": "necessary", "point": [10.36, 46.94], "km": 5, "approx": true, "label": "Samnaun (Graubünden)"}, {"level": "necessary", "point": [7.75, 46.02], "km": 8, "approx": true, "label": "Zermatt"}, {"level": "necessary", "point": [10.29, 47.01], "km": 15, "approx": true, "label": "Områdene som grenser til Ischgl"}, {"level": "necessary", "point": [7.63, 45.94], "km": 10, "approx": true, "label": "Områdene som grenser til Cervinia"}]}
+}

@@ -7,8 +7,8 @@ Kjøres for hånd (ikke i CI):  python3 tools/wayback_history.py [slug ...]
 Rå kopier caches i .cache/wayback/, så en avbrutt kjøring kan fortsette.
 Datoene er datoen for arkivkopien, ikke når UD endret teksten, og er derfor omtrentlige.
 
-UD har brukt to faktaboks-utforminger: «Reiseadvarsel for X» (i dag) og
-«X - reiseråd» (rundt 2018–2021). Boksen «Reiseråd for alle land» (korona) hoppes
+UD har brukt tre faktaboks-utforminger: «Reiseadvarsel for X» (i dag),
+«X - reiseråd» (rundt 2018–2021) og «Reiseråd for X» (2020–2022). Boksen «Reiseråd for alle land» (korona) hoppes
 over. Før faktaboksene sto advarslene i løpende tekst; de kopiene brukes ikke,
 og en kopi uten advarselsboks teller bare som «ingen advarsel» etter at boksene
 ble tatt i bruk (FIRST_BOX).
@@ -34,8 +34,9 @@ from scrape import text  # noqa: E402
 CACHE = ROOT / ".cache" / "wayback"
 OUT = ROOT / "data" / "history_archive.json"
 UA = "reiserad-kart/1.0 (+https://xn--reiserd-jxa.no; historikk fra web.archive.org)"
-# «Reiseadvarsel for X» eller «X - reiseråd». Ikke «Reiseråd for alle land» / «Hva er UDs reiseråd …».
-COUNTRY_BOX = re.compile(r"^reiseadvarsel\b|\s[-–]\s*reiseråd$", re.I)
+# «Reiseadvarsel for X», «X - reiseråd» eller «Reiseråd for X» (2020–22). Ikke «Reiseråd for alle land» /
+# «Hva er UDs reiseråd …».
+COUNTRY_BOX = re.compile(r"^reiseadvarsel\b|\s[-–]\s*reiseråd$|^reiseråd for (?!alle land)", re.I)
 WORKERS = 2
 MAX_GAP_DAYS = 183
 FIRST_BOX = "2018-01-01"  # justeres etter første kjøring, se main()
@@ -103,8 +104,11 @@ def parse(page):
         pre = re.search(r'class="factbox-pre-title">(.*?)</p>', head, re.S)
         paras = [p for p in (text(p) for p in re.findall(r"<p[^>]*>(.*?)</p>", body, re.S)) if p] or [text(body)]
         return "box", {"title": title, "status": text(pre.group(1)) if pre else "", "paragraphs": paras}
-    # Bare det globale koronarådet (2020–21): landets egen status er ukjent.
-    return ("box", None) if boxes and not global_box else (None, None)
+    # Bare det globale koronarådet (2020–21): landet hadde ingen egen advarsel. Land med egen advarsel
+    # viste begge boksene, og ingen land fikk sin egen boks tilbake etter at den var borte.
+    if boxes and global_box:
+        return "global", None
+    return ("box", None) if boxes else (None, None)
 
 
 def country(url):
@@ -151,8 +155,8 @@ def country(url):
     return [seen[i] for i in sorted(seen) if seen[i]]
 
 
-# Under koronapandemien viste landsidene bare UDs globale reiseråd (lagret som layout None):
-# da vet vi ikke om landet hadde en egen advarsel.
+# Under koronapandemien viste landsidene UDs globale reiseråd («global»), og landets egen boks bare
+# når landet hadde en egen advarsel. Kopier uten noen boks (layout None) er ukjente.
 CORONA = ("2020-03-12", "2021-10-01")
 
 
@@ -168,8 +172,10 @@ def collapse(snaps, first_box):
         if entries and entries[-1]["paragraphs"] == paragraphs:
             if w:
                 entries[-1]["status"] = w["status"]
+            entries[-1]["seen"] = s["date"]
             continue
-        entries.append({"from": s["date"], "status": w["status"] if w else "", "paragraphs": paragraphs})
+        # seen = siste kopi med samme tekst: history.py lar ikke en UD-liste overstyre teksten før den datoen.
+        entries.append({"from": s["date"], "status": w["status"] if w else "", "paragraphs": paragraphs, "seen": s["date"]})
     return entries
 
 

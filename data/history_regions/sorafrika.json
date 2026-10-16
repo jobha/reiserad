@@ -1,0 +1,4 @@
+{
+ "_om": "Soner for eldre tekster på UDs side for sorafrika. Nøkkel = tekst-hash (python scraper/build.py --missing-history-zones sorafrika). Format som data/regions.json; se README.",
+ "16a727f1a4af": {"text": "Utenriksdepartementet fraråder alle reiser som ikke er strengt nødvendige til Sør Afrika.", "zones": [{"level": "necessary", "country": true, "label": "Hele landet"}]}
+}

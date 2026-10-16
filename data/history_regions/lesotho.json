@@ -1,0 +1,4 @@
+{
+ "_om": "Soner for eldre tekster på UDs side for lesotho. Nøkkel = tekst-hash (python scraper/build.py --missing-history-zones lesotho). Format som data/regions.json; se README.",
+ "632db29266b6": {"text": "Utenriksdepartementet fraråder alle reiser som ikke er strengt nødvendige til Lesotho.", "zones": [{"level": "necessary", "country": true, "label": "Hele landet"}]}
+}

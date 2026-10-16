@@ -101,6 +101,8 @@ def build():
     return out
 
 
+# Koronapandemien: landsidene viste UDs globale reiseråd (tools/wayback_history.py CORONA).
+CORONA = ("2020-03-12", "2021-10-01")
 LIST_DAYS = 400  # så lenge en observasjon gjelder hvis ingen nyere kilde sier noe
 
 
@@ -184,6 +186,15 @@ def _overlay(entries, obs):
             if kind != "seen":
                 extend(i, horizon)
             continue  # stemmer med det vi vet (en tekst er mer enn «står på listen»)
+        if kind == "absent" and state and state != "listed" and cur.get("seen", "") > d:
+            # Arkivkopier viser teksten på landsiden både før og etter listen (Afghanistan manglet på
+            # listen 2.7.2019): listen tok feil, teksten gjelder.
+            extend(i, horizon)
+            continue
+        if kind == "listed" and state == "" and cur is not None and not cur.get("obs") and CORONA[0] <= d < CORONA[1]:
+            # Landsiden viste bare UDs globale koronaråd (ingen egen advarsel), men «Land med reiseråd»
+            # ble ikke ryddet under pandemien (Kina sto der til aug. 2021): siden vinner.
+            continue
         if kind == "fill" and state and state != "listed":
             continue  # pressemeldingen erstatter ikke UDs egen tekst
         if kind == "lift" and not state:

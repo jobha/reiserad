@@ -10,8 +10,129 @@
  "8a2fd9aca2d0": {
   "text": "Utenriksdepartementet fraråder reiser som ikke er strengt nødvendige innenfor 20 km fra grensen mot Venezuela og Ecuador, samt utenfor etablerte turistområder og bykjernen i større byer i fylkene Norte de Santander, Arauca, Nariño, Cauca, Putumayo, Guaviare og Vichada.",
   "zones": [
-   {"level": "necessary", "partial": true, "adm": "COL/ADM1", "names": ["Norte de Santander", "Arauca", "Nariño", "Cauca", "Putumayo", "Guaviare", "Vichada"], "label": "Utenfor turistområder og bykjerner i disse fylkene"},
-   {"level": "necessary", "border": ["VEN", "ECU"], "km": 20, "label": "Innenfor 20 km fra grensen mot Venezuela og Ecuador"}
+   {
+    "level": "necessary",
+    "adm": "COL/ADM1",
+    "names": [
+     "Norte de Santander",
+     "Arauca",
+     "Nariño",
+     "Cauca",
+     "Putumayo",
+     "Guaviare",
+     "Vichada"
+    ],
+    "label": "Fylkene Norte de Santander, Arauca, Nariño, Cauca, Putumayo, Guaviare og Vichada"
+   },
+   {
+    "level": "none",
+    "point": [
+     -72.52,
+     7.92
+    ],
+    "km": 6,
+    "approx": true,
+    "label": "Bykjernen i Cúcuta"
+   },
+   {
+    "level": "none",
+    "point": [
+     -77.281,
+     1.214
+    ],
+    "km": 5,
+    "approx": true,
+    "label": "Bykjernen i Pasto"
+   },
+   {
+    "level": "none",
+    "point": [
+     -76.61,
+     2.42
+    ],
+    "km": 4,
+    "approx": true,
+    "label": "Bykjernen i Popayán"
+   },
+   {
+    "level": "none",
+    "point": [
+     -77.65,
+     0.83
+    ],
+    "km": 3,
+    "approx": true,
+    "label": "Bykjernen i Ipiales"
+   },
+   {
+    "level": "none",
+    "point": [
+     -70.762,
+     7.091
+    ],
+    "km": 3,
+    "approx": true,
+    "label": "Bykjernen i Arauca"
+   },
+   {
+    "level": "none",
+    "point": [
+     -76.63,
+     1.15
+    ],
+    "km": 2,
+    "approx": true,
+    "label": "Bykjernen i Mocoa"
+   },
+   {
+    "level": "none",
+    "point": [
+     -72.64,
+     2.57
+    ],
+    "km": 2,
+    "approx": true,
+    "label": "Bykjernen i San José del Guaviare"
+   },
+   {
+    "level": "none",
+    "point": [
+     -67.493,
+     6.185
+    ],
+    "km": 2,
+    "approx": true,
+    "label": "Bykjernen i Puerto Carreño"
+   },
+   {
+    "level": "none",
+    "point": [
+     -78.76,
+     1.8
+    ],
+    "km": 3,
+    "approx": true,
+    "label": "Bykjernen i Tumaco"
+   },
+   {
+    "level": "none",
+    "point": [
+     -76.03,
+     2.58
+    ],
+    "km": 6,
+    "approx": true,
+    "label": "Turistområde: Tierradentro"
+   },
+   {
+    "level": "necessary",
+    "border": [
+     "VEN",
+     "ECU"
+    ],
+    "km": 20,
+    "label": "Innenfor 20 km fra grensen mot Venezuela og Ecuador"
+   }
   ]
  }
 }

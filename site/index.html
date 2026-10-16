@@ -582,7 +582,8 @@ function tlFill(layer, l, iso) {
   const st = tlState(iso);
   if (st.level === "?") l.setStyle({ fillColor: css("--muted"), fillOpacity: .28, color: css("--land-line"), weight: .7 });
   else if (st.level === "listed") l.setStyle(fillFor("necessary", true));
-  else if (st.level) l.setStyle(fillFor(st.level, st.partial));
+  // Siste utvei for en eldre tekst uten tegnede soner (build.py advarer): hele landet, ikke skravert.
+  else if (st.level) l.setStyle(fillFor(st.level, false));
   else layer.resetStyle(l);
 }
 function tlPopup(iso, ne, zone) {

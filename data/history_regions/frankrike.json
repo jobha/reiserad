@@ -1,0 +1,4 @@
+{
+ "_om": "Soner for eldre tekster på UDs side for frankrike. Nøkkel = tekst-hash (python scraper/build.py --missing-history-zones frankrike). Format som data/regions.json; se README.",
+ "5b397ce61949": {"text": "Utenriksdepartementet fraråder reiser til Frankrike som ikke er strengt nødvendige.", "zones": [{"level": "necessary", "country": true, "label": "Hele landet"}]}
+}

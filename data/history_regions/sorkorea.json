@@ -1,0 +1,4 @@
+{
+ "_om": "Soner for eldre tekster på UDs side for sorkorea. Nøkkel = tekst-hash (python scraper/build.py --missing-history-zones sorkorea). Format som data/regions.json; se README.",
+ "01a15adc8350": {"text": "Utenriksdepartementet fraråder reiser til byen Daegu og provinsen Gyeongsangbuk-do som ikke er strengt nødvendige.", "zones": [{"level": "necessary", "adm": "KOR/ADM1", "names": ["Daegu", "North Gyeongsang"], "label": "Daegu og Gyeongsangbuk-do"}]}
+}
