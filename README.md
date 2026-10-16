@@ -40,6 +40,33 @@ deploy/nginx.conf   nginx-oppsettet på Pi-en (301 fra reiseråd til reiserad)
   åpner en issue. Et nytt land med regional advarsel som ikke er kartlagt, vises
   skravert i hele landet til det er tegnet inn.
 
+### Soner for eldre tekster (tidslinjen)
+
+Tidslinjen viser dagens soner så lenge dagens tekst gjaldt. Eldre regionale tekster
+tegnes i én fil per land, `data/history_regions/<UD-nøkkel>.json` (nøkkelen som i
+`regions.json`, f.eks. `ukraina`), så flere kan tegne samtidig uten konflikter:
+
+```json
+{
+  "_om": "fritekst, ignoreres",
+  "<tekst-hash>": {"text": "UDs tekst, for lesbarhet", "zones": [ ... som i regions.json ... ]},
+  "<annen hash>": {"text": "...", "same": "<tekst-hash>"}
+}
+```
+
+- Hashen er `sha1(" ".join(avsnitt))[:12]`, som `hash` i `advisories.json`.
+- `same` gjenbruker sonene til en annen tekst for samme land (bare ordlyden endret).
+- `outside: true` på en sone dropper klippingen mot Natural Earths landegrense
+  (Krym ligger i Russland der). En tekst som gjelder hele landet, tegnes som
+  `[{"level": ..., "country": true}]`, så den ikke lenger står på listen under.
+- `build.py` skriver flatene til `site/data/timeline_zones.json` (forenklet til ~1 km),
+  som kartet laster først når noen drar i tidslinjen.
+
+```
+.venv/bin/python scraper/build.py --missing-history-zones          # hva mangler, per land
+.venv/bin/python scraper/build.py --missing-history-zones egypt    # hele tekstene for ett land
+```
+
 ## Oppdatere en kartlegging
 
 ```
