@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
-"""Reiseråd fra UDs gamle landsider.no (2006–2015), hentet fra Wayback Machine.
+"""UDs offisielle reiseråd før dagens faktaboks: landsider.no (2006–2015) og
+regjeringen.no/…/velg-reiserad (2016–2018), hentet fra Wayback Machine.
 
 Kjøres for hånd:  python3 tools/landsider_history.py [--fetch]
 
@@ -36,14 +37,23 @@ def cdx(prefix, **extra):
 
 
 def path(orig):
-    return re.sub(r"^https?://(www\.)?landsider\.no(:80)?", "", orig).split("?")[0].lower()
+    """Sti uten vert. regjeringen.no-adresser forkortes til /velg-reiserad/…"""
+    p = re.sub(r"^https?://(www\.)?(landsider\.no|regjeringen\.no)(:80)?", "", orig).split("?")[0].lower()
+    return p.replace("/no/tema/utenrikssaker/reiseinformasjon", "")
 
 
 def wanted():
     out = []
     for ts, orig in cdx("landsider.no/traveladvice/"):
         p = path(orig)
-        if re.fullmatch(r"/traveladvice/([^/]+/)?", p):
+        if re.fullmatch(r"/traveladvice(\.html|/([^/]+/)?)?", p):
+            out.append((ts, orig))
+    # 2016–2018: regjeringen.no/…/reiseinformasjon/velg-reiserad/ (oversikt + én side per land).
+    for ts, orig in cdx("regjeringen.no/no/tema/utenrikssaker/reiseinformasjon/velg-reiserad/"):
+        out.append((ts, orig))
+    # 2006–2009: reiserådet sto på /land/<x>/raad(.htm).
+    for ts, orig in cdx("landsider.no/land/", **{"to": "2010"}):
+        if re.fullmatch(r"/land/[^/]+/raad(\.htm)?/?", path(orig)):
             out.append((ts, orig))
     if "--landsider-land" in sys.argv:
         # Landsidene er mange (~3000 kopier) og gjentar stort sett reiserådssidene; bare ved behov.
@@ -53,7 +63,7 @@ def wanted():
     return sorted(set(out))
 
 
-DATE = re.compile(r"(\d{1,2})\.(\d{1,2})\.(\d{4})")
+DATE = re.compile(r"(\d{1,2})[./](\d{1,2})[./](\d{4})")
 
 
 def iso(d):
@@ -75,10 +85,12 @@ def parse(page, p):
     """Liste over funn: {"kind": "list", "names": [...]} eller
     {"kind": "advice", "name", "ud_date", "text"}."""
     found = []
-    if p.rstrip("/") == "/traveladvice":
+    if p.rstrip("/") in ("/traveladvice", "/traveladvice.html"):
         # Oversikten: lenker til hvert lands reiseråd.
         body = page.split("Alle land og regioner", 1)[-1] if "Alle land og regioner" in page else page
         names = [text(n) for n in re.findall(r'<a[^>]+href="[^"]*/traveladvice/[^"]+"[^>]*>(.*?)</a>', body, re.S)]
+        # 2006–2009: lenkene går til /land/<x>/raad.
+        names += [text(n) for n in re.findall(r'<a[^>]+adviceHyperLink[^>]*>(.*?)</a>', page, re.S)]
         names = [re.sub(r"^Offisielt reiseråd (for )?", "", n) for n in names]
         names = sorted({n for n in names if n and len(n) < 60})
         if names:
@@ -96,6 +108,34 @@ def parse(page, p):
             t = re.split(r"\s*Les mer »", t)[0].strip()
             if t:
                 found.append({"kind": "advice", "name": text(name.group(1)), "ud_date": d, "text": clean(t)})
+    if p.startswith("/velg-reiserad/"):
+        # regjeringen.no 2016–2018. Oversikten (id2414578) lenker til «X - reiseråd».
+        if re.fullmatch(r"/velg-reiserad/id2414578/?", p):
+            names = [re.sub(r"\s*-\s*reiseråd$", "", text(n)) for n in
+                     re.findall(r'<a[^>]+href="[^"]*/velg-reiserad/[^"]+/id\d+/?"[^>]*>(.*?)</a>', page, re.S)]
+            names = sorted({n for n in names if n and len(n) < 60})
+            if names:
+                found.append({"kind": "list", "names": names})
+            return found
+        h1 = re.search(r"<h1[^>]*>(.*?)</h1>", page, re.S)
+        d = re.search(r'<span class="date">[^<]*?(\d{1,2}\.\d{1,2}\.\d{4})', page)
+        parts = [m for m in (re.search(r'class="article-ingress">(.*?)</div>', page, re.S),
+                             re.search(r'class="article-body">(.*?)</div>\s*</div>', page, re.S)) if m]
+        paras = [text(x) for m in parts for x in re.findall(r"<p[^>]*>(.*?)</p>", m.group(1), re.S)]
+        paras = [x for x in paras if re.search(r"fraråd|advarer|aktsomhet", x, re.I)]
+        if h1 and paras:
+            name = re.sub(r"\s*-\s*reiseråd$|^Offisielt reiseråd (for )?", "", text(h1.group(1)))
+            found.append({"kind": "advice", "name": name, "ud_date": iso(d.group(1)) if d else None,
+                          "text": clean(" ".join(paras)), "source": "intro"})
+        return found
+    if re.fullmatch(r"/land/[^/]+/raad(\.htm)?/?", p):
+        # 2006–2009: <h1>Reiseråd for X</h1>, teksten i p.ingress, dato i span.date (dd/mm/åååå).
+        h1 = re.search(r"<h1[^>]*>\s*(?:Offisielt )?[Rr]eiseråd for (.*?)</h1>", page, re.S)
+        ingress = re.search(r"<p class=['\"]ingress['\"]>(.*?)</p>", page, re.S)
+        d = re.search(r'<span class="date">([^<]+)<', page)
+        if h1 and ingress and text(ingress.group(1)):
+            found.append({"kind": "advice", "name": text(h1.group(1)), "ud_date": iso(d.group(1)) if d else None,
+                          "text": clean(text(ingress.group(1))), "source": "intro"})
     if p.startswith("/traveladvice/"):
         h1 = re.search(r"<h1[^>]*>(.*?)</h1>", page, re.S)
         title = re.search(r"<title>(.*?)</title>", page, re.S)
@@ -123,7 +163,12 @@ ALIASES = {"Det palestinske området": "palestina", "De palestinske områdene": 
            "Den demokratiske republikk Kongo": "drkongo", "DR Kongo": "drkongo",
            "Den demokratiske republikken Kongo": "drkongo", "Kongo DRC": "drkongo",
            "Kongo-Brazzaville": "repkongo", "Palestinske området": "palestina",
-           "Sentralafrikanske Rep.": "sar", "Sentralafrikanske republikk": "sar"}
+           "Sentralafrikanske Rep.": "sar", "Sentralafrikanske republikk": "sar",
+           "Myanmar (Burma)": "myanmar", "Myanmar/Burma": "myanmar",
+           "Israel og Det palestinske området": "israel"}
+
+
+LISTED = "\x00listed"  # landet står på oversikten over reiseråd, men teksten er ikke arkivert
 
 
 def norm(name):
@@ -157,20 +202,25 @@ def build(rows):
                 obs.setdefault(k, []).append((f["ud_date"] if exact else r["date"], exact, f["text"]))
     for date, present in lists:
         for k in adv:
-            if k not in present:
-                obs.setdefault(k, []).append((date, False, None))
+            # Står landet på listen, har det et reiseråd selv om teksten ikke er arkivert.
+            obs.setdefault(k, []).append((date, False, LISTED if k in present else None))
     out = {}
     for k, o in obs.items():
         entries = []
         for date, exact, t in sorted(o, key=lambda x: (x[0], x[2] is None)):
+            if t == LISTED:
+                if entries and (entries[-1]["paragraphs"] or entries[-1].get("listed")):
+                    continue  # en kjent tekst gjelder fortsatt
+                entries.append({"from": date, "status": "", "paragraphs": [], "listed": True, "approx": True})
+                continue
             paragraphs = [t] if t else []
-            if entries and same(entries[-1]["paragraphs"], paragraphs):
+            if entries and same(entries[-1]["paragraphs"], paragraphs) and not entries[-1].get("listed"):
                 continue
             e = {"from": date, "status": "", "paragraphs": paragraphs}
             if not exact:
                 e["approx"] = True
             entries.append(e)
-        if any(e["paragraphs"] for e in entries):
+        if any(e["paragraphs"] or e.get("listed") for e in entries):
             out[k] = entries
     if unknown:
         print("Ukjente navn:", sorted(unknown), file=sys.stderr)

@@ -198,7 +198,9 @@ def history_html(entries, news=()):
             body = "<p>Vi har ikke funnet arkivkopier av UDs reiseråd fra denne perioden.</p>"
             items.append(f'<details><summary>{ca}{nb_date(h["from"])} – {nb_date(h["until"])}: ukjent</summary>{body}</details>')
             continue
-        body = "".join(f"<p>{e(p)}</p>" for p in h["paragraphs"]) or "<p>Ingen reiseadvarsel.</p>"
+        body = "".join(f"<p>{e(p)}</p>" for p in h["paragraphs"]) or (
+            "<p>Offisielt reiseråd fra UD. Teksten er ikke bevart i arkivet.</p>" if h.get("listed")
+            else "<p>Ingen reiseadvarsel.</p>")
         items.append(f'<details><summary>{ca}{nb_date(h["from"])} – {nb_date(h["until"])}</summary>'
                      f'{body}{news_links(h.get("news", []))}</details>')
     out = []

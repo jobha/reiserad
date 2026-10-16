@@ -346,6 +346,7 @@ function tipWorld(iso, ne) {
     const st = tlState(iso);
     return `<b>${esc(c?.name || ne)}</b><div class="tip-note">${esc(tlFmt(TL_DATE))}</div>` + (st.level === "?"
       ? `<div>Ukjent – mangler arkivdata</div>`
+      : st.level === "listed" ? `<div>Offisielt reiseråd – teksten er ikke bevart</div>`
       : tlDrawn(iso) ? `<div>Ikke omfattet av reiseadvarselen</div>`
       : st.level ? `<div class="tip-level ${st.level}">${esc(LEVEL_TXT[st.level])}</div>${st.partial ? `<div class="tip-note">Gjelder deler av landet</div>` : ""}`
       : `<div>Ingen reiseadvarsel</div>`);
@@ -523,6 +524,7 @@ function styleWorld(layer) {
     if (!TL_DATE || tlCurrent(iso) || tlDrawn(iso)) { layer.resetStyle(l); return; }
     const st = tlState(iso);
     if (st.level === "?") l.setStyle({ fillColor: css("--muted"), fillOpacity: .28, color: css("--land-line"), weight: .7 });
+    else if (st.level === "listed") l.setStyle(fillFor("necessary", true));
     else if (st.level) l.setStyle(fillFor(st.level, st.partial));
     else layer.resetStyle(l);
   });
@@ -533,6 +535,7 @@ function tlPopup(iso, ne, zone) {
   if (zone) h += `<div class="zone ${zone.level}">${esc(LEVEL_TXT[zone.level])}${zone.label ? ": " + esc(zone.label) : ""}</div>`;
   else if (tlDrawn(iso)) h += `<div class="zone clear">Denne delen av landet var ikke omfattet av reiseadvarselen</div>`;
   else if (st.level === "?") h += `<div class="zone clear">Ukjent – vi har ikke funnet arkivkopier av UDs reiseråd fra denne tiden</div>`;
+  else if (st.level === "listed") h += `<div class="zone necessary">Offisielt reiseråd fra UD – teksten er ikke bevart i arkivet</div>`;
   else if (st.level) h += `<div class="zone ${st.level}">${esc(LEVEL_TXT[st.level])}${st.partial ? " (deler av landet)" : ""}</div>`;
   else h += `<div class="zone clear">Ingen reiseadvarsel</div>`;
   if (st.text >= 0) h += `<div class="paras"><p>${esc(TL.texts[st.text])}</p></div>`;

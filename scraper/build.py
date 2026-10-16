@@ -235,7 +235,7 @@ def history_level(paragraphs):
 
 def timeline(hist, info, lands, hregions=None):
     """Per land (ISO): [[fra, nivå|None|"?", delvis, tekstindeks, hash]] eldst først, og tekstene.
-    "?" = ukjent (ingen arkivdata). hash = tekst-hash, "" uten tekst; har teksten
+    "?" = ukjent (ingen arkivdata), "listed" = på UDs liste over reiseråd, men teksten er ikke arkivert. hash = tekst-hash, "" uten tekst; har teksten
     tegnede soner i data/history_regions/, ligger de i timeline_zones.json under "ISO:hash". Land uten advarsel på landsider.no i perioden
     oversiktene dekker, regnes som uten advarsel der."""
     texts, index, out = [], {}, {}
@@ -251,6 +251,9 @@ def timeline(hist, info, lands, hregions=None):
                 continue
             if h.get("gap"):
                 rows.append([h["from"], "?", 0, -1, ""])
+                continue
+            if h.get("listed"):
+                rows.append([h["from"], "listed", 1, -1, ""])
                 continue
             hsh = text_hash(h["paragraphs"]) if h["paragraphs"] else ""
             level, partial = zones_level(drawn[hsh]) if hsh in drawn else history_level(h["paragraphs"])

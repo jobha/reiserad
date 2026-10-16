@@ -1,11 +1,32 @@
 {
  "source": "landsider.no via web.archive.org",
  "first": "2006-01-03",
- "last": "2015-11-26",
- "list_first": "2010-04-08",
- "list_last": "2015-11-13",
+ "last": "2018-02-01",
+ "list_first": "2006-01-03",
+ "list_last": "2018-01-30",
  "countries": {
   "afghanistan": [
+   {
+    "from": "2005-12-21",
+    "status": "",
+    "paragraphs": [
+     "Utenriksdepartementet fraråder reise til eller opphold i Afghanistan som ikke er strengt nødvendig. Norske borgere som oppholder seg i eller som planlegger å reise til Afghanistan oppfordres til å ta kontakt med ambassaden i Kabul for oppdatert informasjon og registrering."
+    ]
+   },
+   {
+    "from": "2008-04-22",
+    "status": "",
+    "paragraphs": [
+     "Utenriksdepartementet fraråder reise til eller opphold i Afghanistan som ikke er strengt nødvendig. Norske borgere som oppholder seg i eller som planlegger å reise til Afghanistan oppfordres til å ta kontakt med ambassaden i Kabul for oppdatert informasjon og registrering. Sist endret 22.04.2008 ::Ambassaden er lokalisert i Wazir Akbar Khan. Åpningstider: Søndag til torsdag 08.30 - 16.30 Royal Norwegian Embassy Wazir Akbar Khan Street 15, Lane 4 Kabul, Afghanistan Phone: +47 22 24 03 13/14 Phone local: +93 (020) 2300899Phone satellitt: +870 762 596 925Fax satellitt: +870 600 061 156E-mail: emb.kabul@mfa.no Ambassadens nødnummer utenom kontortid er: +93 (0) 799 837 956 Print version Send this article to a friend fra Lenker Andre lands reiserådSe oversikt over alle UDs offisielle reiserådHva er et offisielt reiseråd? //Enter \"frombottom\" or \"fromtop\" var verticalpos=\"fromtop\" function JSFX_FloatTopDiv() { var startX = document.body.clientWidth-200; startY = 10; var d = document; function ml(id) { var el=d.getElementById?d.getElementById(id):d.all?d.all[id]:d.layers[id]; if(d.layers)el.style=el; el.sP=function(x,y){this.style.left=x;this.style.top=y;}; el.x = startX; if (verticalpos==\"fromtop\") el.y = startY; else{ el.y = document.body.scrollTop + document.body.clientHeight; el.y -= startY; } return el; } window.stayTopLeft=function() { ftlObj.x = document.body.clientWidth-200; if (verticalpos==\"fromtop\"){ var pY = document.body.scrollTop+155; ftlObj.y += (pY + startY - ftlObj.y); } else{ var pY = document.body.scrollTop + document.body.clientHeight; ftlObj.y += (pY - startY - ftlObj.y)/8; } ftlObj.sP(ftlObj.x, ftlObj.y); setTimeout(\"stayTopLeft()\", 20); } ftlObj = ml(\"divStayTopLeft\"); stayTopLeft(); } JSFX_FloatTopDiv(); Norsk utenriksstasjonTel: +47 22 24 03 13/14 Internett: http://www.norway.org.af E-post: emb.kabul@mfa.no Åpningstider: Søndag - torsdag 08:30 - 1630"
+    ]
+   },
+   {
+    "from": "2008-09-26",
+    "status": "",
+    "paragraphs": [
+     "Utenriksdepartementet fraråder reise til eller opphold i Afghanistan som ikke er strengt nødvendig. Norske borgere som oppholder seg i eller som planlegger å reise til Afghanistan oppfordres til å ta kontakt med ambassaden i Kabul for oppdatert informasjon og registrering. Sist endret 26.09.2008 ::Ambassaden er lokalisert i Wazir Akbar Khan. Åpningstider: Søndag til torsdag 08.30 - 16.30 Royal Norwegian Embassy Wazir Akbar Khan Street 15, Lane 4 Kabul, Afghanistan Phone: +47 22 24 03 13/14 Phone local: +93 (020) 2300899Phone satellitt: +870 762 596 925Fax satellitt: +870 600 061 156E-mail: emb.kabul@mfa.no Ambassadens nødnummer utenom kontortid er: +93 (0) 799 837 956 Skjema for registrering ved ambassaden kan lastes ned her. Print version Send this article to a friend fra Lenker Andre lands reiserådSe oversikt over alle UDs offisielle reiserådHva er et offisielt reiseråd? //Enter \"frombottom\" or \"fromtop\" var verticalpos=\"fromtop\" function JSFX_FloatTopDiv() { var startX = document.body.clientWidth-200; startY = 10; var d = document; function ml(id) { var el=d.getElementById?d.getElementById(id):d.all?d.all[id]:d.layers[id]; if(d.layers)el.style=el; el.sP=function(x,y){this.style.left=x;this.style.top=y;}; el.x = startX; if (verticalpos==\"fromtop\") el.y = startY; else{ el.y = document.body.scrollTop + document.body.clientHeight; el.y -= startY; } return el; } window.stayTopLeft=function() { ftlObj.x = document.body.clientWidth-200; if (verticalpos==\"fromtop\"){ var pY = document.body.scrollTop+155; ftlObj.y += (pY + startY - ftlObj.y); } else{ var pY = document.body.scrollTop + document.body.clientHeight; ftlObj.y += (pY - startY - ftlObj.y)/8; } ftlObj.sP(ftlObj.x, ftlObj.y); setTimeout(\"stayTopLeft()\", 20); } ftlObj = ml(\"divStayTopLeft\"); stayTopLeft(); } JSFX_FloatTopDiv(); Norsk utenriksstasjonTel: +47 22 24 03 13/14 Internett: http://www.norway.org.af E-post: emb.kabul@mfa.no Åpningstider: Søndag - torsdag 08:30 - 1630"
+    ]
+   },
    {
     "from": "2010-02-25",
     "status": "",
@@ -37,7 +58,13 @@
   ],
   "algerie": [
    {
-    "from": "2010-02-25",
+    "from": "2006-01-03",
+    "status": "",
+    "paragraphs": [],
+    "approx": true
+   },
+   {
+    "from": "2008-01-25",
     "status": "",
     "paragraphs": [
      "Utenriksdepartementet oppfordrer reisende som oppholder seg i eller planlegger å reise til Algerie om å utvise aktsomhet og til å holde kontakt med ambassaden i Alger for oppdatert informasjon og registrering."
@@ -67,7 +94,13 @@
   ],
   "aserbajdsjan": [
    {
-    "from": "2010-02-25",
+    "from": "2006-01-03",
+    "status": "",
+    "paragraphs": [],
+    "approx": true
+   },
+   {
+    "from": "2008-07-08",
     "status": "",
     "paragraphs": [
      "Utenriksdepartementet fraråder reiser til eller opphold i Nagorno-Karabakh og tilstøtende okkuperte områder."
@@ -90,7 +123,7 @@
   ],
   "bahrain": [
    {
-    "from": "2010-04-08",
+    "from": "2006-01-03",
     "status": "",
     "paragraphs": [],
     "approx": true
@@ -109,6 +142,13 @@
     "approx": true
    },
    {
+    "from": "2011-03-19",
+    "status": "",
+    "paragraphs": [],
+    "listed": true,
+    "approx": true
+   },
+   {
     "from": "2011-07-06",
     "status": "",
     "paragraphs": [
@@ -116,11 +156,33 @@
     ]
    }
   ],
-  "burkinafaso": [
+  "bangladesh": [
    {
-    "from": "2010-04-08",
+    "from": "2006-01-03",
     "status": "",
     "paragraphs": [],
+    "approx": true
+   },
+   {
+    "from": "2016-09-15",
+    "status": "",
+    "paragraphs": [],
+    "listed": true,
+    "approx": true
+   }
+  ],
+  "burkinafaso": [
+   {
+    "from": "2006-01-03",
+    "status": "",
+    "paragraphs": [],
+    "approx": true
+   },
+   {
+    "from": "2011-04-23",
+    "status": "",
+    "paragraphs": [],
+    "listed": true,
     "approx": true
    },
    {
@@ -147,7 +209,20 @@
   ],
   "burundi": [
    {
-    "from": "2010-02-25",
+    "from": "2006-01-03",
+    "status": "",
+    "paragraphs": [],
+    "approx": true
+   },
+   {
+    "from": "2008-05-18",
+    "status": "",
+    "paragraphs": [],
+    "listed": true,
+    "approx": true
+   },
+   {
+    "from": "2008-07-10",
     "status": "",
     "paragraphs": [
      "Utenriksdepartementet oppfordrer reisende som oppholder seg i eller planlegger å reise til Burundi om å utvise aktsomhet og til å holde kontakt med ambassaden i Kampala for oppdatert informasjon og registrering."
@@ -169,6 +244,52 @@
    }
   ],
   "drkongo": [
+   {
+    "from": "2006-01-03",
+    "status": "",
+    "paragraphs": [],
+    "approx": true
+   },
+   {
+    "from": "2007-03-23",
+    "status": "",
+    "paragraphs": [
+     "På grunn av endringer i situasjonen er reiserådet for DR Kongo opphevet. Vi anbefaler reisende å undersøke ambassadens sider om DR Kongo på www.noruega.ao og forøvrig følge med i nyhetsbildet."
+    ]
+   },
+   {
+    "from": "2007-03-26",
+    "status": "",
+    "paragraphs": [
+     "På grunn av situasjonen i Den demokratiske republikken Kongo, særskilt i Kinshasa, fraråder Utenriksdepartementet reiser til eller opphold i Den demokratiske republikken Kongo som ikke er strengt nødvendig. Norske borgere som oppholder seg i eller som planlegger å reise til Den demokratiske republikken Kongo oppfordres til å følge med på ambassadens hjemmeside: www.noruega.ao"
+    ]
+   },
+   {
+    "from": "2007-07-09",
+    "status": "",
+    "paragraphs": [],
+    "approx": true
+   },
+   {
+    "from": "2008-10-29",
+    "status": "",
+    "paragraphs": [
+     "Utenriksdepartementet fraråder reise til eller opphold i de nordlige og østlige deler av Den demokratiske republikken Kongo."
+    ]
+   },
+   {
+    "from": "2008-12-20",
+    "status": "",
+    "paragraphs": [],
+    "approx": true
+   },
+   {
+    "from": "2009-05-18",
+    "status": "",
+    "paragraphs": [],
+    "listed": true,
+    "approx": true
+   },
    {
     "from": "2010-02-25",
     "status": "",
@@ -207,7 +328,7 @@
   ],
   "egypt": [
    {
-    "from": "2010-04-08",
+    "from": "2006-01-03",
     "status": "",
     "paragraphs": [],
     "approx": true
@@ -274,9 +395,37 @@
     "paragraphs": [
      "Utenriksdepartementet fraråder alle reiser til eller opphold på Sinai, med unntak av Sharm El Sheikh. Utenriksdepartementet fraråder reiser til eller opphold som ikke er strengt nødvendig til det øvrige Egypt, med unntak av Kairo og Alexandria og strekningen mellom disse byene, turist-områdene ved vestsiden av Rødehavet (inkludert Hurghada) og Nildalen mellom Luxor og Abu Simbel samt reiser mellom disse delene av Nildalen og turiststeder ved Rødehavskysten"
     ]
+   },
+   {
+    "from": "2015-11-07",
+    "status": "",
+    "paragraphs": [
+     "Utenriksdepartementet fraråder alle reiser til eller opphold på Sinai, med unntak av opphold i Sharm El Sheikh. Inntil situasjonen er nærmere avklart frarådes også ikke-nødvendige reiser til Sharm El Sheikh. Utenriksdepartementet fraråder reiser til eller opphold som ikke er strengt nødvendig til det øvrige Egypt, med unntak av Kairo og Alexandria og strekningen mellom disse byene, turist-områdene ved vestsiden av Rødehavet (inkludert Hurghada) og Nildalen mellom Luxor og Abu Simbel samt reiser mellom disse delene av Nildalen og turiststeder ved Rødehavskysten"
+    ]
+   },
+   {
+    "from": "2017-02-09",
+    "status": "",
+    "paragraphs": [
+     "Utenriksdepartementet fraråder alle reiser til eller opphold på Sinai, med unntak av Sharm El Sheikh, Dahab, St. Catherine og strekningene mellom disse. Utenriksdepartementet fraråder reiser til eller opphold som ikke er strengt nødvendig til det øvrige Egypt, med unntak av Kairo og Alexandria og strekningen mellom disse byene, turist-områdene ved vestsiden av Rødehavet (inkludert Hurghada) og Nildalen mellom Luxor og Abu Simbel samt reiser mellom disse delene av Nildalen og turiststeder ved Rødehavskysten."
+    ]
    }
   ],
   "elfernbenskysten": [
+   {
+    "from": "2005-12-22",
+    "status": "",
+    "paragraphs": [
+     "Utenriksdepartementet fraråder reise til eller opphold i Elfenbenskysten som ikke er strengt nødvendig. Norske borgere som oppholder seg i eller som planlegger å reise til Elfenbenskysten oppfordres til å ta kontakt med ambassaden i Abidjan for oppdatert informasjon og registrering."
+    ]
+   },
+   {
+    "from": "2008-12-18",
+    "status": "",
+    "paragraphs": [
+     "Utenriksdepartementet fraråder reise til eller opphold i Elfenbenskysten som ikke er strengt nødvendig. Norske borgere som oppholder seg i eller som planlegger å reise til Elfenbenskysten oppfordres til å ta kontakt med ambassaden i Abidjan for oppdatert informasjon og registrering.Sist endret 18.12.2008 ::Norsk Ambassade;Ambassade Royale de NorvègeImmeuble N’Zarama, 5 ème étageBoulevard Lagunaire, PlateauTlf. : +225 20 22 25 34/ 20 21 21 66Telefax : + 225 20 21 91 99E-post : emb.abidjan@mfa.no Ved telefonhenvendelser til ambassaden utenom kontortiden, er ambassadens vakttelefon 07077623 Print version Send this article to a friend fra Les også Andre lands reiserådSe oversikt over alle UDs offisielle reiserådHva er et offisielt reiseråd? //Enter \"frombottom\" or \"fromtop\" var verticalpos=\"fromtop\" function JSFX_FloatTopDiv() { var startX = document.body.clientWidth-200; startY = 10; var d = document; function ml(id) { var el=d.getElementById?d.getElementById(id):d.all?d.all[id]:d.layers[id]; if(d.layers)el.style=el; el.sP=function(x,y){this.style.left=x;this.style.top=y;}; el.x = startX; if (verticalpos==\"fromtop\") el.y = startY; else{ el.y = document.body.scrollTop + document.body.clientHeight; el.y -= startY; } return el; } window.stayTopLeft=function() { ftlObj.x = document.body.clientWidth-200; if (verticalpos==\"fromtop\"){ var pY = document.body.scrollTop+155; ftlObj.y += (pY + startY - ftlObj.y); } else{ var pY = document.body.scrollTop + document.body.clientHeight; ftlObj.y += (pY - startY - ftlObj.y)/8; } ftlObj.sP(ftlObj.x, ftlObj.y); setTimeout(\"stayTopLeft()\", 20); } ftlObj = ml(\"divStayTopLeft\"); stayTopLeft(); } JSFX_FloatTopDiv(); Norsk utenriksstasjonTel: +225 20 222534, 212166 Internett: http://www.norvege.ci E-post: emb.abidjan@mfa.no Åpningstider: 0830-1530. Lørdag stengt"
+    ]
+   },
    {
     "from": "2010-02-25",
     "status": "",
@@ -301,7 +450,7 @@
   ],
   "etiopia": [
    {
-    "from": "2010-04-08",
+    "from": "2006-01-03",
     "status": "",
     "paragraphs": [],
     "approx": true
@@ -312,14 +461,42 @@
     "paragraphs": [
      "Utenriksdepartementet fraråder alle reiser til eller opphold i østlige deler av Somali-regionen i Etiopia og grenseområdene til Somalia."
     ]
+   },
+   {
+    "from": "2017-01-26",
+    "status": "",
+    "paragraphs": [
+     "Utenriksdepartementet fraråder alle reiser til eller opphold i østlige deler av Somali-regionen i Etiopia og grenseområdene til Somalia. Reiser som ikke er strengt nødvendig til Somali-regionen for øvrig, frarådes. Reisende bør utvise aktsomhet ved reiser til grenseområdene mot Eritrea og Sør-Sudan."
+    ]
    }
   ],
   "filippinene": [
+   {
+    "from": "2005-12-29",
+    "status": "",
+    "paragraphs": [
+     "Utenriksdepartementet fraråder reise til eller opphold i sentrale, sydlige og vestlige Mindanao og Sulu-arkipelet inkludert Basilan, Tawi-Tawi og Jolo som ikke er strengt nødvendig. Norske borgere som oppholder seg i eller som planlegger å reise til disse områdene oppfordres til å ta kontakt med ambassaden i Manila for oppdatert informasjon og registrering."
+    ]
+   },
+   {
+    "from": "2005-12-29",
+    "status": "",
+    "paragraphs": [
+     "Utenriksdepartementet fraråder reise til eller opphold i sentrale, sydlige og vestlige Mindanao og Sulu-arkipelet (øyprovinsene Basilan, Sulu og Tawi-Tawi) som ikke er strengt nødvendig. Norske borgere som oppholder seg i eller som planlegger å reise til disse områdene oppfordres til å ta kontakt med ambassaden i Manila for oppdatert informasjon og registrering."
+    ]
+   },
    {
     "from": "2008-04-22",
     "status": "",
     "paragraphs": [
      "Utenriksdepartementet fraråder reiser eller opphold som ikke er strengt nødvendig til Cotabato-provinsene, Lanao-provinsene, Zamboanga-provinsene, Maguindanao, Misamis Occidental, Sarangani, Sultan Kudarat og Sulu-øygruppen, som omfatter øyene Basilan, Jolo og Tawi-Tawi på Mindanao, Filippinene."
+    ]
+   },
+   {
+    "from": "2009-05-20",
+    "status": "",
+    "paragraphs": [
+     "Utenriksdepartementet fraråder reise til eller opphold i sentrale, sydlige og vestlige Mindanao og Sulu-arkipelet (øyprovinsene Basilan, Sulu og Tawi-Tawi) som ikke er strengt nødvendig. Norske borgere som oppholder seg i eller som planlegger å reise til disse områdene oppfordres til å ta kontakt med ambassaden i Manila for oppdatert informasjon og registrering. Sist endret 20.05.2009 :: Office address: Petron Mega Plaza Building, 21st Floor 358, Senator Gil Puyat Avenue 1209 Makati City, Metro Manila Tel: (63 2) 886 3245 to 49 Fax: (63 2) 886 3384 (63 2) 886 32 44 (Visa Section) EMERGENCIES ONLY/NØDNUMMER: (63) 917-537-6061 Postal address P.O. Box. 3344 MCPO, Makati City, Metro Manila E-mail : emb.manila@mfa.no Print version Send this article to a friend fra //Enter \"frombottom\" or \"fromtop\" var verticalpos=\"fromtop\" function JSFX_FloatTopDiv() { var startX = document.body.clientWidth-200; startY = 10; var d = document; function ml(id) { var el=d.getElementById?d.getElementById(id):d.all?d.all[id]:d.layers[id]; if(d.layers)el.style=el; el.sP=function(x,y){this.style.left=x;this.style.top=y;}; el.x = startX; if (verticalpos==\"fromtop\") el.y = startY; else{ el.y = document.body.scrollTop + document.body.clientHeight; el.y -= startY; } return el; } window.stayTopLeft=function() { ftlObj.x = document.body.clientWidth-200; if (verticalpos==\"fromtop\"){ var pY = document.body.scrollTop+155; ftlObj.y += (pY + startY - ftlObj.y); } else{ var pY = document.body.scrollTop + document.body.clientHeight; ftlObj.y += (pY - startY - ftlObj.y)/8; } ftlObj.sP(ftlObj.x, ftlObj.y); setTimeout(\"stayTopLeft()\", 20); } ftlObj = ml(\"divStayTopLeft\"); stayTopLeft(); } JSFX_FloatTopDiv(); Norsk utenriksstasjonTel: +63 2 8863245-49 Internett: http://www.norway.ph E-post: emb.manila@mfa.no Åpningstider: 0800-1600. Lørdag stengt"
     ]
    },
    {
@@ -357,9 +534,57 @@
      "Utenriksdepartementet fraråder reiser eller opphold som ikke er strengt nødvendige til Cotabato-provinsene, Lanao-provinsene, Zamboanga-provinsene, Maguindanao, Misamis Occidental, Sarangani, Sultan Kudarat og Sulu-øygruppen, som omfatter øyene Basilan, Jolo og Tawi-Tawi."
     ],
     "approx": true
+   },
+   {
+    "from": "2015-10-19",
+    "status": "",
+    "paragraphs": [
+     "Utenriksdepartementet fraråder alle reiser eller opphold i sentrale, sydlige og vestlige Mindanao (Cotabato-provinsene, Lanao-provinsene, Zamboanga-provinsene, Maguindanao, Misamis Occidental, Sarangani, Sultan Kudarat) og Sulu-øygruppen, som bl.a. omfatter øyene Basilan, Jolo og Tawi-Tawi. Utenriksdepartementet fraråder reiser eller opphold som ikke er strengt nødvendige til øvrige deler av Mindanao."
+    ]
+   }
+  ],
+  "gambia": [
+   {
+    "from": "2006-01-03",
+    "status": "",
+    "paragraphs": [],
+    "approx": true
+   },
+   {
+    "from": "2017-01-21",
+    "status": "",
+    "paragraphs": [],
+    "listed": true,
+    "approx": true
+   },
+   {
+    "from": "2017-01-29",
+    "status": "",
+    "paragraphs": [],
+    "approx": true
    }
   ],
   "georgia": [
+   {
+    "from": "2006-01-03",
+    "status": "",
+    "paragraphs": [],
+    "approx": true
+   },
+   {
+    "from": "2008-07-25",
+    "status": "",
+    "paragraphs": [],
+    "listed": true,
+    "approx": true
+   },
+   {
+    "from": "2008-10-22",
+    "status": "",
+    "paragraphs": [
+     "Utenriksdepartementet fraråder alle reiser til utbryterområdene Sør-Ossetia og Abkhasia. 22.10.2008 ::Norske borgere som oppholder seg i eller planlegger å reise til disse områdene oppfordres til å ta kontakt med ambassaden i Baku for oppdatert informasjon og registrering."
+    ]
+   },
    {
     "from": "2010-02-15",
     "status": "",
@@ -384,6 +609,19 @@
   ],
   "guinea": [
    {
+    "from": "2006-01-03",
+    "status": "",
+    "paragraphs": [],
+    "approx": true
+   },
+   {
+    "from": "2009-11-02",
+    "status": "",
+    "paragraphs": [
+     "Utenriksdepartementet fraråder reiser til eller opphold i Guinea som ikke er strengt nødvendig. Norske borgere som oppholder seg i eller planlegger å reise til landet oppfordres til å ta kontakt med ambassaden i Abidjan for oppdatert informasjon og registrering."
+    ]
+   },
+   {
     "from": "2010-02-25",
     "status": "",
     "paragraphs": [
@@ -394,6 +632,13 @@
     "from": "2011-07-21",
     "status": "",
     "paragraphs": [],
+    "approx": true
+   },
+   {
+    "from": "2014-08-21",
+    "status": "",
+    "paragraphs": [],
+    "listed": true,
     "approx": true
    },
    {
@@ -416,9 +661,28 @@
     "paragraphs": [
      "Utenriksdepartementet fraråder alle reiser til eller opphold i Guinea."
     ]
+   },
+   {
+    "from": "2016-03-15",
+    "status": "",
+    "paragraphs": [],
+    "approx": true
    }
   ],
   "guineabissau": [
+   {
+    "from": "2006-01-03",
+    "status": "",
+    "paragraphs": [],
+    "approx": true
+   },
+   {
+    "from": "2009-04-08",
+    "status": "",
+    "paragraphs": [
+     "Utenriksdepartementet fraråder reiser til eller opphold i Guinea-Bissau som ikke er strengt nødvendig. Norske borgere som oppholder seg i eller planlegger å reise til disse områdene oppfordres til å ta kontakt med ambassaden i Lisboa for oppdatert informasjon og registrering."
+    ]
+   },
    {
     "from": "2010-02-25",
     "status": "",
@@ -448,9 +712,87 @@
     ]
    }
   ],
+  "haiti": [
+   {
+    "from": "2005-12-28",
+    "status": "",
+    "paragraphs": [
+     "Utenriksdepartementet fraråder reise til eller opphold på Haiti som ikke er strengt nødvendig. Norske borgere som oppholder seg i eller som planlegger å reise til Haiti oppfordres til å ta kontakt med ambassaden i Caracas for oppdatert informasjon og registrering."
+    ]
+   },
+   {
+    "from": "2005-12-30",
+    "status": "",
+    "paragraphs": [
+     "Utenriksdepartementet fraråder reise til eller opphold på Haiti som ikke er strengt nødvendig. Norske borgere som oppholder seg i eller som planlegger å reise til Haiti oppfordres til å ta kontakt med Utenriksdepartementet ved ambassadør for det karibiske området for oppdatert informasjon og registrering."
+    ]
+   },
+   {
+    "from": "2006-01-18",
+    "status": "",
+    "paragraphs": [
+     "Utenriksdepartementet fraråder reise til eller opphold på Haiti som ikke er strengt nødvendig. Norske borgere som oppholder seg i eller som planlegger å reise til Haiti oppfordres til å ta kontakt med ambassaden i Caracas for oppdatert informasjon og registrering."
+    ]
+   },
+   {
+    "from": "2009-05-18",
+    "status": "",
+    "paragraphs": [],
+    "approx": true
+   }
+  ],
   "india": [
    {
+    "from": "2006-01-03",
+    "status": "",
+    "paragraphs": [],
+    "listed": true,
+    "approx": true
+   },
+   {
+    "from": "2006-01-31",
+    "status": "",
+    "paragraphs": [
+     "Utenriksdepartementet fraråder reise til eller opphold i delstaten Jammu og Kashmir, med unntak av Ladakh som ikke er strengt nødvendig. Norske borgere som oppholder seg i eller som planlegger å reise til disse områdene oppfordres til å ta kontakt med ambassaden i New Delhi for oppdatert informasjon og registrering."
+    ]
+   },
+   {
+    "from": "2008-04-22",
+    "status": "",
+    "paragraphs": [
+     "Utenriksdepartementet fraråder reise til eller opphold i delstaten Jammu og Kashmir, med unntak av Ladakh som ikke er strengt nødvendig. Norske borgere som oppholder seg i eller som planlegger å reise til disse områdene oppfordres til å ta kontakt med ambassaden i New Delhi for oppdatert informasjon og registrering.Sist endret 22.04.2008 ::Den norske ambassaden i New Delhi: Åpningstider: Monday to Thursday: 8.30 A.M. to 1.00 P.M. / 1.30 P.M. to 4.30 P.MFriday: 8.30 A.M. to 2.00 P.M. Adresse:Royal Norwegian Embassy50-C, Shantipath, ChanakyapuriNew Delhi - 110021 Tel: 91 - 11 - 41779200Email: emb.newdelhi@mfa.no, noramb@vsnl.com Nødnummer: 91-9871592498 Print version Send this article to a friend fra Les også Andre lands reiserådSe oversikt over alle UDs offisielle reiserådHva er et offisielt reiseråd? //Enter \"frombottom\" or \"fromtop\" var verticalpos=\"fromtop\" function JSFX_FloatTopDiv() { var startX = document.body.clientWidth-200; startY = 10; var d = document; function ml(id) { var el=d.getElementById?d.getElementById(id):d.all?d.all[id]:d.layers[id]; if(d.layers)el.style=el; el.sP=function(x,y){this.style.left=x;this.style.top=y;}; el.x = startX; if (verticalpos==\"fromtop\") el.y = startY; else{ el.y = document.body.scrollTop + document.body.clientHeight; el.y -= startY; } return el; } window.stayTopLeft=function() { ftlObj.x = document.body.clientWidth-200; if (verticalpos==\"fromtop\"){ var pY = document.body.scrollTop+155; ftlObj.y += (pY + startY - ftlObj.y); } else{ var pY = document.body.scrollTop + document.body.clientHeight; ftlObj.y += (pY - startY - ftlObj.y)/8; } ftlObj.sP(ftlObj.x, ftlObj.y); setTimeout(\"stayTopLeft()\", 20); } ftlObj = ml(\"divStayTopLeft\"); stayTopLeft(); } JSFX_FloatTopDiv(); Norsk utenriksstasjonTel: +91 11 41 77 92 00 Internett: http://www.norwayemb.org.in E-post: emb.newdelhi@mfa.no Åpningstider: Man-tor 0830-1630, fre 0830-1400"
+    ]
+   },
+   {
+    "from": "2008-11-28",
+    "status": "",
+    "paragraphs": [
+     "I lys av den fortsatt uavklarte situasjonen i Mumbai fraråder Utenriksdepartementet inntil videre alle reiser til eller via Mumbai som ikke er strengt nødvendige. Sist endret 28.11.2008 ::Utenriksdepartementet fraråder videre reise til eller opphold i delstaten Jammu og Kashmir, med unntak av Ladakh som ikke er strengt nødvendig. Norske borgere som oppholder seg i eller som planlegger å reise til disse områdene oppfordres til å ta kontakt med ambassaden i New Delhi for oppdatert informasjon og registrering. Den norske ambassaden i New Delhi: Åpningstider: Monday to Thursday: 8.30 A.M. to 1.00 P.M. / 1.30 P.M. to 4.30 P.MFriday: 8.30 A.M. to 2.00 P.M. Adresse:Royal Norwegian Embassy50-C, Shantipath, ChanakyapuriNew Delhi - 110021 Tel: 91 - 11 - 41779200Email: emb.newdelhi@mfa.no, noramb@vsnl.com Nødnummer: 91-9871592498 Print version Send this article to a friend fra Les også Andre lands reiserådSe oversikt over alle UDs offisielle reiserådHva er et offisielt reiseråd? //Enter \"frombottom\" or \"fromtop\" var verticalpos=\"fromtop\" function JSFX_FloatTopDiv() { var startX = document.body.clientWidth-200; startY = 10; var d = document; function ml(id) { var el=d.getElementById?d.getElementById(id):d.all?d.all[id]:d.layers[id]; if(d.layers)el.style=el; el.sP=function(x,y){this.style.left=x;this.style.top=y;}; el.x = startX; if (verticalpos==\"fromtop\") el.y = startY; else{ el.y = document.body.scrollTop + document.body.clientHeight; el.y -= startY; } return el; } window.stayTopLeft=function() { ftlObj.x = document.body.clientWidth-200; if (verticalpos==\"fromtop\"){ var pY = document.body.scrollTop+155; ftlObj.y += (pY + startY - ftlObj.y); } else{ var pY = document.body.scrollTop + document.body.clientHeight; ftlObj.y += (pY - startY - ftlObj.y)/8; } ftlObj.sP(ftlObj.x, ftlObj.y); setTimeout(\"stayTopLeft()\", 20); } ftlObj = ml(\"divStayTopLeft\"); stayTopLeft(); } JSFX_FloatTopDiv(); Norsk utenriksstasjonTel: +91 11 41 77 92 00 Internett: http://www.norwayemb.org.in E-post: emb.newdelhi@mfa.no Åpningstider: Man-tor 0830-1630, fre 0830-1400"
+    ]
+   },
+   {
+    "from": "2008-12-02",
+    "status": "",
+    "paragraphs": [
+     "Utenriksdepartementet fraråder reise til eller opphold i delstaten Jammu og Kashmir, med unntak av Ladakh som ikke er strengt nødvendig. Sist endret 02.12.2008 ::Norske borgere som oppholder seg i eller som planlegger å reise til disse områdene oppfordres til å ta kontakt med ambassaden i New Delhi for oppdatert informasjon og registrering. Den norske ambassaden i New Delhi: Åpningstider: Monday to Thursday: 8.30 A.M. to 1.00 P.M. / 1.30 P.M. to 4.30 P.MFriday: 8.30 A.M. to 2.00 P.M. Adresse:Royal Norwegian Embassy50-C, Shantipath, ChanakyapuriNew Delhi - 110021 Tel: 91 - 11 - 41779200Email: emb.newdelhi@mfa.no, noramb@vsnl.com Nødnummer: 91-9871592498 Print version Send this article to a friend fra Les også Andre lands reiserådSe oversikt over alle UDs offisielle reiserådHva er et offisielt reiseråd? //Enter \"frombottom\" or \"fromtop\" var verticalpos=\"fromtop\" function JSFX_FloatTopDiv() { var startX = document.body.clientWidth-200; startY = 10; var d = document; function ml(id) { var el=d.getElementById?d.getElementById(id):d.all?d.all[id]:d.layers[id]; if(d.layers)el.style=el; el.sP=function(x,y){this.style.left=x;this.style.top=y;}; el.x = startX; if (verticalpos==\"fromtop\") el.y = startY; else{ el.y = document.body.scrollTop + document.body.clientHeight; el.y -= startY; } return el; } window.stayTopLeft=function() { ftlObj.x = document.body.clientWidth-200; if (verticalpos==\"fromtop\"){ var pY = document.body.scrollTop+155; ftlObj.y += (pY + startY - ftlObj.y); } else{ var pY = document.body.scrollTop + document.body.clientHeight; ftlObj.y += (pY - startY - ftlObj.y)/8; } ftlObj.sP(ftlObj.x, ftlObj.y); setTimeout(\"stayTopLeft()\", 20); } ftlObj = ml(\"divStayTopLeft\"); stayTopLeft(); } JSFX_FloatTopDiv(); Norsk utenriksstasjonTel: +91 11 41 77 92 00 Internett: http://www.norwayemb.org.in E-post: emb.newdelhi@mfa.no Åpningstider: Man-tor 0830-1630, fre 0830-1400"
+    ]
+   },
+   {
     "from": "2009-03-25",
+    "status": "",
+    "paragraphs": [
+     "Utenriksdepartementet fraråder reise til eller opphold i delstaten Jammu og Kashmir, med unntak av Ladakh som ikke er strengt nødvendig."
+    ]
+   },
+   {
+    "from": "2009-04-15",
+    "status": "",
+    "paragraphs": [
+     "Utenriksdepartementet fraråder reise til eller opphold i delstaten Jammu og Kashmir, med unntak av Ladakh som ikke er strengt nødvendig. Sist endret 15.04.2009 ::Norske borgere som oppholder seg i eller som planlegger å reise til disse områdene oppfordres til å ta kontakt med ambassaden i New Delhi for oppdatert informasjon og registrering. Den norske ambassaden i New Delhi: Åpningstider: Monday to Thursday: 8.30 A.M. to 1.00 P.M. / 1.30 P.M. to 4.30 P.MFriday: 8.30 A.M. to 2.00 P.M. Adresse:Royal Norwegian Embassy50-C, Shantipath, ChanakyapuriNew Delhi - 110021 Tel: 91 - 11 - 41779200Email: emb.newdelhi@mfa.no, noramb@vsnl.com Nødnummer: 91-9871592498 Print version Send this article to a friend fra Les også Andre lands reiserådSe oversikt over alle UDs offisielle reiserådHva er et offisielt reiseråd? //Enter \"frombottom\" or \"fromtop\" var verticalpos=\"fromtop\" function JSFX_FloatTopDiv() { var startX = document.body.clientWidth-200; startY = 10; var d = document; function ml(id) { var el=d.getElementById?d.getElementById(id):d.all?d.all[id]:d.layers[id]; if(d.layers)el.style=el; el.sP=function(x,y){this.style.left=x;this.style.top=y;}; el.x = startX; if (verticalpos==\"fromtop\") el.y = startY; else{ el.y = document.body.scrollTop + document.body.clientHeight; el.y -= startY; } return el; } window.stayTopLeft=function() { ftlObj.x = document.body.clientWidth-200; if (verticalpos==\"fromtop\"){ var pY = document.body.scrollTop+155; ftlObj.y += (pY + startY - ftlObj.y); } else{ var pY = document.body.scrollTop + document.body.clientHeight; ftlObj.y += (pY - startY - ftlObj.y)/8; } ftlObj.sP(ftlObj.x, ftlObj.y); setTimeout(\"stayTopLeft()\", 20); } ftlObj = ml(\"divStayTopLeft\"); stayTopLeft(); } JSFX_FloatTopDiv(); Norsk utenriksstasjonTel: +91 11 41 77 92 00 Internett: http://www.norwayemb.org.in E-post: emb.newdelhi@mfa.no Åpningstider: Man-tor 0830-1630, fre 0830-1400"
+    ]
+   },
+   {
+    "from": "2010-02-25",
     "status": "",
     "paragraphs": [
      "Utenriksdepartementet fraråder reise til eller opphold i delstaten Jammu og Kashmir, med unntak av Ladakh som ikke er strengt nødvendig."
@@ -472,6 +814,27 @@
    }
   ],
   "irak": [
+   {
+    "from": "2005-12-28",
+    "status": "",
+    "paragraphs": [
+     "Utenriksdepartementet fraråder norske borgere å reise til Irak, og oppfordrer dem som allerede er der til å forlate landet."
+    ]
+   },
+   {
+    "from": "2008-04-22",
+    "status": "",
+    "paragraphs": [
+     "Utenriksdepartementet fraråder norske borgere å reise til Irak, og oppfordrer dem som allerede er der til å forlate landet.Sist endret 22.04.2008 :: Print version Send this article to a friend fra Les også Andre lands reiserådSe oversikt over alle UDs offisielle reiserådHva er et offisielt reiseråd? //Enter \"frombottom\" or \"fromtop\" var verticalpos=\"fromtop\" function JSFX_FloatTopDiv() { var startX = document.body.clientWidth-200; startY = 10; var d = document; function ml(id) { var el=d.getElementById?d.getElementById(id):d.all?d.all[id]:d.layers[id]; if(d.layers)el.style=el; el.sP=function(x,y){this.style.left=x;this.style.top=y;}; el.x = startX; if (verticalpos==\"fromtop\") el.y = startY; else{ el.y = document.body.scrollTop + document.body.clientHeight; el.y -= startY; } return el; } window.stayTopLeft=function() { ftlObj.x = document.body.clientWidth-200; if (verticalpos==\"fromtop\"){ var pY = document.body.scrollTop+155; ftlObj.y += (pY + startY - ftlObj.y); } else{ var pY = document.body.scrollTop + document.body.clientHeight; ftlObj.y += (pY - startY - ftlObj.y)/8; } ftlObj.sP(ftlObj.x, ftlObj.y); setTimeout(\"stayTopLeft()\", 20); } ftlObj = ml(\"divStayTopLeft\"); stayTopLeft(); } JSFX_FloatTopDiv(); Norsk utenriksstasjonTel: +962 6 593 1646/7/8, + 47 22 24 04 65 (satelitt) Internett: http://www.norway.jo E-post: emb.amman@mfa.no Åpningstider: 0900-1600 søndag-torsdag"
+    ]
+   },
+   {
+    "from": "2009-04-07",
+    "status": "",
+    "paragraphs": [
+     "Utenriksdepartementet fraråder reiser til de nordlige provinsene (Erbil, Suleimania og Duhok) som ikke er strengt nødvendige. Reiser til øvrige deler av Irak frarådes, og norske borgere som befinner seg i disse områdene oppfordres til å forlate landet. Norske borgere som oppholder seg i eller planlegger reise til Irak oppfordres til å ta kontakt med ambassaden i Amman for oppdatert informasjon og registrering.Sist endret 07.04.2009 :: Print version Send this article to a friend fra Les også Andre lands reiserådSe oversikt over alle UDs offisielle reiserådHva er et offisielt reiseråd? //Enter \"frombottom\" or \"fromtop\" var verticalpos=\"fromtop\" function JSFX_FloatTopDiv() { var startX = document.body.clientWidth-200; startY = 10; var d = document; function ml(id) { var el=d.getElementById?d.getElementById(id):d.all?d.all[id]:d.layers[id]; if(d.layers)el.style=el; el.sP=function(x,y){this.style.left=x;this.style.top=y;}; el.x = startX; if (verticalpos==\"fromtop\") el.y = startY; else{ el.y = document.body.scrollTop + document.body.clientHeight; el.y -= startY; } return el; } window.stayTopLeft=function() { ftlObj.x = document.body.clientWidth-200; if (verticalpos==\"fromtop\"){ var pY = document.body.scrollTop+155; ftlObj.y += (pY + startY - ftlObj.y); } else{ var pY = document.body.scrollTop + document.body.clientHeight; ftlObj.y += (pY - startY - ftlObj.y)/8; } ftlObj.sP(ftlObj.x, ftlObj.y); setTimeout(\"stayTopLeft()\", 20); } ftlObj = ml(\"divStayTopLeft\"); stayTopLeft(); } JSFX_FloatTopDiv(); Norsk utenriksstasjonTel: +962 6 593 1646/7/8, + 47 22 24 04 65 (satelitt) Internett: http://www.norway.jo E-post: emb.amman@mfa.no Åpningstider: 0900-1600 søndag-torsdag"
+    ]
+   },
    {
     "from": "2010-02-15",
     "status": "",
@@ -499,9 +862,22 @@
     "paragraphs": [
      "Utenriksdepartementet fraråder alle reiser til eller opphold i Irak"
     ]
+   },
+   {
+    "from": "2014-08-08",
+    "status": "",
+    "paragraphs": [
+     "Utenriksdepartementet fraråder alle reiser til eller opphold i Irak Utenriksdepartementet fraråder alle reiser til eller opphold i Irak"
+    ]
    }
   ],
   "iran": [
+   {
+    "from": "2006-01-03",
+    "status": "",
+    "paragraphs": [],
+    "approx": true
+   },
    {
     "from": "2010-02-25",
     "status": "",
@@ -518,6 +894,32 @@
    }
   ],
   "israel": [
+   {
+    "from": "2006-01-03",
+    "status": "",
+    "paragraphs": [],
+    "approx": true
+   },
+   {
+    "from": "2006-07-16",
+    "status": "",
+    "paragraphs": [
+     "Utenriksdepartementet fraråder reise til eller opphold i det nordlige Israel, definert som Haifa og områdene nordover mot grensen mot Libanon. Norske borgere som oppholder seg i området bes holde kontakt med ambassaden i Tel Aviv for oppdatert informasjon og registrering."
+    ]
+   },
+   {
+    "from": "2006-11-15",
+    "status": "",
+    "paragraphs": [],
+    "approx": true
+   },
+   {
+    "from": "2009-01-30",
+    "status": "",
+    "paragraphs": [],
+    "listed": true,
+    "approx": true
+   },
    {
     "from": "2010-02-25",
     "status": "",
@@ -545,11 +947,18 @@
     "paragraphs": [
      "Utenriksdepartementet fraråder alle ikke nødvendige reiser til grenseområdet (40 km) mot Gaza i det sørlige Israel."
     ]
+   },
+   {
+    "from": "2017-05-11",
+    "status": "",
+    "paragraphs": [
+     "Utenriksdepartementet fraråder alle ikke-nødvendige reiser til og opphold i grenseområdet (5 km) mot Gaza i det sørlige Israel. Reisende oppfordres til å vise aktsomhet i grenseområdene mot Egypt, Libanon og Syria"
+    ]
    }
   ],
   "japan": [
    {
-    "from": "2010-04-08",
+    "from": "2006-01-03",
     "status": "",
     "paragraphs": [],
     "approx": true
@@ -598,6 +1007,27 @@
   ],
   "jemen": [
    {
+    "from": "2005-12-28",
+    "status": "",
+    "paragraphs": [
+     "Utenriksdepartementet fraråder reise til eller opphold i Jemen som ikke er strengt nødvendig. Norske borgere som oppholder seg i eller planlegger å reise til Jemen oppfordres til å ta kontakt med ambassaden i Riyadh for oppdatert informasjon og registrering."
+    ]
+   },
+   {
+    "from": "2005-12-29",
+    "status": "",
+    "paragraphs": [
+     "Utenriksdepartementet fraråder reise til eller opphold i Jemen som ikke er strengt nødvendig."
+    ]
+   },
+   {
+    "from": "2008-08-18",
+    "status": "",
+    "paragraphs": [
+     "Utenriksdepartementet fraråder reise til eller opphold i Jemen som ikke er strengt nødvendig. Norske borgere som oppholder seg i eller planlegger å reise til Jemen oppfordres til å ta kontakt med ambassaden i Riyadh for oppdatert informasjon og registrering."
+    ]
+   },
+   {
     "from": "2010-02-15",
     "status": "",
     "paragraphs": [
@@ -612,9 +1042,24 @@
     ]
    }
   ],
+  "jordan": [
+   {
+    "from": "2006-01-03",
+    "status": "",
+    "paragraphs": [],
+    "approx": true
+   },
+   {
+    "from": "2016-04-09",
+    "status": "",
+    "paragraphs": [],
+    "listed": true,
+    "approx": true
+   }
+  ],
   "kamerun": [
    {
-    "from": "2010-04-08",
+    "from": "2006-01-03",
     "status": "",
     "paragraphs": [],
     "approx": true
@@ -629,7 +1074,13 @@
   ],
   "kenya": [
    {
-    "from": "2010-02-15",
+    "from": "2006-01-03",
+    "status": "",
+    "paragraphs": [],
+    "approx": true
+   },
+   {
+    "from": "2008-01-02",
     "status": "",
     "paragraphs": [
      "Utenriksdepartementet oppfordrer reisende som oppholder seg i eller planlegger å reise til Kenya om å utvise aktsomhet og til å holde kontakt med ambassaden i Nairobi for oppdatert informasjon og registrering."
@@ -673,6 +1124,12 @@
   ],
   "kirgisistan": [
    {
+    "from": "2006-01-03",
+    "status": "",
+    "paragraphs": [],
+    "approx": true
+   },
+   {
     "from": "2010-04-08",
     "status": "",
     "paragraphs": [
@@ -684,9 +1141,57 @@
     "status": "",
     "paragraphs": [],
     "approx": true
+   },
+   {
+    "from": "2010-05-05",
+    "status": "",
+    "paragraphs": [],
+    "listed": true,
+    "approx": true
+   },
+   {
+    "from": "2011-07-21",
+    "status": "",
+    "paragraphs": [],
+    "approx": true
    }
   ],
   "libanon": [
+   {
+    "from": "2006-01-03",
+    "status": "",
+    "paragraphs": [],
+    "approx": true
+   },
+   {
+    "from": "2006-07-13",
+    "status": "",
+    "paragraphs": [
+     "Utenriksdepartementet fraråder norske borgere å reise til Libanon, og oppfordrer norske borgere som er i landet om å holde løpende kontakt med ambassaden i Beirut."
+    ]
+   },
+   {
+    "from": "2008-05-10",
+    "status": "",
+    "paragraphs": [
+     "Utenriksdepartementet fraråder norske borgere å reise til Libanon.Sist endret 10.05.2008 ::Ambassaden i Beirut Ambassaden er åpen for publikum fra kl. 1000 - 1300 mandag - fredag. Ambassadens telefonnummer: +961 1 372 977/8 I nødsfall ring +961 (0)3 899 505E-post: emb.bey@mfa.no. Print version Send this article to a friend fra Les også Hva er et offisielt reiseråd?Se oversikt over alle UDs offisielle reiserådAndre lands reiseråd Lenker Norgesportalen i Libanon //Enter \"frombottom\" or \"fromtop\" var verticalpos=\"fromtop\" function JSFX_FloatTopDiv() { var startX = document.body.clientWidth-200; startY = 10; var d = document; function ml(id) { var el=d.getElementById?d.getElementById(id):d.all?d.all[id]:d.layers[id]; if(d.layers)el.style=el; el.sP=function(x,y){this.style.left=x;this.style.top=y;}; el.x = startX; if (verticalpos==\"fromtop\") el.y = startY; else{ el.y = document.body.scrollTop + document.body.clientHeight; el.y -= startY; } return el; } window.stayTopLeft=function() { ftlObj.x = document.body.clientWidth-200; if (verticalpos==\"fromtop\"){ var pY = document.body.scrollTop+155; ftlObj.y += (pY + startY - ftlObj.y); } else{ var pY = document.body.scrollTop + document.body.clientHeight; ftlObj.y += (pY - startY - ftlObj.y)/8; } ftlObj.sP(ftlObj.x, ftlObj.y); setTimeout(\"stayTopLeft()\", 20); } ftlObj = ml(\"divStayTopLeft\"); stayTopLeft(); } JSFX_FloatTopDiv(); Lenkerhttp://www.dailystar.com.lb/http://www.lebanonwire.comhttp://www.openlebanon.org/http://www.arabdecision.org/http://www.lorient-lejour.com.lb/http://www.aub.edu.lb/http://english.daralhayat.com/www.metransparent.comwww.knittat.comwww.beirutletter.orghttp://www.futuretvnetwork.com/http://www.almanar.com.lb/newssite/News.aspx?language=enOffisielt reiseråd [+] Utenriksdepartementet har utstedt offisielt reiseråd for Libanon"
+    ]
+   },
+   {
+    "from": "2008-10-22",
+    "status": "",
+    "paragraphs": [
+     "Utenriksdepartementet fraråder reise til eller opphold i Libanon som ikke er strengt nødvendig. Norske borgere som oppholder seg i eller som planlegger å reise til Libanon oppfordres til å ta kontakt med ambassaden i Beirut for oppdatert informasjon og registrering.Sist endret 22.10.2008 ::Ambassaden i Beirut Ambassaden er åpen for publikum fra kl. 1000 - 1300 mandag - fredag. Ambassadens telefonnummer: +961 1 372 977/8 I nødsfall ring +961 (0)3 899 505E-post: emb.bey@mfa.no. Print version Send this article to a friend fra Les også Hva er et offisielt reiseråd?Se oversikt over alle UDs offisielle reiserådAndre lands reiseråd Lenker Norgesportalen i Libanon //Enter \"frombottom\" or \"fromtop\" var verticalpos=\"fromtop\" function JSFX_FloatTopDiv() { var startX = document.body.clientWidth-200; startY = 10; var d = document; function ml(id) { var el=d.getElementById?d.getElementById(id):d.all?d.all[id]:d.layers[id]; if(d.layers)el.style=el; el.sP=function(x,y){this.style.left=x;this.style.top=y;}; el.x = startX; if (verticalpos==\"fromtop\") el.y = startY; else{ el.y = document.body.scrollTop + document.body.clientHeight; el.y -= startY; } return el; } window.stayTopLeft=function() { ftlObj.x = document.body.clientWidth-200; if (verticalpos==\"fromtop\"){ var pY = document.body.scrollTop+155; ftlObj.y += (pY + startY - ftlObj.y); } else{ var pY = document.body.scrollTop + document.body.clientHeight; ftlObj.y += (pY - startY - ftlObj.y)/8; } ftlObj.sP(ftlObj.x, ftlObj.y); setTimeout(\"stayTopLeft()\", 20); } ftlObj = ml(\"divStayTopLeft\"); stayTopLeft(); } JSFX_FloatTopDiv(); Norsk utenriksstasjonTel: +961 1 372 977/8 Internett: http://www.norway-lebanon.org E-post: emb.bey@mfa.no Åpningstider: 0900-1500"
+    ]
+   },
+   {
+    "from": "2009-02-11",
+    "status": "",
+    "paragraphs": [
+     "Utenriksdepartementet fraråder reise til eller opphold i Libanon som ikke er strengt nødvendig. Norske borgere som oppholder seg i eller som planlegger å reise til Libanon oppfordres til å ta kontakt med ambassaden i Beirut for oppdatert informasjon og registrering.22.10.2008 Ambassaden i Beirut Ambassaden er åpen for publikum fra kl. 1000 - 1300 mandag - fredag. Ambassadens telefonnummer: +961 1 960 000 (nytt telefonnummer - 22.12.2008)I nødsfall ring +961 (0)3 899 505E-post: emb.bey@mfa.no. Print version Send this article to a friend fra Les også Hva er et offisielt reiseråd?Se oversikt over alle UDs offisielle reiserådAndre lands reiseråd Lenker Norgesportalen i Libanon //Enter \"frombottom\" or \"fromtop\" var verticalpos=\"fromtop\" function JSFX_FloatTopDiv() { var startX = document.body.clientWidth-200; startY = 10; var d = document; function ml(id) { var el=d.getElementById?d.getElementById(id):d.all?d.all[id]:d.layers[id]; if(d.layers)el.style=el; el.sP=function(x,y){this.style.left=x;this.style.top=y;}; el.x = startX; if (verticalpos==\"fromtop\") el.y = startY; else{ el.y = document.body.scrollTop + document.body.clientHeight; el.y -= startY; } return el; } window.stayTopLeft=function() { ftlObj.x = document.body.clientWidth-200; if (verticalpos==\"fromtop\"){ var pY = document.body.scrollTop+155; ftlObj.y += (pY + startY - ftlObj.y); } else{ var pY = document.body.scrollTop + document.body.clientHeight; ftlObj.y += (pY - startY - ftlObj.y)/8; } ftlObj.sP(ftlObj.x, ftlObj.y); setTimeout(\"stayTopLeft()\", 20); } ftlObj = ml(\"divStayTopLeft\"); stayTopLeft(); } JSFX_FloatTopDiv(); Norsk utenriksstasjonTel: +961 1 372 977/8 Internett: http://www.norway-lebanon.org E-post: emb.bey@mfa.no Åpningstider: 0900-1500"
+    ],
+    "approx": true
+   },
    {
     "from": "2010-02-25",
     "status": "",
@@ -732,9 +1237,16 @@
   ],
   "liberia": [
    {
-    "from": "2010-04-08",
+    "from": "2006-01-03",
     "status": "",
     "paragraphs": [],
+    "approx": true
+   },
+   {
+    "from": "2014-08-21",
+    "status": "",
+    "paragraphs": [],
+    "listed": true,
     "approx": true
    },
    {
@@ -757,13 +1269,26 @@
     "paragraphs": [
      "Utenriksdepartementet fraråder alle reiser til eller opphold i Liberia, med unntak av Monrovia, som ikke er strengt nødvendige."
     ]
+   },
+   {
+    "from": "2016-03-15",
+    "status": "",
+    "paragraphs": [],
+    "approx": true
    }
   ],
   "libya": [
    {
-    "from": "2010-04-08",
+    "from": "2006-01-03",
     "status": "",
     "paragraphs": [],
+    "approx": true
+   },
+   {
+    "from": "2011-02-21",
+    "status": "",
+    "paragraphs": [],
+    "listed": true,
     "approx": true
    },
    {
@@ -802,9 +1327,30 @@
     ]
    }
   ],
-  "malaysia": [
+  "madagaskar": [
+   {
+    "from": "2006-01-03",
+    "status": "",
+    "paragraphs": [],
+    "approx": true
+   },
+   {
+    "from": "2009-01-30",
+    "status": "",
+    "paragraphs": [],
+    "listed": true,
+    "approx": true
+   },
    {
     "from": "2010-04-08",
+    "status": "",
+    "paragraphs": [],
+    "approx": true
+   }
+  ],
+  "malaysia": [
+   {
+    "from": "2006-01-03",
     "status": "",
     "paragraphs": [],
     "approx": true
@@ -821,9 +1367,29 @@
     "status": "",
     "paragraphs": [],
     "approx": true
+   },
+   {
+    "from": "2017-07-16",
+    "status": "",
+    "paragraphs": [],
+    "listed": true,
+    "approx": true
    }
   ],
   "mali": [
+   {
+    "from": "2006-01-03",
+    "status": "",
+    "paragraphs": [],
+    "approx": true
+   },
+   {
+    "from": "2009-04-17",
+    "status": "",
+    "paragraphs": [
+     "Utenriksdepartementet fraråder reiser som ikke er strengt nødvendige til områdene nord for aksen Lere-Timbuktu-Bourem-Gao-Asongo. Norske borgere som oppholder seg i eller planlegger reise til Mali oppfordres til å ta kontakt med ambassaden i Abidjan for oppdatert informasjon og registrering."
+    ]
+   },
    {
     "from": "2010-02-15",
     "status": "",
@@ -862,6 +1428,19 @@
   ],
   "mauritania": [
    {
+    "from": "2006-01-03",
+    "status": "",
+    "paragraphs": [],
+    "approx": true
+   },
+   {
+    "from": "2008-08-20",
+    "status": "",
+    "paragraphs": [
+     "Utenriksdepartementet fraråder reise til eller opphold i Mauritania som ikke er strengt nødvendig. Norske borgere som oppholder seg i eller som planlegger å reise til Mauritania oppfordres til å ta kontakt med ambassaden i Rabat, Marokko for oppdatert informasjon og registrering."
+    ]
+   },
+   {
     "from": "2010-02-25",
     "status": "",
     "paragraphs": [
@@ -876,9 +1455,30 @@
     ]
    }
   ],
+  "mexico": [
+   {
+    "from": "2006-01-03",
+    "status": "",
+    "paragraphs": [],
+    "approx": true
+   },
+   {
+    "from": "2009-04-29",
+    "status": "",
+    "paragraphs": [
+     "I tråd med norske helsemyndigheters anbefaling, fraråder Utenriksdepartementet reiser til Mexico som ikke er strengt nødvendig.29.04.2009 :: Print version Send this article to a friend fra Les også Folkehelseinstituttets råd til reisendeHelsedirektoratets informasjon om svineinfluensa //Enter \"frombottom\" or \"fromtop\" var verticalpos=\"fromtop\" function JSFX_FloatTopDiv() { var startX = document.body.clientWidth-200; startY = 10; var d = document; function ml(id) { var el=d.getElementById?d.getElementById(id):d.all?d.all[id]:d.layers[id]; if(d.layers)el.style=el; el.sP=function(x,y){this.style.left=x;this.style.top=y;}; el.x = startX; if (verticalpos==\"fromtop\") el.y = startY; else{ el.y = document.body.scrollTop + document.body.clientHeight; el.y -= startY; } return el; } window.stayTopLeft=function() { ftlObj.x = document.body.clientWidth-200; if (verticalpos==\"fromtop\"){ var pY = document.body.scrollTop+155; ftlObj.y += (pY + startY - ftlObj.y); } else{ var pY = document.body.scrollTop + document.body.clientHeight; ftlObj.y += (pY - startY - ftlObj.y)/8; } ftlObj.sP(ftlObj.x, ftlObj.y); setTimeout(\"stayTopLeft()\", 20); } ftlObj = ml(\"divStayTopLeft\"); stayTopLeft(); } JSFX_FloatTopDiv(); Norsk utenriksstasjonTel: +52 55 55 40 34 86/87 Internett: http://www.noruega.org.mx E-post: emb.mexico@mfa.no Åpningstider: 0900-1630. Lørdag stengt"
+    ]
+   },
+   {
+    "from": "2009-05-18",
+    "status": "",
+    "paragraphs": [],
+    "approx": true
+   }
+  ],
   "mosambik": [
    {
-    "from": "2010-04-08",
+    "from": "2006-01-03",
     "status": "",
     "paragraphs": [],
     "approx": true
@@ -902,9 +1502,71 @@
     "status": "",
     "paragraphs": [],
     "approx": true
+   },
+   {
+    "from": "2016-03-15",
+    "status": "",
+    "paragraphs": [],
+    "listed": true,
+    "approx": true
+   }
+  ],
+  "myanmar": [
+   {
+    "from": "2006-01-03",
+    "status": "",
+    "paragraphs": [],
+    "approx": true
+   },
+   {
+    "from": "2007-09-27",
+    "status": "",
+    "paragraphs": [
+     "På grunn av den urolige situasjonen i Myanmar/Burma fraråder Utenriksdepartementet reise til eller opphold som ikke er strengt nødvendig. Norske borgere som oppholder seg i eller planlegger å reise til Myanmar/Burma oppfordres til å ta kontakt med ambassaden i Bangkok for oppdatert informasjon og registrering."
+    ]
+   },
+   {
+    "from": "2008-05-09",
+    "status": "",
+    "paragraphs": [
+     "Utenriksdepartementet fraråder reise til eller opphold i Myanmar (Burma) som ikke er strengt nødvendig.Sist endret 09.05.2008 ::Kgl. norsk ambassade Adresse: UBC II Building, 18th floor591 Sukhumvit Road, Soi 33Bangkok 10110Thailand G.P.O. box 81Bangkok 10501Thailand Tlf: +66 (0)2204 6500 Faks: +66 (0)2262 0218 E-post: emb.bangkok@mfa.no"
+    ]
+   },
+   {
+    "from": "2009-05-18",
+    "status": "",
+    "paragraphs": [],
+    "approx": true
+   }
+  ],
+  "nepal": [
+   {
+    "from": "2006-01-03",
+    "status": "",
+    "paragraphs": [],
+    "approx": true
+   },
+   {
+    "from": "2015-05-08",
+    "status": "",
+    "paragraphs": [],
+    "listed": true,
+    "approx": true
+   },
+   {
+    "from": "2015-10-02",
+    "status": "",
+    "paragraphs": [],
+    "approx": true
    }
   ],
   "niger": [
+   {
+    "from": "2006-01-03",
+    "status": "",
+    "paragraphs": [],
+    "approx": true
+   },
    {
     "from": "2010-02-25",
     "status": "",
@@ -921,6 +1583,19 @@
    }
   ],
   "nigeria": [
+   {
+    "from": "2006-01-03",
+    "status": "",
+    "paragraphs": [],
+    "approx": true
+   },
+   {
+    "from": "2007-07-06",
+    "status": "",
+    "paragraphs": [
+     "Utenriksdepartementet fraråder reise til eller opphold som ikke er strengt nødvendig i delstatene Bayelsa, Akwa Ibom, Delta og Rivers i Nigeria. Norske borgere som planlegger å reise til disse delene av Niger-deltaet oppfordres til å ta kontakt med ambassaden i Abuja for oppdatert informasjon og registrering."
+    ]
+   },
    {
     "from": "2010-02-25",
     "status": "",
@@ -945,7 +1620,7 @@
   ],
   "nordkorea": [
    {
-    "from": "2010-04-08",
+    "from": "2006-01-03",
     "status": "",
     "paragraphs": [],
     "approx": true
@@ -962,9 +1637,92 @@
     "status": "",
     "paragraphs": [],
     "approx": true
+   },
+   {
+    "from": "2018-01-30",
+    "status": "",
+    "paragraphs": [],
+    "listed": true,
+    "approx": true
+   }
+  ],
+  "osttimor": [
+   {
+    "from": "2006-01-03",
+    "status": "",
+    "paragraphs": [],
+    "approx": true
+   },
+   {
+    "from": "2006-05-25",
+    "status": "",
+    "paragraphs": [
+     "På grunn av den urolige situasjonen på Øst-Timor fraråder Utenriksdepartementet reise til, eller opphold på, Øst-Timor som ikke er strengt nødvendig. Norske borgere som oppholder seg på eller planlegger å reise til Øst-Timor oppfordres til å ta kontakt med ambassaden i Jakarta for oppdatert informasjon og registrering."
+    ]
+   },
+   {
+    "from": "2006-05-25",
+    "status": "",
+    "paragraphs": [
+     "Utenriksdepartementet fraråder reise til eller opphold i Øst-Timor som ikke er strengt nødvendig. Norske borgere som oppholder seg i eller som planlegger å reise til Øst-Timor oppfordres til å ta kontakt med ambassadeseksjonen i Dili for oppdatert informasjon og registrering."
+    ]
+   },
+   {
+    "from": "2008-04-22",
+    "status": "",
+    "paragraphs": [
+     "Utenriksdepartementet fraråder reise til eller opphold i Øst-Timor som ikke er strengt nødvendig. Norske borgere som oppholder seg i eller som planlegger å reise til Øst-Timor oppfordres til å ta kontakt med ambassadeseksjonen i Dili for oppdatert informasjon og registrering.Sist endret 22.04.2008 ::Royal Norwegian Embassy Menara Rajawali Building, 25th floor Mega Kuningan Jakarta 12950Republic of Indonesia Tlf: + 62 21 576 1523/24. Faks: + 62 21 576 1537 E-post: emb.jakarta@mfa.no Internett: http://www.norway.or.id Utenfor ambassadens åpningstid kan man i nødstilfeller få kontakt med den som har vakt ved å ringe + 62 815 9700348. Print version Send this article to a friend fra //Enter \"frombottom\" or \"fromtop\" var verticalpos=\"fromtop\" function JSFX_FloatTopDiv() { var startX = document.body.clientWidth-200; startY = 10; var d = document; function ml(id) { var el=d.getElementById?d.getElementById(id):d.all?d.all[id]:d.layers[id]; if(d.layers)el.style=el; el.sP=function(x,y){this.style.left=x;this.style.top=y;}; el.x = startX; if (verticalpos==\"fromtop\") el.y = startY; else{ el.y = document.body.scrollTop + document.body.clientHeight; el.y -= startY; } return el; } window.stayTopLeft=function() { ftlObj.x = document.body.clientWidth-200; if (verticalpos==\"fromtop\"){ var pY = document.body.scrollTop+155; ftlObj.y += (pY + startY - ftlObj.y); } else{ var pY = document.body.scrollTop + document.body.clientHeight; ftlObj.y += (pY - startY - ftlObj.y)/8; } ftlObj.sP(ftlObj.x, ftlObj.y); setTimeout(\"stayTopLeft()\", 20); } ftlObj = ml(\"divStayTopLeft\"); stayTopLeft(); } JSFX_FloatTopDiv(); Offisielt reiseråd [+] Utenriksdepartementet har utstedt offisielt reiseråd for Øst-Timor"
+    ]
+   },
+   {
+    "from": "2008-12-20",
+    "status": "",
+    "paragraphs": [],
+    "approx": true
    }
   ],
   "pakistan": [
+   {
+    "from": "2006-01-03",
+    "status": "",
+    "paragraphs": [],
+    "approx": true
+   },
+   {
+    "from": "2007-08-27",
+    "status": "",
+    "paragraphs": [
+     "Utenriksdepartementet fraråder reise til eller opphold i North West Frontier Province, stammeområdene Federally Administered Tribal Areas (FATA) samt Gilgit i Nordområdene og ferdsel på Karakorum Highway gjennom Kohistan."
+    ]
+   },
+   {
+    "from": "2008-06-02",
+    "status": "",
+    "paragraphs": [
+     "Utenriksdepartementet fraråder reiser til Pakistan som ikke er strengt nødvendige. Norske borgere i landet oppfordres til å være særlig aktsomme, spesielt i Islamabad og andre større byer.Sist endret 02.06.2008 :: Print version Send this article to a friend fra //Enter \"frombottom\" or \"fromtop\" var verticalpos=\"fromtop\" function JSFX_FloatTopDiv() { var startX = document.body.clientWidth-200; startY = 10; var d = document; function ml(id) { var el=d.getElementById?d.getElementById(id):d.all?d.all[id]:d.layers[id]; if(d.layers)el.style=el; el.sP=function(x,y){this.style.left=x;this.style.top=y;}; el.x = startX; if (verticalpos==\"fromtop\") el.y = startY; else{ el.y = document.body.scrollTop + document.body.clientHeight; el.y -= startY; } return el; } window.stayTopLeft=function() { ftlObj.x = document.body.clientWidth-200; if (verticalpos==\"fromtop\"){ var pY = document.body.scrollTop+155; ftlObj.y += (pY + startY - ftlObj.y); } else{ var pY = document.body.scrollTop + document.body.clientHeight; ftlObj.y += (pY - startY - ftlObj.y)/8; } ftlObj.sP(ftlObj.x, ftlObj.y); setTimeout(\"stayTopLeft()\", 20); } ftlObj = ml(\"divStayTopLeft\"); stayTopLeft(); } JSFX_FloatTopDiv(); Norsk utenriksstasjonTel: +92 51 2279720-24 Internett: http://www.norway.org.pk E-post: emb.islamabad@mfa.no Åpningstider: 0800-1530."
+    ]
+   },
+   {
+    "from": "2008-09-09",
+    "status": "",
+    "paragraphs": [
+     "Utenriksdepartementet fraråder reise til eller opphold i North West Frontier Province og i stammeområdene Federally Administered Tribal Areas (FATA). Også i andre deler av Pakistan vil det være grunn til aktsomhet og til å rette seg etter lokale myndigheters anvisninger. Sist endret 09.09.2008 ::Norske borgere som oppholder seg i eller som planlegger å reise til Pakistan oppfordres til å ta kontakt med ambassaden i Islamabad for oppdatert informasjon og registrering. Print version Send this article to a friend fra //Enter \"frombottom\" or \"fromtop\" var verticalpos=\"fromtop\" function JSFX_FloatTopDiv() { var startX = document.body.clientWidth-200; startY = 10; var d = document; function ml(id) { var el=d.getElementById?d.getElementById(id):d.all?d.all[id]:d.layers[id]; if(d.layers)el.style=el; el.sP=function(x,y){this.style.left=x;this.style.top=y;}; el.x = startX; if (verticalpos==\"fromtop\") el.y = startY; else{ el.y = document.body.scrollTop + document.body.clientHeight; el.y -= startY; } return el; } window.stayTopLeft=function() { ftlObj.x = document.body.clientWidth-200; if (verticalpos==\"fromtop\"){ var pY = document.body.scrollTop+155; ftlObj.y += (pY + startY - ftlObj.y); } else{ var pY = document.body.scrollTop + document.body.clientHeight; ftlObj.y += (pY - startY - ftlObj.y)/8; } ftlObj.sP(ftlObj.x, ftlObj.y); setTimeout(\"stayTopLeft()\", 20); } ftlObj = ml(\"divStayTopLeft\"); stayTopLeft(); } JSFX_FloatTopDiv(); Norsk utenriksstasjonTel: +92 51 2279720-24 Internett: http://www.norway.org.pk E-post: emb.islamabad@mfa.no Åpningstider: 0800-1530."
+    ]
+   },
+   {
+    "from": "2008-10-10",
+    "status": "",
+    "paragraphs": [
+     "Utenriksdepartementet fraråder reise til eller opphold i North West Frontier Province og i stammeområdene Federally Administered Tribal Areas (FATA). På grunn av fare for terrorangrep bør det utvises stor aktsomhet under reise og opphold i de store byene og på steder med store menneskeansamlinger. Også i andre deler av Pakistan vil det være grunn til aktsomhet og til å rette seg etter lokale myndigheters anvisninger. Sist endret 10.10.2008 ::Norske borgere som oppholder seg i eller som planlegger å reise til Pakistan oppfordres til å ta kontakt med ambassaden i Islamabad for oppdatert informasjon og registrering. Print version Send this article to a friend fra //Enter \"frombottom\" or \"fromtop\" var verticalpos=\"fromtop\" function JSFX_FloatTopDiv() { var startX = document.body.clientWidth-200; startY = 10; var d = document; function ml(id) { var el=d.getElementById?d.getElementById(id):d.all?d.all[id]:d.layers[id]; if(d.layers)el.style=el; el.sP=function(x,y){this.style.left=x;this.style.top=y;}; el.x = startX; if (verticalpos==\"fromtop\") el.y = startY; else{ el.y = document.body.scrollTop + document.body.clientHeight; el.y -= startY; } return el; } window.stayTopLeft=function() { ftlObj.x = document.body.clientWidth-200; if (verticalpos==\"fromtop\"){ var pY = document.body.scrollTop+155; ftlObj.y += (pY + startY - ftlObj.y); } else{ var pY = document.body.scrollTop + document.body.clientHeight; ftlObj.y += (pY - startY - ftlObj.y)/8; } ftlObj.sP(ftlObj.x, ftlObj.y); setTimeout(\"stayTopLeft()\", 20); } ftlObj = ml(\"divStayTopLeft\"); stayTopLeft(); } JSFX_FloatTopDiv(); Norsk utenriksstasjonTel: +92 51 2279720-24 Internett: http://www.norway.org.pk E-post: emb.islamabad@mfa.no Åpningstider: 0800-1530."
+    ]
+   },
+   {
+    "from": "2009-01-09",
+    "status": "",
+    "paragraphs": [
+     "Utenriksdepartementet fraråder reise til eller opphold i North West Frontier Province og i stammeområdene Federally Administered Tribal Areas (FATA). På grunn av fare for terrorangrep bør det utvises stor aktsomhet under reise og opphold i de store byene og på steder med store menneskeansamlinger. Også i andre deler av Pakistan vil det være grunn til aktsomhet og til å rette seg etter lokale myndigheters anvisninger. Sist endret 09.01.2009 ::Norske borgere som oppholder seg i eller som planlegger å reise til Pakistan oppfordres til å ta kontakt med ambassaden i Islamabad for oppdatert informasjon og registrering. Ambassaden kan sende registreringsskjema til reisende per e-post dersom dette er ønskelig. Utfylt skjema kan returneres på samme måte. Print version Send this article to a friend fra //Enter \"frombottom\" or \"fromtop\" var verticalpos=\"fromtop\" function JSFX_FloatTopDiv() { var startX = document.body.clientWidth-200; startY = 10; var d = document; function ml(id) { var el=d.getElementById?d.getElementById(id):d.all?d.all[id]:d.layers[id]; if(d.layers)el.style=el; el.sP=function(x,y){this.style.left=x;this.style.top=y;}; el.x = startX; if (verticalpos==\"fromtop\") el.y = startY; else{ el.y = document.body.scrollTop + document.body.clientHeight; el.y -= startY; } return el; } window.stayTopLeft=function() { ftlObj.x = document.body.clientWidth-200; if (verticalpos==\"fromtop\"){ var pY = document.body.scrollTop+155; ftlObj.y += (pY + startY - ftlObj.y); } else{ var pY = document.body.scrollTop + document.body.clientHeight; ftlObj.y += (pY - startY - ftlObj.y)/8; } ftlObj.sP(ftlObj.x, ftlObj.y); setTimeout(\"stayTopLeft()\", 20); } ftlObj = ml(\"divStayTopLeft\"); stayTopLeft(); } JSFX_FloatTopDiv(); Norsk utenriksstasjonTel: +92 51 2279720-24 Internett: http://www.norway.org.pk E-post: emb.islamabad@mfa.no Åpningstider: 0800-1530."
+    ]
+   },
    {
     "from": "2010-03-23",
     "status": "",
@@ -996,6 +1754,59 @@
   ],
   "palestina": [
    {
+    "from": "2005-12-30",
+    "status": "",
+    "paragraphs": [
+     "Utenriksdepartementet fraråder reise til eller opphold i Gaza og Vestbredden som ikke er strengt nødvendig. Norske borgere som oppholder seg i eller planlegger å reise til Gaza og Vestbredden oppfordres til å ta kontakt med Representasjonskontoret i Al-Ram og/eller ambassaden i Tel Aviv for oppdatert informasjon og registrering."
+    ]
+   },
+   {
+    "from": "2006-01-31",
+    "status": "",
+    "paragraphs": [
+     "Utenriksdepartementet fraråder reise til eller opphold i Gaza og Vestbredden. Norske borgere som oppholder seg i eller planlegger å reise til Gaza og Vestbredden oppfordres til å ta kontakt med Representasjonskontoret i Al-Ram og/eller ambassaden i Tel Aviv for oppdatert informasjon og registrering."
+    ]
+   },
+   {
+    "from": "2006-07-18",
+    "status": "",
+    "paragraphs": [],
+    "approx": true
+   },
+   {
+    "from": "2006-09-05",
+    "status": "",
+    "paragraphs": [
+     "Utenriksdepartementet fraråder reise til eller opphold i Gaza. Reisende bør vurdere nødvendigheten av reiser til Vestbredden. Norske borgere som oppholder seg i eller planlegger å reise til Gaza og Vestbredden oppfordres til å ta kontakt med Representasjonskontoret i Al-Ram og/eller ambassaden i Tel Aviv for oppdatert informasjon og registrering."
+    ]
+   },
+   {
+    "from": "2006-09-16",
+    "status": "",
+    "paragraphs": [],
+    "approx": true
+   },
+   {
+    "from": "2006-11-15",
+    "status": "",
+    "paragraphs": [],
+    "listed": true,
+    "approx": true
+   },
+   {
+    "from": "2008-09-04",
+    "status": "",
+    "paragraphs": [
+     "Utenriksdepartementet fraråder reise til eller opphold i Gaza. Reisende bør vurdere nødvendigheten av reiser til Vestbredden. Norske borgere som oppholder seg i eller planlegger å reise til Gaza og Vestbredden oppfordres til å ta kontakt med Representasjonskontoret i Al-Ram og/eller ambassaden i Tel Aviv for oppdatert informasjon og registrering.Sist endret 04.09.2008 ::Representasjonskontorets kontaktnummer: tel: + 972 (0)2 234 50 50. vakttelefon utenom åpningstid: + 972 (0) 545 65 3202 Print version Send this article to a friend fra //Enter \"frombottom\" or \"fromtop\" var verticalpos=\"fromtop\" function JSFX_FloatTopDiv() { var startX = document.body.clientWidth-200; startY = 10; var d = document; function ml(id) { var el=d.getElementById?d.getElementById(id):d.all?d.all[id]:d.layers[id]; if(d.layers)el.style=el; el.sP=function(x,y){this.style.left=x;this.style.top=y;}; el.x = startX; if (verticalpos==\"fromtop\") el.y = startY; else{ el.y = document.body.scrollTop + document.body.clientHeight; el.y -= startY; } return el; } window.stayTopLeft=function() { ftlObj.x = document.body.clientWidth-200; if (verticalpos==\"fromtop\"){ var pY = document.body.scrollTop+155; ftlObj.y += (pY + startY - ftlObj.y); } else{ var pY = document.body.scrollTop + document.body.clientHeight; ftlObj.y += (pY - startY - ftlObj.y)/8; } ftlObj.sP(ftlObj.x, ftlObj.y); setTimeout(\"stayTopLeft()\", 20); } ftlObj = ml(\"divStayTopLeft\"); stayTopLeft(); } JSFX_FloatTopDiv(); Norsk utenriksstasjonTel: +972 3 7441490 (Satelitt +871 763 069 655) Internett: http://www.norway.org.il E-post: emb.telaviv@mfa.no Åpningstider: 0830-1600. Fredag 0830-1500. Lørdag stengt"
+    ]
+   },
+   {
+    "from": "2009-01-30",
+    "status": "",
+    "paragraphs": [],
+    "approx": true
+   },
+   {
     "from": "2010-02-25",
     "status": "",
     "paragraphs": [
@@ -1024,9 +1835,24 @@
     ]
    }
   ],
+  "repkongo": [
+   {
+    "from": "2006-01-03",
+    "status": "",
+    "paragraphs": [],
+    "approx": true
+   },
+   {
+    "from": "2015-11-13",
+    "status": "",
+    "paragraphs": [],
+    "listed": true,
+    "approx": true
+   }
+  ],
   "russland": [
    {
-    "from": "2010-02-15",
+    "from": "2005-12-29",
     "status": "",
     "paragraphs": [
      "Utenriksdepartementet fraråder reise til eller opphold i konfliktområdene i Nord-Kaukasus som ikke er strengt nødvendig. Norske borgere som oppholder seg i eller planlegger å reise til disse områdene oppfordres til å ta kontakt med ambassaden i Moskva for oppdatert informasjon og registrering."
@@ -1049,7 +1875,7 @@
   ],
   "rwanda": [
    {
-    "from": "2010-04-08",
+    "from": "2006-01-03",
     "status": "",
     "paragraphs": [],
     "approx": true
@@ -1064,7 +1890,7 @@
   ],
   "sar": [
    {
-    "from": "2010-04-08",
+    "from": "2006-01-03",
     "status": "",
     "paragraphs": [],
     "approx": true
@@ -1086,6 +1912,20 @@
   ],
   "saudiarabia": [
    {
+    "from": "2005-12-29",
+    "status": "",
+    "paragraphs": [
+     "Utenriksdepartementet fraråder reise til eller opphold i Saudi-Arabia som ikke er strengt nødvendig. Norske borgere som oppholder seg i eller planlegger å reise til Saudi-Arabia oppfordres til å ta kontakt med ambassaden i Riyadh for oppdatert informasjon og registrering."
+    ]
+   },
+   {
+    "from": "2008-08-10",
+    "status": "",
+    "paragraphs": [
+     "Utenriksdepartementet fraråder reise til eller opphold i Saudi-Arabia som ikke er strengt nødvendig. Norske borgere som oppholder seg i eller planlegger å reise til Saudi-Arabia oppfordres til å ta kontakt med ambassaden i Riyadh for oppdatert informasjon og registrering.Sist endret 10.08.2008 ::Kgl. norsk ambassade, Riyadh Adresse:Royal Norwegian EmbassyP.O.Box 94380Riyadh 11693Kingdom of Saudi Arabia Tlf: (+966 1) 488 1904Fax: (+966 1) 488 0854E-mail: emb.riyadh@mfa.no Åpningstider:Lørdag - onsdag - 08.30-15.00 hours Nødnummer: 0 504 720 348 / +966 504 720 348 Print version Send this article to a friend fra Les også Andre lands reiserådSe oversikt over alle UDs offisielle reiserådHva er et offisielt reiseråd? //Enter \"frombottom\" or \"fromtop\" var verticalpos=\"fromtop\" function JSFX_FloatTopDiv() { var startX = document.body.clientWidth-200; startY = 10; var d = document; function ml(id) { var el=d.getElementById?d.getElementById(id):d.all?d.all[id]:d.layers[id]; if(d.layers)el.style=el; el.sP=function(x,y){this.style.left=x;this.style.top=y;}; el.x = startX; if (verticalpos==\"fromtop\") el.y = startY; else{ el.y = document.body.scrollTop + document.body.clientHeight; el.y -= startY; } return el; } window.stayTopLeft=function() { ftlObj.x = document.body.clientWidth-200; if (verticalpos==\"fromtop\"){ var pY = document.body.scrollTop+155; ftlObj.y += (pY + startY - ftlObj.y); } else{ var pY = document.body.scrollTop + document.body.clientHeight; ftlObj.y += (pY - startY - ftlObj.y)/8; } ftlObj.sP(ftlObj.x, ftlObj.y); setTimeout(\"stayTopLeft()\", 20); } ftlObj = ml(\"divStayTopLeft\"); stayTopLeft(); } JSFX_FloatTopDiv(); Norsk utenriksstasjonTel: +966 1 4881904 Internett: http://www.al-norwige.org.sa E-post: emb.riyadh@mfa.no Åpningstider: 0830-1500. Torsdag/fredag stengt"
+    ]
+   },
+   {
     "from": "2010-02-25",
     "status": "",
     "paragraphs": [
@@ -1102,9 +1942,16 @@
   ],
   "sierraleone": [
    {
-    "from": "2010-04-08",
+    "from": "2006-01-03",
     "status": "",
     "paragraphs": [],
+    "approx": true
+   },
+   {
+    "from": "2014-08-21",
+    "status": "",
+    "paragraphs": [],
+    "listed": true,
     "approx": true
    },
    {
@@ -1127,9 +1974,42 @@
     "paragraphs": [
      "Utenriksdepartementet fraråder alle reiser til eller opphold som ikke er strengt nødvendig til Sierra Leone."
     ]
+   },
+   {
+    "from": "2016-03-15",
+    "status": "",
+    "paragraphs": [],
+    "approx": true
    }
   ],
   "somalia": [
+   {
+    "from": "2006-01-03",
+    "status": "",
+    "paragraphs": [],
+    "approx": true
+   },
+   {
+    "from": "2007-02-09",
+    "status": "",
+    "paragraphs": [],
+    "listed": true,
+    "approx": true
+   },
+   {
+    "from": "2008-04-23",
+    "status": "",
+    "paragraphs": [
+     "Utenriksdepartementet fraråder norske borgere å reise til sør-, sentral- og nordøst-Somalia, og oppfordrer dem som allerede er i disse områder om å forlate området. Norske myndigheters muligheter til å tilby konsulær bistand er ytterst begrenset ettersom Norge ikke har diplomatisk eller annen konsulær tilstedeværelse i Somalia.Sist endret 23.04.2008 ::Den norske ambassaden i NairobiP.O.Box 46363-00100,Nairobi, Kenya E-post: emb.nairobi@mfa.noTel: +254 20 4451510/1/2Internett: www.norway.or.ke Print version Send this article to a friend fra Lenker Den norske ambassaden i Nairobi //Enter \"frombottom\" or \"fromtop\" var verticalpos=\"fromtop\" function JSFX_FloatTopDiv() { var startX = document.body.clientWidth-200; startY = 10; var d = document; function ml(id) { var el=d.getElementById?d.getElementById(id):d.all?d.all[id]:d.layers[id]; if(d.layers)el.style=el; el.sP=function(x,y){this.style.left=x;this.style.top=y;}; el.x = startX; if (verticalpos==\"fromtop\") el.y = startY; else{ el.y = document.body.scrollTop + document.body.clientHeight; el.y -= startY; } return el; } window.stayTopLeft=function() { ftlObj.x = document.body.clientWidth-200; if (verticalpos==\"fromtop\"){ var pY = document.body.scrollTop+155; ftlObj.y += (pY + startY - ftlObj.y); } else{ var pY = document.body.scrollTop + document.body.clientHeight; ftlObj.y += (pY - startY - ftlObj.y)/8; } ftlObj.sP(ftlObj.x, ftlObj.y); setTimeout(\"stayTopLeft()\", 20); } ftlObj = ml(\"divStayTopLeft\"); stayTopLeft(); } JSFX_FloatTopDiv(); Norsk utenriksstasjonTel: +254 20 4451510/1/2 Internett: http://www.norway.or.ke E-post: emb.nairobi@mfa.no Åpningstider: 0730-1530 man-tor 0800-1330 fre. Lørdag stengt."
+    ]
+   },
+   {
+    "from": "2009-04-17",
+    "status": "",
+    "paragraphs": [
+     "Utenriksdepartementet fraråder norske borgere å reise til sør-, sentral- og nordøst-Somalia, og oppfordrer dem som allerede er i disse områder om å forlate området. Norske myndigheters muligheter til å tilby konsulær bistand er ytterst begrenset ettersom Norge ikke har diplomatisk eller annen konsulær tilstedeværelse i Somalia.Sist endret 17.04.2009 :: Print version Send this article to a friend fra Lenker Den norske ambassaden i Nairobi //Enter \"frombottom\" or \"fromtop\" var verticalpos=\"fromtop\" function JSFX_FloatTopDiv() { var startX = document.body.clientWidth-200; startY = 10; var d = document; function ml(id) { var el=d.getElementById?d.getElementById(id):d.all?d.all[id]:d.layers[id]; if(d.layers)el.style=el; el.sP=function(x,y){this.style.left=x;this.style.top=y;}; el.x = startX; if (verticalpos==\"fromtop\") el.y = startY; else{ el.y = document.body.scrollTop + document.body.clientHeight; el.y -= startY; } return el; } window.stayTopLeft=function() { ftlObj.x = document.body.clientWidth-200; if (verticalpos==\"fromtop\"){ var pY = document.body.scrollTop+155; ftlObj.y += (pY + startY - ftlObj.y); } else{ var pY = document.body.scrollTop + document.body.clientHeight; ftlObj.y += (pY - startY - ftlObj.y)/8; } ftlObj.sP(ftlObj.x, ftlObj.y); setTimeout(\"stayTopLeft()\", 20); } ftlObj = ml(\"divStayTopLeft\"); stayTopLeft(); } JSFX_FloatTopDiv(); Norsk utenriksstasjonTel: +254 20 4451510/1/2 Internett: http://www.norway.or.ke E-post: emb.nairobi@mfa.no Åpningstider: 0730-1530 man-tor 0800-1330 fre. Lørdag stengt."
+    ]
+   },
    {
     "from": "2010-02-25",
     "status": "",
@@ -1147,7 +2027,7 @@
   ],
   "sorsudan": [
    {
-    "from": "2010-04-08",
+    "from": "2006-01-03",
     "status": "",
     "paragraphs": [],
     "approx": true
@@ -1168,6 +2048,19 @@
    }
   ],
   "srilanka": [
+   {
+    "from": "2006-01-03",
+    "status": "",
+    "paragraphs": [],
+    "approx": true
+   },
+   {
+    "from": "2006-04-30",
+    "status": "",
+    "paragraphs": [],
+    "listed": true,
+    "approx": true
+   },
    {
     "from": "2010-02-25",
     "status": "",
@@ -1191,10 +2084,16 @@
   ],
   "sudan": [
    {
-    "from": "2010-02-25",
+    "from": "2006-01-03",
+    "status": "",
+    "paragraphs": [],
+    "approx": true
+   },
+   {
+    "from": "2009-04-08",
     "status": "",
     "paragraphs": [
-     "Utenriksdepartementet fraråder reiser til eller opphold i Darfur. Norske borgere som oppholder seg i eller planlegger reise til Sudan oppfordres til å ta kontakt med ambassaden i Khartoum eller med generalkonsulatet i Juba for oppdatert informasjon og registrering"
+     "Utenriksdepartementet fraråder reiser til eller opphold i Darfur. Norske borgere som oppholder seg i eller planlegger reise til Sudan oppfordres til å ta kontakt med ambassaden i Khartoum eller med generalkonsulatet i Juba for oppdatert informasjon og registrering."
     ]
    },
    {
@@ -1221,9 +2120,36 @@
   ],
   "syria": [
    {
-    "from": "2010-04-08",
+    "from": "2006-01-03",
     "status": "",
     "paragraphs": [],
+    "approx": true
+   },
+   {
+    "from": "2006-02-09",
+    "status": "",
+    "paragraphs": [],
+    "listed": true,
+    "approx": true
+   },
+   {
+    "from": "2006-02-22",
+    "status": "",
+    "paragraphs": [
+     "Utenriksdepartementet fraråder reise til eller opphold i Syria som ikke er strengt nødvendig. Norske borgere som oppholder seg i eller som planlegger å reise til Syria oppfordres til å ta kontakt med ambassaden i Damaskus for oppdatert informasjon og registrering."
+    ]
+   },
+   {
+    "from": "2006-04-30",
+    "status": "",
+    "paragraphs": [],
+    "approx": true
+   },
+   {
+    "from": "2011-04-23",
+    "status": "",
+    "paragraphs": [],
+    "listed": true,
     "approx": true
    },
    {
@@ -1243,9 +2169,16 @@
   ],
   "tadsjikistan": [
    {
-    "from": "2010-04-08",
+    "from": "2006-01-03",
     "status": "",
     "paragraphs": [],
+    "approx": true
+   },
+   {
+    "from": "2012-08-20",
+    "status": "",
+    "paragraphs": [],
+    "listed": true,
     "approx": true
    },
    {
@@ -1264,7 +2197,7 @@
   ],
   "thailand": [
    {
-    "from": "2010-02-25",
+    "from": "2005-12-20",
     "status": "",
     "paragraphs": [
      "Utenriksdepartementet fraråder reise til eller opphold i provinsene Pattani, Yala, Narathiwat og Songkhla som ikke er strengt nødvendig. Norske borgere som oppholder seg i eller planlegger å reise til disse provinsene oppfordres til å ta kontakt med ambassaden i Bangkok for oppdatert informasjon og registrering."
@@ -1308,7 +2241,20 @@
   ],
   "tsjad": [
    {
-    "from": "2010-02-25",
+    "from": "2006-01-03",
+    "status": "",
+    "paragraphs": [],
+    "approx": true
+   },
+   {
+    "from": "2008-08-20",
+    "status": "",
+    "paragraphs": [
+     "Utenriksdepartementet fraråder reise til eller opphold i Tsjad som ikke er strengt nødvendig. Norske borgere som oppholder seg i eller som planlegger å reise til Tsjad oppfordres til å ta kontakt med ambassaden i Khartoum for oppdatert informasjon og registrering."
+    ]
+   },
+   {
+    "from": "2009-04-07",
     "status": "",
     "paragraphs": [
      "Norske borgere som oppholder seg i eller planlegger reise til Tsjad oppfordres til å utvise aktsomhet og til å ta kontakt med ambassaden i Khartoum for oppdatert informasjon og registrering."
@@ -1324,7 +2270,7 @@
   ],
   "tunisia": [
    {
-    "from": "2010-04-08",
+    "from": "2006-01-03",
     "status": "",
     "paragraphs": [],
     "approx": true
@@ -1363,11 +2309,18 @@
     "paragraphs": [
      "Utenriksdepartementet fraråder alle reiser til og opphold i grenseområdene i Tunisia mot Libya og Algerie, samt nasjonalparkområdet Jebel Chaambi i governoratet Kasserine og governoratet Tataouine syd i landet. Utenriksdepartementet fraråder alle reiser til og opphold som ikke er nødvendige i øvrige deler av Tunisia."
     ]
+   },
+   {
+    "from": "2017-06-28",
+    "status": "",
+    "paragraphs": [
+     "Utenriksdepartementet fraråder alle reiser til og opphold i grenseområdene i Tunisia mot Libya og Algerie, samt nasjonalparkområdet Jebel Chaambi i guvernementet Kasserine og guvernementet Tataouine syd i landet."
+    ]
    }
   ],
   "tyrkia": [
    {
-    "from": "2010-04-08",
+    "from": "2006-01-03",
     "status": "",
     "paragraphs": [],
     "approx": true
@@ -1385,11 +2338,18 @@
     "paragraphs": [
      "Utenriksdepartementet fraråder reiser til eller opphold i grenseområdene nærmere enn 10 km fra grensen til Syria som ikke er strengt nødvendig samt å utvise aktsomhet til reiser utover disse 10 km i provinsene Hatay, Gaziantep, Kilis, Sanliurfa, Mardin og Sirnak. Utenriksdepartementet oppfordrer norske borgere å utvise aktsomhet ved reiser til eller opphold nærmere enn 10 km fra grensen til Irak og til reiser utover disse 10 km i provinsene Sirnak og Hakkari. For utfyllende informasjon om sikkerhet i Tyrkia vises det til ambassadens sikkerhetsartikkel på hjemmesiden."
     ]
+   },
+   {
+    "from": "2016-07-26",
+    "status": "",
+    "paragraphs": [
+     "Utenriksdepartementet fraråder reiser til eller opphold i grenseområdene nærmere enn ti km fra grensen til Syria som ikke er strengt nødvendig. Det oppfordres til å utvise aktsomhet ved reiser i øvrige provinser i sørøst. I tillegg oppfordres det til å utvise aktsomhet, samt unngå store folkemengder, i de større byene inkludert Ankara og Istanbul."
+    ]
    }
   ],
   "uganda": [
    {
-    "from": "2010-04-08",
+    "from": "2006-01-03",
     "status": "",
     "paragraphs": [],
     "approx": true
@@ -1404,7 +2364,7 @@
   ],
   "ukraina": [
    {
-    "from": "2010-04-08",
+    "from": "2006-01-03",
     "status": "",
     "paragraphs": [],
     "approx": true
@@ -1429,6 +2389,49 @@
     "paragraphs": [
      "Utenriksdepartementet fraråder alle reiser til eller opphold i fylkene Donetsk og Luhansk samt på Krim-halvøya."
     ]
+   }
+  ],
+  "venezuela": [
+   {
+    "from": "2006-01-03",
+    "status": "",
+    "paragraphs": [],
+    "approx": true
+   },
+   {
+    "from": "2017-06-01",
+    "status": "",
+    "paragraphs": [
+     "Utenriksdepartementet fraråder alle ikke-nødvendige reiser til og opphold i Venezuela."
+    ]
+   }
+  ],
+  "zimbabwe": [
+   {
+    "from": "2006-01-03",
+    "status": "",
+    "paragraphs": [],
+    "approx": true
+   },
+   {
+    "from": "2008-05-18",
+    "status": "",
+    "paragraphs": [],
+    "listed": true,
+    "approx": true
+   },
+   {
+    "from": "2008-06-26",
+    "status": "",
+    "paragraphs": [
+     "Utenriksdepartementet fraråder reise til eller opphold i Zimbabwe inntil videre."
+    ]
+   },
+   {
+    "from": "2009-06-28",
+    "status": "",
+    "paragraphs": [],
+    "approx": true
    }
   ]
  }
