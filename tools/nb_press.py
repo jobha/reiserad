@@ -32,13 +32,16 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent.parent
 CACHE = Path(os.environ.get("REISERAD_CACHE", ROOT / ".cache")) / "nb"
 OUT = ROOT / "data" / "press_nb.json"
-# Gjennomlest fasit per utdrag: {id: {"countries": [UD-nøkkel], "kind", "kinds"?: {UD-nøkkel: kind}}}. Tom liste = ikke et
+# Gjennomlest fasit per utdrag: {id: {"countries": [UD-nøkkel], "kind", "kinds"?: {UD-nøkkel: kind},
+# "quote"?, "why"?}} (uklare utdrag er lest med mer tekst rundt, se tools/nb_context.py). Tom liste = ikke et
 # norsk reiseråd om noe land (f.eks. USAs UD). Overstyrer reglene under; nye utdrag uten fasit
 # får reglene og kan eksporteres for gjennomlesing med --export-review FIL.
 REVIEW = ROOT / "data" / "press_nb_review.json"
 DHLAB = "https://api.nb.no/dhlab"
 CATALOG = "https://api.nb.no/catalog/v1/items"
 UA = "reiserad.no (https://github.com/jobha/reiserad)"
+PAUSE = 1  # sekunder mellom kall, høflig mot NB
+TIMEOUT, TRIES = 300, 4
 
 QUERIES = ['"Utenriksdepartementet fraråder"', '"Utenriksdepartementet frarådet"', '"UD fraråder"', '"UD frarådet"',
            '"fraråder reiser til"', '"fraråder alle reiser"', '"fraråder nordmenn"', '"offisielle reiseråd"',
@@ -84,20 +87,21 @@ def _cache(name):
     return CACHE / name
 
 
-def _req(url, body=None, tries=4):
+def _req(url, body=None, tries=None):
+    tries = tries or TRIES
     data = json.dumps(body).encode() if body is not None else None
     headers = {"User-Agent": UA, "Content-Type": "application/json"} if data else {"User-Agent": UA}
     for i in range(tries):
         try:
-            with urllib.request.urlopen(urllib.request.Request(url, data=data, headers=headers), timeout=300) as r:
+            with urllib.request.urlopen(urllib.request.Request(url, data=data, headers=headers), timeout=TIMEOUT) as r:
                 out = json.load(r)
-            time.sleep(1)  # høflig mot NB
+            time.sleep(PAUSE)
             return out
         except Exception as ex:  # noqa: BLE001
             if i == tries - 1:
                 raise
             print(f"  feil ({ex}), prøver igjen", file=sys.stderr)
-            time.sleep(5 * (i + 1))
+            time.sleep(60 * (i + 1) if "429" in str(ex) else 5 * (i + 1))  # 429: NB ber oss vente
 
 
 def _slug(q):
@@ -296,7 +300,8 @@ def main():
         if sid in review:
             r = review[sid]
             for k in r["countries"]:
-                best.setdefault((k, did), dict(m, kind=r.get("kinds", {}).get(k, r["kind"])))
+                # «quote»: utdrag fra samme artikkel/utgave som viser UDs råd, der treffet selv ikke gjør det.
+                best.setdefault((k, did), dict(m, kind=r.get("kinds", {}).get(k, r["kind"]), text=r.get("quote", m["text"])))
             continue
         # «reiseråd» alene er ofte reisetips; krev UD eller fraråding i utdraget.
         if q in ("reiseråd", "reiserådet") and not re.search(r"\bUD\b|Utenriksdep|fraråd", txt):
