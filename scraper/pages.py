@@ -98,6 +98,7 @@ ul.zones li { display:flex; gap:10px; align-items:baseline; margin:6px 0; }
 details { border:1px solid var(--line); border-radius:10px; padding:8px 12px; margin:8px 0; background:var(--card); }
 details summary { cursor:pointer; font-weight:600; }
 details p { margin:8px 0 0; }
+.news { font-size:14px; margin:6px 0; }
 footer { color:var(--muted); font-size:13px; margin-top:40px; border-top:1px solid var(--line); padding-top:14px; }
 footer a { color:var(--muted); }
 .az { columns:2 220px; padding:0; list-style:none; }
@@ -180,21 +181,36 @@ def nb_date(iso):
     return f"{int(d)}. {MONTHS[int(m) - 1]} {y}"
 
 
-def history_html(entries):
-    """Tidligere versjoner av UDs advarsel (alle utenom gjeldende), nyeste først."""
+def news_links(items):
+    return "".join(f'<p class="news"><a href="{e(n["url"])}">{e(n["title"])}</a> '
+                   f'<span class="muted">(UD, {nb_date(n["date"])})</span></p>' for n in items)
+
+
+def history_html(entries, news=()):
+    """Tidligere versjoner av UDs advarsel (alle utenom gjeldende), nyeste først, og UDs nyheter."""
     old = entries[:-1]
-    if not old:
+    if not old and not news:
         return ""
     items = []
     for h in reversed(old):
-        body = "".join(f"<p>{e(p)}</p>" for p in h["paragraphs"]) or "<p>Ingen reiseadvarsel.</p>"
         ca = "ca. " if h.get("approx") else ""
-        items.append(f'<details><summary>{ca}{nb_date(h["from"])} – {nb_date(h["until"])}</summary>{body}</details>')
-    note = "Endringer i UDs reiseadvarsel, datert etter når de ble sett første gang."
-    if any(h.get("approx") for h in entries):
-        note += (' Datoer merket «ca.» er fra arkivkopier i <a href="https://web.archive.org/">Wayback Machine</a> '
-                 "og kan ligge uker eller måneder etter UDs faktiske endring.")
-    return f'<h2>Tidligere reiseadvarsler</h2><p class="muted">{note}</p>' + "".join(items)
+        if h.get("gap"):
+            body = "<p>Vi har ikke funnet arkivkopier av UDs reiseråd fra denne perioden.</p>"
+            items.append(f'<details><summary>{ca}{nb_date(h["from"])} – {nb_date(h["until"])}: ukjent</summary>{body}</details>')
+            continue
+        body = "".join(f"<p>{e(p)}</p>" for p in h["paragraphs"]) or "<p>Ingen reiseadvarsel.</p>"
+        items.append(f'<details><summary>{ca}{nb_date(h["from"])} – {nb_date(h["until"])}</summary>'
+                     f'{body}{news_links(h.get("news", []))}</details>')
+    out = []
+    if items:
+        note = "Endringer i UDs reiseadvarsel. Datoen er UDs egen eller fra UDs pressemelding der den finnes."
+        if any(h.get("approx") for h in old):
+            note += (' Datoer merket «ca.» er fra arkivkopier i <a href="https://web.archive.org/">Wayback Machine</a> '
+                     "og kan ligge uker eller måneder etter UDs faktiske endring.")
+        out.append(f'<h2>Tidligere reiseadvarsler</h2><p class="muted">{note}</p>' + "".join(items))
+    if news:
+        out.append("<h2>UDs nyheter om reiserådet</h2>" + news_links(list(reversed(news))))
+    return "".join(out)
 
 
 def describe(rec):
@@ -211,7 +227,7 @@ def describe(rec):
     return text if len(text) <= 158 else text[:155].rsplit(" ", 1)[0] + " …"
 
 
-def country_page(iso, rec, country, zones, fetched, history=()):
+def country_page(iso, rec, country, zones, fetched, history=(), news=()):
     name = rec["name"]
     slug = rec["slug"]
     canonical = f"{SITE}/land/{slug}/"
@@ -249,7 +265,7 @@ def country_page(iso, rec, country, zones, fetched, history=()):
         b.append('<p class="note">UD har en regional advarsel her som ikke er tegnet inn på kartet ennå. Les UDs tekst for hvilke områder den gjelder.</p>')
     if rec.get("stale"):
         b.append('<p class="note">UD har endret teksten siden områdene ble tegnet inn. Les UDs tekst.</p>')
-    b.append(history_html(list(history)))
+    b.append(history_html(list(history), list(news)))
     b.append(f'<div class="actions"><a class="btn primary" href="{e(rec["url"])}">Les hele reiseinformasjonen hos UD</a>'
              f'<a class="btn" href="/#{slug}">Se på verdenskartet</a>'
              f'<a class="btn" href="{e(issue_url(name, rec["url"]))}">Meld feil i kartet</a></div>')
@@ -300,7 +316,7 @@ def index_page(info):
     return page("Reiseråd for alle land A–Å – UDs reiseadvarsler", desc, SITE + "/land/", body)
 
 
-def write_all(out_dir, info, geoms, zones_by_iso, fetched, site, history=None):
+def write_all(out_dir, info, geoms, zones_by_iso, fetched, site, history=None, news=None):
     SITE_CFG.clear()
     SITE_CFG.update(site)
     """out_dir = site/. geoms[iso] = landflate, zones_by_iso[iso] = [(geom, level, partial, label)]."""
@@ -316,7 +332,8 @@ def write_all(out_dir, info, geoms, zones_by_iso, fetched, site, history=None):
         d = land / rec["slug"]
         d.mkdir(exist_ok=True)
         (d / "index.html").write_text(country_page(iso, rec, geoms[iso], zones_by_iso.get(iso, []), fetched,
-                                                         (history or {}).get(rec["key"], ())))
+                                                         (history or {}).get(rec["key"], ()),
+                                                         (news or {}).get(rec["key"], ())))
         urls.append((f"{SITE}/land/{rec['slug']}/", fetched[:10], "0.7"))
     (land / "index.html").write_text(index_page(info))
     sm = ['<?xml version="1.0" encoding="UTF-8"?>', '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">']

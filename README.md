@@ -21,8 +21,10 @@ scraper/scrape.py   regjeringen.no  -> data/advisories.json   (alle ~195 landsid
 scraper/build.py    advisories + regions.json -> site/data/{info,world,zones}.json
 scraper/pages.py    én side per land med advarsel (site/land/<slug>/), A–Å-oversikt, sitemap.xml, robots.txt
 site/index.html     Leaflet-kart som leser site/data/
-scraper/history.py  tidligere reiseadvarsler per land: git-loggen til data/advisories.json + data/history_archive.json
+scraper/history.py  tidligere reiseadvarsler per land: git-loggen til data/advisories.json + arkivfilene under
 tools/wayback_history.py  eldre advarsler fra web.archive.org -> data/history_archive.json – kjøres for hånd
+tools/landsider_history.py  UDs offisielle reiseråd på landsider.no 2010–2015 (web.archive.org) -> data/history_landsider.json – for hånd
+tools/ud_news.py    UDs nyheter/pressemeldinger om reiseråd (2021–) -> data/ud_news.json; gir eksakte datoer – for hånd
 tools/og_image.py   site/og.png (delingsbilde) – kjøres for hånd
 brand/              logo.svg (kartnål med klode) og favicon-small.svg (16/32 px); PNG-ene lages med tools/render_icons.mjs
 deploy/nginx.conf   nginx-oppsettet på Pi-en (301 fra reiseråd til reiserad)
