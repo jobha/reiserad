@@ -443,7 +443,9 @@ const tlFmt = d => new Date(d + "T12:00:00").toLocaleDateString("nb-NO", { day: 
 const tlDay = n => new Date(Date.parse(TL.start + "T12:00:00Z") + n * DAY).toISOString().slice(0, 10);
 function tlState(iso) {
   const rows = TL?.countries[iso];
-  if (!rows?.length || TL_DATE < rows[0][0]) return { level: "?", partial: 0, text: -1 };
+  // Land UD ikke har reiseinformasjon for (Norge, Grønland …) har aldri hatt reiseadvarsel.
+  if (!rows?.length) return { level: null, partial: 0, text: -1 };
+  if (TL_DATE < rows[0][0]) return { level: "?", partial: 0, text: -1 };
   let r = rows[0];
   for (const x of rows) { if (x[0] > TL_DATE) break; r = x; }
   return { level: r[1], partial: r[2], text: r[3], from: r[0] };
