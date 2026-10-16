@@ -273,7 +273,7 @@ function popupHtml(iso, zone) {
   if (c.stale) h += `<div class="note">UD har endret teksten siden sonene ble tegnet. Les UDs tekst.</div>`;
   h += `<a class="ud" href="${esc(c.url)}" target="_blank" rel="noopener">Les reiseinformasjonen hos UD →</a>`;
   if (c.vax_url) h += `<div class="vax"><b>Skal du til ${esc(c.name)}?</b> LegeOnline gir råd om reisevaksiner før reisen. <a href="${esc(utm(c.vax_url, "kart"))}" target="_blank" rel="noopener">Reisevaksiner for ${esc(c.name)} →</a></div>`;
-  h += `<div class="more">${c.level ? `<a href="/land/${esc(c.slug)}/">Egen side for ${esc(c.name)}</a> · ` : ""}<a href="https://github.com/jobha/reiserad/issues/new?template=feil-i-kartet.yml&title=${encodeURIComponent("Feil i kartet: " + c.name)}&land=${encodeURIComponent(c.name)}&ud=${encodeURIComponent(c.url)}" target="_blank" rel="noopener">Meld feil i kartet</a></div></div>`;
+  h += `<div class="more">${c.page ? `<a href="/land/${esc(c.slug)}/">Egen side for ${esc(c.name)}${c.history ? " inkl. historikk" : ""}</a> · ` : ""}<a href="https://github.com/jobha/reiserad/issues/new?template=feil-i-kartet.yml&title=${encodeURIComponent("Feil i kartet: " + c.name)}&land=${encodeURIComponent(c.name)}&ud=${encodeURIComponent(c.url)}" target="_blank" rel="noopener">Meld feil i kartet</a></div></div>`;
   return h;
 }
 

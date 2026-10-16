@@ -63,12 +63,14 @@ def captures(url):
     """[(timestamp, original)] med distinkt innhold, eldste først."""
     path = re.sub(r"^https?://", "", url)
     prefix = re.sub(r"id\d+/?$", "", path)  # id-nummeret har endret seg opp gjennom årene
+    segment = "/" + prefix.rstrip("/").rsplit("/", 1)[1].lower() + "/"
     q = urllib.parse.urlencode({"url": prefix, "matchType": "prefix", "output": "json",
                                 "fl": "timestamp,original,digest", "filter": "statuscode:200"})
     rows = json.loads(get("https://web.archive.org/cdx/search/cdx?" + q) or "[]")[1:]
     seen, out = set(), []
     for ts, orig, digest in sorted(rows):
-        if digest in seen or not re.search(r"/id\d+/?(\?|$)", orig):
+        # CDX matcher prefikset uten avsluttende skråstrek: reiseinfo_uk/ treffer også reiseinfo_ukraina/.
+        if digest in seen or not re.search(r"/id\d+/?(\?|$)", orig) or segment not in orig.lower():
             continue
         seen.add(digest)
         out.append((ts, orig))

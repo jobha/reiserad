@@ -292,9 +292,15 @@ def build():
             rec["vax_url"] = f'{site["vax_url"].rstrip("/")}/{lo[iso]}'
         elif rec.get("vax"):
             rec["vax_url"] = site["vax_url"]
+    # Egen side for land med advarsel i dag, og for land som har hatt en tidligere.
+    hist = history.build()
+    for rec in info.values():
+        old = hist.get(rec["key"], [])[:-1]
+        rec["history"] = bool(old) if rec["level"] else any(h["paragraphs"] for h in old)
+        rec["page"] = bool(rec["level"]) or rec["history"]
     dump("info.json", {"fetched": adv["fetched"], "source": adv["source"],
                        "publisher": site["publisher"], "countries": info})
-    n_pages = pages.write_all(OUT.parent, info, ne, zones_by_iso, adv["fetched"], site, history.build())
+    n_pages = pages.write_all(OUT.parent, info, ne, zones_by_iso, adv["fetched"], site, hist)
 
     n = sum(1 for r in info.values() if r["level"])
     stale = [r["slug"] for r in info.values() if r.get("stale")]

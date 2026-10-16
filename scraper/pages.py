@@ -287,7 +287,7 @@ def index_page(info):
                else "deler av landet" if r.get("regional") or r.get("unmapped") else "hele landet")
         border = "" if r["level"] else "border:1px solid var(--line);"
         li.append(f'<li><span class="dot" style="background:{col};{border}"></span>'
-                  + (f'<a href="/land/{r["slug"]}/">{e(r["name"])}</a>' if r["level"]
+                  + (f'<a href="/land/{r["slug"]}/">{e(r["name"])}</a>' if r.get("page")
                      else f'<a href="{e(r["url"])}" rel="noopener">{e(r["name"])}</a>')
                   + f'<span class="tag">{tag}</span></li>')
     body = (f'<nav class="crumbs"><a href="/" class="home"><img src="/logo.svg" alt="" width="16" height="16">Reiserådkart</a> › Alle land</nav>'
@@ -304,14 +304,14 @@ def write_all(out_dir, info, geoms, zones_by_iso, fetched, site, history=None):
     SITE_CFG.clear()
     SITE_CFG.update(site)
     """out_dir = site/. geoms[iso] = landflate, zones_by_iso[iso] = [(geom, level, partial, label)]."""
-    # Bare land med reiseadvarsel får egen side. For de andre ville siden bare
-    # gjentatt UDs ingress – tynt innhold som konkurrerer med UD og LegeOnline.
+    # Bare land med reiseadvarsel i dag eller tidligere (rec["page"]) får egen side. For de
+    # andre ville siden bare gjentatt UDs ingress – tynt innhold som konkurrerer med UD og LegeOnline.
     land = out_dir / "land"
     shutil.rmtree(land, ignore_errors=True)
     land.mkdir()
     urls = [(SITE + "/", fetched[:10], "1.0"), (SITE + "/land/", fetched[:10], "0.8")]
     for iso, rec in info.items():
-        if not rec["level"]:
+        if not rec.get("page"):
             continue
         d = land / rec["slug"]
         d.mkdir(exist_ok=True)
