@@ -535,7 +535,8 @@ function tlCurrent(iso) {
   const rows = TL?.countries[iso];
   if (!rows?.length) return !TL_DATE;
   const st = tlState(iso), last = rows[rows.length - 1];
-  return st.level !== "?" && st.text === last[3] && st.level === last[1];
+  // Samme tekst som i dag er ikke nok: under koronarådet har perioden egne sammensatte soner (annen nøkkel).
+  return st.level !== "?" && st.text === last[3] && st.level === last[1] && st.hash === last[4];
 }
 // Nøkkelen ("ISO:hash") til de tegnede sonene for landets tekst på datoen, eller null.
 function tlDrawn(iso) {
