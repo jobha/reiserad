@@ -304,6 +304,11 @@
 ],
 "kind": "necessary"
 },
+"048bedc415a3": {
+"countries": [],
+"kind": "",
+"why": "Unspecified Middle East areas; countries unclear"
+},
 "04a6f2dae05c": {
 "countries": [
 "palestina"
@@ -480,6 +485,11 @@
 ],
 "kind": "none"
 },
+"078197e07ab6": {
+"countries": [],
+"kind": "",
+"why": "Follow UD advice; content not stated"
+},
 "0792e941ef92": {
 "countries": [
 "thailand"
@@ -536,6 +546,13 @@
 "kind": "",
 "why": "Business/investment advice on Burma"
 },
+"08c62fd203e4": {
+"countries": [
+"afghanistan"
+],
+"kind": "necessary",
+"why": "Norway advises against non-essential travel to Afghanistan"
+},
 "08c7195778f5": {
 "countries": [
 "egypt"
@@ -557,6 +574,13 @@
 "libya"
 ],
 "kind": "all"
+},
+"09493c0f4b62": {
+"countries": [
+"ukraina"
+],
+"kind": "leave",
+"why": "Against all travel; urges Norwegians to leave Ukraine"
 },
 "0954b5ae50b2": {
 "countries": [
@@ -1081,6 +1105,13 @@
 ],
 "kind": "against"
 },
+"0ff47bfcfd5d": {
+"countries": [
+"iran"
+],
+"kind": "all",
+"why": "UD advises against all travel to Iran"
+},
 "0ffd7b171af4": {
 "countries": [
 "egypt"
@@ -1116,6 +1147,13 @@
 "japan"
 ],
 "kind": "against"
+},
+"10543c19541f": {
+"countries": [
+"palestina"
+],
+"kind": "against",
+"why": "UD long advised against travel to Gaza"
 },
 "1056b473067a": {
 "countries": [
@@ -1282,6 +1320,13 @@
 "tyrkia"
 ],
 "kind": "none"
+},
+"12c5fd8661a4": {
+"countries": [
+"peru"
+],
+"kind": "against",
+"why": "Headline: UD advises against travel to Peru"
 },
 "12f1fe81ad84": {
 "countries": [],
@@ -1577,6 +1622,13 @@
 ],
 "kind": "against"
 },
+"16cb8b9f37f2": {
+"countries": [
+"israel"
+],
+"kind": "none",
+"why": "UD does not advise against Israel trips"
+},
 "16cd67f92d31": {
 "countries": [
 "afghanistan",
@@ -1630,6 +1682,13 @@
 "quote": "UD: Norge endrer reiserådet til Myanmar og fraråder reiser dit",
 "why": "UD changes Myanmar advice, advises against travel"
 },
+"179ed4cb71a7": {
+"countries": [
+"ukraina"
+],
+"kind": "leave",
+"why": "Against all travel; urges Norwegians to leave Ukraine"
+},
 "17bf205b5d77": {
 "countries": [
 "egypt"
@@ -1643,6 +1702,11 @@
 "kind": "against",
 "quote": "pressekontakt i Tyrkiareiser. • UDs offisielle reiseråd: Utenriksdepartementet fraråder reiser til eller opphold i grenseområdene nærmere enn 10 km fra grensen til Syria",
 "why": "UD official advice: Turkey border areas near Syria"
+},
+"17f538b907a1": {
+"countries": [],
+"kind": "",
+"why": "Unspecified Middle East areas; countries unclear"
 },
 "181678b02880": {
 "countries": [
@@ -1749,6 +1813,13 @@
 ],
 "kind": "against"
 },
+"19e245107bf8": {
+"countries": [
+"kina"
+],
+"kind": "against",
+"why": "UD advises against travel to infected Chinese province"
+},
 "19fe503d89bb": {
 "countries": [],
 "kind": "",
@@ -1808,6 +1879,13 @@
 "kina"
 ],
 "kind": "against"
+},
+"1b22e154b5e2": {
+"countries": [
+"egypt"
+],
+"kind": "against",
+"why": "UD advises Norwegians against travelling to Egypt"
 },
 "1b91951bed68": {
 "countries": [
@@ -2039,6 +2117,13 @@
 "kind": "",
 "why": "France: demonstration caution, not against"
 },
+"1fa046094121": {
+"countries": [
+"iran"
+],
+"kind": "all",
+"why": "UD advises against all travel to Iran"
+},
 "1fbb76fbea17": {
 "countries": [],
 "kind": "",
@@ -2193,6 +2278,13 @@
 "indonesia"
 ],
 "kind": "necessary"
+},
+"225ef6929331": {
+"countries": [
+"libya"
+],
+"kind": "all",
+"why": "UD advises against all travel to Libya"
 },
 "227596fab647": {
 "countries": [],
@@ -2406,6 +2498,13 @@
 "thailand"
 ],
 "kind": "none"
+},
+"25a4339cbda8": {
+"countries": [
+"burundi"
+],
+"kind": "against",
+"why": "Headline, same-day UD Burundi advice story"
 },
 "25b471b8efdf": {
 "countries": [
@@ -2622,6 +2721,11 @@
 ],
 "kind": "against"
 },
+"292036e30707": {
+"countries": [],
+"kind": "",
+"why": "USA update about visas, not advice against travel"
+},
 "292fa2fa112c": {
 "countries": [
 "tyrkia"
@@ -2682,6 +2786,11 @@
 "sudan"
 ],
 "kind": "necessary"
+},
+"2a59eaf6871a": {
+"countries": [],
+"kind": "",
+"why": "Only considering changing Egypt advice; hypothetical"
 },
 "2a6cf3868ff4": {
 "countries": [
@@ -3182,6 +3291,13 @@
 ],
 "kind": "none"
 },
+"336641a01b10": {
+"countries": [
+"palestina"
+],
+"kind": "against",
+"why": "Advises Norwegians against travel to Palestine"
+},
 "338a3aafa0f3": {
 "countries": [],
 "kind": "",
@@ -3281,6 +3397,11 @@
 "thailand"
 ],
 "kind": "necessary"
+},
+"347b7d8507a2": {
+"countries": [],
+"kind": "",
+"why": "Germany's travel warning, not Norway's"
 },
 "34946fe57338": {
 "countries": [
@@ -3767,6 +3888,13 @@
 "quote": "Fraråder UD fraråder helt å oppsøke grenseområdene til Syria, den nordlige delen av Bekaadalen, Tripoli og Nord-Libanon",
 "why": "UD advice unchanged: against Syria border, north"
 },
+"3c41b4c17997": {
+"countries": [
+"india"
+],
+"kind": "against",
+"why": "UD advises against Jammu and Kashmir; Iraq truncated"
+},
 "3c44a92518ac": {
 "countries": [
 "estland",
@@ -3801,6 +3929,13 @@
 "india"
 ],
 "kind": "none"
+},
+"3cd2febe70fa": {
+"countries": [
+"tyrkia"
+],
+"kind": "none",
+"why": "UD not warning against travel to Turkey"
 },
 "3cd3b4462e3e": {
 "countries": [
@@ -4099,6 +4234,13 @@
 "egypt"
 ],
 "kind": "against"
+},
+"418dc20b0514": {
+"countries": [
+"srilanka"
+],
+"kind": "against",
+"why": "UD advises against north and east Sri Lanka"
 },
 "41d3a6bca929": {
 "countries": [
@@ -4530,6 +4672,13 @@
 ],
 "kind": "none"
 },
+"4964cc833af2": {
+"countries": [
+"tunisia"
+],
+"kind": "against",
+"why": "All travel to Tunisian border areas advised against"
+},
 "496848f63350": {
 "countries": [
 "hellas"
@@ -4763,6 +4912,11 @@
 ],
 "kind": "against"
 },
+"4d81680b99c3": {
+"countries": [],
+"kind": "",
+"why": "Advice changed but content not stated"
+},
 "4d81842e3b9b": {
 "countries": [
 "tyrkia"
@@ -4803,6 +4957,13 @@
 "tyrkia"
 ],
 "kind": "none"
+},
+"4e091e57ff79": {
+"countries": [
+"burundi"
+],
+"kind": "against",
+"why": "UD advises against travel to Burundi due to unrest"
 },
 "4e1078874ee1": {
 "countries": [
@@ -5354,6 +5515,13 @@
 "kind": "",
 "why": "Business engagement advice re Western Sahara [fulltekst]"
 },
+"56c34a1fb130": {
+"countries": [
+"afghanistan"
+],
+"kind": "against",
+"why": "Afghanistan described as country UD advises against"
+},
 "56e3458d9383": {
 "countries": [
 "tyrkia"
@@ -5396,6 +5564,11 @@
 "mexico"
 ],
 "kind": "lifted"
+},
+"583c6a752ec4": {
+"countries": [],
+"kind": "",
+"why": "Only urges caution in Lebanon"
 },
 "584dde4c847b": {
 "countries": [
@@ -5614,6 +5787,13 @@
 ],
 "kind": "lifted"
 },
+"5bf0d14b6836": {
+"countries": [
+"iran"
+],
+"kind": "all",
+"why": "UD advises against all travel to Iran"
+},
 "5bf5b4a336b9": {
 "countries": [
 "egypt"
@@ -5742,6 +5922,11 @@
 "jemen"
 ],
 "kind": "necessary"
+},
+"5e255a58bd07": {
+"countries": [],
+"kind": "",
+"why": "Not about UD travel advice"
 },
 "5e31fbeb5cc5": {
 "countries": [
@@ -5899,6 +6084,13 @@
 "kind": "",
 "why": "Global covid advice; Italy not singled out"
 },
+"60702aa9cecf": {
+"countries": [
+"irak"
+],
+"kind": "against",
+"why": "UD warns against travel to Iraq"
+},
 "607c66e2efe1": {
 "countries": [
 "egypt"
@@ -5962,6 +6154,14 @@
 "countries": [],
 "kind": "",
 "why": "Student awaiting UD advice on Syria; unclear [fulltekst]"
+},
+"620f740b9909": {
+"countries": [
+"island",
+"litauen"
+],
+"kind": "necessary",
+"why": "Iceland and Lithuania turn red under covid advice"
 },
 "621074376f31": {
 "countries": [
@@ -6320,6 +6520,11 @@
 "kind": "none",
 "why": "Ministry spokesperson: no grounds for Morocco travel advice"
 },
+"690120267d67": {
+"countries": [],
+"kind": "",
+"why": "Germany's travel warning against Norway"
+},
 "6902cfd3299b": {
 "countries": [
 "hellas"
@@ -6459,6 +6664,13 @@
 ],
 "kind": "all"
 },
+"6b6721e8f4cd": {
+"countries": [
+"nordkorea"
+],
+"kind": "none",
+"why": "North Korea not on UD's advise-against list"
+},
 "6b6be33c14f1": {
 "countries": [
 "tyrkia"
@@ -6488,6 +6700,13 @@
 "egypt"
 ],
 "kind": "necessary"
+},
+"6c39c8c6c6f9": {
+"countries": [
+"iran"
+],
+"kind": "all",
+"why": "UD advises against all travel to Iran"
 },
 "6c4efaac27e0": {
 "countries": [
@@ -6562,6 +6781,11 @@
 "kind": "",
 "why": "WHO/Helsedirektoratet SARS advice [fulltekst]"
 },
+"6ddce8408144": {
+"countries": [],
+"kind": "",
+"why": "Editor's appeal, not UD"
+},
 "6df351fbbf27": {
 "countries": [
 "russland"
@@ -6621,6 +6845,13 @@
 "kind": "against",
 "quote": "Utanriksdepartementet (UD) frårår alle reiser som ikkje er strengt naudsynte til områda Cuzco, Puno, Arequipa og Apurimac i Peru.",
 "why": "Same issue: UD advice for Peruvian regions"
+},
+"6f36bd33687c": {
+"countries": [
+"afghanistan"
+],
+"kind": "against",
+"why": "UD advises avoiding Afghanistan"
 },
 "6f3772a4d11a": {
 "countries": [
@@ -7122,6 +7353,13 @@
 ],
 "kind": "necessary"
 },
+"772e52ef65e7": {
+"countries": [
+"ukraina"
+],
+"kind": "necessary",
+"why": "UD advises against non-essential travel to Ukraine"
+},
 "77442193bed5": {
 "countries": [
 "egypt"
@@ -7325,6 +7563,13 @@
 "egypt"
 ],
 "kind": "necessary"
+},
+"7a25be710b67": {
+"countries": [
+"egypt"
+],
+"kind": "none",
+"why": "UD has issued no travel advice for Egypt"
 },
 "7a29b42322bd": {
 "countries": [
@@ -7703,6 +7948,13 @@
 ],
 "kind": "against"
 },
+"80f498d26384": {
+"countries": [
+"palestina"
+],
+"kind": "against",
+"why": "UD advises Norwegians against entering Gaza"
+},
 "80fb25fb91fe": {
 "countries": [
 "syria"
@@ -7720,6 +7972,13 @@
 "libanon"
 ],
 "kind": "leave"
+},
+"8150121ce4db": {
+"countries": [
+"uk"
+],
+"kind": "lifted",
+"why": "UD lifts advice for UK from 5 July"
 },
 "81610986f130": {
 "countries": [],
@@ -7803,6 +8062,13 @@
 ],
 "kind": "necessary"
 },
+"82630d542d9a": {
+"countries": [
+"jemen"
+],
+"kind": "against",
+"why": "UD advises Norwegians against travelling to Yemen"
+},
 "82678b4d62f4": {
 "countries": [],
 "kind": "",
@@ -7875,6 +8141,13 @@
 "drkongo"
 ],
 "kind": "against"
+},
+"83e25d72a40b": {
+"countries": [
+"libya"
+],
+"kind": "all",
+"why": "UD advises against all travel to Libya"
 },
 "845d5485b0b0": {
 "countries": [],
@@ -8093,6 +8366,13 @@
 "afghanistan"
 ],
 "kind": "necessary"
+},
+"87fe6d2264f2": {
+"countries": [
+"libya"
+],
+"kind": "all",
+"why": "UD advises against all travel to Libya"
 },
 "880db1c6f846": {
 "countries": [
@@ -9105,6 +9385,18 @@
 "quote": "Utenriksdepartementet fraråder alle reiser til eller opphold i den moldovske regionen Transdnjestr.",
 "why": "UD advises against Transnistria region of Moldova"
 },
+"99b2b27536df": {
+"countries": [
+"afghanistan"
+],
+"kind": "against",
+"why": "UD strongly advises against travel to Afghanistan"
+},
+"99b631ad2d2a": {
+"countries": [],
+"kind": "",
+"why": "Follow local authorities; not travel advice"
+},
 "99b6c350570c": {
 "countries": [
 "osterrike"
@@ -9455,11 +9747,23 @@
 "quote": "UD frarår ikke Tyrkia-reiser",
 "why": "UD spokesman: UD does not advise against Turkey"
 },
+"9efcaccb4f95": {
+"countries": [],
+"kind": "",
+"why": "Follow local authorities; not travel advice"
+},
 "9f526ca92dab": {
 "countries": [
 "somalia"
 ],
 "kind": "against"
+},
+"9f735a8da3ce": {
+"countries": [
+"kenya"
+],
+"kind": "against",
+"why": "UD tightens advice for Kenyan coastal areas"
 },
 "9f7ab55f2a20": {
 "countries": [
@@ -9618,6 +9922,13 @@
 ],
 "kind": "against"
 },
+"a1844882b2d6": {
+"countries": [
+"etiopia"
+],
+"kind": "against",
+"why": "Government advises against large parts of Ethiopia"
+},
 "a187de524c00": {
 "countries": [
 "kenya"
@@ -9677,6 +9988,13 @@
 "tyrkia"
 ],
 "kind": "lifted"
+},
+"a23f3fd7e253": {
+"countries": [
+"afghanistan"
+],
+"kind": "all",
+"why": "UD warns against all travel to Afghanistan"
 },
 "a24b14ee174e": {
 "countries": [
@@ -10116,6 +10434,13 @@
 ],
 "kind": "lifted"
 },
+"a8d2c25272dc": {
+"countries": [
+"burundi"
+],
+"kind": "against",
+"why": "UD advises against travel to Burundi due to unrest"
+},
 "a8d348c64af8": {
 "countries": [
 "irak"
@@ -10232,6 +10557,13 @@
 "afghanistan"
 ],
 "kind": "necessary"
+},
+"aa6ddca97ed7": {
+"countries": [
+"egypt"
+],
+"kind": "against",
+"why": "UD warns against travel to Egypt incl. Sharm"
 },
 "aa78343f76c8": {
 "countries": [
@@ -11307,6 +11639,13 @@
 "kind": "",
 "why": "Midtøsten areas unspecified"
 },
+"bc799d1493ef": {
+"countries": [
+"palestina"
+],
+"kind": "against",
+"why": "UD advises Norwegians against entering Gaza"
+},
 "bc7e8ce48a69": {
 "countries": [
 "russland"
@@ -11334,6 +11673,13 @@
 ],
 "kind": "leave",
 "why": "UD urges Norwegians to leave country bombed by Ethiopia (Eritrea)"
+},
+"bcdeeab3ce69": {
+"countries": [
+"kenya"
+],
+"kind": "against",
+"why": "UD now advises against travel to Kenya"
 },
 "bcfa83fdb885": {
 "countries": [
@@ -11442,6 +11788,13 @@
 ],
 "kind": "against",
 "why": "Norske myndigheter advise against Ivory Coast and parts of India"
+},
+"be6275f0beb5": {
+"countries": [
+"burundi"
+],
+"kind": "against",
+"why": "UD advises against travel to Burundi"
 },
 "be8b76181580": {
 "countries": [],
@@ -11870,6 +12223,11 @@
 ],
 "kind": "against"
 },
+"c565ed292c9e": {
+"countries": [],
+"kind": "",
+"why": "Student organisation ANSA, about studying in Poland"
+},
 "c5b17b4ce732": {
 "countries": [],
 "kind": "",
@@ -11939,6 +12297,13 @@
 "srilanka"
 ],
 "kind": "necessary"
+},
+"c6d7271d02f5": {
+"countries": [
+"peru"
+],
+"kind": "necessary",
+"why": "Non-essential travel to Peruvian regions advised against"
 },
 "c6e451bebc16": {
 "countries": [
@@ -12039,6 +12404,13 @@
 "kind": "",
 "why": "European embassies, not UD"
 },
+"c8c9666496e1": {
+"countries": [
+"egypt"
+],
+"kind": "necessary",
+"why": "Non-essential travel to Egypt advised against, with exceptions"
+},
 "c8c9a3c5a328": {
 "countries": [
 "russland"
@@ -12086,6 +12458,13 @@
 "syria"
 ],
 "kind": "all"
+},
+"c9f8ebfb33e5": {
+"countries": [
+"iran"
+],
+"kind": "all",
+"why": "UD advises against all travel to Iran"
 },
 "c9f953dbd705": {
 "countries": [
@@ -12192,6 +12571,11 @@
 "palestina"
 ],
 "kind": "all"
+},
+"cc964a4876d8": {
+"countries": [],
+"kind": "",
+"why": "Unspecified Middle East areas; countries unclear"
 },
 "cc9b799229aa": {
 "countries": [
@@ -12442,6 +12826,13 @@
 "egypt"
 ],
 "kind": "lifted"
+},
+"d10df3271418": {
+"countries": [
+"israel"
+],
+"kind": "against",
+"why": "UD advises against northern Israel"
 },
 "d13028dc1fff": {
 "countries": [
@@ -13319,6 +13710,13 @@
 "jemen"
 ],
 "kind": "against"
+},
+"dfe9da805ede": {
+"countries": [
+"uk"
+],
+"kind": "lifted",
+"why": "UD lifts advice for UK from 5 July"
 },
 "e038f4c1557a": {
 "countries": [
@@ -14348,6 +14746,11 @@
 ],
 "kind": "none"
 },
+"f21b6c038be1": {
+"countries": [],
+"kind": "",
+"why": "Unspecified Middle East areas; countries unclear"
+},
 "f2269a65fceb": {
 "countries": [
 "kina"
@@ -14372,6 +14775,20 @@
 "spania"
 ],
 "kind": "none"
+},
+"f25cc08c236e": {
+"countries": [
+"palestina"
+],
+"kind": "against",
+"why": "UD advises against West Bank, Gaza, Jerusalem"
+},
+"f2886a21d346": {
+"countries": [
+"thailand"
+],
+"kind": "necessary",
+"why": "Non-essential travel to southern Thai provinces advised against"
 },
 "f295d2ecf190": {
 "countries": [
@@ -14855,6 +15272,11 @@
 ],
 "kind": "necessary"
 },
+"fa6ab3d09c86": {
+"countries": [],
+"kind": "",
+"why": "Generic, no specific country advice"
+},
 "fa7a0d9f3116": {
 "countries": [],
 "kind": "",
@@ -15143,6 +15565,13 @@
 "egypt"
 ],
 "kind": "necessary"
+},
+"ffb7f676fe24": {
+"countries": [
+"ukraina"
+],
+"kind": "against",
+"why": "UD advises against travel into Ukraine"
 },
 "ffbf34e02347": {
 "countries": [

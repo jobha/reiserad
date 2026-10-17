@@ -47,7 +47,12 @@ TIMEOUT, TRIES = 300, 4
 QUERIES = ['"Utenriksdepartementet fraråder"', '"Utenriksdepartementet frarådet"', '"UD fraråder"', '"UD frarådet"',
            '"fraråder reiser til"', '"fraråder alle reiser"', '"fraråder nordmenn"', '"offisielle reiseråd"',
            '"offisielt reiseråd"', "reiseadvarsel", "reiseadvarselen", '"oppfordrer nordmenn til å forlate"',
-           "reiserådet", "reiseråd"]
+           "reiserådet", "reiseråd",
+           # Nynorsk
+           '"Utanriksdepartementet frårår"', '"Utanriksdepartementet frårådde"', '"UD frårår"', '"UD frårådde"',
+           '"frårår reiser til"', '"frårår alle reiser"', '"frårår nordmenn"', '"frårår reiser"',
+           "reiseåtvaring", "reiseåtvaringa", '"oppmodar nordmenn"', '"rår nordmenn frå"', '"UD rår"',
+           '"Utanriksdepartementet rår"', '"Utanriksdepartementet åtvarar"', '"UD åtvarar"']
 WINDOW = 25  # ord på hver side av treffet
 
 # Navn i avisene som ikke står likt i UDs landliste. Gamle navn er bare tatt med når
@@ -71,12 +76,12 @@ ALIASES = {
 # Land som ikke finnes i dag: beholdes, men knyttes ikke til noen landside.
 FORMER = ["Jugoslavia", "Sovjetunionen", "Tsjekkoslovakia", "Serbia-Montenegro", "Serbia og Montenegro"]
 
-KEYWORD = re.compile(r"fraråd|reiseråd|reiseadvars|forlate landet|oppfordrer nordmenn", re.I)
+KEYWORD = re.compile(r"fraråd|frårå|rår (nordmenn )?frå|åtvar|reiseråd|reiseadvars|reiseåtvar|forlate landet|oppfordrer nordmenn|oppmodar nordmenn", re.I)
 KINDS = [  # første treff vinner
     ("none", re.compile(r"(ikke|ikkje|ingen|inga)\s+(noen\s+|noko\s+|gjeve\s+(noko\s+)?(offisielt\s+)?|offisielt\s+|noen\s+|noe\s+|utstedt\s+(noen\s+|noe\s+)?|særlig\s+\w+\s+)?(reiseråd|reiseadvars)"
-                        r"|ikke\s+(har\s+)?frarå|frarår\s+ikke", re.I)),
+                        r"|ikke\s+(har\s+)?frarå|frarår\s+ikke|ikkje\s+(har\s+)?frårå|frårår\s+ikkje", re.I)),
     ("lifted", re.compile(r"opphev|trukket tilbake|trekker tilbake|ikke lenger fraråd|lemp|myk(er|et) opp|fjern(er|et) reiseråd", re.I)),
-    ("necessary", re.compile(r"(ikke|unødvendig)\w*\s+(er\s+)?(strengt\s+)?nødvendig|unødvendige reiser|ikke-nødvendige", re.I)),
+    ("necessary", re.compile(r"(ikke|ikkje|unødvendig)\w*\s+(er\s+)?(strengt\s+)?(nødvendig|naudsynt)|unødvendige reiser|ikke-nødvendige|unaudsynte", re.I)),
     ("all", re.compile(r"alle reiser|all reise|enhver reise", re.I)),
     ("leave", re.compile(r"forlate|reise ut av|reise hjem", re.I)),
     ("against", re.compile(r"fraråd|frårå|advarer mot", re.I)),
@@ -305,7 +310,7 @@ def main():
                 best.setdefault((k, did), dict(m, kind=r.get("kinds", {}).get(k, r["kind"]), text=r.get("quote", m["text"])))
             continue
         # «reiseråd» alene er ofte reisetips; krev UD eller fraråding i utdraget.
-        if q in ("reiseråd", "reiserådet") and not re.search(r"\bUD\b|Utenriksdep|fraråd", txt):
+        if q in ("reiseråd", "reiserådet") and not re.search(r"\bUD\b|Utenriksdep|Utanriksdep|fraråd|frårå", txt):
             continue
         if recap(txt, d["date"]) or d["date"] < "1945":
             continue
