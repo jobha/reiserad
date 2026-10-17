@@ -1,4 +1,5 @@
 {
  "_om": "Soner for eldre tekster på UDs side for kuwait. Nøkkel = tekst-hash (python scraper/build.py --missing-history-zones kuwait). Format som data/regions.json; se README.",
- "d124c8e44a1e": {"text": "Utenriksdepartementet fraråder alle reiser til Kuwait.", "zones": [{"level": "all", "country": true, "label": "Hele landet"}]}
+ "d124c8e44a1e": {"text": "Utenriksdepartementet fraråder alle reiser til Kuwait.", "zones": [{"level": "all", "country": true, "label": "Hele landet"}]},
+ "0c302e79f9dd": {"text": "Utenriksdepartementet fraråder inntil videre reiser til Kuwait, dersom reisen ikke er strengt nødvendig. Norske borgere i Kuwait bes om å utvise ekstra årvåkenhet og gjennomføre nødvendige sikkerhetstiltak.", "zones": [{"level": "necessary", "country": true, "label": "Hele landet"}]}
 }

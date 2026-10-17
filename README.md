@@ -75,8 +75,10 @@ tegnes i én fil per land, `data/history_regions/<UD-nøkkel>.json` (nøkkelen s
 - Tidslinjen har ingen hull. Der ingen kilde har UDs tekst (ingen arkivkopi, eller landet sto på UDs
   liste uten at teksten er bevart), viser kartet nærmeste kjente tilstand og sier at det er omtrentlig
   (`bridged` i timeline.json). Før UDs første fullstendige liste (10.07.2003) regnes land uten kjent
-  reiseråd som uten advarsel. Hull uten noen kilde i dag: Irak 2000–2003, FR Jugoslavia 2000–2003 og
-  Kroatia 1996–2003 (pressemeldinger 1996–2000 og odin.dep.no-sidene er gjennomgått).
+  reiseråd som uten advarsel. Avisene i Nasjonalbiblioteket (fulltekst, krever innlogging med
+  forskertilgang) er gått gjennom for de siste hullene: Irak hadde ingen norsk advarsel før UDs
+  pressemelding 25.02.2003 (UD til Dagsavisen 22.02.2003: «Vi har ingen reiseråd for Irak»), og
+  ingen avis 1996–2003 omtaler et norsk reiseråd for Kroatia eller FR Jugoslavia etter krigene.
 - `build.py` skriver flatene til `site/data/timeline_zones.json` (forenklet til ~1 km),
   som kartet laster først når noen drar i tidslinjen.
 

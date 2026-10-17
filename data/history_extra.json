@@ -135,6 +135,26 @@
   },
   {
    "key": "irak",
+   "date": "2003-02-22",
+   "ud_date": false,
+   "capture": "2003-02-22",
+   "paragraphs": [],
+   "url": "https://www.nb.no/items/b801dfa1c5f2e9389181b57044611309",
+   "note": "Nordlys 22.02.2003 (ANB/Dagsavisen): UDs informasjonssjef: «Vi har ingen reiseråd for Irak». Ingen advarsel før Irak-krigen; UD ga rådet 2003-03-18/19."
+  },
+  {
+   "key": "irak",
+   "date": "2003-02-25",
+   "ud_date": true,
+   "capture": "2003-02-26",
+   "paragraphs": [
+    "Utenriksdepartementet fraråder norske borgere å reise til Irak, og oppfordrer dem som allerede er der til å forlate landet."
+   ],
+   "url": "https://www.nb.no/search?q=%22fraråder%20norske%20borgere%20å%20reise%20til%20Irak%22",
+   "note": "UDs pressemelding 25.02.2003, sitert ordrett i Dagsavisen og NTB-meldinger 26.02.2003 (Nasjonalbiblioteket)."
+  },
+  {
+   "key": "irak",
    "date": "2003-04-19",
    "ud_date": false,
    "capture": "2003-04-19",
@@ -242,6 +262,17 @@
    ],
    "url": "https://web.archive.org/web/20100507023712/http://www.landsider.no:80/traveladvice/kirgisistan/",
    "note": "«Publisert: 08.04.2010». Kirgisistan står i traveladvice-oversikten 2010-05-05–2011-04-23."
+  },
+  {
+   "key": "kuwait",
+   "date": "2003-02-25",
+   "ud_date": true,
+   "capture": "2003-02-26",
+   "paragraphs": [
+    "Utenriksdepartementet fraråder inntil videre reiser til Kuwait, dersom reisen ikke er strengt nødvendig. Norske borgere i Kuwait bes om å utvise ekstra årvåkenhet og gjennomføre nødvendige sikkerhetstiltak."
+   ],
+   "url": "https://www.nb.no/search?q=%22reiser%20til%20Kuwait%22",
+   "note": "Samme pressemelding 25.02.2003, sitert i Dagsavisen 26.02.2003 (Nasjonalbiblioteket)."
   },
   {
    "key": "madagaskar",
