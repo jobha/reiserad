@@ -378,6 +378,28 @@ def _days(a, b):
     return (date.fromisoformat(b) - date.fromisoformat(a)).days
 
 
+# Områder i Natural Earth uten egen side hos UD (Norge og Antarktis er utelatt): UD-nøkkelen eller
+# navnenøkkelen i det globale koronarådet (tools/corona_global.py) som avgjør om området var unntatt.
+# Kronavhengighetene og Åland følger landet sitt; øvrige territorier var aldri unntatt (None).
+TERRITORIES = {"GRL": "gronland", "FRO": "faeroyene", "TWN": "taiwan", "HKG": "hongkong", "MAC": "macao",
+               "ALD": "aland", "JEY": "uk", "GGY": "uk", "IMN": "uk", "VAT": "italia",
+               **{a: None for a in ["ABW", "AIA", "ASM", "ATC", "ATF", "BLM", "BMU", "CUW", "CYM", "FLK", "GUM", "HMD",
+                                    "IOA", "IOT", "KAS", "MAF", "MNP", "MSR", "NCL", "NFK", "NIU", "PCN", "PRI", "PYF",
+                                    "SAH", "SGS", "SHN", "SPM", "SXM", "TCA", "VGB", "VIR", "WLF"]}}
+
+
+def territory_covered(v, key):
+    """Var området omfattet av denne versjonen av det globale rådet?"""
+    if key == "aland":  # Åland er et landskap i Finland: følger Finlands regionunntak
+        if "finland" in v["exempt"]:
+            return False
+        r = v["regions"].get("finland", {})
+        if r.get("warned"):
+            return "Åland Islands" in r["warned"]
+        return "Åland Islands" not in r.get("exempt", [])
+    return key not in v["exempt"]
+
+
 def timeline(hist, info, lands, hregions=None):
     """Per land (ISO): [[fra, nivå|None|"?", delvis, tekstindeks, hash]] eldst først, og tekstene.
     "?" = ukjent (ingen arkivdata), "listed" = på UDs liste over reiseråd, men teksten er ikke arkivert. hash = tekst-hash, "" uten tekst; har teksten
@@ -439,6 +461,17 @@ def timeline(hist, info, lands, hregions=None):
         if rows:
             out[iso] = rows
     start = min(r[0][0] for r in out.values())
+    # Områder uten egen side hos UD var også omfattet av det globale koronarådet («alle land»).
+    for iso, key in TERRITORIES.items():
+        rows = [[start, None, 0, -1, ""]]
+        for v in versions:
+            on = key is None or territory_covered(v, key)
+            row = [v["from"], "necessary", 0, text_index(v["text"]), ""] if on else [v["from"], None, 0, -1, ""]
+            if rows[-1][1:] != row[1:]:
+                rows.append(row)
+        if versions and rows[-1][1]:
+            rows.append([versions[-1]["until"], None, 0, -1, ""])
+        out[iso] = rows
     return {"start": start, "countries": out, "texts": texts, "bridged": bridged}
 
 
@@ -526,7 +559,7 @@ def build():
         a3 = f["properties"]["ADM0_A3"]
         iso = next((k for k, v in MERGE.items() if a3 in v), a3)
         name = info[iso]["name"] if iso in info else NAMES.get(a3, f["properties"]["NAME"])
-        world.append(feature(f["geom"], {"iso": iso if iso in known else None, "ne": name}))
+        world.append(feature(f["geom"], {"iso": iso if iso in known or iso in TERRITORIES else None, "ne": name}))
 
     OUT.mkdir(parents=True, exist_ok=True)
     dump = lambda p, o: (OUT / p).write_text(json.dumps(o, ensure_ascii=False, separators=(",", ":")))

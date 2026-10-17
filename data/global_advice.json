@@ -14,7 +14,9 @@
    "text": "Utenriksdepartementet fraråder reiser som ikke er strengt nødvendige til alle land utenfor Norden. Reiserådet gjelder til og med 20. august. Fra og med 15. juni fraråder UD reiser som ikke er strengt nødvendige til områder i Norden med høy smittespredning, som definert av Folkehelseinstituttet. Mer informasjon om hvilke områder dette gjelder finnes på Folkehelseinstituttets nettsider.",
    "exempt": [
     "danmark",
+    "faeroyene",
     "finland",
+    "gronland",
     "island"
    ],
    "regions": {},
@@ -27,8 +29,10 @@
     "belgia",
     "danmark",
     "estland",
+    "faeroyene",
     "finland",
     "frankrike",
+    "gronland",
     "hellas",
     "irland",
     "island",
@@ -68,8 +72,10 @@
     "belgia",
     "danmark",
     "estland",
+    "faeroyene",
     "finland",
     "frankrike",
+    "gronland",
     "hellas",
     "irland",
     "island",
@@ -112,8 +118,10 @@
    "exempt": [
     "danmark",
     "estland",
+    "faeroyene",
     "finland",
     "frankrike",
+    "gronland",
     "hellas",
     "irland",
     "island",
@@ -156,7 +164,9 @@
    "exempt": [
     "danmark",
     "estland",
+    "faeroyene",
     "finland",
+    "gronland",
     "hellas",
     "irland",
     "island",
@@ -199,6 +209,7 @@
    "exempt": [
     "estland",
     "finland",
+    "gronland",
     "hellas",
     "irland",
     "italia",
@@ -238,6 +249,7 @@
    "exempt": [
     "estland",
     "finland",
+    "gronland",
     "kypros",
     "latvia",
     "litauen",
@@ -274,6 +286,7 @@
    "text": "Utenriksdepartementet fraråder reiser som ikke er strengt nødvendige til alle land. Det er gjort unntak for følgende land og områder/regioner i Norden samt land i EØS/Schengen-området: I Danmark: Nordjylland og regionen Sjælland. Grønland. I Sverige: Norrbotten, Södermanland, Gotland, Värmland, Västerbotten og Västernorrland. I Finland: Alle regioner med unntak av Kainuu. Estland, Kypros, Latvia og Litauen. Disse landene og regionene/områdene har etter Folkehelseinstituttets vurdering tilstrekkelig lav smittespredning. Landlisten vil bli oppdatert minst hver 14. dag. Mer informasjon om smittevernkriterier og kart finnes på Folkehelseinstituttets nettsider. Dette reiserådet gjelder til og med 1. oktober.",
    "exempt": [
     "estland",
+    "gronland",
     "kypros",
     "latvia",
     "litauen"
@@ -310,6 +323,7 @@
    "from": "2020-09-19",
    "text": "Utenriksdepartementet fraråder reiser som ikke er strengt nødvendige til alle land. Det er gjort unntak for følgende land og områder/regioner i Norden samt land i EØS/Schengen-området: I Danmark: Grønland. I Sverige: Blekinge, Gotland, Kalmar, Norrbotten, Södermanland, Värmland, Västerbotten, Västernorrland. I Finland: Alle regioner med unntak av Etelä-Savo/Södra Savolax. Island. Kypros, Latvia, Liechtenstein og Litauen. Disse landene og regionene/områdene har etter Folkehelseinstituttets vurdering tilstrekkelig lav smittespredning. Landlisten vil bli oppdatert minst hver 14. dag. Mer informasjon om smittevernkriterier og kart finnes på Folkehelseinstituttets nettsider. Dette reiserådet gjelder til og med 1. oktober.",
    "exempt": [
+    "gronland",
     "island",
     "kypros",
     "latvia",
@@ -343,6 +357,7 @@
    "from": "2020-09-26",
    "text": "Utenriksdepartementet fraråder reiser som ikke er strengt nødvendige til alle land. Det er gjort unntak for følgende land og områder/regioner i Norden samt land i EØS/Schengen-området: I Danmark: Grønland. I Sverige: Blekinge, Gotland, Kalmar, Norrbotten, Södermanland, Värmland og Västernorrland. I Finland: Alle regioner bortsett fra Etelä-Savo (Södra Savolax), Mellersta Finland (Keski-Suomi) og Päijänne-Tavastland (Päijät Häme). Kypros, Liechtenstein og Latvia. Disse landene og regionene/områdene har etter Folkehelseinstituttets vurdering tilstrekkelig lav smittespredning. Landlisten vil bli oppdatert minst hver 14. dag. Mer informasjon om smittevernkriterier og kart finnes på Folkehelseinstituttets nettsider. Dette reiserådet gjelder til og med 15. januar.",
    "exempt": [
+    "gronland",
     "kypros",
     "latvia",
     "liechtenstein"
@@ -375,6 +390,7 @@
    "from": "2020-10-03",
    "text": "Utenriksdepartementet fraråder reiser som ikke er strengt nødvendige til alle land. Det er gjort unntak for følgende land og områder i Norden samt land i EØS/Schengen-området: I Danmark: Grønland. I Sverige: Gotland, Kalmar, Norrbotten, Värmland og Västernorrland. I Finland: Hele landet bortsett fra sykehusdistriktene Helsingfors og Nyland (Helsinki og Uusimaa), Mellersta Finland (Keski-Suomi) og Södra Savolax (Etelä-Savo). Kypros, Latvia og Liechtenstein. Disse landene og regionene/områdene har etter Folkehelseinstituttets vurdering tilstrekkelig lav smittespredning. Landlisten vil bli oppdatert minst hver 14. dag. Mer informasjon om smittevernkriterier og kart finnes på Folkehelseinstituttets nettsider. Reiserådet gjelder til 15. januar.",
    "exempt": [
+    "gronland",
     "kypros",
     "latvia",
     "liechtenstein"
@@ -404,7 +420,9 @@
   {
    "from": "2020-10-17",
    "text": "Utenriksdepartementet fraråder reiser som ikke er strengt nødvendige til alle land. Det er gjort unntak for følgende områder i Norden: I Danmark: Grønland. I Sverige: Kalmar. I Finland: Alle sykehusdistrikter bortsett fra Centrala Tavastland, Egentliga Finland, Helsingfors og Nyland, Lappland, Länsi-Pohja, Mellersta Finland, Mellersta Österbotten, Norra Karelen, Syd-Österbotten, Södra Savolax og Vasa. Disse områdene har etter Folkehelseinstituttets vurdering tilstrekkelig lav smittespredning. Landlisten vil bli oppdatert minst hver 14. dag. Kart over røde og gule land og områder og informasjon om smittevernkriterier finner du på Folkehelseinstituttets nettsider. Reiserådet gjelder til 15. januar.",
-   "exempt": [],
+   "exempt": [
+    "gronland"
+   ],
    "regions": {
     "sverige": {
      "exempt": [
@@ -433,7 +451,9 @@
   {
    "from": "2020-10-24",
    "text": "Utenriksdepartementet fraråder reiser som ikke er strengt nødvendige til alle land. Det er gjort unntak for følgende områder i Norden: I Danmark: Grønland. I Finland: Alle sykehusdistrikter bortsett fra Centrala Tavastland, Egentliga Finland, Helsingfors og Nyland, Lappland, Länsi-Pohja, Mellersta Finland, Mellersta Österbotten, Norra Karelen, Syd-Österbotten, Södra Savolax og Vasa. Disse områdene har etter Folkehelseinstituttets vurdering tilstrekkelig lav smittespredning. Landlisten vil bli oppdatert minst hver 14. dag. Kart over røde og gule land og områder og informasjon om smittevernkriterier finner du på Folkehelseinstituttets nettsider. Reiserådet gjelder til 15. januar.",
-   "exempt": [],
+   "exempt": [
+    "gronland"
+   ],
    "regions": {
     "finland": {
      "warned": [
@@ -456,7 +476,9 @@
   {
    "from": "2020-10-31",
    "text": "Utenriksdepartementet fraråder reiser som ikke er strengt nødvendige til alle land. Det er gjort unntak for følgende områder i Norden: I Danmark: Grønland. I Finland: Alle sykehusdistrikter bortsett fra Kymmenedalen, Norra Õsterbotten, Norra Savolax, Åland, Centrala Tavastland, Egentliga Finland, Helsingfors og Nyland, Mellersta Finland, og Vasa. Disse områdene har etter Folkehelseinstituttets vurdering tilstrekkelig lav smittespredning: Landlisten vil bli oppdatert minst hver 14. dag. Kart over røde og gule land og områder samt mer informasjon om smittevernkriterier finner du på Folkehelseinstituttets nettsider. Reiserådet gjelder til 15. januar.",
-   "exempt": [],
+   "exempt": [
+    "gronland"
+   ],
    "regions": {
     "finland": {
      "warned": [
@@ -478,7 +500,9 @@
   {
    "from": "2020-11-07",
    "text": "Utenriksdepartementet fraråder reiser som ikke er strengt nødvendige til alle land. Det er gjort unntak for følgende områder i Norden: I Danmark: Grønland. I Finland: Alle sykehusdistrikter bortsett fra Kymmenedalen, Norra Õsterbotten, Norra Savolax, Åland, Centrala Tavastland, Egentliga Finland, Helsingfors og Nyland, Mellersta Finland, Vasa, Östra Savolax, Länsi-Pohja og Lappland. Disse områdene har etter Folkehelseinstituttets vurdering tilstrekkelig lav smittespredning. Landlisten vil bli oppdatert minst hver 14. dag. Kart over røde og gule land og områder samt mer informasjon om smittevernkriterier finner du på Folkehelseinstituttets nettsider. Reiserådet gjelder til 15. januar.",
-   "exempt": [],
+   "exempt": [
+    "gronland"
+   ],
    "regions": {
     "finland": {
      "warned": [
@@ -502,7 +526,10 @@
   {
    "from": "2020-11-21",
    "text": "Utenriksdepartementet fraråder reiser som ikke er strengt nødvendige til alle land. Det er gjort unntak for følgende områder i Norden: I Danmark: Færøyene og Grønland. I Finland: Sykehusdistriktene Birkaland, Kajanaland, Mellersta Österbotten, Norra Karelen, Päijät-Häme, Satakunta, Syd-Österbotten, Södra Karelen, Centrala Tavastland, Mellersta Finland og Norra Savolax. Disse områdene har etter Folkehelseinstituttets vurdering tilstrekkelig lav smittespredning. Landlisten vil bli oppdatert minst hver 14. dag. Kart over røde og gule land og områder samt mer informasjon om smittevernkriterier finner du på Folkehelseinstituttets nettsider. Reiserådet gjelder til 15. januar.",
-   "exempt": [],
+   "exempt": [
+    "faeroyene",
+    "gronland"
+   ],
    "regions": {
     "finland": {
      "exempt": [
@@ -526,7 +553,10 @@
   {
    "from": "2020-11-28",
    "text": "Utenriksdepartementet fraråder reiser som ikke er strengt nødvendige til alle land. Det er gjort unntak for følgende områder i Norden: I Danmark: Færøyene og Grønland. I Finland: Sykehusdistriktene Kajanaland, Mellersta Österbotten, Satakunta, Syd-Österbotten, Södra Karelen, Centrala Tavastland, Norra Savolax, Östra Savolax og Lappland, samt Åland. Disse områdene har etter Folkehelseinstituttets vurdering tilstrekkelig lav smittespredning. Landlisten vil bli oppdatert minst hver 14. dag. Kart over røde og gule land og områder samt mer informasjon om smittevernkriterier finner du på Folkehelseinstituttets nettsider. Reiserådet gjelder til 15. januar.",
-   "exempt": [],
+   "exempt": [
+    "faeroyene",
+    "gronland"
+   ],
    "regions": {
     "finland": {
      "exempt": [
@@ -549,7 +579,10 @@
   {
    "from": "2020-12-05",
    "text": "Utenriksdepartementet fraråder reiser som ikke er strengt nødvendige til alle land. Det er gjort unntak for følgende områder i Norden: I Danmark: Færøyene og Grønland. I Finland: Sykehusdistriktene Östra Savolax og Lappland, samt Åland. Disse områdene har etter Folkehelseinstituttets vurdering tilstrekkelig lav smittespredning. Landlisten vil bli oppdatert minst hver 14. dag. Kart over røde og gule land og områder samt mer informasjon om smittevernkriterier finner du på Folkehelseinstituttets nettsider. Reiserådet gjelder til 15. januar.",
-   "exempt": [],
+   "exempt": [
+    "faeroyene",
+    "gronland"
+   ],
    "regions": {
     "finland": {
      "exempt": [
@@ -565,7 +598,10 @@
   {
    "from": "2020-12-12",
    "text": "Utenriksdepartementet fraråder reiser som ikke er strengt nødvendige til alle land. Det er gjort unntak for følgende områder i Norden: I Danmark: Færøyene og Grønland. I Finland: Sykehusdistriktene Vasa og Östra Savolax, samt Åland. Disse områdene har etter Folkehelseinstituttets vurdering tilstrekkelig lav smittespredning. Landlisten vil bli oppdatert minst hver 14. dag. Kart over røde og gule land og områder samt mer informasjon om smittevernkriterier finner du på Folkehelseinstituttets nettsider. Reiserådet gjelder til 15. januar.",
-   "exempt": [],
+   "exempt": [
+    "faeroyene",
+    "gronland"
+   ],
    "regions": {
     "finland": {
      "exempt": [
@@ -581,7 +617,9 @@
   {
    "from": "2021-01-12",
    "text": "Utenriksdepartementet fraråder reiser som ikke er strengt nødvendige til alle land. Det er gjort unntak for følgende områder i Norden: I Danmark: Grønland. I Finland: Sykehusdistriktene Östra Savolax, Mellersta Österbotten, Södra Savolax, Kajanaland, Lappland, Norra Savolax, Satakunta og Syd-Österbotten. Disse områdene har etter Folkehelseinstituttets vurdering tilstrekkelig lav smittespredning. Landlisten vil bli oppdatert minst hver 14. dag. Kart over røde og gule land og områder samt mer informasjon om smittevernkriterier finner du på Folkehelseinstituttets nettsider. Reiserådet gjelder til 1. mars 2021.",
-   "exempt": [],
+   "exempt": [
+    "gronland"
+   ],
    "regions": {
     "finland": {
      "exempt": [
@@ -601,7 +639,9 @@
   {
    "from": "2021-01-18",
    "text": "Utenriksdepartementet fraråder reiser som ikke er strengt nødvendige til alle land. Det er gjort unntak for følgende områder i Norden: I Danmark: Grønland. I Finland: Sykehusdistriktene Östra Savolax, Mellersta Österbotten, Södra Savolax, Lappland, Norra Savolax, Satakunta og Syd-Österbotten. Disse områdene har etter Folkehelseinstituttets vurdering tilstrekkelig lav smittespredning. Landlisten vil bli oppdatert minst hver 14. dag. Kart over røde og gule land og områder samt mer informasjon om smittevernkriterier finner du på Folkehelseinstituttets nettsider. Reiserådet gjelder til 1. mars 2021.",
-   "exempt": [],
+   "exempt": [
+    "gronland"
+   ],
    "regions": {
     "finland": {
      "exempt": [
@@ -620,7 +660,9 @@
   {
    "from": "2021-01-25",
    "text": "Utenriksdepartementet fraråder reiser som ikke er strengt nødvendige til alle land. Det er gjort unntak for følgende områder i Norden: I Danmark: Grønland. I Finland: Sykehusdistriktene Östra Savolax, Mellersta Österbotten, Lappland, Satakunta, Norra Karelen, Södra Karelen og Syd-Österbotten. Disse områdene har etter Folkehelseinstituttets vurdering tilstrekkelig lav smittespredning. Landlisten vil bli oppdatert minst hver 14. dag. Kart over røde og gule land og områder samt mer informasjon om smittevernkriterier finner du på Folkehelseinstituttets nettsider. Reiserådet gjelder til 1. mars 2021.",
-   "exempt": [],
+   "exempt": [
+    "gronland"
+   ],
    "regions": {
     "finland": {
      "exempt": [
@@ -640,7 +682,9 @@
   {
    "from": "2021-02-01",
    "text": "Utenriksdepartementet fraråder reiser som ikke er strengt nødvendige til alle land. Det er gjort unntak for følgende områder i Norden: I Danmark: Grønland. I Finland: Sykehusdistriktene Östra Savolax, Mellersta Österbotten, Lappland, Satakunta, Södra Karelen og Syd-Österbotten. Disse områdene har etter Folkehelseinstituttets vurdering tilstrekkelig lav smittespredning. Landlisten vil bli oppdatert minst hver 14. dag. Kart over røde og gule land og områder samt mer informasjon om smittevernkriterier finner du på Folkehelseinstituttets nettsider. Reiserådet gjelder til 1. mars 2021.",
-   "exempt": [],
+   "exempt": [
+    "gronland"
+   ],
    "regions": {
     "finland": {
      "exempt": [
@@ -660,6 +704,8 @@
    "from": "2021-02-15",
    "text": "Utenriksdepartementet fraråder reiser som ikke er strengt nødvendige til alle land. Det er gjort unntak for følgende land og områder: Island. I Danmark: Færøyene og Grønland. I Finland: Sykehusdistriktene Södra Karelen, Syd-Österbotten og Åland. Disse områdene har etter Folkehelseinstituttets vurdering tilstrekkelig lav smittespredning. Landlisten vil bli oppdatert minst hver 14. dag. Kart over røde og gule land og områder samt mer informasjon om smittevernkriterier finner du på Folkehelseinstituttets nettsider. Reiserådet gjelder til 15. april 2021.",
    "exempt": [
+    "faeroyene",
+    "gronland",
     "island"
    ],
    "regions": {
@@ -678,6 +724,8 @@
    "from": "2021-02-22",
    "text": "Utenriksdepartementet fraråder reiser som ikke er strengt nødvendige til alle land. Det er gjort unntak for følgende land og områder: Island. I Danmark: Færøyene og Grønland. I Finland: Sykehusdistriktene Norra Savolax, Norra Karelen, Kajanaland, Mellersta Österbotten, Södra Savolax, Syd-Österbotten og Åland. Disse områdene har etter Folkehelseinstituttets vurdering tilstrekkelig lav smittespredning. Landlisten vil bli oppdatert minst hver 14. dag. Kart over røde og gule land og områder samt mer informasjon om smittevernkriterier finner du på Folkehelseinstituttets nettsider. Reiserådet gjelder til 15. april 2021.",
    "exempt": [
+    "faeroyene",
+    "gronland",
     "island"
    ],
    "regions": {
@@ -700,6 +748,8 @@
    "from": "2021-03-01",
    "text": "Utenriksdepartementet fraråder reiser som ikke er strengt nødvendige til alle land. Det er gjort unntak for følgende land og områder: Island. I Danmark: Færøyene og Grønland. I Finland: Sykehusdistriktene Norra Savolax, Norra Karelen, Kajanaland og Mellersta Österbotten. Disse områdene har etter Folkehelseinstituttets vurdering tilstrekkelig lav smittespredning. Landlisten vil bli oppdatert minst hver 14. dag. Kart over røde og gule land og områder samt mer informasjon om smittevernkriterier finner du på Folkehelseinstituttets nettsider. Reiserådet gjelder til 15. april 2021.",
    "exempt": [
+    "faeroyene",
+    "gronland",
     "island"
    ],
    "regions": {
@@ -719,6 +769,8 @@
    "from": "2021-03-15",
    "text": "Utenriksdepartementet fraråder reiser som ikke er strengt nødvendige til alle land. Det er gjort unntak for følgende land og områder: Island. I Danmark: Færøyene og Grønland. I Finland: Sykehusdistriktene Kajanaland og Länsi-Pohja. Disse områdene har etter Folkehelseinstituttets vurdering tilstrekkelig lav smittespredning. Landlisten vil bli oppdatert minst hver 14. dag. Kart over røde og gule land og områder samt mer informasjon om smittevernkriterier finner du på Folkehelseinstituttets nettsider. Reiserådet gjelder til 15. april 2021.",
    "exempt": [
+    "faeroyene",
+    "gronland",
     "island"
    ],
    "regions": {
@@ -736,6 +788,8 @@
    "from": "2021-03-26",
    "text": "Utenriksdepartementet fraråder reiser som ikke er strengt nødvendige til alle land. Det er gjort unntak for følgende land og områder: Island. I Danmark: Færøyene og Grønland. I Finland: Sykehusdistriktene Kajanaland, Mellersta Österbotten, Norra Karelen og Länsi-Pohja. Disse områdene har etter Folkehelseinstituttets vurdering tilstrekkelig lav smittespredning. Landlisten vil bli oppdatert minst hver 14. dag. Kart over røde og gule land og områder samt mer informasjon om smittevernkriterier finner du på Folkehelseinstituttets nettsider. Reiserådet gjelder til 15. mai 2021.",
    "exempt": [
+    "faeroyene",
+    "gronland",
     "island"
    ],
    "regions": {
@@ -755,6 +809,8 @@
    "from": "2021-03-29",
    "text": "Utenriksdepartementet fraråder reiser som ikke er strengt nødvendige til alle land. Det er gjort unntak for følgende land og områder: Island. I Danmark: Færøyene og Grønland. I Finland: Sykehusdistriktene Kajanaland, Mellersta Österbotten og Norra Karelen. Disse områdene har etter Folkehelseinstituttets vurdering tilstrekkelig lav smittespredning. Landlisten vil bli oppdatert minst hver 14. dag. Kart over røde og gule land og områder samt mer informasjon om smittevernkriterier finner du på Folkehelseinstituttets nettsider. Reiserådet gjelder til 15. mai 2021.",
    "exempt": [
+    "faeroyene",
+    "gronland",
     "island"
    ],
    "regions": {
@@ -772,7 +828,10 @@
   {
    "from": "2021-04-12",
    "text": "Utenriksdepartementet fraråder reiser som ikke er strengt nødvendige til alle land. Det er gjort unntak for følgende land og områder: I Danmark: Færøyene og Grønland. I Finland: Sykehusdistriktene Kajanaland, Mellersta Österbotten, Lappland, Länsi-Pohja, Syd-Österbotten og Norra Österbotten. Disse områdene har etter Folkehelseinstituttets vurdering tilstrekkelig lav smittespredning. Landlisten vil bli oppdatert minst hver 14. dag. Kart over røde og gule land og områder samt mer informasjon om smittevernkriterier finner du på Folkehelseinstituttets nettsider. Reiserådet gjelder til 15. mai 2021.",
-   "exempt": [],
+   "exempt": [
+    "faeroyene",
+    "gronland"
+   ],
    "regions": {
     "finland": {
      "exempt": [
@@ -790,7 +849,10 @@
   {
    "from": "2021-04-19",
    "text": "Utenriksdepartementet fraråder reiser som ikke er strengt nødvendige til alle land. Det er gjort unntak for følgende land og områder: I Danmark: Færøyene og Grønland. I Finland: Sykehusdistriktene Kajanaland, Mellersta Österbotten, Lappland, Länsi-Pohja og Norra Österbotten. Disse områdene har etter Folkehelseinstituttets vurdering tilstrekkelig lav smittespredning. Landlisten vil bli oppdatert minst hver 14. dag. Kart over røde og gule land og områder samt mer informasjon om smittevernkriterier finner du på Folkehelseinstituttets nettsider. Reiserådet gjelder til 15. mai 2021.",
-   "exempt": [],
+   "exempt": [
+    "faeroyene",
+    "gronland"
+   ],
    "regions": {
     "finland": {
      "exempt": [
@@ -807,7 +869,10 @@
   {
    "from": "2021-04-26",
    "text": "Utenriksdepartementet fraråder reiser som ikke er strengt nødvendige til alle land. Det er gjort unntak for følgende land og områder: I Danmark: Færøyene og Grønland. I Finland: Sykehusdistriktene Mellersta Österbotten, Lappland, Norra Karelen, Norra Savolax og Norra Österbotten. Disse områdene har etter Folkehelseinstituttets vurdering tilstrekkelig lav smittespredning. Landlisten vil bli oppdatert minst hver 14. dag. Kart over røde og gule land og områder samt mer informasjon om smittevernkriterier finner du på Folkehelseinstituttets nettsider. Reiserådet gjelder til 15. mai 2021.",
-   "exempt": [],
+   "exempt": [
+    "faeroyene",
+    "gronland"
+   ],
    "regions": {
     "finland": {
      "exempt": [
@@ -825,7 +890,10 @@
   {
    "from": "2021-05-03",
    "text": "Utenriksdepartementet fraråder reiser som ikke er strengt nødvendige til alle land. Det er gjort unntak for følgende land og områder: I Danmark: Færøyene og Grønland. I Finland: Sykehusdistriktene Mellersta Österbotten, Lappland, Norra Karelen og Norra Savolax. Disse områdene har etter Folkehelseinstituttets vurdering tilstrekkelig lav smittespredning. Landlisten vil bli oppdatert minst hver 14. dag. Kart over røde og gule land og områder samt mer informasjon om smittevernkriterier finner du på Folkehelseinstituttets nettsider. Reiserådet gjelder til 15. mai 2021.",
-   "exempt": [],
+   "exempt": [
+    "faeroyene",
+    "gronland"
+   ],
    "regions": {
     "finland": {
      "exempt": [
@@ -842,7 +910,10 @@
   {
    "from": "2021-05-10",
    "text": "Utenriksdepartementet fraråder reiser som ikke er strengt nødvendige til alle land. Det er gjort unntak for følgende land og områder: I Danmark: Færøyene og Grønland. I Finland: Sykehusdistriktene Mellersta Österbotten, Lappland, Norra Karelen, Mellersta Finland, Södra Savolax, Östra Savolax, Kajanaland, Satakunta, Syd-Österbotten, Vasa og Norra Savolax. Disse områdene har etter Folkehelseinstituttets vurdering tilstrekkelig lav smittespredning. Landlisten vil bli oppdatert minst hver 14. dag. Kart over røde og gule land og områder samt mer informasjon om smittevernkriterier finner du på Folkehelseinstituttets nettsider. Reiserådet gjelder til 25. mai 2021",
-   "exempt": [],
+   "exempt": [
+    "faeroyene",
+    "gronland"
+   ],
    "regions": {
     "finland": {
      "exempt": [
@@ -865,7 +936,10 @@
   {
    "from": "2021-05-17",
    "text": "Utenriksdepartementet fraråder reiser som ikke er strengt nødvendige til alle land. Det er gjort unntak for følgende land og områder: I Danmark: Færøyene og Grønland. I Finland: Sykehusdistriktene Lappland, Norra Karelen, Mellersta Finland, Södra Savolax, Östra Savolax, Kajanaland, Syd-Österbotten, Vasa og Norra Savolax. Disse områdene har etter Folkehelseinstituttets vurdering tilstrekkelig lav smittespredning. Landlisten vil bli oppdatert minst hver 14. dag. Kart over røde og gule land og områder samt mer informasjon om smittevernkriterier finner du på Folkehelseinstituttets nettsider. Reiserådet gjelder til 25. mai 2021.",
-   "exempt": [],
+   "exempt": [
+    "faeroyene",
+    "gronland"
+   ],
    "regions": {
     "finland": {
      "exempt": [
@@ -887,6 +961,7 @@
    "from": "2021-05-31",
    "text": "Utenriksdepartementet fraråder reiser som ikke er strengt nødvendige til alle land. Det er gjort unntak for følgende land og områder: Island. I Danmark: Grønland. I Finland: Sykehusdistriktene Lappland, Norra Karelen, Mellersta Finland, Östra Savolax, Syd-Österbotten, Vasa, Norra Savolax, Länsi-Pohja, Norra Österbotten, Södra Karelen og Åland. Disse områdene har etter Folkehelseinstituttets vurdering tilstrekkelig lav smittespredning. Landlisten vil bli oppdatert minst hver 14. dag. Kart over røde og gule land og områder samt mer informasjon om smittevernkriterier finner du på Folkehelseinstituttets nettsider. Reiserådet gjelder til 1. juli 2021.",
    "exempt": [
+    "gronland",
     "island"
    ],
    "regions": {
@@ -912,6 +987,7 @@
    "from": "2021-06-04",
    "text": "Utenriksdepartementet fraråder reiser som ikke er strengt nødvendige til alle land. Det er gjort unntak for følgende land og områder: Island og Malta. I Danmark: Grønland. I Finland: Sykehusdistriktene Lappland, Norra Karelen, Mellersta Finland, Östra Savolax, Syd-Österbotten, Vasa, Norra Savolax, Länsi-Pohja, Norra Österbotten, Satakunta, Kajanaland, Södra Karelen og Åland. Disse områdene har etter Folkehelseinstituttets vurdering tilstrekkelig lav smittespredning. Landlisten vil bli oppdatert minst hver 14. dag. Kart over røde og gule land og områder samt mer informasjon om smittevernkriterier finner du på Folkehelseinstituttets nettsider. Reiserådet gjelder til 1. juli 2021.",
    "exempt": [
+    "gronland",
     "island",
     "malta"
    ],
@@ -940,6 +1016,7 @@
    "from": "2021-06-21",
    "text": "Utenriksdepartementet fraråder reiser som ikke er strengt nødvendige til alle land. Det er gjort unntak for følgende land og områder: Island, Malta, Polen og Romania. I Danmark: Grønland. I Finland: Sykehusdistriktene Mellersta Finland, Mellersta Österbotten, Södra Savolax, Östra Savolax, Kajanaland, Centrala Tavastland, Kymmenedalen, Lappland, Länsi-Pohja, Norra Karelen, Norra Österbotten, Birkaland, Norra Savolax, Satakunta, Södra Karelen, Syd-Österbotten, Vasa, Egentliga Finland og Åland. Disse områdene har etter Folkehelseinstituttets vurdering tilstrekkelig lav smittespredning. Landlisten vil bli oppdatert minst hver 14. dag. Kart over røde og gule land og områder samt mer informasjon om smittevernkriterier finner du på Folkehelseinstituttets nettsider. Reiserådet gjelder til 10. august 2021.",
    "exempt": [
+    "gronland",
     "island",
     "malta",
     "polen",
@@ -1011,6 +1088,7 @@
     "spania",
     "sveits",
     "sverige",
+    "taiwan",
     "tsjekkia",
     "tyskland",
     "uk",
@@ -1068,6 +1146,7 @@
     "spania",
     "sveits",
     "sverige",
+    "taiwan",
     "tsjekkia",
     "tyskland",
     "uk",

@@ -28,7 +28,7 @@ EU_EOS = ["Belgia", "Bulgaria", "Danmark", "Estland", "Finland", "Frankrike", "H
           "Kroatia", "Kypros", "Latvia", "Liechtenstein", "Litauen", "Luxembourg", "Malta", "Nederland", "Polen",
           "Portugal", "Romania", "Slovakia", "Slovenia", "Spania", "Sverige", "Tsjekkia", "Tyskland", "Ungarn",
           "Østerrike", "Sveits", "Storbritannia"]
-NORDEN = ["Danmark", "Finland", "Island", "Sverige"]
+NORDEN = ["Danmark", "Finland", "Island", "Sverige", "Grønland", "Færøyene"]
 # UDs regionnavn -> geoBoundaries ADM1. Finske sykehusdistrikter er lagt på landskapet de ligger i.
 REGION = {
     "SWE": {"adm": "SWE/ADM1", "names": {}},  # fylles under: «Blekinge» -> «Blekinge län»
@@ -63,9 +63,9 @@ COUNTRY_OF_REGION = {"Sverige": "SWE", "Danmark": "DNK", "Finland": "FIN"}
 #   om Danmark; Sverige var rødt hele sommeren).
 # - 10. juli 2020: unntakene i EØS/Schengen og Sør-Sverige gjelder først fra 15. juli (egen versjon).
 OVERRIDES = {
-    "2020-06-12": {"from": "2020-06-15", "exempt": ["danmark", "finland", "island"]},
-    "2020-06-25": {"exempt": ["danmark", "finland", "island"]},
-    "2020-07-10": {"exempt": ["danmark", "finland", "island"]},
+    "2020-06-12": {"from": "2020-06-15", "exempt": ["danmark", "faeroyene", "finland", "gronland", "island"]},
+    "2020-06-25": {"exempt": ["danmark", "faeroyene", "finland", "gronland", "island"]},
+    "2020-07-10": {"exempt": ["danmark", "faeroyene", "finland", "gronland", "island"]},
 }
 # Skrivemåter i UDs lister som ikke står likt i tabellen over.
 FIX = {"Õ": "Ö", "Päijät-Häme": "Päijänne-Tavastland", "Helsingfors": "Helsingfors och Nyland",
@@ -152,7 +152,6 @@ def parse(t, names_to_key):
                     exempt.add(names_to_key[n])  # f.eks. «Grønland» i Danmark-setningen
                 else:
                     other.append(n)
-            other = [n for n in other if n not in ("Færøyene", "Grønland")]  # ikke egne land hos UD
             if other:
                 print(f"  ukjente regionnavn i {rm.group(1)}: {other}", file=sys.stderr)
             if found:
@@ -172,6 +171,9 @@ def main():
     names_to_key = {c["name"]: k for k, c in adv.items()}
     names_to_key.update({"Storbritannia": "uk", "Bosnia-Hercegovina": names_to_key.get("Bosnia-Hercegovina", "bosnia"),
                          "USA": "usa", "Sør-Korea": "sorkorea"})
+    # Områder uten egen side hos UD, som likevel er nevnt i unntakene (build.py TERRITORIES).
+    names_to_key.update({"Grønland": "gronland", "Færøyene": "faeroyene", "Taiwan": "taiwan",
+                         "Hongkong": "hongkong", "Hong Kong": "hongkong", "Macao": "macao", "Macau": "macao"})
     iso_of_region = {"SWE": "sverige", "DNK": "danmark", "FIN": "finland"}
     versions = collect()
     out = []

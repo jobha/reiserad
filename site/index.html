@@ -636,7 +636,8 @@ function tlSet(n) {
   sub.dataset.live ||= sub.textContent;
   if (live) sub.textContent = sub.dataset.live;
   else {
-    const st = Object.keys(TL.countries).filter(iso => FORMER[iso] ? fsActive(FORMER[iso]) : !HIDDEN.has(iso)).map(tlState);
+    // Områder uten egen UD-side (Grønland, Taiwan …) telles ikke som land.
+    const st = Object.keys(TL.countries).filter(iso => FORMER[iso] ? fsActive(FORMER[iso]) : INFO[iso] && !HIDDEN.has(iso)).map(tlState);
     const n = st.filter(x => x.level && x.level !== "?").length, u = st.filter(x => x.level === "?").length;
     sub.textContent = `${tlFmt(TL_DATE)}: ${n} land med reiseadvarsel` + (u > 20 ? ` · ${u} ukjente` : "");
   }
