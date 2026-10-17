@@ -44,5 +44,6 @@
    {"level": "all", "border": ["KHM"], "km": 50, "label": "Nærmere enn 50 km fra grensen mot Kambodsja"},
    {"level": "all", "adm": "THA/ADM1", "names": ["Trat Province"], "and": {"poly": [[102.15, 12.3], [102.62, 12.08], [102.75, 11.5], [102.35, 11.5], [102.1, 11.9]]}, "approx": true, "label": "Øyene i Trat (Koh Chang, Koh Kood, Koh Mak)"}
   ]
- }
+ },
+ "11f50bb245ac": {"text": "Utenriksdepartementet fraråder reise eller opphold som ikke er strengt nødvendig i provinsene Pattani, Yala, Narathiwat og Songkhla i Thailand. Norske borgere som oppholder seg i eller som planlegger å reise til disse provinsene oppfordres til å ta kontakt med ambassaden i Bangkok for oppdatert informasjon og registrering av reise via www.reiseregistrering.no.", "same": "52596037696a"}
 }

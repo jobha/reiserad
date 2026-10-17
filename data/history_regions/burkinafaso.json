@@ -4,5 +4,6 @@
  "26534c405419": {"text": "Utenriksdepartementet fraråder alle reiser som ikke er strengt nødvendige til Ouagadougou. Utenriksdepartementet fraråder alle reiser til Burkina Faso utenfor Ouagadougou.", "zones": [{"level": "all", "country": true, "label": "Utenfor Ouagadougou"}, {"level": "necessary", "adm": "BFA/ADM2", "names": ["Kadiogo"], "label": "Ouagadougou"}]},
  "1c03a3535cf3": {"text": "Utenriksdepartementet fraråder alle reiser som ikke er strengt nødvendige til hovedstaden Ouagadougou og fraråder alle reiser til resten av landet", "same": "26534c405419"},
  "b23b88f2b2ad": {"text": "Utenriksdepartementet fraråder reise eller opphold som ikke er strengt nødvendig i Burkina Faso.", "zones": [{"level": "necessary", "country": true, "label": "Hele landet"}]},
- "6e0c98ce3af2": {"text": "Utenriksdepartementet fraråder reiser som ikke er strengt nødvendige til Burkina Faso.", "same": "b23b88f2b2ad"}
+ "6e0c98ce3af2": {"text": "Utenriksdepartementet fraråder reiser som ikke er strengt nødvendige til Burkina Faso.", "same": "b23b88f2b2ad"},
+ "293a49d1740f": {"text": "Utenriksdepartementet fraråder reiser som ikke er strengt nødvendige til Burkina Faso. Norske borgere som oppholder seg i eller som planlegger å reise til Burkina Faso anmodes om å registrere sin reise via www.reiseregistrering.no", "same": "b23b88f2b2ad"}
 }

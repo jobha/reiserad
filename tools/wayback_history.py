@@ -240,6 +240,10 @@ def main():
         fill_listed(adv, raw)
         raw_path.write_text(json.dumps(raw, ensure_ascii=False))
 
+    # Kopier fra Common Crawl (tools/commoncrawl_history.py) fyller hull i Wayback, særlig 2018–19.
+    cc_path = ROOT / ".cache" / "commoncrawl" / "snapshots.json"
+    cc = json.loads(cc_path.read_text()) if cc_path.exists() else {}
+    raw = {k: sorted(raw.get(k, []) + cc.get(k, []), key=lambda x: x["date"]) for k in set(raw) | set(cc)}
     # Første dato der noe land har en advarselsboks: fra da betyr «ingen boks» «ingen advarsel».
     boxed = [s["date"] for snaps in raw.values() for s in snaps if s["warning"]]
     first_box = min(boxed) if boxed else FIRST_BOX

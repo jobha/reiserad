@@ -370,6 +370,14 @@ def merge_global(rows, key, versions, text_index, combos=None):
     return out
 
 
+BRIDGE_DAYS = 460
+
+
+def _days(a, b):
+    from datetime import date
+    return (date.fromisoformat(b) - date.fromisoformat(a)).days
+
+
 def timeline(hist, info, lands, hregions=None):
     """Per land (ISO): [[fra, nivå|None|"?", delvis, tekstindeks, hash]] eldst først, og tekstene.
     "?" = ukjent (ingen arkivdata), "listed" = på UDs liste over reiseråd, men teksten er ikke arkivert. hash = tekst-hash, "" uten tekst; har teksten
@@ -378,7 +386,7 @@ def timeline(hist, info, lands, hregions=None):
     Eldre tekster skal alle være tegnet; nivået leses bare av teksten for dagens tekst (kartet bruker da
     dagens soner), tekster uten advarsel, og som siste utvei for nye tekster ingen har tegnet ennå
     (listes i timeline.untagged og skrives ut av build())."""
-    texts, index, out = [], {}, {}
+    texts, index, out, bridged = [], {}, {}, {}
     timeline.untagged = []
     timeline.combos = []
     versions = load_global()
@@ -419,11 +427,19 @@ def timeline(hist, info, lands, hregions=None):
         rows = [r for i, r in enumerate(rows)
                 if not (r[1] == "?" and 0 < i < len(rows) - 1
                         and (rows[i - 1][1], rows[i - 1][4]) == (rows[i + 1][1], rows[i + 1][4]))]
+        # Et kort hull (under ~15 mnd., typisk feb.–apr. 2018) mellom to advarsler på samme nivå: den forrige
+        # teksten vises videre, merket omtrentlig (bridged), så landet ikke står som ukjent.
+        for i in range(1, len(rows) - 1):
+            a, r, b = rows[i - 1], rows[i], rows[i + 1]
+            if r[1] == "?" and a[1] in ("all", "necessary") and a[1] == b[1] and _days(r[0], b[0]) <= BRIDGE_DAYS:
+                bridged.setdefault(iso, []).append([r[0], b[0]])
+        drop = {p[0] for p in bridged.get(iso, [])}
+        rows = [r for r in rows if not (r[1] == "?" and r[0] in drop)]
         rows = merge_global(rows, rec["key"], versions, text_index, timeline.combos)
         if rows:
             out[iso] = rows
     start = min(r[0][0] for r in out.values())
-    return {"start": start, "countries": out, "texts": texts}
+    return {"start": start, "countries": out, "texts": texts, "bridged": bridged}
 
 
 def round_coords(obj, nd=4):

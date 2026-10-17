@@ -46,5 +46,6 @@
  },
  "a3edbcca5905": {"text": "I lys av den fortsatt uavklarte situasjonen i Mumbai fraråder Utenriksdepartementet inntil videre alle reiser til eller via Mumbai som ikke er strengt nødvendige. Sist endret", "zones": [{"level": "necessary", "point": [72.88, 19.08], "km": 30, "approx": true, "label": "Mumbai"}]},
  "0d69814b6af0": {"text": "Utenriksdepartementet fraråder alle reiser til India.", "zones": [{"level": "all", "country": true, "label": "Hele landet"}]},
- "67bd5a7c2e39": {"text": "Utenriksdepartementet fraråder alle reiser som ikke er strengt nødvendige til Jammu og Kashmir.", "same": "305c9039b7c9"}
+ "67bd5a7c2e39": {"text": "Utenriksdepartementet fraråder alle reiser som ikke er strengt nødvendige til Jammu og Kashmir.", "same": "305c9039b7c9"},
+ "635eae1d61b9": {"text": "Utenriksdepartementet fraråder reise eller opphold som ikke er strengt nødvendig i delstaten Jammu og Kashmir, med unntak av Ladakh. Norske borgere som oppholder seg i eller som planlegger å reise til disse områdene oppfordres til å ta kontakt med ambassaden i New Delhi for oppdatert informasjon og registrering av reise via www.reiseregistrering.no.", "same": "305c9039b7c9"}
 }

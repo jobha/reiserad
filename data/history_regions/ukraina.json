@@ -30,5 +30,6 @@
    {"level": "all", "adm": "UKR/ADM1", "names": ["Autonomous Republic of Crimea", "Sevastopol"], "outside": true, "label": "Krym-halvøya"}
   ]
  },
- "77ef3f0d15dc": {"text": "Utenriksdepartementet fraråder alle reiser til Ukraina og oppfordrer norske borgere til å forlate landet.", "zones": [{"level": "all", "country": true, "label": "Hele landet"}]}
+ "77ef3f0d15dc": {"text": "Utenriksdepartementet fraråder alle reiser til Ukraina og oppfordrer norske borgere til å forlate landet.", "zones": [{"level": "all", "country": true, "label": "Hele landet"}]},
+ "61e7ddaa5cc6": {"text": "Utenriksdepartementet fraråder alle reiser til eller opphold i fylkene Donetsk og Luhansk samt på Krim-halvøya. Norske borgere som oppholder seg i, eller planlegger å reise til Ukraina, oppfordres til å holde seg oppdatert via ambassadens hjemmesider, samt til å registrere sin reise viawww.reiseregistrering.no.", "same": "5044d4a3580f"}
 }

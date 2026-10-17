@@ -73,5 +73,6 @@
  },
  "c6f2d223cf50": {"text": "Utenriksdepartementet fraråder alle reiser som ikke er strengt nødvendige til hele Israel.", "zones": [{"level": "necessary", "country": true, "label": "Hele landet"}]},
  "51befda7594f": {"text": "Utenriksdepartementet fraråder alle reiser til Israel.", "zones": [{"level": "all", "country": true, "label": "Hele landet"}]},
- "4e10afbab354": {"text": "Utenriksdepartementet fraråder reiser til Israel som ikke er strengt nødvendige.", "same": "c6f2d223cf50"}
+ "4e10afbab354": {"text": "Utenriksdepartementet fraråder reiser til Israel som ikke er strengt nødvendige.", "same": "c6f2d223cf50"},
+ "8e0429ab4b10": {"text": "Utenriksdepartementet fraråder alle ikke-nødvendige reiser til og opphold i grenseområdet (fem km) mot Gaza i det sørlige Israel. Reisende oppfordres til å vise aktsomhet i grenseområdene mot Egypt, Libanon og Syria. Reisende oppfordres til å registrere seg på www.reiseregistrering.no.", "same": "362b4b39b4d5"}
 }

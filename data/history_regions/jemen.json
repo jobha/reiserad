@@ -3,5 +3,6 @@
  "bd6bfc55444b": {"text": "Utenriksdepartementet frarår inntil videre norske borgere å reise til Yemen, dersom reisen ikke er strengt tatt nødvendig.", "zones": [{"level": "necessary", "country": true, "label": "Hele landet"}]},
  "1fcac4130f36": {"text": "På grunn av de rådende forhold ber Utenriksdepartementet norske borgere nøye vurdere nødvendigheten av å reise til eller oppholde seg i Jemen.", "same": "bd6bfc55444b"},
  "171da2c55965": {"text": "Utenriksdepartementet fraråder reise til eller opphold i Jemen som ikke er strengt nødvendig. Norske borgere som oppholder seg i eller planlegger å reise til Jemen oppfordres til å ta kontakt med ambassaden i Riyadh for oppdatert informasjon og registrering.", "same": "bd6bfc55444b"},
- "c969260bd133": {"text": "Utenriksdepartementet fraråder reise til eller opphold i Jemen som ikke er strengt nødvendig.", "same": "bd6bfc55444b"}
+ "c969260bd133": {"text": "Utenriksdepartementet fraråder reise til eller opphold i Jemen som ikke er strengt nødvendig.", "same": "bd6bfc55444b"},
+ "e95d2bc61cd4": {"text": "Utenriksdepartementet fraråder alle reiser til eller opphold i Jemen. Nordmenn som befinner seg i Jemen oppfordres til å forlate landet. Norske borgere som oppholder seg i eller som planlegger å reise til Jemen oppfordres til å ta kontakt med ambassaden i Riyadh for oppdatert informasjon og registrering av reise via www.reiseregistrering.no.", "zones": [{"level": "all", "country": true, "label": "Hele landet"}]}
 }

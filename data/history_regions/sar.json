@@ -1,4 +1,5 @@
 {
  "_om": "Soner for eldre tekster på UDs side for sar. Nøkkel = tekst-hash (python scraper/build.py --missing-history-zones sar). Format som data/regions.json; se README.",
- "b818deb8160f": {"text": "Utenriksdepartementet fraråder inntil videre alle reiser til Den sentralafrikanske republikk.", "zones": [{"level": "all", "country": true, "label": "Hele landet"}]}
+ "b818deb8160f": {"text": "Utenriksdepartementet fraråder inntil videre alle reiser til Den sentralafrikanske republikk.", "zones": [{"level": "all", "country": true, "label": "Hele landet"}]},
+ "cd00d5979783": {"text": "Utenriksdepartementet fraråder alle reiser til Den sentralafrikanske republikk. Norske borgere som oppholder seg i, eller som planlegger å reise til Den sentralafrikanske republikk oppfordres til å kontakte ambassaden i Khartoum for oppdatert informasjon og å registrere sin reise på www.reiseregistrering.no.", "same": "b818deb8160f"}
 }

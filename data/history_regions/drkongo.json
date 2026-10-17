@@ -40,5 +40,6 @@
  },
  "7fffe57b210a": {"text": "På grunn av situasjonen i Den demokratiske republikken Kongo, særskilt i Kinshasa, fraråder Utenriksdepartementet reiser til eller opphold i Den demokratiske republikken Kongo som ikke er strengt nødvendig. Norske borgere som oppholder seg i eller som planlegger å reise til Den demokratiske republikken Kongo oppfordres til å følge med på ambassadens hjemmeside: www.noruega.ao", "zones": [{"level": "necessary", "country": true, "label": "Hele landet"}]},
  "b350c77e2a74": {"text": "Utenriksdepartementet fraråder reise til eller opphold i de nordlige og østlige deler av Den demokratiske republikken Kongo.", "same": "f247319ec5cf"},
- "fe36958be72f": {"text": "Utenriksdepartementet fraråder alle reiser til DR Kongo", "zones": [{"level": "all", "country": true, "label": "Hele landet"}]}
+ "fe36958be72f": {"text": "Utenriksdepartementet fraråder alle reiser til DR Kongo", "zones": [{"level": "all", "country": true, "label": "Hele landet"}]},
+ "e6824598867f": {"text": "Utenriksdepartementet fraråder all reise til eller opphold i provinsene Bas-Uele, Haut-Uele, Ituri, Nord- og Sør-Kivu, Maniema, Haut Lomami og Tanganykia, Kasai, Kasai-Central og Kasai-Oriental. Utenriksdepartementet fraråder reise til eller opphold i resten av Den demokratiske republikken Kongo som ikke er strengt nødvendig. Norske borgere som oppholder seg i, eller planlegger å reise til DR Kongo, oppfordres til å jevnlig sjekke UDs reiseinformasjon for sikkerhetsoppdateringer samt å registrere seg på reiseregistrering.no.-", "same": "cd95efe814b6"}
 }

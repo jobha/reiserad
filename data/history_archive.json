@@ -1,10 +1,18 @@
 {
  "source": "web.archive.org",
- "first_box": "2018-04-22",
+ "first_box": "2018-02-17",
  "countries": {
   "afghanistan": [
    {
-    "from": "2019-04-26",
+    "from": "2018-02-20",
+    "status": "REISERÅDET ER SIST OPPDATERT: 18.02.2013 - FORTSATT GYLDIG",
+    "paragraphs": [
+     "Utenriksdepartementet fraråder reise til eller opphold i Afghanistan som ikke er strengt nødvendig."
+    ],
+    "seen": "2018-02-20"
+   },
+   {
+    "from": "2018-04-19",
     "status": "REISERÅDET ER SIST OPPDATERT: 23.03.2018 - FORTSATT GYLDIG",
     "paragraphs": [
      "Utenriksdepartementet fraråder alle reiser til eller opphold i landet."
@@ -22,7 +30,7 @@
   ],
   "albania": [
    {
-    "from": "2019-04-26",
+    "from": "2018-02-21",
     "status": "",
     "paragraphs": [],
     "seen": "2026-02-13"
@@ -30,7 +38,17 @@
   ],
   "algerie": [
    {
-    "from": "2019-04-26",
+    "from": "2018-04-27",
+    "status": "REISERÅDET ER SIST OPPDATERT: 25.03.2013 - FORTSATT GYLDIG",
+    "paragraphs": [
+     "Utenriksdepartementet fraråder reiser eller opphold i Algerie som ikke er strengt nødvendige.",
+     "Utenriksdepartementet fraråder alle reiser eller opphold til Kabylia-området i Nord-Algerie. Likeledes frarådes alle reiser eller opphold til Sahel-området i det sentrale og sørlige Algerie, herunder regioner som grenser til Mauritania, Mali, Niger, Libya og det sørlige Tunisia. Utenriksdepartementet fraråder alle reiser til eller opphold i Tindouf fylke i det sør-vestlige Algerie.",
+     "Norske borgere som oppholder seg i eller planlegger å reise til Algerie, oppfordres til å ta kontakt med ambassaden i Alger for oppdatert informasjon, samt å registrere sin reise via www.reiseregistrering.no ."
+    ],
+    "seen": "2018-04-27"
+   },
+   {
+    "from": "2018-07-18",
     "status": "REISERÅDET ER SIST OPPDATERT: 18.06.2018 - FORTSATT GYLDIG",
     "paragraphs": [
      "Utenriksdepartementet fraråder alle reiser til grenseområdene mot Mauritania, Mali, Niger, Libya, og fjellområdene Kabylia øst for hovedstaden, samt fjellområdene grensende mot Tunisia.",
@@ -51,7 +69,7 @@
   ],
   "andorra": [
    {
-    "from": "2019-04-26",
+    "from": "2018-02-25",
     "status": "",
     "paragraphs": [],
     "seen": "2026-06-10"
@@ -59,7 +77,7 @@
   ],
   "angola": [
    {
-    "from": "2018-07-19",
+    "from": "2018-04-22",
     "status": "",
     "paragraphs": [],
     "seen": "2026-06-10"
@@ -67,7 +85,7 @@
   ],
   "antiguabarbuda": [
    {
-    "from": "2019-04-26",
+    "from": "2018-04-25",
     "status": "",
     "paragraphs": [],
     "seen": "2026-09-20"
@@ -75,7 +93,7 @@
   ],
   "argentina": [
    {
-    "from": "2019-04-26",
+    "from": "2018-02-20",
     "status": "",
     "paragraphs": [],
     "seen": "2026-08-11"
@@ -83,7 +101,7 @@
   ],
   "armenia": [
    {
-    "from": "2019-04-26",
+    "from": "2018-02-25",
     "status": "",
     "paragraphs": [],
     "seen": "2022-06-10"
@@ -123,7 +141,16 @@
   ],
   "aserbajdsjan": [
    {
-    "from": "2018-08-15",
+    "from": "2018-03-23",
+    "status": "REISERÅDET ER SIST OPPDATERT: 18.02.2013 - FORTSATT GYLDIG",
+    "paragraphs": [
+     "Utenriksdepartementet fraråder reise til eller opphold i Nagorno-Karabakh og de tilstøtende okkuperte områdene som ikke er strengt nødvendig.",
+     "Norske borgere som oppholder seg i eller som planlegger å reise til Nagorno-Karabakh eller de tilstøtende okkuperte områder, anmodes om å ta kontakt med ambassaden i Baku for oppdatert informasjon og registrering av reise via www.reiseregistrering.no"
+    ],
+    "seen": "2018-05-27"
+   },
+   {
+    "from": "2018-07-21",
     "status": "REISERÅDET ER SIST OPPDATERT: 18.02.2013 - FORTSATT GYLDIG",
     "paragraphs": [
      "Utenriksdepartementet fraråder reise til eller opphold i Nagorno-Karabakh og de tilstøtende okkuperte områdene som ikke er strengt nødvendig."
@@ -157,7 +184,7 @@
   ],
   "australia": [
    {
-    "from": "2019-04-26",
+    "from": "2018-03-21",
     "status": "",
     "paragraphs": [],
     "seen": "2026-06-08"
@@ -165,7 +192,7 @@
   ],
   "bahamas": [
    {
-    "from": "2019-04-26",
+    "from": "2018-04-25",
     "status": "",
     "paragraphs": [],
     "seen": "2026-02-16"
@@ -173,7 +200,16 @@
   ],
   "bahrain": [
    {
-    "from": "2019-04-26",
+    "from": "2018-04-22",
+    "status": "REISERÅDET ER SIST OPPDATERT: 18.02.2013 - FORTSATT GYLDIG",
+    "paragraphs": [
+     "Utenriksdepartementet oppfordrer reisende til å utvise aktsomhet ved reiser til eller opphold i Bahrain.",
+     "Norske borgere som oppholder seg i eller som planlegger å reise til Bahrain oppfordres til å ta kontakt med ambassaden i Riyadh (Saudi-Arabia) for registrering og oppdatert informasjon."
+    ],
+    "seen": "2018-04-22"
+   },
+   {
+    "from": "2018-07-19",
     "status": "REISERÅDET ER SIST OPPDATERT: 18.02.2013 - FORTSATT GYLDIG",
     "paragraphs": [
      "Utenriksdepartementet oppfordrer reisende til å utvise aktsomhet ved reiser til eller opphold i Bahrain."
@@ -205,7 +241,7 @@
   ],
   "bangladesh": [
    {
-    "from": "2018-08-15",
+    "from": "2018-02-20",
     "status": "REISERÅDET ER SIST OPPDATERT 26.07.2016",
     "paragraphs": [
      "Utenriksdepartementet oppfordrer reisende til å utvise aktsomhet ved reiser til eller opphold i Bangladesh."
@@ -235,13 +271,19 @@
   ],
   "barbados": [
    {
-    "from": "2019-04-26",
+    "from": "2018-04-25",
     "status": "",
     "paragraphs": [],
     "seen": "2026-05-15"
    }
   ],
   "belarus": [
+   {
+    "from": "2018-02-25",
+    "status": "",
+    "paragraphs": [],
+    "seen": "2018-12-12"
+   },
    {
     "from": "2022-06-15",
     "status": "SIST OPPDATERT 2. MARS 2022 - FORTSATT GYLDIG",
@@ -253,7 +295,7 @@
   ],
   "belgia": [
    {
-    "from": "2019-03-05",
+    "from": "2018-03-21",
     "status": "",
     "paragraphs": [],
     "seen": "2026-09-20"
@@ -261,7 +303,7 @@
   ],
   "belize": [
    {
-    "from": "2019-04-26",
+    "from": "2018-02-21",
     "status": "",
     "paragraphs": [],
     "seen": "2026-03-10"
@@ -269,7 +311,7 @@
   ],
   "benin": [
    {
-    "from": "2019-04-26",
+    "from": "2018-03-22",
     "status": "",
     "paragraphs": [],
     "seen": "2022-06-29"
@@ -286,7 +328,7 @@
   ],
   "bhutan": [
    {
-    "from": "2019-04-26",
+    "from": "2018-04-22",
     "status": "",
     "paragraphs": [],
     "seen": "2026-02-13"
@@ -294,7 +336,7 @@
   ],
   "bolivia": [
    {
-    "from": "2019-04-26",
+    "from": "2018-04-19",
     "status": "",
     "paragraphs": [],
     "seen": "2019-10-15"
@@ -324,7 +366,7 @@
   ],
   "bosnia": [
    {
-    "from": "2019-04-26",
+    "from": "2018-03-21",
     "status": "",
     "paragraphs": [],
     "seen": "2026-08-05"
@@ -332,7 +374,7 @@
   ],
   "botswana": [
    {
-    "from": "2019-04-26",
+    "from": "2018-02-17",
     "status": "",
     "paragraphs": [],
     "seen": "2026-08-02"
@@ -340,7 +382,7 @@
   ],
   "brasil": [
    {
-    "from": "2019-03-29",
+    "from": "2018-02-25",
     "status": "",
     "paragraphs": [],
     "seen": "2026-03-07"
@@ -348,7 +390,7 @@
   ],
   "brunei": [
    {
-    "from": "2019-04-26",
+    "from": "2018-04-22",
     "status": "",
     "paragraphs": [],
     "seen": "2025-12-10"
@@ -356,13 +398,30 @@
   ],
   "bulgaria": [
    {
-    "from": "2019-04-26",
+    "from": "2018-04-22",
     "status": "",
     "paragraphs": [],
     "seen": "2026-04-15"
    }
   ],
   "burkinafaso": [
+   {
+    "from": "2018-03-22",
+    "status": "REISERÅDET ER SIST OPPDATERT: 02.11.2014 - FORTSATT GYLDIG",
+    "paragraphs": [
+     "Utenriksdepartementet fraråder reiser som ikke er strengt nødvendige til Burkina Faso.",
+     "Norske borgere som oppholder seg i eller som planlegger å reise til Burkina Faso anmodes om å registrere sin reise via www.reiseregistrering.no"
+    ],
+    "seen": "2018-03-22"
+   },
+   {
+    "from": "2018-06-20",
+    "status": "REISERÅDET ER SIST OPPDATERT: 02.11.2014 - FORTSATT GYLDIG",
+    "paragraphs": [
+     "Utenriksdepartementet fraråder reiser som ikke er strengt nødvendige til Burkina Faso."
+    ],
+    "seen": "2018-12-10"
+   },
    {
     "from": "2019-04-26",
     "status": "REISERÅDET ER SIST OPPDATERT: 29.01.2019 - FORTSATT GYLDIG",
@@ -390,7 +449,7 @@
   ],
   "burundi": [
    {
-    "from": "2019-04-26",
+    "from": "2018-04-22",
     "status": "REISERÅDET ER SIST OPPDATERT: 17.12.2015 - FORTSATT GYLDIG",
     "paragraphs": [
      "Utenriksdepartementet fraråder alle reiser til eller opphold i Burundi. Norske borgere rådes til å forlate landet."
@@ -434,7 +493,7 @@
   ],
   "canada": [
    {
-    "from": "2018-08-15",
+    "from": "2018-02-18",
     "status": "",
     "paragraphs": [],
     "seen": "2026-06-10"
@@ -442,7 +501,7 @@
   ],
   "chile": [
    {
-    "from": "2019-04-26",
+    "from": "2018-04-20",
     "status": "",
     "paragraphs": [],
     "seen": "2026-08-01"
@@ -450,7 +509,13 @@
   ],
   "colombia": [
    {
-    "from": "2019-04-26",
+    "from": "2018-02-22",
+    "status": "",
+    "paragraphs": [],
+    "seen": "2018-06-21"
+   },
+   {
+    "from": "2018-08-21",
     "status": "SIST OPPDATERT 24.07.2018 - FORTSATT GYLDIG",
     "paragraphs": [
      "Utenriksdepartementet fraråder alle reiser og opphold i regionen Catatumbo i fylket Norte de Santander ved grensen mot Venezuela. Videre fraråder utenriksdepartementet reiser eller opphold som ikke er strengt nødvendige i provinsen Tumaco i fylket Nariño ved grensen mot Ecuador."
@@ -476,7 +541,7 @@
   ],
   "cookoyene": [
    {
-    "from": "2019-04-26",
+    "from": "2018-03-23",
     "status": "",
     "paragraphs": [],
     "seen": "2026-07-30"
@@ -484,7 +549,7 @@
   ],
   "costarica": [
    {
-    "from": "2019-04-26",
+    "from": "2018-03-19",
     "status": "",
     "paragraphs": [],
     "seen": "2026-09-29"
@@ -492,7 +557,7 @@
   ],
   "cuba": [
    {
-    "from": "2018-08-25",
+    "from": "2018-02-22",
     "status": "",
     "paragraphs": [],
     "seen": "2026-02-17"
@@ -508,7 +573,7 @@
   ],
   "danmark": [
    {
-    "from": "2019-07-23",
+    "from": "2018-02-23",
     "status": "",
     "paragraphs": [],
     "seen": "2026-10-04"
@@ -516,7 +581,7 @@
   ],
   "djibouti": [
    {
-    "from": "2019-04-26",
+    "from": "2018-02-23",
     "status": "",
     "paragraphs": [],
     "seen": "2026-03-18"
@@ -524,7 +589,7 @@
   ],
   "dominica": [
    {
-    "from": "2022-06-29",
+    "from": "2018-04-22",
     "status": "",
     "paragraphs": [],
     "seen": "2026-03-12"
@@ -532,7 +597,7 @@
   ],
   "dominikanske": [
    {
-    "from": "2019-04-26",
+    "from": "2018-04-20",
     "status": "",
     "paragraphs": [],
     "seen": "2026-07-31"
@@ -540,7 +605,17 @@
   ],
   "drkongo": [
    {
-    "from": "2019-04-26",
+    "from": "2018-02-18",
+    "status": "REISERÅDET ER SIST OPPDATERT: 28.03.2017 - FORTSATT GYLDIG",
+    "paragraphs": [
+     "Utenriksdepartementet fraråder all reise til eller opphold i provinsene Bas-Uele, Haut-Uele, Ituri, Nord- og Sør-Kivu, Maniema, Haut Lomami og Tanganykia, Kasai, Kasai-Central og Kasai-Oriental.",
+     "Utenriksdepartementet fraråder reise til eller opphold i resten av Den demokratiske republikken Kongo som ikke er strengt nødvendig.",
+     "Norske borgere som oppholder seg i, eller planlegger å reise til DR Kongo, oppfordres til å jevnlig sjekke UDs reiseinformasjon for sikkerhetsoppdateringer samt å registrere seg på reiseregistrering.no.-"
+    ],
+    "seen": "2018-04-23"
+   },
+   {
+    "from": "2018-07-16",
     "status": "REISERÅDET ER SIST OPPDATERT: 28.03.2017 - FORTSATT GYLDIG",
     "paragraphs": [
      "Utenriksdepartementet fraråder all reise til eller opphold i provinsene Bas-Uele, Haut-Uele, Ituri, Nord- og Sør-Kivu, Maniema, Haut Lomami og Tanganykia, Kasai, Kasai-Central og Kasai-Oriental.",
@@ -568,7 +643,7 @@
   ],
   "ecuador": [
    {
-    "from": "2019-04-26",
+    "from": "2018-03-18",
     "status": "",
     "paragraphs": [],
     "seen": "2026-04-15"
@@ -576,16 +651,26 @@
   ],
   "egypt": [
    {
-    "from": "2018-06-25",
+    "from": "2018-02-22",
+    "status": "REISERÅDET ER SIST OPPDATERT: 09.02.2017 - FORTSATT GYLDIG",
+    "paragraphs": [
+     "Utenriksdepartementet fraråder alle reiser til eller opphold på Sinai, med unntak av Sharm El Sheikh, Dahab, St. Catherine og strekningene mellom disse",
+     "Utenriksdepartementet fraråder reiser til eller opphold som ikke er strengt nødvendig til det øvrige Egypt, med unntak av Kairo og Alexandria og strekningen mellom disse byene, turist-områdene ved vestsiden av Rødehavet (inkludert Hurghada) og Nildalen mellom Luxor og Abu Simbel samt reiser mellom disse delene av Nildalen og turiststeder ved Rødehavskysten.",
+     "Norske borgere som oppholder seg i eller som planlegger å reise til Egypt oppfordres til å holde seg oppdatert via hjemmesidene til den norske ambassaden i Kairo og anbefales å registrere sin reise på www.reiseregistrering.no."
+    ],
+    "seen": "2018-04-21"
+   },
+   {
+    "from": "2018-06-23",
     "status": "REISERÅDET ER SIST OPPDATERT: 09.02.2017 - FORTSATT GYLDIG",
     "paragraphs": [
      "Utenriksdepartementet fraråder alle reiser til eller opphold på Sinai, med unntak av Sharm El Sheikh, Dahab, St. Catherine og strekningene mellom disse",
      "Utenriksdepartementet fraråder reiser til eller opphold som ikke er strengt nødvendig til det øvrige Egypt, med unntak av Kairo og Alexandria og strekningen mellom disse byene, turist-områdene ved vestsiden av Rødehavet (inkludert Hurghada) og Nildalen mellom Luxor og Abu Simbel samt reiser mellom disse delene av Nildalen og turiststeder ved Rødehavskysten."
     ],
-    "seen": "2018-09-22"
+    "seen": "2018-10-22"
    },
    {
-    "from": "2019-04-26",
+    "from": "2018-12-15",
     "status": "REISERÅDET ER SIST OPPDATERT: 05.12.2018 - FORTSATT GYLDIG",
     "paragraphs": [
      "Utenriksdepartementet fraråder alle reiser til eller opphold i provinsen Nord-Sinai og den vestlige ørkenen mot grensen til Libya.",
@@ -614,7 +699,7 @@
   ],
   "ekvatorialguinea": [
    {
-    "from": "2019-04-26",
+    "from": "2018-03-24",
     "status": "",
     "paragraphs": [],
     "seen": "2026-05-09"
@@ -622,7 +707,17 @@
   ],
   "elfernbenskysten": [
    {
-    "from": "2019-04-26",
+    "from": "2018-03-22",
+    "status": "REISERÅDET ER SIST OPPDATERT: 18.02.2013 - FORTSATT GYLDIG",
+    "paragraphs": [
+     "Utenriksdepartementet oppfordrer norske borgere til å utvise aktsomhet ved reiser til eller opphold i Abidjan.",
+     "Utenriksdepartementet fraråder reiser som ikke er strengt nødvendige til øvrige deler av Elfenbenskysten.",
+     "Norske borgere som oppholder seg i eller planlegger reise til Elfenbenskysten oppfordres til å registrere sin reise via www.reiseregistrering.no"
+    ],
+    "seen": "2018-03-22"
+   },
+   {
+    "from": "2018-06-20",
     "status": "REISERÅDET ER SIST OPPDATERT: 18.02.2013 - FORTSATT GYLDIG",
     "paragraphs": [
      "Utenriksdepartementet oppfordrer norske borgere til å utvise aktsomhet ved reiser til eller opphold i Abidjan.",
@@ -649,7 +744,7 @@
   ],
   "elsalvador": [
    {
-    "from": "2019-04-26",
+    "from": "2018-02-25",
     "status": "",
     "paragraphs": [],
     "seen": "2026-06-10"
@@ -657,7 +752,7 @@
   ],
   "emiratene": [
    {
-    "from": "2018-05-15",
+    "from": "2018-03-23",
     "status": "",
     "paragraphs": [],
     "seen": "2026-02-04"
@@ -673,7 +768,7 @@
   ],
   "eritrea": [
    {
-    "from": "2019-04-26",
+    "from": "2018-04-22",
     "status": "",
     "paragraphs": [],
     "seen": "2025-03-14"
@@ -689,7 +784,7 @@
   ],
   "estland": [
    {
-    "from": "2019-03-29",
+    "from": "2018-04-22",
     "status": "",
     "paragraphs": [],
     "seen": "2026-08-30"
@@ -697,7 +792,7 @@
   ],
   "etiopia": [
    {
-    "from": "2019-04-26",
+    "from": "2018-03-18",
     "status": "REISERÅDET ER SIST OPPDATERT: 26.01.2017 - FORTSATT GYLDIG",
     "paragraphs": [
      "Utenriksdepartementet fraråder alle reiser til eller opphold i østlige deler av Somali-regionen i Etiopia og grenseområdene til Somalia.",
@@ -837,7 +932,7 @@
   ],
   "ewatini": [
    {
-    "from": "2019-02-27",
+    "from": "2018-04-24",
     "status": "",
     "paragraphs": [],
     "seen": "2021-06-17"
@@ -859,7 +954,7 @@
   ],
   "fiji": [
    {
-    "from": "2019-04-26",
+    "from": "2018-03-23",
     "status": "",
     "paragraphs": [],
     "seen": "2026-09-15"
@@ -867,7 +962,16 @@
   ],
   "filippinene": [
    {
-    "from": "2018-08-25",
+    "from": "2018-03-24",
+    "status": "REISERÅDET ER SIST OPPDATERT: 19.10.2015 - FORTSATT GYLDIG",
+    "paragraphs": [
+     "Utenriksdepartementet fraråder alle reiser eller opphold i sentrale, sydlige og vestlige Mindanao (Cotabato-provinsene, Lanao-provinsene, Zamboanga-provinsene, Maguindanao, Misamis Occidental, Sarangani, Sultan Kudarat) og Sulu-øygruppen, som bl.a. omfatter øyene Basilan, Jolo og Tawi-Tawi. Utenriksdepartementet fraråder reiser eller opphold som ikke er strengt nødvendige til øvrige deler av Mindanao.",
+     "Norske borgere som oppholder seg i eller planlegger reise til disse områdene oppfordres til å ta kontakt med ambassaden i Manila for oppdatert informasjon og reiseregistrering av reise via www.reiseregistrering.no."
+    ],
+    "seen": "2018-05-23"
+   },
+   {
+    "from": "2018-07-23",
     "status": "REISERÅDET ER SIST OPPDATERT: 19.10.2015 - FORTSATT GYLDIG",
     "paragraphs": [
      "Utenriksdepartementet fraråder alle reiser eller opphold i sentrale, sydlige og vestlige Mindanao (Cotabato-provinsene, Lanao-provinsene, Zamboanga-provinsene, Maguindanao, Misamis Occidental, Sarangani, Sultan Kudarat) og Sulu-øygruppen, som bl.a. omfatter øyene Basilan, Jolo og Tawi-Tawi. Utenriksdepartementet fraråder reiser eller opphold som ikke er strengt nødvendige til øvrige deler av Mindanao."
@@ -897,7 +1001,7 @@
   ],
   "finland": [
    {
-    "from": "2019-03-29",
+    "from": "2018-03-21",
     "status": "",
     "paragraphs": [],
     "seen": "2026-06-11"
@@ -905,7 +1009,7 @@
   ],
   "frankrike": [
    {
-    "from": "2018-09-25",
+    "from": "2018-03-22",
     "status": "",
     "paragraphs": [],
     "seen": "2019-12-13"
@@ -927,7 +1031,7 @@
   ],
   "gabon": [
    {
-    "from": "2019-04-26",
+    "from": "2018-04-22",
     "status": "",
     "paragraphs": [],
     "seen": "2026-02-19"
@@ -935,7 +1039,7 @@
   ],
   "gambia": [
    {
-    "from": "2019-04-26",
+    "from": "2018-04-20",
     "status": "",
     "paragraphs": [],
     "seen": "2026-05-08"
@@ -943,7 +1047,16 @@
   ],
   "georgia": [
    {
-    "from": "2019-04-26",
+    "from": "2018-02-25",
+    "status": "REISERÅDET ER SIST OPPDATERT: 18.02.2013 - FORTSATT GYLDIG",
+    "paragraphs": [
+     "Utenriksdepartementet fraråder alle reiser til eller opphold i utbryterområdene Abkhasia og Sør-Ossetia. Departementet fraråder også alle reiser som ikke er strengt nødvendige til områder nær de administrative grensene til Abkhasia og Sør-Ossetia.",
+     "Norske borgere som likevel skulle oppholde seg i eller planlegger reise til disse områdene oppfordres til å ta kontakt med ambassaden i Baku for oppdatert informasjon og registrering av reise via www.reiseregistrering.no."
+    ],
+    "seen": "2018-04-20"
+   },
+   {
+    "from": "2018-07-20",
     "status": "SIST OPPDATERT: 18.02.2013 - FORTSATT GYLDIG",
     "paragraphs": [
      "Utenriksdepartementet fraråder alle reiser til eller opphold i utbryterområdene Abkhasia og Sør-Ossetia. Departementet fraråder også alle reiser som ikke er strengt nødvendige til områder nær de administrative grensene til Abkhasia og Sør-Ossetia."
@@ -962,7 +1075,7 @@
   ],
   "ghana": [
    {
-    "from": "2019-04-26",
+    "from": "2018-02-25",
     "status": "",
     "paragraphs": [],
     "seen": "2023-12-06"
@@ -978,7 +1091,7 @@
   ],
   "grenada": [
    {
-    "from": "2019-04-26",
+    "from": "2018-04-25",
     "status": "",
     "paragraphs": [],
     "seen": "2026-06-11"
@@ -986,7 +1099,7 @@
   ],
   "guatemala": [
    {
-    "from": "2019-04-26",
+    "from": "2018-04-22",
     "status": "",
     "paragraphs": [],
     "seen": "2026-06-10"
@@ -994,7 +1107,7 @@
   ],
   "guinea": [
    {
-    "from": "2019-04-26",
+    "from": "2018-03-22",
     "status": "",
     "paragraphs": [],
     "seen": "2026-08-12"
@@ -1002,7 +1115,16 @@
   ],
   "guineabissau": [
    {
-    "from": "2019-04-26",
+    "from": "2018-03-22",
+    "status": "REISERÅDET ER SIST OPPDATERT: 14.04.2015 - FORTSATT GYLDIG",
+    "paragraphs": [
+     "Utenriksdepartementet oppfordrer reisende til å utvise aktsomhet ved reiser til eller opphold i Guinea-Bissau.",
+     "Norske borgere som oppholder seg i eller planlegger reise til Guinea-Bissau oppfordres til å registrere sin reise på www.reiseregistrering.no."
+    ],
+    "seen": "2018-03-22"
+   },
+   {
+    "from": "2018-06-20",
     "status": "REISERÅDET ER SIST OPPDATERT: 14.04.2015 - FORTSATT GYLDIG",
     "paragraphs": [
      "Utenriksdepartementet oppfordrer reisende til å utvise aktsomhet ved reiser til eller opphold i Guinea-Bissau."
@@ -1018,7 +1140,7 @@
   ],
   "guyana": [
    {
-    "from": "2019-04-26",
+    "from": "2018-03-22",
     "status": "",
     "paragraphs": [],
     "seen": "2026-06-10"
@@ -1026,7 +1148,13 @@
   ],
   "haiti": [
    {
-    "from": "2019-04-26",
+    "from": "2018-04-20",
+    "status": "",
+    "paragraphs": [],
+    "seen": "2018-12-16"
+   },
+   {
+    "from": "2019-03-24",
     "status": "REISERÅDET ER SIST OPPDATERT: 15.02.2019 - FORTSATT GYLDIG",
     "paragraphs": [
      "Utenriksdepartementet fraråder reise eller opphold som ikke er strengt nødvendig til Haiti."
@@ -1044,7 +1172,7 @@
   ],
   "hellas": [
    {
-    "from": "2018-09-24",
+    "from": "2018-04-22",
     "status": "",
     "paragraphs": [],
     "seen": "2026-04-15"
@@ -1052,7 +1180,7 @@
   ],
   "honduras": [
    {
-    "from": "2019-04-26",
+    "from": "2018-04-22",
     "status": "",
     "paragraphs": [],
     "seen": "2026-06-10"
@@ -1060,7 +1188,16 @@
   ],
   "india": [
    {
-    "from": "2019-04-05",
+    "from": "2018-03-21",
+    "status": "REISERÅDET ER SIST OPPDATERT: 18.02.2013 - FORTSATT GYLDIG",
+    "paragraphs": [
+     "Utenriksdepartementet fraråder reise eller opphold som ikke er strengt nødvendig i delstaten Jammu og Kashmir, med unntak av Ladakh.",
+     "Norske borgere som oppholder seg i eller som planlegger å reise til disse områdene oppfordres til å ta kontakt med ambassaden i New Delhi for oppdatert informasjon og registrering av reise via www.reiseregistrering.no."
+    ],
+    "seen": "2018-05-27"
+   },
+   {
+    "from": "2018-07-19",
     "status": "REISERÅDET ER SIST OPPDATERT: 18.02.2013 - FORTSATT GYLDIG",
     "paragraphs": [
      "Utenriksdepartementet fraråder reise eller opphold som ikke er strengt nødvendig i delstaten Jammu og Kashmir, med unntak av Ladakh."
@@ -1094,7 +1231,13 @@
   ],
   "indonesia": [
    {
-    "from": "2018-09-27",
+    "from": "2018-04-22",
+    "status": "",
+    "paragraphs": [],
+    "seen": "2018-06-18"
+   },
+   {
+    "from": "2018-08-14",
     "status": "REISERÅDET BLE OPPRETTET: 08.08.18 - FORTSATT GYLDIG",
     "paragraphs": [
      "Utenriksdepartementet fraråder alle ikke-nødvendige reiser til Nord-Lombok og nasjonalparken Mount RinjanI, samt Gili-øyene nordvest for Lombok (Gili Trawangan, Gili Meno og Gili Air)."
@@ -1102,7 +1245,23 @@
     "seen": "2018-09-27"
    },
    {
-    "from": "2019-04-26",
+    "from": "2018-10-16",
+    "status": "REISERÅDET BLE OPPRETTET: 03.10.18 - FORTSATT GYLDIG",
+    "paragraphs": [
+     "Utenriksdepartementet fraråder alle ikke-nødvendige reiser til provinsen Sentral-Sulawesi samt Nord-Lombok (med unntak av Gili-øyene nordvest for Lombok) og nasjonalparken Mount Rinjani."
+    ],
+    "seen": "2018-10-16"
+   },
+   {
+    "from": "2018-12-16",
+    "status": "REISERÅDET BLE OPPRETTET: 30.11.18 - FORTSATT GYLDIG",
+    "paragraphs": [
+     "Utenriksdepartementet fraråder alle ikke-nødvendige reiser til provinsen Sentral-Sulawesi."
+    ],
+    "seen": "2018-12-16"
+   },
+   {
+    "from": "2019-03-19",
     "status": "REISERÅDET ER SIST OPPDATERT: 29.01.2019 - FORTSATT GYLDIG",
     "paragraphs": [
      "Utenriksdepartementet fraråder alle ikke-nødvendige reiser til provinsen Sentral-Sulawesi. Utenriksdepartementet oppfordrer reisende til å utvise aktsomhet ved reiser til eller opphold i provinsene Papua og Vest-Papua."
@@ -1118,7 +1277,15 @@
   ],
   "irak": [
    {
-    "from": "2019-04-26",
+    "from": "2018-02-20",
+    "status": "REISERÅDET ER SIST OPPDATERT: 08.08.2014 - FORTSATT GYLDIG",
+    "paragraphs": [
+     "Utenriksdepartementet fraråder alle reiser til eller opphold i Irak."
+    ],
+    "seen": "2018-04-25"
+   },
+   {
+    "from": "2018-07-15",
     "status": "REISERÅDET ER SIST OPPDATERT: 02.06.2018 - FORTSATT GYLDIG",
     "paragraphs": [
      "Utenriksdepartementet fraråder alle ikke-nødvendige reiser til og opphold i provinsene Duhok, Erbil og Suleimania. Alle reiser til eller opphold i øvrige deler av Irak frarådes."
@@ -1152,7 +1319,17 @@
   ],
   "iran": [
    {
-    "from": "2019-04-26",
+    "from": "2018-03-24",
+    "status": "REISERÅDET ER SIST OPPDATERT: 18.02.2013 - FORTSATT GYLDIG",
+    "paragraphs": [
+     "Utenriksdepartementet fraråder reise eller opphold som ikke er strengt nødvendig i grenseområdene mot Irak, Afghanistan og Pakistan, innbefattet provinsene Khorasan og Sistan-va-Baluchestan, samt de østlige delene av Kerman.",
+     "Utenriksdepartementet oppfordrer reisende til å utvise aktsomhet ved reiser til eller opphold i de øvrige delene av Iran.",
+     "Norske borgere som oppholder seg i eller som planlegger å reise til Iran oppfordres til å ta kontakt med ambassaden i Teheran for oppdatert informasjon og registrering av reise via www.reiseregistrering.no."
+    ],
+    "seen": "2018-05-25"
+   },
+   {
+    "from": "2018-07-22",
     "status": "REISERÅDET ER SIST OPPDATERT: 18.02.2013 - FORTSATT GYLDIG",
     "paragraphs": [
      "Utenriksdepartementet fraråder reise eller opphold som ikke er strengt nødvendig i grenseområdene mot Irak, Afghanistan og Pakistan, innbefattet provinsene Khorasan og Sistan-va-Baluchestan, samt de østlige delene av Kerman.",
@@ -1235,7 +1412,7 @@
   ],
   "irland": [
    {
-    "from": "2018-09-27",
+    "from": "2018-04-24",
     "status": "",
     "paragraphs": [],
     "seen": "2026-03-14"
@@ -1243,7 +1420,7 @@
   ],
   "island": [
    {
-    "from": "2019-04-26",
+    "from": "2018-04-24",
     "status": "",
     "paragraphs": [],
     "seen": "2026-10-06"
@@ -1251,7 +1428,22 @@
   ],
   "israel": [
    {
-    "from": "2019-04-26",
+    "from": "2018-02-23",
+    "status": "",
+    "paragraphs": [],
+    "seen": "2018-02-23"
+   },
+   {
+    "from": "2018-04-22",
+    "status": "REISERÅDET ER SIST OPPDATERT: 11.05.2017 - FORTSATT GYLDIG",
+    "paragraphs": [
+     "Utenriksdepartementet fraråder alle ikke-nødvendige reiser til og opphold i grenseområdet (fem km) mot Gaza i det sørlige Israel. Reisende oppfordres til å vise aktsomhet i grenseområdene mot Egypt, Libanon og Syria.",
+     "Reisende oppfordres til å registrere seg på www.reiseregistrering.no."
+    ],
+    "seen": "2018-04-22"
+   },
+   {
+    "from": "2018-06-22",
     "status": "REISERÅDET ER SIST OPPDATERT: 11.05.2017 - FORTSATT GYLDIG",
     "paragraphs": [
      "Utenriksdepartementet fraråder alle ikke-nødvendige reiser til og opphold i grenseområdet (fem km) mot Gaza i det sørlige Israel. Reisende oppfordres til å vise aktsomhet i grenseområdene mot Egypt, Libanon og Syria."
@@ -1317,7 +1509,7 @@
   ],
   "italia": [
    {
-    "from": "2019-04-26",
+    "from": "2018-02-22",
     "status": "",
     "paragraphs": [],
     "seen": "2019-12-16"
@@ -1347,7 +1539,7 @@
   ],
   "jamaica": [
    {
-    "from": "2019-04-26",
+    "from": "2018-04-25",
     "status": "",
     "paragraphs": [],
     "seen": "2026-07-24"
@@ -1355,7 +1547,7 @@
   ],
   "japan": [
    {
-    "from": "2018-12-19",
+    "from": "2018-02-24",
     "status": "",
     "paragraphs": [],
     "seen": "2026-08-31"
@@ -1363,7 +1555,16 @@
   ],
   "jemen": [
    {
-    "from": "2019-04-26",
+    "from": "2018-03-22",
+    "status": "REISERÅDET ER SIST OPPDATERT: 18.02.2013 - FORTSATT GYLDIG",
+    "paragraphs": [
+     "Utenriksdepartementet fraråder alle reiser til eller opphold i Jemen. Nordmenn som befinner seg i Jemen oppfordres til å forlate landet.",
+     "Norske borgere som oppholder seg i eller som planlegger å reise til Jemen oppfordres til å ta kontakt med ambassaden i Riyadh for oppdatert informasjon og registrering av reise via www.reiseregistrering.no."
+    ],
+    "seen": "2018-03-22"
+   },
+   {
+    "from": "2018-06-20",
     "status": "SIST OPPDATERT: 18.02.2013 - FORTSATT GYLDIG",
     "paragraphs": [
      "Utenriksdepartementet fraråder alle reiser til eller opphold i Jemen. Nordmenn som befinner seg i Jemen oppfordres til å forlate landet."
@@ -1373,7 +1574,7 @@
   ],
   "jordan": [
    {
-    "from": "2019-03-26",
+    "from": "2018-02-23",
     "status": "REISERÅDET ER SIST OPPDATERT: 06.04.2016 - FORTSATT GYLDIG",
     "paragraphs": [
      "Utenriksdepartementet fraråder reise eller opphold som ikke er strengt nødvendig til grenseområdene nærmere enn tre km mot Syria og Irak."
@@ -1405,7 +1606,7 @@
   ],
   "kambodsja": [
    {
-    "from": "2019-04-26",
+    "from": "2018-03-22",
     "status": "",
     "paragraphs": [],
     "seen": "2025-07-07"
@@ -1438,7 +1639,24 @@
   ],
   "kamerun": [
    {
-    "from": "2019-04-26",
+    "from": "2018-03-22",
+    "status": "REISERÅDET ER SIST OPPDATERT: 20.12.2013 - FORTSATT GYLDIG",
+    "paragraphs": [
+     "Utenriksdepartementet fraråder alle reiser til regionen Far North, og fraråder alle reiser som ikke er strengt nødvendige til grenseområdene mot Nigeria og Tsjad i regionen North, samt grenseområdene mot Den sentralafrikanske republikk. Videre oppfordres reisende til å utvise aktsomhet ved reiser til eller opphold på Bakassi-halvøya.",
+     "Norske borgere som oppholder seg i, eller som planlegger å reise til, Kamerun oppfordres til å ta kontakt med ambassaden i Abuja for oppdatert informasjon og registrere reisen sin på reiseregistrering.no."
+    ],
+    "seen": "2018-03-22"
+   },
+   {
+    "from": "2018-06-20",
+    "status": "REISERÅDET ER SIST OPPDATERT: 20.12.2013 - FORTSATT GYLDIG",
+    "paragraphs": [
+     "Utenriksdepartementet fraråder alle reiser til regionen Far North, og fraråder alle reiser som ikke er strengt nødvendige til grenseområdene mot Nigeria og Tsjad i regionen North, samt grenseområdene mot Den sentralafrikanske republikk. Videre oppfordres reisende til å utvise aktsomhet ved reiser til eller opphold på Bakassi-halvøya."
+    ],
+    "seen": "2018-09-23"
+   },
+   {
+    "from": "2018-12-11",
     "status": "SIST OPPDATERT: 16.11.2018 - FORTSATT GYLDIG",
     "paragraphs": [
      "Utenriksdepartementet fraråder alle reiser til regionen Far North, de engelskspråklige regionene South West og North West og grenseområdene mot Nigeria, Tsjad og Den sentralafrikanske republikk. Videre frarådes alle reiser som ikke er strengt nødvendige til øvrige deler av nordlige Kamerun og Bakassi-halvøya."
@@ -1448,7 +1666,7 @@
   ],
   "kappverde": [
    {
-    "from": "2019-04-26",
+    "from": "2018-04-22",
     "status": "",
     "paragraphs": [],
     "seen": "2026-04-12"
@@ -1456,7 +1674,7 @@
   ],
   "kasakhstan": [
    {
-    "from": "2019-04-26",
+    "from": "2018-02-25",
     "status": "",
     "paragraphs": [],
     "seen": "2021-09-26"
@@ -1478,7 +1696,7 @@
   ],
   "kenya": [
    {
-    "from": "2019-04-26",
+    "from": "2018-02-19",
     "status": "REISERÅDET ER SIST OPPDATERT: 24.03.2017 - FORTSATT GYLDIG",
     "paragraphs": [
      "Utenriksdepartementet fraråder opphold og reiser som ikke er strengt nødvendige innen 60 km fra grensen til Somalia, inkludert Garissa fylke.",
@@ -1506,7 +1724,7 @@
   ],
   "kina": [
    {
-    "from": "2019-03-29",
+    "from": "2018-02-25",
     "status": "",
     "paragraphs": [],
     "seen": "2019-12-09"
@@ -1559,7 +1777,7 @@
   ],
   "kirgisistan": [
    {
-    "from": "2019-04-26",
+    "from": "2018-02-21",
     "status": "",
     "paragraphs": [],
     "seen": "2026-06-11"
@@ -1567,7 +1785,7 @@
   ],
   "kiribati": [
    {
-    "from": "2019-04-26",
+    "from": "2018-02-21",
     "status": "",
     "paragraphs": [],
     "seen": "2026-07-28"
@@ -1583,7 +1801,7 @@
   ],
   "kosovo": [
    {
-    "from": "2019-04-26",
+    "from": "2018-02-25",
     "status": "",
     "paragraphs": [],
     "seen": "2026-09-26"
@@ -1591,7 +1809,7 @@
   ],
   "kroatia": [
    {
-    "from": "2019-04-26",
+    "from": "2018-04-22",
     "status": "",
     "paragraphs": [],
     "seen": "2026-04-15"
@@ -1599,7 +1817,7 @@
   ],
   "kuwait": [
    {
-    "from": "2019-04-26",
+    "from": "2018-02-25",
     "status": "",
     "paragraphs": [],
     "seen": "2026-02-09"
@@ -1623,7 +1841,7 @@
   ],
   "kypros": [
    {
-    "from": "2019-04-26",
+    "from": "2018-03-24",
     "status": "",
     "paragraphs": [],
     "seen": "2026-08-11"
@@ -1631,7 +1849,7 @@
   ],
   "laos": [
    {
-    "from": "2019-04-26",
+    "from": "2018-03-24",
     "status": "",
     "paragraphs": [],
     "seen": "2026-06-10"
@@ -1639,7 +1857,7 @@
   ],
   "latvia": [
    {
-    "from": "2018-09-02",
+    "from": "2018-03-24",
     "status": "",
     "paragraphs": [],
     "seen": "2026-06-10"
@@ -1647,7 +1865,7 @@
   ],
   "lesotho": [
    {
-    "from": "2019-04-26",
+    "from": "2018-02-17",
     "status": "",
     "paragraphs": [],
     "seen": "2021-11-14"
@@ -1669,7 +1887,17 @@
   ],
   "libanon": [
    {
-    "from": "2019-04-26",
+    "from": "2018-04-22",
+    "status": "REISERÅDET ER SIST OPPDATERT: 06.11.2014 - FORTSATT GYLDIG",
+    "paragraphs": [
+     "Utenriksdepartementet oppfordrer reisende til å utvise aktsomhet ved reise til eller opphold i Libanon.",
+     "Alle reiser eller opphold i grenseområdene til Syria og den nordlige delen av Bekaa-dalen frarådes. Alle reiser til eller opphold i Tripoli og Nord-Libanon frarådes. Alle reiser eller opphold i Beiruts sørlige forsteder (Dahiyeh), med unntak av den internasjonale flyplassen og motorveien til denne, frarådes. Alle reiser eller opphold i den palestinske flyktningleiren Ain el-Hilweh i Saida, frarådes. Reise eller opphold som ikke er strengt nødvendig til de øvrige delene av Bekaa-dalen og Tripoli-området frarådes. Reise eller opphold som ikke er strengt nødvendig til Sør-Libanon, sør for Litani-elven frarådes.",
+     "Norske borgere som oppholder seg i eller som planlegger å reise til Libanon oppfordres til å ta kontakt med ambassaden i Beirut for oppdatert informasjon og registrering av reise via www.reiseregistrering.no."
+    ],
+    "seen": "2018-04-22"
+   },
+   {
+    "from": "2018-06-22",
     "status": "REISERÅDET ER SIST OPPDATERT: 18. JUNI 2018 - FORTSATT GYLDIG",
     "paragraphs": [
      "Utenriksdepartementet oppfordrer reisende til å utvise aktsomhet ved reise til eller opphold i Libanon. Alle reiser til og opphold i grenseområdene mot Syria nærmere enn ti km fra grensen, frarådes, inkludert byene Arsal og Hermel. Alle reiser og opphold nærmere enn fem kilometer fra den såkalte blå linjen mot Golan, frarådes.",
@@ -1724,7 +1952,7 @@
   ],
   "liberia": [
    {
-    "from": "2019-02-16",
+    "from": "2018-03-22",
     "status": "",
     "paragraphs": [],
     "seen": "2026-03-11"
@@ -1732,7 +1960,7 @@
   ],
   "libya": [
    {
-    "from": "2019-04-26",
+    "from": "2018-02-17",
     "status": "SIST OPPDATERT: 30.07.2014 - FORTSATT GYLDIG",
     "paragraphs": [
      "Utenriksdepartementet fraråder alle reiser til eller opphold i Libya, og norske borgere oppfordres til å forlate landet."
@@ -1742,7 +1970,7 @@
   ],
   "liechtenstein": [
    {
-    "from": "2019-04-26",
+    "from": "2018-04-20",
     "status": "",
     "paragraphs": [],
     "seen": "2026-04-29"
@@ -1750,7 +1978,7 @@
   ],
   "litauen": [
    {
-    "from": "2019-04-26",
+    "from": "2018-02-18",
     "status": "",
     "paragraphs": [],
     "seen": "2026-04-21"
@@ -1758,7 +1986,7 @@
   ],
   "luxembourg": [
    {
-    "from": "2019-04-26",
+    "from": "2018-02-24",
     "status": "",
     "paragraphs": [],
     "seen": "2026-02-18"
@@ -1766,7 +1994,7 @@
   ],
   "madagaskar": [
    {
-    "from": "2019-04-26",
+    "from": "2018-02-23",
     "status": "",
     "paragraphs": [],
     "seen": "2025-06-14"
@@ -1788,7 +2016,7 @@
   ],
   "malawi": [
    {
-    "from": "2019-04-26",
+    "from": "2018-04-22",
     "status": "",
     "paragraphs": [],
     "seen": "2026-08-05"
@@ -1796,7 +2024,7 @@
   ],
   "malaysia": [
    {
-    "from": "2018-09-02",
+    "from": "2018-02-24",
     "status": "REISERÅDET ER SIST OPPDATERT: 24.04.2017 - FORTSATT GYLDIG",
     "paragraphs": [
      "Utenriksdepartementet fraråder reise eller opphold som ikke er strengt nødvendig til kysten av østlige Sabah fra Sandakan til Tawau, inkludert Ladah Datu, Kunak og Semporna, i tillegg til øyene og dykkerstedene utenfor kysten av nevnte område."
@@ -1822,7 +2050,15 @@
   ],
   "maldivene": [
    {
-    "from": "2019-04-26",
+    "from": "2018-02-18",
+    "status": "REISERÅDET ER SIST OPPDATERT: 07.02.2018 - FORTSATT GYLDIG",
+    "paragraphs": [
+     "Utenriksdepartementet råder norske reisende til å utvise aktsomhet ved reiser til eller opphold i Malé."
+    ],
+    "seen": "2018-12-13"
+   },
+   {
+    "from": "2019-03-22",
     "status": "",
     "paragraphs": [],
     "seen": "2026-07-29"
@@ -1830,7 +2066,16 @@
   ],
   "mali": [
    {
-    "from": "2019-04-26",
+    "from": "2018-03-24",
+    "status": "REISERÅDET ER SIST OPPDATERT: 04.09.2013 - FORTSATT GYLDIG",
+    "paragraphs": [
+     "Utenriksdepartementet fraråder alle reiser som ikke er strengt nødvendige til Bamako. Utenriksdepartementet fraråder alle reiser til Mali utenfor Bamako.",
+     "Norske borgere som oppholder seg i, eller som planlegger å reise til de områder i Mali som omfattes av dette offisielle reiserådet for Mali, oppfordres til å kontakte ambassaden i Bamako for oppdatert informasjon og å registrere sin reise via www.reiseregistrering.no."
+    ],
+    "seen": "2018-03-24"
+   },
+   {
+    "from": "2018-06-21",
     "status": "SIST OPPDATERT: 04.09.2013 - FORTSATT GYLDIG",
     "paragraphs": [
      "Utenriksdepartementet fraråder alle reiser som ikke er strengt nødvendige til Bamako. Utenriksdepartementet fraråder alle reiser til Mali utenfor Bamako."
@@ -1856,7 +2101,7 @@
   ],
   "malta": [
    {
-    "from": "2019-04-26",
+    "from": "2018-03-24",
     "status": "",
     "paragraphs": [],
     "seen": "2026-06-10"
@@ -1864,7 +2109,7 @@
   ],
   "marokko": [
    {
-    "from": "2018-09-24",
+    "from": "2018-02-24",
     "status": "",
     "paragraphs": [],
     "seen": "2026-07-25"
@@ -1872,7 +2117,7 @@
   ],
   "marshallislands": [
    {
-    "from": "2019-04-26",
+    "from": "2018-03-19",
     "status": "",
     "paragraphs": [],
     "seen": "2026-03-25"
@@ -1880,7 +2125,16 @@
   ],
   "mauritania": [
    {
-    "from": "2019-04-26",
+    "from": "2018-02-20",
+    "status": "REISERÅDET ER SIST OPPDATERT: 18.02.2013 - FORTSATT GYLDIG",
+    "paragraphs": [
+     "Utenriksdepartementet fraråder reise eller opphold som ikke er strengt nødvendig i Mauritania.",
+     "Norske borgere som oppholder seg i eller som planlegger å reise til Mauritania oppfordres til å ta kontakt med ambassaden i Bamako for oppdatert informasjon og registrering av reise via www.reiseregistrering.no."
+    ],
+    "seen": "2018-04-24"
+   },
+   {
+    "from": "2018-07-18",
     "status": "REISERÅDET ER SIST OPPDATERT: 18.02.2013 - FORTSATT GYLDIG",
     "paragraphs": [
      "Utenriksdepartementet fraråder reise eller opphold som ikke er strengt nødvendig i Mauritania."
@@ -1906,7 +2160,7 @@
   ],
   "mauritius": [
    {
-    "from": "2019-04-26",
+    "from": "2018-02-23",
     "status": "",
     "paragraphs": [],
     "seen": "2026-08-28"
@@ -1914,7 +2168,7 @@
   ],
   "mexico": [
    {
-    "from": "2018-10-30",
+    "from": "2018-04-27",
     "status": "",
     "paragraphs": [],
     "seen": "2026-06-03"
@@ -1922,7 +2176,7 @@
   ],
   "mikronesia": [
    {
-    "from": "2019-04-26",
+    "from": "2018-03-24",
     "status": "",
     "paragraphs": [],
     "seen": "2026-04-08"
@@ -1930,7 +2184,7 @@
   ],
   "moldova": [
    {
-    "from": "2019-04-26",
+    "from": "2018-02-24",
     "status": "",
     "paragraphs": [],
     "seen": "2022-02-17"
@@ -1954,7 +2208,7 @@
   ],
   "monaco": [
    {
-    "from": "2018-09-25",
+    "from": "2018-03-24",
     "status": "",
     "paragraphs": [],
     "seen": "2026-03-09"
@@ -1962,7 +2216,7 @@
   ],
   "mongolia": [
    {
-    "from": "2019-04-26",
+    "from": "2018-02-21",
     "status": "",
     "paragraphs": [],
     "seen": "2026-06-07"
@@ -1970,7 +2224,7 @@
   ],
   "montenegro": [
    {
-    "from": "2019-04-26",
+    "from": "2018-02-21",
     "status": "",
     "paragraphs": [],
     "seen": "2026-07-27"
@@ -1978,13 +2232,22 @@
   ],
   "mosambik": [
    {
-    "from": "2018-07-19",
+    "from": "2018-02-21",
+    "status": "REISERÅDET ER SIST OPPDATERT: 18.07.2017 - FORTSATT GYLDIG",
+    "paragraphs": [
+     "Utenriksdepartementet råder norske reisende til å utvise aktsomhet ved reiser til sørlige deler av Zambézia-provinsen, Manica-provinsen, samt Sofala-provinsen.",
+     "Norske borgere som oppholder seg i eller planlegger å reise til Mosambik anmodes om å holde seg oppdatert på utviklingen i sikkerhetssituasjonen i landet, samt å registrere sin reise på https://www.reiseregistrering.no."
+    ],
+    "seen": "2018-04-26"
+   },
+   {
+    "from": "2018-06-25",
     "status": "REISERÅDET ER SIST OPPDATERT: 14. JUNI 2018 - FORTSATT GYLDIG",
     "paragraphs": [
      "Utenriksdepartementet fraråder alle ikke-nødvendige reiser til Cabo Delgado-provinsen.",
      "Departementet råder norske reisende til å utvise aktsomhet ved reiser til sørlige deler av Zambézia-provinsen, Manica-provinsen, samt Sofala-provinsen."
     ],
-    "seen": "2018-07-19"
+    "seen": "2019-03-22"
    },
    {
     "from": "2019-04-26",
@@ -2037,7 +2300,7 @@
   ],
   "myanmar": [
    {
-    "from": "2019-04-26",
+    "from": "2018-04-24",
     "status": "",
     "paragraphs": [],
     "seen": "2019-07-22"
@@ -2085,7 +2348,7 @@
   ],
   "namibia": [
    {
-    "from": "2019-04-26",
+    "from": "2018-02-23",
     "status": "",
     "paragraphs": [],
     "seen": "2021-07-30"
@@ -2107,7 +2370,7 @@
   ],
   "naoero": [
    {
-    "from": "2026-08-09",
+    "from": "2018-03-24",
     "status": "",
     "paragraphs": [],
     "seen": "2026-08-09"
@@ -2115,7 +2378,7 @@
   ],
   "nederland": [
    {
-    "from": "2019-08-17",
+    "from": "2018-02-18",
     "status": "",
     "paragraphs": [],
     "seen": "2026-08-04"
@@ -2123,7 +2386,7 @@
   ],
   "nepal": [
    {
-    "from": "2019-04-26",
+    "from": "2018-04-19",
     "status": "",
     "paragraphs": [],
     "seen": "2020-12-01"
@@ -2145,7 +2408,7 @@
   ],
   "newzealand": [
    {
-    "from": "2019-04-26",
+    "from": "2018-03-23",
     "status": "",
     "paragraphs": [],
     "seen": "2026-06-10"
@@ -2153,13 +2416,44 @@
   ],
   "nicaragua": [
    {
-    "from": "2019-04-26",
+    "from": "2018-04-22",
+    "status": "",
+    "paragraphs": [],
+    "seen": "2018-04-22"
+   },
+   {
+    "from": "2018-07-19",
+    "status": "REISERÅDET ER SIST OPPDATERT: 02.06.2018 - FORTSATT GYLDIG",
+    "paragraphs": [
+     "Utenriksdepartementet fraråder alle ikke-nødvendige reiser til Nicaragua."
+    ],
+    "seen": "2018-12-17"
+   },
+   {
+    "from": "2019-04-25",
     "status": "",
     "paragraphs": [],
     "seen": "2026-06-13"
    }
   ],
   "niger": [
+   {
+    "from": "2018-02-24",
+    "status": "REISERÅDET ER SIST OPPDATERT: 18.02.2013 - FORTSATT GYLDIG",
+    "paragraphs": [
+     "Utenriksdepartementet fraråder reise eller opphold som ikke er strengt nødvendig i Niger.",
+     "Norske borgere som oppholder seg i eller som planlegger å reise til Niger oppfordres til å ta kontakt med ambassaden i Bamako for oppdatert informasjon og registrering av reise via www.reiseregistrering.no."
+    ],
+    "seen": "2018-04-25"
+   },
+   {
+    "from": "2018-07-16",
+    "status": "REISERÅDET ER SIST OPPDATERT: 18.02.2013 - FORTSATT GYLDIG",
+    "paragraphs": [
+     "Utenriksdepartementet fraråder reise eller opphold som ikke er strengt nødvendig i Niger."
+    ],
+    "seen": "2018-12-10"
+   },
    {
     "from": "2019-04-26",
     "status": "REISERÅDET ER SIST OPPDATERT: 27.03.2019 - FORTSATT GYLDIG",
@@ -2179,7 +2473,24 @@
   ],
   "nigeria": [
    {
-    "from": "2019-03-30",
+    "from": "2018-02-24",
+    "status": "REISERÅDET ER SIST OPPDATERT: 04.02.2013 - FORTSATT GYLDIG",
+    "paragraphs": [
+     "Utenriksdepartementet fraråder alle reiser til eller opphold i de nord-østlige delstatene i Nigeria, og fraråder reiser eller opphold som ikke er strengt nødvendig i øvrige deler av nordlige Nigeria samt Niger Delta.",
+     "Det gjøres oppmerksom på at sikkerhetssituasjonen i området kan endre seg raskt. Norske borgere som oppholder seg i eller som planlegger å reise til disse områdene oppfordres til å ta kontakt med ambassaden i Abuja for oppdatert informasjon og å registrere sin reise på www.reiseregistrering.no."
+    ],
+    "seen": "2018-06-18"
+   },
+   {
+    "from": "2018-08-16",
+    "status": "REISERÅDET ER SIST OPPDATERT: 04.02.2013 - FORTSATT GYLDIG",
+    "paragraphs": [
+     "Utenriksdepartementet fraråder alle reiser til eller opphold i de nord-østlige delstatene i Nigeria, og fraråder reiser eller opphold som ikke er strengt nødvendig i øvrige deler av nordlige Nigeria samt Niger Delta."
+    ],
+    "seen": "2018-10-17"
+   },
+   {
+    "from": "2018-12-12",
     "status": "SIST OPPDATERT: 16.11.2018 - FORTSATT GYLDIG",
     "paragraphs": [
      "Utenriksdepartementet fraråder alle reiser til eller opphold i de nord-østlige delstatene i Nigeria og langs kysten i Nigerdeltaet. Videre frarådes reiser til eller opphold i øvrige deler av nordlige Nigeria og i øvrige deler av Nigerdeltaet som ikke er strengt nødvendige."
@@ -2199,7 +2510,7 @@
   ],
   "nordkorea": [
    {
-    "from": "2019-04-26",
+    "from": "2018-03-24",
     "status": "SIST OPPDATERT: 08.09.2017 - FORTSATT GYLDIG",
     "paragraphs": [
      "UD fraråder reiser til og opphold i Nord-Korea som ikke er nødvendige."
@@ -2209,7 +2520,7 @@
   ],
   "nordmakedonia": [
    {
-    "from": "2019-04-26",
+    "from": "2018-02-21",
     "status": "",
     "paragraphs": [],
     "seen": "2026-09-16"
@@ -2217,7 +2528,7 @@
   ],
   "oman": [
    {
-    "from": "2019-04-26",
+    "from": "2018-04-20",
     "status": "",
     "paragraphs": [],
     "seen": "2026-02-28"
@@ -2239,7 +2550,7 @@
   ],
   "osterrike": [
    {
-    "from": "2019-08-17",
+    "from": "2018-03-24",
     "status": "",
     "paragraphs": [],
     "seen": "2019-10-22"
@@ -2261,7 +2572,7 @@
   ],
   "osttimor": [
    {
-    "from": "2019-04-26",
+    "from": "2018-03-24",
     "status": "",
     "paragraphs": [],
     "seen": "2026-03-09"
@@ -2269,7 +2580,27 @@
   ],
   "pakistan": [
    {
-    "from": "2019-04-26",
+    "from": "2018-02-24",
+    "status": "REISERÅDET ER SIST OPPDATERT: 11.06.2014 - FORTSATT GYLDIG",
+    "paragraphs": [
+     "Utenriksdepartementet fraråder alle reiser til eller opphold i Baluchistan, Khyber Pakhtunkhwa (KPK) og i stammeområdene Federally Administered Tribal Areas (FATA) i Pakistan.",
+     "Utenriksdepartementet fraråder reiser eller opphold som ikke er strengt nødvendige til Karachi med forsteder. For det øvrige Pakistan oppfordrer Utenriksdepartementet reisende til å utvise aktsomhet.",
+     "Norske borgere som oppholder seg i eller som planlegger å reise til Pakistan oppfordres til å ta kontakt med ambassaden i Islamabad for oppdatert informasjon og registrering av reise via www.reiseregistrering.no."
+    ],
+    "seen": "2018-04-23"
+   },
+   {
+    "from": "2018-06-18",
+    "status": "REISERÅDET ER SIST OPPDATERT: 11.06.2014 - FORTSATT GYLDIG",
+    "paragraphs": [
+     "Utenriksdepartementet fraråder alle reiser til eller opphold i Baluchistan, Khyber Pakhtunkhwa (KPK) og i stammeområdene Federally Administered Tribal Areas (Fata) i Pakistan.",
+     "Utenriksdepartementet fraråder reiser eller opphold som ikke er strengt nødvendige til Karachi med forsteder. For det øvrige Pakistan oppfordrer Utenriksdepartementet reisende til å utvise aktsomhet.",
+     "Norske borgere som oppholder seg i eller som planlegger å reise til Pakistan oppfordres til å ta kontakt med ambassaden i Islamabad for oppdatert informasjon og registrering av reise via www.reiseregistrering.no."
+    ],
+    "seen": "2018-06-18"
+   },
+   {
+    "from": "2018-08-14",
     "status": "REISERÅDET ER SIST OPPDATERT: 11.06.2014 - FORTSATT GYLDIG",
     "paragraphs": [
      "Utenriksdepartementet fraråder alle reiser til eller opphold i Baluchistan, Khyber Pakhtunkhwa (KPK) og i stammeområdene Federally Administered Tribal Areas (Fata) i Pakistan.",
@@ -2338,7 +2669,7 @@
   ],
   "palau": [
    {
-    "from": "2019-04-26",
+    "from": "2018-03-24",
     "status": "",
     "paragraphs": [],
     "seen": "2026-03-10"
@@ -2346,7 +2677,7 @@
   ],
   "palestina": [
    {
-    "from": "2018-09-03",
+    "from": "2018-04-22",
     "status": "REISERÅDET ER SIST OPPDATERT: 24.06.2019 - FORTSATT GYLDIG",
     "paragraphs": [
      "Utenriksdepartementet fraråder alle reiser til eller opphold i Gaza. Reisende oppfordres til å vise aktsomhet ved reiser til og opphold på Vestbredden."
@@ -2422,7 +2753,7 @@
   ],
   "panama": [
    {
-    "from": "2019-04-26",
+    "from": "2018-04-25",
     "status": "",
     "paragraphs": [],
     "seen": "2026-02-09"
@@ -2430,7 +2761,7 @@
   ],
   "papuanyguinea": [
    {
-    "from": "2019-04-26",
+    "from": "2018-03-23",
     "status": "",
     "paragraphs": [],
     "seen": "2026-06-10"
@@ -2438,7 +2769,7 @@
   ],
   "paraguay": [
    {
-    "from": "2019-04-26",
+    "from": "2018-02-24",
     "status": "",
     "paragraphs": [],
     "seen": "2026-07-24"
@@ -2446,7 +2777,7 @@
   ],
   "peru": [
    {
-    "from": "2019-04-26",
+    "from": "2018-02-21",
     "status": "",
     "paragraphs": [],
     "seen": "2022-09-05"
@@ -2476,7 +2807,7 @@
   ],
   "polen": [
    {
-    "from": "2019-03-29",
+    "from": "2018-05-22",
     "status": "",
     "paragraphs": [],
     "seen": "2026-08-28"
@@ -2484,7 +2815,7 @@
   ],
   "portugal": [
    {
-    "from": "2019-04-26",
+    "from": "2018-04-22",
     "status": "",
     "paragraphs": [],
     "seen": "2026-05-12"
@@ -2492,7 +2823,7 @@
   ],
   "qatar": [
    {
-    "from": "2019-04-26",
+    "from": "2018-03-17",
     "status": "",
     "paragraphs": [],
     "seen": "2026-02-04"
@@ -2508,7 +2839,7 @@
   ],
   "repkongo": [
    {
-    "from": "2019-04-26",
+    "from": "2018-02-23",
     "status": "REISERÅDET ER SIST OPPDATERT: 30.03.2017 - FORTSATT GYLDIG",
     "paragraphs": [
      "Reiser til eller opphold i Pool-regionen samt de østlige deler av Bouenza-regionen som ikke er strengt nødvendige frarådes. Reisende oppfordres til å utvise aktsomhet ved reiser til eller opphold i øvrige deler av Republikken Kongo (Kongo - Brazzaville)."
@@ -2534,7 +2865,7 @@
   ],
   "romania": [
    {
-    "from": "2019-04-26",
+    "from": "2018-04-22",
     "status": "",
     "paragraphs": [],
     "seen": "2026-04-18"
@@ -2542,7 +2873,16 @@
   ],
   "russland": [
    {
-    "from": "2019-03-29",
+    "from": "2018-02-18",
+    "status": "REISERÅDET ER SIST OPPDATERT: 18.02.2013 - FORTSATT GYLDIG",
+    "paragraphs": [
+     "Utenriksdepartementet fraråder reise eller opphold som ikke er strengt nødvendig til de russiske delrepublikkene Dagestan, Tsjetsjenia, Ingusjetia, Kabardino-Balkaria (inkludert Elbrus-området), Nord-Ossetia og Karatsjajevo-Tsjerkessia, samt de østre og sydlige delene av Stavropolskij Kraj som grenser til Tsjetsjenia.",
+     "Norske borgere som oppholder seg i eller som planlegger å reise til regionen oppfordres til å ta kontakt med ambassaden i Moskva for oppdatert informasjon og registrering av reise via www.reiseregistrering.no."
+    ],
+    "seen": "2018-04-26"
+   },
+   {
+    "from": "2018-06-25",
     "status": "REISERÅDET ER SIST OPPDATERT: 18.02.2013 - FORTSATT GYLDIG",
     "paragraphs": [
      "Utenriksdepartementet fraråder reise eller opphold som ikke er strengt nødvendig til de russiske delrepublikkene Dagestan, Tsjetsjenia, Ingusjetia, Kabardino-Balkaria (inkludert Elbrus-området), Nord-Ossetia og Karatsjajevo-Tsjerkessia, samt de østre og sydlige delene av Stavropolskij Kraj som grenser til Tsjetsjenia."
@@ -2569,7 +2909,24 @@
   ],
   "rwanda": [
    {
-    "from": "2019-04-26",
+    "from": "2018-02-25",
+    "status": "REISERÅDET ER SIST OPPDATERT: 31.03.2015 - FORTSATT GYLDIG",
+    "paragraphs": [
+     "Utenriksdepartementet oppfordrer reisende til å utvise aktsomhet ved reiser til eller opphold i grenseområdene mot DR Kongo.",
+     "Norske borgere som oppholder seg i eller som planlegger å reise til Rwanda oppfordres til å jevnlig sjekke ambassadens hjemmesider for sikkerhetsoppdateringer samt å registrere seg på www.reiseregistrering.no."
+    ],
+    "seen": "2018-04-24"
+   },
+   {
+    "from": "2018-07-17",
+    "status": "REISERÅDET ER SIST OPPDATERT: 31.03.2015 - FORTSATT GYLDIG",
+    "paragraphs": [
+     "Utenriksdepartementet oppfordrer reisende til å utvise aktsomhet ved reiser til eller opphold i grenseområdene mot DR Kongo."
+    ],
+    "seen": "2018-07-17"
+   },
+   {
+    "from": "2018-09-24",
     "status": "REISERÅDET ER SIST OPPDATERT: 07.08.2018 - FORTSATT GYLDIG",
     "paragraphs": [
      "Utenriksdepartementet oppfordrer reisende til å utvise aktsomhet ved reiser til eller opphold i grenseområdene mot DR Kongo og Burundi."
@@ -2593,7 +2950,7 @@
   ],
   "saintkitts": [
    {
-    "from": "2019-04-26",
+    "from": "2018-04-25",
     "status": "",
     "paragraphs": [],
     "seen": "2026-04-17"
@@ -2601,7 +2958,7 @@
   ],
   "saintlucia": [
    {
-    "from": "2019-04-26",
+    "from": "2018-04-25",
     "status": "",
     "paragraphs": [],
     "seen": "2026-06-10"
@@ -2609,7 +2966,7 @@
   ],
   "saintvincent": [
    {
-    "from": "2019-04-26",
+    "from": "2018-04-25",
     "status": "",
     "paragraphs": [],
     "seen": "2026-08-15"
@@ -2617,7 +2974,7 @@
   ],
   "salomonoyene": [
    {
-    "from": "2019-04-26",
+    "from": "2018-02-23",
     "status": "",
     "paragraphs": [],
     "seen": "2026-07-28"
@@ -2625,7 +2982,7 @@
   ],
   "samoa": [
    {
-    "from": "2019-04-26",
+    "from": "2018-03-22",
     "status": "",
     "paragraphs": [],
     "seen": "2026-08-15"
@@ -2633,7 +2990,7 @@
   ],
   "sanmarino": [
    {
-    "from": "2019-04-26",
+    "from": "2018-03-17",
     "status": "",
     "paragraphs": [],
     "seen": "2026-06-07"
@@ -2641,7 +2998,7 @@
   ],
   "saotome": [
    {
-    "from": "2019-04-26",
+    "from": "2018-02-23",
     "status": "",
     "paragraphs": [],
     "seen": "2026-04-11"
@@ -2649,7 +3006,16 @@
   ],
   "sar": [
    {
-    "from": "2019-04-26",
+    "from": "2018-02-21",
+    "status": "REISERÅDET ER SIST OPPDATERT: 18.02.2013 - FORTSATT GYLDIG",
+    "paragraphs": [
+     "Utenriksdepartementet fraråder alle reiser til Den sentralafrikanske republikk.",
+     "Norske borgere som oppholder seg i, eller som planlegger å reise til Den sentralafrikanske republikk oppfordres til å kontakte ambassaden i Khartoum for oppdatert informasjon og å registrere sin reise på www.reiseregistrering.no."
+    ],
+    "seen": "2018-04-21"
+   },
+   {
+    "from": "2018-07-21",
     "status": "SIST OPPDATERT: 18.02.2013 - FORTSATT GYLDIG",
     "paragraphs": [
      "Utenriksdepartementet fraråder alle reiser til Den sentralafrikanske republikk."
@@ -2659,7 +3025,17 @@
   ],
   "saudiarabia": [
    {
-    "from": "2018-09-03",
+    "from": "2018-02-20",
+    "status": "REISERÅDET ER SIST OPPDATERT: 17.01.2018 - FORTSATT GYLDIG",
+    "paragraphs": [
+     "Utenriksdepartementet oppfordrer reisende til å utvise aktsomhet ved reiser til eller opphold i Saudi-Arabia.",
+     "Det frarådes mot alle reiser til eller opphold innenfor 50 kilometer fra grensen mot Jemen.",
+     "Norske borgere som oppholder seg i eller som planlegger å reise til Saudi-Arabia oppfordres til å ta kontakt med ambassaden i Riyadh for oppdatert informasjon og registrering av reise via www.reiseregistrering.no."
+    ],
+    "seen": "2018-04-19"
+   },
+   {
+    "from": "2018-06-25",
     "status": "REISERÅDET ER SIST OPPDATERT: 17.01.2018 - FORTSATT GYLDIG",
     "paragraphs": [
      "Utenriksdepartementet oppfordrer reisende til å utvise aktsomhet ved reiser til eller opphold i Saudi-Arabia.",
@@ -2703,7 +3079,7 @@
   ],
   "senegal": [
    {
-    "from": "2019-04-26",
+    "from": "2018-04-23",
     "status": "",
     "paragraphs": [],
     "seen": "2026-03-15"
@@ -2711,7 +3087,7 @@
   ],
   "serbia": [
    {
-    "from": "2018-08-25",
+    "from": "2018-03-24",
     "status": "",
     "paragraphs": [],
     "seen": "2026-03-14"
@@ -2719,7 +3095,7 @@
   ],
   "seychellene": [
    {
-    "from": "2019-04-26",
+    "from": "2018-04-21",
     "status": "",
     "paragraphs": [],
     "seen": "2026-09-28"
@@ -2727,7 +3103,7 @@
   ],
   "sierraleone": [
    {
-    "from": "2019-04-26",
+    "from": "2018-02-18",
     "status": "",
     "paragraphs": [],
     "seen": "2026-02-13"
@@ -2735,7 +3111,7 @@
   ],
   "singapore": [
    {
-    "from": "2019-04-26",
+    "from": "2018-02-18",
     "status": "",
     "paragraphs": [],
     "seen": "2026-04-11"
@@ -2743,7 +3119,7 @@
   ],
   "slovakia": [
    {
-    "from": "2018-09-04",
+    "from": "2018-02-24",
     "status": "",
     "paragraphs": [],
     "seen": "2026-05-12"
@@ -2751,7 +3127,7 @@
   ],
   "slovenia": [
    {
-    "from": "2019-04-26",
+    "from": "2018-04-20",
     "status": "",
     "paragraphs": [],
     "seen": "2026-01-24"
@@ -2759,7 +3135,17 @@
   ],
   "somalia": [
    {
-    "from": "2019-04-26",
+    "from": "2018-02-25",
+    "status": "REISERÅDET ER SIST OPPDATERT: 18.02.2013 - FORTSATT GYLDIG",
+    "paragraphs": [
+     "Utenriksdepartementet fraråder alle reiser til eller opphold i Sør-, Sentral- og Nordøst-Somalia, og oppfordrer de som allerede er i disse områdene til å forlate området. Utenriksdepartementet fraråder reise eller opphold som ikke er strengt nødvendig til Somaliland.",
+     "Norske borgere som oppholder seg i eller som planlegger å reise til Somalia oppfordres til å ta kontakt med ambassaden i Nairobi for oppdatert informasjon og registrering av reise via www.reiseregistrering.no.",
+     "Norske myndigheters muligheter til å tilby konsulær bistand er ytterst begrenset ettersom Norge ikke har diplomatisk eller annen konsulær tilstedeværelse i Somalia."
+    ],
+    "seen": "2018-04-20"
+   },
+   {
+    "from": "2018-07-20",
     "status": "REISERÅDET ER SIST OPPDATERT: 18.02.2013 - FORTSATT GYLDIG",
     "paragraphs": [
      "Utenriksdepartementet fraråder alle reiser til eller opphold i Sør-, Sentral- og Nordøst-Somalia, og oppfordrer de som allerede er i disse områdene til å forlate området. Utenriksdepartementet fraråder reise eller opphold som ikke er strengt nødvendig til Somaliland.",
@@ -2786,7 +3172,7 @@
   ],
   "sorafrika": [
    {
-    "from": "2019-04-26",
+    "from": "2018-02-22",
     "status": "",
     "paragraphs": [],
     "seen": "2021-10-01"
@@ -2808,7 +3194,7 @@
   ],
   "sorkorea": [
    {
-    "from": "2018-09-02",
+    "from": "2018-04-27",
     "status": "",
     "paragraphs": [],
     "seen": "2019-11-13"
@@ -2830,7 +3216,16 @@
   ],
   "sorsudan": [
    {
-    "from": "2019-01-04",
+    "from": "2018-02-19",
+    "status": "REISERÅDET ER SIST OPPDATERT: 19.12.2013 - FORTSATT GYLDIG",
+    "paragraphs": [
+     "Utenriksdepartementet fraråder alle reiser til eller opphold i Sør-Sudan. Norske borgere som befinner seg i Sør-Sudan oppfordres til å forlate landet.",
+     "Norske borgere som allerede oppholder seg i Sør-Sudan oppfordres til å kontakte Utenriksdepartementet."
+    ],
+    "seen": "2018-04-20"
+   },
+   {
+    "from": "2018-07-20",
     "status": "REISERÅDET ER SIST OPPDATERT: 19.12.2013 - FORTSATT GYLDIG",
     "paragraphs": [
      "Utenriksdepartementet fraråder alle reiser til eller opphold i Sør-Sudan. Norske borgere som befinner seg i Sør-Sudan oppfordres til å forlate landet."
@@ -2856,7 +3251,7 @@
   ],
   "spania": [
    {
-    "from": "2018-09-25",
+    "from": "2018-04-21",
     "status": "",
     "paragraphs": [],
     "seen": "2019-12-20"
@@ -2878,7 +3273,7 @@
   ],
   "srilanka": [
    {
-    "from": "2019-04-21",
+    "from": "2018-02-24",
     "status": "",
     "paragraphs": [],
     "seen": "2019-04-21"
@@ -2913,6 +3308,23 @@
    }
   ],
   "sudan": [
+   {
+    "from": "2018-03-23",
+    "status": "REISERÅDET ER SIST OPPDATERT: 18.02.2013 - FORTSATT GYLDIG",
+    "paragraphs": [
+     "Utenriksdepartementet fraråder alle reiser til eller opphold i Darfur. I tillegg frarådes reiser eller opphold som ikke er strengt nødvendig til grenseområdene mot Sør-Sudan.",
+     "Norske borgere som oppholder seg i, eller som planlegger å reise til de områder av Sudan som omfattes av dette offisielle reiserådet, oppfordres til å kontakte ambassaden i Khartoum for oppdatert informasjon og å registrere sin reise på www.reiseregistrering.no."
+    ],
+    "seen": "2018-05-27"
+   },
+   {
+    "from": "2018-07-21",
+    "status": "REISERÅDET ER SIST OPPDATERT: 18.02.2013 - FORTSATT GYLDIG",
+    "paragraphs": [
+     "Utenriksdepartementet fraråder alle reiser til eller opphold i Darfur. I tillegg frarådes reiser eller opphold som ikke er strengt nødvendig til grenseområdene mot Sør-Sudan."
+    ],
+    "seen": "2019-01-23"
+   },
    {
     "from": "2019-04-26",
     "status": "REISERÅDET ER SIST OPPDATERT: 12.04.2019 - FORTSATT GYLDIG",
@@ -2958,7 +3370,7 @@
   ],
   "surinam": [
    {
-    "from": "2019-04-26",
+    "from": "2018-03-24",
     "status": "",
     "paragraphs": [],
     "seen": "2026-04-15"
@@ -2966,7 +3378,7 @@
   ],
   "sveits": [
    {
-    "from": "2019-04-26",
+    "from": "2018-04-22",
     "status": "",
     "paragraphs": [],
     "seen": "2019-12-12"
@@ -2988,7 +3400,7 @@
   ],
   "sverige": [
    {
-    "from": "2019-03-29",
+    "from": "2018-04-22",
     "status": "",
     "paragraphs": [],
     "seen": "2026-06-07"
@@ -2996,7 +3408,7 @@
   ],
   "syria": [
    {
-    "from": "2018-04-22",
+    "from": "2018-03-21",
     "status": "SIST OPPDATERT: 18.02.2013 - FORTSATT GYLDIG",
     "paragraphs": [
      "Utenriksdepartementet fraråder alle reiser til eller opphold i Syria. Nordmenn som befinner seg i Syria oppfordres til å forlate landet."
@@ -3006,7 +3418,7 @@
   ],
   "tadsjikistan": [
    {
-    "from": "2019-04-26",
+    "from": "2018-04-22",
     "status": "",
     "paragraphs": [],
     "seen": "2026-06-09"
@@ -3014,7 +3426,7 @@
   ],
   "tanzania": [
    {
-    "from": "2018-09-05",
+    "from": "2018-04-22",
     "status": "",
     "paragraphs": [],
     "seen": "2021-02-26"
@@ -3046,7 +3458,16 @@
   ],
   "thailand": [
    {
-    "from": "2018-08-25",
+    "from": "2018-03-21",
+    "status": "REISERÅDET ER SIST OPPDATERT: 18.02.2013 - FORTSATT GYLDIG",
+    "paragraphs": [
+     "Utenriksdepartementet fraråder reise eller opphold som ikke er strengt nødvendig i provinsene Pattani, Yala, Narathiwat og Songkhla i Thailand.",
+     "Norske borgere som oppholder seg i eller som planlegger å reise til disse provinsene oppfordres til å ta kontakt med ambassaden i Bangkok for oppdatert informasjon og registrering av reise via www.reiseregistrering.no."
+    ],
+    "seen": "2018-05-27"
+   },
+   {
+    "from": "2018-07-19",
     "status": "SIST OPPDATERT: 18.02.2013 - FORTSATT GYLDIG",
     "paragraphs": [
      "Utenriksdepartementet fraråder reise eller opphold som ikke er strengt nødvendig i provinsene Pattani, Yala, Narathiwat og Songkhla i Thailand."
@@ -3102,7 +3523,7 @@
   ],
   "togo": [
    {
-    "from": "2019-04-26",
+    "from": "2018-03-22",
     "status": "",
     "paragraphs": [],
     "seen": "2022-06-29"
@@ -3118,7 +3539,7 @@
   ],
   "tonga": [
    {
-    "from": "2019-04-26",
+    "from": "2018-02-18",
     "status": "",
     "paragraphs": [],
     "seen": "2026-02-10"
@@ -3126,7 +3547,7 @@
   ],
   "triogto": [
    {
-    "from": "2019-04-26",
+    "from": "2018-04-25",
     "status": "",
     "paragraphs": [],
     "seen": "2026-08-21"
@@ -3134,7 +3555,7 @@
   ],
   "tsjad": [
    {
-    "from": "2019-04-26",
+    "from": "2018-02-24",
     "status": "REISERÅDET ER SIST OPPDATERT: 11.01.2016 - FORTSATT GYLDIG",
     "paragraphs": [
      "Utenriksdepartementet fraråder alle reiser til eller opphold i området rundt Tsjad-sjøen/delstaten Lac-regionen. Videre fraråder Utenriksdepartementet reise eller opphold i de øvrige delene av Tsjad som ikke er strengt nødvendige."
@@ -3160,7 +3581,7 @@
   ],
   "tsjekkia": [
    {
-    "from": "2019-03-29",
+    "from": "2018-02-24",
     "status": "",
     "paragraphs": [],
     "seen": "2026-05-16"
@@ -3168,7 +3589,17 @@
   ],
   "tunisia": [
    {
-    "from": "2018-07-10",
+    "from": "2018-03-24",
+    "status": "REISERÅDET ER SIST OPPDATERT: 28.06.2017 - FORTSATT GYLDIG",
+    "paragraphs": [
+     "Utenriksdepartementet fraråder alle reiser til og opphold i grenseområdene i Tunisia mot Libya og Algerie, samt nasjonalparkområdet Jebel Chaambi i guvernementet Kasserine og guvernementet Tataouine syd i landet.",
+     "Utenriksdepartementet fraråder alle reiser til og opphold som ikke er nødvendige i øvrige deler av Tunisia, med unntak av hovedstaden Tunis og turistområdene ved middelhavskysten, hvor reisende bes utvise aktsomhet.",
+     "Norske borgere som oppholder seg i eller planlegger å reise til Tunisia anmodes om å holde seg oppdatert, samt å registrere sin reise via ambassadens hjemmeside eller direkte på reiseregistrering.no."
+    ],
+    "seen": "2018-03-24"
+   },
+   {
+    "from": "2018-06-22",
     "status": "REISERÅDET ER SIST OPPDATERT: 28.06.2017 - FORTSATT GYLDIG",
     "paragraphs": [
      "Utenriksdepartementet fraråder alle reiser til og opphold i grenseområdene i Tunisia mot Libya og Algerie, samt nasjonalparkområdet Jebel Chaambi i guvernementet Kasserine og guvernementet Tataouine syd i landet.",
@@ -3214,7 +3645,7 @@
   ],
   "turkmenistan": [
    {
-    "from": "2019-04-26",
+    "from": "2018-02-19",
     "status": "",
     "paragraphs": [],
     "seen": "2026-06-10"
@@ -3222,7 +3653,7 @@
   ],
   "tuvalu": [
    {
-    "from": "2019-04-26",
+    "from": "2018-02-18",
     "status": "",
     "paragraphs": [],
     "seen": "2026-06-09"
@@ -3230,7 +3661,27 @@
   ],
   "tyrkia": [
    {
-    "from": "2018-09-25",
+    "from": "2018-02-19",
+    "status": "REISERÅDET ER SIST OPPDATERT: 29.09.2017 - FORTSATT GYLDIG",
+    "paragraphs": [
+     "Utenriksdepartementet fraråder reiser til eller opphold i grenseområdene nærmere enn ti km fra grensen til Syria som ikke er strengt nødvendig.",
+     "Det oppfordres til å utvise aktsomhet ved reiser i øvrige provinser i sørøst. I tillegg oppfordres det til å utvise aktsomhet, samt unngå store folkemengder, i de større byene inkludert Ankara og Istanbul.",
+     "For utfyllende informasjon om sikkerhet i Tyrkia vises det til artikkelen om sikkerhet under reiseinformasjon.",
+     "Norske borgere som oppholder seg i eller som planlegger å reise til disse områdene oppfordres til å ta kontakt med ambassaden i Ankara for oppdatert informasjon, samt registrere sin reise via www.reiseregistrering.no."
+    ],
+    "seen": "2018-02-19"
+   },
+   {
+    "from": "2018-04-19",
+    "status": "REISERÅDET ER SIST OPPDATERT: 13.04.2018 - FORTSATT GYLDIG",
+    "paragraphs": [
+     "Utenriksdepartementet fraråder alle reiser til eller opphold i grenseområdene nærmere enn ti km fra grensen til Syria. Det oppfordres til å utvise aktsomhet ved reiser i øvrige provinser i sørøst.",
+     "Norske borgere som oppholder seg i eller som planlegger å reise til disse områdene oppfordres til å registrere sin reise via www.reiseregistrering.no."
+    ],
+    "seen": "2018-04-19"
+   },
+   {
+    "from": "2018-06-18",
     "status": "REISERÅDET ER SIST OPPDATERT: 13.04.2018 - FORTSATT GYLDIG",
     "paragraphs": [
      "Utenriksdepartementet fraråder alle reiser til eller opphold i grenseområdene nærmere enn ti km fra grensen til Syria. Det oppfordres til å utvise aktsomhet ved reiser i øvrige provinser i sørøst."
@@ -3248,7 +3699,7 @@
   ],
   "tyskland": [
    {
-    "from": "2018-09-24",
+    "from": "2018-04-24",
     "status": "",
     "paragraphs": [],
     "seen": "2019-12-14"
@@ -3270,7 +3721,16 @@
   ],
   "uganda": [
    {
-    "from": "2019-04-26",
+    "from": "2018-04-22",
+    "status": "REISERÅDET ER SIST OPPDATERT: 31.03.2015 - FORTSATT GYLDIG",
+    "paragraphs": [
+     "Utenriksdepartementet oppfordrer reisende til å utvise aktsomhet ved reiser til eller opphold i grenseområdene mot DR Kongo.",
+     "Norske borgere som oppholder seg i eller som planlegger å reise til Uganda oppfordres til å jevnlig sjekke ambassadens hjemmesider for sikkerhetsoppdateringer samt å registrere seg på www.reiseregistrering.no."
+    ],
+    "seen": "2018-06-18"
+   },
+   {
+    "from": "2018-08-14",
     "status": "REISERÅDET ER SIST OPPDATERT: 31.03.2015 - FORTSATT GYLDIG",
     "paragraphs": [
      "Utenriksdepartementet oppfordrer reisende til å utvise aktsomhet ved reiser til eller opphold i grenseområdene mot DR Kongo."
@@ -3286,7 +3746,7 @@
   ],
   "uk": [
    {
-    "from": "2018-07-19",
+    "from": "2018-04-24",
     "status": "",
     "paragraphs": [],
     "seen": "2026-09-14"
@@ -3294,7 +3754,16 @@
   ],
   "ukraina": [
    {
-    "from": "2018-09-04",
+    "from": "2018-03-18",
+    "status": "REISERÅDET ER SIST OPPDATERT: 14.11.2014 - FORTSATT GYLDIG",
+    "paragraphs": [
+     "Utenriksdepartementet fraråder alle reiser til eller opphold i fylkene Donetsk og Luhansk samt på Krim-halvøya.",
+     "Norske borgere som oppholder seg i, eller planlegger å reise til Ukraina, oppfordres til å holde seg oppdatert via ambassadens hjemmesider, samt til å registrere sin reise viawww.reiseregistrering.no."
+    ],
+    "seen": "2018-05-21"
+   },
+   {
+    "from": "2018-07-17",
     "status": "REISERÅDET ER SIST OPPDATERT: 14.11.2014 - FORTSATT GYLDIG",
     "paragraphs": [
      "Utenriksdepartementet fraråder alle reiser til eller opphold i fylkene Donetsk og Luhansk samt på Krim-halvøya."
@@ -3339,7 +3808,7 @@
   ],
   "ungarn": [
    {
-    "from": "2018-08-31",
+    "from": "2018-04-22",
     "status": "",
     "paragraphs": [],
     "seen": "2026-04-15"
@@ -3347,7 +3816,7 @@
   ],
   "uruguay": [
    {
-    "from": "2019-04-26",
+    "from": "2018-03-18",
     "status": "",
     "paragraphs": [],
     "seen": "2026-08-31"
@@ -3355,7 +3824,7 @@
   ],
   "usa": [
    {
-    "from": "2018-07-19",
+    "from": "2018-04-22",
     "status": "",
     "paragraphs": [],
     "seen": "2019-12-14"
@@ -3377,7 +3846,7 @@
   ],
   "usbekistan": [
    {
-    "from": "2019-04-26",
+    "from": "2018-04-22",
     "status": "",
     "paragraphs": [],
     "seen": "2026-02-12"
@@ -3385,7 +3854,7 @@
   ],
   "vanuatu": [
    {
-    "from": "2019-04-26",
+    "from": "2018-04-22",
     "status": "",
     "paragraphs": [],
     "seen": "2026-02-12"
@@ -3393,7 +3862,7 @@
   ],
   "venezuela": [
    {
-    "from": "2018-09-21",
+    "from": "2018-04-25",
     "status": "REISERÅDET ER SIST OPPDATERT: 01.06.2017 - FORTSATT GYLDIG",
     "paragraphs": [
      "Utenriksdepartementet fraråder alle ikke-nødvendige reiser til og opphold i Venezuela."
@@ -3427,7 +3896,7 @@
   ],
   "vietnam": [
    {
-    "from": "2019-04-26",
+    "from": "2018-04-22",
     "status": "",
     "paragraphs": [],
     "seen": "2026-06-06"
@@ -3435,7 +3904,7 @@
   ],
   "zambia": [
    {
-    "from": "2019-04-26",
+    "from": "2018-04-22",
     "status": "",
     "paragraphs": [],
     "seen": "2026-04-09"
@@ -3443,7 +3912,7 @@
   ],
   "zimbabwe": [
    {
-    "from": "2019-04-26",
+    "from": "2018-03-24",
     "status": "",
     "paragraphs": [],
     "seen": "2026-06-07"
