@@ -54,6 +54,9 @@ html, body { margin: 0; height: 100%; background: var(--bg); color: var(--text);
 .panel h1 { margin: 0; font-size: 19px; letter-spacing: -.01em; display: flex; align-items: center; gap: 7px; }
 .panel h1 .logo { flex: none; margin-left: -3px; }
 .panel .sub { color: var(--muted); font-size: 12.5px; margin-top: 2px; }
+/* Tall som endres mens man drar i tidslinjen: fast bredde, så teksten ikke hopper. */
+.num { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; font-variant-numeric: tabular-nums; }
+.panel .sub .num { display: inline-block; min-width: 3ch; }
 .legend { display: grid; gap: 6px; padding: 4px 16px 12px; font-size: 13px; }
 .legend div { display: flex; align-items: center; gap: 9px; }
 .sw { width: 18px; height: 13px; border-radius: 3px; flex: none; border: 1px solid rgba(0,0,0,.15); }
@@ -61,8 +64,10 @@ html, body { margin: 0; height: 100%; background: var(--bg); color: var(--text);
 .sw.part { background: repeating-linear-gradient(45deg, var(--nec) 0 3px, transparent 3px 6px); }
 .sw.none { background: var(--land); }
 .sw.unk { background: var(--muted); opacity: .35; }
-.legend .hist-only, .legend .part-only { display: none; }
-body.has-part .legend .part-only { display: flex; }
+.legend .hist-only { display: none; }
+/* Skravur-forklaringen beholder plassen sin, så panelet ikke hopper når man drar i tidslinjen. */
+.legend .part-only { visibility: hidden; }
+body.has-part .legend .part-only, body.hist .legend .part-only { visibility: visible; }
 body.hist .legend .hist-only { display: flex; }
 .timeline { position: absolute; z-index: 1000; left: 362px; right: 16px; bottom: 22px; max-width: 640px; margin: 0 auto;
   display: flex; align-items: center; gap: 10px; padding: 8px 14px; background: var(--panel); color: var(--text);
@@ -74,7 +79,8 @@ body.hist .legend .hist-only { display: flex; }
 .timeline .tl-track { flex: 1; min-width: 0; position: relative; display: flex; }
 .timeline input { flex: 1; min-width: 0; accent-color: var(--all); }
 /* Fast bredde: ellers endrer glidebryteren bredde med datoteksten og hopper under fingeren. */
-.timeline .tl-date { flex: none; width: 132px; text-align: right; font-weight: 600; font-variant-numeric: tabular-nums; white-space: nowrap; }
+.timeline .tl-date { flex: none; width: 96px; text-align: right; font-weight: 600; white-space: nowrap;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; font-variant-numeric: tabular-nums; }
 .timeline .tl-now { flex: none; font-size: 12px; color: var(--link); background: none; border: 0; width: auto; height: auto; padding: 0; }
 body:not(.hist) .timeline .tl-now { visibility: hidden; }
 .tl-ticks { position: absolute; left: 8px; right: 8px; top: 100%; height: 10px; pointer-events: none; font-size: 9px; color: var(--muted); }
@@ -136,7 +142,7 @@ body:not(.hist) .timeline .tl-now { visibility: hidden; }
 @media (max-width: 640px) {
   .panel { top: auto; bottom: 16px; left: 16px; right: 16px; width: auto; max-height: 55vh; }
   .timeline { top: 12px; bottom: auto; left: 12px; right: 12px; max-width: none; padding: 6px 10px; gap: 8px; }
-  .timeline .tl-date { width: 74px; }
+  .timeline .tl-date { width: 86px; font-size: 12px; }
   .tl-ticks { display: none; }
   .leaflet-top { top: 54px; }
   .leaflet-popup-content { width: 260px !important; }
@@ -518,7 +524,8 @@ const fsActive = p => TL_DATE && (!p.from || TL_DATE >= p.from) && TL_DATE < p.t
 const DAY = 864e5;
 const tlFmt = d => new Date(d + "T12:00:00").toLocaleDateString("nb-NO", { day: "numeric", month: "long", year: "numeric" });
 const NARROW = matchMedia("(max-width: 640px)");
-const tlFmtShort = d => NARROW.matches ? new Date(d + "T12:00:00").toLocaleDateString("nb-NO", { day: "2-digit", month: "2-digit", year: "numeric" }) : tlFmt(d);
+// Tallformat (22.09.2017) der datoen endres mens man drar: like bred hver gang.
+const tlFmtShort = d => `${d.slice(8, 10)}.${d.slice(5, 7)}.${d.slice(0, 4)}`;
 const tlDay = n => new Date(Date.parse(TL.start + "T12:00:00Z") + n * DAY).toISOString().slice(0, 10);
 function tlState(iso) {
   const rows = TL?.countries[iso];
@@ -639,7 +646,8 @@ function tlSet(n) {
     // Områder uten egen UD-side (Grønland, Taiwan …) telles ikke som land.
     const st = Object.keys(TL.countries).filter(iso => FORMER[iso] ? fsActive(FORMER[iso]) : INFO[iso] && !HIDDEN.has(iso)).map(tlState);
     const n = st.filter(x => x.level && x.level !== "?").length, u = st.filter(x => x.level === "?").length;
-    sub.textContent = `${tlFmt(TL_DATE)}: ${n} land med reiseadvarsel` + (u > 20 ? ` · ${u} ukjente` : "");
+    sub.innerHTML = `<span class="num">${tlFmtShort(TL_DATE)}</span><br>Land med reiseadvarsel: <span class="num">${n}</span>`
+      + (u > 20 ? ` · ukjente: <span class="num">${u}</span>` : "");
   }
   map.closePopup();
   if (!live && !TZ) tlLoadZones();
