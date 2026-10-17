@@ -144,25 +144,58 @@ class Proj:
 SNAP_KM = 12
 
 
+_GB = {}       # ref -> ({navn: flate}, alt samlet)
+_ADM = {}      # (ref, navn, med landegrense) -> flate
+_ZONE = {}     # (iso, sone som JSON) -> flate
+
+
+def _gb_shapes(ref):
+    """geoBoundaries-flatene for ref, lest og reparert én gang (bygget kaller dette hundrevis av ganger)."""
+    if ref not in _GB:
+        iso, adm = ref.split("/")
+        parts = {}
+        for f in gb.load(iso, adm)["features"]:
+            parts.setdefault(f["properties"]["shapeName"], []).append(shape(f["geometry"]).buffer(0))
+        # Samme navn på flere flater slås sammen i én operasjon (parvis union blir svært treg).
+        shapes = {name: gs[0] if len(gs) == 1 else unary_union(gs) for name, gs in parts.items()}
+        _GB[ref] = (shapes, None)
+    return _GB[ref]
+
+
 def adm_geom(ref, names, country=None, proj=None):
     """Regioner fra geoBoundaries. Med country: strekk regionene ut til Natural
     Earths landegrense, siden de to kildene tegner grensen litt ulikt og
-    ellers etterlater hvite striper langs grensen."""
-    iso, adm = ref.split("/")
-    feats = gb.load(iso, adm)["features"]
-    picked = [f for f in feats if f["properties"]["shapeName"] in names]
-    missing = set(names) - {f["properties"]["shapeName"] for f in picked}
+    ellers etterlater hvite striper langs grensen. Resultatet huskes."""
+    key = (ref, tuple(sorted(names)), country is not None)
+    if key in _ADM:
+        return _ADM[key]
+    shapes, everything = _gb_shapes(ref)
+    missing = set(names) - set(shapes)
     if missing:
         raise SystemExit(f"{ref}: fant ikke {sorted(missing)}")
-    g = unary_union([shape(f["geometry"]).buffer(0) for f in picked])
-    if country is None:
-        return g
-    everything = unary_union([shape(f["geometry"]).buffer(0) for f in feats])
-    uncovered = country.difference(everything)
-    return g.union(proj.buffer(g, SNAP_KM).intersection(uncovered))
+    g = unary_union([shapes[n] for n in names])
+    if country is not None:
+        if everything is None:
+            everything = unary_union(list(shapes.values()))
+            _GB[ref] = (shapes, everything)
+        uncovered = country.difference(everything)
+        g = g.union(proj.buffer(g, SNAP_KM).intersection(uncovered))
+    _ADM[key] = g
+    return g
 
 
 def zone_geom(z, country, ne, proj, iso=None):
+    """Flaten for én sone. Samme sone for samme land beregnes bare én gang."""
+    key = (iso, json.dumps(z, sort_keys=True))
+    if iso and key in _ZONE:
+        return _ZONE[key]
+    g = _zone_geom(z, country, ne, proj, iso)
+    if iso:
+        _ZONE[key] = g
+    return g
+
+
+def _zone_geom(z, country, ne, proj, iso=None):
     if z.get("country"):
         g = country
     elif "adm" in z:
@@ -509,7 +542,7 @@ def build():
         print(f"::warning::{len(timeline.untagged)} eldre tekster uten tegnede soner (fargelagt etter teksten): "
               f"{', '.join(timeline.untagged)}. Kjør scraper/build.py --missing-history-zones.")
     dump("world_history.json", former_states(tl, ne))
-    dump("timeline_zones.json", history_zones(hist, info, ne, hregions))
+    dump("timeline_zones.json", cached_history_zones(hist, info, ne, hregions))
     n_pages = pages.write_all(OUT.parent, info, ne, zones_by_iso, adv["fetched"], site, hist, news, press)
 
     n = sum(1 for r in info.values() if r["level"])
@@ -665,6 +698,33 @@ def history_zones(hist, info, ne, hregions):
             first = seen.setdefault(json.dumps(feats, sort_keys=True), k)
             out[k] = feats if first == k else first
     return out
+
+
+ZONES_CACHE = DATA / "timeline_zones.cache.json"
+
+
+def cached_history_zones(hist, info, ne, hregions):
+    """history_zones er den tunge delen av bygget (~1,3 GB minne, flere minutter), for mye for
+    Pi-runneren (1,8 GB). Resultatet ligger derfor i data/timeline_zones.cache.json med et
+    fingeravtrykk av alt det bygges av, og regnes bare på nytt når det endrer seg (lokalt, når
+    noen tegner soner). I CI brukes forrige resultat med en advarsel hvis avtrykket ikke stemmer."""
+    iso_of_key = {rec["key"]: iso for iso, rec in info.items()}
+    current = {k: v["zones"] for k, v in json.loads((DATA / "regions.json").read_text()).items() if not k.startswith("_")}
+    combos = sorted(set(getattr(timeline, "combos", [])))
+    basis = {"v": 1, "tol": HIST_TOL, "hregions": hregions, "global": load_global(), "combos": combos,
+             "current": {k: current.get(k) for k in sorted({c[0] for c in combos})},
+             "iso": {k: iso_of_key.get(k) for k in sorted(set(hregions) | {c[0] for c in combos})}}
+    fp = hashlib.sha1(json.dumps(basis, sort_keys=True, ensure_ascii=False).encode()).hexdigest()
+    cache = json.loads(ZONES_CACHE.read_text()) if ZONES_CACHE.exists() else None
+    if cache and cache["fingerprint"] == fp:
+        return cache["zones"]
+    if cache and os.environ.get("CI"):
+        print("ADVARSEL: data/timeline_zones.cache.json er utdatert; bygg lokalt og commit den. Bruker forrige versjon.",
+              file=sys.stderr)
+        return cache["zones"]
+    zones = history_zones(hist, info, ne, hregions)
+    ZONES_CACHE.write_text(json.dumps({"fingerprint": fp, "zones": zones}, ensure_ascii=False, separators=(",", ":")) + "\n")
+    return zones
 
 
 def missing_history_zones(keys=()):
