@@ -14,7 +14,7 @@
 "001e5587a239": {
 "countries": [],
 "kind": "",
-"why": "Health directorate (SARS) advice, not UD"
+"why": "WHO/Helsedirektoratet SARS advice [fulltekst]"
 },
 "0038beff1c7d": {
 "countries": [
@@ -47,9 +47,12 @@
 "kind": "necessary"
 },
 "01055c851f65": {
-"countries": [],
-"kind": "",
-"why": "Sosial- og helsedirektoratet advice, not UD"
+"countries": [
+"kina"
+],
+"kind": "none",
+"quote": "I Utenriksdepartementet har man slik situasjonen er nå, ingen planer om å gå ut med spesielle oppfordringer",
+"why": "Health directorate advises; UD explicitly has no advice [fulltekst]"
 },
 "0110319d8277": {
 "countries": [
@@ -83,7 +86,7 @@
 "013d3a0d5311": {
 "countries": [],
 "kind": "",
-"why": "FHI advice, not UD"
+"why": "FHI advice, not UD [fulltekst]"
 },
 "017909df9779": {
 "countries": [
@@ -222,7 +225,7 @@
 "02f9f897dce5": {
 "countries": [],
 "kind": "",
-"why": "Danish travel advice"
+"why": "Danish travel advice [fulltekst]"
 },
 "02f9f8b11476": {
 "countries": [
@@ -322,7 +325,7 @@
 "04ebb54ffff2": {
 "countries": [],
 "kind": "",
-"why": "WHO advisory"
+"why": "WHO advisory [fulltekst]"
 },
 "0515e600216f": {
 "countries": [
@@ -735,7 +738,7 @@
 "0b1d31efa22a": {
 "countries": [],
 "kind": "",
-"why": "Danish foreign ministry advice on Tunisia"
+"why": "Danish foreign ministry advice [fulltekst]"
 },
 "0b3bc0c50d0d": {
 "countries": [
@@ -809,7 +812,7 @@
 "0bfe3af9f292": {
 "countries": [],
 "kind": "",
-"why": "Health directorate (SARS), not UD"
+"why": "Health directorate (SARS), not UD [fulltekst]"
 },
 "0c0f8489e70e": {
 "countries": [
@@ -1228,7 +1231,7 @@
 "12311a3e9da0": {
 "countries": [],
 "kind": "",
-"why": "No plans re Europe in general; no country"
+"why": "No new UD advice after US warning [fulltekst]"
 },
 "123446acf0bc": {
 "countries": [
@@ -1272,7 +1275,7 @@
 "12aadc7343c9": {
 "countries": [],
 "kind": "",
-"why": "Health ministry (SARS), not UD"
+"why": "Health ministry SARS advice, not UD [fulltekst]"
 },
 "12b1e7ec33b9": {
 "countries": [
@@ -1338,7 +1341,7 @@
 "13c7b75acffb": {
 "countries": [],
 "kind": "",
-"why": "Unclear source of Vietnam remark; WHO text"
+"why": "FHI health advice, not UD [fulltekst]"
 },
 "13dd6bd19e71": {
 "countries": [
@@ -1427,7 +1430,8 @@
 "countries": [
 "italia"
 ],
-"kind": "against"
+"kind": "against",
+"why": "Norske myndigheter advise against parts of Italy [fulltekst]"
 },
 "14ee29abe680": {
 "countries": [
@@ -1748,7 +1752,7 @@
 "19fe503d89bb": {
 "countries": [],
 "kind": "",
-"why": "Danish foreign ministry advice on Tunisia"
+"why": "Danish foreign ministry advice [fulltekst]"
 },
 "1a426895ad11": {
 "countries": [
@@ -1903,9 +1907,12 @@
 "why": "German travel warning"
 },
 "1dca2f7dd864": {
-"countries": [],
-"kind": "",
-"why": "Iraq headline; issue context only about Gaza"
+"countries": [
+"irak"
+],
+"kind": "leave",
+"quote": "Utenriksdepartementet fraråder norske borgere å reise til Irak, og oppfordrer alle som befinner seg i landet til å reise ut.",
+"why": "UD advises against Iraq, urges Norwegians to leave [fulltekst]"
 },
 "1dce9dd21eb2": {
 "countries": [
@@ -1944,7 +1951,7 @@
 "myanmar"
 ],
 "kind": "against",
-"why": "Norwegian government advises against travel to Burma"
+"why": "Norwegian government advises against travel to Burma [fulltekst]"
 },
 "1e4e07288b80": {
 "countries": [
@@ -1953,9 +1960,12 @@
 "kind": "against"
 },
 "1e71b105890b": {
-"countries": [],
-"kind": "",
-"why": "Source of Bangladesh advice not shown"
+"countries": [
+"bangladesh"
+],
+"kind": "against",
+"quote": "det norske Utenriksdepartement har tatt landet med på listen over de områder de fraråder nordmenn å oppholde seg i",
+"why": "UD added Bangladesh to areas Norwegians should avoid [fulltekst]"
 },
 "1e8e0d449058": {
 "countries": [
@@ -2060,7 +2070,7 @@
 "20213c111b41": {
 "countries": [],
 "kind": "",
-"why": "FHI advice"
+"why": "FHI advice [fulltekst]"
 },
 "203b8027d300": {
 "countries": [
@@ -2187,7 +2197,7 @@
 "227596fab647": {
 "countries": [],
 "kind": "",
-"why": "No plans re Europe in general; no country"
+"why": "US warning commentary; no Norwegian advice [fulltekst]"
 },
 "22808c53c829": {
 "countries": [
@@ -2429,7 +2439,7 @@
 "26332c34ee13": {
 "countries": [],
 "kind": "",
-"why": "Advice against military sports event, not travel"
+"why": "UD advised against military sports event, not travel [fulltekst]"
 },
 "265050559075": {
 "countries": [
@@ -2602,8 +2612,9 @@
 "countries": [
 "georgia"
 ],
-"kind": "against",
-"why": "Georgia headline in ANB-NTB UD roundup; OCR garbled"
+"kind": "necessary",
+"quote": "Fraråder reiser til Georgia UD fraråder nordmenn å",
+"why": "UD advises against non-necessary travel to Georgia [fulltekst]"
 },
 "28f81ccd7c58": {
 "countries": [
@@ -2765,7 +2776,7 @@
 "2c38f96ac05e": {
 "countries": [],
 "kind": "",
-"why": "US CDC / WHO advisories"
+"why": "US CDC / WHO advisories [fulltekst]"
 },
 "2c5d2230e3da": {
 "countries": [],
@@ -2936,7 +2947,8 @@
 "countries": [
 "libanon"
 ],
-"kind": "necessary"
+"kind": "necessary",
+"why": "Norway advises against non-necessary travel to Lebanon [fulltekst]"
 },
 "2f70f2297319": {
 "countries": [
@@ -2980,7 +2992,7 @@
 "2ff630223d38": {
 "countries": [],
 "kind": "",
-"why": "Health authorities (SARS), not UD"
+"why": "Health authorities (SARS), not UD [fulltekst]"
 },
 "30035cc54ffc": {
 "countries": [
@@ -3483,7 +3495,7 @@
 "382525f6cc64": {
 "countries": [],
 "kind": "",
-"why": "WHO advisory"
+"why": "WHO advisory [fulltekst]"
 },
 "383fb7df635b": {
 "countries": [
@@ -3494,7 +3506,7 @@
 "38842046bafc": {
 "countries": [],
 "kind": "",
-"why": "Health authorities (SARS), not UD"
+"why": "Health authorities (SARS), not UD [fulltekst]"
 },
 "3885b04d85ac": {
 "countries": [
@@ -3634,7 +3646,7 @@
 "39cfbb8bfc62": {
 "countries": [],
 "kind": "",
-"why": "Deportation advice, not travel"
+"why": "Advice against deporting asylum seekers to Kosovo [fulltekst]"
 },
 "39fe8ed3c6f0": {
 "countries": [
@@ -3689,7 +3701,7 @@
 "3aaa58501b20": {
 "countries": [],
 "kind": "",
-"why": "WHO advisory"
+"why": "WHO advisory [fulltekst]"
 },
 "3ac89eaceb1e": {
 "countries": [
@@ -3817,7 +3829,7 @@
 "3d401dca07d7": {
 "countries": [],
 "kind": "",
-"why": "Global COVID advice, Spain not named"
+"why": "Global covid advice to all countries; Spain not singled [fulltekst]"
 },
 "3d6950f9f5ce": {
 "countries": [
@@ -3862,7 +3874,7 @@
 "3e1c09eb4090": {
 "countries": [],
 "kind": "",
-"why": "Danish foreign ministry"
+"why": "Danish foreign ministry [fulltekst]"
 },
 "3e24ee4012be": {
 "countries": [
@@ -3893,7 +3905,7 @@
 "3e76a805cbfe": {
 "countries": [],
 "kind": "",
-"why": "Health authorities (SARS), not UD"
+"why": "Health authorities (SARS), not UD [fulltekst]"
 },
 "3e837c160f97": {
 "countries": [
@@ -3935,7 +3947,7 @@
 "3f572f59dd1a": {
 "countries": [],
 "kind": "",
-"why": "Greece advice updated, no advice against"
+"why": "Greece: practical ATM info, no advice against [fulltekst]"
 },
 "3f728d45a541": {
 "countries": [],
@@ -4029,7 +4041,7 @@
 "40a4a483833d": {
 "countries": [],
 "kind": "",
-"why": "Health authorities (SARS), not UD"
+"why": "Health authorities (SARS), not UD [fulltekst]"
 },
 "40c5f143b427": {
 "countries": [
@@ -4104,7 +4116,7 @@
 "41dc8de1c525": {
 "countries": [],
 "kind": "",
-"why": "WHO advisory"
+"why": "WHO travel warning [fulltekst]"
 },
 "41e6b401e6ee": {
 "countries": [
@@ -4138,7 +4150,7 @@
 "italia"
 ],
 "kind": "against",
-"why": "UD: non-essential travel to four northern regions"
+"why": "UD: non-essential travel to four northern regions [fulltekst]"
 },
 "4276bb343b52": {
 "countries": [
@@ -4147,7 +4159,8 @@
 "palestina"
 ],
 "kind": "against",
-"why": "UD advises against Syria, Saudi, Palestinian areas"
+"quote": "UD radep : LTD fraråder nordmenn å reise til Syria",
+"why": "UD advises against Syria, Saudi, Palestinian areas [fulltekst]"
 },
 "427d2350b900": {
 "countries": [
@@ -4321,7 +4334,7 @@
 "45c0837809f4": {
 "countries": [],
 "kind": "",
-"why": "US advice for Venezuela"
+"why": "US advice for Venezuela [fulltekst]"
 },
 "45ed61b88816": {
 "countries": [
@@ -4480,7 +4493,7 @@
 "4889918f6aed": {
 "countries": [],
 "kind": "",
-"why": "Only caution (aktsomhet) for Zimbabwe, no advice against"
+"why": "UD only urges caution in Zimbabwe [fulltekst]"
 },
 "48a08fbf2891": {
 "countries": [
@@ -4554,7 +4567,7 @@
 "49e7927afc1e": {
 "countries": [],
 "kind": "",
-"why": "Hypothetical: would not go if UD advised against"
+"why": "Hypothetical: trip cancelled only if UD advises against [fulltekst]"
 },
 "4a141a3a090e": {
 "countries": [],
@@ -4692,9 +4705,12 @@
 "kind": "leave"
 },
 "4c78b477d461": {
-"countries": [],
-"kind": "",
-"why": "OCR garbled; country and advice unreadable"
+"countries": [
+"tyrkia"
+],
+"kind": "against",
+"quote": "gjaldt UDs reiseråd … for hele Tyrkia, men … i går endret til kun å … gjelde hovedstaden … grensen til Syria.",
+"why": "UD advises against Syria border areas, Ankara, Istanbul [fulltekst]"
 },
 "4cc546c89ddd": {
 "countries": [
@@ -4780,7 +4796,7 @@
 "4df590c28888": {
 "countries": [],
 "kind": "",
-"why": "Only says advice unchanged"
+"why": "UD: Turkey advice unchanged, caution only [fulltekst]"
 },
 "4df5ce71e257": {
 "countries": [
@@ -4852,7 +4868,7 @@
 "4f890881b695": {
 "countries": [],
 "kind": "",
-"why": "French foreign ministry"
+"why": "French foreign ministry advice [fulltekst]"
 },
 "4f9d4be01733": {
 "countries": [
@@ -4869,12 +4885,12 @@
 "4fbe3366f846": {
 "countries": [],
 "kind": "",
-"why": "Health authorities"
+"why": "Health authorities [fulltekst]"
 },
 "4fcd24cb42ce": {
 "countries": [],
 "kind": "",
-"why": "Danish foreign ministry, not Norwegian UD"
+"why": "Danish foreign ministry advice [fulltekst]"
 },
 "4fe11a5aedec": {
 "countries": [
@@ -4946,7 +4962,7 @@
 "50ce5b066288": {
 "countries": [],
 "kind": "",
-"why": "No UD advice for Europe/Norway; not a country"
+"why": "No new UD advice after US warning [fulltekst]"
 },
 "50e0ea923cd0": {
 "countries": [
@@ -5026,7 +5042,7 @@
 "india"
 ],
 "kind": "against",
-"why": "List under headline 'Få nei-land fra UD'"
+"why": "List under UD headline 'Få nei-land fra UD' [fulltekst]"
 },
 "51ffa1a46a6a": {
 "countries": [
@@ -5336,7 +5352,7 @@
 "56c27a200943": {
 "countries": [],
 "kind": "",
-"why": "Advice on business engagement in Western Sahara"
+"why": "Business engagement advice re Western Sahara [fulltekst]"
 },
 "56e3458d9383": {
 "countries": [
@@ -5453,7 +5469,8 @@
 "countries": [
 "thailand"
 ],
-"kind": "necessary"
+"kind": "necessary",
+"why": "Norwegian ambassador advises against non-essential Bangkok travel [fulltekst]"
 },
 "591aba8104a0": {
 "countries": [
@@ -5755,9 +5772,12 @@
 "why": "Same issue: UD has no travel advice for Turkey"
 },
 "5e876996980f": {
-"countries": [],
-"kind": "",
-"why": "OCR garbled; no clean UD Egypt statement"
+"countries": [
+"egypt"
+],
+"kind": "necessary",
+"quote": "I UDs anbefaling heter det at strengt tatt nødvendige",
+"why": "UD advises against non-essential travel to Egypt [fulltekst]"
 },
 "5ec13adb9b5d": {
 "countries": [
@@ -5773,7 +5793,7 @@
 "5f2532d37628": {
 "countries": [],
 "kind": "",
-"why": "Folkehelseinstituttet advice"
+"why": "Folkehelseinstituttet advice [fulltekst]"
 },
 "5f43a3cd29bc": {
 "countries": [
@@ -5842,7 +5862,7 @@
 "6002441d180b": {
 "countries": [],
 "kind": "",
-"why": "Vietnam statement likely health authorities, source unclear"
+"why": "FHI health advice, not UD [fulltekst]"
 },
 "600a8592623d": {
 "countries": [
@@ -5941,7 +5961,7 @@
 "61d033134539": {
 "countries": [],
 "kind": "",
-"why": "Hypothetical; waiting for UD advice"
+"why": "Student awaiting UD advice on Syria; unclear [fulltekst]"
 },
 "621074376f31": {
 "countries": [
@@ -6092,7 +6112,7 @@
 "64eba39d7bd8": {
 "countries": [],
 "kind": "",
-"why": "Only says advice unchanged"
+"why": "UD: Pakistan advice unchanged only [fulltekst]"
 },
 "6513a20ee98f": {
 "countries": [
@@ -6111,7 +6131,8 @@
 "countries": [
 "tyrkia"
 ],
-"kind": "none"
+"kind": "none",
+"why": "Norwegian authorities do not advise against Turkey [fulltekst]"
 },
 "6545722b47af": {
 "countries": [],
@@ -6290,7 +6311,7 @@
 "68eac2d4f14d": {
 "countries": [],
 "kind": "",
-"why": "Only says advice unchanged"
+"why": "UD: Turkey advice unchanged only [fulltekst]"
 },
 "68f2ba3bbcf4": {
 "countries": [
@@ -6406,12 +6427,12 @@
 "6ab77d9d1c4c": {
 "countries": [],
 "kind": "",
-"why": "Sosial- og helsedirektoratet advice"
+"why": "Sosial- og helsedirektoratet advice [fulltekst]"
 },
 "6ac57fadf4ce": {
 "countries": [],
 "kind": "",
-"why": "WHO Hong Kong warning"
+"why": "WHO travel warning [fulltekst]"
 },
 "6ae64782d2ad": {
 "countries": [
@@ -6539,7 +6560,7 @@
 "6d80239d86d3": {
 "countries": [],
 "kind": "",
-"why": "WHO advice"
+"why": "WHO/Helsedirektoratet SARS advice [fulltekst]"
 },
 "6df351fbbf27": {
 "countries": [
@@ -6591,7 +6612,7 @@
 "6ee60fff83e4": {
 "countries": [],
 "kind": "",
-"why": "Swedish foreign ministry"
+"why": "Swedish foreign ministry [fulltekst]"
 },
 "6f06e648b858": {
 "countries": [
@@ -7034,7 +7055,7 @@
 "7622dd0717fb": {
 "countries": [],
 "kind": "",
-"why": "FHI/WHO, not UD"
+"why": "FHI/WHO, not UD [fulltekst]"
 },
 "76286a241695": {
 "countries": [
@@ -7067,7 +7088,7 @@
 "767a26ce5d78": {
 "countries": [],
 "kind": "",
-"why": "Folkehelseinstituttet advice"
+"why": "Folkehelseinstituttet advice, not UD [fulltekst]"
 },
 "7682001a7315": {
 "countries": [
@@ -7135,7 +7156,7 @@
 "77cca1cc3d40": {
 "countries": [],
 "kind": "",
-"why": "Medical advice, not UD"
+"why": "Consumer council/doctors, medical advice [fulltekst]"
 },
 "77d285b89f9b": {
 "countries": [
@@ -7153,7 +7174,7 @@
 "781ddc31fb89": {
 "countries": [],
 "kind": "",
-"why": "No UD advice for Europe; not a country"
+"why": "No new UD advice after US warning [fulltekst]"
 },
 "784c027eff49": {
 "countries": [
@@ -7164,7 +7185,7 @@
 "7859a87a02aa": {
 "countries": [],
 "kind": "",
-"why": "WHO warning"
+"why": "WHO warning [fulltekst]"
 },
 "7866e1430603": {
 "countries": [
@@ -7193,7 +7214,7 @@
 "78a92246204d": {
 "countries": [],
 "kind": "",
-"why": "Swedish foreign ministry"
+"why": "Swedish foreign ministry advice [fulltekst]"
 },
 "78c5fb111743": {
 "countries": [
@@ -7250,7 +7271,7 @@
 "79c28cbb0719": {
 "countries": [],
 "kind": "",
-"why": "Germany's travel advice, not Norway's"
+"why": "German advice; Norway timetable unchanged [fulltekst]"
 },
 "79ca4f1636ab": {
 "countries": [
@@ -7480,7 +7501,7 @@
 "srilanka"
 ],
 "kind": "lifted",
-"why": "UD lifted advice for Thailand and Sri Lanka"
+"why": "UD lifted advice for Thailand and Sri Lanka [fulltekst]"
 },
 "7d38fd888ac8": {
 "countries": [
@@ -7594,7 +7615,7 @@
 "7eeb0dc46464": {
 "countries": [],
 "kind": "",
-"why": "Only 'advice unchanged'"
+"why": "Only 'advice unchanged' [fulltekst]"
 },
 "7f3f9da3673d": {
 "countries": [
@@ -7869,7 +7890,7 @@
 "848132dddc47": {
 "countries": [],
 "kind": "",
-"why": "SARS advice, source unidentified, likely health authorities"
+"why": "WHO/Helsedirektoratet SARS advice [fulltekst]"
 },
 "84aa8191d1eb": {
 "countries": [
@@ -7888,7 +7909,7 @@
 "israel"
 ],
 "kind": "against",
-"why": "UD advises Norwegians against travel to Israel"
+"why": "UD advises Norwegians against travel to Israel [fulltekst]"
 },
 "84efda9a1dc6": {
 "countries": [
@@ -7992,7 +8013,7 @@
 "869a1a779002": {
 "countries": [],
 "kind": "",
-"why": "Folkehelseinstituttet's advice on Angola"
+"why": "Folkehelseinstituttet health advice on Angola [fulltekst]"
 },
 "86d78358f2c1": {
 "countries": [
@@ -8463,7 +8484,7 @@
 "8f3cdc76f37e": {
 "countries": [],
 "kind": "",
-"why": "Sosial- og helsedirektoratet SARS advice"
+"why": "Sosial- og helsedirektoratet SARS advice [fulltekst]"
 },
 "8f81121d6e12": {
 "countries": [
@@ -8637,7 +8658,7 @@
 "92f88dff531d": {
 "countries": [],
 "kind": "",
-"why": "Quarantine rule, not travel advice"
+"why": "Quarantine rule, not travel advice [fulltekst]"
 },
 "9316c083c915": {
 "countries": [
@@ -8917,7 +8938,7 @@
 "96d1c516659b": {
 "countries": [],
 "kind": "",
-"why": "Headline only; source never identified as UD"
+"why": "Singapore authorities' advice [fulltekst]"
 },
 "96d1ec1c35ef": {
 "countries": [
@@ -8946,7 +8967,7 @@
 "96fa5ffd1f14": {
 "countries": [],
 "kind": "",
-"why": "Headline lacks UD; same-issue quote lacks Ukraina"
+"why": "Page is about volunteer fighter; no UD advice [fulltekst]"
 },
 "971cf8d37e53": {
 "countries": [
@@ -9007,7 +9028,7 @@
 "98e16f04b11f": {
 "countries": [],
 "kind": "",
-"why": "'De' unidentified; asylum seeker complaint, source unclear"
+"why": "Asylum seeker's complaint about authorities; UD not identified [fulltekst]"
 },
 "98f2cfbd81d2": {
 "countries": [
@@ -9226,7 +9247,7 @@
 "9b4d968e9405": {
 "countries": [],
 "kind": "",
-"why": "Asylum return to Kosovo, not travel advice"
+"why": "Advice against deporting asylum seekers to Kosovo [fulltekst]"
 },
 "9b851b5b617f": {
 "countries": [
@@ -9256,7 +9277,7 @@
 "9c11e1d5d9b4": {
 "countries": [],
 "kind": "",
-"why": "Headline only; source never identified as UD"
+"why": "Singapore authorities' advice [fulltekst]"
 },
 "9c302a41f43c": {
 "countries": [
@@ -9669,9 +9690,16 @@
 "why": "Condolence advice"
 },
 "a26602a509ad": {
-"countries": [],
-"kind": "",
-"why": "No quote shows UD advice"
+"countries": [
+"libanon",
+"israel"
+],
+"kind": "all",
+"kinds": {
+"israel": "against"
+},
+"quote": "Nå fraråder UD kort og godt reiser til Libanon eller Nord-lsrael.",
+"why": "UD advises against Lebanon and northern Israel [fulltekst]"
 },
 "a26ecbe93dc0": {
 "countries": [
@@ -10777,7 +10805,7 @@
 "b4e68941a5ce": {
 "countries": [],
 "kind": "",
-"why": "Advice unchanged"
+"why": "UD: Turkey advice unchanged only [fulltekst]"
 },
 "b4f4b8628257": {
 "countries": [
@@ -10788,7 +10816,7 @@
 "b5142c5a30b4": {
 "countries": [],
 "kind": "",
-"why": "General terror list, not advice"
+"why": "British terror list; UD comment generic [fulltekst]"
 },
 "b5297b2c1351": {
 "countries": [
@@ -11159,7 +11187,7 @@
 "bad7352b6fb2": {
 "countries": [],
 "kind": "",
-"why": "Health authorities"
+"why": "Health authorities (SARS), not UD [fulltekst]"
 },
 "bade01d341e3": {
 "countries": [
@@ -11178,7 +11206,7 @@
 "bb2959f4f019": {
 "countries": [],
 "kind": "",
-"why": "Danish UD"
+"why": "Danish foreign ministry advice [fulltekst]"
 },
 "bb359f5bfa88": {
 "countries": [
@@ -11189,7 +11217,7 @@
 "bb413afb3647": {
 "countries": [],
 "kind": "",
-"why": "Insurers; global advice"
+"why": "Insurers; no country-specific UD advice [fulltekst]"
 },
 "bb81114d323d": {
 "countries": [],
@@ -11261,9 +11289,12 @@
 "kind": "necessary"
 },
 "bc5459d73963": {
-"countries": [],
-"kind": "",
-"why": "No new advice; content unstated"
+"countries": [
+"pakistan"
+],
+"kind": "all",
+"quote": "Tidligere denne uken ba Utenriksdepartementet nordmenn utsette planlagte reiser til Pakistan.",
+"why": "UD asked Norwegians to postpone planned trips to Pakistan [fulltekst]"
 },
 "bc5c02936aba": {
 "countries": [
@@ -11383,7 +11414,7 @@
 "bdeebb389fca": {
 "countries": [],
 "kind": "",
-"why": "FHI advice"
+"why": "FHI health advice [fulltekst]"
 },
 "be07c8d1aaed": {
 "countries": [],
@@ -11437,7 +11468,7 @@
 "bee334af39d7": {
 "countries": [],
 "kind": "",
-"why": "Australian advice"
+"why": "Australian advice on Indonesia [fulltekst]"
 },
 "beec2000e728": {
 "countries": [
@@ -11853,7 +11884,7 @@
 "c5f72c095b84": {
 "countries": [],
 "kind": "",
-"why": "No advice re Europe, no country"
+"why": "No new UD advice after US warning [fulltekst]"
 },
 "c6345b90c508": {
 "countries": [
@@ -12104,7 +12135,7 @@
 "cb3fc5c85733": {
 "countries": [],
 "kind": "",
-"why": "FHI advice"
+"why": "FHI advice [fulltekst]"
 },
 "cba0112d1ea9": {
 "countries": [
@@ -12215,7 +12246,7 @@
 "cdcb5c676a90": {
 "countries": [],
 "kind": "",
-"why": "Advice updated, nothing against"
+"why": "Israel advice updated, caution only [fulltekst]"
 },
 "ce133ccc49aa": {
 "countries": [],
@@ -12710,7 +12741,7 @@
 "d5c6cd9afcc3": {
 "countries": [],
 "kind": "",
-"why": "Deportation, not travel advice"
+"why": "Advice against deporting asylum seekers to Kosovo [fulltekst]"
 },
 "d5e24bc9616e": {
 "countries": [
@@ -13031,9 +13062,12 @@
 "why": "Only says advice unchanged"
 },
 "da7121b3788b": {
-"countries": [],
-"kind": "",
-"why": "Unchanged advice, country/content unclear"
+"countries": [
+"thailand"
+],
+"kind": "against",
+"quote": "Foreløpig er rådet det samme, nemlig at vi fraråder alle ikke-nødvendige reiser.",
+"why": "UD keeps advice against non-necessary travel to Bangkok [fulltekst]"
 },
 "da78e332af9b": {
 "countries": [
@@ -13075,7 +13109,9 @@
 "countries": [
 "myanmar"
 ],
-"kind": "all"
+"kind": "all",
+"quote": "Endringer i gjeldende reiseadvarsler vurderes jevnlig, basert på oppdaterte risikovurderinger, risikovurderinger, ifølge UD.",
+"why": "Norway advises against all travel to Myanmar, per UD [fulltekst]"
 },
 "dafc1b3c4c28": {
 "countries": [
@@ -13343,9 +13379,17 @@
 "kind": "against"
 },
 "e18fbd858988": {
-"countries": [],
-"kind": "",
-"why": "No quote ties these countries to UD"
+"countries": [
+"pakistan",
+"zimbabwe",
+"jemen",
+"india"
+],
+"kind": "all",
+"kinds": {
+"india": "against"
+},
+"why": "List under UD headline; Pakistan, Zimbabwe, Yemen advised against [fulltekst]"
 },
 "e196c322edf8": {
 "countries": [
@@ -13576,7 +13620,7 @@
 "e5ca74c066ac": {
 "countries": [],
 "kind": "",
-"why": "Danish UD"
+"why": "Danish UD; Norwegian UD unchanged [fulltekst]"
 },
 "e5f581c3b0ee": {
 "countries": [
@@ -13854,8 +13898,8 @@
 "countries": [
 "syria"
 ],
-"kind": "all",
-"why": "Norske myndigheter advise against all travel, urge leaving"
+"kind": "leave",
+"why": "All travel advised against; Norwegians told to leave [fulltekst]"
 },
 "eaf25c04599e": {
 "countries": [
@@ -14089,7 +14133,7 @@
 "ee6608d0ebbf": {
 "countries": [],
 "kind": "",
-"why": "Trade advice for Burma, not travel"
+"why": "Trade advice on Burma, not travel [fulltekst]"
 },
 "ee919ff9bc3e": {
 "countries": [
@@ -14186,7 +14230,8 @@
 "countries": [
 "ukraina"
 ],
-"kind": "leave"
+"kind": "leave",
+"why": "Norwegian authorities urged leaving Ukraine, not Russia [fulltekst]"
 },
 "efdfe46996c6": {
 "countries": [
@@ -14398,7 +14443,7 @@
 "f3a61233b4a6": {
 "countries": [],
 "kind": "",
-"why": "FHI advice, health authority"
+"why": "FHI advice, health authority [fulltekst]"
 },
 "f3a8b4570c2c": {
 "countries": [
@@ -14446,7 +14491,7 @@
 "f40d4c3c627b": {
 "countries": [],
 "kind": "",
-"why": "WHO travel warning"
+"why": "WHO advisory [fulltekst]"
 },
 "f4232a24fc5b": {
 "countries": [
@@ -14487,7 +14532,8 @@
 "sorafrika"
 ],
 "kind": "all",
-"why": "UD: new advice against all travel to South Africa"
+"quote": "Utenriksdepartementet har fått mange henvendelser fra bekymrede nordmenn som ønsker å reise ut av Sør-Afrika.",
+"why": "UD spokesperson: advice against all travel to South Africa [fulltekst]"
 },
 "f4a86f8ad766": {
 "countries": [
@@ -14506,7 +14552,7 @@
 "f4d4c9ba40c9": {
 "countries": [],
 "kind": "",
-"why": "Folkehelseinstituttet advice, health authority"
+"why": "Folkehelseinstituttet health advice [fulltekst]"
 },
 "f4e351f6c5ce": {
 "countries": [
@@ -14634,7 +14680,7 @@
 "f725ff87e681": {
 "countries": [],
 "kind": "",
-"why": "Hong Kong warning from WHO, not UD"
+"why": "WHO warning [fulltekst]"
 },
 "f72e148e47f1": {
 "countries": [
@@ -14812,7 +14858,7 @@
 "fa7a0d9f3116": {
 "countries": [],
 "kind": "",
-"why": "Folkehelseinstituttet advice, health authority"
+"why": "Folkehelseinstituttet advice [fulltekst]"
 },
 "fa7d775d4bcd": {
 "countries": [
@@ -14878,7 +14924,7 @@
 "fc20c61d5340": {
 "countries": [],
 "kind": "",
-"why": "Sosial- og helsedirektoratet advice"
+"why": "Sosial- og helsedirektoratet advice [fulltekst]"
 },
 "fc27a14ca5d6": {
 "countries": [

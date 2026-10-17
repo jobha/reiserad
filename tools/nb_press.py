@@ -33,7 +33,8 @@ ROOT = Path(__file__).resolve().parent.parent
 CACHE = Path(os.environ.get("REISERAD_CACHE", ROOT / ".cache")) / "nb"
 OUT = ROOT / "data" / "press_nb.json"
 # Gjennomlest fasit per utdrag: {id: {"countries": [UD-nøkkel], "kind", "kinds"?: {UD-nøkkel: kind},
-# "quote"?, "why"?}} (uklare utdrag er lest med mer tekst rundt, se tools/nb_context.py). Tom liste = ikke et
+# "quote"?, "why"?}} (uklare utdrag er lest med mer tekst rundt, se tools/nb_context.py; «[fulltekst]» i
+# why = lest mot hele avissiden på nb.no med forskertilgang, bare korte sitater lagret). Tom liste = ikke et
 # norsk reiseråd om noe land (f.eks. USAs UD). Overstyrer reglene under; nye utdrag uten fasit
 # får reglene og kan eksporteres for gjennomlesing med --export-review FIL.
 REVIEW = ROOT / "data" / "press_nb_review.json"
