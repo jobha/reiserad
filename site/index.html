@@ -66,8 +66,9 @@ html, body { margin: 0; height: 100%; background: var(--bg); color: var(--text);
 .sw.unk { background: var(--muted); opacity: .35; }
 .legend .hist-only { display: none; }
 /* Skravur-forklaringen beholder plassen sin, så panelet ikke hopper når man drar i tidslinjen. */
-.legend .part-only { visibility: hidden; }
-body.has-part .legend .part-only, body.hist .legend .part-only { visibility: visible; }
+/* Skravurforklaringen tar bare plass når noe faktisk er skravert (ellers et tomt hull i forklaringen). */
+.legend .part-only { display: none; }
+body.has-part .legend .part-only { display: flex; }
 body.hist .legend .hist-only { display: flex; }
 .timeline { position: absolute; z-index: 1000; left: 362px; right: 16px; bottom: 22px; max-width: 640px; margin: 0 auto;
   display: flex; align-items: center; gap: 10px; padding: 8px 14px; background: var(--panel); color: var(--text);
