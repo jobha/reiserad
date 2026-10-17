@@ -309,6 +309,22 @@ def global_zones(v, key):
             {"level": "none", "adm": r["adm"], "names": r["exempt"], "label": "Unntatt fra det globale reiserådet"}]
 
 
+def global_periods(key):
+    """For landssidene: perioder av det globale koronarådet for landet, med status
+    («whole» omfattet, «partial» omfattet unntatt noen regioner, None unntatt)."""
+    out = []
+    for v in load_global():
+        z = global_zones(v, key)
+        state = None if z is None else ("partial" if z else "whole")
+        r = v["regions"].get(key, {})
+        regions = r.get("exempt") or ([f"alle unntatt {', '.join(r['warned'])}"] if r.get("warned") else [])
+        if out and out[-1]["state"] == state and out[-1]["regions"] == regions:
+            out[-1]["until"] = v["until"]
+        else:
+            out.append({"from": v["from"], "until": v["until"], "state": state, "regions": regions})
+    return out
+
+
 def merge_global(rows, key, versions, text_index, combos=None):
     """Legg det globale koronarådet inn i landets rader der landet ikke har en egen advarsel
     (ingen, ukjent eller bare «på listen»). En egen advarsel for hele landet går foran det globale
@@ -543,7 +559,8 @@ def build():
               f"{', '.join(timeline.untagged)}. Kjør scraper/build.py --missing-history-zones.")
     dump("world_history.json", former_states(tl, ne))
     dump("timeline_zones.json", cached_history_zones(hist, info, ne, hregions))
-    n_pages = pages.write_all(OUT.parent, info, ne, zones_by_iso, adv["fetched"], site, hist, news, press)
+    glob = {rec["key"]: global_periods(rec["key"]) for rec in info.values()} if load_global() else {}
+    n_pages = pages.write_all(OUT.parent, info, ne, zones_by_iso, adv["fetched"], site, hist, news, press, glob)
 
     n = sum(1 for r in info.values() if r["level"])
     stale = [r["slug"] for r in info.values() if r.get("stale")]

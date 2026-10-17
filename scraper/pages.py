@@ -186,13 +186,38 @@ def news_links(items):
                    f'<span class="muted">(UD, {nb_date(n["date"])})</span></p>' for n in items)
 
 
-def history_html(entries, news=()):
-    """Tidligere versjoner av UDs advarsel (alle utenom gjeldende), nyeste først, og UDs nyheter."""
+def global_html(periods):
+    """UDs globale koronareiseråd 2020–2021 for ett land, som én oppføring med delperioder."""
+    if not periods:
+        return None
+    rows = []
+    for p in periods:
+        if p["state"] == "whole":
+            what = "Omfattet: UD frarådet reiser som ikke var strengt nødvendige."
+        elif p["state"] == "partial":
+            what = "Omfattet, med unntak for " + ", ".join(p["regions"]) + "."
+        else:
+            what = "Unntatt fra det globale reiserådet."
+        rows.append(f'<li><b>{nb_date(p["from"])} – {nb_date(p["until"])}:</b> {e(what)}</li>')
+    body = ("<p>Fra 12. mars 2020 til 1. oktober 2021 frarådet UD reiser som ikke var strengt nødvendige "
+            "til alle land, med unntak som ble endret jevnlig etter Folkehelseinstituttets smittekriterier. "
+            "Hadde landet en egen, strengere advarsel, gjaldt den i tillegg.</p><ul>" + "".join(rows) + "</ul>")
+    summary = f'{nb_date(periods[0]["from"])} – {nb_date(periods[-1]["until"])}: UDs globale reiseråd (korona)'
+    return periods[0]["from"], f'<details class="global"><summary>{summary}</summary>{body}</details>'
+
+
+def history_html(entries, news=(), glob=()):
+    """Tidligere versjoner av UDs advarsel (alle utenom gjeldende), nyeste først, og UDs nyheter.
+    Det globale koronarådet settes inn etter dato."""
     old = entries[:-1]
-    if not old and not news:
+    g = global_html(list(glob))
+    if not old and not news and not g:
         return ""
     items = []
     for h in reversed(old):
+        if g and h["from"] < g[0]:
+            items.append(g[1])
+            g = None
         ca = "ca. " if h.get("approx") else ""
         if h.get("gap"):
             body = "<p>Vi har ikke funnet arkivkopier av UDs reiseråd fra denne perioden.</p>"
@@ -203,6 +228,8 @@ def history_html(entries, news=()):
             else "<p>Ingen reiseadvarsel.</p>")
         items.append(f'<details><summary>{ca}{nb_date(h["from"])} – {nb_date(h["until"])}</summary>'
                      f'{body}{news_links(h.get("news", []))}</details>')
+    if g:
+        items.append(g[1])
     out = []
     if items:
         note = "Endringer i UDs reiseadvarsel. Datoen er UDs egen eller fra UDs pressemelding der den finnes."
@@ -254,7 +281,7 @@ def describe(rec):
     return text if len(text) <= 158 else text[:155].rsplit(" ", 1)[0] + " …"
 
 
-def country_page(iso, rec, country, zones, fetched, history=(), news=(), press=()):
+def country_page(iso, rec, country, zones, fetched, history=(), news=(), press=(), glob=()):
     name = rec["name"]
     slug = rec["slug"]
     canonical = f"{SITE}/land/{slug}/"
@@ -292,7 +319,7 @@ def country_page(iso, rec, country, zones, fetched, history=(), news=(), press=(
         b.append('<p class="note">UD har en regional advarsel her som ikke er tegnet inn på kartet ennå. Les UDs tekst for hvilke områder den gjelder.</p>')
     if rec.get("stale"):
         b.append('<p class="note">UD har endret teksten siden områdene ble tegnet inn. Les UDs tekst.</p>')
-    b.append(history_html(list(history), list(news)))
+    b.append(history_html(list(history), list(news), glob))
     b.append(press_html(list(press)))
     b.append(f'<div class="actions"><a class="btn primary" href="{e(rec["url"])}">Les hele reiseinformasjonen hos UD</a>'
              f'<a class="btn" href="/#{slug}">Se på verdenskartet</a>'
@@ -344,7 +371,7 @@ def index_page(info):
     return page("Reiseråd for alle land A–Å – UDs reiseadvarsler", desc, SITE + "/land/", body)
 
 
-def write_all(out_dir, info, geoms, zones_by_iso, fetched, site, history=None, news=None, press=None):
+def write_all(out_dir, info, geoms, zones_by_iso, fetched, site, history=None, news=None, press=None, glob=None):
     SITE_CFG.clear()
     SITE_CFG.update(site)
     """out_dir = site/. geoms[iso] = landflate, zones_by_iso[iso] = [(geom, level, partial, label)]."""
@@ -362,7 +389,8 @@ def write_all(out_dir, info, geoms, zones_by_iso, fetched, site, history=None, n
         (d / "index.html").write_text(country_page(iso, rec, geoms[iso], zones_by_iso.get(iso, []), fetched,
                                                          (history or {}).get(rec["key"], ()),
                                                          (news or {}).get(rec["key"], ()),
-                                                         (press or {}).get(rec["key"], ())))
+                                                         (press or {}).get(rec["key"], ()),
+                                                         (glob or {}).get(rec["key"], ())))
         urls.append((f"{SITE}/land/{rec['slug']}/", fetched[:10], "0.7"))
     (land / "index.html").write_text(index_page(info))
     sm = ['<?xml version="1.0" encoding="UTF-8"?>', '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">']
