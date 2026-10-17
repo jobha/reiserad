@@ -2,5 +2,6 @@
  "_om": "Soner for eldre tekster på UDs side for nepal. Nøkkel = tekst-hash (python scraper/build.py --missing-history-zones nepal). Format som data/regions.json; se README.",
  "0749f7c5619f": {"text": "Etter de siste dagers hendelser ber Utenriksdepartementet norske borgere nøye vurdere nødvendigheten av å reise til Nepal. (02.02). På grunn av de rådende forhold ber Utenriksdepartementet norske borgere nøye vurdere nødvendigheten av å reise til eller oppholde seg i Nepal. Norske borgere som allerede er i Nepal bes vise aktsomhet og holde kontakt med ambassaden i Kathmandu for informasjon.", "zones": [{"level": "necessary", "country": true, "label": "Hele landet"}]},
  "7dc4548fb1d3": {"text": "På grunn av de rådende forhold ber Utenriksdepartementet norske borgere nøye vurdere nødvendigheten av å reise til eller oppholde seg i Nepal. Norske borgere som allerede er i Nepal bes vise aktsomhet og holde kontakt med ambassaden i Kathmandu for informasjon.", "same": "0749f7c5619f"},
- "e8dc1a08be1c": {"text": "Utenriksdepartementet fraråder alle reiser til Nepal.", "zones": [{"level": "all", "country": true, "label": "Hele landet"}]}
+ "e8dc1a08be1c": {"text": "Utenriksdepartementet fraråder alle reiser til Nepal.", "zones": [{"level": "all", "country": true, "label": "Hele landet"}]},
+ "a220ae912ee8": {"text": "Utenriksdepartementet fraråder alle reiser til eller opphold i Nepal som ikke er strengt nødvendig.", "same": "0749f7c5619f"}
 }

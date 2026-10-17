@@ -10,7 +10,8 @@ Kilder (alle arkivkopier, cachet i .cache/wayback/ som i wayback_history.py):
 - /land/<x>/                landsiden; sideboksen «Offisielt reiseråd for X» med dato og tekst
 
 Skriver rå funn per kopi til .cache/wayback/landsider.json og historikk per land til
-data/history_landsider.json, som scraper/history.py legger foran resten.
+data/history_landsider.json, som scraper/history.py legger foran resten. Kopier fra Common Crawl
+(.cache/commoncrawl/landsider_rows.json, tools/commoncrawl_history.py --old) tas med.
 """
 import json
 import re
@@ -166,7 +167,7 @@ ALIASES = {"Det palestinske området": "palestina", "De palestinske områdene": 
            "Kongo-Brazzaville": "repkongo", "Palestinske området": "palestina",
            "Sentralafrikanske Rep.": "sar", "Sentralafrikanske republikk": "sar",
            "Myanmar (Burma)": "myanmar", "Myanmar/Burma": "myanmar",
-           "Israel og Det palestinske området": "israel"}
+           "Israel og Det palestinske området": "israel", "Sør- og Sentral-Somalia": "somalia"}
 
 
 LISTED = "\x00listed"  # landet står på oversikten over reiseråd, men teksten er ikke arkivert
@@ -211,13 +212,15 @@ def build(rows):
         for date, exact, t in sorted(o, key=lambda x: (x[0], x[2] is None)):
             if t == LISTED:
                 if entries and (entries[-1]["paragraphs"] or entries[-1].get("listed")):
+                    entries[-1]["seen"] = max(entries[-1].get("seen", ""), date)
                     continue  # en kjent tekst gjelder fortsatt
                 entries.append({"from": date, "status": "", "paragraphs": [], "listed": True, "approx": True})
                 continue
             paragraphs = [t] if t else []
             if entries and same(entries[-1]["paragraphs"], paragraphs) and not entries[-1].get("listed"):
+                entries[-1]["seen"] = max(entries[-1].get("seen", ""), date)  # sist sett med samme tilstand
                 continue
-            e = {"from": date, "status": "", "paragraphs": paragraphs}
+            e = {"from": date, "status": "", "paragraphs": paragraphs, "seen": date}
             if not exact:
                 e["approx"] = True
             entries.append(e)
@@ -251,6 +254,10 @@ def main():
     else:
         rows = [r for r in map(one, caps) if r]
     OUT.write_text(json.dumps(rows, ensure_ascii=False))
+    # Kopier fra Common Crawl (tools/commoncrawl_history.py --old) fyller hull i Wayback.
+    cc = ROOT / ".cache" / "commoncrawl" / "landsider_rows.json"
+    if cc.exists():
+        rows = sorted(rows + json.loads(cc.read_text()), key=lambda r: r["date"])
     n = sum(1 for r in rows if r["found"])
     print(f"{len(rows)} kopier lest, {n} med funn -> {OUT}", file=sys.stderr)
     hist = build(rows)

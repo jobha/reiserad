@@ -23,7 +23,10 @@ scraper/pages.py    én side per land med advarsel (site/land/<slug>/), A–Å-o
 site/index.html     Leaflet-kart som leser site/data/
 scraper/history.py  tidligere reiseadvarsler per land: git-loggen til data/advisories.json + arkivfilene under
 tools/wayback_history.py  eldre advarsler fra web.archive.org -> data/history_archive.json – kjøres for hånd
-tools/landsider_history.py  UDs offisielle reiseråd på landsider.no 2010–2015 (web.archive.org) -> data/history_landsider.json – for hånd
+tools/landsider_history.py  UDs offisielle reiseråd på landsider.no 2006–2015 og velg-reiserad 2016–18 (web.archive.org + Common Crawl) -> data/history_landsider.json – for hånd
+tools/commoncrawl_history.py  UDs landsider fra Common Crawl der Wayback mangler kopier (2018–19 som standard,
+                    --old: alle runder 2008–2018 for landsider.no/velg-reiserad); leser indeksfilene direkte – for hånd
+data/history_extra.json  UD-tekster funnet for hånd i andre arkivkopier (odin.dep.no, pressemeldinger, ambassadesider)
 tools/ud_news.py    UDs nyheter/pressemeldinger om reiseråd (2021–) -> data/ud_news.json; gir eksakte datoer – for hånd
 data/timeline_zones.cache.json  ferdigberegnede historiske soner (for tungt for Pi-en); bygges på nytt lokalt når soner endres – commit den
 tools/nb_press.py    avisomtaler av UDs reiseråd i Nasjonalbiblioteket (1980-tallet–) -> data/press_nb.json; «Omtalt i pressen» på landsidene, farger ikke kartet – for hånd
@@ -69,6 +72,11 @@ tegnes i én fil per land, `data/history_regions/<UD-nøkkel>.json` (nøkkelen s
   Mangler en (typisk fordi UD nettopp byttet tekst, og den gamle ble historikk), fargelegges
   landet etter teksten som siste utvei, `build.py` skriver en advarsel, og
   `--missing-history-zones` avslutter med exit 1, så deploy-jobben blir rød.
+- Tidslinjen har ingen hull. Der ingen kilde har UDs tekst (ingen arkivkopi, eller landet sto på UDs
+  liste uten at teksten er bevart), viser kartet nærmeste kjente tilstand og sier at det er omtrentlig
+  (`bridged` i timeline.json). Før UDs første fullstendige liste (10.07.2003) regnes land uten kjent
+  reiseråd som uten advarsel. Hull uten noen kilde i dag: Irak 2000–2003, FR Jugoslavia 2000–2003 og
+  Kroatia 1996–2003 (pressemeldinger 1996–2000 og odin.dep.no-sidene er gjennomgått).
 - `build.py` skriver flatene til `site/data/timeline_zones.json` (forenklet til ~1 km),
   som kartet laster først når noen drar i tidslinjen.
 

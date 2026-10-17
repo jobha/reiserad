@@ -621,7 +621,7 @@ function tlPopup(iso, ne, zone) {
   if (zone?.partial) h += `<div class="note">Advarselen gjaldt bare deler av dette området. Se teksten.</div>`;
   if (zone?.approx) h += `<div class="note">Grensen for denne sonen er tegnet omtrentlig ut fra UDs beskrivelse.</div>`;
   const gap = (TL.bridged?.[iso] || []).find(([a, b]) => a <= TL_DATE && TL_DATE < b);
-  if (gap) h += `<div class="note">UDs tekst fra ${esc(tlFmt(gap[0]))} til ${esc(tlFmt(gap[1]))} er ikke arkivert. Advarselen hadde samme nivå før og etter, så forrige kjente tekst vises (omtrentlig).</div>`;
+  if (gap) h += `<div class="note">Vi har ikke funnet UDs tekst for ${esc(tlFmt(gap[0]))}–${esc(tlFmt(gap[1]))} i noe arkiv. Kartet viser nærmeste kjente tilstand, så dette er omtrentlig.</div>`;
   if (st.from) h += `<p class="tip-note">Gjeldende fra ${st.level === "?" ? "ca. " : ""}${esc(tlFmt(st.from))}.</p>`;
   if (c?.page) h += `<div class="more"><a href="/land/${esc(c.slug)}/">Egen side for ${esc(c.name)}${c.history ? " inkl. historikk" : ""}</a></div>`;
   return h + `</div>`;

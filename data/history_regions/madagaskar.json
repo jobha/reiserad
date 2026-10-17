@@ -1,4 +1,5 @@
 {
  "_om": "Soner for eldre tekster på UDs side for madagaskar. Nøkkel = tekst-hash (python scraper/build.py --missing-history-zones madagaskar). Format som data/regions.json; se README.",
- "3482a7bf1cf1": {"text": "Utenriksdepartementet fraråder reiser som ikke er strengt nødvendige til Madagaskar.", "zones": [{"level": "necessary", "country": true, "label": "Hele landet"}]}
+ "3482a7bf1cf1": {"text": "Utenriksdepartementet fraråder reiser som ikke er strengt nødvendige til Madagaskar.", "zones": [{"level": "necessary", "country": true, "label": "Hele landet"}]},
+ "e30287a8256f": {"text": "Utenriksdepartementet fraråder reise til eller opphold på Madagaskar som ikke er strengt nødvendig. Norske borgere som planlegger å reise til eller oppholder seg i landet oppfordres til å ta kontakt med ambassaden i Antananarivo for nærmere informasjon og registrering. Nødtelefon til ambassaden er +261320523420.", "same": "3482a7bf1cf1"}
 }

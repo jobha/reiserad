@@ -408,7 +408,7 @@ def timeline(hist, info, lands, hregions=None):
     Eldre tekster skal alle være tegnet; nivået leses bare av teksten for dagens tekst (kartet bruker da
     dagens soner), tekster uten advarsel, og som siste utvei for nye tekster ingen har tegnet ennå
     (listes i timeline.untagged og skrives ut av build())."""
-    texts, index, out, bridged = [], {}, {}, {}
+    texts, index, out, bridged, first_exact = [], {}, {}, {}, {}
     timeline.untagged = []
     timeline.combos = []
     versions = load_global()
@@ -449,18 +449,67 @@ def timeline(hist, info, lands, hregions=None):
         rows = [r for i, r in enumerate(rows)
                 if not (r[1] == "?" and 0 < i < len(rows) - 1
                         and (rows[i - 1][1], rows[i - 1][4]) == (rows[i + 1][1], rows[i + 1][4]))]
-        # Et kort hull (under ~15 mnd., typisk feb.–apr. 2018) mellom to advarsler på samme nivå: den forrige
-        # teksten vises videre, merket omtrentlig (bridged), så landet ikke står som ukjent.
-        for i in range(1, len(rows) - 1):
-            a, r, b = rows[i - 1], rows[i], rows[i + 1]
-            if r[1] == "?" and a[1] in ("all", "necessary") and a[1] == b[1] and _days(r[0], b[0]) <= BRIDGE_DAYS:
-                bridged.setdefault(iso, []).append([r[0], b[0]])
-        drop = {p[0] for p in bridged.get(iso, [])}
-        rows = [r for r in rows if not (r[1] == "?" and r[0] in drop)]
+        # Et kort hull (under ~15 mnd.) uten tekst («?» = ingen kopier, «listed» = på UDs liste, men teksten
+        # er ikke arkivert): forrige kjente tilstand vises videre, som når en arkivkopi dateres til
+        # kopidatoen. «listed» betyr at det fantes et reiseråd: da brukes forrige eller neste kjente
+        # advarsel. Perioden merkes omtrentlig (bridged), og kartet sier at teksten ikke er arkivert.
+        known = lambda x: x[1] not in ("?", "listed")
+        warned = lambda x: x[1] in ("all", "necessary")
+        today = __import__("datetime").date.today().isoformat()
+        fixed = []
+        for i, r in enumerate(rows):
+            if r[1] not in ("?", "listed") or i == 0:
+                fixed.append(r)
+                continue
+            end = rows[i + 1][0] if i + 1 < len(rows) else today
+            a = fixed[-1] if fixed else None
+            b = rows[i + 1] if i + 1 < len(rows) else None
+            if r[1] == "listed" and not (a and warned(a)):
+                # Siste kjente advarsel innen ~15 mnd. før, selv om det var en periode uten advarsel imellom.
+                a = next((x for x in reversed(fixed) if warned(x) and _days(x[0], r[0]) <= BRIDGE_DAYS), a)
+                if a and warned(a):
+                    bridged.setdefault(iso, []).append([r[0], end])
+                    fixed.append([r[0]] + a[1:5])
+                    continue
+            if r[1] == "listed" and b and known(b) and _days(r[0], end) <= 2 * BRIDGE_DAYS:
+                # UDs liste over «offisielle reiseråd» tok også med rene aktsomhetsråd (Burundi 2008,
+                # Tadsjikistan 2012): uten advarsel før er neste kjente tekst det beste anslaget.
+                bridged.setdefault(iso, []).append([r[0], end])
+                fixed.append([r[0]] + b[1:5])
+                continue
+            if _days(r[0], end) <= BRIDGE_DAYS:
+                if a and (warned(a) if r[1] == "listed" else known(a)):
+                    bridged.setdefault(iso, []).append([r[0], end])
+                    continue  # forrige rad gjelder videre
+                if b and (warned(b) if r[1] == "listed" else known(b)):
+                    bridged.setdefault(iso, []).append([r[0], end])
+                    fixed.append([r[0]] + b[1:5])
+                    continue
+            fixed.append(r)
+        rows = fixed
+        first_exact[iso] = bool(entries) and not entries[0].get("approx") and not entries[0].get("gap")
         rows = merge_global(rows, rec["key"], versions, text_index, timeline.combos)
         if rows:
             out[iso] = rows
     start = min(r[0][0] for r in out.values())
+    # Før første kjente tilstand (de fleste land: UDs første fullstendige liste 10.07.2003): ingen advarsel,
+    # når landet da sto uten advarsel, eller advarselen ble gitt på en dato UD selv oppga (pressemelding).
+    # UD ga få reiseråd på 1990-tallet, og alle pressemeldinger fra perioden er gjennomgått.
+    for iso, rows in out.items():
+        # Hull ingen kilde dekker (Irak, FR Jugoslavia og Kroatia før 2003, se README): nærmeste kjente
+        # tilstand etter hullet, merket omtrentlig.
+        for i, r in enumerate(rows):
+            if r[1] in ("?", "listed"):
+                nxt = next((x for x in rows[i + 1:] if x[1] not in ("?", "listed")), None)
+                if nxt:
+                    bridged.setdefault(iso, []).append([r[0], nxt[0]])
+                    rows[i] = [r[0]] + nxt[1:5]
+        if rows[0][0] > start and rows[0][1] != "?" and (rows[0][1] is None or first_exact.get(iso)):
+            bridged.setdefault(iso, []).insert(0, [start, rows[0][0]])
+            if rows[0][1] is None:
+                rows[0][0] = start
+            else:
+                rows.insert(0, [start, None, 0, -1, ""])
     # Områder uten egen side hos UD var også omfattet av det globale koronarådet («alle land»).
     for iso, key in TERRITORIES.items():
         rows = [[start, None, 0, -1, ""]]

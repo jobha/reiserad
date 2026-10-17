@@ -1,0 +1,505 @@
+{
+ "_om": "UDs reiseråd funnet i andre arkivkopier (odin.dep.no-samlesider, pressemeldinger, landsider.no, ambassadesider) for perioder som ellers manglet tekst. Leses av scraper/history.py som UDs egne tekster: «date» er UDs dato når ud_date=true, ellers kopidatoen. Tom «paragraphs» = reiserådet opphevet.",
+ "texts": [
+  {
+   "key": "belarus",
+   "date": "2022-02-11",
+   "ud_date": true,
+   "capture": "2022-02-11",
+   "paragraphs": [
+    "Utenriksdepartementet fraråder alle reiser til hele Hviterussland, bortsett fra hovedstaden Minsk."
+   ],
+   "url": "https://www.regjeringen.no/no/aktuelt/skjerper_reiseraad/id2900890/",
+   "note": "Pressemelding 11.02.2022 «Utenriksdepartementet skjerper reiserådet for Ukraina, Hviterussland og Russland»."
+  },
+  {
+   "key": "bolivia",
+   "date": "2005-08-26",
+   "ud_date": true,
+   "capture": "2005-09-23",
+   "paragraphs": [
+    "På grunn av de rådende forhold ber Utenriksdepartementet norske borgere utvise forsiktighet ved opphold i Bolivia, og unngå demonstrasjoner og veiblokkader. Norske borgere anmodes under opphold i Bolivia om å ta kontakt med den norske ambassaden i Buenos Aires eller generalkonsulatet i La Paz for oppdatert informasjon og registrering."
+   ],
+   "url": "https://web.archive.org/web/20050923134212/http://odin.dep.no:80/ud/norsk/dok/andre_dok/veiledninger/032081-120002/dok-bn.html",
+   "note": "UD-samleside «Gjeldende reiseråd» på odin.dep.no; siden har «Oppdatert 26. august 2005» nederst (gjelder siden, ikke nødvendigvis hvert land)."
+  },
+  {
+   "key": "burundi",
+   "date": "2008-07-10",
+   "ud_date": true,
+   "capture": "2008-12-21",
+   "paragraphs": [
+    "Utenriksdepartementet oppfordrer reisende som oppholder seg i eller planlegger å reise til Burundi om å utvise aktsomhet og til å holde kontakt med ambassaden i Kampala for oppdatert informasjon og registrering."
+   ],
+   "url": "https://web.archive.org/web/20081221025212/http://www.landsider.no:80/land/burundi/raad.htm",
+   "note": "Burundi står i landsider.no/traveladvice fra 2008-05-18. Første kopi av tekst er 2008-12-21 (datert 10.07.2008); ingen kopi av en eventuell mai-versjon."
+  },
+  {
+   "key": "drkongo",
+   "date": "2008-10-29",
+   "ud_date": true,
+   "capture": "2009-11-02",
+   "paragraphs": [
+    "Utenriksdepartementet fraråder reise til eller opphold i de nordlige og østlige deler av Den demokratiske republikken Kongo. 29.10.2008 :: Også i resten av Den demokratiske republikken Kongo er det grunn til å utvise aktsomhet. Norske borgere som oppholder seg i eller planlegger å reise til landet oppfordres til å ta kontakt med ambassaden i Luanda, Angola for oppdatert informasjon og registrering."
+   ],
+   "url": "https://web.archive.org/web/20091102213808/http://www.landsider.no:80/land/kongodemrep/raad.htm",
+   "note": "Samme tekst (sideboks) i kopi 2009-06-29."
+  },
+  {
+   "key": "drkongo",
+   "date": "2009-12-23",
+   "ud_date": true,
+   "capture": "2010-06-12",
+   "paragraphs": [
+    "Utenriksdepartementet fraråder reise til eller opphold i de nordlige og østlige deler av Den demokratiske republikken Kongo."
+   ],
+   "url": "https://web.archive.org/web/20100612111655/http://www.landsider.no:80/land/kongodemrep/",
+   "note": "Bare sideboksens kortversjon («Les mer»)."
+  },
+  {
+   "key": "egypt",
+   "date": "2005-08-26",
+   "ud_date": true,
+   "capture": "2005-09-23",
+   "paragraphs": [
+    "Det er fare for terrorhandlinger i Egypt. I 2004 og 2005 ble terrorangrep rettet mot turister på Sinai-halvøya og i Kairo. På grunn av risikoen for nye terrorhandlinger ber Utenriksdepartementet norske borgere om å vise aktsomhet, særlig ved opphold på steder hvor det er samlet mange mennesker."
+   ],
+   "url": "https://web.archive.org/web/20050923134212/http://odin.dep.no:80/ud/norsk/dok/andre_dok/veiledninger/032081-120002/dok-bn.html",
+   "note": "UD-samleside «Gjeldende reiseråd» på odin.dep.no; siden har «Oppdatert 26. august 2005» nederst (gjelder siden, ikke nødvendigvis hvert land)."
+  },
+  {
+   "key": "elfernbenskysten",
+   "date": "2005-04-25",
+   "ud_date": false,
+   "capture": "2005-04-25",
+   "paragraphs": [
+    "Utenriksdepartementet fraråder norske borgere å reise til Elfenbenskysten, og oppfordrer dem som allerede er der til å forlate landet."
+   ],
+   "url": "https://web.archive.org/web/20050425185648/http://odin.dep.no:80/ud/norsk/publ/veiledninger/032081-120002/",
+   "note": "UD-samleside «Gjeldende reiseråd» på odin.dep.no (ingen dato per land). Samme tekst også i kopiene 2005-05-03 (dok-nn) og 2005-05-22 (dok-nu)."
+  },
+  {
+   "key": "elfernbenskysten",
+   "date": "2005-08-26",
+   "ud_date": true,
+   "capture": "2005-09-23",
+   "paragraphs": [
+    "Utenriksdepartementet fraråder norske borgere å reise til Elfenbenskysten, og oppfordrer dem som allerede er der til å forlate landet."
+   ],
+   "url": "https://web.archive.org/web/20050923134212/http://odin.dep.no:80/ud/norsk/dok/andre_dok/veiledninger/032081-120002/dok-bn.html",
+   "note": "UD-samleside «Gjeldende reiseråd» på odin.dep.no; siden har «Oppdatert 26. august 2005» nederst (gjelder siden, ikke nødvendigvis hvert land)."
+  },
+  {
+   "key": "india",
+   "date": "2005-12-17",
+   "ud_date": false,
+   "capture": "2005-12-17",
+   "paragraphs": [
+    "På grunn av de rådende forhold ber Utenriksdepartementet norske borgere nøye vurdere nødvendigheten av å reise til delstaten Jammu og Kashmir, med unntak av Ladakh. Nærmere informasjon kan fås fra ambassaden i New Dehli. INDONESIA (Endret 2.10.05) På Bali skjedde det 1. oktober 2005 bombeeksplosjoner på turiststedene Kuta og Jimbaran som drepte og skadet mange personer. Det er ikke opplyst at det finnes norske blant ofrene. Det har vært flere terrorangrep i Indonesia de siste årene, og nye angrep kan ikke utelukkes. I Jakarta og store deler av Indonesia er situasjonen rolig. Reisende til Indonesia rådes til å utvise forsiktighet og holde seg unna større folkeansamlinger og demonstrasjoner."
+   ],
+   "url": "https://web.archive.org/web/20051217072355/http://odin.dep.no:80/ud/norsk/dok/andre_dok/veiledninger/032081-120002/dok-bu.html",
+   "note": "Siste kopi av odin «Gjeldende reiseråd» før januar 2006 (samme tekst 2005-12-10–2005-12-17). landsider.no/traveladvice 2006-01-03/04/05 lister India, men uten tekst."
+  },
+  {
+   "key": "india",
+   "date": "2006-01-31",
+   "ud_date": true,
+   "capture": "2006-03-08",
+   "paragraphs": [
+    "Utenriksdepartementet fraråder reise til eller opphold i delstaten Jammu og Kashmir, med unntak av Ladakh som ikke er strengt nødvendig. Norske borgere som oppholder seg i eller som planlegger å reise til disse områdene oppfordres til å ta kontakt med ambassaden i New Delhi for oppdatert informasjon og registrering."
+   ],
+   "url": "https://web.archive.org/web/20060308033820/http://www.landsider.no:80/land/india/raad",
+   "note": "Ny versjon datert 31/01/2006 på landsider.no, første kopi 2006-03-08."
+  },
+  {
+   "key": "indonesia",
+   "date": "2005-04-25",
+   "ud_date": false,
+   "capture": "2005-04-25",
+   "paragraphs": [
+    "Enkelte områder i Sørøst-Asia, blant annet i Indonesia og Filippinene, har vist seg å være utsatt for terrorhandlinger. Utenriksdepartementet vil derfor råde norske borgere til å være oppmerksomme og utvise stor aktsomhet under opphold i regionen. Pressemelding 17.01.05: Utenriksdepartementet vil få minne om sitt reiseråd for enkelte områder i Sørøst-Asia om å utvise stor aktsomhet ved opphold blant annet i Indonesia og Filippinene. Særlig gjelder dette Aceh-provinsen i Indonesia."
+   ],
+   "url": "https://web.archive.org/web/20050425185648/http://odin.dep.no:80/ud/norsk/publ/veiledninger/032081-120002/",
+   "note": "UD-samleside «Gjeldende reiseråd» på odin.dep.no (ingen dato per land). Samme tekst også i kopiene 2005-05-03 (dok-nn) og 2005-05-22 (dok-nu)."
+  },
+  {
+   "key": "indonesia",
+   "date": "2005-08-26",
+   "ud_date": true,
+   "capture": "2005-09-23",
+   "paragraphs": [
+    "Enkelte områder i Sørøst-Asia, blant annet i Indonesia og Filippinene, har vist seg å være utsatt for terrorhandlinger. Utenriksdepartementet vil derfor råde norske borgere til å være oppmerksomme og utvise stor aktsomhet under opphold i regionen. Pressemelding 17.01.05: Utenriksdepartementet vil få minne om sitt reiseråd for enkelte områder i Sørøst-Asia om å utvise stor aktsomhet ved opphold blant annet i Indonesia og Filippinene. Særlig gjelder dette Aceh-provinsen i Indonesia."
+   ],
+   "url": "https://web.archive.org/web/20050923134212/http://odin.dep.no:80/ud/norsk/dok/andre_dok/veiledninger/032081-120002/dok-bn.html",
+   "note": "UD-samleside «Gjeldende reiseråd» på odin.dep.no; siden har «Oppdatert 26. august 2005» nederst (gjelder siden, ikke nødvendigvis hvert land)."
+  },
+  {
+   "key": "irak",
+   "date": "2003-04-19",
+   "ud_date": false,
+   "capture": "2003-04-19",
+   "paragraphs": [
+    "Utenriksdepartementet fraråder norske borgere å reise til Irak, og oppfordrer dem som allerede er der til å forlate landet."
+   ],
+   "url": "https://web.archive.org/web/20030419145543/http://odin.dep.no:80/ud/norsk/aktuelt/nyheter/032001-210047/index-dok000-b-n-a.html",
+   "note": "Nyhet «Reiseråd Irak» på odin.dep.no, udatert; lenket fra «Reiseråd for:»-boksen på landinfo-siden fra 2003-04-02. Samme tekst i kopi 2003-06-27 (index-dok000-n-n-a / b-f-a). Ingen Irak-tekst funnet for 2000-01-21 til mars 2003."
+  },
+  {
+   "key": "israel",
+   "date": "2003-03-18",
+   "ud_date": true,
+   "capture": "2003-06-27",
+   "paragraphs": [
+    "Situasjonen i Israel og Det palestinske område er meget spent og uforutsigbar. Utenriksdepartementet fraråder derfor inntil videre reiser til Israel og Det palestinske område. Grunnet den usikre situasjon og faren for terrorangrep bør man også vurdere nødvendigheten av å oppholde seg i området. Besøkende som ikke kan utsette sin reise til Israel og Det palestinske område bør holde kontakt med de norske representasjonene i regionen. Nordmenn i området bes utvise ekstra årvåkenhet og gjennomføre nødvendigesikkerhetstiltak."
+   ],
+   "url": "https://web.archive.org/web/20030627091526/http://odin.dep.no:80/ud/norsk/aktuelt/pressem/032011-070009/index-dok000-b-n-a.html",
+   "note": "Pressemelding nr. 47/03, 18.03.2003 («Reiseråd Israel, Det palestinske området, Bahrain og Qatar»), fortsatt publisert og lenket fra «Reiseråd for:»-boksen på odin landinfo 2003-06-10 og 2003-07-03."
+  },
+  {
+   "key": "israel",
+   "date": "2008-12-30",
+   "ud_date": true,
+   "capture": "2009-01-04",
+   "paragraphs": [
+    "Utenriksdepartementet fraråder alle reiser til grenseområdet (40 km) mot Gaza i det sørlige Israel, og nordmenn som oppholder seg i området bes følge de råd og anvisninger som til enhver tid gis av israelske myndigheter, samt holde kontakt med ambassaden i Tel Aviv."
+   ],
+   "url": "https://web.archive.org/web/20090104153213/http://www.regjeringen.no:80/nb/dep/ud/aktuelt/nyheter/2008/offisielle-reiserad-for-israel-og-det-pa.html?id=541412",
+   "note": "regjeringen.no nyhet publisert 31.12.2008; inneholder også rådet for Det palestinske området (04.09.08)."
+  },
+  {
+   "key": "israel",
+   "date": "2009-04-15",
+   "ud_date": true,
+   "capture": "2009-12-13",
+   "paragraphs": [
+    "Utenriksdepartementet fraråder alle reiser til grenseområdet (40 km) mot Gaza i det sørlige Israel, og reise til eller opphold i Gaza."
+   ],
+   "url": "https://web.archive.org/web/20091213070954/http://www.landsider.no:80/land/israel_dpo/",
+   "note": "Sideboks «Offisielle reiseråd for Israel og Det palestinske området 15.04.2009» (kortversjon)."
+  },
+  {
+   "key": "israel",
+   "date": "2009-12-22",
+   "ud_date": true,
+   "capture": "2010-05-30",
+   "paragraphs": [
+    "Utenriksdepartementet fraråder reise eller opphold som ikke er strengt nødvendig til grenseområdet (40 km) mot Gaza i det sørlige Israel."
+   ],
+   "url": "https://web.archive.org/web/20100530114503/http://www.landsider.no:80/land/israel/",
+   "note": "Sideboks (kortversjon); kopi 2010-07-15 viser samme tekst datert 25.02.2010."
+  },
+  {
+   "key": "jemen",
+   "date": "2000-06-12",
+   "ud_date": true,
+   "capture": "2001-07-31",
+   "paragraphs": [
+    "Utenriksdepartementet frarår inntil videre norske borgere å reise til Yemen, dersom reisen ikke er strengt tatt nødvendig. Ved nødvendige reiser til Yemen må det utvises en høy grad av årvåkenhet og nødvendige forhåndsregler må tas, da det foreligger risiko for kidnapping av utlendinger. Norske borgere som er bosatt i landet bes også utvise ekstra årvåkenhet og gjennomføre nødvendigesikkerhetstiltak."
+   ],
+   "url": "https://web.archive.org/web/20010731064447/http://odin.dep.no:80/ud/norsk/aktuelt/pressem/032001-070065/index-dok000-b-f-a.html",
+   "note": "Pressemelding nr. 75/2000, 12. juni 2000, «Reiseråd - Yemen», fortsatt publisert på odin; samme tekst i kopiene 2002-08-04 og 2003-06-27."
+  },
+  {
+   "key": "jemen",
+   "date": "2000-06-12",
+   "ud_date": true,
+   "capture": "2003-06-27",
+   "paragraphs": [
+    "Utenriksdepartementet frarår inntil videre norske borgere å reise til Yemen, dersom reisen ikke er strengt tatt nødvendig. Ved nødvendige reiser til Yemen må det utvises en høy grad av årvåkenhet og nødvendige forhåndsregler må tas, da det foreligger risiko for kidnapping av utlendinger. Norske borgere som er bosatt i landet bes også utvise ekstra årvåkenhet og gjennomføre nødvendigesikkerhetstiltak."
+   ],
+   "url": "https://web.archive.org/web/20030627142335/http://odin.dep.no:80/ud/norsk/aktuelt/pressem/032001-070065/index-dok000-n-n-a.html",
+   "note": "Samme pressemelding 75/2000; lenket som «Yemen»/«Jemen» fra «Reiseråd for:»-boksen på odin landinfo fra 2002-08 til 2003-06 (f.eks. https://web.archive.org/web/20030610004150/http://odin.dep.no:80/ud/norsk/landinfo/index-n-n-a.html)."
+  },
+  {
+   "key": "kenya",
+   "date": "2005-04-25",
+   "ud_date": false,
+   "capture": "2005-04-25",
+   "paragraphs": [
+    "Utenriksdepartementet råder norske borgere til å være oppmerksomme og utvise aktsomhet ved reiser i kystområdene i Kenya og Tanzania og på Zanzibar."
+   ],
+   "url": "https://web.archive.org/web/20050425185648/http://odin.dep.no:80/ud/norsk/publ/veiledninger/032081-120002/",
+   "note": "UD-samleside «Gjeldende reiseråd» på odin.dep.no (ingen dato per land). Samme tekst også i kopiene 2005-05-03 (dok-nn) og 2005-05-22 (dok-nu)."
+  },
+  {
+   "key": "kenya",
+   "date": "2005-08-26",
+   "ud_date": true,
+   "capture": "2005-09-23",
+   "paragraphs": [
+    "Utenriksdepartementet råder norske borgere til å være oppmerksomme og utvise aktsomhet ved reiser i kystområdene i Kenya og Tanzania og på Zanzibar."
+   ],
+   "url": "https://web.archive.org/web/20050923134212/http://odin.dep.no:80/ud/norsk/dok/andre_dok/veiledninger/032081-120002/dok-bn.html",
+   "note": "UD-samleside «Gjeldende reiseråd» på odin.dep.no; siden har «Oppdatert 26. august 2005» nederst (gjelder siden, ikke nødvendigvis hvert land)."
+  },
+  {
+   "key": "kirgisistan",
+   "date": "2010-04-08",
+   "ud_date": true,
+   "capture": "2010-05-07",
+   "paragraphs": [
+    "På bakgrunn av sikkerhetssituasjonen fraråder Utenriksdepartementet inntil videre reiser til Kirgisistan som ikke er strengt nødvendige. Norske borgere som oppholder seg i eller planlegger å reise til landet oppfordres til å ta kontakt med ambassaden i Astana for oppdatert informasjon og registrering."
+   ],
+   "url": "https://web.archive.org/web/20100507023712/http://www.landsider.no:80/traveladvice/kirgisistan/",
+   "note": "«Publisert: 08.04.2010». Kirgisistan står i traveladvice-oversikten 2010-05-05–2011-04-23."
+  },
+  {
+   "key": "madagaskar",
+   "date": "2009-01-28",
+   "ud_date": true,
+   "capture": "2009-02-04",
+   "paragraphs": [
+    "Utenriksdepartementet fraråder reise til eller opphold på Madagaskar som ikke er strengt nødvendig. Norske borgere som planlegger å reise til eller oppholder seg i landet oppfordres til å ta kontakt med ambassaden i Antananarivo for nærmere informasjon og registrering. Nødtelefon til ambassaden er +261320523420."
+   ],
+   "url": "https://web.archive.org/web/20090204113142/http://www.landsider.no:80/land/madagaskar/raad.htm"
+  },
+  {
+   "key": "madagaskar",
+   "date": "2009-04-17",
+   "ud_date": true,
+   "capture": "2009-05-22",
+   "paragraphs": [
+    "Utenriksdepartementet fraråder reise til eller opphold på Madagaskar som ikke er strengt nødvendig. Norske borgere som planlegger å reise til eller oppholder seg i landet oppfordres til å ta kontakt med ambassaden i Antananarivo for nærmere informasjon og registrering. Nødtelefon til ambassaden er +261320523420."
+   ],
+   "url": "https://web.archive.org/web/20090522011850/http://www.landsider.no:80/land/madagaskar/raad.htm",
+   "note": "Samme tekst i sideboks 2009-10-05; kopi 2010-02-06 (promoelements/raad.htm) sier fortsatt at rådet gjelder."
+  },
+  {
+   "key": "nepal",
+   "date": "2015-04-26",
+   "ud_date": true,
+   "capture": "2015-04-30",
+   "paragraphs": [
+    "Utenriksdepartementet fraråder alle reiser til eller opphold i Nepal som ikke er strengt nødvendig."
+   ],
+   "url": "https://www.regjeringen.no/no/dokumentarkiv/regjeringen-solberg/aktuelt-regjeringen-solberg/ud/nyheter/2015/situasjonen-i-nepal/id2408712/",
+   "note": "Nyhet 30.04.2015 «Situasjonen i Nepal» siterer reiserådet gitt søndag 26. april."
+  },
+  {
+   "key": "palestina",
+   "date": "2003-03-18",
+   "ud_date": true,
+   "capture": "2003-06-27",
+   "paragraphs": [
+    "Situasjonen i Israel og Det palestinske område er meget spent og uforutsigbar. Utenriksdepartementet fraråder derfor inntil videre reiser til Israel og Det palestinske område. Grunnet den usikre situasjon og faren for terrorangrep bør man også vurdere nødvendigheten av å oppholde seg i området. Besøkende som ikke kan utsette sin reise til Israel og Det palestinske område bør holde kontakt med de norske representasjonene i regionen. Nordmenn i området bes utvise ekstra årvåkenhet og gjennomføre nødvendigesikkerhetstiltak."
+   ],
+   "url": "https://web.archive.org/web/20030627091526/http://odin.dep.no:80/ud/norsk/aktuelt/pressem/032011-070009/index-dok000-b-n-a.html",
+   "note": "Pressemelding nr. 47/03, 18.03.2003 («Reiseråd Israel, Det palestinske området, Bahrain og Qatar»), fortsatt publisert og lenket fra «Reiseråd for:»-boksen på odin landinfo 2003-06-10 og 2003-07-03."
+  },
+  {
+   "key": "palestina",
+   "date": "2005-04-25",
+   "ud_date": false,
+   "capture": "2005-04-25",
+   "paragraphs": [
+    "Situasjonen i Israel og Det palestinske området er spent og uforutsigbar. Grunnet den usikre situasjon og faren for terrorangrep bør man vurdere nødvendigheten av å oppholde seg i området. Nordmenn i området bes utvise ekstra årvåkenhet og gjennomføre nødvendige sikkerhetstiltak. Det kan oppstå problemer knyttet til passering av kontrollposter ved inn- og utreise til/fra de palestinske områdene, særlig Gaza. Besøkende som ikke kan utsette sin reise til Israel og Det palestinske område bør holde kontakt med de norske representasjonene i regionen."
+   ],
+   "url": "https://web.archive.org/web/20050425185648/http://odin.dep.no:80/ud/norsk/publ/veiledninger/032081-120002/",
+   "note": "UD-samleside «Gjeldende reiseråd» på odin.dep.no (ingen dato per land). Samme tekst også i kopiene 2005-05-03 (dok-nn) og 2005-05-22 (dok-nu)."
+  },
+  {
+   "key": "palestina",
+   "date": "2005-08-26",
+   "ud_date": true,
+   "capture": "2005-09-23",
+   "paragraphs": [
+    "Situasjonen i Israel og Det palestinske området er spent og uforutsigbar. Derfor bør man vurdere nødvendigheten av å oppholde seg i området. Reise til og opphold i Gaza og Vestbredden bør unngås. Besøkende som ikke kan utsette sin reise til Israel og Det palestinske området bør holde kontakt med ambassaden i Tel Aviv eller representasjonskontoret i Al Ram."
+   ],
+   "url": "https://web.archive.org/web/20050923134212/http://odin.dep.no:80/ud/norsk/dok/andre_dok/veiledninger/032081-120002/dok-bn.html",
+   "note": "UD-samleside «Gjeldende reiseråd» på odin.dep.no; siden har «Oppdatert 26. august 2005» nederst (gjelder siden, ikke nødvendigvis hvert land)."
+  },
+  {
+   "key": "palestina",
+   "date": "2006-09-05",
+   "ud_date": true,
+   "capture": "2006-11-15",
+   "paragraphs": [
+    "Utenriksdepartementet fraråder reise til eller opphold i Gaza. Reisende bør vurdere nødvendigheten av reiser til Vestbredden. Norske borgere som oppholder seg i eller planlegger å reise til Gaza og Vestbredden oppfordres til å ta kontakt med Representasjonskontoret i Al-Ram og/eller ambassaden i Tel Aviv for oppdatert informasjon og registrering."
+   ],
+   "url": "https://web.archive.org/web/20061115225809/http://www.landsider.no:80/land/israel_dpo/raad.htm",
+   "note": "Samme tekst (datert 05/09/2006) på landsiden i kopiene 2008-02-01 og 2008-04-08."
+  },
+  {
+   "key": "palestina",
+   "date": "2008-09-04",
+   "ud_date": true,
+   "capture": "2008-12-21",
+   "paragraphs": [
+    "Utenriksdepartementet fraråder reise til eller opphold i Gaza. Reisende bør vurdere nødvendigheten av reiser til Vestbredden. Norske borgere som oppholder seg i eller planlegger å reise til Gaza og Vestbredden oppfordres til å ta kontakt med Representasjonskontoret i Al-Ram og/eller ambassaden i Tel Aviv for oppdatert informasjon og registrering."
+   ],
+   "url": "https://web.archive.org/web/20081221025750/http://www.landsider.no:80/land/israel_dpo/raad.htm",
+   "note": "«Sist endret 04.09.2008»."
+  },
+  {
+   "key": "russland",
+   "date": "2005-04-25",
+   "ud_date": false,
+   "capture": "2005-04-25",
+   "paragraphs": [
+    "Grunnet terrorhandlinger i Russland den siste tiden råder Utenriksdepartementet norske borgere til å være oppmerksomme ved reiser i Russland, samt til å vise særskilt varsomhet ved opphold på steder hvor det er samlet mange mennesker."
+   ],
+   "url": "https://web.archive.org/web/20050425185648/http://odin.dep.no:80/ud/norsk/publ/veiledninger/032081-120002/",
+   "note": "UD-samleside «Gjeldende reiseråd» på odin.dep.no (ingen dato per land). Samme tekst også i kopiene 2005-05-03 (dok-nn) og 2005-05-22 (dok-nu)."
+  },
+  {
+   "key": "russland",
+   "date": "2005-08-26",
+   "ud_date": true,
+   "capture": "2005-09-23",
+   "paragraphs": [
+    "Grunnet terrorhandlinger i Russland den siste tiden råder Utenriksdepartementet norske borgere til å være oppmerksomme ved reiser i Russland, samt til å vise særskilt varsomhet ved opphold på steder hvor det er samlet mange mennesker."
+   ],
+   "url": "https://web.archive.org/web/20050923134212/http://odin.dep.no:80/ud/norsk/dok/andre_dok/veiledninger/032081-120002/dok-bn.html",
+   "note": "UD-samleside «Gjeldende reiseråd» på odin.dep.no; siden har «Oppdatert 26. august 2005» nederst (gjelder siden, ikke nødvendigvis hvert land)."
+  },
+  {
+   "key": "somalia",
+   "date": "2006-12-24",
+   "ud_date": true,
+   "capture": "2007-02-06",
+   "paragraphs": [
+    "Utenriksdepartementet fraråder norske borgere å reise til Sør- og Sentral-Somalia, og oppfordrer dem som allerede er i Sør- og Sentral-Somalia til å forlate området."
+   ],
+   "url": "https://web.archive.org/web/20070206150425/http://odin.dep.no:80/ud/norsk/aktuelt/pressesenter/pressem/032001-430010/dok-bn.html",
+   "note": "Pressemelding nr. 166/06, 24.12.2006, «Offisielt reiseråd for Sør- og Sentral-Somalia» (odin)."
+  },
+  {
+   "key": "somalia",
+   "date": "2006-12-25",
+   "ud_date": true,
+   "capture": "2007-10-05",
+   "paragraphs": [
+    "Utenriksdepartementet fraråder norske borgere å reise til Sør- og Sentral-Somalia, og oppfordrer dem som allerede er i Sør -og Sentral-Somalia til å forlate området. 25/12/2006 :: Hvis man likevel velger å reise inn til Somalia, eller forbli i Somalia dersom man allerede oppholder seg der, skal man være oppmerksom på at norske myndigheters muligheter til å bistå er ytterst begrenset ettersom Norge ikke har diplomatisk eller konsulær tilstedeværelse i Somalia."
+   ],
+   "url": "https://web.archive.org/web/20071005062337/http://www.landsider.no:80/land/somalia/raad.htm",
+   "note": "landsider.no; samme hovedtekst i kopiene 2007-06-26 og 2008-04-08. Kopi 2008-04-22 har samme tekst, men datoen 07.12.2006."
+  },
+  {
+   "key": "srilanka",
+   "date": "2006-04-27",
+   "ud_date": true,
+   "capture": "2006-05-29",
+   "paragraphs": [
+    "Utenriksdepartementet fraråder reise til eller opphold i de nordlige og østlige deler av Sri Lanka (distriktene Jaffna, Trincomalee, Batticaloa og Ampara) som ikke er strengt nødvendig. Norske borgere som oppholder seg i eller som planlegger å reise til Sri Lanka oppfordres til å ta kontakt med ambassaden i Colombo for oppdatert informasjon og registrering."
+   ],
+   "url": "https://web.archive.org/web/20060529012705/http://www.landsider.no:80/land/srilanka/raad"
+  },
+  {
+   "key": "srilanka",
+   "date": "2007-12-04",
+   "ud_date": true,
+   "capture": "2007-12-17",
+   "paragraphs": [
+    "Utenriksdepartementet fraråder reise til eller opphold i de nordlige og østlige deler av Sri Lanka (distriktene Jaffna, Kilinochchi, Mullaitivu, Mannar, Vavuniya, Trincomalee, Batticaloa og Ampara) som ikke er strengt nødvendig. Også i resten av Sri Lanka er det grunn til å vise aktsomhet. Norske borgere som oppholder seg i eller planlegger å reise til Sri Lanka oppfordres til å ta kontakt med ambassaden i Colombo for oppdatert informasjon og registrering."
+   ],
+   "url": "https://web.archive.org/web/20071217131817/http://www.landsider.no:80/land/srilanka/raad"
+  },
+  {
+   "key": "srilanka",
+   "date": "2008-08-20",
+   "ud_date": true,
+   "capture": "2008-12-21",
+   "paragraphs": [
+    "Utenriksdepartementet fraråder reise til eller opphold i de nordlige og østlige deler av Sri Lanka (distriktene Jaffna, Kilinochchi, Mullaitivu, Mannar, Vavuniya, Trincomalee, Batticaloa og Ampara, samt Yala nasjonalpark)) som ikke er strengt nødvendig. Også i resten av Sri Lanka er det grunn til å vise aktsomhet. Norske borgere som oppholder seg i eller planlegger å reise til Sri Lanka oppfordres til å ta kontakt med ambassaden i Colombo for oppdatert informasjon og registrering."
+   ],
+   "url": "https://web.archive.org/web/20081221022550/http://www.landsider.no:80/land/srilanka/raad"
+  },
+  {
+   "key": "syria",
+   "date": "2006-02-22",
+   "ud_date": true,
+   "capture": "2006-03-18",
+   "paragraphs": [
+    "Utenriksdepartementet fraråder reise til eller opphold i Syria som ikke er strengt nødvendig. Norske borgere som oppholder seg i eller som planlegger å reise til Syria oppfordres til å ta kontakt med ambassaden i Damaskus for oppdatert informasjon og registrering."
+   ],
+   "url": "https://web.archive.org/web/20060318034548/http://www.landsider.no:80/land/syria/raad",
+   "note": "«Offisielt reiseråd for Syria», landsider.no. Syria står i landsider.no/traveladvice-oversikten 2006-02-09–2006-03-08."
+  },
+  {
+   "key": "syria",
+   "date": "2006-04-26",
+   "ud_date": true,
+   "capture": "2006-05-01",
+   "paragraphs": [],
+   "url": "https://web.archive.org/web/20060501212451/http://www.landsider.no:80/land/syria/raad",
+   "note": "Opphevelse av rådet, landsider.no."
+  },
+  {
+   "key": "tanzania",
+   "date": "2005-04-25",
+   "ud_date": false,
+   "capture": "2005-04-25",
+   "paragraphs": [
+    "Utenriksdepartementet råder norske borgere til å være oppmerksomme og utvise aktsomhet ved reiser i kystområdene i Kenya og Tanzania og på Zanzibar."
+   ],
+   "url": "https://web.archive.org/web/20050425185648/http://odin.dep.no:80/ud/norsk/publ/veiledninger/032081-120002/",
+   "note": "UD-samleside «Gjeldende reiseråd» på odin.dep.no (ingen dato per land). Samme tekst også i kopiene 2005-05-03 (dok-nn) og 2005-05-22 (dok-nu)."
+  },
+  {
+   "key": "tanzania",
+   "date": "2005-08-26",
+   "ud_date": true,
+   "capture": "2005-09-23",
+   "paragraphs": [
+    "Utenriksdepartementet råder norske borgere til å være oppmerksomme og utvise aktsomhet ved reiser i kystområdene i Kenya og Tanzania og på Zanzibar."
+   ],
+   "url": "https://web.archive.org/web/20050923134212/http://odin.dep.no:80/ud/norsk/dok/andre_dok/veiledninger/032081-120002/dok-bn.html",
+   "note": "UD-samleside «Gjeldende reiseråd» på odin.dep.no; siden har «Oppdatert 26. august 2005» nederst (gjelder siden, ikke nødvendigvis hvert land)."
+  },
+  {
+   "key": "thailand",
+   "date": "2005-04-25",
+   "ud_date": false,
+   "capture": "2005-04-25",
+   "paragraphs": [
+    "Grunnet den urolige situasjon i de sørlige deler av Thailand råder Utenriksdepartementet norske borgere til å vise stor aktsomhet ved reiser i provinsene Songkhla, Pattani, Yala og Narathiwat. Norske borgere som oppholder seg i eller planlegger å dra til disse provinsene oppfordres til å ta kontakt med ambassaden i Bangkok for registrering og oppdatert informasjon."
+   ],
+   "url": "https://web.archive.org/web/20050425185648/http://odin.dep.no:80/ud/norsk/publ/veiledninger/032081-120002/",
+   "note": "UD-samleside «Gjeldende reiseråd» på odin.dep.no (ingen dato per land). Samme tekst også i kopiene 2005-05-03 (dok-nn) og 2005-05-22 (dok-nu)."
+  },
+  {
+   "key": "thailand",
+   "date": "2005-08-26",
+   "ud_date": true,
+   "capture": "2005-09-23",
+   "paragraphs": [
+    "Grunnet den urolige situasjon i de sørlige deler av Thailand råder Utenriksdepartementet norske borgere til å vise stor aktsomhet ved reiser i provinsene Songkhla, Pattani, Yala og Narathiwat. Norske borgere som oppholder seg i eller planlegger å dra til disse provinsene oppfordres til å ta kontakt med ambassaden i Bangkok for registrering og oppdatert informasjon."
+   ],
+   "url": "https://web.archive.org/web/20050923134212/http://odin.dep.no:80/ud/norsk/dok/andre_dok/veiledninger/032081-120002/dok-bn.html",
+   "note": "UD-samleside «Gjeldende reiseråd» på odin.dep.no; siden har «Oppdatert 26. august 2005» nederst (gjelder siden, ikke nødvendigvis hvert land)."
+  },
+  {
+   "key": "zimbabwe",
+   "date": "2008-04-22",
+   "ud_date": true,
+   "capture": "2008-06-17",
+   "paragraphs": [
+    "Utenriksdepartementet oppfordrer reisende som oppholder seg i eller planlegger å reise til Zimbabwe om å utvise aktsomhet og til å holde kontakt med ambassaden i Harare for oppdatert informasjon og registrering."
+   ],
+   "url": "https://web.archive.org/web/20080617233617/http://www.landsider.no:80/land/zimbabwe/",
+   "note": "Sideboks på landsiden."
+  },
+  {
+   "key": "zimbabwe",
+   "date": "2008-06-26",
+   "ud_date": true,
+   "capture": "2008-12-05",
+   "paragraphs": [
+    "Utenriksdepartementet fraråder reise til eller opphold i Zimbabwe inntil videre."
+   ],
+   "url": "https://web.archive.org/web/20081205091244/http://www.landsider.no:80/land/zimbabwe/raad.htm",
+   "note": "«Sist endret 26.06.2008»."
+  },
+  {
+   "key": "zimbabwe",
+   "date": "2008-06-26",
+   "ud_date": true,
+   "capture": "2008-07-04",
+   "paragraphs": [
+    "Utenriksdepartementet fraråder reise til eller opphold i Zimbabwe inntil videre."
+   ],
+   "url": "https://web.archive.org/web/20080704112317/http://www.norway.org.zw/norsk/zimbabwe/raad.htm",
+   "note": "Ambassaden i Harare (norway.org.zw), «Offisielt reiseråd for Zimbabwe», datert 26/06/2008; nærmeste kopi etter perioden."
+  }
+ ]
+}

@@ -29,5 +29,6 @@
   "same": "f605b4d64977"
  },
  "46cc95c44c34": {"text": "Utenriksdepartementet fraråder alle reiser som ikke er nødvendige til Cabo Delgado.", "same": "f605b4d64977"},
- "0588d7574534": {"text": "Utenriksdepartementet fraråder alle reiser til Mosambik.", "zones": [{"level": "all", "country": true, "label": "Hele landet"}]}
+ "0588d7574534": {"text": "Utenriksdepartementet fraråder alle reiser til Mosambik.", "zones": [{"level": "all", "country": true, "label": "Hele landet"}]},
+ "b51ef663b76e": {"text": "Utenriksdepartementet fraråder reiser som ikke er strengt nødvendige langs veistrekningene Save-Muxungue og Nhamapandza-Caia langs hovedveien EN1 i sentrale Mosambik. Utenriksdepartementet råder norske reisende til å utvise aktsomhet ved reiser til sørlige deler av Zambézia-provinsen, Manica-provinsen, samt Sofala-provinsen, med unntak av Beira by.", "zones": [{"level": "necessary", "line": [[35.03, -21.1], [34.85, -20.85], [34.6, -20.62]], "km": 10, "approx": true, "label": "Veistrekningen Save–Muxúnguè (EN1)"}, {"level": "necessary", "line": [[34.15, -18.95], [34.6, -18.45], [35.0, -18.1], [35.33, -17.83]], "km": 10, "approx": true, "label": "Veistrekningen Nhamapadza–Caia (EN1)"}]}
 }

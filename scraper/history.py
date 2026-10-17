@@ -138,6 +138,11 @@ def _observations(keys, lands):
     for t in a.get("advice", []):
         kind = "text" if t.get("mode") != "fill" else "fill" if t["paragraphs"] else "lift"
         add(t["key"], t["date"], kind, t["paragraphs"], _plus(t["date"], LIST_DAYS))
+    # Tekster funnet i andre arkivkopier (data/history_extra.json): som UDs egne tekster.
+    for t in _load("history_extra.json").get("texts", []):
+        add(t["key"], t["date"], "text", t["paragraphs"], _plus(t["date"], LIST_DAYS))
+        if t.get("capture", "") > t["date"]:  # teksten sto fortsatt på siden da kopien ble tatt
+            add(t["key"], t["capture"], "text", t["paragraphs"], _plus(t["capture"], LIST_DAYS))
     if lands.get("list_first"):
         for k in keys:
             if k not in lands.get("countries", {}):
@@ -167,8 +172,14 @@ def _overlay(entries, obs):
             else:
                 entries[j]["from"] = horizon
         elif entries[i].get("obs") and not entries[j].get("gap") and entries[j]["from"] > horizon:
-            # Bare observasjonen sier noe om perioden; etter horisonten er tilstanden ukjent.
-            entries.insert(j, {"from": horizon, "status": "", "paragraphs": [], "gap": True, "approx": True})
+            # Bare observasjonen sier noe om perioden; etter horisonten er tilstanden ukjent, med mindre
+            # tilstanden før observasjonen er sett senere (landsider.no-listene, «seen»): da gjelder den.
+            base = next((entries[k] for k in range(i - 1, -1, -1) if not entries[k].get("obs")), None)
+            if base and not base.get("gap") and base.get("seen", "") > horizon:
+                entries.insert(j, {"from": horizon, "status": "", "paragraphs": list(base["paragraphs"]),
+                                   "approx": True, **({"listed": True} if base.get("listed") else {})})
+            else:
+                entries.insert(j, {"from": horizon, "status": "", "paragraphs": [], "gap": True, "approx": True})
 
     for d, kind, paras, horizon in sorted(obs, key=lambda o: o[0]):
         i = max((j for j, e in enumerate(entries) if e["from"] <= d), default=-1)
@@ -210,6 +221,11 @@ def _overlay(entries, obs):
             nxt["from"] = d  # samme tilstand, men tidligere og sikrere datert
             del nxt["approx"]
             continue
+        if kind == "text" and paras:
+            # «Står på listen, tekst ikke bevart» rett etter: det er denne teksten.
+            while nxt and nxt.get("listed") and not nxt.get("obs") and nxt["from"] <= horizon:
+                entries.remove(nxt)
+                nxt = entries[i + 1] if i + 1 < len(entries) else None
         new = {"from": d, "status": "", "paragraphs": list(paras), "obs": True}
         if kind == "listed":
             new["listed"] = True
@@ -270,7 +286,9 @@ def _sharpen(entries, items):
         if e.get("gap"):
             continue
         if e.get("approx") and i > 0:
-            hits = [n for n in items if entries[i - 1]["from"] < n["date"] <= e["from"]]
+            # Høyst et halvt år tilbake: ellers kan en nyhet om noe annet (Libanon 2006) flytte
+            # en endring i 2011 fem år bakover.
+            hits = [n for n in items if entries[i - 1]["from"] < n["date"] <= e["from"] and _days(n["date"], e["from"]) <= 180]
             if hits:
                 n = hits[-1]
                 e["from"], e["news"] = n["date"], [n]
