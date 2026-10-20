@@ -60,18 +60,35 @@ def get(url, tries=6):
     raise RuntimeError(f"ga opp: {url}")
 
 
+# Landsider som har byttet navn i URL-en (samme id). Wayback slås opp på navnet, så de gamle kopiene
+# må hentes for seg. Funnet ved å gruppere alle arkiverte velg-land-URL-er på id (2026-10).
+OLD_SLUGS = {
+    "id2429135": ["hviterussland_reiseinformasjon"],
+    "id2428976": ["dominica---reiseinformasjon"],
+    "id2414925": ["reiseinfo_swaziland"],
+    "id2424510": ["namibia---reiseinformasjon"],
+    "id2428988": ["reiseinfo_nauru"],
+}
+
+
 def captures(url):
     """[(timestamp, original)] med distinkt innhold, eldste først."""
     path = re.sub(r"^https?://", "", url)
     prefix = re.sub(r"id\d+/?$", "", path)  # id-nummeret har endret seg opp gjennom årene
-    segment = "/" + prefix.rstrip("/").rsplit("/", 1)[1].lower() + "/"
-    q = urllib.parse.urlencode({"url": prefix, "matchType": "prefix", "output": "json",
-                                "fl": "timestamp,original,digest", "filter": "statuscode:200"})
-    rows = json.loads(get("https://web.archive.org/cdx/search/cdx?" + q) or "[]")[1:]
+    page_id = re.search(r"(id\d+)/?$", path)
+    parent = prefix.rstrip("/").rsplit("/", 1)[0]
+    prefixes = [prefix] + [f"{parent}/{s}/" for s in OLD_SLUGS.get(page_id.group(1) if page_id else "", [])]
+    rows = []
+    for pre in prefixes:
+        segment = "/" + pre.rstrip("/").rsplit("/", 1)[1].lower() + "/"
+        q = urllib.parse.urlencode({"url": pre, "matchType": "prefix", "output": "json",
+                                    "fl": "timestamp,original,digest", "filter": "statuscode:200"})
+        # CDX matcher prefikset uten avsluttende skråstrek: reiseinfo_uk/ treffer også reiseinfo_ukraina/.
+        rows += [r for r in json.loads(get("https://web.archive.org/cdx/search/cdx?" + q) or "[]")[1:]
+                 if segment in r[1].lower()]
     seen, out = set(), []
     for ts, orig, digest in sorted(rows):
-        # CDX matcher prefikset uten avsluttende skråstrek: reiseinfo_uk/ treffer også reiseinfo_ukraina/.
-        if digest in seen or not re.search(r"/id\d+/?(\?|$)", orig) or segment not in orig.lower():
+        if digest in seen or not re.search(r"/id\d+/?(\?|$)", orig):
             continue
         seen.add(digest)
         out.append((ts, orig))

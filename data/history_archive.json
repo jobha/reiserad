@@ -282,7 +282,23 @@
     "from": "2018-02-25",
     "status": "",
     "paragraphs": [],
-    "seen": "2018-12-12"
+    "seen": "2022-01-27"
+   },
+   {
+    "from": "2022-02-17",
+    "status": "REISERÅDET ER SIST OPPDATERT 11. FEBRUAR 2022 - FORTSATT GYLDIG",
+    "paragraphs": [
+     "Utenriksdepartementet fraråder alle reiser til hele Hviterussland, bortsett fra hovedstaden Minsk."
+    ],
+    "seen": "2022-03-01"
+   },
+   {
+    "from": "2022-03-19",
+    "status": "REISERÅDET ER SIST OPPDATERT 2. MARS 2022 - FORTSATT GYLDIG",
+    "paragraphs": [
+     "Utenriksdepartementet fraråder alle reiser til Hviterussland."
+    ],
+    "seen": "2022-05-16"
    },
    {
     "from": "2022-06-15",

@@ -1,0 +1,5 @@
+{
+ "_om": "Soner for eldre tekster på UDs side for belarus. Nøkkel = tekst-hash (python scraper/build.py --missing-history-zones belarus). Format som data/regions.json; se README.",
+ "2e9360d7c1c4": {"text": "Utenriksdepartementet fraråder alle reiser til hele Hviterussland, bortsett fra hovedstaden Minsk.", "zones": [{"level": "all", "country": true, "label": "Hviterussland utenom Minsk"}, {"level": "none", "adm": "BLR/ADM1", "names": ["Minsk City"], "label": "Minsk"}]},
+ "a513f13deef5": {"text": "Utenriksdepartementet fraråder alle reiser til Hviterussland.", "zones": [{"level": "all", "country": true, "label": "Hele landet"}]}
+}
