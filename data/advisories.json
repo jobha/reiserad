@@ -1,5 +1,5 @@
 {
- "fetched": "2026-10-20T10:34:14+0200",
+ "fetched": "2026-10-20T13:48:33+0200",
  "source": "https://www.regjeringen.no/no/tema/utenrikssaker/reiseinformasjon/velg-land/id2414273/",
  "failed": [],
  "countries": {
@@ -19,7 +19,7 @@
   },
   "albania": {
    "name": "Albania",
-   "page_updated": "16.10.2026",
+   "page_updated": "20.10.2026",
    "ingress": "Albania er generelt et trygt reisemål med lav kriminalitet, men det pågår for tiden protester i Tirana og flere andre steder i Albania. Norske borgere anbefales å være forsiktige, unngå protestene og større folkemengder. Det frarådes å fotografere eller filme demonstrasjoner og politi. Se punktet Sikkerhet for mer informasjon. Skogbranner kan oppstå i sommermånedene, særlig i fjellområdene. Se punktet Naturforhold og naturkatastrofer for mer informasjon.",
    "warning": null,
    "url": "https://www.regjeringen.no/no/tema/utenrikssaker/reiseinformasjon/velg-land/reiseinfo_albania/id2428601/"
@@ -689,7 +689,7 @@
   },
   "italia": {
    "name": "Italia",
-   "page_updated": "29.09.2026",
+   "page_updated": "20.10.2026",
    "ingress": "Italia er et trygt land å reise og oppholde seg i, og de fleste reiser går trygt og uten spesielle problemer. Reisende må kunne vise gyldig pass eller nasjonalt ID-kort med reiserett på forespørsel fra myndighetene. Det kan forekomme vær- og naturhendelser som påvirker reiser og opphold i Italia. Se mer under «naturforhold og naturkatastrofer».",
    "warning": null,
    "url": "https://www.regjeringen.no/no/tema/utenrikssaker/reiseinformasjon/velg-land/reiseinfo_italia/id2416484/"
@@ -1516,8 +1516,8 @@
   },
   "spania": {
    "name": "Spania",
-   "page_updated": "10.08.2026",
-   "ingress": "Spania er et sikkert og velfungerende land å besøke. Man bør likevel ha gyldig reiseforsikring for hele oppholdet. Pass eller nasjonalt ID-kort med reiserett må medbringes som legitimasjon ved reiser til og i Spania. Det er pågående branner i flere områder av Spania. For mer informasjon se under \"Naturforhold og naturkatastrofer\".",
+   "page_updated": "20.10.2026",
+   "ingress": "Spania er et sikkert og velfungerende land å besøke. Man bør likevel ha gyldig reiseforsikring for hele oppholdet. Pass eller nasjonalt ID-kort med reiserett må medbringes som legitimasjon ved reiser til og i Spania.",
    "warning": null,
    "url": "https://www.regjeringen.no/no/tema/utenrikssaker/reiseinformasjon/velg-land/reiseinfo_spania/id2416245/"
   },
