@@ -1,5 +1,6 @@
 {
  "_om": "Soner for eldre tekster på UDs side for zimbabwe. Nøkkel = tekst-hash (python scraper/build.py --missing-history-zones zimbabwe). Format som data/regions.json; se README.",
  "1dc96744230d": {"text": "Turistbesøk og andre ikke strengt nødvendige reiser til Zimbabwe frarådes inntil videre.", "zones": [{"level": "necessary", "country": true, "label": "Hele landet"}]},
- "ed221c977343": {"text": "Utenriksdepartementet fraråder reise til eller opphold i Zimbabwe inntil videre.", "zones": [{"level": "all", "country": true, "label": "Hele landet"}]}
+ "ed221c977343": {"text": "Utenriksdepartementet fraråder reise til eller opphold i Zimbabwe inntil videre.", "zones": [{"level": "all", "country": true, "label": "Hele landet"}]},
+ "97938b8108ea": {"text": "Utenriksdepartementet fraråder reiser til Zimbabwe som ikke er strengt nødvendige. Norske borgere som oppholder seg i eller planlegger reise til landet oppfordres til å ta kontakt med ambassaden i Harare for oppdatert informasjon og registrering.", "zones": [{"level": "necessary", "country": true, "label": "Hele landet"}]}
 }

@@ -44,5 +44,7 @@
    {"level": "necessary", "adm": "KEN/ADM1", "names": ["Garissa"], "label": "Garissa fylke"},
    {"level": "necessary", "line": [[41.56, -1.66], [41.2, -1.95], [40.9, -2.27], [40.5, -2.55], [40.2, -2.85]], "km": 30, "approx": true, "and": {"border": ["SOM"], "km": 150}, "label": "Kystområdet innen 150 km fra grensen mot Somalia"}
   ]
- }
+ },
+ "d2a1d041c3de": {"text": "Utenriksdepartementet fraråder reise til eller opphold i Kenya som ikke er nødvendig.", "zones": [{"level": "necessary", "country": true, "label": "Hele landet"}]},
+ "1a9d92b73fde": {"text": "Utenriksdepartementet fraråder opphold og reiser som ikke er strengt nødvendige innen 60 km fra grensen til Somalia, inklusive distriktet Garissa. I tillegg frarådes opphold og reiser som ikke er strengt nødvendige til Kenyas kystområde som befinner seg innen 150 km fra grensen til Somalia, med unntak av øyene Lamu og Manda inkludert flyplassen.", "zones": [{"level": "necessary", "border": ["SOM", "SOL"], "km": 60, "label": "Innenfor 60 km fra grensen mot Somalia"}, {"level": "necessary", "adm": "KEN/ADM1", "names": ["Garissa"], "label": "Garissa-distriktet"}, {"level": "necessary", "line": [[41.56, -1.66], [41.2, -1.95], [40.9, -2.27], [40.5, -2.55], [40.2, -2.85]], "km": 30, "approx": true, "and": {"border": ["SOM"], "km": 150}, "label": "Kystområdet innen 150 km fra grensen mot Somalia"}, {"level": "none", "point": [40.88, -2.22], "km": 12, "approx": true, "label": "Lamu og Manda med flyplassen"}]}
 }

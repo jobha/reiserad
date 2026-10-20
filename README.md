@@ -23,7 +23,7 @@ scraper/pages.py    én side per land med advarsel (site/land/<slug>/), A–Å-o
 site/index.html     Leaflet-kart som leser site/data/
 scraper/history.py  tidligere reiseadvarsler per land: git-loggen til data/advisories.json + arkivfilene under
 tools/wayback_history.py  eldre advarsler fra web.archive.org -> data/history_archive.json – kjøres for hånd
-tools/landsider_history.py  UDs offisielle reiseråd på landsider.no 2006–2015 og velg-reiserad 2016–18 (web.archive.org + Common Crawl) -> data/history_landsider.json – for hånd
+tools/landsider_history.py  UDs offisielle reiseråd på landsider.no 2006–2015 og velg-reiserad 2016–18 (web.archive.org, Common Crawl og Nasjonalbibliotekets nettarkiv) -> data/history_landsider.json – for hånd
 tools/commoncrawl_history.py  UDs landsider fra Common Crawl der Wayback mangler kopier (2018–19 som standard,
                     --old: alle runder 2008–2018 for landsider.no/velg-reiserad); leser indeksfilene direkte – for hånd
 data/history_extra.json  UD-tekster funnet for hånd i andre arkivkopier (odin.dep.no, pressemeldinger, ambassadesider)

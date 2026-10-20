@@ -1,10 +1,11 @@
 #!/usr/bin/env python3
 """UDs offisielle reiseråd før dagens faktaboks: landsider.no (2006–2015) og
-regjeringen.no/…/velg-reiserad (2016–2018), hentet fra Wayback Machine.
+regjeringen.no/…/velg-reiserad (2016–2018), hentet fra Wayback Machine og
+Nasjonalbibliotekets nettarkiv (nettarkivet.nb.no, landsider.no 2006–2014).
 
 Kjøres for hånd:  python3 tools/landsider_history.py [--fetch]
 
-Kilder (alle arkivkopier, cachet i .cache/wayback/ som i wayback_history.py):
+Kilder (alle arkivkopier, cachet i .cache/wayback/ som i wayback_history.py, og .cache/nettarkivet/):
 - /traveladvice/            oversikt: alle land med offisielt reiseråd på kopidatoen
 - /traveladvice/<x>/        «Offisielt reiseråd for X»: tekst (div.intro) og UDs dato
 - /land/<x>/                landsiden; sideboksen «Offisielt reiseråd for X» med dato og tekst
@@ -13,9 +14,11 @@ Skriver rå funn per kopi til .cache/wayback/landsider.json og historikk per lan
 data/history_landsider.json, som scraper/history.py legger foran resten. Kopier fra Common Crawl
 (.cache/commoncrawl/landsider_rows.json, tools/commoncrawl_history.py --old) tas med.
 """
+import hashlib
 import json
 import re
 import sys
+import time
 import urllib.parse
 from concurrent.futures import ThreadPoolExecutor
 from pathlib import Path
@@ -27,6 +30,8 @@ from scrape import text  # noqa: E402
 from wayback_history import CACHE, fetch, get  # noqa: E402
 
 OUT = CACHE / "landsider.json"
+NB = "https://nettarkivet.nb.no/search"
+NB_CACHE = ROOT / ".cache" / "nettarkivet"
 HIST = ROOT / "data" / "history_landsider.json"
 
 
@@ -62,6 +67,60 @@ def wanted():
             if re.fullmatch(r"/land/[^/]+/?", path(orig)):
                 out.append((ts, orig))
     return sorted(set(out))
+
+
+def wanted_path(p):
+    return (re.fullmatch(r"/traveladvice(\.html|/([^/]+/)?)?", p) or re.fullmatch(r"/land/[^/]+/raad(\.htm)?/?", p)
+            or re.fullmatch(r"/land/[^/]+/?", p))
+
+
+def nb_captures():
+    """[(ts, url, digest)] fra Nettarkivet (Nasjonalbiblioteket). landsider.no ble åpnet for visning
+    i oktober 2026. Med «warc/revisit»: uendret innhold på en senere dato, som gir datoen gratis."""
+    out = []
+    for prefix in ("www.landsider.no/traveladvice", "www.landsider.no/land/"):
+        q = urllib.parse.urlencode({"url": prefix, "matchType": "prefix", "limit": 500000})
+        for line in (get(f"{NB}/cdx?" + q) or "").splitlines():
+            parts = line.split(" ", 2)
+            if len(parts) < 3:
+                continue
+            j = json.loads(parts[2])
+            if (j.get("status") == "200" and j.get("access") == "allow"
+                    and j.get("mime") in ("text/html", "warc/revisit") and wanted_path(path(j["url"]))):
+                out.append((parts[1], j["url"], j["digest"]))
+    return sorted(set(out))
+
+
+def nb_fetch(ts, url):
+    f = NB_CACHE / f"{hashlib.sha1(f'{ts} {url}'.encode()).hexdigest()}.html"
+    if f.exists():
+        return f.read_text()
+    page = get(f"{NB}/{ts}id_/{url}")  # id_: originalsiden uten arkivets ramme, omkodet til UTF-8
+    NB_CACHE.mkdir(parents=True, exist_ok=True)
+    f.write_text(page)
+    time.sleep(0.5)
+    return page
+
+
+def nb_rows():
+    """Rader som fra Wayback. Hvert innhold (digest) leses én gang; senere kopier med samme
+    innhold gir bare en ny dato."""
+    caps = nb_captures()
+    print(f"{len(caps)} kopier i Nettarkivet ({len({d for _, _, d in caps})} ulike)", file=sys.stderr)
+    parsed, rows = {}, []
+    for i, (ts, url, digest) in enumerate(caps):
+        p = path(url)
+        if (digest, p) not in parsed:
+            try:
+                parsed[(digest, p)] = parse(nb_fetch(ts, url), p)
+            except Exception as e:  # noqa: BLE001
+                print(f"  hopper over {ts} {url}: {e}", file=sys.stderr)
+                continue
+        if i % 100 == 0:
+            print(f"  nettarkivet {i}/{len(caps)}", file=sys.stderr)
+        rows.append({"date": f"{ts[:4]}-{ts[4:6]}-{ts[6:8]}", "path": p, "found": parsed[(digest, p)],
+                     "source": "nettarkivet"})
+    return rows
 
 
 DATE = re.compile(r"(\d{1,2})[./](\d{1,2})[./](\d{4})")
@@ -258,13 +317,14 @@ def main():
     cc = ROOT / ".cache" / "commoncrawl" / "landsider_rows.json"
     if cc.exists():
         rows = sorted(rows + json.loads(cc.read_text()), key=lambda r: r["date"])
+    rows = sorted(rows + nb_rows(), key=lambda r: r["date"])
     n = sum(1 for r in rows if r["found"])
     print(f"{len(rows)} kopier lest, {n} med funn -> {OUT}", file=sys.stderr)
     hist = build(rows)
     list_dates = sorted(r["date"] for r in rows for f in r["found"] if f["kind"] == "list")
     first = min((r["date"] for r in rows), default=None)
     last = max((r["date"] for r in rows), default=None)
-    HIST.write_text(json.dumps({"source": "landsider.no via web.archive.org", "first": first, "last": last,
+    HIST.write_text(json.dumps({"source": "landsider.no via web.archive.org og nettarkivet.nb.no", "first": first, "last": last,
                                 "list_first": list_dates[0] if list_dates else None,
                                 "list_last": list_dates[-1] if list_dates else None,
                                 "countries": dict(sorted(hist.items()))}, ensure_ascii=False, indent=1) + "\n")
