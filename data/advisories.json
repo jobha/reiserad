@@ -1,5 +1,5 @@
 {
- "fetched": "2026-10-20T21:18:27+0200",
+ "fetched": "2026-10-21T13:50:03+0200",
  "source": "https://www.regjeringen.no/no/tema/utenrikssaker/reiseinformasjon/velg-land/id2414273/",
  "failed": [],
  "countries": {
@@ -647,8 +647,8 @@
   },
   "iran": {
    "name": "Iran",
-   "page_updated": "16.07.2026",
-   "ingress": "Sikkerhetssituasjonen i Iran og i regionen er anspent og uforutsigbar og kan endre seg på kort varsel. USA gjennomfører angrep mot flere mål i deler av Iran. Reise medfører stor risiko. Luftrommet over Iran kan stenges på kort varsel. Vurder egen sikkerhet og lytt til råd fra pålitelige lokale kilder.",
+   "page_updated": "21.10.2026",
+   "ingress": "Sikkerhetssituasjonen i Iran og i regionen er anspent og uforutsigbar og kan endre seg på kort varsel. Reise medfører stor risiko. Det går få flyvninger til og fra Iran. Luftrommet over Iran kan stenges på kort varsel. Vurder egen sikkerhet og lytt til råd fra pålitelige lokale kilder.",
    "warning": {
     "title": "Reiseadvarsel for Iran",
     "status": "SIST OPPDATERT: 14. JANUAR 2026 - FORTSATT GYLDIG",
@@ -1016,8 +1016,8 @@
   },
   "mauritius": {
    "name": "Mauritius",
-   "page_updated": "14.10.2026",
-   "ingress": "De fleste reiser til Mauritius gjennomføres uten spesielle problemer. Det er nå pågående demonstrasjoner og uro på Mauritius. For mer informasjon se under ‘’Sikkerhet’’.",
+   "page_updated": "21.10.2026",
+   "ingress": "De fleste reiser til Mauritius gjennomføres uten spesielle problemer.",
    "warning": null,
    "url": "https://www.regjeringen.no/no/tema/utenrikssaker/reiseinformasjon/velg-land/reiseinformasjon-for-mauritius/id2414916/"
   },
