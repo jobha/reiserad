@@ -1,5 +1,5 @@
 {
- "fetched": "2026-10-23T13:39:59+0200",
+ "fetched": "2026-10-28T21:18:09+0100",
  "source": "https://www.regjeringen.no/no/tema/utenrikssaker/reiseinformasjon/velg-land/id2414273/",
  "failed": [],
  "countries": {
@@ -626,7 +626,7 @@
   },
   "indonesia": {
    "name": "Indonesia",
-   "page_updated": "20.05.2026",
+   "page_updated": "28.10.2026",
    "ingress": "Indonesia er i hovedsak et trygt reisemål. Reisende bør følge de anvisninger som gis av lokale myndigheter, og utvise generell forsiktighet.",
    "warning": null,
    "url": "https://www.regjeringen.no/no/tema/utenrikssaker/reiseinformasjon/velg-land/reiseinfo_indonesia/id2415692/"
@@ -675,8 +675,8 @@
   },
   "israel": {
    "name": "Israel",
-   "page_updated": "20.10.2026",
-   "ingress": "Sikkerhetssituasjonen i Israel kan forandre seg raskt, særlig grunnet forholdene i regionen og det israelske parlamentsvalget 27. oktober. Følg nyhetsbildet og råd fra israelske myndigheter og vurder egen sikkerhet.",
+   "page_updated": "28.10.2026",
+   "ingress": "Sikkerhetssituasjonen i Israel kan forandre seg raskt, særlig grunnet forholdene i regionen. Følg nyhetsbildet og råd fra israelske myndigheter og vurder egen sikkerhet.",
    "warning": {
     "title": "Reiseadvarsel for Israel",
     "status": "SIST OPPDATERT: 30.06.2026 - FORTSATT GYLDIG",
@@ -703,7 +703,7 @@
   },
   "japan": {
    "name": "Japan",
-   "page_updated": "20.04.2026",
+   "page_updated": "28.10.2026",
    "ingress": "Reise til Japan er trygt og for det meste uproblematisk, men landet kan være utsatt for jordskjelv og andre naturfenomener. Det anbefales å registrere opphold og undersøke nødvendige forholdsregler før reise.",
    "warning": null,
    "url": "https://www.regjeringen.no/no/tema/utenrikssaker/reiseinformasjon/velg-land/reiseinfo_japan/id2415973/"
@@ -995,7 +995,7 @@
   },
   "marshallislands": {
    "name": "Marshalløyene",
-   "page_updated": "25.03.2026",
+   "page_updated": "28.10.2026",
    "ingress": "Marshalløyene er en liten øystat i Stillehavet. Landet er svært sårbart for klimaendringer og plastforurensing, det anbefales å registrere opphold og ta vanlige forholdsregler.",
    "warning": null,
    "url": "https://www.regjeringen.no/no/tema/utenrikssaker/reiseinformasjon/velg-land/reiseinfo_marshallislands/id2429128/"
@@ -1030,7 +1030,7 @@
   },
   "mikronesia": {
    "name": "Mikronesiaføderasjonen",
-   "page_updated": "08.04.2026",
+   "page_updated": "28.10.2026",
    "ingress": "De fleste reiser til Mikronesiaføderasjonen gjennomføres uten større problemer. Store avstander og et begrenset tjenestetilbud gjør at det er viktig å være godt forberedt.",
    "warning": null,
    "url": "https://www.regjeringen.no/no/tema/utenrikssaker/reiseinformasjon/velg-land/reiseinfo_mikronesia/id2428986/"
@@ -1432,8 +1432,8 @@
   },
   "serbia": {
    "name": "Serbia",
-   "page_updated": "22.10.2026",
-   "ingress": "Serbia er generelt et trygt reisemål med lav kriminalitet, men opplever periodevis politisk uro og demonstrasjoner. Det avholdes parlamentsvalg 25. oktober og det kan forventes at demonstrasjoner vil kun finne sted med liten eller ingen forhåndsvarsling. Se mer under «Sikkerhet». Trafikk og helsevesen av varierende kvalitet er som oftest de største utfordringene for turister.",
+   "page_updated": "28.10.2026",
+   "ingress": "Serbia er generelt et trygt reisemål med lav kriminalitet, men opplever periodevis politisk uro og demonstrasjoner. Det ble avholdt parlamentsvalg 25. oktober, og i etterkant av valget kan det oppstå demonstrasjoner og større folkeansamlinger flere steder i landet. Det skal avholdes presidentvalg innen utgangen av desember 2026. Valget er foreløpig ikke formelt utlyst, og valgdatoen er ikke fastsatt. I forbindelse med presidentvalget kan det igjen oppstå økt politisk aktivitet og demonstrasjoner. Trafikk og helsevesen av varierende kvalitet er som oftest de største utfordringene for turister.",
    "warning": null,
    "url": "https://www.regjeringen.no/no/tema/utenrikssaker/reiseinformasjon/velg-land/reiseinfo_serbia/id2415119/"
   },
