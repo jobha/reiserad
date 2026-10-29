@@ -1,5 +1,5 @@
 {
- "fetched": "2026-10-28T21:18:09+0100",
+ "fetched": "2026-10-29T19:30:28+0100",
  "source": "https://www.regjeringen.no/no/tema/utenrikssaker/reiseinformasjon/velg-land/id2414273/",
  "failed": [],
  "countries": {
@@ -97,7 +97,7 @@
   },
   "australia": {
    "name": "Australia",
-   "page_updated": "30.07.2026",
+   "page_updated": "29.10.2026",
    "ingress": "Australia anses som et trygt reisemål. Norske statsborgere trenger visum for innreise til Australia.",
    "warning": null,
    "url": "https://www.regjeringen.no/no/tema/utenrikssaker/reiseinformasjon/velg-land/reiseinfo_australia/id2415524/"
@@ -295,7 +295,7 @@
   },
   "cookoyene": {
    "name": "Cookøyene",
-   "page_updated": "30.07.2026",
+   "page_updated": "29.10.2026",
    "ingress": "Cookøyene anses som et trygt reisemål. Sykloner og andre naturhendelser forekommer. Se mer om naturforhold under «Naturforhold og naturkatastrofer». Norske statsborgere kan oppholde seg på Cookøyene 31 dager visumfritt.",
    "warning": null,
    "url": "https://www.regjeringen.no/no/tema/utenrikssaker/reiseinformasjon/velg-land/reiseinfo_cookoyene/id2415553/"
@@ -469,7 +469,7 @@
   },
   "fiji": {
    "name": "Fiji",
-   "page_updated": "30.07.2026",
+   "page_updated": "29.10.2026",
    "ingress": "Fiji anses som et trygt reisemål. Sykloner og andre naturhendelser forekommer. Se mer om naturforhold under «Naturforhold og naturkatastrofer». Norske statsborgere kan oppholde seg visumfritt i Fiji i fire måneder.",
    "warning": null,
    "url": "https://www.regjeringen.no/no/tema/utenrikssaker/reiseinformasjon/velg-land/reiseinfo_fiji/id2415529/"
@@ -803,7 +803,7 @@
   },
   "kiribati": {
    "name": "Kiribati",
-   "page_updated": "30.07.2026",
+   "page_updated": "29.10.2026",
    "ingress": "Kiribati anses som et trygt reisemål. Norske statsborgere kan oppholde seg i Kiribati visumfritt i opptil 90 dager.",
    "warning": null,
    "url": "https://www.regjeringen.no/no/tema/utenrikssaker/reiseinformasjon/velg-land/reiseinfo_kiribati/id2429127/"
@@ -1128,7 +1128,7 @@
   },
   "newzealand": {
    "name": "New Zealand",
-   "page_updated": "30.07.2026",
+   "page_updated": "29.10.2026",
    "ingress": "New Zealand anses som et trygt reisemål. Jordskjelv forekommer årlig. Se mer om naturforhold under «Naturforhold og naturkatastrofer». Norske statsborgere trenger innreisetillatelse for å kunne reise til New Zealand.",
    "warning": null,
    "url": "https://www.regjeringen.no/no/tema/utenrikssaker/reiseinformasjon/velg-land/reiseinfo_newzealand/id2415533/"
@@ -1256,7 +1256,7 @@
   },
   "papuanyguinea": {
    "name": "Papua Ny-Guinea",
-   "page_updated": "30.07.2026",
+   "page_updated": "29.10.2026",
    "ingress": "De fleste reiser til Papua Ny-Guinea gjennomføres uten spesielle problemer, men reisende oppfordres til å sette seg godt inn i sikkerhetssituasjonen i landet. Kriminalitet er utbredt, og voldelige stammeoppgjør og demonstrasjoner kan forekomme. Se mer om sikkerhetssituasjonen under «Sikkerhet». Norske statsborgere må for tiden søke om visum før avreise til Papua Ny-Guinea.",
    "warning": null,
    "url": "https://www.regjeringen.no/no/tema/utenrikssaker/reiseinformasjon/velg-land/reiseinformasjon-for-papua-ny-guinea/id2415535/"
@@ -1368,14 +1368,14 @@
   },
   "salomonoyene": {
    "name": "Salomonøyene",
-   "page_updated": "30.07.2026",
+   "page_updated": "29.10.2026",
    "ingress": "De fleste reiser til Salomonøyene gjennomføres uten spesielle problemer, men reisende oppfordres til å sette seg godt inn i sikkerhetssituasjonen i landet. Kriminalitet er utbredt, og voldelige demonstrasjoner kan forekomme. Se mer om sikkerhetssituasjonen under «sikkerhet». Norske statsborgere trenger ikke visum, og kan oppholde seg på Salomonøyene i tre måneder visumfritt.",
    "warning": null,
    "url": "https://www.regjeringen.no/no/tema/utenrikssaker/reiseinformasjon/velg-land/reiseinfo_salomonoyene/id2428990/"
   },
   "samoa": {
    "name": "Samoa",
-   "page_updated": "30.07.2026",
+   "page_updated": "29.10.2026",
    "ingress": "Samoa anses som et trygt reisemål. Sykloner og andre naturhendelser forekommer. Se mer om naturforhold under «naturforhold og naturkatastrofer». Norske statsborgere kan oppholde seg på Samoa 90 dager visumfritt.",
    "warning": null,
    "url": "https://www.regjeringen.no/no/tema/utenrikssaker/reiseinformasjon/velg-land/reiseinfo_samoa/id2428993/"
@@ -1629,7 +1629,7 @@
   },
   "tonga": {
    "name": "Tonga",
-   "page_updated": "03.08.2026",
+   "page_updated": "29.10.2026",
    "ingress": "Tonga anses som et trygt reisemål. Sykloner og andre naturhendelser forekommer. Se mer om naturforhold under «Naturforhold og naturkatastrofer». Norske statsborgere mottar visum for inntil 90 dager ved ankomst.",
    "warning": null,
    "url": "https://www.regjeringen.no/no/tema/utenrikssaker/reiseinformasjon/velg-land/reiseinfo_tonga/id2415548/"
@@ -1686,7 +1686,7 @@
   },
   "tuvalu": {
    "name": "Tuvalu",
-   "page_updated": "30.07.2026",
+   "page_updated": "29.10.2026",
    "ingress": "Tuvalu anses som et trygt reisemål. Sykloner og andre naturhendelser forekommer. Se mer om naturforhold under «Naturforhold og naturkatastrofer». Norske statsborgere kan oppholde seg i Tuvalu visumfritt 30 dager.",
    "warning": null,
    "url": "https://www.regjeringen.no/no/tema/utenrikssaker/reiseinformasjon/velg-land/reiseinfo_tuvalu/id2415551/"
@@ -1772,7 +1772,7 @@
   },
   "vanuatu": {
    "name": "Vanuatu",
-   "page_updated": "30.07.2026",
+   "page_updated": "29.10.2026",
    "ingress": "Vanuatu anses som et trygt reisemål. Sykloner og andre naturhendelser forekommer. Se mer om naturforhold under «Naturforhold og naturkatastrofer». Norske statsborgere kan oppholde seg 30 dager i Vanuatu visumfritt.",
    "warning": null,
    "url": "https://www.regjeringen.no/no/tema/utenrikssaker/reiseinformasjon/velg-land/reiseinfo_vanuatu/id2428998/"
