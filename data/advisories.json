@@ -1,5 +1,5 @@
 {
- "fetched": "2026-10-29T19:30:28+0100",
+ "fetched": "2026-10-30T11:01:46+0100",
  "source": "https://www.regjeringen.no/no/tema/utenrikssaker/reiseinformasjon/velg-land/id2414273/",
  "failed": [],
  "countries": {
@@ -731,7 +731,7 @@
   },
   "kambodsja": {
    "name": "Kambodsja",
-   "page_updated": "03.06.2026",
+   "page_updated": "30.10.2026",
    "ingress": "De fleste reiser til Kambodsja gjennomføres trygt og uten spesielle problemer. Det er en pågående grensekonflikt mellom Kambodsja og Thailand, og reiser og opphold i grenseområdet frarådes. Se mer under «Sikkerhet».",
    "warning": {
     "title": "Reiseadvarsel for Kambodsja",
@@ -1107,7 +1107,7 @@
   },
   "naoero": {
    "name": "Naoero",
-   "page_updated": "30.07.2026",
+   "page_updated": "30.10.2026",
    "ingress": "Naoero anses som et trygt reisemål. Vær oppmerksom på at turistfasilitetene er svært begrenset. Norske statsborgere trenger visum for innreise til Naoero.",
    "warning": null,
    "url": "https://www.regjeringen.no/no/tema/utenrikssaker/reiseinformasjon/velg-land/reiseinfo_naoero/id2428988/"
