@@ -1,5 +1,5 @@
 {
- "fetched": "2026-10-30T19:01:56+0100",
+ "fetched": "2026-11-02T12:06:25+0100",
  "source": "https://www.regjeringen.no/no/tema/utenrikssaker/reiseinformasjon/velg-land/id2414273/",
  "failed": [],
  "countries": {
@@ -281,8 +281,8 @@
   },
   "colombia": {
    "name": "Colombia",
-   "page_updated": "23.09.2026",
-   "ingress": "Reisende til Colombia oppfordres til å være oppmerksomme, spesielt i områder hvor væpnede grupper opererer. Det er for tiden risiko for voldelige sammenstøt i og rundt byen Santa Marta. Se punktet om sikkerhet. Det anbefales å holde seg løpende oppdatert om situasjonen gjennom lokale nyhetskilder og følge råd fra lokale myndigheter.",
+   "page_updated": "02.11.2026",
+   "ingress": "Norske borgere trenger ikke visum for å reise til Colombia. Du må ha et gyldig, maskinlesbart pass. Norske nødpass godtas ikke for innreise. I Colombia er det risiko for voldelig kriminalitet, og uroligheter som involverer væpnede grupper kan oppstå raskt. Reisende bør holde seg oppdatert gjennom lokale nyhetskilder og følge råd fra lokale myndigheter.",
    "warning": {
     "title": "Reiseadvarsel for Colombia",
     "status": "SIST OPPDATERT 18.05.2026 - FORTSATT GYLDIG",
@@ -1249,8 +1249,8 @@
   },
   "panama": {
    "name": "Panama",
-   "page_updated": "09.10.2026",
-   "ingress": "De fleste reiser i Panama skjer uten problemer, men reisende bør alltid utvise forsiktighet. Landet er sårbart for jordskjelv og det er en viss risiko for ekstremvær. 9. oktober ble landet rammet av et jordskjelv med styrke 7,6. I etterkant har det blitt meldt om flere etterskjelv. Reisende bes følge lokale myndigheters råd og holde seg oppdatert gjennom lokale medier.",
+   "page_updated": "02.11.2026",
+   "ingress": "De fleste reiser i Panama skjer uten problemer, men reisende bør alltid utvise forsiktighet. Landet er sårbart for jordskjelv og det er en viss risiko for ekstremvær. Reisende bes følge lokale myndigheters råd og holde seg oppdatert gjennom lokale medier. Norske borgere trenger ikke visum for å reise til Panama.",
    "warning": null,
    "url": "https://www.regjeringen.no/no/tema/utenrikssaker/reiseinformasjon/velg-land/reiseinfo_panama/id2428568/"
   },
@@ -1779,8 +1779,8 @@
   },
   "venezuela": {
    "name": "Venezuela",
-   "page_updated": "25.06.2026",
-   "ingress": "Sikkerhetssituasjonen i Venezuela er alvorlig og uforutsigbar. Internasjonal flytrafikk til og fra Venezuela er i drift, men kan påvirkes av utviklingen i regionen og endres på kort varsel. Norske borgere som oppholder seg i landet bør være oppmerksomme og unngå folkemengder, demonstrasjoner og urolige områder. Man bør holde seg løpende oppdatert gjennom lokale og internasjonale medier samt informasjon fra flyselskap.",
+   "page_updated": "02.11.2026",
+   "ingress": "Sikkerhetssituasjonen i Venezuela er alvorlig og uforutsigbar. Internasjonal flytrafikk til og fra Venezuela er begrenset, og kan endres på kort varsel. Norske borgere som oppholder seg i landet bør være oppmerksomme og unngå folkemengder, demonstrasjoner og urolige områder. Man bør holde seg løpende oppdatert gjennom lokale og internasjonale medier samt informasjon fra flyselskap.",
    "warning": {
     "title": "Reiseadvarsel for Venezuela",
     "status": "SIST OPPDATERT: 27.05.2026 - FORTSATT GYLDIG",
