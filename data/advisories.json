@@ -1,5 +1,5 @@
 {
- "fetched": "2026-11-02T12:06:25+0100",
+ "fetched": "2026-11-03T18:04:08+0100",
  "source": "https://www.regjeringen.no/no/tema/utenrikssaker/reiseinformasjon/velg-land/id2414273/",
  "failed": [],
  "countries": {
@@ -633,8 +633,8 @@
   },
   "irak": {
    "name": "Irak",
-   "page_updated": "02.07.2026",
-   "ingress": "Sikkerhetssituasjonen i Irak er ustabil og kan endres raskt. Det er en risiko for angrep mot militære og sivile installasjoner i Irak samt sivil uro. Norske borgere oppfordres til å holde seg unna militær- og sikkerhetsinstallasjoner samt demonstrasjoner. Luftrommet i Irak er åpent, men en ny stengning kan skje raskt og uten forvarsel. Sjekk vilkårene i din reiseforsikring.",
+   "page_updated": "03.11.2026",
+   "ingress": "Sikkerhetssituasjonen i Irak er ustabil og kan endres raskt. Det er en risiko for angrep mot militære og sivile installasjoner i Irak samt sivil uro. Norske borgere oppfordres til å holde seg unna militær- og sikkerhetsinstallasjoner samt demonstrasjoner. Luftrommet i Irak er åpent, men stengninger kan skje raskt og uten forvarsel. Sjekk vilkårene i din reiseforsikring.",
    "warning": {
     "title": "Reiseadvarsel for Irak",
     "status": "SIST OPPDATERT: 28.02.2026 - FORTSATT GYLDIG",
@@ -1488,7 +1488,7 @@
   },
   "sorafrika": {
    "name": "Sør-Afrika",
-   "page_updated": "03.07.2026",
+   "page_updated": "03.11.2026",
    "ingress": "I Sør-Afrika bør du, på grunn av risikoen for voldelig kriminalitet, til enhver tid være oppmerksom på din personlige sikkerhet. De fleste reiser går imidlertid problemfritt.",
    "warning": null,
    "url": "https://www.regjeringen.no/no/tema/utenrikssaker/reiseinformasjon/velg-land/reiseinfo_sorafrika/id2424513/"
@@ -1758,7 +1758,7 @@
   },
   "usa": {
    "name": "USA",
-   "page_updated": "29.07.2026",
+   "page_updated": "03.11.2026",
    "ingress": "De aller fleste reiser til USA går uten spesielle problemer. For innreise kreves gyldig pass, samt enten ESTA-registrering eller visum. Innreise med nødpass er ikke tillatt. For mer informasjon om innreise og grensekontroll, se «Innreise» nedenfor.",
    "warning": null,
    "url": "https://www.regjeringen.no/no/tema/utenrikssaker/reiseinformasjon/velg-land/reiseinfo_usa/id2417194/"
