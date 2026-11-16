@@ -1,5 +1,5 @@
 {
- "fetched": "2026-11-12T18:37:31+0100",
+ "fetched": "2026-11-16T20:38:06+0100",
  "source": "https://www.regjeringen.no/no/tema/utenrikssaker/reiseinformasjon/velg-land/id2414273/",
  "failed": [],
  "countries": {
@@ -789,7 +789,7 @@
   },
   "kina": {
    "name": "Kina",
-   "page_updated": "05.10.2026",
+   "page_updated": "16.11.2026",
    "ingress": "Norske borgere som reiser til Kina for forretningsreiser, turisme, familiebesøk og transitt, trenger ikke søke om visum før avreise for opphold i Kina i inntil 30 dager. Reglene er fra og med 8. november 2024 og videreføres for ytterligere ett år, ut 2026. Andre reisende må fortsatt søke om visum før avreise.",
    "warning": null,
    "url": "https://www.regjeringen.no/no/tema/utenrikssaker/reiseinformasjon/velg-land/reiseinfo_kina/id2414833/"
@@ -1600,7 +1600,7 @@
   },
   "thailand": {
    "name": "Thailand",
-   "page_updated": "03.09.2026",
+   "page_updated": "16.11.2026",
    "ingress": "Thailand er generelt et trygt reisemål. Det er en pågående grensekonflikt mellom Thailand og Kambodsja, og det er risiko for militære sammenstøt. Se mer om sikkerhetssituasjonen under «Sikkerhet».",
    "warning": {
     "title": "Reiseadvarsel for Thailand",
