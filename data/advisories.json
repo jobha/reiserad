@@ -1,5 +1,5 @@
 {
- "fetched": "2026-11-16T20:38:06+0100",
+ "fetched": "2026-11-19T21:37:48+0100",
  "source": "https://www.regjeringen.no/no/tema/utenrikssaker/reiseinformasjon/velg-land/id2414273/",
  "failed": [],
  "countries": {
@@ -633,7 +633,7 @@
   },
   "irak": {
    "name": "Irak",
-   "page_updated": "03.11.2026",
+   "page_updated": "19.11.2026",
    "ingress": "Sikkerhetssituasjonen i Irak er ustabil og kan endres raskt. Det er en risiko for angrep mot militære og sivile installasjoner i Irak samt sivil uro. Norske borgere oppfordres til å holde seg unna militær- og sikkerhetsinstallasjoner samt demonstrasjoner. Luftrommet i Irak er åpent, men stengninger kan skje raskt og uten forvarsel. Sjekk vilkårene i din reiseforsikring.",
    "warning": {
     "title": "Reiseadvarsel for Irak",
@@ -689,7 +689,7 @@
   },
   "italia": {
    "name": "Italia",
-   "page_updated": "12.11.2026",
+   "page_updated": "19.11.2026",
    "ingress": "Italia er et trygt land å reise og oppholde seg i, og de fleste reiser går trygt og uten spesielle problemer. Reisende må kunne vise gyldig pass eller nasjonalt ID-kort med reiserett på forespørsel fra myndighetene. Det kan forekomme vær- og naturhendelser som påvirker reiser og opphold i Italia. Se mer under «naturforhold og naturkatastrofer».",
    "warning": null,
    "url": "https://www.regjeringen.no/no/tema/utenrikssaker/reiseinformasjon/velg-land/reiseinfo_italia/id2416484/"
@@ -1410,8 +1410,8 @@
   },
   "saudiarabia": {
    "name": "Saudi-Arabia",
-   "page_updated": "13.10.2026",
-   "ingress": "Sikkerhetssituasjonen i Saudi Arabia er uoversiktlig og alvorlig, som følge av krigshandlingene som påvirker hele regionen. Riyadh flyplass, King Khalid International Airport (KKIA), har vært utsatt for bekreftede angrep. Situasjonen tilsier at norske borgere ikke bør reise til eller oppholde seg på eller i nærheten av flyplassen. Unngå opphold på eller nær andre flyplasser i landet. Ved behov for utreise bør landeveien vurderes som et alternativ.",
+   "page_updated": "19.11.2026",
+   "ingress": "Sikkerhetssituasjonen i Saudi Arabia er uoversiktlig og alvorlig, som følge av krigshandlingene i regionen. Situasjonen kan endre seg raskt, og en ytterligere eskalering vil kunne begrense ambassadens evne til å yte bistand til norske borgere. Unngå opphold i nærheten av olje- og energiinstallasjoner, militære områder, større administrative bygg tilknyttet energisektoren og finanssektoren, samt flyplasser. Ved behov for utreise bør landeveien vurderes som et alternativ.",
    "warning": {
     "title": "Reiseadvarsel for Saudi-Arabia",
     "status": "SIST OPPDATERT: 08.10.2026 - FORTSATT GYLDIG",
