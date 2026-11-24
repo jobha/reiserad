@@ -1,5 +1,5 @@
 {
- "fetched": "2026-11-20T21:19:30+0100",
+ "fetched": "2026-11-24T03:14:15+0100",
  "source": "https://www.regjeringen.no/no/tema/utenrikssaker/reiseinformasjon/velg-land/id2414273/",
  "failed": [],
  "countries": {
@@ -436,8 +436,8 @@
   },
   "estland": {
    "name": "Estland",
-   "page_updated": "31.03.2026",
-   "ingress": "Estland er generelt et trygt land for nordmenn å reise til.",
+   "page_updated": "23.11.2026",
+   "ingress": "Estland er generelt et trygt land for nordmenn å reise til. I forbindelse med Russlands krig mot Ukraina, har det samtidig ved enkelte anledinger vært droner som har kommet inn i eller vært tett på estisk luftrom. Mer informasjon om dette finnes under kapittelet om sikkerhet.",
    "warning": null,
    "url": "https://www.regjeringen.no/no/tema/utenrikssaker/reiseinformasjon/velg-land/reiseinfo_estland/id2417117/"
   },
